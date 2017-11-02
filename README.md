@@ -1,23 +1,9 @@
-# opendev-template
-BC Gov Open Development Repo Template
-
-
-
+# Application Name
+Description of the application. 
 
 
 
 ## Purpose
-
-
-
-
-
-
-
-
-
-
-
 
 
 
