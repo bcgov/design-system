@@ -3,7 +3,12 @@ Description of the application.
 
 ## Technology Stack Used
 
+## Project Status
+
 ## Deployment (local)
+
+* Developer Workstation Requirements/Setup
+* Application Specific Setup
 
 ## Deployment (OpenShift)
 
