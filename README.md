@@ -5,6 +5,14 @@ Description of the application.
 
 ## Project Status
 
+
+## Documnentation
+
+GitHub Pages (https://guides.github.com/features/pages/) are a neat way to document you application/project.
+
+https://opendev-template.github.io
+
+
 ## Deployment (local)
 
 * Developer Workstation Requirements/Setup
