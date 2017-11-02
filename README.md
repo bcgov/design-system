@@ -1,9 +1,11 @@
 # Application Name
 Description of the application. 
 
+## Technology Stack Used
 
+## Deployment (local)
 
-## Purpose
+## Deployment (OpenShift)
 
 
 ## Getting Help or Reporting an Issue
