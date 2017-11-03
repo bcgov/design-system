@@ -10,8 +10,9 @@ Description of the application.
 
 GitHub Pages (https://guides.github.com/features/pages/) are a neat way to document you application/project.
 
-https://opendev-template.github.io
+## Security
 
+Authentication, Authorization, Policies, etc
 
 ## Deployment (local)
 
