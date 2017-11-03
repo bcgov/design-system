@@ -17,14 +17,15 @@ Authentication, Authorization, Policies, etc
 
 ## Files in this repository
 
-`src/            - Database-specific files
+```
+src/            - Database-specific files
 └── js          - JavaScript Code
 └── css         - css files
 
 openshift/      - OpenShift-specific files
 ├── scripts     - helper scripts
 └── templates   - application templates
-`
+```
 
 ## Deployment (Local Development)
 
