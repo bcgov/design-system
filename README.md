@@ -15,13 +15,25 @@ GitHub Pages (https://guides.github.com/features/pages/) are a neat way to docum
 
 Authentication, Authorization, Policies, etc
 
-## Deployment (local)
+## Files in this repository
+
+`src/            - Database-specific files
+└── js          - JavaScript Code
+└── css         - css files
+
+openshift/      - OpenShift-specific files
+├── scripts     - helper scripts
+└── templates   - application templates
+`
+
+## Deployment (Local Development)
 
 * Developer Workstation Requirements/Setup
 * Application Specific Setup
 
 ## Deployment (OpenShift)
 
+See (openshift/Readme.md)
 
 ## Getting Help or Reporting an Issue
 
