@@ -3,8 +3,9 @@ Description of the application.
 
 ## Technology Stack Used
 
-## Project Status
+## Third-Party Products/Libraries used and the the License they are covert by
 
+## Project Status
 
 ## Documnentation
 
