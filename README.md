@@ -18,9 +18,9 @@ Authentication, Authorization, Policies, etc
 ## Files in this repository
 
 ```
-src/            - Database-specific files
-└── js          - JavaScript Code
-└── css         - css files
+docs/           - Project Documentation
+└── images        
+└── icons         
 
 openshift/      - OpenShift-specific files
 ├── scripts     - helper scripts
