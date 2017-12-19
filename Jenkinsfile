@@ -32,8 +32,7 @@ node('maven') {
          script: 'oc get istag <name>:latest -o template --template="{{.image.dockerImageReference}}"|awk -F ":" \'{print $3}\'',
  	          returnStdout: true).trim()
        echo ">> IMAGE_HASH: $IMAGE_HASH"
-       //openshiftTag destStream: '<name>', verbose: 'true', destTag: '$BUILD_ID', srcStream: 'devxp', srcTag: 'latest'
-       openshiftTag destStream: '<name>', verbose: 'true', destTag: 'dev', srcStream: 'devxp', srcTag: "${IMAGE_HASH}"
+       openshiftTag destStream: '<name>', verbose: 'true', destTag: 'dev', srcStream: '<name>', srcTag: "${IMAGE_HASH}"
        openshiftVerifyDeployment depCfg: '<dc-dev>', namespace: '<project-prefix>-dev', replicaCount: 1, verbose: 'false', verifyReplicaCount: 'false'
        echo ">>>> Deployment Complete"
     }
