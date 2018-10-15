@@ -24,8 +24,6 @@ This header is the most up-to-date version meeting all government standards, bra
 ## Behaviour
 Ensure implementing this header results in the following behaviour.
 1. Clicking on BC Government logo links back to homepage
-2. Navigation items are bolded and underlined when clicked on
-3. Navigation items are underlined when hovered over
 
 ## Accessibility
 This header has successfully included and tested for the following accessibility requirements:
