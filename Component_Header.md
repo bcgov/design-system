@@ -2,12 +2,12 @@
 Headers help users understand what the content of the page is about and provide a quick, organized way to reach the main sections of a website. They appear at the top of a page, above the main body text.
 
 ## Required
-## Last Updated: 2 days ago
+## Last Updated: [Last Update]
 
 ## Visual Example
 	Visual example goes here
 
-# Use This For
+## Use This For
 All public facing BC Government online content and services
 
 ## Don't Use This For
