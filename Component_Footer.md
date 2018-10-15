@@ -2,12 +2,12 @@
 Footers help users find what they need after scrolling to the bottom of a page. They provide supplementary information such as copyright, contact information, links to other pages within the website, and email and social media links.
 
 ## Required
-## Last Updated: [Last_Updated]
+## Last Updated: [Last_Update]
 
 ## Visual Example
 	Visual example goes here
 
-# Use This For
+## Use This For
 All public facing BC Government online content and services
 
 ## Don't Use This For
