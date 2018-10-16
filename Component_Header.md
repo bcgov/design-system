@@ -39,27 +39,27 @@ This header has successfully included and tested for the following accessibility
 ## Code
 ### HTML
 	<!DOCTYPE html>
- <html>
- <head>
-     <link rel="stylesheet" href="style.css">
-     <title>Sample Header</title>
- </head>
+ 	<html>
+	 <head>
+   	  <link rel="stylesheet" href="style.css">
+   	  <title>Sample Header</title>
+	 </head>
 
- <body>
-   <header>
-     <div class="banner">
-         <img src="../assets/images/logo.svg" class="logo" alt="logo" />
-         <h1>Hello BC</h1>
-     </div>
-     <div class="other">
-       <!-- While its preferd to keep this space empty with good UX in mind
-       it can be utilized as needed  -->
-       &nbsp;
-     </div>
-     </div>
-   </header>
- </body>
+ 	<body>
+ 	  <header>
+  	   <div class="banner">
+   	      <img src="../assets/images/logo.svg" class="logo" alt="logo" />
+   	      <h1>Hello BC</h1>
+  	   </div>
+   	  <div class="other">
+   	    <!-- While its preferd to keep this space empty with good UX in mind
+    	   it can be utilized as needed  -->
+    	   &nbsp;
+   	  </div>
+   	  </div>
+  	 </header>
+	 </body>
 
- </html> 
+	 </html> 
 ### CSS
 	CSS goes here
