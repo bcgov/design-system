@@ -45,7 +45,7 @@ This header has successfully included and tested for the following accessibility
    	  <title>Sample Header</title>
 	 </head>
 
- 	<body>
+	<body>
  	  <header>
   	   <div class="banner">
    	      <img src="../assets/images/logo.svg" class="logo" alt="logo" />
@@ -58,8 +58,53 @@ This header has successfully included and tested for the following accessibility
    	  </div>
    	  </div>
   	 </header>
-	 </body>
+	</body>
 
-	 </html> 
+	</html>
+    
 ### CSS
-	CSS goes here
+	@font-face {
+  	 font-family: 'MyriadWebPro';
+   	src: url('../assets/fonts/MyriadWebPro.ttf') format('truetype');
+	 }
+
+	 header {
+  	 background-color: #036;
+  	 border-bottom: 2px solid #fcba19;
+  	 padding: 9px 10px 10px;
+  	 color: #fff;
+  	 display: flex;
+	 }
+
+ 	header h1 {
+  	 font-family: 'MyriadWebPro';
+  	 font-size: 1.5em;
+  	 text-transform: uppercase;
+	 }
+
+	 header .logo {
+ 	  height: 80px;
+	 }
+
+	 header .banner {
+   	justify-content: flex-start;
+  	 display: flex;
+  	 align-items: center;
+  	 margin: 0 10px 0 0;
+  	 /* border-style: dotted;
+  	 border-width: 1px;
+  	 border-color: lightgrey; */
+ 	}
+
+	 header .other {
+ 	  display: flex;
+ 	  flex-grow: 1;
+ 	  /* border-style: dotted;
+ 	  border-width: 1px;
+ 	  border-color: lightgrey; */
+	 }
+
+ 	/* header .right-push {
+ 	  margin-left: auto;
+ 	  align-self: flex-end;
+	 } */
