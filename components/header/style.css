@@ -9,8 +9,8 @@ header {
 
 header h1 {
   font-family: 'PT Sans';
-  font-size: 1.33em;
-  font-weight: 400;
+  font-size: 1.33em;    /* apx 14px */
+  font-weight: normal;  /* 400 */
   margin: 0.2em 0.1em 0 1em;
 }
 
