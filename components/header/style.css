@@ -1,29 +1,26 @@
-@font-face {
-  font-family: 'MyriadWebPro';
-  src: url('../assets/fonts/MyriadWebPro.ttf') format('truetype');
-}
-
 header {
   background-color: #036;
   border-bottom: 2px solid #fcba19;
-  padding: 9px 10px 10px;
+  padding: 0 65px 0 65px;
   color: #fff;
   display: flex;
+  height: 65px;
 }
 
 header h1 {
-  font-family: 'MyriadWebPro';
-  font-size: 1.5em;
-  text-transform: uppercase;
+  font-family: 'PT Sans';
+  font-size: 1.33em;
+  font-weight: 400;
+  margin: 0.2em 0.1em 0 1em;
 }
 
 header .logo {
-  height: 80px;
+  height: 40px;
 }
 
 header .banner {
-  justify-content: flex-start;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   margin: 0 10px 0 0;
   /* border-style: dotted;
@@ -38,8 +35,3 @@ header .other {
   border-width: 1px;
   border-color: lightgrey; */
 }
-
-/* header .right-push {
-  margin-left: auto;
-  align-self: flex-end;
-} */
