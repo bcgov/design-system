@@ -23,6 +23,7 @@ This footer is the most up-to-date version meeting all government standards, bra
 ## Behaviour
 Ensure implementing this header results in the following behaviour.
 1. Ensure all links lead to correct pages
+2. No changes to text when browser window size changes
 
 ## Accessibility
 This header has successfully included and tested for the following accessibility requirements:
