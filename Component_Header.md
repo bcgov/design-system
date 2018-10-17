@@ -28,8 +28,9 @@ This header is the most up-to-date version meeting all government standards, bra
 ## Behaviour
 
 1. Clicking on BC Government logo links back to homepage
-2. Navigation items are bolded and underlined when clicked on
-3. Navigation items are underlined when hovered over
+2. Site title reduces through three increments as browser window gets smaller
+3. After third increment site title dissapears completely
+4. BC Gov logo does not change size or dissapear as browser window gets smaller
 
 ## Accessibility
 
