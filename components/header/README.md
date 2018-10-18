@@ -29,8 +29,8 @@ This header is the most up-to-date version meeting all government standards, bra
 
 1. Clicking on BC Government logo links back to homepage
 2. Site title reduces through three increments as browser window gets smaller
-3. After third increment site title dissapears completely
-4. BC Gov logo does not change size or dissapear as browser window gets smaller
+3. After third increment site title disappears completely
+4. BC Gov logo does not change size or disappear as browser window gets smaller
 
 ## Accessibility
 
