@@ -9,7 +9,7 @@ header {
 
 header h1 {
   font-family: 'PT Sans';
-  font-size: 1.33em;    /* apx 14px */
+  font-size: 1em;       /* apx 16px */
   font-weight: normal;  /* 400 */
   margin: 5px 5px 0 18px;
 }
@@ -35,3 +35,16 @@ header .other {
   border-width: 1px;
   border-color: lightgrey; */
 }
+
+/*
+  Media queries should be customized based each site. Determine at what
+  size your sight starts to look bad and put a media query at that point
+  to adjust.
+*/
+
+@media screen and (min-width: 600px) {
+  header h1 {
+    font-size: 1.33em;  /* apx 18px */
+  }
+}
+
