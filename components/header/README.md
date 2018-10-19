@@ -9,7 +9,8 @@ Headers help users understand what the content of the page is about and provide 
 ### Last Updated: 2018-10-18
 
 ## Visual
-	This is where the visual goes
+	![Screenshot][screenshot]
+	![Screenshot with Illustration][screenshot-with-outline]
 
 ## Use This For
 
@@ -121,3 +122,7 @@ header .other {
   }
 }
 ```
+
+[screenshot]: https://github.com/bcgov/design-system/raw/master/components/header/images/header.png "Screenshot"
+
+[screenshot-with-outline]: https://github.com/bcgov/design-system/raw/master/components/header/images/header-with-illustrations.png "Screenshot With Illustration"
