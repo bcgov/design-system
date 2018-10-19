@@ -57,18 +57,22 @@ For fonts and a standard browser reset include the following links in the `<head
 ### HTML
 
 ```html
-  <header>
-    <div class="banner">
-        <img src="../assets/images/logo-banner.png" class="logo" alt="logo" />
-        <h1>Hello British Columbia</h1>
-    </div>
-    <div class="other">
-      <!-- While its preferred to keep this space empty with good UX in mind
-      it can be utilized as needed  -->
-      &nbsp;
-    </div>
-    </div>
-  </header>
+<header>
+  <div class="banner">
+      <a href="https://gov.bc.ca" alt="British Columbia">
+        <img src="../assets/images/logo-banner.png" alt="logo" />
+      </a>
+      <h1>Hello British Columbia</h1>
+  </div>
+  <div class="other">
+    <!-- 
+      This place is for anything that needs to be right aligned
+      beside the logo.  
+    -->
+    &nbsp;
+  </div>
+  </div>
+</header>
 ```
     
 ### CSS
@@ -85,13 +89,9 @@ header {
 
 header h1 {
   font-family: 'PT Sans';
-  font-size: 1em;       /* apx 16px */
   font-weight: normal;  /* 400 */
   margin: 5px 5px 0 18px;
-}
-
-header .logo {
-  height: 40px;
+  visibility: hidden;
 }
 
 header .banner {
@@ -99,29 +99,17 @@ header .banner {
   justify-content: flex-start;
   align-items: center;
   margin: 0 10px 0 0;
-  /* border-style: dotted;
+  border-style: dotted;
   border-width: 1px;
-  border-color: lightgrey; */
+  border-color: lightgrey;
 }
 
 header .other {
   display: flex;
   flex-grow: 1;
-  /* border-style: dotted;
+  border-style: dotted;
   border-width: 1px;
-  border-color: lightgrey; */
-}
-
-/*
-  Media queries should be customized based each site. Determine at what
-  size your sight starts to look bad and put a media query at that point
-  to adjust.
-*/
-
-@media screen and (min-width: 600px) {
-  header h1 {
-    font-size: 1.33em;  /* apx 18px */
-  }
+  border-color: lightgrey;
 }
 ```
 
