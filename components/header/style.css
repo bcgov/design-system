@@ -9,7 +9,6 @@ header {
 
 header h1 {
   font-family: 'PT Sans';
-  /* font-size: 1em;       apx 16px */
   font-weight: normal;  /* 400 */
   margin: 5px 5px 0 18px;
   visibility: hidden;
@@ -20,35 +19,35 @@ header .banner {
   justify-content: flex-start;
   align-items: center;
   margin: 0 10px 0 0;
-  /* border-style: dotted;
+  border-style: dotted;
   border-width: 1px;
-  border-color: lightgrey; */
+  border-color: lightgrey;
 }
 
 header .other {
   display: flex;
   flex-grow: 1;
-  /* border-style: dotted;
+  border-style: dotted;
   border-width: 1px;
-  border-color: lightgrey; */
+  border-color: lightgrey;
 }
 
 /*
-  Media queries should be customized based each site. Determine at what
-  size your sight starts to look bad and put a media query at that point
-  to adjust.
+  These are sample media queries only. Media queries are quite subjective
+  but, in general, should be made for the three different classes of screen
+  size: phone, tablet, full. 
 */
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 899px) {
   header h1 {
-    font-size: 2.9em;  /* apx 35pt */
+    font-size: calc(7px + 2.2vw);
     visibility: visible;
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 799px) {
+@media screen and (min-width: 900px) {
   header h1 {
-    font-size: 1.6em;
+    font-size: 2.1em;
     visibility: visible;
   }
 }
