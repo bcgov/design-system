@@ -125,6 +125,6 @@ header .other {
 }
 ```
 
-[screenshot]: https://github.com/bcgov/design-system/raw/master/components/header/images/header.png "Screenshot"
+[screenshot]: images/header.png "Screenshot"
 
-[screenshot-with-outline]: https://github.com/bcgov/design-system/raw/master/components/header/images/header-with-illustrations.png "Screenshot With Illustration"
+[screenshot-with-outline]: images/header-with-illustrations.png "Screenshot With Illustration"
