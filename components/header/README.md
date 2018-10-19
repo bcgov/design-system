@@ -11,6 +11,7 @@ Headers help users understand what the content of the page is about and provide 
 ## Visual
 
 ![Screenshot][screenshot]
+
 ![Screenshot with Illustration][screenshot-with-outline]
 
 ## Use This For
