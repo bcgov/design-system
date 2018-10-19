@@ -15,10 +15,6 @@ header h1 {
   visibility: hidden;
 }
 
-header .logo {
-  height: 40px;
-}
-
 header .banner {
   display: flex;
   justify-content: flex-start;
