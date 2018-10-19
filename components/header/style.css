@@ -19,17 +19,17 @@ header .banner {
   justify-content: flex-start;
   align-items: center;
   margin: 0 10px 0 0;
-  border-style: dotted;
+  /* border-style: dotted;
   border-width: 1px;
-  border-color: lightgrey;
+  border-color: lightgrey; */
 }
 
 header .other {
   display: flex;
   flex-grow: 1;
-  border-style: dotted;
+  /* border-style: dotted;
   border-width: 1px;
-  border-color: lightgrey;
+  border-color: lightgrey; */
 }
 
 /*

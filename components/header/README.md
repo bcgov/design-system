@@ -11,8 +11,6 @@ Headers help users understand what the content of the page is about and provide 
 
 ![Screenshot][screenshot]
 
-![Screenshot with Illustration][screenshot-with-outline]
-
 ## Use This For
 
 All public facing online BC Government content and services.
@@ -64,10 +62,7 @@ For fonts and a standard browser reset include the following links in the `<head
       <h1>Hello British Columbia</h1>
   </div>
   <div class="other">
-    <!-- 
-      This place is for anything that needs to be right aligned
-      beside the logo.  
-    -->
+    <!-- This place is for anything that needs to be right aligned beside the logo. -->
     &nbsp;
   </div>
   </div>
@@ -98,22 +93,14 @@ header .banner {
   justify-content: flex-start;
   align-items: center;
   margin: 0 10px 0 0;
-  border-style: dotted;
-  border-width: 1px;
-  border-color: lightgrey;
 }
 
 header .other {
   display: flex;
   flex-grow: 1;
-  border-style: dotted;
-  border-width: 1px;
-  border-color: lightgrey;
 }
 ```
 
 _Last Updated: 2018-10-19_
 
 [screenshot]: images/header.png "Screenshot"
-
-[screenshot-with-outline]: images/header-with-illustrations.png "Screenshot With Illustration"
