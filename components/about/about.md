@@ -13,7 +13,7 @@ Components are collectively built by the government community, meet accessibilit
 
 Use the Design System if you’re building custom B.C. government and applications. For more information about applying for external URLs, contact the B.C. government Joint Working Group.
 
-## **The Team**
+## The Team
 
 The Design System is managed by a team of designers and developers and the government community. The system is a part of the DevHub, a project by the Developers’ Exchange that brings together UI/interface and back-end resources for digital teams.
 
@@ -23,13 +23,13 @@ Bryan Smith – Service Design Specialist
 
 Ori Nevares – Service Design Specialist
 
-## **The Community**
+## The Community
 
 The system is collectively built and maintained by the government community. It’s open source, which means that anybody can provide input, offer suggestions and get involved.
 
 Share your feedback to make this resource better for everyone.
 
-## **How the system works**
+## How the system works
 
 How might we improve people’s interaction with B.C. government digital products and services?
 
