@@ -1,6 +1,6 @@
 ---
 description: What the Design System is and how it works.
-title:
+title: About
 ---
 
 ## About
