@@ -34,12 +34,11 @@ Good examples include:
 ## Visual
 
 ![Screenshot][screenshot]
-Header Visual: [![Header-Banner]
-(https://github.com/bcgov/design-system/blob/master/components/header/images/header.png)]
+Header Visual: ![Header-Banner](https://github.com/bcgov/design-system/blob/master/components/header/images/header.png?raw=true)
 
 ## Use This For
 
-*	All public-facing online B.C. government content and services.
+*	All public-facing online B.C. Government content and services.
 *	Websites or apps that do not require navigation built into the header.
 
 ## Don't Use This For
