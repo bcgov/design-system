@@ -142,4 +142,4 @@ footer ul li a {
 }
 ```
 
-[screenshot]: images/header.png "Screenshot"
+[screenshot]: images/footer.png "Screenshot"
