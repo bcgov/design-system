@@ -10,8 +10,6 @@ Footers help people find what they need after scrolling to the bottom of a web p
 
 ## Required
 
-## Last Updated: [Last_Update]
-
 ## Visual Example
 
 ![Screenshot][screenshot]
@@ -141,5 +139,7 @@ footer ul li a {
   padding-right: 5px;
 }
 ```
+
+_Last Updated: 2018-10-23_
 
 [screenshot]: images/footer.png "Screenshot"
