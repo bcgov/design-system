@@ -13,7 +13,8 @@ Footers help people find what they need after scrolling to the bottom of a web p
 ## Last Updated: [Last_Update]
 
 ## Visual Example
-	Visual example goes here
+
+![Screenshot][screenshot]
 
 ## Use This for:
 All public-facing B.C. Government online content and services
@@ -77,7 +78,68 @@ Use these visual components to help you create, prototype, and test your designs
 This library is updated on a regular basis; by subscribing to the design library, you’ll be informed of updates to components and new additions.
 
 ## Code
+
+For fonts and a standard browser reset include the following links in the `<header>` of your page.
+
+```html
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+```
+
 ### HTML
-	HTML goes here
+
+```html
+<footer class="footer">
+ <div class="container">
+   <ul>
+   	 <li><a href=".">Home</a></li>
+   	 <li><a href=".">Disclaimer</a></li>
+   	 <li><a href=".">Privacy</a></li>
+   	 <li><a href=".">Accessibility</a></li>
+   	 <li><a href=".">Copyright</a></li>
+   	 <li><a href=".">Contact Us</a></li>
+   </ul>
+ </div>
+</footer>
+```
+    
 ### CSS
-	CSS goes here
+
+```css
+footer {
+  background-color: #036;
+  border-top: 2px solid #fcba19;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 46px;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  color: #fff;
+  list-style: none;
+  align-items: center;
+  height: 100%;
+}
+
+footer ul li a {
+  font-size: 0.813em;
+  font-weight: normal;  /* 400 */
+  color: #fff;
+  border-right: 1px solid #4b5e7e;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+```
+
+[screenshot]: images/header.png "Screenshot"
