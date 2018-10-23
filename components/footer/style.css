@@ -2,7 +2,6 @@ footer {
   background-color: #036;
   border-top: 2px solid #fcba19;
   color: #fff;
-  flex-shrink: 0;
 }
 
 footer .container {
@@ -31,4 +30,9 @@ footer ul li a {
   border-right: 1px solid #4b5e7e;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
