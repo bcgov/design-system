@@ -33,9 +33,8 @@ Good examples include:
 
 ## Visual
 
-![Screenshot][screenshot]
-Header Visual: [![Header-Banner]
-(https://github.com/bcgov/design-system/blob/master/components/header/images/header.png)]
+Header Visual: 
+![Header-Banner](https://github.com/bcgov/design-system/blob/master/components/header/images/header.png?raw=true)
 
 ## Use This For
 
