@@ -33,7 +33,7 @@ Good examples include:
 
 ## Visual
 Header Visual:
-![Screenshot][screenshot]
+![Header](https://github.com/bcgov/design-system/blob/master/components/header/images/header.png?raw=true)
 
 ## Use This For
 
@@ -195,5 +195,3 @@ header {
 2.	Font download or reference link
 
 _Last Updated: 2018-10-23_
-
-[screenshot]: https://github.com/bcgov/design-system/blob/master/components/header/images/header.png?raw=true "Screenshot"
