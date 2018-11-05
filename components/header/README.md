@@ -19,8 +19,8 @@ Header Visual:
 
 ## How to Use This
 
-*	All public-facing online B.C. Government content and services.
-*	Websites or apps that do not require navigation built into the header.
+*	Must appear on all public-facing online B.C. Government content and services.
+*	Designed for websites or apps that do not require navigation built into the header.
 
 The text in the header should include the site title or service name. If the website is a service, a good name should:
 
