@@ -9,6 +9,19 @@ status: draft
 
 Headers help people understand what the content of the page is about and provide a quick, organized way to reach the main sections of a web page. They appear at the top of a page, above the main body text. The B.C. government header provides a consistent look, feel, and functionality across government sites.
 
+### Required
+
+## Last Updated: 2 days ago
+
+## Visual
+Header Visual:
+![Header](https://github.com/bcgov/design-system/blob/master/components/header/images/header.png?raw=true)
+
+## How to Use This
+
+*	All public-facing online B.C. Government content and services.
+*	Websites or apps that do not require navigation built into the header.
+
 The text in the header should include the site title or service name. If the website is a service, a good name should:
 
 * Use the words users (regular people) use
@@ -26,19 +39,6 @@ Good examples include:
 *	Find an apprenticeship
 
 *Adapted from the UK Government’s Service Naming Guide [https://www.gov.uk/service-manual/design/naming-your-service]
-
-### Required
-
-## Last Updated: 2 days ago
-
-## Visual
-Header Visual:
-![Header](https://github.com/bcgov/design-system/blob/master/components/header/images/header.png?raw=true)
-
-## Use This For
-
-*	All public-facing online B.C. Government content and services.
-*	Websites or apps that do not require navigation built into the header.
 
 ## Don't Use This For
 
