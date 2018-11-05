@@ -60,7 +60,7 @@ Download and use the B.C. government Design System library to help build prototy
 
 The library is constantly updated and currently available in the following tools:
 
-* [Sketch:](https://sketch.cloud/s/Q0bkG)
+* [Sketch](https://sketch.cloud/s/Q0bkG)
 
 This library is updated on a regular basis; by subscribing to the design library, you’ll be informed of updates to components and new additions.
 
