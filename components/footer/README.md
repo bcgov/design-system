@@ -14,8 +14,8 @@ Footers help people find what they need after scrolling to the bottom of a web p
 
 ![Footer](https://github.com/bcgov/design-system/blob/footer-f/components/footer/images/footer.png?raw=true)
 
-## Use This for:
-All public-facing B.C. Government online content and services
+## How to Use This:
+Must appear on all public-facing B.C. Government online content and services
 
 ## Don't Use This for:
 Any online content or digital services that are not a part of the B.C. government.
