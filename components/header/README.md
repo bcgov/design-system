@@ -89,7 +89,7 @@ Download and use the B.C. government Design System library to help build prototy
 The library is available in these design tools:
 
 * Sketch: [https://sketch.cloud/s/Q0bkG] 
-* UXPin: [https://app.uxpin.com/design-system/b977adbfc2a11781be06 ]
+
 This library is updated on a regular basis; by subscribing to the design library, you’ll be informed of updates to components and new additions.
 
 ## Code
