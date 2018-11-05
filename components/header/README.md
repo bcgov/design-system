@@ -38,7 +38,7 @@ Good examples include:
 *	Renew your passport
 *	Find an apprenticeship
 
-*Adapted from the UK Government’s Service Naming Guide [https://www.gov.uk/service-manual/design/naming-your-service]
+*Adapted from the UK Government’s [Service Naming Guide] (https://www.gov.uk/service-manual/design/naming-your-service)
 
 ## Don't Use This For
 
