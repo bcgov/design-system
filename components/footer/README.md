@@ -68,7 +68,7 @@ Colour Impairment Grayscale Keyboard Accessibility Screen Readers Tab Navigation
 ## Design with This Component
 Are you wire-framing or prototyping a site or app? You can download and use the B.C. government Design System library in one of the following design tools:
 
-*	Sketch: [https://sketch.cloud/s/Q0bkG]
+*	[Sketch:] (https://sketch.cloud/s/Q0bkG)
 
 Use these visual components to help you create, prototype, and test your designs and help make the hand-off to developers much easier and faster.
 
