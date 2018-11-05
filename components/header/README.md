@@ -9,6 +9,19 @@ status: draft
 
 Headers help people understand what the content of the page is about and provide a quick, organized way to reach the main sections of a web page. They appear at the top of a page, above the main body text. The B.C. government header provides a consistent look, feel, and functionality across government sites.
 
+### Required
+
+## Last Updated: 2 days ago
+
+## Visual
+Header Visual:
+![Header](https://github.com/bcgov/design-system/blob/master/components/header/images/header.png?raw=true)
+
+## How to Use This
+
+*	Must appear on all public-facing online B.C. Government content and services.
+*	Designed for websites or apps that do not require navigation built into the header.
+
 The text in the header should include the site title or service name. If the website is a service, a good name should:
 
 * Use the words users (regular people) use
@@ -25,20 +38,7 @@ Good examples include:
 *	Renew your passport
 *	Find an apprenticeship
 
-*Adapted from the UK Government’s Service Naming Guide [https://www.gov.uk/service-manual/design/naming-your-service]
-
-### Required
-
-## Last Updated: 2 days ago
-
-## Visual
-Header Visual:
-![Header](https://github.com/bcgov/design-system/blob/master/components/header/images/header.png?raw=true)
-
-## Use This For
-
-*	All public-facing online B.C. Government content and services.
-*	Websites or apps that do not require navigation built into the header.
+*Adapted from the UK Government’s [Service Naming Guide](https://www.gov.uk/service-manual/design/naming-your-service)
 
 ## Don't Use This For
 
@@ -88,8 +88,8 @@ Download and use the B.C. government Design System library to help build prototy
 
 The library is available in these design tools:
 
-* Sketch: [https://sketch.cloud/s/Q0bkG] 
-* UXPin: [https://app.uxpin.com/design-system/b977adbfc2a11781be06 ]
+* [Sketch](https://sketch.cloud/s/Q0bkG)
+
 This library is updated on a regular basis; by subscribing to the design library, you’ll be informed of updates to components and new additions.
 
 ## Code

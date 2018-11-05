@@ -14,8 +14,8 @@ Footers help people find what they need after scrolling to the bottom of a web p
 
 ![Footer](https://github.com/bcgov/design-system/blob/footer-f/components/footer/images/footer.png?raw=true)
 
-## Use This for:
-All public-facing B.C. Government online content and services
+## How to Use This:
+Must appear on all public-facing B.C. Government online content and services
 
 ## Don't Use This for:
 Any online content or digital services that are not a part of the B.C. government.
@@ -33,11 +33,10 @@ This footer is the current version. It meets all government standards, branding,
 Footer Links:
 *	“Site title” returns to home page of external site
 *	“About” explains external site purpose. Provide background and context of who owns, manages, influences the site – aim at being transparent
-*	“Disclaimer” use core government disclaimer statement. Any addendums must be vetted by ministry or central legal advisors before being released)[ https://www2.gov.bc.ca/gov/content/home/disclaimer]
-*	“Privacy” use core government privacy statement. Any addendums must be vetted by ministry or central legal advisors before being released.[ https://www2.gov.bc.ca/gov/content/home/privacy]
-*	“Accessibility” use core government Accessibility statement. Any addendums must be vetted by ministry or central legal advisors before being released.
-*	 [https://www2.gov.bc.ca/gov/content/home/accessibility]
-*	“Copyright” use core government copyright statement. Any addendums must be vetted by ministry or central legal advisors before being released. [https://www2.gov.bc.ca/gov/content/home/copyright]
+*	“Disclaimer” use core government [disclaimer statement](https://www2.gov.bc.ca/gov/content/home/disclaimer). Any addendums must be vetted by ministry or central legal advisors before being released)
+*	“Privacy” use core government [privacy statement](https://www2.gov.bc.ca/gov/content/home/privacy). Any addendums must be vetted by ministry or central legal advisors before being released.
+*	“Accessibility” use core government [Accessibility statement](https://www2.gov.bc.ca/gov/content/home/accessibility). Any addendums must be vetted by ministry or central legal advisors before being released.
+*	“Copyright” use core government [copyright statement](https://www2.gov.bc.ca/gov/content/home/copyright). Any addendums must be vetted by ministry or central legal advisors before being released. 
 *	“Contact Us” provides contact details for service area or program.
 
 ## Accessibility
@@ -68,8 +67,7 @@ Colour Impairment Grayscale Keyboard Accessibility Screen Readers Tab Navigation
 ## Design with This Component
 Are you wire-framing or prototyping a site or app? You can download and use the B.C. government Design System library in one of the following design tools:
 
-*	Sketch: [https://sketch.cloud/s/Q0bkG]
-*	UXPin: [https://app.uxpin.com/design-system/b977adbfc2a11781be06]
+*	[Sketch](https://sketch.cloud/s/Q0bkG)
 
 Use these visual components to help you create, prototype, and test your designs and help make the hand-off to developers much easier and faster.
 
