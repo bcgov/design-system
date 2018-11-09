@@ -12,7 +12,7 @@ Footers help people find what they need after scrolling to the bottom of a web p
 
 ## Visual Example
 
-![Footer](https://github.com/bcgov/design-system/blob/footer-f/components/footer/images/footer.png?raw=true)
+![Footer](./images/footer.png)
 
 ## How to Use This:
 Must appear on all public-facing B.C. Government online content and services
