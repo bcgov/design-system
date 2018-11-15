@@ -41,7 +41,7 @@ header {
     right: 10px;
     z-index: 100;
     width: auto;
-    margin: 0 10px 0 auto;
+    margin: 0 0 0 auto;
   }
 
   header a [class^="fas fa-"] {
