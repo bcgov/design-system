@@ -73,19 +73,25 @@ header {
   
   .navigation-main .container ul {
     display: flex;
-    flex-direction: row;
     margin: 0;
     color: #fff;
     list-style: none;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: red;
   }
   
   .navigation-main .container ul li a {
+    display: flex;
     font-size: 0.813em;
     font-weight: normal;  /* 400 */
     color: #fff;
     border-right: 1px solid #9b9b9b;
     padding: 0 15px 0 15px;
     text-decoration: none;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: green;
   }
 
   /*
