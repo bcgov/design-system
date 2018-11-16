@@ -5,7 +5,7 @@ header {
     color: #fff;
     display: flex;
     height: 65px;
-    top: 0px;
+    top: 0;
     position: fixed;
     width: 100%;
     -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
@@ -52,13 +52,13 @@ header {
     color: #fcba19;
     font-style: normal;
     line-height: 1;
-    -webkit-font-smoothing: antialiased;
     border-style: solid;
     border-width: 1px;
     border-color: #fcba19;
     padding: 5px;
+    -webkit-font-smoothing: antialiased;
   }
-  
+
   /*
     These are sample media queries only. Media queries are quite subjective
     but, in general, should be made for the three different classes of screen
