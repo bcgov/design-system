@@ -45,6 +45,7 @@ header {
     z-index: 100;
     width: auto;
     margin: 0 0 0 auto;
+    cursor: pointer;
   }
 
   header a [class^="fas fa-"] {
