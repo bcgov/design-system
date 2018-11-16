@@ -76,11 +76,12 @@ header {
     margin: 0;
     color: #fff;
     list-style: none;
-    border-style: dotted;
+    margin-left: -25px;
+    /* border-style: dotted;
     border-width: 1px;
-    border-color: red;
+    border-color: red; */
   }
-  
+
   .navigation-main .container ul li a {
     display: flex;
     font-size: 0.813em;
@@ -89,10 +90,19 @@ header {
     border-right: 1px solid #9b9b9b;
     padding: 0 15px 0 15px;
     text-decoration: none;
-    border-style: dotted;
+    /* border-style: dotted;
     border-width: 1px;
-    border-color: green;
+    border-color: green; */
   }
+
+  .navigation-main .container ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .navigation-main .container ul .active {
+    text-decoration: underline;
+    font-weight: bold;
+  } 
 
   /*
     These are sample media queries only. Media queries are quite subjective
