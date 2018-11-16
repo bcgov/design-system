@@ -51,12 +51,14 @@ header {
   }
   
   header .nav-btn {
+    display: block;
     width: auto;
     margin: 0 0 0 auto;
     cursor: pointer;
   }
 
   .navigation-main {
+    display: none;
     position: fixed;
     top: 65px;
     color: #fcba19;
@@ -73,6 +75,7 @@ header {
   
   .navigation-main .container ul {
     display: flex;
+    flex-direction: column;
     margin: 0;
     color: #fff;
     list-style: none;
@@ -87,9 +90,9 @@ header {
     font-size: 0.813em;
     font-weight: normal;  /* 400 */
     color: #fff;
-    border-right: 1px solid #9b9b9b;
     padding: 0 15px 0 15px;
     text-decoration: none;
+    margin: 0 0 3px 0;
     /* border-style: dotted;
     border-width: 1px;
     border-color: green; */
@@ -110,6 +113,27 @@ header {
     size: phone, tablet, full. 
   */
   
+  @media screen and (min-width: 600px) {
+    .navigation-main {
+      display: block;
+    }
+
+    .navigation-main .container ul {
+      flex-direction: row;
+    }
+
+    .navigation-main .container ul li a {
+      border-right: 1px solid #9b9b9b;
+    }
+
+    header .nav-btn {
+      display: none;
+      width: auto;
+      margin: 0 0 0 auto;
+      cursor: pointer;
+    }
+  }
+
   @media screen and (min-width: 600px) and (max-width: 899px) {
     header h1 {
       font-size: calc(7px + 2.2vw);
