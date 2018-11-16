@@ -39,12 +39,6 @@ header {
     border-color: lightgrey; */
   }
 
-  header .nav-btn {
-    width: auto;
-    margin: 0 0 0 auto;
-    cursor: pointer;
-  }
-
   header a [class^="fas fa-"] {
     color: #fcba19;
     font-style: normal;
@@ -54,6 +48,44 @@ header {
     border-color: #fcba19;
     padding: 5px;
     -webkit-font-smoothing: antialiased;
+  }
+  
+  header .nav-btn {
+    width: auto;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+  }
+
+  .navigation-main {
+    position: fixed;
+    top: 65px;
+    color: #fcba19;
+    background-color: #38598a;
+    width: 100%;
+    -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
+    -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
+    box-shadow: 0 6px 8px -4px #b3b1b3;
+  }
+
+  .navigation-main .container {
+    padding: 10px 0 10px 0;
+  }
+  
+  .navigation-main .container ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    color: #fff;
+    list-style: none;
+  }
+  
+  .navigation-main .container ul li a {
+    font-size: 0.813em;
+    font-weight: normal;  /* 400 */
+    color: #fff;
+    border-right: 1px solid #9b9b9b;
+    padding: 0 15px 0 15px;
+    text-decoration: none;
   }
 
   /*
