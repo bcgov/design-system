@@ -113,7 +113,7 @@ header {
     size: phone, tablet, full. 
   */
   
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
     .navigation-main {
       display: block;
     }
@@ -134,7 +134,7 @@ header {
     }
   }
 
-  @media screen and (min-width: 600px) and (max-width: 899px) {
+  @media screen and (min-width: 768px) and (max-width: 899px) {
     header h1 {
       font-size: calc(7px + 2.2vw);
       visibility: visible;
