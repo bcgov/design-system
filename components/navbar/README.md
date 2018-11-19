@@ -67,9 +67,218 @@ This library is updated on a regular basis; by subscribing to the design library
 
 ## Code
 ### HTML
-  HTML goes here
+
+This component builds on the `header` component; See `sample.html` for a working example.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans">
+    <link rel="stylesheet" href="style.css">
+    <title>Sample Navigation</title>
+</head>
+
+<!--
+  All in-line CSS is specific to this sample; it can and should be ignored.
+ -->
+
+<body style="background: #F8F8F8; margin-top: 130px;">
+  <header>
+    <div class="banner">
+        <a href="https://gov.bc.ca" alt="British Columbia">
+          <img src="../assets/images/logo-banner.png" alt="logo" />
+        </a>
+        <h1>Hello British Columbia</h1>
+    </div>
+    <div class="other">
+      <a class="nav-btn">
+        <i class="fas fa-bars" id="menu"></i>
+      </a>
+    <!-- 
+      This place is for anything that needs to be right aligned
+      beside the logo.
+    -->
+    </div>
+  </header>
+  <nav class="navigation-main" id='navbar'>
+    <div class="container">
+      <ul>
+        <li><a href="sample.html" class="active">Home</a></li>
+        <li><a href=".">Some Thing</a></li>
+        <li><a href=".">Another Thing</a></li>
+        <li><a href=".">Somewhere</a></li>
+        <li><a href=".">Elsewhere</a></li>
+        <li><a href=".">Hello</a></li>
+      </ul>
+    </div>
+  </nav>
+
+</body>
+</html>
+```
+
 ### CSS
-  HTML goes here
+
+This component builds on the `header` component; See `style.css` for a working example.
+
+```css
+header {
+    background-color: #036;
+    border-bottom: 2px solid #fcba19;
+    padding: 0 30px 0 30px;
+    color: #fff;
+    display: flex;
+    height: 65px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
+    -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
+    box-shadow: 0 6px 8px -4px #b3b1b3;
+  }
+  
+  header h1 {
+    font-family: 'PT Sans';
+    font-weight: normal;  /* 400 */
+    margin: 5px 5px 0 18px;
+    visibility: hidden;
+  }
+  
+  header .banner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 10px 0 0;
+    /* border-style: dotted;
+    border-width: 1px;
+    border-color: lightgrey; */
+  }
+  
+  header .other {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    /* border-style: dotted;
+    border-width: 1px;
+    border-color: lightgrey; */
+  }
+
+  header a [class^="fas fa-"] {
+    color: #fcba19;
+    font-style: normal;
+    line-height: 1;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fcba19;
+    padding: 5px;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  header .nav-btn {
+    display: block;
+    width: auto;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+  }
+
+  .navigation-main {
+    display: none;
+    position: fixed;
+    top: 65px;
+    color: #fcba19;
+    background-color: #38598a;
+    width: 100%;
+    -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
+    -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
+    box-shadow: 0 6px 8px -4px #b3b1b3;
+  }
+
+  .navigation-main .container {
+    padding: 10px 0 10px 0;
+  }
+  
+  .navigation-main .container ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: #fff;
+    list-style: none;
+    margin-left: -25px;
+    /* border-style: dotted;
+    border-width: 1px;
+    border-color: red; */
+  }
+
+  .navigation-main .container ul li a {
+    display: flex;
+    font-size: 0.813em;
+    font-weight: normal;  /* 400 */
+    color: #fff;
+    padding: 0 15px 0 15px;
+    text-decoration: none;
+    margin: 0 0 10px 0;
+    /* border-style: dotted;
+    border-width: 1px;
+    border-color: green; */
+  }
+
+  .navigation-main .container ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .navigation-main .container ul .active {
+    text-decoration: underline;
+    font-weight: bold;
+  } 
+
+  /*
+    These are sample media queries only. Media queries are quite subjective
+    but, in general, should be made for the three different classes of screen
+    size: phone, tablet, full. 
+  */
+  
+  @media screen and (min-width: 768px) {
+    .navigation-main {
+      display: block;
+    }
+
+    .navigation-main .container ul {
+      flex-direction: row;
+    }
+
+    .navigation-main .container ul li a {
+      border-right: 1px solid #9b9b9b;
+    }
+
+    header .nav-btn {
+      display: none;
+      width: auto;
+      margin: 0 0 0 auto;
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 899px) {
+    header h1 {
+      font-size: calc(7px + 2.2vw);
+      visibility: visible;
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    header h1 {
+      font-size: 2.0em;
+      visibility: visible;
+    }
+  }
+  ```
+
 ### Assets
   Assets go here
 
