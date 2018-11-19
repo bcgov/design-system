@@ -13,7 +13,8 @@ Navigation bars provide a list of links to important areas on a website or appli
 ## Last Updated: 2 days ago
 
 ## Visual
-  This is where the visual goes
+
+![Navbar](./images/navbar.gif)
 
 ## How to Use This:
 * The Navigation Bar is the primary means of navigation around a website or application. Typically, it accommodates the top level of the information architecture.
