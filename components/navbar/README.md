@@ -170,12 +170,13 @@ header {
   }
 
   header a [class^="fas fa-"] {
-    color: #fcba19;
-    font-style: normal;
+    color: white;
+    font-size: 1.4em;
+    font-style: bold;
     line-height: 1;
-    border-style: solid;
+    /* border-style: solid;
     border-width: 1px;
-    border-color: #fcba19;
+    border-color: #fcba19; */
     padding: 5px;
     -webkit-font-smoothing: antialiased;
   }
@@ -215,6 +216,10 @@ header {
     border-color: red; */
   }
 
+  .navigation-main .container ul li {
+    margin: 5px 0;
+  }
+
   .navigation-main .container ul li a {
     display: flex;
     font-size: 0.813em;
@@ -222,7 +227,6 @@ header {
     color: #fff;
     padding: 0 15px 0 15px;
     text-decoration: none;
-    margin: 0 0 10px 0;
     /* border-style: dotted;
     border-width: 1px;
     border-color: green; */
@@ -252,6 +256,10 @@ header {
       flex-direction: row;
     }
 
+    .navigation-main .container ul li {
+      margin: 0;
+    }
+    
     .navigation-main .container ul li a {
       border-right: 1px solid #9b9b9b;
     }
@@ -276,8 +284,8 @@ header {
       font-size: 2.0em;
       visibility: visible;
     }
-  }
-  ```
+  }  
+```
 
 ### Assets
   Assets go here
