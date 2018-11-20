@@ -3,7 +3,8 @@ description: Navigation bars provide a list of links to important content on a w
 title: Navigation Bar – Basic
 status: Draft
 ---
-> Draft
+
+![Status](../assets/badge/component-draft-blue.svg)
 
 # Navigation Bar – Basic
 Navigation bars provide a list of links to important areas on a website or application. Typically, they are placed by the header. The B.C. government navigation bar provides a consistent look, feel, and functionality across government sites.
