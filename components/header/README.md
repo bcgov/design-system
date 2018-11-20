@@ -3,7 +3,8 @@ description: Headers help users understand what the content of the page is about
 title: Header - Basic
 status: draft
 ---
-> Draft
+
+![Status](../../assets/badge/component-draft-blue.svg)
 
 # Header - Basic
 
