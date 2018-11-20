@@ -3,7 +3,8 @@ description: Footer help users understand what the content of the page is about 
 title: Footer - Basic
 status: Draft
 ---
-> Draft
+
+![Status](../../assets/badge/component-draft-blue.svg)
 
 # Footer
 Footers help people find what they need after scrolling to the bottom of a web page. They provide supplementary information such as copyright, contact information, links to other pages within a website, and email and social media links.
