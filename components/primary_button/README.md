@@ -1,10 +1,10 @@
 ---
 description: Primary buttons allow users to carry out an important action.
 title: Primary Button
-status: draft
+status: Draft
 ---
 
-> Draft
+![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
 
 # Primary Button
 Primary buttons allow users to carry out an important action on your service, such as Download or Submit.

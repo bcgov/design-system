@@ -4,7 +4,7 @@ title: Checkbox
 status: Draft
 ---
 
-> Draft
+![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
 
 # Checkbox
 Checkboxes are a form of control inputs that allow users to select one or more options from a list.
