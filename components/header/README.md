@@ -4,7 +4,7 @@ title: Header - Basic
 status: draft
 ---
 
-![Status](../../assets/badge/component-draft-blue.svg)
+![Status](../../assets/badge/component-draft-blue.png)
 
 # Header - Basic
 
