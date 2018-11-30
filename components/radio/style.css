@@ -23,7 +23,7 @@
 }
 
 /* Create a custom radio button */
-.checkmark {
+.dot {
   position: absolute;
   top: 0;
   left: 0;
@@ -34,28 +34,29 @@
 }
 
 /* When the radio button is checked, add a blue background */
-.radio input:checked ~ .checkmark {
+.radio input:checked ~ .dot {
   background-color: #ffffff;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
+.dot:after {
   content: "";
   position: absolute;
   display: none;
 }
 
 /* Show the indicator (dot/circle) when checked */
-.radio input:checked ~ .checkmark:after {
+.radio input:checked ~ .dot:after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.radio .checkmark:after {
-  top: 3px;
-  left: 3px;
+.radio .dot:after {
+  top: 50%;
+  left: 50%;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: #003366;
+  transform: translate(-50%, -50%);
 }
