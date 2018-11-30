@@ -2,6 +2,7 @@
 description: Primary buttons allow users to carry out an important action.
 title: Primary Button
 status: Draft
+author: orinevares
 ---
 
 ![Status](https://img.shields.io/badge/Component-Draft-orange.svg)

@@ -2,6 +2,7 @@
 description: Checkboxes allow users to select one or more items from a given list.
 title: Checkbox
 status: Draft
+author: orinevares
 ---
 
 ![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
