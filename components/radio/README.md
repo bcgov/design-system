@@ -1,10 +1,10 @@
 ---
 description: Radio buttons allow users to select one item from a given list.
 title: Radio Button
-status: draft
+status: Draft
 ---
 
-> Draft
+![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
 
 # Radio Button
 Radio buttons are a type of controlled input that allow users to select exactly one option from a list.
