@@ -2,6 +2,7 @@
 description: Radio buttons allow users to select one item from a given list.
 title: Radio Button
 status: Draft
+author: orinevares
 ---
 
 ![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
