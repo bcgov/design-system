@@ -2,6 +2,7 @@
 description: Text inputs allow users to enter any combination of letters, numbers, or symbols of their choosing in a structured format.
 title: Text Input
 status: Draft
+author: orinevares
 ---
 
 > Draft
