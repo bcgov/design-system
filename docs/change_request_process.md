@@ -2,6 +2,7 @@
 description: Anyone can propose a change to an existing component in the B.C. government Design System by submitting an issue or pull request. Change requests and bug reports will be handled by the Design System team as outlined in this document.
 title: Issue and Pull Request Response Process
 status: Draft
+ignore: true
 ---
 
 # **Review Process for Bug, Updates, Changes, and other Pull Requests**
