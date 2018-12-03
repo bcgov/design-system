@@ -21,3 +21,7 @@ form {
     outline: 4px solid #38598a;
     outline-offset: 1px;
 }
+
+.text_label {
+  display: flex;
+}
