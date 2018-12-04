@@ -75,8 +75,60 @@ This library is updated on a regular basis; by subscribing to the design library
 
 ## Code
 ### HTML
-	HTML goes here
+```
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <title>Text Input</title>
+  </head>
+  <body>
+
+    <form>
+      <div class="text_label">
+        <label>First Name:</label>
+      </div>
+      <input class="text_input" type="text" name="firstname"><br>
+      <div class="text_label">
+        <label> Last Name:</label>
+      </div>
+      <input class="text_input" type="text" name="lastname">
+    </form>
+
+  </body>
+</html>
+```
 ### CSS
-	CSS goes here
+```
+form {
+  font-family: 'PT Sans','Calibri', 'Arial', 'Sans Serif';
+  font-size: 16px;
+}
+
+.text_input {
+  font-family: 'PT Sans','Calibri', 'Arial', 'Sans Serif';
+  font-size: 16px;
+}
+
+.text_input {
+  height: 25px;
+  border: 2px solid #38598a;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.text_input[type="text"]:focus {
+    outline: 4px solid #38598a;
+    outline-offset: 1px;
+}
+
+.text_label {
+  display: flex;
+}
+```
 ### Assets
 	Assets go here
