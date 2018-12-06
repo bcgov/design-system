@@ -32,7 +32,7 @@ Footer Links:
 
 ## Behaviour
 * Ensure all links lead to correct pages
-* No changes to text when browser window size changes
+* No changes to text size or weighting when browser window size changes
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
