@@ -36,13 +36,13 @@ Checkbox Visual:
 
 ## Rationale
 Our checkboxes are larger than most browser defaults to allow for greater visibility and larger target areas for touchscreen devices. Research has shown that users resort to only clicking the checkbox and not the associated text, therefore a larger target area is necessary. Simply enlarging browser defaults proved to be problematic on many web browsers and the custom design should be used.
-Based on research done by Gov.UK: https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/
+Based on [research](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/) done by Gov.UK.
 
 ## Behaviour
 1. Users should be able to tap or click on either the checkbox or the label to select the option.
 
 ## Accessibility
-This checkbox has been built according to WCAG 2.0 AA [https://www.w3.org/TR/WCAG20/] standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
+This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
 * Proper ARIA and ALT labels are included
@@ -66,8 +66,8 @@ Download and use the B.C. government Design System library to help build prototy
 
 The library is constantly updated and currently available in the following tools:
 
-*	Sketch: [https://sketch.cloud/s/Q0bkG]
-* UxPin and others: [https://sketch.cloud/s/Q0bkG]
+*	[Sketch](https://sketch.cloud/s/Q0bkG)
+* [UxPin and others](https://sketch.cloud/s/Q0bkG)
 
 ## Code
 ### HTML
