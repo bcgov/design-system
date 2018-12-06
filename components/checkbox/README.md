@@ -21,18 +21,18 @@ Checkbox Visual:
 ## Requirements
 * This component must be used according the the standard outined in this document. Any feedback should be directed to the feedback forum.
 
-## Use This When Users:
-* Need to select multiple options from a given list
-* Toggle a single option on or off
+## Use This For:
+* Selecting multiple options from a given list
+* Toggling a single option on or off
+
+## Don't Use This when:
+* Users can only select one option from a list, use a radio button instead.
 
 ## Design Protocol:
 * List options vertically; horizontal listings can make it difficult to tell which label pertains to which checkbox.
 * Avoid using negative language in labels. Use “I want to receive email updates” instead of “I don’t want to receive email updates.”
 * Make sure selections are adequately spaced for touch screens.
 * Do not assume users will know how many options they can select. If needed, add a hint such as “Select all that apply” 
-
-## Don't Use This when:
-* Users can only select one option from a list, use a radio button instead.
 
 ## Rationale
 Our checkboxes are larger than most browser defaults to allow for greater visibility and larger target areas for touchscreen devices. Research has shown that users resort to only clicking the checkbox and not the associated text, therefore a larger target area is necessary. Simply enlarging browser defaults proved to be problematic on many web browsers and the custom design should be used.
