@@ -40,6 +40,7 @@ Based on [research](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-
 
 ## Behaviour
 * Users should be able to tap or click on either the checkbox or the label to select the option.
+* Do not preselect options, this signals a biased result.
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
