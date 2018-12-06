@@ -25,7 +25,7 @@ Navigation bars provide a list of links to important areas on a website or appli
 * Sites with six (6) or fewer navigation links or pages; sites with more links or with a hierarchy of pages should consider using a more advanced navigation structure.
 
 ## Don't Use This when
-* Site has more than seven (7) navigation links, consider using a more advanced navigation structure.
+* Sites that have seven (7) or more navigation links, consider using a more advanced navigation structure.
 
 ## Design Protocol
 * Present items in order of the users priority – higher demand links should be placed further to the left while lower demand links should be placed further to the right.
