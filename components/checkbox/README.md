@@ -39,7 +39,7 @@ Our checkboxes are larger than most browser defaults to allow for greater visibi
 Based on [research](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/) done by Gov.UK.
 
 ## Behaviour
-1. Users should be able to tap or click on either the checkbox or the label to select the option.
+* Users should be able to tap or click on either the checkbox or the label to select the option.
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
