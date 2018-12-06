@@ -20,11 +20,10 @@ Footers help people find what they need after scrolling to the bottom of a web p
 
 ## Requirements:
 * Must appear on all public-facing B.C. Government online content and services
-* Home, Disclaimer, Privacy, Accessibility, and Copyright must be present. Other links can be added as required.
+* Home, Disclaimer, Privacy, Accessibility, Copyright and Contact Us must be present. Other links can be added as required.
 
 Footer Links:
-*	“Site title” returns to home page of external site
-*	“About” explains external site purpose. Provide background and context of who owns, manages, influences the site – aim at being transparent
+*	“Home” returns to home page of external site
 *	“Disclaimer” use core government [disclaimer statement](https://www2.gov.bc.ca/gov/content/home/disclaimer). Any addendums must be vetted by ministry or central legal advisors before being released)
 *	“Privacy” use core government [privacy statement](https://www2.gov.bc.ca/gov/content/home/privacy). Any addendums must be vetted by ministry or central legal advisors before being released.
 *	“Accessibility” use core government [Accessibility statement](https://www2.gov.bc.ca/gov/content/home/accessibility). Any addendums must be vetted by ministry or central legal advisors before being released.
