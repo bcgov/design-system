@@ -22,10 +22,6 @@ Footers help people find what they need after scrolling to the bottom of a web p
 * Must appear on all public-facing B.C. Government online content and services
 * Home, Disclaimer, Privacy, Accessibility, and Copyright must be present. Other links can be added as required.
 
-## Behaviour
-* Ensure all links lead to correct pages
-* No changes to text when browser window size changes
-
 Footer Links:
 *	“Site title” returns to home page of external site
 *	“About” explains external site purpose. Provide background and context of who owns, manages, influences the site – aim at being transparent
@@ -34,6 +30,10 @@ Footer Links:
 *	“Accessibility” use core government [Accessibility statement](https://www2.gov.bc.ca/gov/content/home/accessibility). Any addendums must be vetted by ministry or central legal advisors before being released.
 *	“Copyright” use core government [copyright statement](https://www2.gov.bc.ca/gov/content/home/copyright). Any addendums must be vetted by ministry or central legal advisors before being released. 
 *	“Contact Us” provides contact details for service area or program.
+
+## Behaviour
+* Ensure all links lead to correct pages
+* No changes to text when browser window size changes
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
