@@ -1,5 +1,5 @@
 ---
-description: Checkboxes allow users to select one or more items from a given list.
+description: Checkboxes allow users to select one or more items from a list.
 title: Checkbox
 status: Draft
 author: orinevares
@@ -8,29 +8,31 @@ author: orinevares
 ![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
 
 # Checkbox
-Checkboxes are a form of control inputs that allow users to select one or more options from a list.
+Checkboxes are a form of control inputs that allow users to select one or more items from a list.
 
 ## Required
 
-## Last Updated: 2 days ago
+## Last Updated:
 
 ## Visual
 Checkbox Visual:
 ![Checkbox](https://github.com/bcgov/design-system/blob/master/components/checkbox/images/checkbox.png?raw=true)
 
-## How to Use This:
-When users have to:
-* Select multiple options from a given list
+## Requirements
+* This component must be used according the the standard outined in this document. Any feedback should be directed to the feedback forum.
+
+## Use This When Users:
+* Need to select multiple options from a given list
 * Toggle a single option on or off
 
-Tips:
+## Design Protocol:
 * List options vertically; horizontal listings can make it difficult to tell which label pertains to which checkbox.
 * Avoid using negative language in labels. Use “I want to receive email updates” instead of “I don’t want to receive email updates.”
 * Make sure selections are adequately spaced for touch screens.
 * Do not assume users will know how many options they can select. If needed, add a hint such as “Select all that apply” 
 
-## Don't Use This for:
-* If a user can only select one option from a list, use a radio button instead.
+## Don't Use This when:
+* Users can only select one option from a list, use a radio button instead.
 
 ## Rationale
 Our checkboxes are larger than most browser defaults to allow for greater visibility and larger target areas for touchscreen devices. Research has shown that users resort to only clicking the checkbox and not the associated text, therefore a larger target area is necessary. Simply enlarging browser defaults proved to be problematic on many web browsers and the custom design should be used.
@@ -40,35 +42,32 @@ Based on research done by Gov.UK: https://designnotes.blog.gov.uk/2016/11/30/wev
 1. Users should be able to tap or click on either the checkbox or the label to select the option.
 
 ## Accessibility
-This checkbox has been built according to WCAG 2.0 AA standards and has been successfully tested for the following:
-1.	Perceivable
-* Alternative text is provided for non-text content (WCAG 1.1.1)
-*	Content can be presented in different ways without losing information or structure (WCAG 1.3)
-*	Colour is not used as the only visual means of conveying information (WCAG 1.4.1)
-*	Visual presentation of text and images has a contrast ratio of at least 4.5:1 (WCAG 1.4.3)
-*	Text can be resized without assistive technology up to 200% without loss of content or functionality (WCAG 1.4.4)
+This checkbox has been built according to WCAG 2.0 AA [https://www.w3.org/TR/WCAG20/] standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
-2.	Operable
-*	All functionality of the content is operable through a keyboard interface (WCAG 2.1.1)
-*	A mechanism is available to bypass blocks of content that are repeated on multiple web pages (WCAG 2.4.1)
-*	Headings and Labels describe topic or purpose (WCAG 2.4.6)
-*	Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible (WCAG  2.4.7)
+### Screenreaders
+* Proper ARIA and ALT labels are included
+* Language tag has been set to english
+* List items and checkbox status are labelled properly
 
-3.	Understandable
-*	The default human language of each web page can be programmatically determined (WCAG 3.1.1)
-*	Navigational mechanisms that are repeated on multiple web pages occur in the same relative order each time they are repeated (WCAG 3.2.3)
+### Colour Contrast
+* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
 
-4.	Robust
-*	For all user interface components, the name and role can be programmatically determined (WCAG 4.1.2)
+### Tab Navigation
+* Supports tab navigation for use without a mouse
 
-## Design with This Component
+### Learn More
+* Contacts
+* Online Tools
+* Online Resources
+* Gov Resources
+
+## Prototype with This Component
 Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
 
 The library is constantly updated and currently available in the following tools:
 
-•	Sketch: [https://sketch.cloud/s/Q0bkG] 
-
-This library is updated on a regular basis; by subscribing to the design library, you’ll be informed of updates to components and new additions.
+*	Sketch: [https://sketch.cloud/s/Q0bkG]
+* UxPin and others: [https://sketch.cloud/s/Q0bkG]
 
 ## Code
 ### HTML
