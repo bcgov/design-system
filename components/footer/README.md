@@ -12,21 +12,15 @@ Footers help people find what they need after scrolling to the bottom of a web p
 
 ## Required
 
+## Last Updated:
+
 ## Visual Example
 
 ![Footer](./images/footer.png)
 
-## How to Use This:
-Must appear on all public-facing B.C. Government online content and services
-
-## Don't Use This for:
-Any online content or digital services that are not a part of the B.C. government.
-Unsure? Contact the Design System team to ask a question. Ask HERE.
-
-Consider using a footer with collapsible functionality (Footer – Extended) for sites with additional navigation requirements.
-
-## Rationale
-This footer is the current version. It meets all government standards, branding, and accessibility requirements. By using this header for your website or app, you’ll help ensure that citizens have a consistent experience when using B.C. government online services.
+## Requirements:
+* Must appear on all public-facing B.C. Government online content and services
+* Home, Disclaimer, Privacy, Accessibility, and Copyright must be present. Other links can be added as required.
 
 ## Behaviour
 * Ensure all links lead to correct pages
@@ -42,38 +36,32 @@ Footer Links:
 *	“Contact Us” provides contact details for service area or program.
 
 ## Accessibility
-This footer has been built according to WCAG 2.0 AA standards and has been successfully tested for the following:
+This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
-1. Perceivable
-*	Alternative text is provided for non-text content (WCAG 1.1.1)
-*	Colour is not used as the only visual means of conveying information (WCAG 1.4.1)
-*	Visual presentation of text and images has a contrast ration of at least 4.5:1 (WCAG 1.4.3)
-*	Text can be resized without assistive technology up to 200% without loss of content or functionality (WCAG 1.4.4)
-*	Images of text are only used for pure decoration (WCAG 1.4.9)
+### Screenreaders
+* Proper ARIA and ALT labels are included
+* Language tag has been set to english
+* Links are labelled properly
 
-2. Operable
-*	All functionality of the content is operable through a keyboard interface (WCAG 2.1.1)
-*	A mechanism is available to bypass blocks of content that are repeated on multiple web pages (WCAG 2.4.1)
-*	Headings and Labels describe topic or purpose (WCAG 2.4.6)
-*	Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible (WCAG  2.4.7)
+### Colour Contrast
+* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
 
-3. Understandable
-*	The default human language of each web page can be programmatically determined (WCAG 3.1.1)
-*	Navigational mechanisms that are repeated on multiple web pages occur in the same relative order each time they are repeated (WCAG 3.2.3)
+### Tab Navigation
+* Supports tab navigation for use without a mouse
 
-4. Robust
-*	For all user interface components, the name and role can be programmatically determined (WCAG 4.1.2)
+### Learn More
+* Contacts
+* Online Tools
+* Online Resources
+* Gov Resources
 
-Colour Impairment Grayscale Keyboard Accessibility Screen Readers Tab Navigation
+## Prototype with This Component
+Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
 
-## Design with This Component
-Are you wire-framing or prototyping a site or app? You can download and use the B.C. government Design System library in one of the following design tools:
+The library is constantly updated and currently available in the following tools:
 
 *	[Sketch](https://sketch.cloud/s/Q0bkG)
-
-Use these visual components to help you create, prototype, and test your designs and help make the hand-off to developers much easier and faster.
-
-This library is updated on a regular basis; by subscribing to the design library, you’ll be informed of updates to components and new additions.
+* [UxPin and others](https://sketch.cloud/s/Q0bkG)
 
 ## Code
 
