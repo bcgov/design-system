@@ -34,7 +34,7 @@ Text inputs allow users to enter a single line of any combination of letters, nu
 ## Design Protocol
 * The length of the text input should provide a hint to the user on how much text to write.
 * Text inputs must have visible labels aligned above the text input they refer to. They should be short, direct, and written in sentence case.
-* Allow copy and paste functionality
+* Allow copy and paste functionality.
 * Only show error validation messages or stylings after a user has interacted with a particular field.
 * Avoid using placeholder text. This causes additional problems for those with cognitive or visual disabilities.
 * Do not break up text input for a single entry i.e three text inputs for a phone number.
