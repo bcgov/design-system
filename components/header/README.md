@@ -92,93 +92,99 @@ For fonts and a standard browser reset include the following links in the `<head
 
 ```html
 <!DOCTYPE html>
-	<html>
-	<head>
-	    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" rel="stylesheet">
-	    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
-	    <link rel="stylesheet" href="style.css">
-	    <title>Sample Header</title>
-	</head>
-	<body>
-	  <header>
-	    <div class="banner">
-	        <a href="https://gov.bc.ca" alt="British Columbia">
-	          <img src="../assets/images/logo-banner.png" alt="Go to the Government of British Columbia website" />
-	        </a>
-	        <h1>Hello British Columbia</h1>
-	    </div>
-	    <div class="other">
-	    <!-- 
-	      This place is for anything that needs to be right aligned
-	      beside the logo.  
-	    -->
-	      &nbsp;
-	    </div>
-	    </div>
-	  </header>
-	</body>
-	</html>
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Sample Header</title>
+</head>
+
+<!--
+  All in-line CSS is specific to this sample; it can and should be ignored.
+ -->
+
+<body>
+  <header>
+    <div class="banner">
+        <a href="https://gov.bc.ca" alt="British Columbia">
+          <img src="../assets/images/logo-banner.svg" alt="Go to the Government of British Columbia website" />
+        </a>
+        <h1>Hello British Columbia</h1>
+    </div>
+    <div class="other">
+    <!-- 
+      This place is for anything that needs to be right aligned
+      beside the logo.  
+    -->
+      &nbsp;
+    </div>
+    </div>
+  </header>
+</body>
+</html>
 ```
     
 ### CSS
 
 ```css
 header {
-	  background-color: #036;
-	  border-bottom: 2px solid #fcba19;
-	  padding: 0 65px 0 65px;
-	  color: #fff;
-	  display: flex;
-	  height: 65px;
-	}
-	
-	header h1 {
-	  font-family: 'PT Sans';
-	  font-weight: normal;  /* 400 */
-	  margin: 5px 5px 0 18px;
-	  visibility: hidden;
-	}
-	
-	header .banner {
-	  display: flex;
-	  justify-content: flex-start;
-	  align-items: center;
-	  margin: 0 10px 0 0;
-	  /* border-style: dotted;
-	  border-width: 1px;
-	  border-color: lightgrey; */
-	}
-	
-	header .other {
-	  display: flex;
-	  flex-grow: 1;
-	  /* border-style: dotted;
-	  border-width: 1px;
-	  border-color: lightgrey; */
-	}
-	
-	/*
-	  These are sample media queries only. Media queries are quite subjective
-	  but, in general, should be made for the three different classes of screen
-	  size: phone, tablet, full. 
-	*/
-	
-	@media screen and (min-width: 600px) and (max-width: 899px) {
-	  header h1 {
-	    font-size: calc(7px + 2.2vw);
-	    visibility: visible;
-	  }
-	}
-	
-	@media screen and (min-width: 900px) {
-	  header h1 {
-	    font-size: 2.0em;
-	    visibility: visible;
-	  }
-	}
+  background-color: #036;
+  border-bottom: 2px solid #fcba19;
+  padding: 0 65px 0 65px;
+  color: #fff;
+  display: flex;
+  height: 65px;
+  top: 0px;
+  position: fixed;
+  width: 100%;
+}
+
+header h1 {
+  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+  font-weight: normal;  /* 400 */
+  margin: 5px 5px 0 18px;
+  visibility: hidden;
+}
+
+header .banner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 10px 0 0;
+  /* border-style: dotted;
+  border-width: 1px;
+  border-color: lightgrey; */
+}
+
+header .other {
+  display: flex;
+  flex-grow: 1;
+  /* border-style: dotted;
+  border-width: 1px;
+  border-color: lightgrey; */
+}
+
+/*
+  These are sample media queries only. Media queries are quite subjective
+  but, in general, should be made for the three different classes of screen
+  size: phone, tablet, full. 
+*/
+
+@media screen and (min-width: 600px) and (max-width: 899px) {
+  header h1 {
+    font-size: calc(7px + 2.2vw);
+    visibility: visible;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  header h1 {
+    font-size: 2.0em;
+    visibility: visible;
+  }
+}
 ```
 ### Assets
 1.	Logo
 2.	Font download or reference link
-
-_Last Updated: 2018-10-23_
