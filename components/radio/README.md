@@ -80,29 +80,29 @@ The library is constantly updated and currently available in the following tools
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <title>Radio Button</title>
   </head>
   <body>
 
     <label class="radio">One
       <input type="radio" name="foo">
-      <span class="checkmark"></span>
+      <span class="dot"></span>
     </label>
 
     <label class="radio">Two
       <input type="radio" name="foo">
-      <span class="checkmark"></span>
+      <span class="dot"></span>
     </label>
 
     <label class="radio">Three
       <input type="radio" name="foo">
-      <span class="checkmark"></span>
+      <span class="dot"></span>
     </label>
 
     <label class="radio">Four
       <input type="radio" name="foo">
-      <span class="checkmark"></span>
+      <span class="dot"></span>
     </label>
 
   </body>
@@ -119,7 +119,7 @@ The library is constantly updated and currently available in the following tools
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 16px;
-  font-family: PT Sans;
+  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -136,7 +136,7 @@ The library is constantly updated and currently available in the following tools
 }
 
 /* Create a custom radio button */
-.checkmark {
+.dot {
   position: absolute;
   top: 0;
   left: 0;
@@ -147,29 +147,30 @@ The library is constantly updated and currently available in the following tools
 }
 
 /* When the radio button is checked, add a blue background */
-.radio input:checked ~ .checkmark {
+.radio input:checked ~ .dot {
   background-color: #ffffff;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
+.dot:after {
   content: "";
   position: absolute;
   display: none;
 }
 
 /* Show the indicator (dot/circle) when checked */
-.radio input:checked ~ .checkmark:after {
+.radio input:checked ~ .dot:after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.radio .checkmark:after {
-  top: 3px;
-  left: 3px;
+.radio .dot:after {
+  top: 50%;
+  left: 50%;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: #003366;
+  transform: translate(-50%, -50%);
 }
 ```
