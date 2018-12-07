@@ -80,14 +80,13 @@ The library is constantly updated and currently available in the following tools
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <title>Primary Button</title>
   </head>
   <body>
-<button class="primarybutton" type="button" name="button">Submit</button>
+    <button class="primarybutton" type="button" name="button">Submit</button>
   </body>
 </html>
-
 ```
 
 ### CSS
@@ -102,7 +101,7 @@ The library is constantly updated and currently available in the following tools
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    font-family: PT Sans;
+    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
     cursor: pointer;
 }
 
