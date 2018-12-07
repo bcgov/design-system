@@ -31,8 +31,8 @@ Footer Links:
 *	“Contact Us” provides contact details for service area or program.
 
 ## Behaviour
-* Ensure all links lead to correct pages
-* No changes to text size or weighting when browser window size changes
+1. Ensure all links lead to correct pages
+2. No changes to text size or weighting when browser window size changes
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
@@ -74,18 +74,35 @@ For fonts and a standard browser reset include the following links in the `<head
 ### HTML
 
 ```html
-<footer class="footer">
- <div class="container">
-   <ul>
-   	 <li><a href=".">Home</a></li>
-   	 <li><a href=".">Disclaimer</a></li>
-   	 <li><a href=".">Privacy</a></li>
-   	 <li><a href=".">Accessibility</a></li>
-   	 <li><a href=".">Copyright</a></li>
-   	 <li><a href=".">Contact Us</a></li>
-   </ul>
- </div>
-</footer>
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Sample Footer</title>
+</head>
+
+<body style="display: flex; flex-direction: column; height: 100vh;">
+  <div style="flex: 1 0 auto; padding: 20px;">
+    <h1>Sample Footer</h1>
+  </div>
+  
+  <footer class="footer">
+    <div class="container">
+    <ul>
+      <li><a href=".">Home</a></li>
+      <li><a href=".">Disclaimer</a></li>
+      <li><a href=".">Privacy</a></li>
+      <li><a href=".">Accessibility</a></li>
+      <li><a href=".">Copyright</a></li>
+      <li><a href=".">Contact Us</a></li>
+    </ul>
+    </div>
+  </footer>
+</body>
+
+</html>
 ```
     
 ### CSS
@@ -95,7 +112,7 @@ footer {
   background-color: #036;
   border-top: 2px solid #fcba19;
   color: #fff;
-  flex-shrink: 0;
+  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif'; 
 }
 
 footer .container {
@@ -125,7 +142,9 @@ footer ul li a {
   padding-left: 5px;
   padding-right: 5px;
 }
+
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
 ```
-
-_Last Updated: 2018-10-23_
-
