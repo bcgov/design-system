@@ -46,7 +46,7 @@ Based on [research](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper ARIA and ALT labels are included
+* Proper ALT labels are included
 * Language tag has been set to english
 * List items and checkbox status are labelled properly
 
