@@ -77,7 +77,7 @@ The library is constantly updated and currently available in the following tools
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <title>Text Input</title>
   </head>
   <body>
@@ -99,12 +99,12 @@ The library is constantly updated and currently available in the following tools
 ### CSS
 ```
 form {
-  font-family: 'PT Sans','Calibri', 'Arial', 'Sans Serif';
+  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';;
   font-size: 16px;
 }
 
 .text_input {
-  font-family: 'PT Sans','Calibri', 'Arial', 'Sans Serif';
+  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';;
   font-size: 16px;
 }
 
