@@ -14,7 +14,7 @@ header {
   }
   
   header h1 {
-    font-family: 'PT Sans';
+    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
     font-weight: normal;  /* 400 */
     margin: 5px 5px 0 18px;
     visibility: hidden;

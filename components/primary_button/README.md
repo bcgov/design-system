@@ -12,23 +12,29 @@ Primary buttons allow users to carry out an important action on your service, su
 
 ## Required
 
-## Last Updated: 2 days ago
+## Last Updated:
 
 ## Visual
-  This is where the visual goes
+  Primary Button Visual:
+![primary_button](https://github.com/bcgov/design-system/blob/master/components/primary_button/images/primary_button.png?raw=true)
+
+## Requirements
+* This component must be used according the the standard outined in this document. Any feedback should be directed to the feedback forum.
+
+## Use This For
+* The most important actions you want users to take on your site.
+
+## Don't Use This For
+*	Leading users between pages; use links instead.
+*	Less important actions may be visually styled as links.
 
 ## How to Use This:
-Use primary buttons for the most important actions you want users to take on your site. 
+Use primary buttons for 
 
-Tips:
+## Design Protocol
 *	Only use one primary button per view or page
 *	Use for actions that go to the next step (for example, “Submit”)
 *	Button labels should be as short as possible with trigger words that clearly explain what will happen when the button is clicked (eg. Download, sign up).
-
-
-## Don't Use This for:
-*	Leading users between pages; use links instead.
-*	Less important actions may be visually styled as links.
 
 ## Rationale
 The rounded edges on the button help differentiate it from other layout items on a page. The underline on hover ensures colour is not the only visual means of conveying information about the button being clickable.
@@ -37,35 +43,34 @@ The rounded edges on the button help differentiate it from other layout items on
 1.	Button label should appear underlined on hover
 
 ## Accessibility
-This radio button has been built according to WCAG 2.0 AA standards and has been successfully tested for the following:
-1.	Perceivable
-*	Alternative text is provided for non-text content (WCAG 1.1.1)
-*	Content can be presented in different ways without losing information or structure (WCAG 1.3)
-*	Colour is not used as the only visual means of conveying information (WCAG 1.4.1)
-*	Visual presentation of text and images has a contrast ratio of at least 4.5:1 (WCAG 1.4.3)
-*	Text can be resized without assistive technology up to 200% without loss of content or functionality (WCAG 1.4.4)
+This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
-2.	Operable
-*	All functionality of the content is operable through a keyboard interface (WCAG 2.1.1)
-*	A mechanism is available to bypass blocks of content that are repeated on multiple web pages (WCAG 2.4.1)
-*	Headings and Labels describe topic or purpose (WCAG 2.4.6)
-*	Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible (WCAG  2.4.7)
+### Screenreaders
+* Proper ALT labels are included
+* Language tag has been set to english
 
-3.	Understandable
-*	The default human language of each web page can be programmatically determined (WCAG 3.1.1)
-*	Navigational mechanisms that are repeated on multiple web pages occur in the same relative order each time they are repeated (WCAG 3.2.3)
+### Colour Contrast
+* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
 
-4.	Robust
-*	For all user interface components, the name and role can be programmatically determined (WCAG 4.1.2)
+### Keyboard Navigation
+* Supports tab navigation for use without a mouse
 
-## Design with This Component
+### Underline of Hover
+* To support those with visual impairments and who may not be able to detect colour opacity changes
+
+### Learn More
+* Contacts
+* Online Tools
+* Online Resources
+* Gov Resources
+
+## Prototype with This Component
 Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
 
 The library is constantly updated and currently available in the following tools:
 
-* [Sketch](https://sketch.cloud/s/Q0bkG)
-
-This library is updated on a regular basis; by subscribing to the design library, you’ll be informed of updates to components and new additions.
+*	[Sketch](https://sketch.cloud/s/Q0bkG)
+* [UxPin and others]
 
 ## Code
 ### HTML
@@ -75,14 +80,13 @@ This library is updated on a regular basis; by subscribing to the design library
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <title>Primary Button</title>
   </head>
   <body>
-<button class="primarybutton" type="button" name="button">Submit</button>
+    <button class="primarybutton" type="button" name="button">Submit</button>
   </body>
 </html>
-
 ```
 
 ### CSS
@@ -97,7 +101,7 @@ This library is updated on a regular basis; by subscribing to the design library
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    font-family: PT Sans;
+    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
     cursor: pointer;
 }
 
