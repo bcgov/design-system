@@ -47,10 +47,10 @@ Good examples include:
 
 ## Behaviour
 
-* Clicking on B.C. government logo links the user back to gov.bc.ca
-* Site title reduces through three increments as the browser window gets smaller
-* After third increment the site title disappears completely
-* B.C. government logo does not change size or disappear as the browser window gets smaller
+1. Clicking on B.C. government logo links the user back to gov.bc.ca
+2. Site title reduces through three increments as the browser window gets smaller
+3. After third increment the site title disappears completely
+4. B.C. government logo does not change size or disappear as the browser window gets smaller
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
