@@ -39,8 +39,8 @@ Our checkboxes are larger than most browser defaults to allow for greater visibi
 Based on [research](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/) done by Gov.UK.
 
 ## Behaviour
-* Users should be able to tap or click on either the checkbox or the label to select the option.
-* Do not preselect options, this signals a biased result.
+1. Users should be able to tap or click on either the checkbox or the label to select the option.
+2. Do not preselect options, this signals a biased result.
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
@@ -79,7 +79,7 @@ The library is constantly updated and currently available in the following tools
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <title>Checkbox</title>
   </head>
   <body>
@@ -110,7 +110,6 @@ The library is constantly updated and currently available in the following tools
 
 ### CSS
 ```CSS
-
   /* Customize the label (the container) */
 .checkbox {
   display: block;
@@ -118,7 +117,7 @@ The library is constantly updated and currently available in the following tools
   padding-left: 25px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-family: 'PT Sans';
+  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
   font-size: 16px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -152,8 +151,12 @@ The library is constantly updated and currently available in the following tools
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
-  content: "";
+  content: "\2713";
+  color: white;
   position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: none;
 }
 
@@ -161,18 +164,4 @@ The library is constantly updated and currently available in the following tools
 .checkbox input:checked ~ .checkmark:after {
   display: block;
 }
-
-/* Style the checkmark/indicator */
-.checkbox .checkmark:after {
-  left: 4px;
-  top: 0px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
   ```
