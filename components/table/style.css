@@ -1,0 +1,22 @@
+body {
+  font-size: 16px;
+  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+}
+
+th {
+  text-align: left;
+  background-color: #d0d0d1;
+}
+
+caption {
+  padding: 15px;
+}
