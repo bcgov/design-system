@@ -37,6 +37,11 @@
   background-color: #003366;
 }
 
+/* Custom checkbox has blue outline when in focus */
+.checkbox input:focus:not(:checked) ~ .checkmark {
+  outline: rgb(59, 153, 252) auto 5px;
+}
+
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "\2713";
