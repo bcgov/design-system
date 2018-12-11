@@ -65,10 +65,39 @@ The library is constantly updated and currently available in the following tools
 
 ### HTML
 
-```html
+```
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <title>Sample Link</title>
+  </head>
+  <body>
+
+    <p>This is an example of a link to <a href="#">access your application</a>.</p>
+    <p>Here is another example of a link to <a href="#">apply</a>.</p>
+    <a href="#">Link</a>
+
+  </body>
+</html>
 ```
     
 ### CSS
 
-```css
+```
+body {
+  font-family: 'Noto Sans', calibri, arial, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: #1a5a96;
+}
+
+a:hover {
+  text-decoration: none;
+  color: blue;
+}
 ```
