@@ -58,5 +58,60 @@ The library is constantly updated and currently available in the following tools
 ## Code
 
 ### HTML
+```
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <title>Sample Table</title>
+  </head>
+  <body>
+    <table>
+      <caption>Roll Call</caption>
+      <tr>
+    <th scope="col">Firstname</th>
+    <th scope="col">Lastname</th>
+    <th scope="col">Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+    </table>
+  </body>
+</html>
+```
   
 ### CSS
+```
+body {
+  font-size: 16px;
+  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+}
+
+th {
+  text-align: left;
+  background-color: #d0d0d1;
+}
+
+caption {
+  padding: 15px;
+}
+```
