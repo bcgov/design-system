@@ -1,0 +1,24 @@
+form {
+  font-family: 'PT Sans','Calibri', 'Arial', 'Sans Serif';
+  font-size: 16px;
+}
+
+.text_input {
+  font-family: 'PT Sans','Calibri', 'Arial', 'Sans Serif';
+  font-size: 16px;
+  border: 2px solid #38598a;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  padding: 5px;
+  resize: none;
+}
+
+.text_input:focus {
+    outline: 4px solid #38598a;
+    outline-offset: 1px;
+}
+
+.text_label {
+  display: flex;
+}
