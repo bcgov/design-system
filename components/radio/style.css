@@ -38,20 +38,16 @@
   background-color: #ffffff;
 }
 
+/* Custom checkbox has blue outline when in focus */
+.radio input:focus ~ .dot {
+  outline: rgb(59, 153, 252) solid 5px;
+}
+
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .dot:after {
   content: "";
   position: absolute;
   display: none;
-}
-
-/* Show the indicator (dot/circle) when checked */
-.radio input:checked ~ .dot:after {
-  display: block;
-}
-
-/* Style the indicator (dot/circle) */
-.radio .dot:after {
   top: 50%;
   left: 50%;
   width: 10px;
@@ -59,4 +55,9 @@
   border-radius: 50%;
   background: #003366;
   transform: translate(-50%, -50%);
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio input:checked ~ .dot:after {
+  display: block;
 }
