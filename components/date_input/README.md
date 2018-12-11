@@ -65,5 +65,97 @@ The library is constantly updated and currently available in the following tools
 ## Code
 
 ### HTML
+```
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <title>Sample Text Input</title>
+  </head>
+  <body>
+
+    <form>
+      <div class="date_field">
+        <div class="text_label">
+          <label>Day</label>
+        </div>
+        <input class="date_input_day" type="text" name="firstname"><br>
+      </div>
+
+      <div class="date_field">
+        <div class="text_label">
+          <label>Month</label>
+        </div>
+        <input class="date_input_month" type="text" name="lastname">
+      </div>
+
+      <div class="date_field">
+        <div class="text_label">
+          <label>Year</label>
+        </div>
+        <input class="date_input_year" type="text" name="lastname">
+      </div>
+
+    </form>
+
+  </body>
+</html>
+```
   
 ### CSS
+```
+form {
+  font-family: 'PT Sans','Calibri', 'Arial', 'Sans Serif';
+  font-size: 16px;
+  display: flex;
+}
+
+.date_input_day, .date_input_month {
+  height: 25px;
+  border: 2px solid #38598a;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  padding: 5px;
+  font-family: 'PT Sans','Calibri', 'Arial', 'Sans Serif';
+  font-size: 16px;
+  width: 32px;
+}
+
+.date_input_year {
+  height: 25px;
+  border: 2px solid #38598a;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  padding: 5px;
+  font-family: 'PT Sans','Calibri', 'Arial', 'Sans Serif';
+  font-size: 16px;
+  width: 64px;
+}
+
+.date_input_day[type="text"]:focus {
+    outline: 4px solid #38598a;
+    outline-offset: 1px;
+}
+
+.date_input_month[type="text"]:focus {
+    outline: 4px solid #38598a;
+    outline-offset: 1px;
+}
+
+.date_input_year[type="text"]:focus {
+    outline: 4px solid #38598a;
+    outline-offset: 1px;
+}
+
+.text_label {
+  display: flex;
+}
+
+.date_field {
+  margin-right: 20px;
+}
+```
