@@ -49,7 +49,7 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 * Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
 * Users can identify the link without relying on colour alone
 
-### Tab Navigation
+### Keyboard Navigation
 * Supports tab navigation for use without a mouse
 
 ### Learn More
