@@ -11,7 +11,7 @@ The B.C. Government colour palette must be adhered to ensuring all public facing
 
 ## Required
 
-## Last Updated: 2 days ago
+## Last Updated:
 
 ## Primary Colours
 Visual Example | Hex Code | RGB | Example Use
@@ -49,10 +49,9 @@ Our brand colours, BCID Blue and BCID Gold, are from our symbol, the BC Mark. Go
 
 ## Accessibility
 This navigation bar has been built according to WCAG 2.0 AA standards and has been successfully tested for the following:
-1.	Colour Contrast
+
+### Colour Contrast
 *	WCAG 2.0 AAA standards requires normal text (18.66px and under) to have at least 7:1 ratio and large text (18.66 and bolded or 24px) to have at least a 4.5:1 ratio. 
-
-
 
 ## Design with This Component
 Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application. Prototype make the hand-off from designers to developers easier and faster.
