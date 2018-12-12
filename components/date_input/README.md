@@ -129,7 +129,7 @@ The library is constantly updated and currently available in the following tools
   margin-bottom: 15px;
   border-radius: 3px;
   padding: 5px;
-  font-family: 'PT Sans','Calibri', 'Arial', 'Sans Serif';
+  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
   font-size: 16px;
   width: 64px;
 }
