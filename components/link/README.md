@@ -27,6 +27,7 @@ Link Visual:
 
 ## Design Protocol
 * If your link is at the end of a paragraph or sentence make sure the linked text does not include the full stop.
+* Links should be descriptive to what is being linked. Do not put links in words such as "Link", "Here", or "Click Here". Instead link text such as "Learn more about descriptive links here". [Learn more about descriptive links](https://accessibility.oregonstate.edu/descriptivelinks)
 
 ## Behaviour
 
@@ -44,6 +45,8 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 ### Screenreaders
 * Proper ALT labels are included
 * Language tag has been set to english
+* Proper warning if link opens a new window
+* Descriptive language for writing links. [Learn more about descriptive links](https://accessibility.oregonstate.edu/descriptivelinks)
 
 ### Colour Contrast
 * Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
@@ -53,10 +56,9 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 * Supports tab navigation for use without a mouse
 
 ### Learn More
-* Contacts
-* Online Tools
-* Online Resources
-* Gov Resources
+* Accessibility Contacts in Government
+* Online Accessibility Testing Tools
+* Accessibility Documentation
 
 ## Prototype with This Component
 Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
