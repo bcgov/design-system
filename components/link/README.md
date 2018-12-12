@@ -65,7 +65,7 @@ The library is constantly updated and currently available in the following tools
 
 ### HTML
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -86,7 +86,7 @@ The library is constantly updated and currently available in the following tools
     
 ### CSS
 
-```
+```css
 body {
   font-family: 'Noto Sans', calibri, arial, sans-serif;
   font-size: 16px;
