@@ -16,15 +16,15 @@ The B.C. Government colour palette must be adhered to ensuring all public facing
 ## Primary Colours
 Visual Example | Hex Code | RGB | Example Use
 ------------ | ------------ | ------------ | ------------ |
-Image here | #003366 | 0 51 102 | Header & Footer, 83% opacity for background colour on title bars
-Image here | #1a5a96 | 26 90 150 | Links and title links
-Image here | #38598a | 56 89 138 | First level background colour for navigation bar
-Image here | #ffffff | 255 255 255 | Navigation text
-Image here | #5475a7 | 84 117 167 | Second level background colour for navigation bar
-Image here | #f2f2f2 | 242 242 242 | Background grey left and right side bars
-Image here | #fcba19 | 252 186 25 | Highlight gold bar under header and above footer
-Image here | #494949 | 737373 | Site wide text on white background
-Image here | #bcbec5 | 188 190 197 | Return to op icon, share button icon, search icon, search box text and search box border
+![#003366](https://github.com/bcgov/design-system/blob/master/styles/colours/images/#003366.png?raw=true) | #003366 | 0 51 102 | Header & Footer, 83% opacity for background colour on title bars
+![#1a5a96](https://github.com/bcgov/design-system/blob/master/styles/colours/images/#1a5a96.png?raw=true) | #1a5a96 | 26 90 150 | Links and title links
+![#38598a](https://github.com/bcgov/design-system/blob/master/styles/colours/images/#38598a.png?raw=true) | #38598a | 56 89 138 | First level background colour for navigation bar
+![#ffffff](https://github.com/bcgov/design-system/blob/master/styles/colours/images/#ffffff.png?raw=true) | #ffffff | 255 255 255 | Navigation text
+![#5475a7](https://github.com/bcgov/design-system/blob/master/styles/colours/images/#5475a7.png?raw=true) | #5475a7 | 84 117 167 | Second level background colour for navigation bar
+![#f2f2f2](https://github.com/bcgov/design-system/blob/master/styles/colours/images/#f2f2f2.png?raw=true) | #f2f2f2 | 242 242 242 | Background grey left and right side bars
+![#fcba19](https://github.com/bcgov/design-system/blob/master/styles/colours/images/#fcba19.png?raw=true) | #fcba19 | 252 186 25 | Highlight gold bar under header and above footer
+![#494949](https://github.com/bcgov/design-system/blob/master/styles/colours/images/#494949.png?raw=true) | #494949 | 737373 | Site wide text on white background
+![#bcbec5](https://github.com/bcgov/design-system/blob/master/styles/colours/images/#bcbec5.png?raw=true) | #bcbec5 | 188 190 197 | Return to op icon, share button icon, search icon, search box text and search box border
 
 ## Secondary Colours
 Visual Example | Hex Code | RGB | Example Use
