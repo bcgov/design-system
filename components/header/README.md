@@ -85,7 +85,7 @@ For fonts and a standard browser reset include the following links in the `<head
 
 ```html
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 ```
 
 ### HTML
