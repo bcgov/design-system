@@ -30,8 +30,13 @@ Link Visual:
 
 ## Behaviour
 
-1.	Link starts out as government link colour, #1a5a96.
-2.	On hover link removes underline and turns to blue.
+1. Link starts out as government link colour, #1a5a96.
+2. On hover link removes underline and turns to blue.
+3. Links should not open a new tab or windown unless nessecary. If so they need to give the user advanced warning to avoid disorientation especailly with screen readers. Example below: 
+
+```html
+<a href="knitting.html" target="_blank">Application Portal (opens in new window)</a>
+```
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
