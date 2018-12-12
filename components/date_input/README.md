@@ -26,7 +26,6 @@ Date Input Visual:
 
 ## Don't Use This For
 *	Dates that cannot be easily remembered
-*	When users have to schedule something in the future, a calendar dropdown may be better.
 
 ## Rationale
 Using three separate text fields is the fastest way for users to enter dates. Dropdown options cause accessibility difficulties.
