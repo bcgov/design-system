@@ -1,0 +1,13 @@
+body {
+  font-family: 'Noto Sans', calibri, arial, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: #1a5a96;
+}
+
+a:hover {
+  text-decoration: none;
+  color: blue;
+}
