@@ -66,8 +66,7 @@ The library is constantly updated and currently available in the following tools
 ## Code
 
 ### HTML
-```
-<!DOCTYPE html>
+```<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -102,12 +101,10 @@ The library is constantly updated and currently available in the following tools
     </form>
 
   </body>
-</html>
-```
+</html>```
   
 ### CSS
-```
-form {
+```form {
   font-family: 'PT Sans','Calibri', 'Arial', 'Sans Serif';
   font-size: 16px;
   display: flex;
@@ -158,5 +155,4 @@ form {
 
 .date_field {
   margin-right: 20px;
-}
-```
+}```
