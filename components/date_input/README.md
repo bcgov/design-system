@@ -71,7 +71,7 @@ The library is constantly updated and currently available in the following tools
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <title>Sample Text Input</title>
   </head>
   <body>
