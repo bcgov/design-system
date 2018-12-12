@@ -4,6 +4,8 @@ title: Date Input
 status: Draft
 ---
 
+![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+
 # Date Input
 
 Date input fields allow users to enter an already known date
