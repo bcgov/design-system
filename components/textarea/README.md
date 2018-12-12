@@ -4,6 +4,8 @@ title: Textarea
 status: Draft
 ---
 
+![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+
 # Textarea
 
 Textarea allow users to input multiple lines of text
