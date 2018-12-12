@@ -66,7 +66,8 @@ The library is constantly updated and currently available in the following tools
 ## Code
 
 ### HTML
-```<!DOCTYPE html>
+```html
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -104,7 +105,8 @@ The library is constantly updated and currently available in the following tools
 </html>```
   
 ### CSS
-```form {
+```css
+form {
   font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
   font-size: 16px;
   display: flex;
