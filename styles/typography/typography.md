@@ -32,10 +32,10 @@ Myriad Pro, Calibri, Arial, Sans Serif
 ## Headings
 Name | Tag | Size | Font Weight
 ----- | ----- | ----- | ----- |
-Heading One | <h1> | 24px #494949 | 600
-Heading Two | <h2> | 22px #494949 | 500
-Heading Three | <h3> | 20px #494949 | 500
-Heading Four | <h4> | 18px #494949 | 500
+Heading One | ```<h1>``` | 24px #494949 | 600
+Heading Two | ```<h2>``` | 22px #494949 | 500
+Heading Three | ```<h3>``` | 20px #494949 | 500
+Heading Four | ```<h4>``` | 18px #494949 | 500
 
 ## Paragraphs
 
@@ -49,10 +49,10 @@ Heading Four | <h4> | 18px #494949 | 500
 ## Page Text
 Name | Tag | Size | Build Notes
 ----- | ----- | ----- | ----- |
-Site Title | <h1 class=”sitetitle”><h1> | 42px #fff 
-Title Bars | <h2 class=”blue-heading-bar”> | Background 83%, Opacity #003366, Padding 8px, 15px, 7px, 24px, #fff, Font Weight: 500
-Normal | <p> | 16px #494949
-Hyperlinks | <a ref> | 16px #1a5a96 | Underlined, Do not customize link styles or behaviours
+Site Title | ```<h1 class=”sitetitle”><h1>``` | 42px #fff 
+Title Bars | ```<h2 class=”blue-heading-bar”>``` | Background 83%, Opacity #003366, Padding 8px, 15px, 7px, 24px, #fff, Font Weight: 500
+Normal | ```<p>``` | 16px #494949
+Hyperlinks | ```<a ref>``` | 16px #1a5a96 | Underlined, Do not customize link styles or behaviours
 Lefthand navigation for navigation levels 3 onward | <div class=”leftNav-item-wrapper”> | 16px #1a5a96 | Underlined with #f2f2f2 border
 Search box text | | 30px #494949
 
