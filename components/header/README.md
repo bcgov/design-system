@@ -66,10 +66,9 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 * Supports tab navigation for use without a mouse
 
 ### Learn More
-* Contacts
-* Online Tools
-* Online Resources
-* Gov Resources
+* Accessibility Contacts in Government
+* Online Accessibility Testing Tools
+* Accessibility Documentation
 
 ## Prototype with This Component
 Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
