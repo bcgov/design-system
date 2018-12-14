@@ -15,8 +15,7 @@ Text inputs allow users to enter a single line of any combination of letters, nu
 
 ## Last Updated:
 
-## Visual
-  Text Input Visual:
+## Visual Example
 ![Text Input](https://github.com/bcgov/design-system/blob/master/components/text_input/images/text_input.png?raw=true)
 
 ## Requirements
