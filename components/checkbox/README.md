@@ -14,8 +14,7 @@ Checkboxes are a form of control inputs that allow users to select one or more i
 
 ## Last Updated:
 
-## Visual
-Checkbox Visual:
+## Visual Example
 ![Checkbox](https://github.com/bcgov/design-system/blob/master/components/checkbox/images/checkbox.png?raw=true)
 
 ## Requirements
