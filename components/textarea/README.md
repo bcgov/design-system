@@ -14,8 +14,7 @@ Textarea allow users to input multiple lines of text
 
 ## Last Updated: 
 
-## Visual
-Textarea Visual:
+## Visual Example
 ![Textarea](https://github.com/bcgov/design-system/blob/master/components/textarea/images/textarea.png?raw=true)
 
 ## Requirements
