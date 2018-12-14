@@ -15,7 +15,6 @@ Footers help people find what they need after scrolling to the bottom of a web p
 ## Last Updated:
 
 ## Visual Example
-
 ![Footer](./images/footer.png)
 
 ## Requirements:
