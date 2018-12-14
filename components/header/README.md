@@ -16,7 +16,6 @@ Headers help people understand what the content of the page is about while provi
 ## Last Updated:
 
 ## Visual
-Header Visual:
 ![Header](https://github.com/bcgov/design-system/blob/master/components/header/images/header.png?raw=true)
 
 ## Requirements
@@ -80,7 +79,7 @@ The library is constantly updated and currently available in the following tools
 
 ## Code
 
-For fonts and a standard browser reset include the following links in the `<header>` of your page.
+For fonts and a standard browser reset include the following links in the `<head>` of your page.
 
 ```html
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" rel="stylesheet">
