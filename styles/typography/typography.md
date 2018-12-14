@@ -57,7 +57,7 @@ Lefthand navigation for navigation levels 3 onward | <div class=”leftNav-item-
 Search box text | | 30px #494949
 
 ## Rationale
-* Typography guidelines ensure users have consistent experiences across all government servicers while ensuring sizing and formatting are meeting accessibility standards.
+* Typography guidelines ensure users have consistent experiences across all government services while ensuring sizing and formatting meet accessibility standards.
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
