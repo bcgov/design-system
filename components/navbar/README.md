@@ -14,7 +14,7 @@ Navigation bars provide a list of links to important areas on a website or appli
 
 ## Last Updated:
 
-## Visual
+## Visual Example
 
 ![Navbar](./images/navbar.gif)
 
