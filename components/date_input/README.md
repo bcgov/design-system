@@ -14,8 +14,7 @@ Date input fields allow users to enter an already known date
 
 ## Last Updated:
 
-## Visual
-Date Input Visual:
+## Visual Example
 ![Date Input](https://github.com/bcgov/design-system/blob/master/components/date_input/images/date_input.png?raw=true)
 
 ## Requirements
