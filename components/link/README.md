@@ -28,16 +28,16 @@ Link Visual:
 ## Design Protocol
 * If your link is at the end of a paragraph or sentence make sure the linked text does not include the full stop.
 * Links should be descriptive to what is being linked. Do not put links in words such as "Link", "Here", or "Click Here". Instead link text such as "Learn more about descriptive links here". [Learn more about descriptive links](https://accessibility.oregonstate.edu/descriptivelinks)
+* Links should not open a new tab or window unless nessecary. If so they need to give the user advanced warning to avoid disorientation especailly with screen readers. Example below: 
+
+```html
+<a href="knitting.html" target="_blank">Application Portal (opens in new window)</a>
+```
 
 ## Behaviour
 
 1. Link starts out as government link colour, #1a5a96.
 2. On hover link removes underline and turns to blue.
-3. Links should not open a new tab or window unless nessecary. If so they need to give the user advanced warning to avoid disorientation especailly with screen readers. Example below: 
-
-```html
-<a href="knitting.html" target="_blank">Application Portal (opens in new window)</a>
-```
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
