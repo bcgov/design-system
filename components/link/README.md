@@ -27,11 +27,17 @@ Link Visual:
 
 ## Design Protocol
 * If your link is at the end of a paragraph or sentence make sure the linked text does not include the full stop.
+* Links should be descriptive to what is being linked. Do not put links in words such as "Link", "Here", or "Click Here". Instead link text such as "Learn more about descriptive links here". [Learn more about descriptive links](https://accessibility.oregonstate.edu/descriptivelinks)
+* Links should not open a new tab or window unless nessecary. If so they need to give the user advanced warning to avoid disorientation especailly with screen readers. Example below: 
+
+```html
+<a href="knitting.html" target="_blank">Application Portal (opens in new window)</a>
+```
 
 ## Behaviour
 
-1.	Link starts out as government link colour, #1a5a96.
-2.	On hover link removes underline and turns to blue.
+1. Link starts out as government link colour, #1a5a96.
+2. On hover link removes underline and turns to blue.
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
@@ -39,19 +45,20 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 ### Screenreaders
 * Proper ALT labels are included
 * Language tag has been set to english
+* Proper warning if link opens a new window
+* Descriptive language for writing links. [Learn more about descriptive links](https://accessibility.oregonstate.edu/descriptivelinks)
 
 ### Colour Contrast
 * Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
 * Users can identify the link without relying on colour alone
 
-### Tab Navigation
+### Keyboard Navigation
 * Supports tab navigation for use without a mouse
 
 ### Learn More
-* Contacts
-* Online Tools
-* Online Resources
-* Gov Resources
+* Accessibility Contacts in Government
+* Online Accessibility Testing Tools
+* Accessibility Documentation
 
 ## Prototype with This Component
 Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
