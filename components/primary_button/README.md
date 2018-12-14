@@ -14,8 +14,7 @@ Primary buttons allow users to carry out an important action on your service, su
 
 ## Last Updated:
 
-## Visual
-  Primary Button Visual:
+## Visual Example
 ![primary_button](https://github.com/bcgov/design-system/blob/master/components/primary_button/images/primary_button.png?raw=true)
 
 ## Requirements
