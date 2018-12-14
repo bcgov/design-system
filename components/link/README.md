@@ -16,7 +16,6 @@ Links lead users to a different page or further information.
 ## Last Updated:
 
 ## Visual
-Link Visual:
 ![Link](https://github.com/bcgov/design-system/blob/master/components/link/images/link.png?raw=true)
 
 ## Requirements
