@@ -14,8 +14,7 @@ Radio buttons are a type of controlled input that allow users to select exactly 
 
 ## Last Updated:
 
-## Visual
-  Radio Visual:
+## Visual Example
 ![Radio](https://github.com/bcgov/design-system/blob/master/components/radio/images/radio.png?raw=true)
 
 ## Requirements
