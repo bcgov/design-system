@@ -15,7 +15,7 @@ Headers help people understand what the content of the page is about while provi
 
 ## Last Updated:
 
-## Visual
+## Visual Example
 ![Header](https://github.com/bcgov/design-system/blob/master/components/header/images/header.png?raw=true)
 
 ## Requirements
