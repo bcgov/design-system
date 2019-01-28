@@ -25,7 +25,7 @@ Navigation bars provide a list of links to different pages on a website or appli
 * Present items in order of the users priority – higher demand links should be placed further to the left while lower demand links should be placed further to the right.
 
 ## Rationale
-This header and navigation bar matches the mandatory branding requirements of the BC Government. Consistent branding helps user identify who owns the service they are using. The horizontal logo is used instead of a vertical stacked logo to use space efficiently and create a symmetrical flow from the logo to the heading.
+This header and navigation bar matches the mandatory branding requirements of the BC Government. Consistent branding helps users identify who owns the service they are using. The horizontal logo is used instead of the vertical logo to use space efficiently and create a symmetrical flow from the logo to the heading.
 
 ## Behaviour
 1.	Link text appears underlined on hover
