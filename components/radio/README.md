@@ -8,43 +8,37 @@ author: orinevares
 ![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
 
 # Radio Button
-Radio buttons are a type of controlled input that allow users to select exactly one option from a list.
+Radio buttons are a type of input that allow users to select only one option from a list.
 
-## Required
+## Recommended
 
 ## Last Updated:
 
 ## Visual Example
 ![Radio](https://github.com/bcgov/design-system/blob/master/components/radio/images/radio.png?raw=true)
 
-## Requirements
-* This component must be used according the the standard outined in this document. Any feedback should be directed to the feedback forum.
-
 ## Use This For
-* When users have to select exactly one option from a given list
+* When users have to select only one option from a list
 
 ## Don't Use This when
-*	A user can select more than one option from a list, use a checkbox instead.
-*	A user can select zero options from a list
+*	A user can select more than one option from a list, use a [checkbox](./checkbox.md) instead
 
-## Design Protocol
-*	Order radio options alphabetical by default
-*	Users cannot go back to having no option selected once they have selected one. Therefore, if applicable you should include a ‘None of the above’ or I don’t know option’
-*	Make sure selections are adequately spaced for touch screens.
+## Design Guidance
+*	Users cannot go back to having no option selected once they have selected one. If applicable, you should include a ‘None of the above’ or I don’t know option’
 *	Do not assume users will know how many options they can select. If needed, add a hint such as “Select one option” 
-*	In some cases, it can be helpful to order the selections from most to least common.
-*	Options should be listed vertically due to being easier to read and associate the correct radio button and label.
+*	In some cases, it can be helpful to order the selection items based on user needs. For example, place the most likely responses at the top
+*	Options should be listed vertically due to being easier to read and associate the correct radio button and label
 
 ## Rationale
-Our radio buttons are larger than most browser defaults to allow for greater visibility and larger hit/target areas for touchscreen devices. Research has shown that users resort to only clicking the checkbox and not the associated text, therefore a larger target area is necessary. Simply enlarging browser defaults proved to be problematic on many web browsers and the custom design should be used.
+Our radio buttons are larger than most browser defaults to allow for greater visibility and larger target areas for touchscreen devices. Research has shown that users resort to only clicking the radio and not the associated text.
 Based on research done by [Gov.UK](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/)
 
 ## Behaviour
-1.	Users should be able to tap or click on either the radio button or label to select the option.
-2.	Do not preselect options, this signals a biased result.
+1.	Users should be able to click or tap on either the radio button or text label to select the option
+2.	Do not preselect options, this results in perceived bias
 
 ## Accessibility
-This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
+This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
 * Proper ALT labels are included
