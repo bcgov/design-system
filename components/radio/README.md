@@ -21,7 +21,7 @@ Radio buttons are a type of input that allow users to select only one option fro
 * When users have to select only one option from a list
 
 ## Don't Use This when
-*	A user can select more than one option from a list, use a [checkbox](./checkbox.md) instead
+*	A user can select more than one option from a list, use a [checkbox](../checkbox.md) instead
 
 ## Design Guidance
 *	Users cannot go back to having no option selected once they have selected one. If applicable, you should include a ‘None of the above’ or I don’t know option’
