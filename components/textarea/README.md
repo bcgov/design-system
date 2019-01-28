@@ -8,7 +8,7 @@ status: Draft
 
 # Textarea
 
-Textarea allow users to input multiple lines of text
+A textarea allows users to input multiple lines of text
 
 ### Required
 
@@ -17,26 +17,18 @@ Textarea allow users to input multiple lines of text
 ## Visual Example
 ![Textarea](https://github.com/bcgov/design-system/blob/master/components/textarea/images/textarea.png?raw=true)
 
-## Requirements
-* This component must appear on all public-facing online B.C. Government content and services. Any feedback should be directed to the feedback forum.
-* Customized textarea sizing is permitted and should be adjusted to accommodate what the predicted amount of text should be inputed from a user.
-
-## How to Use This
-
-*	Use a textarea when users need to enter more than a single line of text
+## Use This When
+*	Users need to enter more than a single line of text
 
 ## Don't Use This For
 
-*	When users need to enter only one line of text
-*	When users have to schedule something in the future, a calendar dropdown may be better.
+*	When users need to enter only one line of text, use a [text input](../text_input/README.md) instead
 
-## Design Protocol
-* Open ended questions can often be difficult for users to answer. Consider breaking up the question into multiple single line text inputs.
-* Always allow copy and paste functionality
+## Design Guidance
+* Open ended questions can often be difficult for users to answer. Consider breaking up the question into multiple single line [text inputs](../text_input/README.md).
+* Allow copy and paste functionality
 * Textarea must have labels, placeholder text is insufficient as it disappears once the user clicks on the field.
-* Make sure the textarea size is proportional to the amount of text you expect the user to respond with.
-* Only show error validation messages after a user has interacted with the textarea
-
+* Make sure the textarea size is proportional to the amount of text you expect the user input
 
 ## Rationale
 
@@ -57,6 +49,7 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 
 ### Colour Contrast
 * Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
+* Thick boaders with high contrast result in greater visual prominance
 
 ### Keyboard Navigation
 * Supports tab navigation for use without a mouse
