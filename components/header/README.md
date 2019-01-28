@@ -107,7 +107,7 @@ For fonts and a standard browser reset include the following links in the `<head
   <header>
     <div class="banner">
         <a href="https://gov.bc.ca" alt="British Columbia">
-          <img src="../assets/images/logo-banner.svg" alt="Go to the Government of British Columbia website" />
+          <img src="../assets/images/BCID_H_rgb_rev.svg" alt="Go to the Government of British Columbia website" />
         </a>
         <h1>Hello British Columbia</h1>
     </div>
