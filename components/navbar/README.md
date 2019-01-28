@@ -8,9 +8,9 @@ author: orinevares
 ![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
 
 # Navigation Bar – Basic
-Navigation bars provide a list of links to important areas on a website or application. Typically, they are placed by the header. 
+Navigation bars provide a list of links to different pages on a website or application.
 
-## Required
+## Recommended
 
 ## Last Updated:
 
@@ -18,26 +18,22 @@ Navigation bars provide a list of links to important areas on a website or appli
 
 ![Navbar](./images/navbar.gif)
 
-## Requirements
-* This component must be used according the the standard outined in this document. Any feedback should be directed to the feedback forum.
-
 ## Use This For
-* Sites with six (6) or fewer navigation links or pages; sites with more links or with a hierarchy of pages should consider using a more advanced navigation structure.
-
-## Don't Use This when
-* Sites that have seven (7) or more navigation links, consider using a more advanced navigation structure.
+* Sites with six (6) or fewer navigation links or pages
 
 ## Design Protocol
 * Present items in order of the users priority – higher demand links should be placed further to the left while lower demand links should be placed further to the right.
 
 ## Rationale
-The B.C. government navigation bar provides a consistent look, feel, and functionality across government sites.
+This header and navigation bar matches the mandatory branding requirements of the BC Government. Consistent branding helps user identify who owns the service they are using. The horizontal logo is used instead of a vertical stacked logo to use space efficiently and create a symmetrical flow from the logo to the heading.
 
 ## Behaviour
 1.	Link text appears underlined on hover
 2.	Link text remains underlined and bolded when user is on the associated page
-3.	The ‘hamburger icon’ should not appear on its own unless it has suitable Alternative text to ensure that It is recognizable by screen readers.”
-4.	The menu should be full size on large screens and regular browsers. Smaller browers, including landscape tablets should use the collapsed version of the menu. The browser window is minimized to mobile view the navigation bar should appear as a hamburger dropdown menu.
+
+### Mobile Design
+1.	The ‘hamburger icon’ should not appear on its own unless it has suitable Alternative text to ensure that It is recognizable by screen readers.”
+2. Smaller browers, including landscape tablets should use the collapsed version of the menu. When the browser window is minimized to mobile view the navigation bar should appear as a hamburger dropdown menu.
 
 ## Accessibility
 This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
