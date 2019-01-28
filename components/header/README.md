@@ -9,7 +9,7 @@ author: orinevares
 
 # Header - Basic
 
-Headers help people understand what the content of the page is about while providing a consistent look, feel, and functionality across government sites.
+Headers help people understand what the product or service is about while providing a consistent look, feel, and functionality across government sites.
 
 ### Required
 
@@ -18,38 +18,45 @@ Headers help people understand what the content of the page is about while provi
 ## Visual Example
 ![Header](https://github.com/bcgov/design-system/blob/master/components/header/images/header.png?raw=true)
 
+### Download
+* [BC Gov Logo](https://github.com/bcgov/design-system/tree/master/components/assets/images)
+
 ## Requirements
-* This header must appear on all public-facing online B.C. Government content and services. Any feedback should be directed to the feedback forum.
-* Customized features such as login buttons or search bars must use the provided components and appear on the right side of the header.
+* This header must appear on all public-facing online B.C. Government content and services
 
 ## Don't Use This when:
-* Site or online service is not associated with the Government of British Columbia
+* Your product or service is not owned by the Government of British Columbia
 
-## Design Protocol:
+## Design Guidance:
+* Align content on page with left side of logo
+
 The text in the header should include the site title or service name. If the website is a service, a good name should:
-
 * Use the words users (regular people) use
 * Be based on analytics and user research
-*	Describe a task not a technology
-*	Not need to change when policy or technology changes
-*	Include verbs not nouns
-*	Not include government department or agency names
-*	Not be brand-driven or focused on marketing
+* Describe a task not a technology
+* Not need to change when policy or technology changes
+* Include verbs not nouns
+* Not include government department or agency names
+* Not be brand-driven or focused on marketing
 
 Good examples include:
-*	Register to Vote
+*	Register for MSP
 *	Get help with court fees
-*	Renew your passport
-*	Find an apprenticeship
+*	Renew your license
+*	Find a career
 
 *Adapted from the UK Government’s [Service Naming Guide](https://www.gov.uk/service-manual/design/naming-your-service)
 
+## Rationale
+This header matches the mandatory branding requirements of the BC Government. Consistent branding helps users identify who owns the service they are using. The horizontal logo is used instead of a the vertical version to use space efficiently and create a symmetrical flow from the logo to the heading.
+
 ## Behaviour
 
-1. Clicking on B.C. government logo links the user back to gov.bc.ca
-2. Site title reduces through three increments as the browser window gets smaller
-3. After third increment the site title disappears completely
-4. B.C. government logo does not change size or disappear as the browser window gets smaller
+1. Clicking on B.C. government logo links the user back to the homepage of your service 
+
+### Mobile Design
+1. Logo and title shrink until mobile size
+2. When in mobile view the header title drops below the vertical logo
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
