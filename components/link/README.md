@@ -9,25 +9,23 @@ author: orinevares
 
 # Links
 
-Links lead users to a different page or further information.
+Links lead users to a different page.
 
-### Required
+### Recommended
 
 ## Last Updated:
 
 ## Visual Example
 ![Link](https://github.com/bcgov/design-system/blob/master/components/link/images/link.png?raw=true)
 
-## Requirements
-* This component must appear on all public-facing online B.C. Government content and services. Any feedback should be directed to the feedback forum.
-
 ## Don't Use This when:
-* Users need to take an action on a page such as log-in or submit, use a primary button instead.
+* Users need to take an action on a page such as log-in or submit, use a [primary button](../primary_button/README.md) instead.
 
-## Design Protocol
+## Design Guidance
 * If your link is at the end of a paragraph or sentence make sure the linked text does not include the full stop.
-* Links should be descriptive to what is being linked. Do not put links in words such as "Link", "Here", or "Click Here". Instead link text such as "Learn more about descriptive links here". [Learn more about descriptive links](https://accessibility.oregonstate.edu/descriptivelinks)
-* Links should not open a new tab or window unless nessecary. If so they need to give the user advanced warning to avoid disorientation especailly with screen readers. Example below: 
+* Links should be describe where it leads to
+* Do not put links in words such as "Link", "Here", or "Click Here". [Learn more about descriptive links](https://accessibility.oregonstate.edu/descriptivelinks)
+* Links should not open a new tab or window. If so they need to have the relevant icon to give the user advanced warning. Example below: 
 
 ```html
 <a href="knitting.html" target="_blank">Application Portal (opens in new window)</a>
@@ -35,8 +33,7 @@ Links lead users to a different page or further information.
 
 ## Behaviour
 
-1. Link starts out as government link colour, #1a5a96.
-2. On hover link removes underline and turns to blue.
+1. On hover link removes underline and turns to blue.
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
