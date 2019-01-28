@@ -10,30 +10,24 @@ status: Draft
 
 Date input fields allow users to enter an already known date
 
-### Required
+### Recommended
 
 ## Last Updated:
 
 ## Visual Example
 ![Date Input](https://github.com/bcgov/design-system/blob/master/components/date_input/images/date_input.png?raw=true)
 
-## Requirements
-* This component must be used according the the standard outined in this document. Any feedback should be directed to the feedback forum.
-
-## How to Use This
-*	Use when users need to enter an easily memorable date
-
-## Don't Use This For
-*	Dates that cannot be easily remembered
+## Use This When
+*	Users need to enter a date
 
 ## Rationale
 Using three separate text fields is the fastest way for users to enter dates. Dropdown options cause accessibility difficulties.
 
 ## Behaviour
 
-* Do not auto advance to next input field. This causes difficulties for users relying on keyboard controls.
-* When in focus input field should outline with blue.
-* Fields should have error controls such as not accepting more values than required, rejecting false values, and rejecting outlier values.
+1. Do not auto advance to next input field. This causes difficulties for users relying on keyboard controls.
+2. When in focus input field should outline with blue.
+3. Fields should have error controls to prevent common user slips such as entering impossible values for dates.
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
