@@ -40,7 +40,7 @@ The text in the header should include the site title or service name. If the web
 * Not be brand-driven or focused on marketing
 
 Good examples include:
-*	Register for MSP
+*	Apply for MSP
 *	Get help with court fees
 *	Renew your license
 *	Find a career
