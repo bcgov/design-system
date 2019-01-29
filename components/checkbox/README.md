@@ -8,18 +8,14 @@ author: orinevares
 ![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
 
 # Checkbox
-Checkboxes are a form of control inputs that allow users to select one or more items from a list.
+Checkboxes are a type of input that allow users to select one or more options from a list.
 
-## Required
+## Recommended
 
 ## Last Updated:
 
-## Visual
-Checkbox Visual:
+## Visual Example
 ![Checkbox](https://github.com/bcgov/design-system/blob/master/components/checkbox/images/checkbox.png?raw=true)
-
-## Requirements
-* This component must be used according the the standard outined in this document. Any feedback should be directed to the feedback forum.
 
 ## Use This For:
 * Selecting multiple options from a given list
@@ -28,19 +24,19 @@ Checkbox Visual:
 ## Don't Use This when:
 * Users can only select one option from a list, use a radio button instead.
 
-## Design Protocol:
+## Design Guidance:
 * List options vertically; horizontal listings can make it difficult to tell which label pertains to which checkbox.
-* Avoid using negative language in labels. Use “I want to receive email updates” instead of “I don’t want to receive email updates.”
-* Make sure selections are adequately spaced for touch screens.
+* Avoid using negative language in labels. Use “I want to receive email updates” instead of “I don’t want to receive email updates”
+* Make sure selections are adequately spaced for touch screens
 * Do not assume users will know how many options they can select. If needed, add a hint such as “Select all that apply” 
 
 ## Rationale
-Our checkboxes are larger than most browser defaults to allow for greater visibility and larger target areas for touchscreen devices. Research has shown that users resort to only clicking the checkbox and not the associated text, therefore a larger target area is necessary. Simply enlarging browser defaults proved to be problematic on many web browsers and the custom design should be used.
+Our checkboxes are larger than most browser defaults to allow for greater visibility and larger target areas for touchscreen devices. Research has shown that users resort to only clicking the checkbox and not the associated text.
 Based on [research](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/) done by Gov.UK.
 
 ## Behaviour
-1. Users should be able to tap or click on either the checkbox or the label to select the option.
-2. Do not preselect options. This signals a biased result.
+1. Users should be able to click or tap on either the checkbox or the label to select the option
+2. Do not preselect options. This results in perceived bias
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:

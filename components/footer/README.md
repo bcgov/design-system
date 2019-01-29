@@ -8,31 +8,25 @@ author: orinevares
 ![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
 
 # Footer
-Footers help people find what they need after scrolling to the bottom of a web page. They provide supplementary information such as copyright, contact information, links to other pages within a website, and email and social media links.
+Footers help people find what they need after scrolling to the bottom of a web page. They provide supplementary information such as copyright, contact information, social media links, and links to other pages within a website.
 
-## Required
+## Recommended
 
 ## Last Updated:
 
 ## Visual Example
-
 ![Footer](./images/footer.png)
 
 ## Requirements:
-* Must appear on all public-facing B.C. Government online content and services
-* Home, Disclaimer, Privacy, Accessibility, Copyright and Contact Us must be present. Other links can be added as required.
+* This footer must appear on all public-facing online B.C. Government content and services.
 
 Footer Links:
-*	“Home” returns to home page of external site
-*	“Disclaimer” use core government [disclaimer statement](https://www2.gov.bc.ca/gov/content/home/disclaimer). Any addendums must be vetted by ministry or central legal advisors before being released)
-*	“Privacy” use core government [privacy statement](https://www2.gov.bc.ca/gov/content/home/privacy). Any addendums must be vetted by ministry or central legal advisors before being released.
-*	“Accessibility” use core government [Accessibility statement](https://www2.gov.bc.ca/gov/content/home/accessibility). Any addendums must be vetted by ministry or central legal advisors before being released.
-*	“Copyright” use core government [copyright statement](https://www2.gov.bc.ca/gov/content/home/copyright). Any addendums must be vetted by ministry or central legal advisors before being released. 
-*	“Contact Us” provides contact details for service area or program.
+* “Home” returns to home page of your service
+* [Disclaimer](https://www2.gov.bc.ca/gov/content/home/disclaimer), [Privacy](https://www2.gov.bc.ca/gov/content/home/privacy), [Accessibility](https://www2.gov.bc.ca/gov/content/home/accessibility), and [Copyright](https://www2.gov.bc.ca/gov/content/home/copyright) links should all be to the core government statements with any addendums being vetted by ministry or central legal advisors before being released. 
+* “Contact Us” provides contact details for service area or program.
 
-## Behaviour
-1. Ensure all links lead to correct pages
-2. No changes to text size or weighting when browser window size changes
+## Mobile Design
+* All footer links should stack on one another
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:

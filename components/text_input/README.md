@@ -9,35 +9,29 @@ author: orinevares
 
 # Text Input
 
-Text inputs allow users to enter a single line of any combination of letters, numbers, or symbols of their choosing in a structured format.
+Text inputs allow users to enter a single line of text.
 
-## Required
+## Recommended
 
 ## Last Updated:
 
-## Visual
-  Text Input Visual:
+## Visual Example
 ![Text Input](https://github.com/bcgov/design-system/blob/master/components/text_input/images/text_input.png?raw=true)
 
-## Requirements
-* This component must be used according the the standard outined in this document. Any feedback should be directed to the feedback forum.
-
 ## Use This When
+* Input text is no longer than a single line
 * Users have to input an answer that cannot be easily predicted
-* Paste in a response
-* Input text that is no longer than a single line
 
 ## Don't Use This when
-* A user needs to input multiple lines of text. Use a textarea component instead
-* Users can only choose from a selected list of answers
+* A user needs to input multiple lines of text. Use a [textarea](../textarea/textarea.md) component instead
+* Users can only choose from a selected list of responses
 
-## Design Protocol
-* The length of the text input should provide a hint to the user on how much text to write.
+## Design Guidance
+* The length of the text input should correspond to how much text the user is expected to write
 * Text inputs must have visible labels aligned above the text input they refer to. They should be short, direct, and written in sentence case.
 * Allow copy and paste functionality.
-* Only show error validation messages or stylings after a user has interacted with a particular field.
-* Avoid using placeholder text. This causes additional problems for those with cognitive or visual disabilities.
-* Do not break up text input for a single entry i.e three text inputs for a phone number.
+* Do not use placeholder text as a replacement to lables as it dissapears once the user clicks on the field
+* Do not break up text input for a single entry i.e three text inputs for a phone number
 
 ## Behaviour
 1. When focused the text box has a blue outline.

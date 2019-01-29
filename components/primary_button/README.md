@@ -10,34 +10,26 @@ author: orinevares
 # Primary Button
 Primary buttons allow users to carry out an important action on your service, such as Download or Submit.
 
-## Required
+## Recommended
 
 ## Last Updated:
 
-## Visual
-  Primary Button Visual:
+## Visual Example
 ![primary_button](https://github.com/bcgov/design-system/blob/master/components/primary_button/images/primary_button.png?raw=true)
-
-## Requirements
-* This component must be used according the the standard outined in this document. Any feedback should be directed to the feedback forum.
 
 ## Use This For
 * The most important actions you want users to take on your site.
 
 ## Don't Use This For
-*	Leading users between pages; use links instead.
-*	Less important actions may be visually styled as links.
+*	Supporting actions on your page such as 'Cancel', 'Delete', or supporting information
 
-## How to Use This:
-Use primary buttons for 
-
-## Design Protocol
-*	Only use one primary button per view or page
+## Design Guidance
+*	Only use one primary button per page
 *	Use for actions that go to the next step (for example, “Submit”)
-*	Button labels should be as short as possible with trigger words that clearly explain what will happen when the button is clicked (eg. Download, sign up).
+*	Button labels should be as short as possible with action words that clearly explain what will happen when the button is clicked (eg. Download, sign up).
 
 ## Rationale
-The rounded edges on the button help differentiate it from other layout items on a page. The underline on hover ensures colour is not the only visual means of conveying information about the button being clickable.
+The rounded edges on the button help differentiate it from other layout items on a page. The underline on hover ensures colour is not the only visual means of conveying information about the button being clickable. The colour helps the button standout amongst other elements on a page and convey its importance to the user.
 
 ## Behaviour
 1.	Button label should appear underlined on hover
