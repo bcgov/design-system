@@ -35,22 +35,15 @@ The rounded edges on the button help differentiate it from other layout items on
 1.	Button label should appear underlined on hover
 
 ## Accessibility
-This button has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
-
-### Screenreaders
-* Proper ALT labels are included
-* Language tag has been set to english
+In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
+* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text when in both hover and static states
 
-### Keyboard Navigation
-* Supports tab navigation for use without a mouse
-
-### Underline of Hover
+### Underline on Hover
 * To support those with visual impairments and who may not be able to detect colour opacity changes
 
-### Learn More
+### Learn More About Accessibility in the Design System
 * Accessibility Contacts in Government
 * Online Accessibility Testing Tools
 * Accessibility Documentation
