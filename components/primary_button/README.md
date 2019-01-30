@@ -38,7 +38,7 @@ The rounded edges on the button help differentiate it from other layout items on
 In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text when in both hover and static states
+* Contrast ratios are at least 7:1 for normal text (below 24px or below bolded 18.66px) when in static and hover states.
 
 ### Underline on Hover
 * To support those with visual impairments and who may not be able to detect colour opacity changes
