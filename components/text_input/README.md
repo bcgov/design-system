@@ -42,9 +42,6 @@ In addition to [fundamental accessibility]() requirements, this component meets 
 ### Colour Contrast
 * Thick borders help better define the text input area
 
-### Keyboard Navigation
-* Yellow focus supports tab navigation for use without a mouse
-
 ### Learn More About Accessibility in the Design System
 * Accessibility Contacts in Government
 * Online Accessibility Testing Tools
