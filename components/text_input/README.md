@@ -37,19 +37,12 @@ Text inputs allow users to enter a single line of text.
 1. When focused the text box has a blue outline.
 
 ## Accessibility
-This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
-
-### Screenreaders
-* Proper ALT labels are included
-* Language tag has been set to english
+In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
+* Thick borders help better define the text input area
 
-### Keyboard Navigation
-* Supports tab navigation for use without a mouse
-
-### Learn More
+### Learn More About Accessibility in the Design System
 * Accessibility Contacts in Government
 * Online Accessibility Testing Tools
 * Accessibility Documentation
