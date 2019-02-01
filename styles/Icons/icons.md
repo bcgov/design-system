@@ -43,7 +43,7 @@ aria-hidden="true" attribute
 Read more about [Font Awesome Accessibility](https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility)
 
 ### Icon Size
-The [clickable or tap area](https://www.w3.org/WAI/WCAG21/quickref/#target-size) around an icon should be a minimum of 44px by 44px (WCAG 2.1 AAA)
+The [click or tap area](https://www.w3.org/WAI/WCAG21/quickref/#target-size) around an icon should be a minimum of 44px by 44px (WCAG 2.1 AAA)
 
 ![Three icons that visually show a target area of 44px surrounding the icon](target-area.png)
 
