@@ -9,7 +9,7 @@ status: draft
 
 # Icons
 
-##Implementation
+## Implementation
 The design system supports using the Font Awesome icon library to include in your application.
 
 To include the Font Awesome library in your application you can:
