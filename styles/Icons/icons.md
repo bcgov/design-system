@@ -45,12 +45,12 @@ Read more about [Font Awesome Accessibility](https://fontawesome.com/how-to-use/
 ### Icon Size
 The [clickable or tap area](https://www.w3.org/WAI/WCAG21/quickref/#target-size) around an icon should be a minimum of 44px by 44px (WCAG 2.1 AAA)
 
-![Three icons that visually show a target area of 44px surrounding the icon](./Icons/target-area.png)
+![Three icons that visually show a target area of 44px surrounding the icon](target-area.png)
 
 ### Colour Contrast
 * Icons must have a 3:1 [color contrast ratio](https://www.w3.org/WAI/WCAG21/quickref/#non-text-contrast) (WCAG 2.1 AA) with the background colour.
 
-![Two versions of the same icon with different contrast ratios](./Icons/icon-contrast.png)
+![Two versions of the same icon with different contrast ratios](icon-contrast.png)
 
 ## Prototyping with Font Awesome Icons
-Download the [Font Awesome Icons](https://fontawesome.com/how-to-use/on-the-desktop/setup/getting-started) for your desktop to use in your mockups and prototypes. 
+Download the [Font Awesome Icons](https://fontawesome.com/how-to-use/on-the-desktop/setup/getting-started) for your desktop to use in your mockups and prototypes.
