@@ -10,7 +10,7 @@ The Government of British Columbia strives to meet [WCAG 2.0 AA](https://www.w3.
 
 ### Page Structure
 * [Heading Structure](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility)
-* Designing for Screen Readers(https://webaim.org/techniques/screenreader/)
+* [Designing for Screen Readers](https://webaim.org/techniques/screenreader/)
 
 ### Text Size
 * Baseline text is at least 18px
