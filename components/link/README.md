@@ -16,7 +16,8 @@ Links lead users to a different page.
 ## Last Updated:
 
 ## Visual Example
-![Link](https://github.com/bcgov/design-system/blob/master/components/link/images/link.png?raw=true)
+
+<component-preview path="components/link/sample.html"> </component-preview>
 
 ## Don't Use This when:
 * Users need to take an action on a page such as log-in or submit, use a [primary button](../primary_button/README.md) instead.
