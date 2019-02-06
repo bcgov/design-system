@@ -8,6 +8,7 @@ status: draft
 > Last Updated: February 1, 2019
 
 # Icons
+Iconography uses images and symbols to represent an idea visually. They communicate a message and should be distinct and informative.
 
 ## Implementation
 The design system supports using the Font Awesome icon library to include in your application.
