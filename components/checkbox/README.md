@@ -16,7 +16,7 @@ Checkboxes are a type of input that allow users to select one or more options fr
 
 ## Visual Example
 
-<component-preview path="components/primary_button/sample.html"> </component-preview>
+<component-preview path="components/checkbox/sample.html"> </component-preview>
 
 ## Use This For:
 * Selecting multiple options from a given list
