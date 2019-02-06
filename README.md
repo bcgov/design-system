@@ -1,19 +1,16 @@
-# Application Name
-Description of the application. 
+# BC Government Design System
+The Design System helps developers and designers build better digital products and services.
 
-## Technology Stack Used
+It’s a collection of digital resources and tools – including a library of reusable UI/interface components and design patterns. The system makes it easier and faster to build custom B.C. government websites and applications.
 
-## Third-Party Products/Libraries used and the the License they are covert by
+Components are collectively built by the government community, meet accessibility standards and are open for input and improvement.
 
 ## Project Status
+Alpha
 
 ## Documnentation
 
-GitHub Pages (https://guides.github.com/features/pages/) are a neat way to document you application/project.
-
-## Security
-
-Authentication, Authorization, Policies, etc
+https://developer.gov.bc.ca/Design-System/About
 
 ## Files in this repository
 
