@@ -31,7 +31,7 @@ Read more about [Icon Usability - Nielsen Norman Group](https://www.nngroup.com/
 * If your icon has a text label you should hide the icon from screen readers by using the `aria-hidden="true"` attribute
 
 * If your icon doesn’t have a text label, you’ll need to manually add a few things so that your icon is appropriately accessible
-  * Hide the text label from screen readers by using the aria-hidden="true" attribute
+  * Hide the text label from screen readers by using the `aria-hidden="true"` attribute
   *	Provide a text alternative inside a <span> (or similar) element. Also include appropriate CSS to visually hide the element while keeping it accessible to assistive technologies.
   *	Include a title attribute on the icon to provide a tooltip for sighted mouse users.
 
