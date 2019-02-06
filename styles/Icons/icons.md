@@ -18,7 +18,7 @@ The design system supports using the Font Awesome icon library. Use these icons 
 
 | Icon      | Label | Class Name |
 | ----------- | ----------- | ----------- |
-| /icon-svgs/search.svg | Search      | `<i class="fas fa-search"></i>`|
+| ![magnifying glass](/icon-svgs/search.svg) | Search      | `<i class="fas fa-search"></i>`|
 
 ## Design Guidance
 *	Icons should be used sparingly throughout the application to provide clarity and reduce cognitive load on users.
