@@ -15,7 +15,8 @@ Primary buttons allow users to carry out an important action on your service, su
 ## Last Updated:
 
 ## Visual Example
-![primary_button](https://github.com/bcgov/design-system/blob/master/components/primary_button/images/primary_button.png?raw=true)
+
+<component-preview path="components/primary_button/sample.html"> </component-preview>
 
 ## Use This For
 * The most important actions you want users to take on your site.
