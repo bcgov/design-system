@@ -5,6 +5,71 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <title>Sample Radio Button</title>
+    <style>
+      /* Customize the label (the container) */
+.radio {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 2px solid #003366;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio input:checked ~ .dot {
+  background-color: #ffffff;
+}
+
+/* Custom checkbox has blue outline when in focus */
+.radio input:focus ~ .dot {
+  outline: rgb(59, 153, 252) solid 5px;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.dot:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #003366;
+  transform: translate(-50%, -50%);
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio input:checked ~ .dot:after {
+  display: block;
+}
+    </style>
   </head>
   <body>
 
