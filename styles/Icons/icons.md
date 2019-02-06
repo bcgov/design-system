@@ -28,7 +28,7 @@ Read more about [Icon Usability - Nielsen Norman Group](https://www.nngroup.com/
 ## Accessibility
 
 ### Screenreaders
-* If your icon has a text label you should hide the icon from screen readers by using the aria-hidden="true" attribute
+* If your icon has a text label you should hide the icon from screen readers by using the `aria-hidden="true"` attribute
 
 * If your icon doesn’t have a text label, you’ll need to manually add a few things so that your icon is appropriately accessible
   * Hide the text label from screen readers by using the aria-hidden="true" attribute
