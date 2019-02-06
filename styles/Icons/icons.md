@@ -16,6 +16,10 @@ The design system supports using the Font Awesome icon library. Use these icons 
 *	Hosting the [font library locally](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself) in your project source files
 *	Using npm if you are using [Vue](https://fontawesome.com/how-to-use/on-the-web/using-with/vuejs), [Angular](https://fontawesome.com/how-to-use/on-the-web/using-with/angular), or [React](https://fontawesome.com/how-to-use/on-the-web/using-with/angular) components
 
+| Icon      | Label | Class Name |
+| ----------- | ----------- | ----------- |
+| /icon-svgs/search.svg | Search      | `<i class="fas fa-search"></i>`|
+
 ## Design Guidance
 *	Icons should be used sparingly throughout the application to provide clarity and reduce cognitive load on users.
 *	Icons do not have globally recognized meaning, and will vary based on people’s past experiences. Always test the icons you use to make sure they are understandable
