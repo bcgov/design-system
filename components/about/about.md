@@ -38,13 +38,13 @@ It provides developers and designers with the tools they need to build great dig
 
 As part of this, we are committed to making all the tools and resources we create:
 
-###Maintained###
+### Maintained
 The community and Design System management team will support the maintenance and development of new resources and tools. This means you can flag issues and they’ll be addressed, discuss rationale and directly chat with the management team whenever you need.
 
-###Collaborative###
+### Collaborative
 The system is only valuable if the community finds it valuable. If a tool or resource isn’t meeting your needs, tell us why and work with us to make it better. We’ll also come to you – in your office, at your desk and share what’s new, ask what you need and share how you can get involved.
 
-###Open###
+### Open
 The system is built in GitHub and meant to be shared and improved by everyone. The code is open source and our work is in the open. We are transparent about how choices are made and tools are improved. Ask us…anything.
 
 **Contribute to the Design System**
