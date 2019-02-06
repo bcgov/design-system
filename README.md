@@ -8,7 +8,7 @@ Components are collectively built by the government community, meet accessibilit
 ## Project Status
 Alpha
 
-## Documnentation
+## Documentation
 
 https://developer.gov.bc.ca/Design-System/About
 
@@ -37,9 +37,9 @@ See (openshift/Readme.md)
 
 To report bugs/issues/feature requests, please file an [issue](https://github.com/BCDevOps/opendev-template/issues/).
 
-## How to Contribute
+## How to Propose a Component
 
-If you would like to contribute, please see our [CONTRIBUTING](CONTRIBUTING.md) guidelines.
+If you would like to propose a component to the design system, please see our [Propose a Component](.github/ISSUE_TEMPLATE/propose-a-new-component.md) guideline.
 
 Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). 
 By participating in this project you agree to abide by its terms.
