@@ -1,19 +1,16 @@
-# Application Name
-Description of the application. 
+# BC Government Design System
+The Design System helps developers and designers build better digital products and services.
 
-## Technology Stack Used
+It’s a collection of digital resources and tools – including a library of reusable UI/interface components and design patterns. The system makes it easier and faster to build custom B.C. government websites and applications.
 
-## Third-Party Products/Libraries used and the the License they are covert by
+Components are collectively built by the government community, meet accessibility standards and are open for input and improvement.
 
 ## Project Status
+Alpha
 
-## Documnentation
+## Documentation
 
-GitHub Pages (https://guides.github.com/features/pages/) are a neat way to document you application/project.
-
-## Security
-
-Authentication, Authorization, Policies, etc
+https://developer.gov.bc.ca/Design-System/About
 
 ## Files in this repository
 
@@ -40,9 +37,9 @@ See (openshift/Readme.md)
 
 To report bugs/issues/feature requests, please file an [issue](https://github.com/BCDevOps/opendev-template/issues/).
 
-## How to Contribute
+## How to Propose a Component
 
-If you would like to contribute, please see our [CONTRIBUTING](CONTRIBUTING.md) guidelines.
+If you would like to propose a component to the design system, please see our [Propose a Component](.github/ISSUE_TEMPLATE/propose-a-new-component.md) guideline.
 
 Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). 
 By participating in this project you agree to abide by its terms.

@@ -11,12 +11,10 @@ status: draft
 Iconography uses images and symbols to represent an idea visually. They communicate a message and should be distinct and informative.
 
 ## Implementation
-The design system supports using the Font Awesome icon library to include in your application.
-
-To include the Font Awesome library in your application you can:
-*	Add the library through the [Font Awesome CDN](https://fontawesome.com/start)
-*	Host the [font library locally](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself) in your project source files
-*	Use npm if you are using [Vue](https://fontawesome.com/how-to-use/on-the-web/using-with/vuejs), [Angular](https://fontawesome.com/how-to-use/on-the-web/using-with/angular), or [React](https://fontawesome.com/how-to-use/on-the-web/using-with/angular) components
+The design system supports using the Font Awesome icon library. Use these icons in your application by:
+*	Adding the library through the [Font Awesome CDN](https://fontawesome.com/start)
+*	Hosting the [font library locally](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself) in your project source files
+*	Using npm if you are using [Vue](https://fontawesome.com/how-to-use/on-the-web/using-with/vuejs), [Angular](https://fontawesome.com/how-to-use/on-the-web/using-with/angular), or [React](https://fontawesome.com/how-to-use/on-the-web/using-with/angular) components
 
 ## Design Guidance
 *	Icons should be used sparingly throughout the application to provide clarity and reduce cognitive load on users.
@@ -30,16 +28,12 @@ Read more about [Icon Usability - Nielsen Norman Group](https://www.nngroup.com/
 ## Accessibility
 
 ### Screenreaders
-If your icon has a text label you should hide the icon from screen readers
-````
-aria-hidden="true" attribute
-````
-If your icon doesn’t have a text label, you’ll need to manually add a few things so that your icon is appropriately accessible
-````
-aria-hidden="true" attribute
-````
-*	Provide a text alternative inside a <span> (or similar) element. Also include appropriate CSS to visually hide the element while keeping it accessible to assistive technologies.
-*	Include a title attribute on the icon to provide a tooltip for sighted mouse users.
+* If your icon has a text label you should hide the icon from screen readers by using the `aria-hidden="true"` attribute
+
+* If your icon doesn’t have a text label, you’ll need to manually add a few things so that your icon is appropriately accessible
+  * Hide the text label from screen readers by using the `aria-hidden="true"` attribute
+  *	Provide a text alternative inside a <span> (or similar) element. Also include appropriate CSS to visually hide the element while keeping it accessible to assistive technologies.
+  *	Include a title attribute on the icon to provide a tooltip for sighted mouse users.
 
 Read more about [Font Awesome Accessibility](https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility)
 
