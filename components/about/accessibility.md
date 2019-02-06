@@ -19,7 +19,7 @@ The Government of British Columbia strives to meet [WCAG 2.0 AA](https://www.w3.
 ### Keyboard Navigation
 * Supports tab navigation for use without a mouse
 
-### Converying Information
+### Conveying Information
 * Colour changes are not the only means of conveying information
 
 ### Learn More
