@@ -14,7 +14,7 @@ The Government of British Columbia strives to meet [WCAG 2.0 AA](https://www.w3.
 * Language tag is set to english
 
 ### Colour Contrast
-* Constrast ratios are at least 7:1 for normal text and 4.5:1 for large text
+* Constrast ratios are at least 7:1 for normal text (below 24px or bolded 18.66px) and 4.5:1 for large text (24px or bolded 18.66px and above)
 
 ### Keyboard Navigation
 * Supports tab navigation for use without a mouse
