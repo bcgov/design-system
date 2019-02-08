@@ -16,7 +16,7 @@ Radio buttons are a type of input that allow users to select only one option fro
 
 ## Visual Example
 
-<component-preview path="components/components/sample.html"> </component-preview>
+<component-preview path="components/radio/sample.html"> </component-preview>
 
 ## Use This For
 * When users have to select only one option from a list
