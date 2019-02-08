@@ -15,7 +15,8 @@ Tables present tabular data in a grid which allows users to visually scan and un
 ## Last Updated:
 
 ## Visual Example
-![Table](https://github.com/bcgov/design-system/blob/master/components/table/images/table.png?raw=true)
+
+<component-preview path="components/table/sample.html"> </component-preview>
 
 ## How to Use This
 

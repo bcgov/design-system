@@ -15,7 +15,8 @@ Checkboxes are a type of input that allow users to select one or more options fr
 ## Last Updated:
 
 ## Visual Example
-![Checkbox](https://github.com/bcgov/design-system/blob/master/components/checkbox/images/checkbox.png?raw=true)
+
+<component-preview path="components/checkbox/sample.html"> </component-preview>
 
 ## Use This For:
 * Selecting multiple options from a given list

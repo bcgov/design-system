@@ -16,6 +16,8 @@ Navigation bars provide a list of links to different pages on a website or appli
 
 ## Visual Example
 
+<component-preview path="components/navbar/sample.html"> </component-preview>
+
 ![Navbar](./images/navbar.gif)
 
 ## Use This For

@@ -9,165 +9,6 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Sample Navigation</title>
-    <style>
-        header {
-            background-color: #036;
-            border-bottom: 2px solid #fcba19;
-            padding: 0 30px 0 30px;
-            color: #fff;
-            display: flex;
-            height: 65px;
-            top: 0;
-            position: fixed;
-            width: 100%;
-            -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
-            -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
-            box-shadow: 0 6px 8px -4px #b3b1b3;
-          }
-  
-          header h1 {
-            font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
-            font-weight: normal;  /* 400 */
-            margin: 5px 5px 0 18px;
-            visibility: hidden;
-          }
-
-          header .banner {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            margin: 0 10px 0 0;
-            /* border-style: dotted;
-            border-width: 1px;
-            border-color: lightgrey; */
-          }
-
-          header .other {
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
-            /* border-style: dotted;
-            border-width: 1px;
-            border-color: lightgrey; */
-          }
-
-          header a [class^="fas fa-"] {
-            color: white;
-            font-size: 1.4em;
-            font-style: bold;
-            line-height: 1;
-            /* border-style: solid;
-            border-width: 1px;
-            border-color: #fcba19; */
-            padding: 5px;
-            -webkit-font-smoothing: antialiased;
-          }
-
-          header .nav-btn {
-            display: block;
-            width: auto;
-            margin: 0 0 0 auto;
-            cursor: pointer;
-          }
-
-          .navigation-main {
-            display: none;
-            position: fixed;
-            top: 65px;
-            color: #fcba19;
-            background-color: #38598a;
-            width: 100%;
-            -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
-            -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
-            box-shadow: 0 6px 8px -4px #b3b1b3;
-          }
-
-          .navigation-main .container {
-            padding: 10px 0 10px 0;
-          }
-
-          .navigation-main .container ul {
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            color: #fff;
-            list-style: none;
-            margin-left: -25px;
-            /* border-style: dotted;
-            border-width: 1px;
-            border-color: red; */
-          }
-
-          .navigation-main .container ul li {
-            margin: 5px 0;
-          }
-
-          .navigation-main .container ul li a {
-            display: flex;
-            font-size: 0.813em;
-            font-weight: normal;  /* 400 */
-            color: #fff;
-            padding: 0 15px 0 15px;
-            text-decoration: none;
-            /* border-style: dotted;
-            border-width: 1px;
-            border-color: green; */
-          }
-
-          .navigation-main .container ul li a:hover {
-            text-decoration: underline;
-          }
-
-          .navigation-main .container ul .active {
-            text-decoration: underline;
-            font-weight: bold;
-          } 
-
-          /*
-            These are sample media queries only. Media queries are quite subjective
-            but, in general, should be made for the three different classes of screen
-            size: phone, tablet, full. 
-          */
-
-          @media screen and (min-width: 768px) {
-            .navigation-main {
-              display: block;
-            }
-
-            .navigation-main .container ul {
-              flex-direction: row;
-            }
-
-            .navigation-main .container ul li {
-              margin: 0;
-            }
-
-            .navigation-main .container ul li a {
-              border-right: 1px solid #9b9b9b;
-            }
-
-            header .nav-btn {
-              display: none;
-              width: auto;
-              margin: 0 0 0 auto;
-              cursor: pointer;
-            }
-          }
-
-          @media screen and (min-width: 768px) and (max-width: 899px) {
-            header h1 {
-              font-size: calc(7px + 2.2vw);
-              visibility: visible;
-            }
-          }
-
-          @media screen and (min-width: 900px) {
-            header h1 {
-              font-size: 2.0em;
-              visibility: visible;
-            }
-          }
-    </style>
 </head>
 
 <!--
@@ -233,28 +74,22 @@
           hide(elem);
           return;
         }
-
         show(elem);
       };
-
       // Listen for click events
       const menuButton = document.getElementById('menu');
       menuButton.addEventListener('click', (event) => {
         // Filter events
         if (event.target.id !== 'menu') return;
-
         // Prevent default link behavior
         event.preventDefault();
-
         // Check for a valid target
         const nav = document.getElementById('navbar')
         if (!nav) return;
-
         // Toggle
         toggle(nav);
       }, useCapture);
     }
-
     setupSampleMenuControl();
   </script>
 

@@ -15,8 +15,8 @@ A textarea allows users to input multiple lines of text
 ## Last Updated: 
 
 ## Visual Example
-![Textarea](https://github.com/bcgov/design-system/blob/master/components/textarea/images/textarea.png?raw=true)
 
+<component-preview path="components/textarea/sample.html"> </component-preview>
 ## Use This When
 *	Users need to enter more than a single line of text
 

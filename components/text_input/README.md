@@ -16,7 +16,8 @@ Text inputs allow users to enter a single line of text.
 ## Last Updated:
 
 ## Visual Example
-![Text Input](https://github.com/bcgov/design-system/blob/master/components/text_input/images/text_input.png?raw=true)
+
+<component-preview path="components/text_input/sample.html"> </component-preview>
 
 ## Use This When
 * Input text is no longer than a single line

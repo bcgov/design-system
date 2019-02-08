@@ -16,7 +16,8 @@ Headers help people understand what the product or service is about while provid
 ## Last Updated:
 
 ## Visual Example
-![Header](https://github.com/bcgov/design-system/blob/master/components/header/images/header.png?raw=true)
+
+<component-preview path="components/header/sample.html"> </component-preview>
 
 ### Download
 * [BC Gov Logo](https://github.com/bcgov/design-system/tree/master/components/assets/images)
