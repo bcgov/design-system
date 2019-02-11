@@ -5,15 +5,12 @@ status: Draft
 author: orinevares
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Header - Basic
 
 Headers help people understand what the product or service is about while providing a consistent look, feel, and functionality across government sites.
-
-### Required
-
-## Last Updated:
 
 ## Visual Example
 
