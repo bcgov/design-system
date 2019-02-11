@@ -13,7 +13,7 @@ Primary buttons allow users to carry out an important action on your service, su
 
 ## Visual Example
 
-<component-preview path="components/primary_button/sample.html" height="100px"> </component-preview>
+<component-preview path="components/primary_button/sample.html" height="100px" width="800px"> </component-preview>
 
 ## Use This For
 * The most important actions you want users to take on your site.
