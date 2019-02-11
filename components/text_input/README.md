@@ -5,15 +5,12 @@ status: Draft
 author: orinevares
 ---
 
-> Draft
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Text Input
 
 Text inputs allow users to enter a single line of text.
-
-## Recommended
-
-## Last Updated:
 
 ## Visual Example
 
