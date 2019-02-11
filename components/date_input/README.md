@@ -4,15 +4,12 @@ title: Date Input
 status: Draft
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Date Input
 
 Date input fields allow users to enter an already known date
-
-### Recommended
-
-## Last Updated:
 
 ## Visual Example
 
