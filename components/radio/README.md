@@ -5,14 +5,11 @@ status: Draft
 author: orinevares
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Radio Button
 Radio buttons are a type of input that allow users to select only one option from a list.
-
-## Recommended
-
-## Last Updated:
 
 ## Visual Example
 
