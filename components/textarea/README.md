@@ -4,19 +4,17 @@ title: Textarea
 status: Draft
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Textarea
 
 A textarea allows users to input multiple lines of text
 
-### Required
-
-## Last Updated: 
-
 ## Visual Example
 
-<component-preview path="components/textarea/sample.html"> </component-preview>
+<component-preview path="components/textarea/sample.html" height="250px" width="800px"> </component-preview>
+
 ## Use This When
 *	Users need to enter more than a single line of text
 

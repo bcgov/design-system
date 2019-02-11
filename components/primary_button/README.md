@@ -5,18 +5,15 @@ status: Draft
 author: orinevares
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Primary Button
 Primary buttons allow users to carry out an important action on your service, such as Download or Submit.
 
-## Recommended
-
-## Last Updated:
-
 ## Visual Example
 
-<component-preview path="components/primary_button/sample.html"> </component-preview>
+<component-preview path="components/primary_button/sample.html" height="100px" width="800px"> </component-preview>
 
 ## Use This For
 * The most important actions you want users to take on your site.

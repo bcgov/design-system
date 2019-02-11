@@ -4,19 +4,16 @@ title: Table
 status: Draft
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Table
 
 Tables present tabular data in a grid which allows users to visually scan and understand associations between the values.
 
-### Required
-
-## Last Updated:
-
 ## Visual Example
 
-<component-preview path="components/table/sample.html"> </component-preview>
+<component-preview path="components/table/sample.html" height="250px" width="800px"> </component-preview>
 
 ## How to Use This
 

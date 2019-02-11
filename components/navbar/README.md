@@ -5,18 +5,15 @@ status: Draft
 author: orinevares
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Navigation Bar – Basic
 Navigation bars provide a list of links to different pages on a website or application.
 
-## Recommended
-
-## Last Updated:
-
 ## Visual Example
 
-<component-preview path="components/navbar/sample.html"> </component-preview>
+<component-preview path="components/navbar/sample.html" height="150px" width="800px"> </component-preview>
 
 ![Navbar](./images/navbar.gif)
 

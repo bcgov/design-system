@@ -4,19 +4,16 @@ title: Date Input
 status: Draft
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Date Input
 
 Date input fields allow users to enter an already known date
 
-### Recommended
-
-## Last Updated:
-
 ## Visual Example
 
-<component-preview path="components/date_input/sample.html"> </component-preview>
+<component-preview path="components/date_input/sample.html" height="100px" width="800px"> </component-preview>
 
 ## Use This When
 *	Users need to enter a date

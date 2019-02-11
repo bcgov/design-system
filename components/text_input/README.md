@@ -5,19 +5,16 @@ status: Draft
 author: orinevares
 ---
 
-> Draft
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Text Input
 
 Text inputs allow users to enter a single line of text.
 
-## Recommended
-
-## Last Updated:
-
 ## Visual Example
 
-<component-preview path="components/text_input/sample.html"> </component-preview>
+<component-preview path="components/text_input/sample.html" height="200px" width="800px"> </component-preview>
 
 ## Use This When
 * Input text is no longer than a single line

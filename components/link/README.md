@@ -5,19 +5,16 @@ status: Draft
 author: orinevares
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Links
 
 Links lead users to a different page.
 
-### Recommended
-
-## Last Updated:
-
 ## Visual Example
 
-<component-preview path="components/link/sample.html"> </component-preview>
+<component-preview path="components/link/sample.html" height="150px" width="800px"> </component-preview>
 
 ## Don't Use This when:
 * Users need to take an action on a page such as log-in or submit, use a [primary button](../primary_button/README.md) instead.

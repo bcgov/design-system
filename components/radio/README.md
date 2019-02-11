@@ -5,18 +5,15 @@ status: Draft
 author: orinevares
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Radio Button
 Radio buttons are a type of input that allow users to select only one option from a list.
 
-## Recommended
-
-## Last Updated:
-
 ## Visual Example
 
-<component-preview path="components/radio/sample.html"> </component-preview>
+<component-preview path="components/radio/sample.html" height="150px" width="800px"> </component-preview>
 
 ## Use This For
 * When users have to select only one option from a list

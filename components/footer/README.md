@@ -5,18 +5,15 @@ status: Draft
 author: orinevares
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Footer
 Footers help people find what they need after scrolling to the bottom of a web page. They provide supplementary information such as copyright, contact information, social media links, and links to other pages within a website.
 
-## Recommended
-
-## Last Updated:
-
 ## Visual Example
 
-<component-preview path="components/footer/sample.html"> </component-preview>
+<component-preview path="components/footer/sample.html" height="200px" width="800px"> </component-preview>
 
 ## Requirements:
 * This footer must appear on all public-facing online B.C. Government content and services.
