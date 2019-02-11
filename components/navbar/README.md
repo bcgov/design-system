@@ -13,7 +13,7 @@ Navigation bars provide a list of links to different pages on a website or appli
 
 ## Visual Example
 
-<component-preview path="components/navbar/sample.html" height="150px"> </component-preview>
+<component-preview path="components/navbar/sample.html" height="150px" width="800px"> </component-preview>
 
 ![Navbar](./images/navbar.gif)
 
