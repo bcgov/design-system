@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <title>Sample Checkbox</title>
+    <style>
+      /* Customize the label (the container) */
+      .checkbox {
+        display: block;
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+        font-size: 16px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Hide the browser's default checkbox */
+      .checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        outline: 2px solid #003366;
+      }
+
+      /* When the checkbox is checked, add a blue background */
+      .checkbox input:checked ~ .checkmark {
+        background-color: #003366;
+      }
+
+      /* Custom checkbox has blue outline when in focus */
+      .checkbox input:focus ~ .checkmark {
+        outline: 5px solid #3B99FC;
+      }
+
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "\2713";
+        color: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+      }
+
+      /* Show the checkmark when checked */
+      .checkbox input:checked ~ .checkmark:after {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+
+    <label class="checkbox" for="checkbox_1">This is a selected checkbox
+      <input type="checkbox" checked="checked" id="checkbox_1">
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="checkbox" for="checkbox_2">This is an unselected checkbox
+      <input type="checkbox" id="checkbox_2">
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="checkbox" for="checkbox_3">This is an unselected checkbox
+      <input type="checkbox" id="checkbox_3">
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="checkbox" for="checkbox_4">This is an unselected checkbox
+      <input type="checkbox" id="checkbox_4">
+      <span class="checkmark"></span>
+    </label>
+
+  </body>
+</html>
