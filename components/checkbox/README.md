@@ -13,7 +13,7 @@ Checkboxes are a type of input that allow users to select one or more options fr
 
 ## Visual Example
 
-<component-preview path="components/checkbox/sample.html" height="150px"> </component-preview>
+<component-preview path="components/checkbox/sample.html" height="150px" width="800px"> </component-preview>
 
 ## Use This For:
 * Selecting multiple options from a given list
