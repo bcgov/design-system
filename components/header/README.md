@@ -14,7 +14,7 @@ Headers help people understand what the product or service is about while provid
 
 ## Visual Example
 
-<component-preview path="components/header/sample.html" height="100px"> </component-preview>
+<component-preview path="components/header/sample.html" height="100px" width="800px"> </component-preview>
 
 ### Download
 * [BC Gov Logo](https://github.com/bcgov/design-system/tree/master/components/assets/images)
