@@ -13,7 +13,7 @@ Date input fields allow users to enter an already known date
 
 ## Visual Example
 
-<component-preview path="components/date_input/sample.html" height="100px"> </component-preview>
+<component-preview path="components/date_input/sample.html" height="100px" width="800px"> </component-preview>
 
 ## Use This When
 *	Users need to enter a date
