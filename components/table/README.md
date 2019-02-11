@@ -13,7 +13,7 @@ Tables present tabular data in a grid which allows users to visually scan and un
 
 ## Visual Example
 
-<component-preview path="components/table/sample.html" height="250px"> </component-preview>
+<component-preview path="components/table/sample.html" height="250px" width="800px"> </component-preview>
 
 ## How to Use This
 
