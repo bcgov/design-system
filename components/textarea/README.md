@@ -13,7 +13,7 @@ A textarea allows users to input multiple lines of text
 
 ## Visual Example
 
-<component-preview path="components/textarea/sample.html" height="250px"> </component-preview>
+<component-preview path="components/textarea/sample.html" height="250px" width="800px"> </component-preview>
 
 ## Use This When
 *	Users need to enter more than a single line of text
