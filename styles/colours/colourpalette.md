@@ -16,7 +16,7 @@ The B.C. Government colour palette must be adhered to ensuring all public facing
 ## Primary Colours
 Visual Example | Hex Code | RGB | Example Use
 ------------ | ------------ | ------------ | ------------ |
-<div style="background-color: #003366;"></div> | #003366 | 0 51 102 | Header, Footer, Primary Buttons
+![#003366](https://github.com/bcgov/design-system/blob/master/styles/colours/images/003366.png?raw=true) | #003366 | 0 51 102 | Header, Footer, Primary Buttons
 ![#1a5a96](https://github.com/bcgov/design-system/blob/master/styles/colours/images/1a5a96.png?raw=true) | #1a5a96 | 26 90 150 | Links and title links
 ![#38598a](https://github.com/bcgov/design-system/blob/master/styles/colours/images/38598a.png?raw=true) | #38598a | 56 89 138 | First level background colour for navigation bar
 ![#ffffff](https://github.com/bcgov/design-system/blob/master/styles/colours/images/ffffff.png?raw=true) | #ffffff | 255 255 255 | Navigation text
