@@ -5,14 +5,11 @@ status: Draft
 author: orinevares
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Primary Button
 Primary buttons allow users to carry out an important action on your service, such as Download or Submit.
-
-## Recommended
-
-## Last Updated:
 
 ## Visual Example
 
