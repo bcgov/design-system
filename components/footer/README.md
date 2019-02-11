@@ -13,7 +13,7 @@ Footers help people find what they need after scrolling to the bottom of a web p
 
 ## Visual Example
 
-<component-preview path="components/footer/sample.html" height="50px" width="800px"> </component-preview>
+<component-preview path="components/footer/sample.html" height="100px" width="800px"> </component-preview>
 
 ## Requirements:
 * This footer must appear on all public-facing online B.C. Government content and services.
