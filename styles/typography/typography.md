@@ -38,7 +38,7 @@ Heading Three | ```<h3>``` | 20px #494949 | 500
 Heading Four | ```<h4>``` | 18px #494949 | 500
 
 ## Paragraphs
-
+<h1>h1 Heading 1 2.74em (31.10px)</h1>
 ## Links
 
 ## Lists
