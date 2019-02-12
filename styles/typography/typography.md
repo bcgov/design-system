@@ -32,7 +32,7 @@ Myriad Pro, Calibri, Arial, Sans Serif
 ## Headings
 Name | Tag | Size | Font Weight
 ----- | ----- | ----- | ----- |
-Heading One | ```<h1>``` | 24px #494949 | 600
+<h1>Heading One</h1> | ```<h1>``` | 24px #494949 | 600
 Heading Two | ```<h2>``` | 22px #494949 | 500
 Heading Three | ```<h3>``` | 20px #494949 | 500
 Heading Four | ```<h4>``` | 18px #494949 | 500
