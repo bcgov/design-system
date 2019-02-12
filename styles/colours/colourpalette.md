@@ -46,7 +46,7 @@ Visual Example | Hex Code | RGB | Example Use
 
 ## Rationale
 Our brand colours, BCID Blue and BCID Gold, are from our symbol, the BC Mark. Golden Yellow symbolizes warmth, energy, balance, enthusiasm, vibrancy and vitality. It is also associated with optimism, prosperity, prestige, wisdom, intelligence and security. Dark Blue symbolizes depth, expertise, stability, credibility, knowledge and integrity. It is also associated with health, law, order, logic, and dependability.
-<div style = “width: 50px; height: 50px; background-colour: #003366;”>hello</div>
+
 
 ## Accessibility
 This navigation bar has been built according to WCAG 2.0 AA standards and has been successfully tested for the following:
