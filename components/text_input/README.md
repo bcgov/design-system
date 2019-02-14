@@ -55,7 +55,7 @@ The library is constantly updated and currently available in the following tools
 
 ## Code
 ### HTML
-```
+```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -81,7 +81,7 @@ The library is constantly updated and currently available in the following tools
 </html>
 ```
 ### CSS
-```
+```css
 form {
   font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';;
   font-size: 16px;
