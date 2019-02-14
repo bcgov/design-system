@@ -38,7 +38,6 @@ Heading Three | ```<h3>``` | 20px #494949 | 500
 Heading Four | ```<h4>``` | 18px #494949 | 500
 
 ## Paragraphs
-
 ## Links
 
 ## Lists

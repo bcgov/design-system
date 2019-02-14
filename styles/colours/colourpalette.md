@@ -16,7 +16,7 @@ The B.C. Government colour palette must be adhered to ensuring all public facing
 ## Primary Colours
 Visual Example | Hex Code | RGB | Example Use
 ------------ | ------------ | ------------ | ------------ |
-![#003366](https://github.com/bcgov/design-system/blob/master/styles/colours/images/003366.png?raw=true) | #003366 | 0 51 102 | Header & Footer, 83% opacity for background colour on title bars
+![#003366](https://github.com/bcgov/design-system/blob/master/styles/colours/images/003366.png?raw=true) | #003366 | 0 51 102 | Header, Footer, Primary Buttons
 ![#1a5a96](https://github.com/bcgov/design-system/blob/master/styles/colours/images/1a5a96.png?raw=true) | #1a5a96 | 26 90 150 | Links and title links
 ![#38598a](https://github.com/bcgov/design-system/blob/master/styles/colours/images/38598a.png?raw=true) | #38598a | 56 89 138 | First level background colour for navigation bar
 ![#ffffff](https://github.com/bcgov/design-system/blob/master/styles/colours/images/ffffff.png?raw=true) | #ffffff | 255 255 255 | Navigation text
@@ -45,7 +45,8 @@ Visual Example | Hex Code | RGB | Example Use
 ![#a12622](https://github.com/bcgov/design-system/blob/master/styles/colours/images/a12622.png?raw=true) | #a12622 | 161 38 34 | ???
 
 ## Rationale
-Our brand colours, BCID Blue and BCID Gold, are from our symbol, the BC Mark. Golden Yellow symbolizes warmth, energy, balance, enthusiasm, vibrancy and vitality. It is also associated with optimism, prosperity, prestige, wisdom, intelligence and security. Dark Blue symbolizes depth, expertise, stability, credibility, knowledge and integrity. It is also associated with health, law, order, logic, and dependability. 
+Our brand colours, BCID Blue and BCID Gold, are from our symbol, the BC Mark. Golden Yellow symbolizes warmth, energy, balance, enthusiasm, vibrancy and vitality. It is also associated with optimism, prosperity, prestige, wisdom, intelligence and security. Dark Blue symbolizes depth, expertise, stability, credibility, knowledge and integrity. It is also associated with health, law, order, logic, and dependability.
+
 
 ## Accessibility
 This navigation bar has been built according to WCAG 2.0 AA standards and has been successfully tested for the following:
@@ -58,5 +59,5 @@ Download and use the B.C. government Design System library to help build prototy
 
 The library is available in these design tools:
 
-*	Sketch: [https://sketch.cloud/s/Q0bkG] 
+*	Sketch: [https://sketch.cloud/s/Q0bkG]
 This library is updated on a regular basis; by subscribing to the design library, you’ll be informed of updates to components and new additions.
