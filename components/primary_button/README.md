@@ -56,7 +56,7 @@ The library is constantly updated and currently available in the following tools
 
 ## Code
 ### HTML
-```HTML
+```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -68,11 +68,10 @@ The library is constantly updated and currently available in the following tools
   <body>
     <button class="primarybutton" type="button" name="button">Submit</button>
   </body>
-</html>
-```
+</html>```
 
 ### CSS
-```HTML
+```css
 .primarybutton {
     background-color: #003366; /* Green */
     border: none;
@@ -90,5 +89,4 @@ The library is constantly updated and currently available in the following tools
 .primarybutton:hover {
   text-decoration: underline;
   opacity: 0.9;
-}
-```
+}```

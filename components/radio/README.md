@@ -64,7 +64,7 @@ The library is constantly updated and currently available in the following tools
 
 ## Code
 ### HTML
-```HTML
+```html
   <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -96,11 +96,10 @@ The library is constantly updated and currently available in the following tools
     </label>
 
   </body>
-</html>
-```
+</html>```
  
 ### CSS
-```CSS
+```css
 /* Customize the label (the container) */
 .radio {
   display: block;
@@ -162,5 +161,4 @@ The library is constantly updated and currently available in the following tools
   border-radius: 50%;
   background: #003366;
   transform: translate(-50%, -50%);
-}
-```
+}```
