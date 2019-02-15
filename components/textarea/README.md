@@ -42,15 +42,18 @@ Thick borders with generous spacing result in greater visual prominence. These f
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper ALT labels are included
-* Language tag has been set to english
+* Textarea field labels are used instead of placeholder text. Placeholder text dissapears after in focus which can cause issues remembering what is requested from the user 
+(more coming soon)
+
+### Text Size
+* Label and textarea field text are at least 18px
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
-* Thick boaders with high contrast result in greater visual prominance
+* Contrast ratios are at least 7:1 for text and input fields
+* Thick borders help better define the textarea
 
 ### Keyboard Navigation
-* Supports tab navigation for use without a mouse
+* Textarea supported by tab navigation for use without a mouse
 
 ### Learn More
 * Accessibility Contacts in Government
