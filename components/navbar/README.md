@@ -38,16 +38,20 @@ This header and navigation bar matches the mandatory branding requirements of th
 This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper ALT labels are included
-* Language tag has been set to english
-* List items are labelled properly
-* Hamburger icon labelled properly
+* Proper ALT labels are included for BC Government logo. Reads, "Go to the Government of British Columbia website"
+
+### Text Size
+* Link text is at least 18px
+
+### Converying Information
+* Hamburger icon not placed alone without a text label
+* Navbar links underline on hover to convey they are clickable
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
+* Contrast ratios are at least 7:1 for navbar link text (below 24px or bolded 18.66px) and 4.5:1 for header title text (24px or bolded 18.66px and above)
 
 ### Keyboard Navigation
-* Supports tab navigation for use without a mouse
+* Nav bar links are supported by tab navigation for use without a mouse
 
 ### Learn More
 * Accessibility Contacts in Government
