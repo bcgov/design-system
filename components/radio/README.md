@@ -39,15 +39,19 @@ Based on research done by [Gov.UK](https://designnotes.blog.gov.uk/2016/11/30/we
 This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper ALT labels are included
-* Language tag has been set to english
-* List items and radio status are labelled properly
+(coming soon)
+
+### Target Areas
+* Radio buttons have been increased in size from default settings
+
+### Text Size
+* Radio button labels are at least 18px
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
+* Contrast ratios are at least 7:1 for radio labels and radio buttons
 
 ### Keyboard Navigation
-* Supports tab navigation for use without a mouse
+* Radio button selection supported by tab navigation for use without a mouse
 
 ### Learn More
 * Accessibility Contacts in Government
