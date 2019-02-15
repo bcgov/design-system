@@ -37,8 +37,19 @@ Text inputs allow users to enter a single line of text.
 ## Accessibility
 In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
 
+### Screenreaders
+* Input field labels are used instead of placeholder text. Placeholder text dissapears after in focus which can cause issues remembering what is requested from the user 
+(more coming soon)
+
+### Text Size
+* Label and input field text are at least 18px
+
 ### Colour Contrast
+* Contrast ratios are at least 7:1 for text and input fields
 * Thick borders help better define the text input area
+
+### Keyboard Navigation
+* Text input supported by tab navigation for use without a mouse
 
 ### Learn More About Accessibility in the Design System
 * Accessibility Contacts in Government
