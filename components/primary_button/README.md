@@ -35,11 +35,23 @@ The rounded edges on the button help differentiate it from other layout items on
 ## Accessibility
 In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
 
-### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text (below 24px or bolded 18.66px) when in static and hover states.
+### Screenreaders
+(coming soon)
 
-### Underline on Hover
-* To support those with visual impairments and who may not be able to detect colour opacity changes
+### Colour Contrast
+* Contrast ratios are at least 7:1 for button text (below 24px or bolded 18.66px) when in static and hover states.
+
+### Text Size
+* Button label is at least 18px
+
+### Converying Information
+* Button label underlines on hover to support those with visual impairments and who may not be able to detect colour opacity changes
+
+### Target Areas
+* Button size is at least 44px in diameter
+
+### Keyboard Navigation
+* Button use is supported by tab navigation for use without a mouse
 
 ### Learn More About Accessibility in the Design System
 * Accessibility Contacts in Government
