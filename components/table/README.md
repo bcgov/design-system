@@ -31,7 +31,7 @@ Tables present tabular data in a grid which allows users to visually scan and un
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper caption and scope labels are included for proper reading of tables content
+* Proper caption and scope labels are included for proper reading of the table's content
 
 ### Text Size
 * Table header and cell content are at least 18px
