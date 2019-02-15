@@ -43,16 +43,16 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 * Label text is at least 18px
 
 ### Target Areas
-* Radio buttons have been increased in size from default settings
+* Checkboxe sizes have been increased from default settings
 
 ### Screenreaders
 (coming soon)
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for labels and radio buttons
+* Contrast ratios are at least 7:1 for labels and checkboxes
 
 ### Keyboard Navigation
-* Radio selection supported by tab navigation for use without a mouse
+* Checkbox selection supported by tab navigation for use without a mouse
 
 ### Learn More
 * Accessibility Contacts in Government
