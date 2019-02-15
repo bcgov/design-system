@@ -33,8 +33,13 @@ Discuss this design on the [Beta Status Github Issue](https://github.com/bcgov/d
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screen readers
-(Coming Soon)
+(coming soon)
 
+### Colour Contrast
+* Gold text colour maintains at least 7:1 ratio on header blue background
+
+### Text Size
+* Beta badge text is at least 18px
 
 ## Code
 (Coming Soon)
