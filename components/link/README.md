@@ -37,17 +37,18 @@ Links lead users to a different page.
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper ALT labels are included
-* Language tag has been set to english
-* Proper warning if link opens a new window
+* External link icon included if link opens a new window or tab
 * Descriptive language for writing links. [Learn more about descriptive links](https://accessibility.oregonstate.edu/descriptivelinks)
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
-* Users can identify the link without relying on colour alone
+* Contrast ratios are at least 7:1 for link text
+
+### Conveying Information
+* Underline allows users to identify the link without relying on colour alone
+* Underline dissapears on hover signaling link is clickable
 
 ### Keyboard Navigation
-* Supports tab navigation for use without a mouse
+* Links supported by tab navigation for use without a mouse
 
 ### Learn More
 * Accessibility Contacts in Government
