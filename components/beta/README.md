@@ -36,7 +36,7 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 (coming soon)
 
 ### Colour Contrast
-* Gold text colour maintains at least 7:1 ratio on header blue background
+* Gold text colour maintains at least 7:1 ratio on header blue
 
 ### Text Size
 * Beta badge text is at least 18px
