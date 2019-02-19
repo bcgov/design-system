@@ -38,7 +38,25 @@ This header and navigation bar matches the mandatory branding requirements of th
 This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper ALT labels are included for BC Government logo. Reads, "Go to the Government of British Columbia website"
+As read using ChromeVox
+
+> > "Go to the Government of British Columbia website, link."
+
+> > "Hello British Columbia, link."
+
+> > "Navigation list with six items."
+
+> > "Home. Link list item."
+
+> > "Some thing. Link list item."
+
+> > "Another thing. Link list item."
+
+> > "Somewhere. Link list item."
+
+> > Elsewhere. Link list item."
+
+> > Hello. Link list item."
 
 ### Text Size
 * Link text is at least 18px
