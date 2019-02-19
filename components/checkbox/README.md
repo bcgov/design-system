@@ -49,17 +49,11 @@ As read using ChromeVox
 
 > > "This is an unselected checkbox, checkbox not checked."
 
-### Text Size
-* Label text is at least 18px
-
 ### Target Areas
-* Checkboxe sizes have been increased from default settings
+* Checkbox size is larger than default settings to provide a larger target area
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for labels and checkboxes
-
-### Keyboard Navigation
-* Checkbox selection supported by tab navigation for use without a mouse
+* When checked, the checkmark exceeds a [contrast ratio](https://webaim.org/articles/contrast/) of at least 7:1 with the blue fill
 
 ### Learn More
 * Accessibility Contacts in Government
