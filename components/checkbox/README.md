@@ -39,14 +39,21 @@ Based on [research](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
+### Screenreaders
+As read using ChromeVox
+> > "This is a selected checkbox, checkbox checked."
+
+> > "This is an unselected checkbox, checkbox not checked."
+
+> > "This is an unselected checkbox, checkbox not checked."
+
+> > "This is an unselected checkbox, checkbox not checked."
+
 ### Text Size
 * Label text is at least 18px
 
 ### Target Areas
 * Checkboxe sizes have been increased from default settings
-
-### Screenreaders
-(coming soon)
 
 ### Colour Contrast
 * Contrast ratios are at least 7:1 for labels and checkboxes
