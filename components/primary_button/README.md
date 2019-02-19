@@ -41,19 +41,13 @@ As read using ChromeVox
 > > "Submit, button."
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for button text (below 24px or bolded 18.66px) when in static and hover states.
-
-### Text Size
-* Button label is at least 18px
+* [Contrast ratio](https://webaim.org/resources/contrastchecker/) exceed 7:1 for text on button when in static and hover states.
 
 ### Converying Information
-* Button label underlines on hover to support those with visual impairments and who may not be able to detect colour opacity changes
+* Button label underlines on hover to support those who may not be able to detect colour opacity changes alone
 
 ### Target Areas
-* Button size is at least 44px in diameter
-
-### Keyboard Navigation
-* Button use is supported by tab navigation for use without a mouse
+* Button size is at least 44px in height and width
 
 ### Learn More About Accessibility in the Design System
 * Accessibility Contacts in Government
