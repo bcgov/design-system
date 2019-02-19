@@ -32,7 +32,8 @@ Text inputs allow users to enter a single line of text.
 * Do not break up text input for a single entry i.e three text inputs for a phone number
 
 ## Behaviour
-1. When focused the text box has a blue outline.
+1. Do not automatically advance to next input field. This feature is not common and can cause difficulties for novice users and those who rely on keyboard controls. Read more about [prioritizing efficiency over expectations](https://www.nngroup.com/articles/efficiency-vs-expectations/)
+2. When focused the text box has a blue outline.
 
 ## Accessibility
 In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
