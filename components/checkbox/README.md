@@ -49,6 +49,16 @@ As read using ChromeVox
 
 > > "This is an unselected checkbox, checkbox not checked."
 
+As read using MacOS Voiceover
+
+> > "Checked, this is a selected checkbox, checkmark, checkbox."
+
+> > "This is an unselected checkbox, unchecked, checkbox."
+
+> > "This is an unselected checkbox, unchecked, checkbox."
+
+> > "This is an unselected checkbox, unchecked, checkbox."
+
 ### Text Size
 * Label text is at least 18px
 
