@@ -40,6 +40,14 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 * External link icon included if link opens a new window or tab
 * Descriptive language for writing links. [Learn more about descriptive links](https://accessibility.oregonstate.edu/descriptivelinks)
 
+As read using ChromeVox
+
+> > "This is an example of a link to access your application, internal link."
+
+> > "Here is another example of a link to apply, internal link."
+
+> > "Link, internal link."
+
 ### Colour Contrast
 * Contrast ratios are at least 7:1 for link text
 
