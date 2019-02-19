@@ -28,7 +28,7 @@ Text inputs allow users to enter a single line of text.
 * The length of the text input should correspond to how much text the user is expected to write
 * Text inputs must have visible labels aligned above the text input they refer to. They should be short, direct, and written in sentence case.
 * Allow copy and paste functionality.
-* Do not use placeholder text as a replacement to lables as it dissapears once the user clicks on the field
+* Do not use placeholder text instead of labels. Screenreaders do not treat placeholder text as labels. Placeholder text dissapears which can confuse users if they forget the original prompt.
 * Do not break up text input for a single entry i.e three text inputs for a phone number
 
 ## Behaviour
@@ -38,8 +38,6 @@ Text inputs allow users to enter a single line of text.
 In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
 
 ### Screenreaders
-* Input field labels are used instead of placeholder text. Placeholder text dissapears after in focus which can cause issues remembering what is requested from the user
-
 As read using ChromeVox
 
 > > "First name."
@@ -50,15 +48,8 @@ As read using ChromeVox
 
 > > "Edit text."
 
-### Text Size
-* Label and input field text are at least 18px
-
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for text and input fields
-* Thick borders help better define the text input area
-
-### Keyboard Navigation
-* Text input supported by tab navigation for use without a mouse
+* Input field border width has been increased for improved visibility
 
 ### Learn More About Accessibility in the Design System
 * Accessibility Contacts in Government
