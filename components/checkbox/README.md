@@ -53,7 +53,7 @@ As read using ChromeVox
 * Checkbox size is larger than default settings to provide a larger target area
 
 ### Colour Contrast
-* When checked, the checkmark exceeds a [contrast ratio](https://webaim.org/articles/contrast/) of at least 7:1 with the blue fill
+* When checked, the checkmark exceeds a [contrast ratio](https://webaim.org/articles/contrast/) of at least 7:1 with the blue checkbox fill
 
 ### Learn More
 * Accessibility Contacts in Government
