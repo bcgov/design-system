@@ -60,7 +60,12 @@ This header matches the mandatory branding requirements of the BC Government. Co
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper ALT labels are included for BC Government logo. Reads "Go to the Government of British Columbia website"
+
+As read using ChromeVox
+
+> > "Go to the government of british columbia website link."
+
+> > "Hello British Columbia heading one."
 
 ### Colour Contrast
 * Contrast ratios are at least 4.5:1 for header title and 7:1 for BC Government logo
