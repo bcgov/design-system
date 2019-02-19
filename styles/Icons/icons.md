@@ -24,12 +24,10 @@ The design system supports using the Font Awesome icon library. Use these icons 
 | ![phone](./icon-svgs/phone-solid.svg) | Phone      | `<i class="fas fa-phone"></i>`|
 | ![external link](./icon-svgs/external-link-alt-solid.svg) | External Link      | `<i class="fas fa-external-link-alt"></i>`|
 | ![Upload](./icon-svgs/upload-solid.svg) | Upload      | `<i class="fas fa-upload"></i>`|
-| ![up arrow](./icon-svgs/arrow-up-solid.svg) | Up Arrow      | `<i class="fas fa-arrow-up"></i>`|
-| ![right arrow](./icon-svgs/arrow-right-solid.svg) | Right Arrow      | `<i class="fas fa-arrow-right"></i>`|
-| ![down arrow](./icon-svgs/arrow-down-solid.svg) | Down Arrow      | `<i class="fas fa-arrow-down"></i>`|
-| ![left arrow](./icon-svgs/arrow-left-solid.svg) | Left Arrow      | `<i class="fas fa-arrow-left"></i>`|
-
-
+| ![up arrow](./icon-svgs/chevron-up-solid.svg) | Up Arrow      | `<i class="fas fa-chevron-up"></i>`|
+| ![right arrow](./icon-svgs/chevron-right-solid.svg) | Right Arrow      | `<i class="fas fa-chevron-right"></i>`|
+| ![down arrow](./icon-svgs/chevron-down-solid.svg) | Down Arrow      | `<i class="fas fa-chevron-down"></i>`|
+| ![left arrow](./icon-svgs/chevron-left-solid.svg) | Left Arrow      | `<i class="fas fa-chevron-left"></i>`|
 
 ## Design Guidance
 *	Icons should be used sparingly throughout the application to provide clarity and reduce cognitive load on users.
