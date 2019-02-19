@@ -46,17 +46,8 @@ As read using ChromeVox
 
 > > "Contact Us. Link list item."
 
-### Text Size
-* Link text size is at least 18px
-
-### Colour Contrast
-* Contrast ratios are at least 7:1 for link titles
-
 ### Conveying Information
-* Links underlined on hover to convey they are clickable
-
-### Keyboard Navigation
-* Navigating through links supported with tab navigation for use without a mouse
+* Links underlined on hover to indicate they are clickable
 
 ### Learn More
 * Accessibility Contacts in Government
