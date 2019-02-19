@@ -34,7 +34,7 @@ Thick borders with generous spacing result in greater visual prominence. These f
 
 ## Behaviour
 
-1. Do not auto advance to next input field. This causes difficulties for users relying on keyboard controls.
+1. Do not automatically advance to next input field. This feature is not common and can cause difficulties for novice users and those who rely on keyboard controls. Read more about [prioritizing efficiency over expectations](https://www.nngroup.com/articles/efficiency-vs-expectations/)
 2. When in focus input field should outline with blue.
 3. Fields should have error controls such as not accepting more values than required, rejecting false values, and rejecting outlier values.
 
