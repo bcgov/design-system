@@ -19,21 +19,19 @@ Date input fields allow users to enter an already known date
 *	Users need to enter a date
 
 ## Rationale
-Using three separate text fields is the fastest way for users to enter dates. Dropdown options cause accessibility difficulties.
+Using three separate text fields is the fastest way for users to enter dates. Dropdown options and calendar pickers cause accessibility difficulties.
 
 ## Behaviour
 
 1. Do not auto advance to next input field. This causes difficulties for users relying on keyboard controls.
 2. When in focus input field should outline with blue.
 3. Fields should have error controls to prevent common user slips such as entering impossible values for dates.
+4. Do not use placeholder text instead of labels. Screenreaders do not treat placeholder text as labels. Placeholder text dissapears which can confuse users if they forget the original prompt.
 
 ## Accessibility
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Dropdown selections not used to ensure effcient readability for screenreaders
-* Input field labels are used instead of placeholder text. Placeholder text dissapears after in focus which can cause issues remembering what is requested from the user
-
 As read using ChromeVox
 
 > > "Day"
@@ -49,11 +47,7 @@ As read using ChromeVox
 > > "Edit text"
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for text and input fields
-* Increased input field border width
-
-### Keyboard Navigation
-* No auto advancing to next input field
+* Input field border width has been increased for improved visibility
 
 ### Learn More
 * Accessibility Contacts in Government
