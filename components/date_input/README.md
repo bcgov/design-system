@@ -33,7 +33,20 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 ### Screenreaders
 * Dropdown selections not used to ensure effcient readability for screenreaders
 * Input field labels are used instead of placeholder text. Placeholder text dissapears after in focus which can cause issues remembering what is requested from the user
-(more coming soon)
+
+As read using ChromeVox
+
+> > "Day"
+
+> > "Edit text"
+
+> > "Month"
+
+> > "Edit text"
+
+> > "Year"
+
+> > "Edit text"
 
 ### Colour Contrast
 * Contrast ratios are at least 7:1 for text and input fields
