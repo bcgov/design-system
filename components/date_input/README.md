@@ -23,7 +23,7 @@ Using three separate text fields is the fastest way for users to enter dates. Dr
 
 ## Behaviour
 
-1. Do not auto advance to next input field. This causes difficulties for users relying on keyboard controls.
+1. Do not automatically advance to next input field. This causes difficulties for users relying on keyboard controls.
 2. When in focus input field should outline with blue.
 3. Fields should have error controls to prevent common user slips such as entering impossible values for dates.
 4. Do not use placeholder text instead of labels. Screenreaders do not treat placeholder text as labels. Placeholder text dissapears which can confuse users if they forget the original prompt.
