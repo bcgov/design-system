@@ -56,16 +56,10 @@ If a radio button was selected
 > > "[Radio Label]. Radio button selected."
 
 ### Target Areas
-* Radio buttons have been increased in size from default settings
-
-### Text Size
-* Radio button labels are at least 18px
+* Radio button size is larger than default settings to provide a larger target area
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for radio labels and radio buttons
-
-### Keyboard Navigation
-* Radio button selection supported by tab navigation for use without a mouse
+* [Contrast ratio](https://webaim.org/articles/contrast/) exceeds 7:1 for radio button on white background
 
 ### Learn More
 * Accessibility Contacts in Government
