@@ -34,17 +34,17 @@ As read using ChromeVox
 
 > > "Footer List with six (6) items."
 
-> > "Home. Visited link list item."
+> > "Home. Link list item."
 
-> > "Disclaimer. Visited link list item."
+> > "Disclaimer. Link list item."
 
-> > "Privacy. Visited link list item."
+> > "Privacy. Link list item."
 
-> > "Accessibility. Visited link list item."
+> > "Accessibility. Link list item."
 
-> > "Copyright. Visited link list item."
+> > "Copyright. Link list item."
 
-> > "Contact Us. Visited link list item."
+> > "Contact Us. Link list item."
 
 ### Text Size
 * Link text size is at least 18px
