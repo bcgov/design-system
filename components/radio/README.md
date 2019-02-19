@@ -39,7 +39,21 @@ Based on research done by [Gov.UK](https://designnotes.blog.gov.uk/2016/11/30/we
 This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-(coming soon)
+As read on ChromeVox
+
+Note: To navigate through radio selections tab to the first list item and then use your arrow keys to move up and down the list.
+
+> > "One. Radio button unselected."
+
+> > "Two. Radio button unselected."
+
+> > "Three. Radio button unselected."
+
+> > "Four. Radio button unselected."
+
+If a radio button was selected
+
+> > "[Radio Label]. Radio button selected."
 
 ### Target Areas
 * Radio buttons have been increased in size from default settings
