@@ -58,18 +58,9 @@ As read using ChromeVox
 
 > > Hello. Link list item."
 
-### Text Size
-* Link text is at least 18px
-
 ### Converying Information
 * Hamburger icon not placed alone without a text label
-* Navbar links underline on hover to convey they are clickable
-
-### Colour Contrast
-* Contrast ratios are at least 7:1 for navbar link text (below 24px or bolded 18.66px) and 4.5:1 for header title text (24px or bolded 18.66px and above)
-
-### Keyboard Navigation
-* Nav bar links are supported by tab navigation for use without a mouse
+* Navbar links underline on hover to indicate they are clickable
 
 ### Learn More
 * Accessibility Contacts in Government
