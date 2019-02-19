@@ -43,7 +43,12 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 
 ### Screenreaders
 * Textarea field labels are used instead of placeholder text. Placeholder text dissapears after in focus which can cause issues remembering what is requested from the user 
-(more coming soon)
+
+As read using ChromeVox
+
+> > "Can you provide more detail?"
+
+> > "Textarea"
 
 ### Text Size
 * Label and textarea field text are at least 18px
