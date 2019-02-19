@@ -49,14 +49,11 @@ As read using ChromeVox
 > > "Link, internal link."
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for link text
+* [Contrast ratio](https://webaim.org/articles/contrast/) exceeds 7:1 for link text
 
 ### Conveying Information
 * Underline allows users to identify the link without relying on colour alone
-* Underline dissapears on hover signaling link is clickable
-
-### Keyboard Navigation
-* Links supported by tab navigation for use without a mouse
+* Underline dissapears on hover indicating link is clickable
 
 ### Learn More
 * Accessibility Contacts in Government
