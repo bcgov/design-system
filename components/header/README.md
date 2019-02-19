@@ -61,14 +61,13 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 
 ### Screenreaders
 
+* ALT text for BC Government logo reads "Go to the homepage of [current website]"
+
 As read using ChromeVox
 
 > > "Go to the government of british columbia website link."
 
 > > "Hello British Columbia heading one."
-
-### Colour Contrast
-* Contrast ratios are at least 4.5:1 for header title and 7:1 for BC Government logo
 
 ### Learn More
 * Accessibility Contacts in Government
