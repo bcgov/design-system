@@ -4,7 +4,7 @@ title: Typography
 status: draft
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
 
 # Typography
 -	Rationale behind Myriad Pro
