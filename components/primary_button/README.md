@@ -36,7 +36,9 @@ The rounded edges on the button help differentiate it from other layout items on
 In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
 
 ### Screenreaders
-(coming soon)
+As read using ChromeVox
+
+> > "Submit, button."
 
 ### Colour Contrast
 * Contrast ratios are at least 7:1 for button text (below 24px or bolded 18.66px) when in static and hover states.
