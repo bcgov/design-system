@@ -30,7 +30,21 @@ Footer Links:
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-(coming soon)
+As read using ChromeVox
+
+> > "Footer List with six (6) items."
+
+> > "Home. Visited link list item."
+
+> > "Disclaimer. Visited link list item."
+
+> > "Privacy. Visited link list item."
+
+> > "Accessibility. Visited link list item."
+
+> > "Copyright. Visited link list item."
+
+> > "Contact Us. Visited link list item."
 
 ### Text Size
 * Link text size is at least 18px
