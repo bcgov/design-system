@@ -48,6 +48,20 @@ As read using ChromeVox
 
 > > "Edit text"
 
+As read using MacOS Voiceover
+
+> > "Day"
+
+> > "Edit text, blank"
+
+> > "Month"
+
+> > "Edit text, blank"
+
+> > "Year"
+
+> > "Edit text, blank"
+
 ### Colour Contrast
 * Contrast ratios are at least 7:1 for text and input fields
 * Increased input field border width
