@@ -35,6 +35,11 @@ header .other {
   border-color: lightgrey; */
 }
 
+:focus {
+  outline: 4px solid #3B99FC;
+  outline-offset: 1px;
+}
+
 /*
   These are sample media queries only. Media queries are quite subjective
   but, in general, should be made for the three different classes of screen
