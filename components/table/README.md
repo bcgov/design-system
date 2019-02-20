@@ -31,14 +31,13 @@ Tables present tabular data in a grid which allows users to visually scan and un
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper caption and scope labels are included
-* Language tag has been set to English
+* Proper caption and scope labels are included for proper reading of the table's content
+
+### Text Size
+* Table header and cell content are at least 18px
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
-
-### Keyboard Navigation
-* Supports tab navigation for use without a mouse
+* Borders and text maintain contrast ratios of at least 7:1
 
 ### Learn More
 * Accessibility Contacts in Government

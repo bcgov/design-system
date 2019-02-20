@@ -28,17 +28,29 @@ Text inputs allow users to enter a single line of text.
 * The length of the text input should correspond to how much text the user is expected to write
 * Text inputs must have visible labels aligned above the text input they refer to. They should be short, direct, and written in sentence case.
 * Allow copy and paste functionality.
-* Do not use placeholder text as a replacement to lables as it dissapears once the user clicks on the field
+* Do not use placeholder text instead of labels. Screenreaders do not treat placeholder text as labels. Placeholder text dissapears which can confuse users if they forget the original prompt.
 * Do not break up text input for a single entry i.e three text inputs for a phone number
 
 ## Behaviour
-1. When focused the text box has a blue outline.
+1. Do not automatically advance to next input field. This feature is not common and can cause difficulties for novice users and those who rely on keyboard controls. Read more about [prioritizing efficiency over expectations](https://www.nngroup.com/articles/efficiency-vs-expectations/)
+2. When focused the text box has a blue outline.
 
 ## Accessibility
 In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
 
+### Screenreaders
+As read using ChromeVox
+
+> > "First name."
+
+> > "Edit text."
+
+> > "Last name."
+
+> > "Edit text."
+
 ### Colour Contrast
-* Thick borders help better define the text input area
+* Input field border width has been increased for improved visibility
 
 ### Learn More About Accessibility in the Design System
 * Accessibility Contacts in Government

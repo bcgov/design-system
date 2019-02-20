@@ -4,7 +4,7 @@ title: Icons
 status: draft
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
 > Last Updated: February 1, 2019
 
 # Icons
@@ -18,7 +18,16 @@ The design system supports using the Font Awesome icon library. Use these icons 
 
 | Icon      | Label | Class Name |
 | ----------- | ----------- | ----------- |
-| ![magnifying glass](icon-svgs/search.svg) | Search      | `<i class="fas fa-search"></i>`|
+| ![magnifying glass](./icon-svgs/search.svg) | Search      | `<i class="fas fa-search"></i>`|
+| ![bars](./icon-svgs/bars-solid.svg) | Menu Bars      | `<i class="fas fa-bars"></i>`|
+| ![envelope](./icon-svgs/envelope-solid.svg) | Envelope      | `<i class="fas fa-envelope"></i>`|
+| ![phone](./icon-svgs/phone-solid.svg) | Phone      | `<i class="fas fa-phone"></i>`|
+| ![external link](./icon-svgs/external-link-alt-solid.svg) | External Link      | `<i class="fas fa-external-link-alt"></i>`|
+| ![Upload](./icon-svgs/upload-solid.svg) | Upload      | `<i class="fas fa-upload"></i>`|
+| ![up arrow](./icon-svgs/chevron-up-solid.svg) | Up Arrow      | `<i class="fas fa-chevron-up"></i>`|
+| ![right arrow](./icon-svgs/chevron-right-solid.svg) | Right Arrow      | `<i class="fas fa-chevron-right"></i>`|
+| ![down arrow](./icon-svgs/chevron-down-solid.svg) | Down Arrow      | `<i class="fas fa-chevron-down"></i>`|
+| ![left arrow](./icon-svgs/chevron-left-solid.svg) | Left Arrow      | `<i class="fas fa-chevron-left"></i>`|
 
 ## Design Guidance
 *	Icons should be used sparingly throughout the application to provide clarity and reduce cognitive load on users.

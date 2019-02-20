@@ -25,7 +25,7 @@ A textarea allows users to input multiple lines of text
 ## Design Guidance
 * Open ended questions can often be difficult for users to answer. Consider breaking up the question into multiple single line [text inputs](../text_input/README.md).
 * Allow copy and paste functionality
-* Textarea must have labels, placeholder text is insufficient as it disappears once the user clicks on the field.
+* Do not use placeholder text instead of labels. Screenreaders do not treat placeholder text as labels. Placeholder text dissapears which can confuse users if they forget the original prompt.
 * Make sure the textarea size is proportional to the amount of text you expect the user input
 
 ## Rationale
@@ -34,7 +34,7 @@ Thick borders with generous spacing result in greater visual prominence. These f
 
 ## Behaviour
 
-1. Do not auto advance to next input field. This causes difficulties for users relying on keyboard controls.
+1. Do not automatically advance to next input field. This feature is not common and can cause difficulties for novice users and those who rely on keyboard controls. Read more about [prioritizing efficiency over expectations](https://www.nngroup.com/articles/efficiency-vs-expectations/)
 2. When in focus input field should outline with blue.
 3. Fields should have error controls such as not accepting more values than required, rejecting false values, and rejecting outlier values.
 
@@ -42,15 +42,14 @@ Thick borders with generous spacing result in greater visual prominence. These f
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper ALT labels are included
-* Language tag has been set to english
+As read using ChromeVox
+
+> > "Can you provide more detail?"
+
+> > "Textarea"
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
-* Thick boaders with high contrast result in greater visual prominance
-
-### Keyboard Navigation
-* Supports tab navigation for use without a mouse
+* Input field border width has been increased for improved visibility
 
 ### Learn More
 * Accessibility Contacts in Government
