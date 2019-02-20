@@ -74,7 +74,7 @@ The library is constantly updated and currently available in the following tools
     <title>Primary Button</title>
   </head>
   <body>
-    <button class="primarybutton" type="button" name="button">Submit</button>
+    <button class="BC-Gov-PrimaryButton" type="button" name="button">Submit</button>
   </body>
 </html>
 ```
@@ -82,22 +82,27 @@ The library is constantly updated and currently available in the following tools
 ### CSS
 ```css
 
-.primarybutton {
-    background-color: #003366; /* Green */
+.BC-Gov-PrimaryButton {
+    background-color: #003366;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     color: white;
     padding: 10px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    display: block;
+    font-size: 18px;
     font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
     cursor: pointer;
 }
 
-.primarybutton:hover {
+.BC-Gov-PrimaryButton:hover {
   text-decoration: underline;
-  opacity: 0.9;
+  opacity: 0.80;
+}
+
+:focus {
+  outline: 4px solid #3B99FC;
+  outline-offset: 1px;
 }
 ```

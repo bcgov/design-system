@@ -75,7 +75,7 @@ For fonts and a standard browser reset include the following links in the `<head
 
 ```html
 <!DOCTYPE html>
-<html style="height: 100%;">
+<html lang="en" style="height: 100%;">
 <head>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
@@ -146,5 +146,10 @@ footer ul li a {
 a:hover {
   color: #fff;
   text-decoration: underline;
+}
+
+:focus {
+  outline: 4px solid #3B99FC;
+  outline-offset: 1px;
 }
 ```

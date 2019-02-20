@@ -96,12 +96,12 @@ The library is constantly updated and currently available in the following tools
 ```css
 form {
   font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .text_input {
   font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .text_input {

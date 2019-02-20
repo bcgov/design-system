@@ -71,7 +71,7 @@ The library is constantly updated and currently available in the following tools
 ## Code
 ### HTML
 ```html
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -107,7 +107,7 @@ The library is constantly updated and currently available in the following tools
 
 ### CSS
 ```css
-  /* Customize the label (the container) */
+/* Customize the label (the container) */
 .checkbox {
   display: block;
   position: relative;
