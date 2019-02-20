@@ -19,7 +19,7 @@ Date input fields allow users to enter an already known date
 *	Users need to enter a date
 
 ## Rationale
-Using three separate text fields is the fastest way for users to enter dates. Dropdown options and calendar pickers cause accessibility difficulties.
+Using three separate text fields is the fastest way for users to enter dates. Dropdown options and calendar pickers cause accessibility difficulties as they force users to tab through all options before finding the input value they want.
 
 ## Behaviour
 
