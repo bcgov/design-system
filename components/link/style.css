@@ -15,3 +15,8 @@ a:hover {
 i {
   color: #1a5a96;
 }
+
+:focus {
+  outline: 4px solid #3B99FC;
+  outline-offset: 1px;
+}
