@@ -77,33 +77,33 @@ The library is constantly updated and currently available in the following tools
 ## Code
 ### HTML
 ```html
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <title>Radio Button</title>
+    <title>Sample Radio Button</title>
   </head>
   <body>
 
-    <label class="radio">One
-      <input type="radio" name="foo">
+    <label class="radio" for="radio_1">One
+      <input type="radio" name="foo" id="radio_1">
       <span class="dot"></span>
     </label>
 
-    <label class="radio">Two
-      <input type="radio" name="foo">
+    <label class="radio" for="radio_2">Two
+      <input type="radio" name="foo" id="radio_2">
       <span class="dot"></span>
     </label>
 
-    <label class="radio">Three
-      <input type="radio" name="foo">
+    <label class="radio" for="radio_3">Three
+      <input type="radio" name="foo" id="radio_3">
       <span class="dot"></span>
     </label>
 
-    <label class="radio">Four
-      <input type="radio" name="foo">
+    <label class="radio" for="radio_4">Four
+      <input type="radio" name="foo" id="radio_4">
       <span class="dot"></span>
     </label>
 
@@ -118,10 +118,10 @@ The library is constantly updated and currently available in the following tools
 .radio {
   display: block;
   position: relative;
-  padding-left: 25px;
+  padding-left: 30px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -141,10 +141,10 @@ The library is constantly updated and currently available in the following tools
 /* Create a custom radio button */
 .dot {
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 0;
-  height: 16px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
   border: 2px solid #003366;
 }
@@ -154,26 +154,28 @@ The library is constantly updated and currently available in the following tools
   background-color: #ffffff;
 }
 
+/* Custom checkbox has blue outline when in focus */
+.radio input:focus ~ .dot {
+  outline: 4px solid #3B99FC;
+  outline-offset: 1px;
+}
+
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .dot:after {
   content: "";
   position: absolute;
   display: none;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #003366;
+  transform: translate(-50%, -50%);
 }
 
 /* Show the indicator (dot/circle) when checked */
 .radio input:checked ~ .dot:after {
   display: block;
-}
-
-/* Style the indicator (dot/circle) */
-.radio .dot:after {
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #003366;
-  transform: translate(-50%, -50%);
 }
 ```
