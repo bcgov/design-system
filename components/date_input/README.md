@@ -105,36 +105,36 @@ The library is constantly updated and currently available in the following tools
   </body>
 </html>```
   
-### CSS
+### CSS 
 ```css
 form {
-  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
-  font-size: 16px;
-  display: flex;
+    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+    font-size: 16px;
+    display: flex;
 }
 
 .date_input_day, .date_input_month {
-  height: 25px;
-  border: 2px solid #38598a;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border-radius: 3px;
-  padding: 5px;
-  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
-  font-size: 16px;
-  width: 32px;
+    height: 25px;
+    border: 2px solid #38598a;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    padding: 5px;
+    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+    font-size: 16px;
+    width: 32px;
 }
 
 .date_input_year {
-  height: 25px;
-  border: 2px solid #38598a;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border-radius: 3px;
-  padding: 5px;
-  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
-  font-size: 16px;
-  width: 64px;
+    height: 25px;
+    border: 2px solid #38598a;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    padding: 5px;
+    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+    font-size: 16px;
+    width: 64px;
 }
 
 .date_input_day[type="text"]:focus {
@@ -153,10 +153,10 @@ form {
 }
 
 .text_label {
-  display: flex;
+    display: flex;
 }
 
 .date_field {
-  margin-right: 20px;
-} 
+    margin-right: 20px;
+}
 ```
