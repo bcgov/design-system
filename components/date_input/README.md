@@ -21,6 +21,8 @@ Date input fields allow users to enter an already known date
 ## Rationale
 Using three separate text fields is the fastest way for users to enter dates. Dropdown options and calendar pickers cause accessibility difficulties as they force users to tab through all options before finding the input value they want.
 
+Read more about [difficulties using a dropdown menu - gov.uk](https://designnotes.blog.gov.uk/2013/12/05/asking-for-a-date-of-birth/)
+
 ## Behaviour
 
 1. Do not automatically advance to next input field. This feature is not common and can cause difficulties for novice users and those who rely on keyboard controls. Read more about [prioritizing efficiency over expectations](https://www.nngroup.com/articles/efficiency-vs-expectations/)
@@ -29,7 +31,7 @@ Using three separate text fields is the fastest way for users to enter dates. Dr
 4. Do not use placeholder text instead of labels. Screenreaders do not treat placeholder text as labels. Placeholder text dissapears which can confuse users if they forget the original prompt.
 
 ## Accessibility
-This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
+This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
 As read using ChromeVox
