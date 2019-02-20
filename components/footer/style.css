@@ -37,3 +37,8 @@ a:hover {
   color: #fff;
   text-decoration: underline;
 }
+
+:focus {
+  outline: 4px solid #3B99FC;
+  outline-offset: 1px;
+}
