@@ -79,13 +79,15 @@ The library is constantly updated and currently available in the following tools
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>Sample Link</title>
   </head>
   <body>
 
-    <p>This is an example of a link to <a href="#">access your application</a>.</p>
-    <p>Here is another example of a link to <a href="#">apply</a>.</p>
-    <a href="#">Link</a>
+    <p>This is an internal example of a link to <a href="#">access your application</a>.</p>
+    <p>Here is another example of an internal link to <a href="#">apply</a>.</p>
+    <p>This is an example of an <a href="#">External Link</a> <i class="fas fa-external-link-alt"></i></p>
+    
 
   </body>
 </html>
@@ -96,7 +98,7 @@ The library is constantly updated and currently available in the following tools
 ```css
 body {
   font-family: 'Noto Sans', calibri, arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 a {
@@ -106,5 +108,9 @@ a {
 a:hover {
   text-decoration: none;
   color: blue;
+}
+
+i {
+  color: #1a5a96;
 }
 ```
