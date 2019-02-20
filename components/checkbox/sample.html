@@ -14,7 +14,7 @@
         margin-bottom: 12px;
         cursor: pointer;
         font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
-        font-size: 16px;
+        font-size: 18px;
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
@@ -33,10 +33,10 @@
       /* Create a custom checkbox */
       .checkmark {
         position: absolute;
-        top: 0;
+        top: 3px;
         left: 0;
-        height: 16px;
-        width: 16px;
+        height: 18px;
+        width: 18px;
         outline: 2px solid #003366;
       }
 
@@ -47,7 +47,7 @@
 
       /* Custom checkbox has blue outline when in focus */
       .checkbox input:focus ~ .checkmark {
-        outline: 5px solid #3B99FC;
+        outline: 4px solid #3B99FC;
       }
 
       /* Create the checkmark/indicator (hidden when not checked) */
@@ -65,6 +65,7 @@
       .checkbox input:checked ~ .checkmark:after {
         display: block;
       }
+
     </style>
   </head>
   <body>

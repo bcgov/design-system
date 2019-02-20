@@ -1,6 +1,6 @@
 body {
   font-family: 'Noto Sans', calibri, arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 a {
@@ -10,4 +10,13 @@ a {
 a:hover {
   text-decoration: none;
   color: blue;
+}
+
+i {
+  color: #1a5a96;
+}
+
+:focus {
+  outline: 4px solid #3B99FC;
+  outline-offset: 1px;
 }

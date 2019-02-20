@@ -35,10 +35,18 @@ header .other {
   border-color: lightgrey; */
 }
 
-:focus {
-  outline: 4px solid #3B99FC;
-  outline-offset: 1px;
+.Beta-PhaseBanner {
+  color: #fcba19;
+  margin-top: -1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
 }
+
+:focus {
+    outline: 4px solid #3B99FC;
+    outline-offset: 1px;
+  }
 
 /*
   These are sample media queries only. Media queries are quite subjective

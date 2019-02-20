@@ -5,18 +5,15 @@ status: Draft
 author: orinevares
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Primary Button
 Primary buttons allow users to carry out an important action on your service, such as Download or Submit.
 
-## Recommended
-
-## Last Updated:
-
 ## Visual Example
 
-<component-preview path="components/primary_button/sample.html"> </component-preview>
+<component-preview path="components/primary_button/sample.html" height="100px" width="800px"> </component-preview>
 
 ## Use This For
 * The most important actions you want users to take on your site.
@@ -38,11 +35,19 @@ The rounded edges on the button help differentiate it from other layout items on
 ## Accessibility
 In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
 
-### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text (below 24px or bolded 18.66px) when in static and hover states.
+### Screenreaders
+As read using ChromeVox
 
-### Underline on Hover
-* To support those with visual impairments and who may not be able to detect colour opacity changes
+> > "Submit, button."
+
+### Colour Contrast
+* [Contrast ratio](https://webaim.org/resources/contrastchecker/) exceed 7:1 for text on button when in static and hover states.
+
+### Converying Information
+* Button label underlines on hover to support those who may not be able to detect colour opacity changes alone
+
+### Target Areas
+* Button size is at least 44px in height and width
 
 ### Learn More About Accessibility in the Design System
 * Accessibility Contacts in Government
@@ -59,7 +64,7 @@ The library is constantly updated and currently available in the following tools
 
 ## Code
 ### HTML
-```HTML
+```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -69,29 +74,35 @@ The library is constantly updated and currently available in the following tools
     <title>Primary Button</title>
   </head>
   <body>
-    <button class="primarybutton" type="button" name="button">Submit</button>
+    <button class="BC-Gov-PrimaryButton" type="button" name="button">Submit</button>
   </body>
 </html>
 ```
 
 ### CSS
-```HTML
-.primarybutton {
-    background-color: #003366; /* Green */
+```css
+
+.BC-Gov-PrimaryButton {
+    background-color: #003366;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     color: white;
     padding: 10px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    display: block;
+    font-size: 18px;
     font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
     cursor: pointer;
 }
 
-.primarybutton:hover {
+.BC-Gov-PrimaryButton:hover {
   text-decoration: underline;
-  opacity: 0.9;
+  opacity: 0.80;
+}
+
+:focus {
+  outline: 4px solid #3B99FC;
+  outline-offset: 1px;
 }
 ```

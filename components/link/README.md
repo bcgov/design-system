@@ -5,19 +5,16 @@ status: Draft
 author: orinevares
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Links
 
 Links lead users to a different page.
 
-### Recommended
-
-## Last Updated:
-
 ## Visual Example
 
-<component-preview path="components/link/sample.html"> </component-preview>
+<component-preview path="components/link/sample.html" height="150px" width="800px"> </component-preview>
 
 ## Don't Use This when:
 * Users need to take an action on a page such as log-in or submit, use a [primary button](../primary_button/README.md) instead.
@@ -40,17 +37,23 @@ Links lead users to a different page.
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper ALT labels are included
-* Language tag has been set to english
-* Proper warning if link opens a new window
+* External link icon included if link opens a new window or tab
 * Descriptive language for writing links. [Learn more about descriptive links](https://accessibility.oregonstate.edu/descriptivelinks)
 
-### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
-* Users can identify the link without relying on colour alone
+As read using ChromeVox
 
-### Keyboard Navigation
-* Supports tab navigation for use without a mouse
+> > "This is an example of a link to access your application, internal link."
+
+> > "Here is another example of a link to apply, internal link."
+
+> > "Link, internal link."
+
+### Colour Contrast
+* [Contrast ratio](https://webaim.org/articles/contrast/) exceeds 7:1 for link text
+
+### Conveying Information
+* Underline allows users to identify the link without relying on colour alone
+* Underline dissapears on hover indicating link is clickable
 
 ### Learn More
 * Accessibility Contacts in Government
@@ -76,13 +79,15 @@ The library is constantly updated and currently available in the following tools
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>Sample Link</title>
   </head>
   <body>
 
-    <p>This is an example of a link to <a href="#">access your application</a>.</p>
-    <p>Here is another example of a link to <a href="#">apply</a>.</p>
-    <a href="#">Link</a>
+    <p>This is an internal example of a link to <a href="#">access your application</a>.</p>
+    <p>Here is another example of an internal link to <a href="#">apply</a>.</p>
+    <p>This is an example of an <a href="#">External Link</a> <i class="fas fa-external-link-alt"></i></p>
+    
 
   </body>
 </html>
@@ -93,7 +98,7 @@ The library is constantly updated and currently available in the following tools
 ```css
 body {
   font-family: 'Noto Sans', calibri, arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 a {
@@ -103,5 +108,9 @@ a {
 a:hover {
   text-decoration: none;
   color: blue;
+}
+
+i {
+  color: #1a5a96;
 }
 ```

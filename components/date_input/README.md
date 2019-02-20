@@ -4,44 +4,52 @@ title: Date Input
 status: Draft
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Date Input
 
 Date input fields allow users to enter an already known date
 
-### Recommended
-
-## Last Updated:
-
 ## Visual Example
 
-<component-preview path="components/date_input/sample.html"> </component-preview>
+<component-preview path="components/date_input/sample.html" height="100px" width="800px"> </component-preview>
 
 ## Use This When
 *	Users need to enter a date
 
 ## Rationale
-Using three separate text fields is the fastest way for users to enter dates. Dropdown options cause accessibility difficulties.
+Using three separate text fields is the fastest way for users to enter dates. Dropdown options and calendar pickers cause accessibility difficulties as they force users to tab through all options before finding the input value they want.
+
+Read more about [difficulties using a dropdown menu - gov.uk](https://designnotes.blog.gov.uk/2013/12/05/asking-for-a-date-of-birth/)
 
 ## Behaviour
 
-1. Do not auto advance to next input field. This causes difficulties for users relying on keyboard controls.
+1. Do not automatically advance to next input field. This feature is not common and can cause difficulties for novice users and those who rely on keyboard controls. Read more about [prioritizing efficiency over expectations](https://www.nngroup.com/articles/efficiency-vs-expectations/)
 2. When in focus input field should outline with blue.
 3. Fields should have error controls to prevent common user slips such as entering impossible values for dates.
+4. Do not use placeholder text instead of labels. Screenreaders do not treat placeholder text as labels. Placeholder text dissapears which can confuse users if they forget the original prompt.
 
 ## Accessibility
-This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
+This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper ALT labels are included
-* Language tag has been set to english
+As read using ChromeVox
+
+> > "Day"
+
+> > "Edit text"
+
+> > "Month"
+
+> > "Edit text"
+
+> > "Year"
+
+> > "Edit text"
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
-
-### Keyboard Navigation
-* Supports tab navigation for use without a mouse
+* Input field border width has been increased for improved visibility
 
 ### Learn More
 * Accessibility Contacts in Government
@@ -95,38 +103,40 @@ The library is constantly updated and currently available in the following tools
     </form>
 
   </body>
-</html>```
+</html>
+```
   
-### CSS
+### CSS 
+
 ```css
 form {
-  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
-  font-size: 16px;
-  display: flex;
+    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+    font-size: 16px;
+    display: flex;
 }
 
 .date_input_day, .date_input_month {
-  height: 25px;
-  border: 2px solid #38598a;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border-radius: 3px;
-  padding: 5px;
-  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
-  font-size: 16px;
-  width: 32px;
+    height: 25px;
+    border: 2px solid #38598a;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    padding: 5px;
+    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+    font-size: 16px;
+    width: 32px;
 }
 
 .date_input_year {
-  height: 25px;
-  border: 2px solid #38598a;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border-radius: 3px;
-  padding: 5px;
-  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
-  font-size: 16px;
-  width: 64px;
+    height: 25px;
+    border: 2px solid #38598a;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    padding: 5px;
+    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+    font-size: 16px;
+    width: 64px;
 }
 
 .date_input_day[type="text"]:focus {
@@ -145,9 +155,10 @@ form {
 }
 
 .text_label {
-  display: flex;
+    display: flex;
 }
 
 .date_field {
-  margin-right: 20px;
-}```
+    margin-right: 20px;
+}
+```

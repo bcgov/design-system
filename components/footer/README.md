@@ -5,18 +5,15 @@ status: Draft
 author: orinevares
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Footer
 Footers help people find what they need after scrolling to the bottom of a web page. They provide supplementary information such as copyright, contact information, social media links, and links to other pages within a website.
 
-## Recommended
-
-## Last Updated:
-
 ## Visual Example
 
-<component-preview path="components/footer/sample.html"> </component-preview>
+<component-preview path="components/footer/sample.html" height="200px" width="800px"> </component-preview>
 
 ## Requirements:
 * This footer must appear on all public-facing online B.C. Government content and services.
@@ -33,15 +30,24 @@ Footer Links:
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper ALT labels are included
-* Language tag has been set to english
-* Links are labelled properly
+As read using ChromeVox
 
-### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
+> > "Footer List with six (6) items."
 
-### Keyboard Navigation
-* Supports tab navigation for use without a mouse
+> > "Home. Link list item."
+
+> > "Disclaimer. Link list item."
+
+> > "Privacy. Link list item."
+
+> > "Accessibility. Link list item."
+
+> > "Copyright. Link list item."
+
+> > "Contact Us. Link list item."
+
+### Conveying Information
+* Links underlined on hover to indicate they are clickable
 
 ### Learn More
 * Accessibility Contacts in Government
@@ -69,7 +75,7 @@ For fonts and a standard browser reset include the following links in the `<head
 
 ```html
 <!DOCTYPE html>
-<html style="height: 100%;">
+<html lang="en" style="height: 100%;">
 <head>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
@@ -140,5 +146,10 @@ footer ul li a {
 a:hover {
   color: #fff;
   text-decoration: underline;
+}
+
+:focus {
+  outline: 4px solid #3B99FC;
+  outline-offset: 1px;
 }
 ```

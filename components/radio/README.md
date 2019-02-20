@@ -5,18 +5,15 @@ status: Draft
 author: orinevares
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Radio Button
 Radio buttons are a type of input that allow users to select only one option from a list.
 
-## Recommended
-
-## Last Updated:
-
 ## Visual Example
 
-<component-preview path="components/radio/sample.html"> </component-preview>
+<component-preview path="components/radio/sample.html" height="150px" width="800px"> </component-preview>
 
 ## Use This For
 * When users have to select only one option from a list
@@ -42,15 +39,27 @@ Based on research done by [Gov.UK](https://designnotes.blog.gov.uk/2016/11/30/we
 This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper ALT labels are included
-* Language tag has been set to english
-* List items and radio status are labelled properly
+As read on ChromeVox
+
+Note: To navigate through radio selections tab to the first list item and then use your arrow keys to move up and down the list.
+
+> > "One. Radio button unselected."
+
+> > "Two. Radio button unselected."
+
+> > "Three. Radio button unselected."
+
+> > "Four. Radio button unselected."
+
+If a radio button was selected
+
+> > "[Radio Label]. Radio button selected."
+
+### Target Areas
+* Radio button size is larger than default settings to provide a larger target area
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
-
-### Keyboard Navigation
-* Supports tab navigation for use without a mouse
+* [Contrast ratio](https://webaim.org/articles/contrast/) exceeds 7:1 for radio button on white background
 
 ### Learn More
 * Accessibility Contacts in Government
@@ -67,34 +76,34 @@ The library is constantly updated and currently available in the following tools
 
 ## Code
 ### HTML
-```HTML
-  <!DOCTYPE html>
+```html
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <title>Radio Button</title>
+    <title>Sample Radio Button</title>
   </head>
   <body>
 
-    <label class="radio">One
-      <input type="radio" name="foo">
+    <label class="radio" for="radio_1">One
+      <input type="radio" name="foo" id="radio_1">
       <span class="dot"></span>
     </label>
 
-    <label class="radio">Two
-      <input type="radio" name="foo">
+    <label class="radio" for="radio_2">Two
+      <input type="radio" name="foo" id="radio_2">
       <span class="dot"></span>
     </label>
 
-    <label class="radio">Three
-      <input type="radio" name="foo">
+    <label class="radio" for="radio_3">Three
+      <input type="radio" name="foo" id="radio_3">
       <span class="dot"></span>
     </label>
 
-    <label class="radio">Four
-      <input type="radio" name="foo">
+    <label class="radio" for="radio_4">Four
+      <input type="radio" name="foo" id="radio_4">
       <span class="dot"></span>
     </label>
 
@@ -103,15 +112,16 @@ The library is constantly updated and currently available in the following tools
 ```
  
 ### CSS
-```CSS
+```css
+
 /* Customize the label (the container) */
 .radio {
   display: block;
   position: relative;
-  padding-left: 25px;
+  padding-left: 30px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -131,10 +141,10 @@ The library is constantly updated and currently available in the following tools
 /* Create a custom radio button */
 .dot {
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 0;
-  height: 16px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
   border: 2px solid #003366;
 }
@@ -144,26 +154,28 @@ The library is constantly updated and currently available in the following tools
   background-color: #ffffff;
 }
 
+/* Custom checkbox has blue outline when in focus */
+.radio input:focus ~ .dot {
+  outline: 4px solid #3B99FC;
+  outline-offset: 1px;
+}
+
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .dot:after {
   content: "";
   position: absolute;
   display: none;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #003366;
+  transform: translate(-50%, -50%);
 }
 
 /* Show the indicator (dot/circle) when checked */
 .radio input:checked ~ .dot:after {
   display: block;
-}
-
-/* Style the indicator (dot/circle) */
-.radio .dot:after {
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #003366;
-  transform: translate(-50%, -50%);
 }
 ```

@@ -7,6 +7,7 @@ status: draft
 > Last Updated: February 20, 2019
 
 # Colour Palette
+
 The B.C. Government colour palette ensures all public facing government services have consistent branding.
 
 
@@ -111,3 +112,4 @@ The B.C. Government colour palette ensures all public facing government services
 You must make sure that the text and interactive elements on your page meet the [level AA of the Web Content Accessibility Guidelines (WCAG 2.0)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html#larger-scaledef).
 
 Check your colour combinations with a [colour contrast tool](https://webaim.org/resources/contrastchecker/).
+

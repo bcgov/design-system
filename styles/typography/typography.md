@@ -4,7 +4,7 @@ title: Typography
 status: draft
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
 
 # Typography
 -	Rationale behind Myriad Pro
@@ -38,7 +38,6 @@ Heading Three | ```<h3>``` | 20px #494949 | 500
 Heading Four | ```<h4>``` | 18px #494949 | 500
 
 ## Paragraphs
-
 ## Links
 
 ## Lists

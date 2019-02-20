@@ -5,18 +5,15 @@ status: Draft
 author: orinevares
 ---
 
-![Status](https://img.shields.io/badge/Component-Draft-orange.svg)
+![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: February 11, 2019
 
 # Checkbox
 Checkboxes are a type of input that allow users to select one or more options from a list.
 
-## Recommended
-
-## Last Updated:
-
 ## Visual Example
 
-<component-preview path="components/checkbox/sample.html"> </component-preview>
+<component-preview path="components/checkbox/sample.html" height="150px" width="800px"> </component-preview>
 
 ## Use This For:
 * Selecting multiple options from a given list
@@ -43,15 +40,20 @@ Based on [research](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-
 This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
-* Proper ALT labels are included
-* Language tag has been set to english
-* List items and checkbox status are labelled properly
+As read using ChromeVox
+> > "This is a selected checkbox, checkbox checked."
+
+> > "This is an unselected checkbox, checkbox not checked."
+
+> > "This is an unselected checkbox, checkbox not checked."
+
+> > "This is an unselected checkbox, checkbox not checked."
+
+### Target Areas
+* Checkbox size is larger than default settings to provide a larger target area
 
 ### Colour Contrast
-* Contrast ratios are at least 7:1 for normal text and 4.5:1 for large text
-
-### Keyboard Navigation
-* Supports tab navigation for use without a mouse
+* The checkbox and checkmark exceed a [contrast ratio](https://webaim.org/articles/contrast/) of 7:1
 
 ### Learn More
 * Accessibility Contacts in Government
@@ -69,8 +71,7 @@ The library is constantly updated and currently available in the following tools
 ## Code
 ### HTML
 ```html
-  
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -105,8 +106,8 @@ The library is constantly updated and currently available in the following tools
 ```
 
 ### CSS
-```CSS
-  /* Customize the label (the container) */
+```css
+/* Customize the label (the container) */
 .checkbox {
   display: block;
   position: relative;
