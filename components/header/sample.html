@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Sample Header</title>
     <style>
-        header {
+          header {
           background-color: #036;
           border-bottom: 2px solid #fcba19;
           padding: 0 65px 0 65px;
@@ -43,6 +43,11 @@
           border-color: lightgrey; */
         }
 
+        :focus {
+          outline: 4px solid #3B99FC;
+          outline-offset: 1px;
+        }
+
         /*
           These are sample media queries only. Media queries are quite subjective
           but, in general, should be made for the three different classes of screen
@@ -72,7 +77,9 @@
 <body>
   <header>
     <div class="banner">
-          <img src="https://developer.gov.bc.ca/static/BCID_H_rgb_rev-20eebe74aef7d92e02732a18b6aa6bbb.svg" alt="Go to the Government of British Columbia website" height="50px"/>
+        <a href="https://gov.bc.ca" alt="British Columbia">
+          <img src="../assets/images/logo-banner.svg" alt="Go to the Government of British Columbia website" />
+        </a>
         <h1>Hello British Columbia</h1>
     </div>
     <div class="other">
