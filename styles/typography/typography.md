@@ -51,13 +51,10 @@ p {
 ```
 
 ## Headings
-Iframe 
 
 Heading are sized based on a Minor Third (1.200) scale to achieve a harmonious increase of sizes. 
-<h1>Heading 1 - 2.074em (37.32px)</h1>
-<h2>Heading 2 - 1.728em (31.10px)</h2>
-<h3>Heading 3 - 1.44em (25.92px)</h3>
-<h4>Heading 4 - 1.2em (21.60px)</h4>
+
+<component-preview path="styles/typography/header-sample.html" height="150px" width="800px"> </component-preview>
 
 ## Accessibility
 Text Spacing
