@@ -40,7 +40,11 @@ body {
 Do not use the Google API to access Noto Sans because this violates B.C. data privacy legislation
 
 ## Paragraphs
-iframe example
+
+### Example
+
+<component-preview path="styles/typography/paragraph-sample.html" height="150px" width="800px"> </component-preview>
+
 The default paragraph font size is 18px (1em) with a line height of 1.6.
 
 ```css
