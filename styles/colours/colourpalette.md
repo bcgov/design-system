@@ -16,7 +16,7 @@ The B.C. Government colour palette ensures all public facing government services
   <div class="row">
     <div class="col-sm-4">
     <div class="card">
-        <div class="p-3 bg-primary text-white" style="background-color: #003366 !important; height: 150px">#003366</div>
+        <div class="p-3 bg-primary text-white" style="background-color:#003366 !important; height: 150px">#003366</div>
         <div class="card-body">
           <p class="mb-0">Used for <a href="https://developer.gov.bc.ca/Design-System/Header-Basic">header</a>, <a href="https://developer.gov.bc.ca/Design-System/Footer-Basic">footer</a>,
              <a href="https://developer.gov.bc.ca/Design-System/Primary-Button">primary button</a>, <a href="https://developer.gov.bc.ca/Design-System/Checkbox">checkbox</a>,
