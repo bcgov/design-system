@@ -32,7 +32,9 @@ Download and include the [Noto Sans font family](https://github.com/bcgov/design
 Font-stack
 
 ```css
-Font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+body {
+     Font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+}
 ```
 
 Do not use the Google API to access Noto Sans because this violates B.C. data privacy legislation
