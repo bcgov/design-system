@@ -31,7 +31,7 @@ Download and include the [Noto Sans font family](https://github.com/bcgov/design
 
 Font-stack
 
-```html
+```css
 Font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
 ```
 
