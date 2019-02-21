@@ -15,10 +15,11 @@ Good typography maintains a clear hierarchy of information and structures the co
 The BC Design System uses the Noto Sans typeface. Noto is an open sourced font family, developed by Google, which aims to support a variety of languages with a harmonious look and feel.
 
 Font weights included:
-•	Noto Sans Regular 400
-•	Noto Sans Italic 400
-•	Noto Sans Bold 700
-•	Noto Sans Bold Italic 700
+
+* Noto Sans Regular 400
+* Noto Sans Italic 400
+* Noto Sans Bold 700
+* Noto Sans Bold Italic 700
 
 
  ### Using Noto Sans
