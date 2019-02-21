@@ -16,7 +16,7 @@ The B.C. Government colour palette ensures all public facing government services
   <div class="row">
     <div class="col-sm-4">
     <div class="card">
-        <div class="p-3 bg-primary text-white" style="background-color:#003366 !important; height: 150px">#003366</div>
+        <div class="p-3 bg-primary text-white" style="background-color: #003366 !important; height: 150px">#003366</div>
         <div class="card-body">
           <p class="mb-0">Used for <a href="https://developer.gov.bc.ca/Design-System/Header-Basic">header</a>, <a href="https://developer.gov.bc.ca/Design-System/Footer-Basic">footer</a>,
              <a href="https://developer.gov.bc.ca/Design-System/Primary-Button">primary button</a>, <a href="https://developer.gov.bc.ca/Design-System/Checkbox">checkbox</a>,
@@ -26,7 +26,7 @@ The B.C. Government colour palette ensures all public facing government services
     </div>
     <div class="col-sm-4">
     <div class="card">
-        <div class="p-3 bg-primary text-black" style="background-color:#FCBA19 !important; height: 150px">#FCBA19</div>
+        <div class="p-3 bg-primary text-black" style="background-color: #FCBA19 !important; height: 150px">#FCBA19</div>
         <div class="card-body">
           <p class="mb-0">Used for <a href="https://developer.gov.bc.ca/Design-System/Header-Basic">header</a>, <a href="https://developer.gov.bc.ca/Design-System/Footer-Basic">footer</a>, beta status</p>
         </div>
@@ -40,7 +40,7 @@ The B.C. Government colour palette ensures all public facing government services
   <div class="row">
     <div class="col-sm-4">
     <div class="card">
-        <div class="p-3 bg-primary text-white" style="background-color:#494949 !important; height: 150px">#494949</div>
+        <div class="p-3 bg-primary text-white" style="background-color: #494949 !important; height: 150px">#494949</div>
         <div class="card-body">
           <p class="mb-0">Used for <a href="https://developer.gov.bc.ca/Design-System/Typography">headings and paragraphs</a></p>
         </div>
@@ -54,7 +54,7 @@ The B.C. Government colour palette ensures all public facing government services
   <div class="row">
     <div class="col-sm-4">
     <div class="card">
-        <div class="p-3 bg-primary text-white" style="background-color:#1A5A96 !important; height: 150px">#1A5A96</div>
+        <div class="p-3 bg-primary text-white" style="background-color: #1A5A96 !important; height: 150px">#1A5A96</div>
         <div class="card-body">
           <p class="mb-0">Used for <a href="https://developer.gov.bc.ca/Design-System/Links">links</a></p>
         </div>
@@ -69,7 +69,7 @@ The B.C. Government colour palette ensures all public facing government services
   <div class="row">
     <div class="col-sm-4">
     <div class="card">
-        <div class="p-3 bg-primary text-white" style="background-color:#38598A !important; height: 150px">#38598A</div>
+        <div class="p-3 bg-primary text-white" style="background-color: #38598A !important; height: 150px">#38598A</div>
         <div class="card-body">
           <p class="mb-0">Used for <a href="https://developer.gov.bc.ca/Design-System/Navigation-Bar-Basic">navigation bar</a></p>
         </div>
@@ -77,7 +77,7 @@ The B.C. Government colour palette ensures all public facing government services
     </div>
     <div class="col-sm-4">
     <div class="card">
-        <div class="p-3 bg-primary text-black" style="background-color:#F2F2F2 !important; height: 150px">#F2F2F2</div>
+        <div class="p-3 bg-primary text-black" style="background-color: #F2F2F2 !important; height: 150px">#F2F2F2</div>
         <div class="card-body">
           <p class="mb-0">Used for backgrounds</p>
         </div>
@@ -91,7 +91,7 @@ The B.C. Government colour palette ensures all public facing government services
   <div class="row">
     <div class="col-sm-4">
     <div class="card">
-        <div class="p-3 bg-primary text-white" style="background-color:#D8292F !important; height: 150px">#D8292F</div>
+        <div class="p-3 bg-primary text-white" style="background-color: #D8292F !important; height: 150px">#D8292F</div>
         <div class="card-body">
           <p class="mb-0">Used for error messages and indicators</p>
         </div>
@@ -99,7 +99,7 @@ The B.C. Government colour palette ensures all public facing government services
     </div>
     <div class="col-sm-4">
     <div class="card">
-        <div class="p-3 bg-primary text-white" style="background-color:#2E8540!important; height: 150px">#2E8540</div>
+        <div class="p-3 bg-primary text-white" style="background-color: #2E8540!important; height: 150px">#2E8540</div>
         <div class="card-body">
           <p class="mb-0">Used for success messages and indicators</p>
         </div>
