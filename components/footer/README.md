@@ -49,19 +49,6 @@ As read using ChromeVox
 ### Conveying Information
 * Links underlined on hover to indicate they are clickable
 
-### Learn More
-* Accessibility Contacts in Government
-* Online Accessibility Testing Tools
-* Accessibility Documentation
-
-## Prototype with This Component
-Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
-
-The library is constantly updated and currently available in the following tools:
-
-*	[Sketch](https://sketch.cloud/s/Q0bkG)
-* [UxPin and others]
-
 ## Code
 
 For fonts and a standard browser reset include the following links in the `<header>` of your page.
