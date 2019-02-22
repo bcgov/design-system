@@ -71,13 +71,6 @@ As read using ChromeVox
 
 ## Code
 
-For fonts and a standard browser reset include the following links in the `<head>` of your page.
-
-```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-```
-
 ### HTML
 
 ```html
