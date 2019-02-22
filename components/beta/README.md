@@ -7,14 +7,14 @@ author: dlevine
 
 ![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
 
+> Last Updated: February 22, 2019
+
 # Beta Status
 The beta status indicator tells users that the product is still being worked on.
 
 ## Visual Example
 
 <component-preview path="components/beta/sample.html" height="100px" width="800px"> </component-preview>
-
-![Beta status indicator](./images/beta-status-bc.png)
 
 ## Use This For:
 * Indicating your service is still being worked on and things may change.
@@ -32,7 +32,7 @@ Discuss this design on the [Beta Status Github Issue](https://github.com/bcgov/d
 1. Additional research is being done for users to interact or understand the meaning of Beta.
 
 ## Accessibility
-This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
+This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screen readers
 (coming soon)
@@ -120,6 +120,19 @@ header .other {
   border-width: 1px;
   border-color: lightgrey; */
 }
+
+.Beta-PhaseBanner {
+  color: #fcba19;
+  margin-top: -1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+:focus {
+    outline: 4px solid #3B99FC;
+    outline-offset: 1px;
+  }
 
 /*
   These are sample media queries only. Media queries are quite subjective
