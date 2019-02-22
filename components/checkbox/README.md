@@ -37,7 +37,7 @@ Based on [research](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-
 2. Do not preselect options. This results in perceived bias
 
 ## Accessibility
-This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
+This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
 As read using ChromeVox
