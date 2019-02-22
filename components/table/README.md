@@ -39,20 +39,6 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 ### Colour Contrast
 * Borders and text maintain contrast ratios of at least 7:1
 
-### Learn More
-* Accessibility Contacts in Government
-* Online Accessibility Testing Tools
-* Accessibility Documentation
-
-## Prototype with This Component
-
-Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
-
-The library is constantly updated and currently available in the following tools:
-
-*	[Sketch](https://sketch.cloud/s/Q0bkG)
-* 	[UxPin and others]
-
 ## Code
 
 ### HTML
