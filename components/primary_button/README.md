@@ -43,7 +43,7 @@ As read using ChromeVox
 ### Colour Contrast
 * [Contrast ratio](https://webaim.org/resources/contrastchecker/) exceed 7:1 for text on button when in static and hover states.
 
-### Converying Information
+### Conveying Information
 * Button label underlines on hover to support those who may not be able to detect colour opacity changes alone
 
 ### Target Areas
