@@ -28,7 +28,7 @@ Tables present tabular data in a grid which allows users to visually scan and un
 * Minimal visual styling helps surface the contents of the table more easily.
 
 ## Accessibility
-This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
+This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
 * Proper caption and scope labels are included for proper reading of the table's content
