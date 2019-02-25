@@ -41,13 +41,13 @@ In addition to [fundamental accessibility]() requirements, this component meets 
 ### Screenreaders
 As read using ChromeVox
 
-> > "First name."
+> *"First name."*
 
-> > "Edit text."
+> *"Edit text."*
 
-> > "Last name."
+> *"Last name."*
 
-> > "Edit text."
+> *"Edit text."*
 
 ### Colour Contrast
 * Input field border width has been increased for improved visibility
