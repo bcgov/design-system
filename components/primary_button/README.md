@@ -38,7 +38,7 @@ In addition to [fundamental accessibility]() requirements, this component meets 
 ### Screenreaders
 As read using ChromeVox
 
-> > "Submit, button."
+> *"Submit, button."*
 
 ### Colour Contrast
 * [Contrast ratio](https://webaim.org/resources/contrastchecker/) exceed 7:1 for text on button when in static and hover states.
