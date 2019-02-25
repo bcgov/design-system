@@ -43,17 +43,17 @@ As read on ChromeVox
 
 Note: To navigate through radio selections tab to the first list item and then use your arrow keys to move up and down the list.
 
-> > "One. Radio button unselected."
+> *"One. Radio button unselected."*
 
-> > "Two. Radio button unselected."
+> *"Two. Radio button unselected."*
 
-> > "Three. Radio button unselected."
+> *"Three. Radio button unselected."*
 
-> > "Four. Radio button unselected."
+> *"Four. Radio button unselected."*
 
 If a radio button was selected
 
-> > "[Radio Label]. Radio button selected."
+> *"[Radio Label]. Radio button selected."*
 
 ### Target Areas
 * Radio button size is larger than default settings to provide a larger target area
