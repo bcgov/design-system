@@ -44,9 +44,9 @@ This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/W
 ### Screenreaders
 As read using ChromeVox
 
-> > "Can you provide more detail?"
+> *"Can you provide more detail?"*
 
-> > "Textarea"
+> *"Textarea"*
 
 ### Colour Contrast
 * Input field border width has been increased for improved visibility
