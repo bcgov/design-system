@@ -40,23 +40,23 @@ This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/W
 ### Screenreaders
 As read using ChromeVox
 
-> > "Go to the Government of British Columbia website, link."
+> "Go to the Government of British Columbia website, link."
 
-> > "Hello British Columbia, link."
+> "Hello British Columbia, link."
 
-> > "Navigation list with six items."
+> "Navigation list with six items."
 
-> > "Home. Link list item."
+> "Link 1. Link list item."
 
-> > "Some thing. Link list item."
+> "Link 2. Link list item."
 
-> > "Another thing. Link list item."
+> "Link 3. Link list item."
 
-> > "Somewhere. Link list item."
+> "Link 4. Link list item."
 
-> > Elsewhere. Link list item."
+> "Link 5. Link list item."
 
-> > Hello. Link list item."
+> "Link 6. Link list item."
 
 ### Converying Information
 * Hamburger icon not placed alone without a text label
