@@ -32,19 +32,19 @@ This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/W
 ### Screenreaders
 As read using ChromeVox
 
-> > "Footer List with six (6) items."
+> *"Footer List with six (6) items."*
 
-> > "Home. Link list item."
+> *"Home. Link list item."*
 
-> > "Disclaimer. Link list item."
+> *"Disclaimer. Link list item."*
 
-> > "Privacy. Link list item."
+> *"Privacy. Link list item."*
 
-> > "Accessibility. Link list item."
+> *"Accessibility. Link list item."*
 
-> > "Copyright. Link list item."
+> *"Copyright. Link list item."*
 
-> > "Contact Us. Link list item."
+> *"Contact Us. Link list item."*
 
 ### Conveying Information
 * Links underlined on hover to indicate they are clickable
