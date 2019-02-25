@@ -41,13 +41,13 @@ This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/W
 
 ### Screenreaders
 As read using ChromeVox
-> > "This is a selected checkbox, checkbox checked."
+ > "This is a selected checkbox, checkbox checked."
 
-> > "This is an unselected checkbox, checkbox not checked."
+ > *"This is an unselected checkbox, checkbox not checked."*
 
-> > "This is an unselected checkbox, checkbox not checked."
+ > *"This is an unselected checkbox, checkbox not checked."*
 
-> > "This is an unselected checkbox, checkbox not checked."
+ > *"This is an unselected checkbox, checkbox not checked."*
 
 ### Target Areas
 * Checkbox size is larger than default settings to provide a larger target area
