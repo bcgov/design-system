@@ -36,17 +36,17 @@ This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/W
 ### Screenreaders
 As read using ChromeVox
 
-> > "Day"
+> *"Day"*
 
-> > "Edit text"
+> *"Edit text"*
 
-> > "Month"
+> *"Month"*
 
-> > "Edit text"
+> *"Edit text"*
 
-> > "Year"
+> *"Year"*
 
-> > "Edit text"
+> *"Edit text"*
 
 ### Colour Contrast
 * Input field border width has been increased for improved visibility
