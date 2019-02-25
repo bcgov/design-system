@@ -65,9 +65,9 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 
 As read using ChromeVox
 
-> > "Go to the government of british columbia website link."
+> *"Go to the government of british columbia website link."*
 
-> > "Hello British Columbia heading one."
+> *"Hello British Columbia heading one."*
 
 ## Code
 
