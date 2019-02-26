@@ -16,10 +16,10 @@ Radio buttons are a type of input that allow users to select only one option fro
 <component-preview path="components/radio/sample.html" height="150px" width="800px"> </component-preview>
 
 ## Use This For
-* When users have to select only one option from a list
+* A user can only select one option from a list
 
 ## Don't Use This when
-*	A user can select more than one option from a list, use a [checkbox](../checkbox.md) instead
+*	A user can select more than one option from a list. In this case, use a [checkbox](../checkbox.md)
 
 ## Design Guidance
 *	Users cannot go back to having no option selected once they have selected one. If applicable, you should include a ‘None of the above’ or I don’t know option’
