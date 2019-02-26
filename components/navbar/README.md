@@ -40,40 +40,27 @@ This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/W
 ### Screenreaders
 As read using ChromeVox
 
-> > "Go to the Government of British Columbia website, link."
+> "Go to the Government of British Columbia website, link."
 
-> > "Hello British Columbia, link."
+> "Hello British Columbia, link."
 
-> > "Navigation list with six items."
+> "Navigation list with six items."
 
-> > "Home. Link list item."
+> "Link 1. Link list item."
 
-> > "Some thing. Link list item."
+> "Link 2. Link list item."
 
-> > "Another thing. Link list item."
+> "Link 3. Link list item."
 
-> > "Somewhere. Link list item."
+> "Link 4. Link list item."
 
-> > Elsewhere. Link list item."
+> "Link 5. Link list item."
 
-> > Hello. Link list item."
+> "Link 6. Link list item."
 
 ### Converying Information
 * Hamburger icon not placed alone without a text label
 * Navbar links underline on hover to indicate they are clickable
-
-### Learn More
-* Accessibility Contacts in Government
-* Online Accessibility Testing Tools
-* Accessibility Documentation
-
-## Prototype with This Component
-Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
-
-The library is constantly updated and currently available in the following tools:
-
-*	[Sketch](https://sketch.cloud/s/Q0bkG)
-* [UxPin and others]
 
 ## Code
 ### HTML
@@ -82,7 +69,7 @@ This component builds on the `header` component; See `sample.html` for a working
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
@@ -102,7 +89,7 @@ This component builds on the `header` component; See `sample.html` for a working
   <header>
     <div class="banner">
         <a href="https://gov.bc.ca" alt="Go to the Government of British Columbia website">
-          <img src="../assets/images/logo-banner.png" alt="Go to the Government of British Columbia website" />
+          <img src="../assets/images/logo-banner.svg" alt="Go to the Government of British Columbia website" />
         </a>
         <h1>Hello British Columbia</h1>
     </div>
@@ -119,34 +106,18 @@ This component builds on the `header` component; See `sample.html` for a working
   <nav class="navigation-main" id="navbar">
     <div class="container">
       <ul>
-        <li><a href="sample.html" class="active">Home</a></li>
-        <li><a href=".">Some Thing</a></li>
-        <li><a href=".">Another Thing</a></li>
-        <li><a href=".">Somewhere</a></li>
-        <li><a href=".">Elsewhere</a></li>
-        <li><a href=".">Hello</a></li>
+        <li><a href="sample.html" class="active">Link 1</a></li>
+        <li><a href=".">Link 2</a></li>
+        <li><a href=".">Link 3</a></li>
+        <li><a href=".">Link 4</a></li>
+        <li><a href=".">Link 5</a></li>
+        <li><a href=".">Link 6</a></li>
       </ul>
     </div>
   </nav>
-  <p style="margin-left: 25px; margin-right: 25px;">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis elementum mauris. Pellentesque non velit id quam placerat laoreet. Ut tempus velit eget lorem maximus, quis hendrerit erat vestibulum. Nulla blandit, enim id pulvinar lacinia, augue magna pretium sapien, quis venenatis ligula tellus a enim. Aenean elementum sagittis dolor, eget blandit ante porttitor sed. Nunc maximus lorem et tellus tincidunt, eget tincidunt libero hendrerit. Suspendisse in feugiat magna, sit amet eleifend lacus. In mi lacus, viverra ac mi ac, tincidunt vestibulum mi. Donec in tempor urna, a pharetra lectus. Pellentesque a vestibulum diam. Etiam ullamcorper viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla vel venenatis velit, vel dictum sapien. Donec sed ante malesuada, sagittis metus vitae, placerat metus.
-  </p><p style="margin-left: 25px; margin-right: 25px;">
-    Mauris lacinia, mauris in molestie interdum, sapien lacus cursus libero, ut scelerisque arcu dui id orci. Morbi ac eros id augue consequat lacinia in id lorem. Nam sed est vitae sapien lacinia facilisis. Vestibulum euismod, dui eu fringilla consectetur, ante nisl dapibus risus, id posuere erat mi rutrum urna. Cras erat tortor, congue quis volutpat ac, pellentesque a sapien. Sed pretium sapien ac lobortis lacinia. Morbi dui risus, suscipit congue fringilla vel, interdum pulvinar arcu. Pellentesque et tellus vel mauris gravida commodo eu ut dui. Donec risus magna, feugiat nec ex in, sagittis commodo mauris.
-  </p><p style="margin-left: 25px; margin-right: 25px;">
-    Nunc in nisi pretium, cursus ante a, commodo nibh. Nullam sed dignissim augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis non laoreet justo. Nunc tempus neque eget condimentum sagittis. Nunc lacinia nisi nibh, eget euismod lectus viverra ac. Vivamus rutrum mi id nisi dictum convallis.
-  </p><p style="margin-left: 25px; margin-right: 25px;">
-    Suspendisse convallis odio sed risus vehicula auctor. Integer et vulputate mi. Donec dictum velit ut mollis ultricies. Fusce semper, nisi vel sagittis interdum, lorem libero tristique magna, eget hendrerit ipsum elit sed justo. Aliquam accumsan tempus arcu ut rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada est at risus fermentum, ac molestie quam porta. Vivamus eros lorem, facilisis at ornare sit amet, placerat in sapien. Aenean ut tellus non nunc aliquet finibus et at ligula. In laoreet euismod purus, lacinia feugiat nibh porta eu.
-  </p><p style="margin-left: 25px; margin-right: 25px;">
-    Donec venenatis mattis erat ut semper. Aenean id nisl accumsan, tempus enim quis, accumsan lectus. Vivamus rutrum egestas quam, ut lobortis nibh tristique id. Etiam gravida at metus quis egestas. Curabitur ultricies a ipsum ut lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus suscipit metus urna, ut auctor risus imperdiet vitae. Etiam in mollis est. Nulla ultricies lectus nisl, vitae fringilla nisl venenatis non. Vivamus tincidunt cursus purus et facilisis.
-  </p><p style="margin-left: 25px; margin-right: 25px;">
-    Donec ac dui ex. Nulla est leo, vehicula vel hendrerit vel, ornare id erat. Mauris eget dignissim erat, sit amet pretium enim. Donec tincidunt dolor vitae libero ullamcorper molestie. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec lacinia hendrerit dapibus. Maecenas mollis lorem sit amet facilisis feugiat. Sed faucibus lectus et blandit dictum. Mauris augue purus, placerat quis fermentum et, ullamcorper sit amet felis. Vivamus at ultricies odio, ac condimentum diam. Praesent faucibus quis tellus et maximus.
-  </p><p style="margin-left: 25px; margin-right: 25px;">
-    Donec accumsan tincidunt neque, non interdum eros venenatis eget. Phasellus condimentum convallis purus, a gravida diam dignissim nec. Nulla convallis magna ut ligula luctus, at ultricies nisi lacinia. Nullam ornare sodales lobortis. Suspendisse mattis commodo felis, id tempus risus dapibus ac. Phasellus non hendrerit dolor. Integer ac arcu at elit tempus condimentum non sed metus. Nunc egestas eros non imperdiet accumsan. Sed molestie tortor in imperdiet ornare. Vivamus malesuada blandit augue, ut euismod nisi mollis molestie. Phasellus porttitor ex non nulla commodo, sit amet efficitur nisi lacinia.
-  </p><p style="margin-left: 25px; margin-right: 25px;">
-    Sed consectetur egestas lectus sed hendrerit. Donec molestie orci quis erat scelerisque aliquet. Sed auctor maximus feugiat. Proin mollis, risus at dapibus dapibus, dolor metus volutpat sapien, sed condimentum magna turpis non purus. Pellentesque auctor felis eget rhoncus pellentesque. Sed neque enim, imperdiet vitae egestas placerat, commodo sed mauris. Etiam egestas lacus ac ex commodo laoreet. Suspendisse sed augue vitae ex elementum hendrerit. Pellentesque ullamcorper facilisis augue, ut lacinia ipsum consectetur sit amet. Aenean eget diam ac neque scelerisque placerat.
-  </p>
 
   <script>
+      <!-- This is a sample implementation and may vary depending on the front end framework/techstack being used. -->
     function setupSampleMenuControl() {
       const useCapture = false;
       const show = elem => elem.style.display = 'block';
@@ -295,7 +266,12 @@ header {
   .navigation-main .container ul .active {
     text-decoration: underline;
     font-weight: bold;
-  } 
+  }
+
+  :focus {
+    outline: 4px solid #3B99FC;
+    outline-offset: 1px;
+  }
 
   /*
     These are sample media queries only. Media queries are quite subjective

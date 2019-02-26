@@ -41,29 +41,16 @@ In addition to [fundamental accessibility]() requirements, this component meets 
 ### Screenreaders
 As read using ChromeVox
 
-> > "First name."
+> *"First name."*
 
-> > "Edit text."
+> *"Edit text."*
 
-> > "Last name."
+> *"Last name."*
 
-> > "Edit text."
+> *"Edit text."*
 
 ### Colour Contrast
 * Input field border width has been increased for improved visibility
-
-### Learn More About Accessibility in the Design System
-* Accessibility Contacts in Government
-* Online Accessibility Testing Tools
-* Accessibility Documentation
-
-## Prototype with This Component
-Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
-
-The library is constantly updated and currently available in the following tools:
-
-* [Sketch](https://sketch.cloud/s/Q0bkG)
-* [UxPin and others]
 
 ## Code
 ### HTML

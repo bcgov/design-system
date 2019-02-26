@@ -27,49 +27,29 @@ Footer Links:
 * All footer links should stack on one another
 
 ## Accessibility
-This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
+This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
 As read using ChromeVox
 
-> > "Footer List with six (6) items."
+> *"Footer List with six (6) items."*
 
-> > "Home. Link list item."
+> *"Home. Link list item."*
 
-> > "Disclaimer. Link list item."
+> *"Disclaimer. Link list item."*
 
-> > "Privacy. Link list item."
+> *"Privacy. Link list item."*
 
-> > "Accessibility. Link list item."
+> *"Accessibility. Link list item."*
 
-> > "Copyright. Link list item."
+> *"Copyright. Link list item."*
 
-> > "Contact Us. Link list item."
+> *"Contact Us. Link list item."*
 
 ### Conveying Information
 * Links underlined on hover to indicate they are clickable
 
-### Learn More
-* Accessibility Contacts in Government
-* Online Accessibility Testing Tools
-* Accessibility Documentation
-
-## Prototype with This Component
-Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
-
-The library is constantly updated and currently available in the following tools:
-
-*	[Sketch](https://sketch.cloud/s/Q0bkG)
-* [UxPin and others]
-
 ## Code
-
-For fonts and a standard browser reset include the following links in the `<header>` of your page.
-
-```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
-```
 
 ### HTML
 

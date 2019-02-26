@@ -39,30 +39,17 @@ Thick borders with generous spacing result in greater visual prominence. These f
 3. Fields should have error controls such as not accepting more values than required, rejecting false values, and rejecting outlier values.
 
 ## Accessibility
-This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
+This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
 As read using ChromeVox
 
-> > "Can you provide more detail?"
+> *"Can you provide more detail?"*
 
-> > "Textarea"
+> *"Textarea"*
 
 ### Colour Contrast
 * Input field border width has been increased for improved visibility
-
-### Learn More
-* Accessibility Contacts in Government
-* Online Accessibility Testing Tools
-* Accessibility Documentation
-
-## Prototype with This Component
-Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
-
-The library is constantly updated and currently available in the following tools:
-
-*	[Sketch](https://sketch.cloud/s/Q0bkG)
-* [UxPin and others]
 
 ## Code
 

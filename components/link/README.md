@@ -42,11 +42,11 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 
 As read using ChromeVox
 
-> > "This is an example of a link to access your application, internal link."
+> *"This is an example of a link to access your application, internal link."*
 
-> > "Here is another example of a link to apply, internal link."
+> *"Here is another example of a link to apply, internal link."*
 
-> > "Link, internal link."
+> *"Link, internal link."*
 
 ### Colour Contrast
 * [Contrast ratio](https://webaim.org/articles/contrast/) exceeds 7:1 for link text
@@ -54,19 +54,6 @@ As read using ChromeVox
 ### Conveying Information
 * Underline allows users to identify the link without relying on colour alone
 * Underline dissapears on hover indicating link is clickable
-
-### Learn More
-* Accessibility Contacts in Government
-* Online Accessibility Testing Tools
-* Accessibility Documentation
-
-## Prototype with This Component
-Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
-
-The library is constantly updated and currently available in the following tools:
-
-*	[Sketch](https://sketch.cloud/s/Q0bkG)
-* [UxPin and others]
 
 ## Code
 

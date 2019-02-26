@@ -37,36 +37,24 @@ Based on [research](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-
 2. Do not preselect options. This results in perceived bias
 
 ## Accessibility
-This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
+This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
 
 ### Screenreaders
 As read using ChromeVox
-> > "This is a selected checkbox, checkbox checked."
 
-> > "This is an unselected checkbox, checkbox not checked."
+ > *"This is a selected checkbox, checkbox checked."*
 
-> > "This is an unselected checkbox, checkbox not checked."
+ > *"This is an unselected checkbox, checkbox not checked."*
 
-> > "This is an unselected checkbox, checkbox not checked."
+ > *"This is an unselected checkbox, checkbox not checked."*
+
+ > *"This is an unselected checkbox, checkbox not checked."*
 
 ### Target Areas
 * Checkbox size is larger than default settings to provide a larger target area
 
 ### Colour Contrast
 * The checkbox and checkmark exceed a [contrast ratio](https://webaim.org/articles/contrast/) of 7:1
-
-### Learn More
-* Accessibility Contacts in Government
-* Online Accessibility Testing Tools
-* Accessibility Documentation
-
-## Prototype with This Component
-Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
-
-The library is constantly updated and currently available in the following tools:
-
-*	[Sketch](https://sketch.cloud/s/Q0bkG)
-* [UxPin and others]
 
 ## Code
 ### HTML

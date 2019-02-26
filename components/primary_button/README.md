@@ -38,7 +38,7 @@ In addition to [fundamental accessibility]() requirements, this component meets 
 ### Screenreaders
 As read using ChromeVox
 
-> > "Submit, button."
+> *"Submit, button."*
 
 ### Colour Contrast
 * [Contrast ratio](https://webaim.org/resources/contrastchecker/) exceed 7:1 for text on button when in static and hover states.
@@ -48,19 +48,6 @@ As read using ChromeVox
 
 ### Target Areas
 * Button size is at least 44px in height and width
-
-### Learn More About Accessibility in the Design System
-* Accessibility Contacts in Government
-* Online Accessibility Testing Tools
-* Accessibility Documentation
-
-## Prototype with This Component
-Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
-
-The library is constantly updated and currently available in the following tools:
-
-*	[Sketch](https://sketch.cloud/s/Q0bkG)
-* [UxPin and others]
 
 ## Code
 ### HTML

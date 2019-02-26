@@ -65,31 +65,11 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 
 As read using ChromeVox
 
-> > "Go to the government of british columbia website link."
+> *"Go to the government of british columbia website link."*
 
-> > "Hello British Columbia heading one."
-
-### Learn More
-* Accessibility Contacts in Government
-* Online Accessibility Testing Tools
-* Accessibility Documentation
-
-## Prototype with This Component
-Download and use the B.C. government Design System library to help build prototypes and wireframes for your website or application.
-
-The library is constantly updated and currently available in the following tools:
-
-*	[Sketch](https://sketch.cloud/s/Q0bkG)
-* [UxPin and others]
+> *"Hello British Columbia heading one."*
 
 ## Code
-
-For fonts and a standard browser reset include the following links in the `<head>` of your page.
-
-```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-```
 
 ### HTML
 
