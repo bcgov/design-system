@@ -22,10 +22,10 @@ Radio buttons are a type of input that allow users to select only one option fro
 *	A user can select more than one option from a list. In this case, use a [checkbox](../checkbox.md)
 
 ## Design Guidance
-*	Users cannot go back to having no option selected once they have selected one. If applicable, you should include a ‘None of the above’ or I don’t know option’
-*	Do not assume users will know how many options they can select. If needed, add a hint such as “Select one option” 
-*	In some cases, it can be helpful to order the selection items based on user needs. For example, place the most likely responses at the top
-*	Options should be listed vertically due to being easier to read and associate the correct radio button and label
+* Once a user has selected an option, they cannot return to having no options selected. If applicable, include a "None of the above" or "I don't know" option.
+*	Do not assume a user will know how many options they can select. If needed, include a hint like "Select one option." 
+*	It can be helpful to order the options based on user needs. For example, place the most likely responses at the top
+*	Options should be listed vertically. This results with the best readability, and helps users with the correct association between the radio button and it's label.
 
 ## Rationale
 Our radio buttons are larger than most browser defaults to allow for greater visibility and larger target areas for touchscreen devices. Research has shown that users resort to only clicking the radio and not the associated text.
