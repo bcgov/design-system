@@ -24,7 +24,8 @@ Primary buttons allow users to carry out an important action on your service, su
 ## Design Guidance
 *	Only use one primary button per page
 *	Use for actions that go to the next step (for example, “Submit”)
-*	Button labels should be as short as possible with action words that clearly explain what will happen when the button is clicked (eg. Download, sign up).
+*	Button labels should be as short as possible with action words that clearly explain what will happen when the button is clicked (eg. Download, sign up)
+* Do not use images for buttons, always use a ```<button></button>``` HTML tag
 
 ## Rationale
 The rounded edges on the button help differentiate it from other layout items on a page. The underline on hover ensures colour is not the only visual means of conveying information about the button being clickable. The colour helps the button standout amongst other elements on a page and convey its importance to the user.
