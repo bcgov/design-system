@@ -43,7 +43,7 @@ Do not use the Google API to access Noto Sans because this violates B.C. data pr
 
 ### Example
 
-<component-preview path="styles/typography/paragraph-sample.html" height="150px" width="800px"> </component-preview>
+<component-preview path="styles/typography/paragraph-sample.html" height="200px" width="800px"> </component-preview>
 
 The default paragraph font size is 18px (1em) with a line height of 1.6.
 
@@ -60,7 +60,7 @@ p {
 
 Heading are sized based on a Minor Third (1.200) scale to achieve a harmonious increase of sizes. 
 
-<component-preview path="styles/typography/header-sample.html" height="150px" width="800px"> </component-preview>
+<component-preview path="styles/typography/header-sample.html" height="300px" width="800px"> </component-preview>
 
 ## Accessibility
 Text Spacing

@@ -24,13 +24,15 @@ Primary buttons allow users to carry out an important action on your service, su
 ## Design Guidance
 *	Only use one primary button per page
 *	Use for actions that go to the next step (for example, “Submit”)
-*	Button labels should be as short as possible with action words that clearly explain what will happen when the button is clicked (eg. Download, sign up).
+*	Button labels should be as short as possible with action words that clearly explain what will happen when the button is clicked (eg. Download, sign up)
+* Do not use images for buttons
 
 ## Rationale
 The rounded edges on the button help differentiate it from other layout items on a page. The underline on hover ensures colour is not the only visual means of conveying information about the button being clickable. The colour helps the button standout amongst other elements on a page and convey its importance to the user.
 
 ## Behaviour
-1.	Button label should appear underlined on hover
+1. Button label should appear underlined on hover
+2. Button background colour should revert to #003366 when in the active state
 
 ## Accessibility
 In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
@@ -68,18 +70,19 @@ As read using ChromeVox
 
 ### CSS
 ```css
-
 .BC-Gov-PrimaryButton {
     background-color: #003366;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     color: white;
-    padding: 10px 32px;
+    padding: 12px 32px;
     text-align: center;
     text-decoration: none;
     display: block;
     font-size: 18px;
     font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+    font-weight: 700;
+    letter-spacing: 1px;
     cursor: pointer;
 }
 
@@ -91,5 +94,9 @@ As read using ChromeVox
 :focus {
   outline: 4px solid #3B99FC;
   outline-offset: 1px;
+}
+
+.BC-Gov-PrimaryButton:active {
+  opacity: 1;
 }
 ```
