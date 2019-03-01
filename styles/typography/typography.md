@@ -23,8 +23,9 @@ Font weights included:
 
 
  ### Using Noto Sans
+Do not use the Google API to access Noto Sans because this violates B.C. data privacy legislation.
 
-Option 1
+**Option 1**
 
 Download and include the [Noto Sans font family](https://github.com/bcgov/design-system/tree/master/styles/typography/fonts) in your local project files.
 
@@ -37,13 +38,12 @@ body {
 }
 ```
 
-Do not use the Google API to access Noto Sans because this violates B.C. data privacy legislation
 
 ## Paragraphs
 
 ### Example
 
-<component-preview path="styles/typography/paragraph-sample.html" height="200px" width="800px"> </component-preview>
+<component-preview path="styles/typography/paragraph-sample.html" height="300px" width="800px"> </component-preview>
 
 The default paragraph font size is 18px (1em) with a line height of 1.6.
 
@@ -63,6 +63,7 @@ Heading are sized based on a Minor Third (1.200) scale to achieve a harmonious i
 <component-preview path="styles/typography/header-sample.html" height="300px" width="800px"> </component-preview>
 
 ## Accessibility
-Text Spacing
-•	Line height (line spacing) of paragraph text should be at least 1.5 times the font size
-•	The space after a paragraph should be 2 times the font size
+
+### Text Spacing
+* Line height (line spacing) of paragraph text should be at least 1.5 times the font size
+* The space after a paragraph should be 2 times the font size
