@@ -67,13 +67,9 @@ As read using ChromeVox
 
     <form>
       <div class="text_label">
-        <label>First Name:</label>
+        <label>Input label</label>
       </div>
-      <input class="text_input" type="text" name="firstname"><br>
-      <div class="text_label">
-        <label> Last Name:</label>
-      </div>
-      <input class="text_input" type="text" name="lastname">
+      <input class="text_input" type="text" name="labelname"><br>
     </form>
 
   </body>
@@ -92,12 +88,12 @@ form {
 }
 
 .text_input {
-  height: 25px;
+  height: 34px;
   border: 2px solid #38598a;
   margin-top: 5px;
   margin-bottom: 15px;
-  border-radius: 3px;
-  padding: 5px;
+  border-radius: 4px;
+  padding: 5px 5px 5px 7px;
 }
 
 .text_input[type="text"]:focus {
@@ -109,5 +105,3 @@ form {
   display: flex;
 }
 ```
-### Assets
-	Assets go here
