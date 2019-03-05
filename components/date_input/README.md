@@ -55,16 +55,6 @@ As read using ChromeVox
 
 ### HTML
 ```html
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <title>Sample Text Input</title>
-  </head>
-  <body>
-
     <form>
       <div class="date_field">
         <div class="text_label">
@@ -88,9 +78,6 @@ As read using ChromeVox
       </div>
 
     </form>
-
-  </body>
-</html>
 ```
   
 ### CSS 
