@@ -54,18 +54,7 @@ As read using ChromeVox
 ## Code
 ### HTML
 ```html
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <title>Primary Button</title>
-  </head>
-  <body>
-    <button class="BC-Gov-PrimaryButton" type="button" name="button">Submit</button>
-  </body>
-</html>
+<button class="BC-Gov-PrimaryButton" type="button" name="button">Submit</button>
 ```
 
 ### CSS
