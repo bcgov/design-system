@@ -54,20 +54,10 @@ As read using ChromeVox
 ### HTML
 
 ```html
-<!DOCTYPE html>
-<html lang="en" style="height: 100%;">
-<head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Sample Footer</title>
-</head>
-
 <body style="display: flex; flex-direction: column; height: 100vh;">
   <div style="flex: 1 0 auto; padding: 20px;">
     <h1>Sample Footer</h1>
   </div>
-  
   <footer class="footer">
     <div class="container">
     <ul>
@@ -80,9 +70,6 @@ As read using ChromeVox
     </ul>
     </div>
   </footer>
-</body>
-
-</html>
 ```
     
 ### CSS
