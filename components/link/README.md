@@ -60,11 +60,9 @@ As read using ChromeVox
 ### HTML
 
 ```html
-  <body>
     <p>This is an internal example of a link to <a href="#">access your application</a>.</p>
     <p>Here is another example of an internal link to <a href="#">apply</a>.</p>
     <p>This is an example of an <a href="#">External Link</a> <i class="fas fa-external-link-alt"></i></p>
-  </body>
 ```
     
 ### CSS
