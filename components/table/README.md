@@ -43,15 +43,6 @@ This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/W
 
 ### HTML
 ```html
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <title>Sample Table</title>
-  </head>
-  <body>
     <table>
       <caption>Roll Call</caption>
       <tr>
@@ -70,8 +61,6 @@ This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/W
     <td>94</td>
   </tr>
     </table>
-  </body>
-</html>
 ```
   
 ### CSS
