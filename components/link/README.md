@@ -60,24 +60,11 @@ As read using ChromeVox
 ### HTML
 
 ```html
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <title>Sample Link</title>
-  </head>
   <body>
-
     <p>This is an internal example of a link to <a href="#">access your application</a>.</p>
     <p>Here is another example of an internal link to <a href="#">apply</a>.</p>
     <p>This is an example of an <a href="#">External Link</a> <i class="fas fa-external-link-alt"></i></p>
-    
-
   </body>
-</html>
 ```
     
 ### CSS
