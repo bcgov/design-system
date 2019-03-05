@@ -68,23 +68,9 @@ As read using ChromeVox
 This component builds on the `header` component; See `sample.html` for a working example.
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Sample Navigation</title>
-</head>
-
 <!--
   All in-line CSS is specific to this sample; it can and should be ignored.
  -->
-
 <body style="background: #F8F8F8; margin-top: 130px;">
   <header>
     <div class="banner">
@@ -147,7 +133,6 @@ This component builds on the `header` component; See `sample.html` for a working
   </script>
 
 </body>
-</html>
 ```
 
 ### CSS
