@@ -69,7 +69,7 @@ As read using ChromeVox
       <div class="text_label">
         <label>Can you provide more detail?</label>
       </div>
-      <textarea class="text_input" name="name" rows="8" cols="80"></textarea>
+      <textarea class="text_input" name="name" rows="8" cols="60"></textarea>
     </form>
 
   </body>
@@ -79,16 +79,16 @@ As read using ChromeVox
 ```css
 form {
   font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .text_input {
   font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
-  font-size: 16px;
+  font-size: 18px;
   border: 2px solid #38598a;
   margin-top: 5px;
   margin-bottom: 15px;
-  border-radius: 3px;
+  border-radius: 4;
   padding: 5px;
   resize: none;
 }
