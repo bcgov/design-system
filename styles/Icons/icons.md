@@ -29,6 +29,15 @@ The design system supports using the Font Awesome icon library. Use these icons 
 | ![down arrow](./icon-svgs/chevron-down-solid.svg) | Down Arrow      | `<i class="fas fa-chevron-down"></i>`|
 | ![left arrow](./icon-svgs/chevron-left-solid.svg) | Left Arrow      | `<i class="fas fa-chevron-left"></i>`|
 
+**Testing inline icon placement below**
+
+| Icon      | Label | Class Name |
+| ----------- | ----------- | ----------- |
+| <i class="fas fa-search"></i> | Search      | `<i class="fas fa-search"></i>`|
+| <i class="fas fa-bars"></i> | Menu Bars      | `<i class="fas fa-bars"></i>`|
+| <i class="fas fa-envelope"></i> | Envelope      | `<i class="fas fa-envelope"></i>`|
+| <i class="fas fa-phone"></i> | Phone      | `<i class="fas fa-phone"></i>`|
+
 ## Design Guidance
 *	Icons should be used sparingly throughout the application to provide clarity and reduce cognitive load on users.
 *	Icons do not have globally recognized meaning, and will vary based on people’s past experiences. Always test the icons you use to make sure they are understandable
