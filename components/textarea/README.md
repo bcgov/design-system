@@ -55,25 +55,12 @@ As read using ChromeVox
 
 ### HTML
 ```html
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <title>Textarea</title>
-  </head>
-  <body>
-
     <form>
       <div class="text_label">
         <label>Can you provide more detail?</label>
       </div>
       <textarea class="text_input" name="name" rows="8" cols="60"></textarea>
     </form>
-
-  </body>
-</html>
 ```  
 ### CSS
 ```css

@@ -59,16 +59,6 @@ As read using ChromeVox
 ## Code
 ### HTML
 ```html
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <title>Checkbox</title>
-  </head>
-  <body>
-
     <label class="checkbox">This is a selected checkbox
       <input type="checkbox" checked="checked">
       <span class="checkmark"></span>
@@ -88,9 +78,6 @@ As read using ChromeVox
       <input type="checkbox">
       <span class="checkmark"></span>
     </label>
-
-  </body>
-</html>
 ```
 
 ### CSS

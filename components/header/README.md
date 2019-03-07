@@ -74,20 +74,9 @@ As read using ChromeVox
 ### HTML
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Sample Header</title>
-</head>
-
 <!--
   All in-line CSS is specific to this sample; it can and should be ignored.
  -->
-
-<body>
   <header>
     <div class="banner">
         <a href="https://gov.bc.ca" alt="British Columbia">
@@ -104,8 +93,6 @@ As read using ChromeVox
     </div>
     </div>
   </header>
-</body>
-</html>
 ```
     
 ### CSS

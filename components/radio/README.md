@@ -64,16 +64,6 @@ If a radio button was selected
 ## Code
 ### HTML
 ```html
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <title>Sample Radio Button</title>
-  </head>
-  <body>
-
     <label class="radio" for="radio_1">One
       <input type="radio" name="foo" id="radio_1">
       <span class="dot"></span>
@@ -93,9 +83,6 @@ If a radio button was selected
       <input type="radio" name="foo" id="radio_4">
       <span class="dot"></span>
     </label>
-
-  </body>
-</html>
 ```
  
 ### CSS
