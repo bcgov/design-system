@@ -94,7 +94,7 @@ form {
     border: 2px solid #8a9198;
     margin-top: 5px;
     margin-bottom: 15px;
-    border-radius: 3px;
+    border-radius: 4px;
     padding: 5px;
     font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
     font-size: 16px;
@@ -106,7 +106,7 @@ form {
     border: 2px solid #8a9198;
     margin-top: 5px;
     margin-bottom: 15px;
-    border-radius: 3px;
+    border-radius: 4px;
     padding: 5px;
     font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
     font-size: 16px;
