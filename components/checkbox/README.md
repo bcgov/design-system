@@ -113,12 +113,12 @@ As read using ChromeVox
   left: 0;
   height: 16px;
   width: 16px;
-  outline: 2px solid #003366;
+  outline: 2px solid #8a9198;
 }
 
 /* When the checkbox is checked, add a blue background */
 .checkbox input:checked ~ .checkmark {
-  background-color: #003366;
+  background-color: #8a9198;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
