@@ -72,7 +72,7 @@ form {
 .text_input {
   font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
   font-size: 18px;
-  border: 2px solid #38598a;
+  border: 2px solid #8a9198;
   margin-top: 5px;
   margin-bottom: 15px;
   border-radius: 4;
@@ -81,7 +81,7 @@ form {
 }
 
 .text_input:focus {
-    outline: 4px solid #38598a;
+    outline: 4px solid #3B99FC;
     outline-offset: 1px;
 }
 
