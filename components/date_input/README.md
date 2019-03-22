@@ -91,10 +91,10 @@ form {
 
 .date_input_day, .date_input_month {
     height: 25px;
-    border: 2px solid #38598a;
+    border: 2px solid #8a9198;
     margin-top: 5px;
     margin-bottom: 15px;
-    border-radius: 3px;
+    border-radius: 4px;
     padding: 5px;
     font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
     font-size: 16px;
@@ -103,10 +103,10 @@ form {
 
 .date_input_year {
     height: 25px;
-    border: 2px solid #38598a;
+    border: 2px solid #8a9198;
     margin-top: 5px;
     margin-bottom: 15px;
-    border-radius: 3px;
+    border-radius: 4px;
     padding: 5px;
     font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
     font-size: 16px;

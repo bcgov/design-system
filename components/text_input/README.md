@@ -76,7 +76,7 @@ form {
 
 .text_input {
   height: 34px;
-  border: 2px solid #38598a;
+  border: 2px solid #8a9198;
   margin-top: 5px;
   margin-bottom: 15px;
   border-radius: 4px;
@@ -84,7 +84,7 @@ form {
 }
 
 .text_input[type="text"]:focus {
-    outline: 4px solid #38598a;
+    outline: 4px solid #3B99FC;
     outline-offset: 1px;
 }
 
