@@ -75,7 +75,7 @@ form {
   border: 2px solid #8a9198;
   margin-top: 5px;
   margin-bottom: 15px;
-  border-radius: 4;
+  border-radius: 4px;
   padding: 5px;
   resize: none;
 }
