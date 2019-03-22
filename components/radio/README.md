@@ -120,7 +120,7 @@ If a radio button was selected
   height: 18px;
   width: 18px;
   border-radius: 50%;
-  border: 2px solid #003366;
+  border: 2px solid #8a9198;
 }
 
 /* When the radio button is checked, add a blue background */
@@ -144,7 +144,7 @@ If a radio button was selected
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #003366;
+  background: #8a9198;
   transform: translate(-50%, -50%);
 }
 
