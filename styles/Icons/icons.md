@@ -17,16 +17,16 @@ The design system supports using the Font Awesome icon library. Use these icons 
 
 | Icon      | Label | Class Name |
 | ----------- | ----------- | ----------- |
-| [Search](https://fontawesome.com/icons/search?style=solid)      | `<i class="fas fa-search"></i>`|
-| [Menu Bars](https://fontawesome.com/icons/bars?style=solid)      | `<i class="fas fa-bars"></i>`|
-| [Envelope](https://fontawesome.com/icons/envelope?style=solid)      | `<i class="fas fa-envelope"></i>`|
-| [Phone](https://fontawesome.com/icons/phone?style=solid)      | `<i class="fas fa-phone"></i>`|
-| [External Link](https://fontawesome.com/icons/external-link-alt?style=solid)      | `<i class="fas fa-external-link-alt"></i>`|
-| [Upload](https://fontawesome.com/icons/upload?style=solid)      | `<i class="fas fa-upload"></i>`|
-| [Up Arrow](https://fontawesome.com/icons/chevron-up?style=solid)      | `<i class="fas fa-chevron-up"></i>`|
-| [Right Arrow](https://fontawesome.com/icons/chevron-right?style=solid)      | `<i class="fas fa-chevron-right"></i>`|
-| [Down Arrow](https://fontawesome.com/icons/chevron-down?style=solid)      | `<i class="fas fa-chevron-down"></i>`|
-| [Left Arrow](https://fontawesome.com/icons/chevron-left?style=solid)      | `<i class="fas fa-chevron-left"></i>`|
+| ![magnifying glass](./icon-png/search.png) | Search      | `<i class="fas fa-search"></i>`|
+| ![bars](./icon-pngs/bars-solid.png) | Menu Bars      | `<i class="fas fa-bars"></i>`|
+| ![envelope](./icon-pngs/envelope-solid.png) | Envelope      | `<i class="fas fa-envelope"></i>`|
+| ![phone](./icon-pngs/phone-solid.png) | Phone      | `<i class="fas fa-phone"></i>`|
+| ![external link](./icon-pngs/external-link-alt-solid.png) | External Link      | `<i class="fas fa-external-link-alt"></i>`|
+| ![Upload](./icon-pngs/upload-solid.png) | Upload      | `<i class="fas fa-upload"></i>`|
+| ![up arrow](./icon-pngs/chevron-up-solid.png) | Up Arrow      | `<i class="fas fa-chevron-up"></i>`|
+| ![right arrow](./icon-pngs/chevron-right-solid.png) | Right Arrow      | `<i class="fas fa-chevron-right"></i>`|
+| ![down arrow](./icon-pngs/chevron-down-solid.png) | Down Arrow      | `<i class="fas fa-chevron-down"></i>`|
+| ![left arrow](./icon-pngs/chevron-left-solid.png) | Left Arrow      | `<i class="fas fa-chevron-left"></i>`|
 
 ## Design Guidance
 *	Icons should be used sparingly throughout the application to provide clarity and reduce cognitive load on users.
