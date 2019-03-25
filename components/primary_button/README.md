@@ -62,7 +62,7 @@ As read using ChromeVox
 .BC-Gov-PrimaryButton {
     background-color: #003366;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     color: white;
     padding: 12px 32px;
     text-align: center;

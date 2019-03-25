@@ -19,8 +19,7 @@ The B.C. Government colour palette ensures all public facing government services
         <div class="p-3 text-white" style="background-color: #003366; height: 150px;">#003366</div>
         <div class="card-body">
           <p class="mb-0">Used for <a href="https://developer.gov.bc.ca/Design-System/Header-Basic">header</a>, <a href="https://developer.gov.bc.ca/Design-System/Footer-Basic">footer</a>,
-             <a href="https://developer.gov.bc.ca/Design-System/Primary-Button">primary button</a>, <a href="https://developer.gov.bc.ca/Design-System/Checkbox">checkbox</a>,
-             <a href="https://developer.gov.bc.ca/Design-System/Radio-Button">radio button</a>, <a href="https://developer.gov.bc.ca/Design-System/Text-Input">text input</a></p>
+             <a href="https://developer.gov.bc.ca/Design-System/Primary-Button">primary button</a></p>
         </div>
     </div>
     </div>
@@ -63,7 +62,6 @@ The B.C. Government colour palette ensures all public facing government services
   </div>
 </div>
 
-
 <div class="container">
   <h3>Backgrounds</h3>
   <div class="row">
@@ -83,6 +81,22 @@ The B.C. Government colour palette ensures all public facing government services
         </div>
     </div>
     </div>
+  </div>
+</div>
+
+<div class="container">
+  <h3>Components</h3>
+  <div class="row">
+    <div class="col-sm-4">
+    <div class="card">
+        <div class="p-3 text-white" style="background-color: #8a9198; height: 150px;">#8A9198</div>
+        <div class="card-body">
+          <p class="mb-0">Used for 
+              <a href="https://developer.gov.bc.ca/Design-System/Text-Input">text input</a>,
+              <a href="https://developer.gov.bc.ca/Design-System/Textarea">textarea</a>, <a href="https://developer.gov.bc.ca/Design-System/Checkbox">checkbox</a>,
+             <a href="https://developer.gov.bc.ca/Design-System/Radio-Button">radio button</a>
+        </p>
+        </div>
   </div>
 </div>
 

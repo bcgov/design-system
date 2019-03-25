@@ -12,7 +12,6 @@ Iconography uses images and symbols to represent an idea visually. They communic
 
 ## Implementation
 The design system supports using the Font Awesome icon library. Use these icons in your application by:
-*	Adding the library through the [Font Awesome CDN](https://fontawesome.com/start)
 *	Hosting the [font library locally](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself) in your project source files
 *	Using npm if you are using [Vue](https://fontawesome.com/how-to-use/on-the-web/using-with/vuejs), [Angular](https://fontawesome.com/how-to-use/on-the-web/using-with/angular), or [React](https://fontawesome.com/how-to-use/on-the-web/using-with/angular) components
 
