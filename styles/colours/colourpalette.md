@@ -93,7 +93,7 @@ The B.C. Government colour palette ensures all public facing government services
         <div class="p-3 text-white" style="background-color: #8a9198; height: 150px;">#8A9198</div>
         <div class="card-body">
           <p class="mb-0">Used for 
-              <a href="https://developer.gov.bc.ca/Design-System/Text-Input">Test Input</a>, and
+              <a href="https://developer.gov.bc.ca/Design-System/Text-Input">Text Input</a>, and
               <a href="https://developer.gov.bc.ca/Design-System/Textarea">Textarea</a>
         </p>
         </div>
