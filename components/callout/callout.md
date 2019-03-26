@@ -41,7 +41,7 @@ Learn how to [insert a callout component](https://www2.gov.bc.ca/gov/content/gov
 
 ### ARIA
 * Include the following ARIA tagging so that screenreaders read this content with emphasis:
-role="alert" aria-live="assertive"
+```role="alert" aria-live="assertive"```
 * This code calls attention to the content, and is for information that is important enough to be announced to the user as soon as possible, but it is not necessary to immediately interrupt the user. 
 
 ## Code
