@@ -31,7 +31,7 @@ Differentiating a block of text from the content that surrounds it, for example:
 * Use callouts very sparingly - it’s less effective if it’s overused.
 
 ## CMS Lite Users
-Learn how to insert a callout component on your page
+Learn how to [insert a callout component](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/cms-lite-manual/ui-guidelines/text-editor/callout-boxes) on your page
 
 ## Accessibility
 
