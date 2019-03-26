@@ -17,7 +17,7 @@ The design system supports using the Font Awesome icon library. Use these icons 
 
 | Icon      | Label | Class Name |
 | ----------- | ----------- | ----------- |
-| ![magnifying glass](./icon-png/search.png) | Search      | `<i class="fas fa-search"></i>`|
+| ![magnifying glass](./icon-pngs/search.png) | Search      | `<i class="fas fa-search"></i>`|
 | ![bars](./icon-pngs/bars-solid.png) | Menu Bars      | `<i class="fas fa-bars"></i>`|
 | ![envelope](./icon-pngs/envelope-solid.png) | Envelope      | `<i class="fas fa-envelope"></i>`|
 | ![phone](./icon-pngs/phone-solid.png) | Phone      | `<i class="fas fa-phone"></i>`|
