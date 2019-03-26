@@ -64,6 +64,6 @@ background color: #f2f2f2;
 }
 
 .bcgov-callout h1, h2, h3, h4 {
-Margin 0
+Margin: 0;
 }
 ```
