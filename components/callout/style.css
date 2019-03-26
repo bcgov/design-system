@@ -1,10 +1,15 @@
 .bcgov-callout {
-  Padding: 25px;
-  Border-left: 10px solid #38598a;
-  margin: 16px 0;
-  background color: #f2f2f2;
-}
-
-.bcgov-callout h1, h2, h3, h4 {
-  Margin: 0;
-}
+    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #494949;
+    Padding: 25px;
+    Border-left: 10px solid #38598a;
+    margin: 16px 0;
+    background color: #f2f2f2;
+  }
+  
+  .bcgov-callout, h1, h2, h3, h4 {
+    Margin: 0;
+  }
