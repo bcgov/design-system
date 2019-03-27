@@ -39,17 +39,12 @@ Learn how to [insert a callout component](https://www2.gov.bc.ca/gov/content/gov
 * Text on the gray background meets contrast requirements
 * The thick left border conveys information using more than just colour
 
-### ARIA
-* Include the following ARIA tagging so that screenreaders read this content with emphasis:
-```role="alert" aria-live="assertive"```
-* This ARIA labeling calls attention to the content, and is for information that is important enough to be announced to the user as soon as possible, but it is not necessary to immediately interrupt the user. 
-
 ## Code
 ### HTML
 
 ```html
-<div class=”bcgov-callout” role="alert" aria-live="assertive">
-<p>Text here</p>
+<div class=”bcgov-callout”>
+<p>By March 1, 2018, eligible residents of B.C. are expected to renew enrolment in the Medical Services Plan (MSP) and get a BC Services Card.</p>
 </div>
 ```
 
