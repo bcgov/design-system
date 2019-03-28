@@ -53,17 +53,15 @@ As read using ChromeVox
 ## Code
 ### HTML
 ```html
-<button class="BC-Gov-PrimaryButton" type="button" name="button">Submit</button>
+<button class="BC-Gov-SecondaryButton" type="button" name="button">Cancel</button>
 ```
 
 ### CSS
 ```css
-.BC-Gov-PrimaryButton {
-    background-color: #003366;
-    border: none;
+.BC-Gov-SecondaryButton {
     border-radius: 4px;
-    color: white;
-    padding: 12px 32px;
+    border: 2px solid #003366;
+    padding: 10px 30px;
     text-align: center;
     text-decoration: none;
     display: block;
@@ -72,19 +70,19 @@ As read using ChromeVox
     font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
-}
-
-.BC-Gov-PrimaryButton:hover {
-  text-decoration: underline;
-  opacity: 0.80;
-}
-
+    color: #003366;
+    }
+.BC-Gov-SecondaryButton:hover {
+    opacity: 0.80;
+    text-decoration: underline;
+    background-color: #003366;
+    color: white;
+    }
 :focus {
-  outline: 4px solid #3B99FC;
-  outline-offset: 1px;
-}
-
-.BC-Gov-PrimaryButton:active {
-  opacity: 1;
-}
+    outline-offset: 1px;
+    outline: 4px solid #3B99FC;
+    }
+.BC-Gov-SecondaryButton:active {
+    opacity: 1;
+    }
 ```
