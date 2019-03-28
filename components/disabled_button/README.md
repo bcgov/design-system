@@ -12,9 +12,9 @@ author: orinevares
 
 A button that can’t be clicked and doesn’t react to hover. A disabled button is greyed out to indicate to users that they cannot undertake the action associated with it. This is usually for page logic reasons.
 
-## Visual examples 
-### Primary Button
-### Secondary Button
+## Visual examples
+
+<component-preview path="components/disabled_button/sample.html" height="100px" width="800px"> </component-preview>
 
 ## Design Guidance
 
@@ -41,11 +41,45 @@ This supports WCAG 2.0 1.4.1 Use of Color: Color is not used as the only visual 
 ### HTML
 
 ```html
-<button type="submit" aria-disabled=”true” disabled>Submit</button>
+    <button class="BC-Gov-PrimaryButton-disabled" type="button" aria-disabled="true" name="button" disabled>Submit</button>
+    <button class="BC-Gov-SecondaryButton-disabled" type="button" aria-disabled="true" name="button" disabled>Cancel</button>
 ```
 
 ### CSS
 
 ```css
+.BC-Gov-PrimaryButton-disabled {
+    background-color: #003366;
+    opacity: 0.3;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: not-allowed;
+}
+
+.BC-Gov-SecondaryButton-disabled {
+    background-color: white;
+    opacity: 0.3;
+    border: 2px solid #003366;
+    border-radius: 4px;
+    color: #003366;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: not-allowed;
+}
 
 ```
