@@ -18,8 +18,8 @@ A button that can’t be clicked and doesn’t react to hover. A disabled button
 
 ## Design Guidance
 
-* Disabled buttons block users from accomplishing their task without telling them what is wrong. Rather than disabling a button, keep it enabled and show an error message why they can’t proceed. 
 * Before using a disabled button, make sure your research proves it makes the user interface easier to understand.
+* Disabled buttons block users from accomplishing their task without telling them what is wrong. Rather than disabling a button, keep it enabled and show an error message why they can’t proceed. 
 
 ## Accessibility
 
