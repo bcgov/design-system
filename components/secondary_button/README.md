@@ -60,6 +60,7 @@ As read using ChromeVox
 ### CSS
 ```css
 .BC-Gov-SecondaryButton {
+    background: none;
     border-radius: 4px;
     border: 2px solid #003366;
     padding: 10px 30px;
