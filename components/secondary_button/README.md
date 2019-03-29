@@ -22,7 +22,6 @@ Secondary buttons allow users to carry out a supporting action on your service, 
 *	Primary actions on your page such as 'Submit', or 'Start'. Use a [Primary Button](https://developer.gov.bc.ca/Design-System/Primary-Button) instead.
 
 ## Design Guidance
-*	Use for supporting actions or options you don't want users to default to
 *	Button labels should be as short as possible with action words that clearly explain what will happen when the button is clicked (eg. Back or Cancel)
 * Do not use images for buttons
 
