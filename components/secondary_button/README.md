@@ -16,7 +16,7 @@ Secondary buttons allow users to carry out a supporting action on your service, 
 <component-preview path="components/secondary_button/sample.html" height="100px" width="800px"> </component-preview>
 
 ## Use This For
-* A supporting action you want users to take on your site.
+* Supporting actions users can take on your site.
 
 ## Don't Use This For
 *	Primary actions on your page such as 'Submit', or 'Start'. Use a [Primary Button](https://developer.gov.bc.ca/Design-System/Primary-Button) instead.
