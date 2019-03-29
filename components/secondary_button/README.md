@@ -1,5 +1,5 @@
 ---
-description: Secondary buttons allow users to carry out a supporting task
+description: Secondary buttons allow users to carry out a supporting action
 title: Secondary Button
 status: Draft
 author: orinevares
@@ -23,15 +23,16 @@ Secondary buttons allow users to carry out a supporting action on your service, 
 
 ## Design Guidance
 *	Use for supporting actions or options you don't want users to default to
-*	Button labels should be as short as possible with action words that clearly explain what will happen when the button is clicked (eg. Back, Cancel, or Don't Agree)
+*	Button labels should be as short as possible with action words that clearly explain what will happen when the button is clicked (eg. Back or Cancel)
 * Do not use images for buttons
 
 ## Rationale
 The rounded edges on the button help differentiate it from other layout items on a page. The underline on hover ensures colour is not the only visual means of conveying information about the button being clickable. The transparent background helps the button reduce its visual prominance amongst other elements and primary buttons on a page.
 
 ## Behaviour
-1. Button label should appear underlined on hover
-2. Button text and border colour should revert to #003366 when in the active state
+1. On hover, button label should appear white and underlined
+2. On hover, button background colour should be #003366 with an opacity of 0.8
+3. In the active state, button background colour should remain at #003366 but have an opacity change back to 1
 
 ## Accessibility
 In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
@@ -66,7 +67,7 @@ As read using ChromeVox
     text-decoration: none;
     display: block;
     font-size: 18px;
-    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+    Font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
@@ -76,7 +77,7 @@ As read using ChromeVox
     opacity: 0.80;
     text-decoration: underline;
     background-color: #003366;
-    color: white;
+    color: #FFFFFF;
     }
 :focus {
     outline-offset: 1px;
