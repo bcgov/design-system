@@ -108,7 +108,7 @@ form {
     margin-bottom: 15px;
     border-radius: 4px;
     padding: 5px;
-    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+    font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-size: 16px;
     width: 64px;
 }
