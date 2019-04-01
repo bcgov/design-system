@@ -67,7 +67,7 @@ This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/W
 ```css
 body {
   font-size: 16px;
-  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+  font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
 }
 
 table, th, td {
