@@ -69,7 +69,7 @@ As read using ChromeVox
 
 ```css
 body {
-  font-family: 'Noto Sans', calibri, arial, sans-serif;
+  font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 18px;
 }
 
