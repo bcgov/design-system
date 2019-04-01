@@ -84,26 +84,26 @@ As read using ChromeVox
 
 ```css
 form {
-    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+    font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-size: 16px;
     display: flex;
 }
 
 .date_input_day, .date_input_month {
     height: 25px;
-    border: 2px solid #8a9198;
+    border: 2px solid #606060;
     margin-top: 5px;
     margin-bottom: 15px;
     border-radius: 4px;
     padding: 5px;
-    font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+    font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-size: 16px;
     width: 32px;
 }
 
 .date_input_year {
     height: 25px;
-    border: 2px solid #8a9198;
+    border: 2px solid #606060;
     margin-top: 5px;
     margin-bottom: 15px;
     border-radius: 4px;
