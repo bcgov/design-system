@@ -65,18 +65,18 @@ As read using ChromeVox
 ### CSS
 ```css
 form {
-  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';;
+  font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 18px;
 }
 
 .text_input {
-  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';;
+  font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 18px;
 }
 
 .text_input {
   height: 34px;
-  border: 2px solid #8a9198;
+  border: 2px solid #606060;
   margin-top: 5px;
   margin-bottom: 15px;
   border-radius: 4px;
