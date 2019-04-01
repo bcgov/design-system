@@ -96,7 +96,7 @@ If a radio button was selected
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 18px;
-  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+  font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -120,7 +120,7 @@ If a radio button was selected
   height: 18px;
   width: 18px;
   border-radius: 50%;
-  border: 2px solid #8a9198;
+  border: 2px solid #606060;
 }
 
 /* When the radio button is checked, add a blue background */
@@ -144,7 +144,7 @@ If a radio button was selected
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #8a9198;
+  background: #606060;
   transform: translate(-50%, -50%);
 }
 
