@@ -34,7 +34,7 @@ Font-stack
 
 ```css
 body {
-     Font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+     font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
 }
 ```
 
