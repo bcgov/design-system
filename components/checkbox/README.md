@@ -89,7 +89,7 @@ As read using ChromeVox
   padding-left: 25px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
+  Font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 16px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -113,12 +113,12 @@ As read using ChromeVox
   left: 0;
   height: 16px;
   width: 16px;
-  outline: 2px solid #8a9198;
+  outline: 2px solid #606060;
 }
 
 /* When the checkbox is checked, add a blue background */
 .checkbox input:checked ~ .checkmark {
-  background-color: #8a9198;
+  background-color: #606060;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
