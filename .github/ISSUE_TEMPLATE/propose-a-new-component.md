@@ -1,6 +1,9 @@
 ---
 name: Propose a New Component
 about: Propose a New Component for the BC Gov Design System
+title: ''
+labels: ''
+assignees: ''
 
 ---
 
