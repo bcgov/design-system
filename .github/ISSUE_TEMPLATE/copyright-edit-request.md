@@ -1,5 +1,5 @@
 ---
-name: Copyright Edit Request
+name: Content Edit Request
 about: Suggest spelling, grammar, and other writing edits
 title: ''
 labels: ''
@@ -9,11 +9,11 @@ assignees: ''
 
 # What Currently Exists
 
-> Please copy what currently exists here and specify exactly where the requested edit exists.
+> Please copy what is currently written here and specify exactly where the requested edit exists.
 
 # Suggested Improvement
 
-> Please write out how you think the content should be worded here
+> Please write out how you think the content should be written here
 
 # Other information
 
