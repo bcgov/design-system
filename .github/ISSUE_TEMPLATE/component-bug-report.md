@@ -1,6 +1,9 @@
 ---
 name: Component Bug report
 about: Create a report to help us improve the BC GOV Design System Components
+title: ''
+labels: ''
+assignees: ''
 
 ---
 
