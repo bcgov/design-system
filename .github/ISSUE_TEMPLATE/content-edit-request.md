@@ -1,9 +1,6 @@
 ---
 name: Content Edit Request
 about: Suggest spelling, grammar, and other writing edits
-title: ''
-labels: ''
-assignees: ''
 
 ---
 
