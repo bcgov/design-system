@@ -11,7 +11,7 @@ author: orinevares
 # Checkbox
 Checkboxes are a type of input that allow users to select one or more options from a list.
 
-## Visual Example
+## Example
 
 <component-preview path="components/checkbox/sample.html" height="150px" width="800px"> </component-preview>
 
