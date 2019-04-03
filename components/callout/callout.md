@@ -11,7 +11,7 @@ author: orinevares
 # Callout
 Callouts are an excerpt of text that has been pulled out and used as a visual clue to draw the eye to the text. They are used to help direct a user's attention to important pieces of information.
 
-## Visual example
+## Example
 
 <component-preview path="components/callout/sample.html" height="200px" width="800px"> </component-preview>
 
