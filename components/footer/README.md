@@ -11,7 +11,7 @@ author: orinevares
 # Footer
 Footers help people find what they need after scrolling to the bottom of a web page. They provide supplementary information such as copyright, contact information, social media links, and links to other pages within a website.
 
-## Visual Example
+## Example
 
 <component-preview path="components/footer/sample.html" height="200px" width="800px"> </component-preview>
 
