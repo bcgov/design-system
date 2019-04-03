@@ -11,7 +11,7 @@ author: orinevares
 # Primary Button
 Primary buttons allow users to carry out an important action on your service, such as Download or Submit.
 
-## Visual Example
+## Example
 
 <component-preview path="components/primary_button/sample.html" height="100px" width="800px"> </component-preview>
 
