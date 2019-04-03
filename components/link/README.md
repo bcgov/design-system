@@ -12,7 +12,7 @@ author: orinevares
 
 Links lead users to a different page.
 
-## Visual Example
+## Example
 
 <component-preview path="components/link/sample.html" height="150px" width="800px"> </component-preview>
 

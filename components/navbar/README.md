@@ -11,7 +11,7 @@ author: orinevares
 # Navigation Bar – Basic
 Navigation bars provide a list of links to different pages on a website or application.
 
-## Visual Example
+## Example
 
 <component-preview path="components/navbar/sample.html" height="150px" width="800px"> </component-preview>
 

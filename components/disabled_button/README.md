@@ -12,9 +12,9 @@ author: orinevares
 
 A button that can’t be clicked and doesn’t react to hover. A disabled button is greyed out to indicate to users that they cannot undertake the action associated with it. This is usually for page logic reasons.
 
-## Visual examples
+## Example
 
-<component-preview path="components/disabled_button/sample.html" height="100px" width="800px"> </component-preview>
+<component-preview path="components/disabled_button/sample.html" height="200px" width="800px"> </component-preview>
 
 ## Design Guidance
 

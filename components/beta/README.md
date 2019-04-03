@@ -12,7 +12,7 @@ author: dlevine
 # Beta Status
 The beta status indicator tells users that the product is still being worked on.
 
-## Visual Example
+## Example
 
 <component-preview path="components/beta/sample.html" height="100px" width="800px"> </component-preview>
 

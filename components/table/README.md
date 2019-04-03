@@ -11,7 +11,7 @@ status: Draft
 
 Tables present tabular data in a grid which allows users to visually scan and understand associations between the values.
 
-## Visual Example
+## Example
 
 <component-preview path="components/table/sample.html" height="250px" width="800px"> </component-preview>
 

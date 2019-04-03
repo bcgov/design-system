@@ -11,7 +11,7 @@ status: Draft
 
 Date input fields allow users to enter an already known date
 
-## Visual Example
+## Example
 
 <component-preview path="components/date_input/sample.html" height="100px" width="800px"> </component-preview>
 

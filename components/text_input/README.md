@@ -12,7 +12,7 @@ author: orinevares
 
 Text inputs allow users to enter a single line of text.
 
-## Visual Example
+## Example
 
 <component-preview path="components/text_input/sample.html" height="200px" width="800px"> </component-preview>
 

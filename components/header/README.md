@@ -12,7 +12,7 @@ author: orinevares
 
 Headers help people understand what the product or service is about while providing a consistent look, feel, and functionality across government sites.
 
-## Visual Example
+## Example
 
 <component-preview path="components/header/sample.html" height="100px" width="800px"> </component-preview>
 
