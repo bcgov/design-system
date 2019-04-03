@@ -13,7 +13,7 @@ Callouts are an excerpt of text that has been pulled out and used as a visual cl
 
 ## Visual example
 
-<component-preview path="components/callout/sample.html" height="100px" width="800px"> </component-preview>
+<component-preview path="components/callout/sample.html" height="200px" width="800px"> </component-preview>
 
 ## Use This For
 
