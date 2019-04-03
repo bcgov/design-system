@@ -9,14 +9,13 @@ author: orinevares
 > Last Updated: April 3, 2019
 
 # Dropdown
-Dropdowns allow users to select one option from a list. Use of a dropdown helps reduce input errors but it should be used as a last resort due to the many usability issues it poses.
+Dropdowns allow users to select one option from a list. Use of a dropdown helps reduce input errors but it should be used as a last resort due to the many usability issues it causes.
 
 ## Example
-
 <component-preview path="components/dropdown/sample.html" height="100px" width="800px"> </component-preview>
 
 ## Use This For
-* When users have to select one option from a list of seven (7) to fifteen (15) different options
+* When users have to select one option from a list of seven (7) to fifteen (15) different options.
 
 ## Don't Use This For
 *	Short lists of options. Consider using a [Radio Button](https://developer.gov.bc.ca/Design-System/Radio-Button) instead 
@@ -28,10 +27,7 @@ Dropdowns allow users to select one option from a list. Use of a dropdown helps 
 * Make sure the dropdown has a label. Do not include the label in the default option.
 
 ## Rationale
-
-
-## Behaviour
-1. 
+The custom colour matches the styling of other form elements while passing all accessibility contrast requirements. Placing select as the first option signals an action is required for the user.
 
 ## Accessibility
 In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
@@ -39,7 +35,8 @@ In addition to [fundamental accessibility]() requirements, this component meets 
 ### Screenreaders
 As read using ChromeVox
 
-> *""*
+> *"Dropdown, Select."*
+> *"Combo box, one of 4."*
 
 ### Colour Contrast
 * [Contrast ratio](https://webaim.org/resources/contrastchecker/) exceed 7:1 for text on button when in static and hover states.
