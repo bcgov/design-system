@@ -11,7 +11,7 @@ status: Draft
 
 A textarea allows users to input multiple lines of text
 
-## Visual Example
+## Example
 
 <component-preview path="components/textarea/sample.html" height="250px" width="800px"> </component-preview>
 
