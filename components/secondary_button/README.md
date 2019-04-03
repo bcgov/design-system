@@ -11,7 +11,7 @@ author: orinevares
 # Secondary Button
 Secondary buttons allow users to carry out a supporting action on your service, such as Back or Cancel.
 
-## Visual Example
+## Example
 
 <component-preview path="components/secondary_button/sample.html" height="100px" width="800px"> </component-preview>
 
