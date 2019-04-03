@@ -1,1 +1,14 @@
+.bc-gov-dropdown {
+  font-family: "Noto Sans", Verdana, Arial, sans-serif;
+  font-size: 18px;
+  color: #494949;
+  position: relative;
+  background: none;
+  border: 2px solid #606060;
+  width: 200px;
+}
 
+:focus {
+  outline: 4px solid #3B99FC;
+  outline-offset: 1px;
+}
