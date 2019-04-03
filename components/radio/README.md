@@ -11,7 +11,7 @@ author: orinevares
 # Radio Button
 Radio buttons are a type of input that allow users to select only one option from a list.
 
-## Visual Example
+## Example
 
 <component-preview path="components/radio/sample.html" height="150px" width="800px"> </component-preview>
 
