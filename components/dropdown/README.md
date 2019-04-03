@@ -50,10 +50,28 @@ As read using ChromeVox
 ## Code
 ### HTML
 ```html
-
+<select class="bc-gov-dropdown">
+  <option value="Select">Select</option>
+  <option value="Option 1">Option 1</option>
+  <option value="Option 2">Option 2</option>
+  <option value="Option 3">Option 3</option>
+</select>
 ```
 
 ### CSS
 ```css
+.bc-gov-dropdown {
+  font-family: "Noto Sans", Verdana, Arial, sans-serif;
+  font-size: 18px;
+  color: #494949;
+  position: relative;
+  background: none;
+  border: 2px solid #606060;
+  width: 200px;
+}
 
+:focus {
+  outline: 4px solid #3B99FC;
+  outline-offset: 1px;
+}
 ```
