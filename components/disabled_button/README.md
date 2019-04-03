@@ -14,7 +14,7 @@ A button that can’t be clicked and doesn’t react to hover. A disabled button
 
 ## Visual examples
 
-<component-preview path="components/disabled_button/sample.html" height="100px" width="800px"> </component-preview>
+<component-preview path="components/disabled_button/sample.html" height="200px" width="800px"> </component-preview>
 
 ## Design Guidance
 
