@@ -47,21 +47,37 @@ As read using ChromeVox
 ## Code
 ### HTML
 ```html
-<select class="bc-gov-dropdown">
-  <option value="Select">Select</option>
-  <option value="Option 1">Option 1</option>
-  <option value="Option 2">Option 2</option>
-  <option value="Option 3">Option 3</option>
-</select>
+<form class="bc-gov-form" action="">
+  <label class="bc-gov-dropdown-label" for="dropdown">Dropdown Label</label>
+    <select class="bc-gov-dropdown" name="dropdown" id="dropdown">
+      <option value="Select">Select</option>
+      <option value="Option 1">Option 1</option>
+      <option value="Option 2">Option 2</option>
+      <option value="Option 3">Option 3</option>
+     </select>
+</form>
 ```
 
 ### CSS
 ```css
+body {
+  font-family: "Noto Sans", Verdana, Arial, sans-serif;
+  font-size: 18px;
+}
+
+.bc-gov-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.bc-gov-dropdown-label {
+  margin-bottom: 10px;
+}
+
 .bc-gov-dropdown {
   font-family: "Noto Sans", Verdana, Arial, sans-serif;
   font-size: 18px;
   color: #494949;
-  position: relative;
   background: none;
   border: 2px solid #606060;
   width: 200px;
