@@ -6,7 +6,7 @@ author: orinevares
 ---
 
 ![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
-> Last Updated: March 26, 2019
+> Last Updated: April 11, 2019
 
 # Callout
 Callouts are an excerpt of text that has been pulled out and used as a visual clue to draw the eye to the text. They are used to help direct a user's attention to important pieces of information.
