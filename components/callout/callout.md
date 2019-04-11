@@ -55,7 +55,7 @@ Learn how to [insert a callout component](https://www2.gov.bc.ca/gov/content/gov
 padding: 25px;
 border-left: 10px solid #38598a;
 margin: 16px 0;
-background color: #f2f2f2;
+background-color: #f2f2f2;
 }
 
 .bcgov-callout h1, h2, h3, h4 {
