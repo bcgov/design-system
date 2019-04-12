@@ -3,12 +3,12 @@ Forms are one of the most important interactions users will have with your servi
 
 Forms are comprised of 5 elements:
 1. **Labels** inform users what data needs to be entered in the corresponding input field.
-2. **Input fields** enable users to provide data through different types of input fields like text inputs, checkboxes, and radio buttons.
+2. **Input fields** enable users to provide data through different types of input fields like [text inputs](https://developer.gov.bc.ca/Design-System/Text-Input), [checkboxes](https://developer.gov.bc.ca/Design-System/Checkbox), and [radio buttons](https://developer.gov.bc.ca/Design-System/Radio-Button).
 3. **Help text** instructs users on how to fill out an input field. Help text is optional.
 4. **Validation** ensures the data submitted by the user conforms to acceptable parameters.
 5. **Actions** allow users to navigate or submit a form.
 
-![Example of form elements showing placement of labels, input fields, help text, validation, and actions](/images/Form-structure.png)
+![Example of form elements showing placement of labels, input fields, help text, validation, and actions](.images/Form-structure.png)
 
 ## Form Design
 
@@ -35,11 +35,11 @@ If your service has multiple paths based on conditional logic, splitting questio
 
 ### Required vs. optional fields
 - All fields in a form should be considered required. You should make sure you know why you’re asking every question and only ask users for information you really need.
-- You should minimize the number of questions asked by removing as many optional ones as you can. To help you work out what to ask, you can carry out a question protocol.
+- You should minimize the number of questions asked by removing as many optional ones as you can. To help you work out what to ask, you can carry out a [question protocol](https://www.uxmatters.com/mt/archives/2010/06/the-question-protocol-how-to-make-sure-every-form-field-is-necessary.php).
 - If you ask for optional information, mark the labels of these fields with “(optional)”.
 - Do not use a red asterisk to indicate required fields. Red asterisks can be hard to see, and screen readers ignore them.
 
-![Two examples of form layouts. Left image shows two form fields with red asterisks indicating required fields with a caption underneath saying "Don't". Right image shows form fields with only one option indicating "optional" with a caption underneath saying "Do"](/images/optional-example.png)
+![Two examples of form layouts. Left image shows two form fields with red asterisks indicating required fields with a caption underneath saying "Don't". Right image shows form fields with only one option indicating "optional" with a caption underneath saying "Do"](/forms/images/optional-example.png)
 
 ### Converting paper forms to digital
 Make sure you do a proper review of your paper form if you are converting it into a digital service.
