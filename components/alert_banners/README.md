@@ -50,6 +50,9 @@ As read using ChromeVox
 ### Colour Contrast
 * [Contrast ratio](https://webaim.org/resources/contrastchecker/) exceed 7:1 for text on button when in static and hover states.
 
+### ARIA Labels
+* ```role="alertdialog"``` labels have been included to ensure screenreaders are conveying the contents of the alert banners effectively.
+
 ## Code
 ### HTML
 ```html
