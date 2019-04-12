@@ -14,7 +14,7 @@ Alert banners notify users of important information or changes on a page. Typica
 
 ## Example
 
-<component-preview path="components/alert_banners/sample.html" height="100px" width="800px"> </component-preview>
+<component-preview path="components/alert_banners/sample.html" height="688px" width="800px"> </component-preview>
 
 ## Use This For
 **Validation**
