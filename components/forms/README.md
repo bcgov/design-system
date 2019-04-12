@@ -8,7 +8,7 @@ Forms are comprised of 5 elements:
 4. **Validation** ensures the data submitted by the user conforms to acceptable parameters.
 5. **Actions** allow users to navigate or submit a form.
 
-![Example of form elements showing placement of labels, input fields, help text, validation, and actions](Form-structure.png)
+![Example of form elements showing placement of labels, input fields, help text, validation, and actions](./Form-structure.png)
 
 ## Form Design
 
