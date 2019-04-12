@@ -8,7 +8,7 @@ Forms are comprised of 5 elements:
 4. **Validation** ensures the data submitted by the user conforms to acceptable parameters.
 5. **Actions** allow users to navigate or submit a form.
 
-![Example of form elements showing placement of labels, input fields, help text, validation, and actions](.images/Form-structure.png)
+![Example of form elements showing placement of labels, input fields, help text, validation, and actions](Form-structure.png)
 
 ## Form Design
 
@@ -39,7 +39,7 @@ If your service has multiple paths based on conditional logic, splitting questio
 - If you ask for optional information, mark the labels of these fields with “(optional)”.
 - Do not use a red asterisk to indicate required fields. Red asterisks can be hard to see, and screen readers ignore them.
 
-![Two examples of form layouts. Left image shows two form fields with red asterisks indicating required fields with a caption underneath saying "Don't". Right image shows form fields with only one option indicating "optional" with a caption underneath saying "Do"](/forms/images/optional-example.png)
+![Two examples of form layouts. Left image shows two form fields with red asterisks indicating required fields with a caption underneath saying "Don't". Right image shows form fields with only one option indicating "optional" with a caption underneath saying "Do"](optional-example.png)
 
 ### Converting paper forms to digital
 Make sure you do a proper review of your paper form if you are converting it into a digital service.
