@@ -40,7 +40,7 @@ As read using ChromeVox
 > *"Combo box, one of 4."*
 
 ### Colour Contrast
-* [Contrast ratio](https://webaim.org/resources/contrastchecker/) exceed 7:1 for text.
+* [Contrast ratio](https://webaim.org/resources/contrastchecker/) exceeds 7:1 for text.
 
 ### Target Areas
 * Dropdown size is at least 44px in height and width
