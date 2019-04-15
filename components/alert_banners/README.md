@@ -6,14 +6,12 @@ author: orinevares
 ---
 
 ![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
-> Last Updated: April 3, 2019
+> Last Updated: April 15, 2019
 
 # Alert Banners
-
-Alert banners notify users of important information or changes on a page. Typically, they appear after at the top of a page.
+Alert banners notify users of important information or changes on a page. Typically, they appear at the top of a page.
 
 ## Example
-
 <component-preview path="components/alert_banners/sample.html" height="688px" width="800px"> </component-preview>
 
 ## Use This For
@@ -21,23 +19,21 @@ Alert banners notify users of important information or changes on a page. Typica
 * Alerting users they just did something successful or if it needs to be corrected
 
 **Notification**
-* To keep users informed on important and typically time sensitive information. Users may or may not have to respond. This includes errors, warnings, or general updates.
+* To inform users on important and typically time sensitive information. Users may or may not have to respond. This includes errors, warnings, or general updates.
 
 ## Don't Use This For
-*	In line error validation for form inputs
+*	In-line error validation on form inputs
 * Popular links on your website. These should be readily available on your homepage.
 
 ## Design Guidance
 *	If a user is required to do something in response to an alert, let them know what they need to do and make that task as easy as possible. 
 * Write messages in a polite and concise manner while avoiding the use of jargon and technical language.
-* Do not write lots of text. Users generally do not read documentation and only skim. Overdoing it will cause users to ignore the content.
+* Do not write lots of text. Users generally do not read documentation and only skim. Too much text will cause users to ignore the content.
 * Allow users the ability to dismiss alerts when appropiate.
 * Do not include alerts that are not related to the users current goal.
 
 ## Rationale
-
-## Behaviour
-1. 
+This alert banner uses semantic colours to convey the meaning behind each message. The information is organized with a logo and title at the top to establish the purpose of the alert, while the supporting text immediately below guides the user with further information or supporting actions. 
 
 ## Accessibility
 In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
@@ -45,10 +41,17 @@ In addition to [fundamental accessibility]() requirements, this component meets 
 ### Screenreaders
 As read using ChromeVox
 
-> *""*
+> *"Success. Everything has been submitted. You should expect a response within three business days."*
+
+> *"Error. There are errors in your submission. Please go back and fix them."*
+
+> *"Information. This webpage has been updated to include the latest poluch changes that took effect on September 28, 2018"*
+
+> *"Warning. Effective December 31, 2019 this website will be shutting down permanently."*
+
 
 ### Colour Contrast
-* [Contrast ratio](https://webaim.org/resources/contrastchecker/) exceed 7:1 for text on button when in static and hover states.
+* [Contrast ratio](https://webaim.org/resources/contrastchecker/) exceeds 7:1 for text and links on all alert background colours.
 
 ### ARIA Labels
 * ```role="alertdialog"``` labels have been included to ensure screenreaders are conveying the contents of the alert banners effectively.
