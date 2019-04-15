@@ -57,7 +57,7 @@ This header matches the mandatory branding requirements of the BC Government. Co
 2. When in mobile view the header title drops below the vertical logo
 
 ## Accessibility
-This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
+This header has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/). This component includes the following accessibility features:
 
 ### Screenreaders
 
