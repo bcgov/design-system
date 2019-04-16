@@ -15,15 +15,17 @@ Alert banners notify users of important information or changes on a page. Typica
 <component-preview path="components/alert_banners/sample.html" height="688px" width="800px"> </component-preview>
 
 ## Use This For
-**Validation**
-* Alerting users they just did something successful or if it needs to be corrected
+Telling users important and typically time sensitive information. This includes:
 
-**Notification**
-* To inform users on important and typically time sensitive information. Users may or may not have to respond. This includes errors, warnings, or general updates.
+* Success messages
+* Error messages
+* Warnings
+* Important pieces of information
 
 ## Don't Use This For
 *	In-line error validation on form inputs
-* Popular links on your website. These should be readily available on your homepage.
+* Popular content on your website.
+* Highlighting content, quotes, examples, snippets of information. Use a [callout component](https://developer.gov.bc.ca/Design-System/Callout) instead
 
 ## Design Guidance
 *	If a user is required to do something in response to an alert, let them know what they need to do and make that task as easy as possible. 
@@ -33,10 +35,10 @@ Alert banners notify users of important information or changes on a page. Typica
 * Do not include alerts that are not related to the users current goal.
 
 ## Rationale
-This alert banner uses semantic colours to convey the meaning behind each message. The information is organized with a logo and title at the top to establish the purpose of the alert, while the supporting text immediately below guides the user with further information or supporting actions. 
+Alert banners use a combination of colour, icon and text to convey the purpose and meaning of the alert message. The text below the alert title provides guidance for the user with additional information or supporting actions.
 
 ## Accessibility
-In addition to [fundamental accessibility]() requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
+In addition to [fundamental accessibility](https://developer.gov.bc.ca/Design-System/Accessibility) requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
 
 ### Screenreaders
 As read using ChromeVox
