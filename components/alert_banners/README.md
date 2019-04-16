@@ -61,19 +61,7 @@ As read using ChromeVox
 ## Code
 ### HTML
 ```html
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>Alert Banner</title>
-  </head>
-<body>
-
-   <div class="bc-gov-alertbanner-success" role="alertdialog" aria-labelledby="success" aria-describedby="success-desc">
+<div class="bc-gov-alertbanner-success" role="alertdialog" aria-labelledby="success" aria-describedby="success-desc">
     <div class="bc-gov-alertbanner-contents">  
       <i class="fas fa-check-circle"></i>
       <div class="bc-gov-alertbanner-success-contents-text">
@@ -88,17 +76,23 @@ As read using ChromeVox
             <i class="fas fa-exclamation-circle"></i>
           <div>
             <h3 id="error">Error</h3>
-            <p id="error-desc">There are errors in your submission. Please go back and <a href="">fix them</a>.</p>
+            <p id="error-desc">Your submission is incomplete. Please go back and complete the following:
+              <ul>
+              <li>Date of birth</li>
+              <li>Last name</li>
+              <li>Primary Address</li>
+              </ul>
+            </p>
           </div>
         </div>
     </div>
 
-    <div class="bc-gov-alertbanner-information" role="alertdialog" aria-labelledby="information" aria-describedby="information-desc">
+    <div class="bc-gov-alertbanner-important" role="alertdialog" aria-labelledby="important" aria-describedby="important-desc">
         <div class="bc-gov-alertbanner-contents">  
             <i class="fas fa-info-circle"></i>
           <div>
-            <h3 id="information">Information</h3>
-            <p id="information-desc">This webpage has been updated to include the latest policy changes that took effect on September 28, 2018</p>
+            <h3 id="important">Important</h3>
+            <p id="important-desc">This webpage has been updated to include the latest policy changes that took effect on September 28, 2018</p>
           </div>
         </div>
     </div>
@@ -112,9 +106,6 @@ As read using ChromeVox
           </div>
         </div>
     </div>
-
-</body>
-</html>
 
 ```
 
@@ -151,7 +142,7 @@ h3 {
   margin-bottom: 36px;
 }
 
-.bc-gov-alertbanner-information {
+.bc-gov-alertbanner-important {
   width: 800px;
   background-color: #EEF4FA;
   border-left: 10px solid #5091CD;
@@ -204,6 +195,10 @@ h3 {
   padding-right: 30px;
   padding-top: 5px;
   color: #494949;
+}
+
+ul {
+  margin: 0px;
 }
 
 a {
