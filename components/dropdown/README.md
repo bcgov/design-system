@@ -49,14 +49,17 @@ As read using ChromeVox
 ### HTML
 ```html
 <form class="bc-gov-form" action="">
-  <label class="bc-gov-dropdown-label" for="dropdown">Dropdown label</label>
-    <select class="bc-gov-dropdown" name="dropdown" id="dropdown">
-      <option value="Select">Select</option>
-      <option value="Option 1">Option 1</option>
-      <option value="Option 2">Option 2</option>
-      <option value="Option 3">Option 3</option>
-     </select>
-</form>
+      <label class="bc-gov-dropdown-label" for="dropdown">Dropdown Label</label>
+      <div class="bc-gov-dropdown-wrapper">
+        <i class="fas fa-chevron-down"></i>
+        <select class="bc-gov-dropdown" name="options" id="dropdown">
+            <option value="Select">Select</option>
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+        </select>
+      </div>
+    </form>
 ```
 
 ### CSS
@@ -69,6 +72,7 @@ body {
 .bc-gov-form {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .bc-gov-dropdown-label {
@@ -79,9 +83,26 @@ body {
   font-family: "Noto Sans", Verdana, Arial, sans-serif;
   font-size: 18px;
   color: #494949;
-  background: none;
+  background: white;
+  box-shadow: none;
   border: 2px solid #606060;
-  width: 200px;
+  min-width: 200px;
+  padding: 8px 45px 8px 15px;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+}
+
+.fa-chevron-down {
+  pointer-events: none;
+  position: absolute;
+  top: calc(1em - 4px);
+  right: 1em;
+}
+
+.bc-gov-dropdown-wrapper {
+  position: relative;
+  display: inline;
 }
 
 :focus {
