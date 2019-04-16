@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Alert Banner</title>
+  </head>
+<body>
 
+   <div class="bc-gov-alertbanner-success" role="alertdialog" aria-labelledby="success" aria-describedby="success-desc">
+    <div class="bc-gov-alertbanner-contents">  
+      <i class="fas fa-check-circle"></i>
+      <div class="bc-gov-alertbanner-success-contents-text">
+        <h3 id="success">Success</h3>
+        <p id="success-desc">Everything has been submitted. You should expect a response within three business days.</p>
+      </div>
+    </div>
+    </div>
+
+    <div class="bc-gov-alertbanner-error" role="alertdialog" aria-labelledby="error" aria-describedby="error-desc">
+        <div class="bc-gov-alertbanner-contents">  
+            <i class="fas fa-exclamation-circle"></i>
+          <div>
+            <h3 id="error">Error</h3>
+            <p id="error-desc">Your submission is incomplete. Please go back and complete the following:
+              <ul>
+              <li>Date of birth</li>
+              <li>Last name</li>
+              <li>Primary Address</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div class="bc-gov-alertbanner-important" role="alertdialog" aria-labelledby="important" aria-describedby="important-desc">
+        <div class="bc-gov-alertbanner-contents">  
+            <i class="fas fa-info-circle"></i>
+          <div>
+            <h3 id="important">Important</h3>
+            <p id="important-desc">This webpage has been updated to include the latest policy changes that took effect on September 28, 2018</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="bc-gov-alertbanner-warning" role="alertdialog" aria-labelledby="warning" aria-describedby="warning-desc">
+        <div class="bc-gov-alertbanner-contents">  
+            <i class="fas fa-exclamation-triangle"></i>
+          <div>
+            <h3 id="warning">Warning</h3>
+            <p id="warning-desc">Effective December 31, 2019 this website will be shutting down permanently.</p>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
