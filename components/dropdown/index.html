@@ -4,17 +4,21 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Dropdown</title>
   </head>
   <body>
     <form class="bc-gov-form" action="">
-      <label class="bc-gov-dropdown-label" for="dropdown">Dropdown label</label>
-        <select class="bc-gov-dropdown" name="dropdown" id="dropdown">
+      <label class="bc-gov-dropdown-label" for="dropdown">Dropdown Label</label>
+      <div class="bc-gov-dropdown-wrapper">
+        <i class="fas fa-chevron-down"></i>
+        <select class="bc-gov-dropdown" name="options" id="dropdown">
             <option value="Select">Select</option>
             <option value="Option 1">Option 1</option>
             <option value="Option 2">Option 2</option>
             <option value="Option 3">Option 3</option>
         </select>
+      </div>
     </form>
   </body>
 </html>
