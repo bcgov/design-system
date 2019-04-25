@@ -14,6 +14,7 @@ Primary buttons allow users to carry out an important action on your service, su
 ## Example
 
 <component-preview path="components/primary_button/sample.html" height="100px" width="800px"> </component-preview>
+<component-preview path="components/primary_button/sample-dark.html" height="100px" width="800px"> </component-preview>
 
 ## Use This For
 * The most important actions you want users to take on your site.
@@ -87,5 +88,51 @@ As read using ChromeVox
 
 .BC-Gov-PrimaryButton:active {
   opacity: 1;
+}
+```
+### HTML - Dark Background
+```html
+<button class="BC-Gov-PrimaryButton-Dark" type="button" name="button">Submit</button>
+```
+
+### CSS - Dark Background
+```css
+.BC-Gov-PrimaryButton-Dark {
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    color: #494949;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.BC-Gov-PrimaryButton-Dark:hover {
+  text-decoration: underline;
+  background-color: #f2f2f2
+}
+
+:focus {
+  outline: 4px solid #3B99FC;
+  outline-offset: 1px;
+}
+
+.BC-Gov-PrimaryButton-Dark:active {
+  background-color: #fff;
+}
+
+.background-colour {
+  background-color: #003366;
+  height: 100px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 ```
