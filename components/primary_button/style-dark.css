@@ -1,0 +1,38 @@
+.BC-Gov-PrimaryButton {
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    color: #494949;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.BC-Gov-PrimaryButton:hover {
+  text-decoration: underline;
+  background-color: #f2f2f2
+}
+
+:focus {
+  outline: 4px solid #3B99FC;
+  outline-offset: 1px;
+}
+
+.BC-Gov-PrimaryButton:active {
+  background-color: #fff;
+}
+
+.background-colour {
+  background-color: #003366;
+  height: 100px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
