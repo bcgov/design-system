@@ -14,6 +14,7 @@ Secondary buttons allow users to carry out a supporting action on your service, 
 ## Example
 
 <component-preview path="components/secondary_button/sample.html" height="100px" width="800px"> </component-preview>
+<component-preview path="components/secondary_button/sample-dark.html" height="100px" width="800px"> </component-preview>
 
 ## Use This For
 * Supporting actions users can take on your site.
@@ -85,5 +86,55 @@ As read using ChromeVox
     }
 .BC-Gov-SecondaryButton:active {
     opacity: 1;
+    }
+```
+### HTML - Dark Background
+
+```html
+<button class="BC-Gov-SecondaryButton-Dark" type="button" name="button">Cancel</button>
+```
+
+### CSS - Dark Background
+
+```css
+.BC-Gov-SecondaryButton-Dark {
+    background: none;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    Font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #fff;
+    }
+
+.BC-Gov-SecondaryButton-Dark:hover {
+    text-decoration: underline;
+    background-color: #fff;
+    color: #494949;
+    }
+
+:focus {
+    outline-offset: 1px;
+    outline: 4px solid #3B99FC;
+    }
+
+.BC-Gov-SecondaryButton-Dark:active {
+    background-color: #f2f2f2;
+    color: #494949;
+    }
+
+.background-colour {
+    background-color: #003366;
+    height: 100px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
 ```
