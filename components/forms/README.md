@@ -50,7 +50,7 @@ If your service has multiple paths based on conditional logic, splitting questio
 
 ### Converting paper forms to digital
 Make sure you do a proper review of your paper form if you are converting it into a digital service.
-* Confirm that the content of the information collection notice [link to pattern] is accurate.
+* Confirm that the content of the information collection notice is accurate.
 * If there are any ‘terms and conditions’ present, confirm they are still accurate and don’t need revision for the web.
 * Forms are a managed business asset, which is why you’ll see a form number such as FIN 743 at the bottom of printed forms. All forms are tracked through their life cycle, and web forms are no exception. Talk to your ministry’s forms analyst or manager as soon as possible to let them know a form is being converted or created.
 
