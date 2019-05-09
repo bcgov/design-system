@@ -1,6 +1,6 @@
 ---
 description: How to use the design system prototyping libraries
-title: Prototyping Tools
+title: Prototype with the Design System
 author: orinevares
 ---
 
