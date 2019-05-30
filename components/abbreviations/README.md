@@ -9,8 +9,8 @@ author: orinevares
 
 > Last Updated: May 30, 2019
 
-# Abbreviations
-Abbreviations are shortened forms of a word, phrase, or name where the abbreviation has not become part of the language. They are often used to reduce the redundancy within a body of text.
+# Abbreviation
+An abbreviation is a shortened form of a word, phrase, or name where the abbreviation has not become part of the language. They are often used to reduce redundancy within a body of text.
 
 ## Example
 
