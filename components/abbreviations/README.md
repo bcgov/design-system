@@ -9,26 +9,26 @@ author: orinevares
 
 > Last Updated: May 30, 2019
 
-# Abbreviation
-An abbreviation is a shortened form of a word, phrase, or name where the abbreviation has not become part of the language. They are often used to reduce redundancy within a body of text.
+# Abbreviations & Acronyms
+An abbreviation or acronym is a shortened form of a word, phrase, or name. They are often used to reduce redundancy within a body of text.
 
 ## Example
-
 <component-preview path="components/abbreviations/sample.html" height="100px" width="800px"> </component-preview>
 
 ## Use This For:
-* Formal titles or names that occur frequently in your writing
+* Providing the full name of an abbreviation or acronym
 
 ## Design Guidance
-* When you want to use abbreviations make sure the word, phrase, or name you are shortening is written out in full the first time it is mentioned.
+* Give the full name and put the abbreviation or acronym in parentheses the first time you use them. For example, Provincial sales tax (PST)
+* For more information on using abbreviations and acronyms read the guide on [Writing for the Web] (https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/writing-for-the-web/web-style-guide/abbreviations)
 
 ## Rationale
-* Abbreviations can result in new words and phrases that do not exist in the language of communication. Screenreaders and assistive technologies cannot identify how to properly read abbreviations without being warned with proper tagging.
+* Screenreaders and assistive technologies cannot identify how to properly read abbreviations without being warned with proper tagging.
 
 Discuss this design on the [Abbreviation Github Issue](https://github.com/bcgov/design-system/issues/191)
 
 ## Accessibility
-This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards and all government services should strive to meet this level.  This component successfully includes the following accessibility features:
+This component has been built according to [WCAG 2.0 AAA](https://www.w3.org/TR/WCAG20/), the highest web accessibility standard. It successfuly meets criteria 3.1.4 which states the need for a mechanism to identify the expanded form or meaning of abbreviations for digital services. This component successfully includes the following accessibility features:
 
 ### Screen readers
 (coming soon)
@@ -38,10 +38,7 @@ This component has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/W
 ### HTML
 
 ```html
-    <p>Sugar is commonly sold in 5 <abbr title="pound">lb.</abbr> bags.</p>
-    <p>Parents who need financial help with childcare should apply for the new <abbr title="Affordable Child Care Benefit">ACCB</abbr> program.</p>
-    <p>The <abbr title="Privacy Impact Assessment">PIA</abbr> process ensures all government programs and initiatives are compliant with <abbr title="Freedom of Information and Protection of Privacy Act">FOIPPA</abbr>.</p>
-    <p>Tasini <abbr title="and others">et al.</abbr></p>
+    <p>On September 1, 2018, the Affordable Child Care Benefit (ACCB) replaced the Child Care Subsidy. Parents who need financial help with childcare should apply for the new <abbr title="Affordable Child Care Benefit">ACCB</abbr></p>
 ```
 
 ### CSS
