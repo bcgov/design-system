@@ -1,6 +1,6 @@
 ---
-description: Abbreviations & Acronyms are shortened versions of a word or phrase.
-title: Abbreviations
+description: Abbreviations and acronyms are shortened versions of a word or phrase.
+title: Abbreviations and Acronyms
 status: Draft
 author: orinevares
 ---
@@ -9,7 +9,7 @@ author: orinevares
 
 > Last Updated: June 5, 2019
 
-# Abbreviations & Acronyms
+# Abbreviations and Acronyms
 An abbreviation or acronym is a shortened form of a word, phrase, or name. They are often used to reduce redundancy within a body of text.
 
 ## Example
