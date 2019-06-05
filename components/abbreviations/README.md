@@ -1,5 +1,5 @@
 ---
-description: Abbreviations are shortened versions of a word or phrase.
+description: Abbreviations & Acronyms are shortened versions of a word or phrase.
 title: Abbreviations
 status: Draft
 author: orinevares
@@ -7,7 +7,7 @@ author: orinevares
 
 ![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
 
-> Last Updated: May 30, 2019
+> Last Updated: June 5, 2019
 
 # Abbreviations & Acronyms
 An abbreviation or acronym is a shortened form of a word, phrase, or name. They are often used to reduce redundancy within a body of text.
