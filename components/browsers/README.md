@@ -58,7 +58,5 @@ New products and platforms might not appear in any data, but it makes sense for 
 You also have to work out when to stop supporting a product or system if its popularity is declining.
 
 --
-Gov.UK Service Manual
+Gov.UK Service Manual [Designing for different browsers and devices](https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices)
 Content has been adapted from the Gov.UK Service Manual and contains public sector information licensed under the Open Government Licence v3.0
-
-https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices
