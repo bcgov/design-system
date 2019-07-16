@@ -1,3 +1,5 @@
+Copyright (c) 2015, Google Inc., copyright (c) 2019, Province of B.C. 2019
+
 This Font Software is licensed under the SIL Open Font License,
 Version 1.1.
 

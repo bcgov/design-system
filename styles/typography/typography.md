@@ -10,31 +10,27 @@ status: draft
 
 Good typography maintains a clear hierarchy of information and structures the content to help users understand and navigate your service.
 
-## Noto Sans
+## BC Sans
 
-The BC Design System uses the Noto Sans typeface. Noto is an open sourced font family, developed by Google, which aims to support a variety of languages with a harmonious look and feel.
+The B.C. Digital Design System uses the BC Sans typeface. BC Sans is an open sourced font family, and is a modified version of Noto Sans, developed by Google. BC Sans includes specific modifications to support Indigenous languages in British Columbia.
 
 Font weights included:
 
-* Noto Sans Regular 400
-* Noto Sans Italic 400
-* Noto Sans Bold 700
-* Noto Sans Bold Italic 700
-
-
- ### Using Noto Sans
-Do not use the Google API to access Noto Sans because this violates B.C. data privacy legislation.
+* BC Sans Regular 400
+* BC Sans Italic 400
+* BC Sans Bold 700
+* BC Sans Bold Italic 700
 
 **Option 1**
 
-Download and include the [Noto Sans font family](https://github.com/bcgov/design-system/tree/master/styles/typography/fonts) in your local project files.
+Download and include the [BC Sans font family](https://github.com/bcgov/design-system/tree/master/styles/typography/fonts) in your local project files.
 
 
 Font-stack
 
 ```css
 body {
-     font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+     font-family: ‘BC Sans’, Verdana, Arial, sans-serif;
 }
 ```
 
@@ -58,7 +54,7 @@ p {
 
 ## Headings
 
-Heading are sized based on a Minor Third (1.200) scale to achieve a harmonious increase of sizes. 
+Heading are sized based on a Minor Third (1.200) scale to achieve a harmonious increase of sizes.
 
 <component-preview path="styles/typography/header-sample.html" height="300px" width="800px"> </component-preview>
 

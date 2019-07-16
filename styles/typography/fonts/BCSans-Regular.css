@@ -1,0 +1,11 @@
+/* Webfont: BCSans-Regular */@font-face {
+    font-family: 'BCSans';
+    src: url('BCSans-Regular.eot'); /* IE9 Compat Modes */
+    src: url('BCSans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('BCSans-Regular.woff') format('woff'), /* Modern Browsers */
+         url('BCSans-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
