@@ -6,7 +6,7 @@
     padding: 12px 32px;
     text-align: center;
     text-decoration: none;
-    display: block;
+    display: inline-block;
     font-size: 18px;
     font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-weight: 700;
@@ -16,7 +16,7 @@
 
 .BC-Gov-PrimaryButton:hover {
   text-decoration: underline;
-  opacity: 0.80;
+  background-color: #336699;
 }
 
 :focus {
