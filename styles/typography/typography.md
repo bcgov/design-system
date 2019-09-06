@@ -36,13 +36,30 @@ Code package management through npm (coming soon)
 
 
 ```css
-@font-face {
-  src: url('BCSans.woff') format('woff'); /* Modern Browsers */
-  font-family: 'BCSans';
+@font-face{
+font-family: 'BCSans';
+font-style: normal;
+src: url('assets/fonts/BCSans/BCSans-Regular.woff') format('woff'), / Modern Browsers /
+url('assets/fonts/BCSans/BCSans-Regular.woff2') format('woff2'); / Optimized for very modern browsers /
 }
-
-body {
-     font-family: ‘BCSans’, Verdana, Arial, sans-serif;
+@font-face{
+font-family: 'BCSans';
+font-style: italic;
+src: url('assets/fonts/BCSans/BCSans-Italic.woff') format('woff'), / Modern Browsers /
+url('assets/fonts/BCSans/BCSans-Italic.woff2') format('woff2'); / Optimized for very modern browsers /
+}
+@font-face{
+font-family: 'BCSans';
+font-weight: 700;
+src: url('assets/fonts/BCSans/BCSans-Bold.woff') format('woff'), / Modern Browsers /
+url('assets/fonts/BCSans/BCSans-Bold.woff2') format('woff2'); / Optimized for very modern browsers /
+}
+@font-face{
+font-family: 'BCSans';
+font-style: italic;
+font-weight: 700;
+src: url('assets/fonts/BCSans/BCSans-BoldItalic.woff') format('woff'), / Modern Browsers /
+url('assets/fonts/BCSans/BCSans-BoldItalic.woff2') format('woff2'); / Optimized for very modern browsers /
 }
 ```
 
