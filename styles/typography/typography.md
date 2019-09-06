@@ -30,11 +30,35 @@ Download and include the font files in your project
 * [Download files for your local computer](https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/policies-procedures-standards/web-content-development-guides/corporate-identity-assets/visid-files/bc-sans-font-otf.zip) (.otf)
 * [Download all font files](https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/policies-procedures-standards/web-content-development-guides/corporate-identity-assets/visid-files/bc-sans-font-all.zip) (.eot, .ttf, .otf, .woff, .woff2)
 
-### Font Integration
+### npm Font Package
 
-Code package management through npm (coming soon)
+`npm i --save @bcgov/bc-sans`
 
+#### React
 
+Embed into a root level component
+`import '@bcgov/bc-sans/css/BCSans.css'`
+
+### Typography.js
+
+A high-level elegant API for expressing typographic design intent
+>See Typography.js installation instructions [here](https://github.com/KyleAMathews/typography.js)
+```js
+import Typography from 'typography';
+import '@bcgov/bc-sans/css/BCSans.css';
+
+const typography = new Typography({
+  baseFontSize: '18px',
+  baseLineHeight: 1.25,
+  headerFontFamily: ['BCSans', 'Verdana', 'Arial', 'sans-serif'],
+  bodyFontFamily: ['BCSans', 'Verdana', 'Arial', 'sans-serif'],
+  scaleRatio: 2.074,
+});
+
+export default typography;
+```
+
+### @font-face
 ```css
 @font-face{
 font-family: 'BCSans';
@@ -62,7 +86,9 @@ src: url('assets/fonts/BCSans/BCSans-BoldItalic.woff') format('woff'), / Modern 
 url('assets/fonts/BCSans/BCSans-BoldItalic.woff2') format('woff2'); / Optimized for very modern browsers /
 }
 ```
+### Font Stack
 
+`font-family: ‘BCSans’, Verdana, Arial, sans-serif;`
 
 ## Paragraphs
 
