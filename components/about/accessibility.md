@@ -6,30 +6,8 @@ author: orinevares
 
 ## Accessibility
 
-The Government of British Columbia strives to meet [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards with all public facing digital services. In addition to The design system's components meet or exceed the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by meeting the following criteria.
+The B.C. government is committed to creating websites, online content, and applications that are accessible to all British Columbians, regardless of their level of ability. 
 
-### Page Structure
-* [Heading Structure](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility)
-* [Designing for Screen Readers](https://webaim.org/techniques/screenreader/)
+We are working toward meeting international web accessibility from the [World Wide Web Consortium (W3C) Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/) and are committed to designing, developing, and updating websites to meet or exceed this standard.
 
-### Text Size
-* Baseline text is at least 18px
-* Line height is at least 1.5
-
-### Target Areas
-* Increased in size from default settings
-
-### Screenreaders
-
-* Component code has proper ALT labels
-* Language tag is set to english
-* Links do not open new pages or tabs
-
-### Colour Contrast
-* Constrast ratios are at least 7:1 for normal text (below 24px or bolded 18.66px) and 4.5:1 for large text (24px or bolded 18.66px and above)
-
-### Keyboard Navigation
-* Supports tab navigation for use without a mouse
-
-### Conveying Information
-* Colour changes are not the only means of conveying information
+Design system components are built to meet or exceed the WCAG AA 2.0 standard. You can find guides and step-by-step instructions on how to develop accessible content and websites on the [Accessibility and Inclusion Toolkit](https://www2.gov.bc.ca/gov/content?id=5D5C4759BC7E494AB9E8EDB7AD3D3D78).
