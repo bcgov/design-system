@@ -88,7 +88,7 @@ url('assets/fonts/BCSans/BCSans-BoldItalic.woff') format('woff'); / Modern Brows
 ```
 ### Font Stack
 
-`font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;`
+`font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;`
 
 ## Paragraphs
 
