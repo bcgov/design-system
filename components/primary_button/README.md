@@ -70,7 +70,7 @@ As read using ChromeVox
     text-decoration: none;
     display: block;
     font-size: 18px;
-    font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+    font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
@@ -107,7 +107,7 @@ As read using ChromeVox
     text-decoration: none;
     display: block;
     font-size: 18px;
-    font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+    font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
