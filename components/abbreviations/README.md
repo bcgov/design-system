@@ -45,7 +45,7 @@ This component has been built according to [WCAG 2.0 AAA](https://www.w3.org/TR/
 ```css
 
 p {
-  font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.6;
   color: #494949;

@@ -96,7 +96,7 @@ If a radio button was selected
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 18px;
-  font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
