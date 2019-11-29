@@ -84,7 +84,7 @@ header {
 }
 
 header h1 {
-  font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-weight: normal;  /* 400 */
   margin: 5px 5px 0 18px;
   visibility: hidden;

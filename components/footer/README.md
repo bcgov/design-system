@@ -79,7 +79,7 @@ footer {
   background-color: #036;
   border-top: 2px solid #fcba19;
   color: #fff;
-  font-family: ‘Noto Sans’, Verdana, Arial, sans-serif; 
+  font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif; 
 }
 
 footer .container {

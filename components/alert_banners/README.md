@@ -113,7 +113,7 @@ As read using ChromeVox
 ```css
 
 body {
-  font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.6;
   color: #494949;

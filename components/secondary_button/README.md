@@ -68,7 +68,7 @@ As read using ChromeVox
     text-decoration: none;
     display: block;
     font-size: 18px;
-    Font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+    Font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;

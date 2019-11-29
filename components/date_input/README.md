@@ -84,7 +84,7 @@ As read using ChromeVox
 
 ```css
 form {
-    font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+    font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-size: 16px;
     display: flex;
 }

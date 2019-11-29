@@ -65,12 +65,12 @@ As read using ChromeVox
 ### CSS
 ```css
 form {
-  font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 18px;
 }
 
 .text_input {
-  font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 18px;
   border: 2px solid #606060;
   margin-top: 5px;

@@ -65,7 +65,7 @@ As read using ChromeVox
 ### CSS
 ```css
 body {
-  font-family: "Noto Sans", Verdana, Arial, sans-serif;
+  font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 18px;
 }
 
@@ -80,7 +80,7 @@ body {
 }
 
 .bc-gov-dropdown {
-  font-family: "Noto Sans", Verdana, Arial, sans-serif;
+  font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 18px;
   color: #494949;
   background: white;

@@ -89,7 +89,7 @@ As read using ChromeVox
   padding-left: 25px;
   margin-bottom: 12px;
   cursor: pointer;
-  Font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+  Font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 16px;
   -webkit-user-select: none;
   -moz-user-select: none;

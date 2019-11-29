@@ -59,7 +59,7 @@ This supports WCAG 2.0 1.4.1 Use of Color: Color is not used as the only visual 
     text-decoration: none;
     display: block;
     font-size: 18px;
-    font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
+    font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
     cursor: not-allowed;
