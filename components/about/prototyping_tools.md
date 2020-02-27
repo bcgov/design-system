@@ -6,5 +6,9 @@ author: orinevares
 
 # Prototype with the Design System
 
-## Sketch App (Coming Soon)
-The design system components will be available as a Sketch file to use in your prototypes and mockups. The components will be available through Sketch Cloud and will be downloadable or can be added to your Shared Library. 
+## Adobe XD
+![Status](https://img.shields.io/badge/Community%20Contribution-v1.0-blue)
+
+The design system components have been created in Adobe XD to use for layout and prototyping.
+
+[Download Adobe XD Components](Design-System-v6.xd)
