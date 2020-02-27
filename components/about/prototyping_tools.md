@@ -9,6 +9,6 @@ author: orinevares
 ## Adobe XD
 ![Status](https://img.shields.io/badge/Community%20Contribution-v1.0-blue)
 
-The design system components have been created in Adobe XD to use for layout and prototyping.
+The design system components have been created in Adobe XD to use for mockups and prototyping.
 
-[Download Adobe XD Components](Design-System-v6.xd)
+[Download Adobe XD Components](https://github.com/bcgov/design-system/tree/master/components/assets/prototyping)
