@@ -10,7 +10,7 @@ Alpha
 
 ## Documentation
 
-https://developer.gov.bc.ca/Design-System/About
+https://developer.gov.bc.ca/About-the-Design-System
 
 ## Files in this repository
 
