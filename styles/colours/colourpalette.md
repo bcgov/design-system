@@ -4,7 +4,7 @@ title: Colour Palette
 status: draft
 ---
 ![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
-> Last Updated: February 20, 2019
+> Last Updated: April 30, 2020
 
 # Colour Palette
 
@@ -38,7 +38,7 @@ The B.C. Government colour palette ensures all public facing government services
   <div class="row">
     <div class="col-sm-4">
       <div class="card">
-        <div class="p-3 text-white" style="background-color: #494949; height: 150px;">#494949</div>
+        <div class="p-3 text-white" style="background-color: #313132; height: 150px;">#313132</div>
         <div class="card-body">
           <p class="mb-0">Used for <a href="https://developer.gov.bc.ca/Design-System/Typography">headings and paragraphs</a></p>
         </div>
