@@ -6,7 +6,7 @@ author: orinevares
 ---
 
 ![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
-> Last Updated: March 27, 2019
+> Last Updated: April 30, 2020
 
 # Secondary Button
 Secondary buttons allow users to carry out a supporting action on your service, such as Back or Cancel.
@@ -116,7 +116,7 @@ As read using ChromeVox
 .BC-Gov-SecondaryButton-Dark:hover {
     text-decoration: underline;
     background-color: #fff;
-    color: #494949;
+    color: #313132;
     }
 
 :focus {
@@ -126,7 +126,7 @@ As read using ChromeVox
 
 .BC-Gov-SecondaryButton-Dark:active {
     background-color: #f2f2f2;
-    color: #494949;
+    color: #313132;
     }
 
 .background-colour {

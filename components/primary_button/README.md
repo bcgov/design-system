@@ -6,7 +6,7 @@ author: orinevares
 ---
 
 ![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
-> Last Updated: February 11, 2019
+> Last Updated: April 30, 2020
 
 # Primary Button
 Primary buttons allow users to carry out an important action on your service, such as Download or Submit.
@@ -101,7 +101,7 @@ As read using ChromeVox
     background-color: #fff;
     border: none;
     border-radius: 4px;
-    color: #494949;
+    color: #313132;
     padding: 12px 32px;
     text-align: center;
     text-decoration: none;

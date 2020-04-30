@@ -6,7 +6,7 @@ author: orinevares
 ---
 
 ![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
-> Last Updated: April 3, 2019
+> Last Updated: April 30, 2020
 
 # Dropdown
 Dropdowns allow users to select one option from a list.
@@ -82,7 +82,7 @@ body {
 .bc-gov-dropdown {
   font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 18px;
-  color: #494949;
+  color: #313132;
   background: white;
   box-shadow: none;
   border: 2px solid #606060;
