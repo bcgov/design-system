@@ -5,6 +5,7 @@ status: draft
 ---
 
 ![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
+> Last Updated: April 30, 2020
 
 # Typography
 
@@ -103,7 +104,7 @@ p {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 36px;
-  color: #494949;
+  color: #313132;
 }
 ```
 
