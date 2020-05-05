@@ -43,7 +43,7 @@ header .other {
 /*
   These are sample media queries only. Media queries are quite subjective
   but, in general, should be made for the three different classes of screen
-  size: phone, tablet, full. 
+  size: phone, tablet, full.
 */
 
 @media screen and (min-width: 600px) and (max-width: 899px) {
