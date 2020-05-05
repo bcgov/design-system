@@ -38,10 +38,10 @@ The text in the header should include the site title or service name. If the web
 * Not be brand-driven or focused on marketing
 
 Good examples include:
-*	Apply for MSP
-*	Get help with court fees
-*	Renew your license
-*	Find a career
+* Apply for MSP
+* Get help with court fees
+* Renew your license
+* Find a career
 
 *Adapted from the UK Government’s [Service Naming Guide](https://www.gov.uk/service-manual/design/naming-your-service)
 
@@ -50,7 +50,7 @@ This header matches the mandatory branding requirements of the BC Government. Co
 
 ## Behaviour
 
-1. Clicking on B.C. government logo links the user back to the homepage of your service 
+1. Clicking on B.C. government logo links the user back to the homepage of your service
 
 ### Mobile Design
 1. Logo and title shrink until mobile size
@@ -77,24 +77,24 @@ As read using ChromeVox
 <!--
   All in-line CSS is specific to this sample; it can and should be ignored.
  -->
-  <header>
-    <div class="banner">
-        <a href="https://gov.bc.ca" alt="British Columbia">
-          <img src="../assets/images/BCID_H_rgb_rev.svg" alt="Go to the Government of British Columbia website" />
-        </a>
-        <h1>Hello British Columbia</h1>
-    </div>
-    <div class="other">
-    <!-- 
-      This place is for anything that needs to be right aligned
-      beside the logo.  
-    -->
-      &nbsp;
-    </div>
-    </div>
-  </header>
+<header>
+  <div class="banner">
+    <a href="https://gov.bc.ca" alt="British Columbia">
+      <img src="../assets/images/BCID_H_rgb_rev.svg" alt="Go to the Government of British Columbia website" />
+    </a>
+    <h1>Hello British Columbia</h1>
+  </div>
+  <div class="other">
+  <!--
+    This place is for anything that needs to be right aligned
+    beside the logo.
+  -->
+    &nbsp;
+  </div>
+  </div>
+</header>
 ```
-    
+
 ### CSS
 
 ```css
@@ -138,7 +138,7 @@ header .other {
 /*
   These are sample media queries only. Media queries are quite subjective
   but, in general, should be made for the three different classes of screen
-  size: phone, tablet, full. 
+  size: phone, tablet, full.
 */
 
 @media screen and (min-width: 600px) and (max-width: 899px) {
@@ -155,6 +155,7 @@ header .other {
   }
 }
 ```
+
 ### Assets
-1.	Logo
-2.	Font download or reference link
+1. Logo
+2. Font download or reference link
