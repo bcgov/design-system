@@ -79,7 +79,7 @@ As read using ChromeVox
  -->
 <header>
   <div class="banner">
-    <a href="https://gov.bc.ca" alt="British Columbia">
+    <a href="https://gov.bc.ca">
       <img src="../assets/images/BCID_H_rgb_rev.svg" alt="Go to the Government of British Columbia website" />
     </a>
     <h1>Hello British Columbia</h1>
@@ -90,7 +90,6 @@ As read using ChromeVox
     beside the logo.
   -->
     &nbsp;
-  </div>
   </div>
 </header>
 ```
