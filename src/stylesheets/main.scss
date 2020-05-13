@@ -1,0 +1,16 @@
+// main.scss
+// ---------
+// This is the primary entry point into the Sass files.
+
+// Common modules
+@import "components/base";
+
+// Component partials
+@import "components/typography";
+@import "components/alerts";
+@import "components/buttons";
+@import "components/grids";
+// ...
+
+// Third-party Sass/CSS
+@import "components/normalize";

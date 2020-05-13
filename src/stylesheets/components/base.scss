@@ -1,0 +1,18 @@
+// base.scss
+// ---------
+// Declare global variables for base styles and import all modules.
+
+// Font weights
+$regular: 400;
+$bold: 700;
+
+// Base font
+$base-font-family: 'BCSans';
+$base-font-weight: $regular;
+$base-font-size: 16px;
+$base-line-height: 1.25em;
+
+// Heading scale
+$heading-scale: 1.200;
+
+@import "modules/all";
