@@ -11,3 +11,5 @@ author: orinevares
 
 The design system components have been created in Adobe XD by a community member to use for mockups and prototyping.
 [Download XD File](https://github.com/bcgov/design-system/raw/master/assets/Design-System-v6.xd)
+
+A Figma template is also being started [here](https://github.com/bcgov/figma).
