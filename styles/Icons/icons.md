@@ -5,7 +5,7 @@ status: draft
 ---
 
 ![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
-> Last Updated: February 1, 2019
+> Last Updated: July 28, 2020
 
 # Icons
 Iconography uses images and symbols to represent an idea visually. They communicate a message and should be distinct and informative.
@@ -13,7 +13,7 @@ Iconography uses images and symbols to represent an idea visually. They communic
 ## Implementation
 The design system supports using the Font Awesome icon library. Use these icons in your application by:
 *	Hosting the [font library locally](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself) in your project source files
-*	Using npm if you are using [Vue](https://fontawesome.com/how-to-use/on-the-web/using-with/vuejs), [Angular](https://fontawesome.com/how-to-use/on-the-web/using-with/angular), or [React](https://fontawesome.com/how-to-use/on-the-web/using-with/angular) components
+*	Using npm if you are using [Vue](https://fontawesome.com/how-to-use/on-the-web/using-with/vuejs), [Angular](https://fontawesome.com/how-to-use/on-the-web/using-with/angular), or [React](https://fontawesome.com/how-to-use/on-the-web/using-with/react) components
 
 | Icon      | Label | Class Name |
 | ----------- | ----------- | ----------- |
