@@ -61,35 +61,35 @@ export default typography;
 
 ### @font-face
 ```css
-@font-face{
-font-family: 'BCSans';
-font-style: normal;
-src: url('assets/fonts/BCSans/BCSans-Regular.woff2') format('woff2'), / Optimized for very modern browsers / 
-url('assets/fonts/BCSans/BCSans-Regular.woff') format('woff'); / Modern Browsers /
+@font-face {
+  font-family: 'BCSans';
+  font-style: normal;
+  src: url('assets/fonts/BCSans/BCSans-Regular.woff2') format('woff2'), /* Optimized for very modern browsers */
+       url('assets/fonts/BCSans/BCSans-Regular.woff') format('woff'); /* Modern Browsers */
 }
-@font-face{
-font-family: 'BCSans';
-font-style: italic;
-src: url('assets/fonts/BCSans/BCSans-Italic.woff2') format('woff2'), / Optimized for very modern browsers / 
-url('assets/fonts/BCSans/BCSans-Italic.woff') format('woff'); / Modern Browsers /
+@font-face {
+  font-family: 'BCSans';
+  font-style: italic;
+  src: url('assets/fonts/BCSans/BCSans-Italic.woff2') format('woff2'), /* Optimized for very modern browsers */
+       url('assets/fonts/BCSans/BCSans-Italic.woff') format('woff'); /* Modern Browsers */
 }
-@font-face{
-font-family: 'BCSans';
-font-weight: 700;
-src: url('assets/fonts/BCSans/BCSans-Bold.woff2') format('woff2'), / Optimized for very modern browsers / 
-url('assets/fonts/BCSans/BCSans-Bold.woff') format('woff'); / Modern Browsers /
+@font-face {
+  font-family: 'BCSans';
+  font-weight: 700;
+  src: url('assets/fonts/BCSans/BCSans-Bold.woff2') format('woff2'), /* Optimized for very modern browsers */
+       url('assets/fonts/BCSans/BCSans-Bold.woff') format('woff'); /* Modern Browsers */
 }
-@font-face{
-font-family: 'BCSans';
-font-style: italic;
-font-weight: 700;
-src: url('assets/fonts/BCSans/BCSans-BoldItalic.woff2') format('woff2'), / Optimized for very modern browsers /
-url('assets/fonts/BCSans/BCSans-BoldItalic.woff') format('woff'); / Modern Browsers /
+@font-face {
+  font-family: 'BCSans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('assets/fonts/BCSans/BCSans-BoldItalic.woff2') format('woff2'), /* Optimized for very modern browsers */
+       url('assets/fonts/BCSans/BCSans-BoldItalic.woff') format('woff'); /* Modern Browsers */
 }
 ```
 ### Font Stack
 
-`font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;`
+`font-family: 'BCSans', 'Noto Sans', Verdana, Arial, sans-serif;`
 
 ## Paragraphs
 
