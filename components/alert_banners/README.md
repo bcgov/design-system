@@ -35,7 +35,7 @@ Telling users important and typically time sensitive information. This includes:
 - Allow users the ability to dismiss alerts when appropriate.
 
 ### Error Alert
-Use error alerts if a service is cancelled, there's a risk to health or safety to people in completing an activity or with form validation errors that will block the user from completing their task.
+Use error alerts if a service is cancelled, there's a risk to health or safety to people in completing an activity, or with form validation errors that will block the user from completing their task.
 
 ### Warning Alert
 Use warning alerts when there is something urgent or to help someone avoid a problem for things like delays, closures at certain locations, and other types of service disruptions.
@@ -47,7 +47,7 @@ Use information alerts for important time-sensitive information like changes in 
 Use success alerts to notify someone that a task is fully completed or a disruption is resolved.
 
 ## Rationale
-Alert banners use a combination of colour, icon and text to convey the purpose and meaning of the alert message. The text below the alert title provides guidance for the user with additional information or supporting actions.
+Alert banners use a combination of colour, icon and text to convey the purpose and meaning of the alert message.
 
 ### Further Reading
 - [Alert fatigue during COVID-19](https://blog.canada.ca/2020/07/15/alert-fatigue.html)
