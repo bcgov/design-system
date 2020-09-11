@@ -18,9 +18,6 @@ Use the Design System if you’re building custom B.C. government and applicatio
 
 The Design System is managed by a team of designers and developers and the government community. The system is a part of the DevHub, a project by the Developers’ Exchange that brings together UI/interface and back-end resources for digital teams.
 
-Davis Levine – Team Lead, Service Design
-
-Ori Nevares – Service Design Specialist
 
 ## The Community
 
