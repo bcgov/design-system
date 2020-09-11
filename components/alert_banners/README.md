@@ -27,27 +27,30 @@ Telling users important and typically time sensitive information. This includes:
 - Highlighting content, quotes, examples, snippets of information. Use a [callout component](https://developer.gov.bc.ca/Design-System/Callout) instead
 
 ## Design Guidance
+- You can only use one alert on a page. If you want to use two alerts, contact your GCPE communications shop for guidance.
+- Do not include alerts that are not related to the persons current goal or specific page content
 - If a user is required to do something in response to an alert, let them know what they need to do and make that task as easy as possible. For example, provide them a link to something in the alert.
 - Write messages in a concise manner while avoiding the use of jargon and technical language.
 - Do not write lots of text. Too much text will cause users to ignore the content.
 - Allow users the ability to dismiss alerts when appropriate.
-- Avoid using more than one alert per page.
-- Do not include alerts that are not related to the users current goal.
 
 ### Error Alert
-Use error alerts with form validation errors or other errors, which will block the user from completing their task.
+Use error alerts if a service is cancelled, there's a risk to health or safety to people in completing an activity, or with form validation errors that will block the user from completing their task.
 
 ### Warning Alert
-Use warning alerts to tell the user something urgent or to help the user avoid a problem.
+Use warning alerts when there is something urgent or to help someone avoid a problem for things like delays, closures at certain locations, and other types of service disruptions.
 
 ### Information Alert
-Use information alerts for important time-sensitive information.
+Use information alerts for important time-sensitive information like changes in wait times for a service, messages that there is no service disruption, changes to a service that aren't a disruption, or timely updates.
 
 ### Success Alert
-Use success alerts to notify the user that a task is fully completed
+Use success alerts to notify someone that a task is fully completed or a disruption is resolved.
 
 ## Rationale
-Alert banners use a combination of colour, icon and text to convey the purpose and meaning of the alert message. The text below the alert title provides guidance for the user with additional information or supporting actions.
+Alert banners use a combination of colour, icon and text to convey the purpose and meaning of the alert message.
+
+### Further Reading
+- [Alert fatigue during COVID-19](https://blog.canada.ca/2020/07/15/alert-fatigue.html)
 
 ## Accessibility
 In addition to [fundamental accessibility](https://developer.gov.bc.ca/Design-System/Accessibility) requirements, this component meets or exceeds the [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) standards by incorporating the following criteria.
