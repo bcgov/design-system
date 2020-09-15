@@ -5,7 +5,7 @@ status: draft
 ---
 
 ![Status](https://img.shields.io/badge/Recommended-Draft-orange.svg)
-> Last Updated: April 30, 2020
+> Last Updated: September 15, 2020
 
 # Typography
 

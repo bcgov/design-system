@@ -4,7 +4,7 @@ title: Alert Banners
 author: dlevine
 ---
 
-> Last Updated: April 29, 2020
+> Last Updated: September 15, 2020
 
 # Alert Banners
 Alert banners notify users of important information or changes on a page. Typically, they appear at the top of a page.
