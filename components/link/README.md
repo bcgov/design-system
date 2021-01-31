@@ -24,7 +24,7 @@ Links lead people to a different page.
 * Links should be describe where it leads to
 * Do not put links in words such as "Link", "Here", or "Click Here". [Learn more about descriptive links](https://accessibility.oregonstate.edu/descriptivelinks)
 * Telephone links should be used to allow people to click a phone number to make a call
-* Links should not open a new tab or window. If so they need to have the relevant icon to give the person advanced warning. Example below:
+* Links should not open a new tab or window. If so, they need to have the relevant icon to give the person advanced warning. Example below:
 
 ```html
 <a href="knitting.html" target="_blank">Application Portal (opens in new window)</a>
