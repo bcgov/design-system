@@ -39,7 +39,7 @@ This checkbox has been built according to [WCAG 2.0 AA](https://www.w3.org/TR/WC
 
 ### Screenreaders
 * External link icon included if link opens a new window or tab
-* Descriptive language for writing links. [Learn more about descriptive links](https://accessibility.oregonstate.edu/descriptivelinks)
+* Descriptive language for writing links. [Learn more about descriptive links](https://www2.gov.bc.ca/gov/content?id=FDC831A9DCF14B44A37C05F9576115D1)
 
 As read using ChromeVox
 
