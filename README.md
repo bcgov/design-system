@@ -1,12 +1,10 @@
-# BC Government Design System
+# BC Government Design System [![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+
 The Design System helps developers and designers build better digital products and services.
 
 It’s a collection of digital resources and tools – including a library of reusable UI/interface components and design patterns. The system makes it easier and faster to build custom B.C. government websites and applications.
 
 Components are collectively built by the government community, meet accessibility standards and are open for input and improvement.
-
-## Project Status
-Alpha
 
 ## Documentation
 
