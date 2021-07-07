@@ -1,19 +1,18 @@
 ---
-description: Alert banners notify users of important information or changes on a page.
+description: Alert banners notify people of important information or changes on a page.
 title: Alert Banners
-author: dlevine
 ---
 
-> Last Updated: September 15, 2020
+> Last Updated: July 7, 2021
 
 # Alert Banners
-Alert banners notify users of important information or changes on a page. Typically, they appear at the top of a page.
+Alert banners notify people of important information or changes on a page. Typically, they appear at the top of a page.
 
 ## Example
 <component-preview path="components/alert_banners/sample.html" height="400px" width="800px"> </component-preview>
 
 ## Use This For
-Telling users important and typically time sensitive information. This includes:
+Telling people important and typically time sensitive information. This includes:
 
 - Success messages
 - Error messages
@@ -27,15 +26,15 @@ Telling users important and typically time sensitive information. This includes:
 - Highlighting content, quotes, examples, snippets of information. Use a [callout component](https://developer.gov.bc.ca/Design-System/Callout) instead
 
 ## Design Guidance
-- You can only use one alert on a page. If you want to use two alerts, contact your GCPE communications shop for guidance.
+- You can only use one alert on a page.
 - Do not include alerts that are not related to the persons current goal or specific page content
-- If a user is required to do something in response to an alert, let them know what they need to do and make that task as easy as possible. For example, provide them a link to something in the alert.
+- If a person is required to do something in response to an alert, let them know what they need to do and make that task as easy as possible. For example, provide them a link to something in the alert.
 - Write messages in a concise manner while avoiding the use of jargon and technical language.
-- Do not write lots of text. Too much text will cause users to ignore the content.
-- Allow users the ability to dismiss alerts when appropriate.
+- Do not write lots of text. Too much text will cause people to ignore the content.
+- Allow people the ability to dismiss alerts when appropriate.
 
 ### Error Alert
-Use error alerts if a service is cancelled, there's a risk to health or safety to people in completing an activity, or with form validation errors that will block the user from completing their task.
+Use error alerts if a service is cancelled, there's a risk to health or safety to people in completing an activity, or with form validation errors that will block the person from completing their task.
 
 ### Warning Alert
 Use warning alerts when there is something urgent or to help someone avoid a problem for things like delays, closures at certain locations, and other types of service disruptions.
