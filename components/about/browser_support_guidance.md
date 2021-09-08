@@ -1,8 +1,9 @@
 ---
 description: Browser support guidance
 title: Designing for Different Browsers and Devices
-author: dlevine
 ---
+
+> Last Updated: September 8, 2021
 
 # Designing for Different Browsers and Devices
 
@@ -12,7 +13,9 @@ Services don’t have to look perfect in every browser, but they should always b
 
 ## Compatibility Testing
 
-These lists represent usage statistics from gov.bc.ca for non-government users. These statistics represents about 98% of users. You should test and make sure your service works in these browsers and operating systems.
+Test that your service works in the browsers used by your intended audience.
+
+These lists represent usage statistics from gov.bc.ca for non-government users. These statistics represents about 98% of users.
 
 | Browser | % of Users | Yearly Change (%) |
 | ------- | ---------- | ----------------- |
@@ -51,10 +54,28 @@ If evidence shows that your users have specific needs or extra support requireme
 
 ## Adapt to changing behaviour: do user research and monitor analytics
 
-Decisions about compatibility can’t be something you specify at the start of your project and then forget about. Digital services need to reflect and adapt to the changing digital behaviour of their users. 
+Decisions about compatibility can’t be something you specify at the start of your project and then forget about. Digital services need to reflect and adapt to the changing digital behaviour of their users.
 
-Do this by researching your users and checking statistics on a regular basis. 
+Do this by researching your users and checking statistics on a regular basis.
 
 New products and platforms might not appear in any data, but it makes sense for you to test against them if they’re likely to be popular. For example, 1,007 users accessed gov.bc.ca using their Sony PlayStation.
 
 You also have to work out when to stop supporting a product or system if its popularity is declining.
+
+## Inform users of unsupported browsers
+
+If your website or application doesn’t support IE, you can create a page telling users their browser is no longer supported. Below is some content and graphics that you can use for that page.
+
+> (H1) Hmm…looks like your browser isn’t supported
+>
+> (Paragraph text) **You seem to be using an unsupported browser.**
+>
+> To get the best experience using our site, download the latest version of any of the following browsers:
+> * Google Chrome
+> * Mozilla Firefox
+> * Microsoft Edge
+> * Apple Safari
+
+### Download
+
+* [Images](https://github.com/bcgov/design-system/tree/master/components/assets/unsupported-browsers)
