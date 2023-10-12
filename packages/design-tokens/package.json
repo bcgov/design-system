@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "Transformation pipeline for design tokens for BC Design System",
   "scripts": {
-    "transform-raw-tokens": "npx token-transformer ./input/tokens.json ./input-transformed/tokens.json",
-    "build-transformed-tokens": "npx style-dictionary build",
+    "build": "node build-output.js",
     "prepare-npm-package": "cp -R build/* dist",
     "publish-npm-package": "cd dist && npm publish --access public"
   },
@@ -17,7 +16,6 @@
     "design tokens",
     "figma",
     "tokens studio",
-    "token-transformer",
     "style-dictionary"
   ],
   "author": "Tyler Krys <Tyler.Krys@gov.bc.ca>",
@@ -26,8 +24,8 @@
     "url": "https://github.com/bcgov/design-system/issues"
   },
   "homepage": "https://github.com/bcgov/design-system#readme",
-  "devDependencies": {
-    "style-dictionary": "^3.8.0",
-    "token-transformer": "^0.0.33"
+  "dependencies": {
+    "@tokens-studio/sd-transforms": "^0.11.5",
+    "style-dictionary": "^3.8.0"
   }
 }
