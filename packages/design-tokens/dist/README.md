@@ -8,7 +8,7 @@ See main repository: https://github.com/bcgov/design-tokens
 
 To use, install this package (`npm i @bcgov/design-tokens`) and import the design tokens for your platform. Reference the design tokens according to your platform's needs.
 
-React example:
+## React example:
 
 ```js
 // Import the variables file that makes sense for your platform.
@@ -18,8 +18,8 @@ function Button({ children, ...props }) {
   return (
     <button
       style={{
-        backgroundColor: "var(--button-primary-background)",
-        color: "var(--button-primary-text)",
+        backgroundColor: "var(--bcds-surface-primary-default)",
+        color: "var(--bcds-text-primary-invert)",
       }}
     >
       {children}
