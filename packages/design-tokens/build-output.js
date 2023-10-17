@@ -6,19 +6,7 @@ registerTransforms(StyleDictionary);
 const sd = StyleDictionary.extend({
   source: ["input/tokens.json"],
   platforms: {
-    js: {
-      transformGroup: "tokens-studio",
-      prefix: "bcds",
-      buildPath: "build/js/",
-      files: [
-        {
-          destination: "variables.js",
-          format: "javascript/es6",
-        },
-      ],
-    },
     css: {
-      prefix: "bcds",
       transforms: [
         "ts/descriptionToComment",
         "ts/size/px",
@@ -40,6 +28,53 @@ const sd = StyleDictionary.extend({
         {
           destination: "variables.css",
           format: "css/variables",
+        },
+      ],
+    },
+    cssPrefixed: {
+      prefix: "bcds",
+      transforms: [
+        "ts/descriptionToComment",
+        "ts/size/px",
+        "ts/opacity",
+        "ts/size/lineheight",
+        "ts/typography/fontWeight",
+        "ts/resolveMath",
+        "ts/size/css/letterspacing",
+        "ts/typography/css/fontFamily",
+        "ts/typography/css/shorthand",
+        "ts/border/css/shorthand",
+        "ts/shadow/css/shorthand",
+        "ts/color/css/hexrgba",
+        "ts/color/modifiers",
+        "name/cti/kebab",
+      ],
+      buildPath: "build/css-prefixed/",
+      files: [
+        {
+          destination: "variables.css",
+          format: "css/variables",
+        },
+      ],
+    },
+    js: {
+      transformGroup: "tokens-studio",
+      buildPath: "build/js/",
+      files: [
+        {
+          destination: "variables.js",
+          format: "javascript/es6",
+        },
+      ],
+    },
+    jsPrefixed: {
+      transformGroup: "tokens-studio",
+      prefix: "bcds",
+      buildPath: "build/js-prefixed/",
+      files: [
+        {
+          destination: "variables.js",
+          format: "javascript/es6",
         },
       ],
     },
