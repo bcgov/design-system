@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 17 Oct 2023 21:20:25 GMT
+ * Generated on Thu, 02 Nov 2023 21:18:42 GMT
  */
 
 export const surfaceOpacity0 = 0;
@@ -28,7 +28,6 @@ export const surfaceTertiaryDisabled = "#edebe9";
 export const surfaceTertiaryActive = "#2E5DD7";
 export const surfaceDangerDefault = "#ce3e39";
 export const surfaceDangerHover = "#a2312d";
-export const surfaceDangerDisabled = "#edebe9";
 export const surfaceDangerActive = "#2E5DD7";
 export const surfaceBackgroundWhite = "#ffffff";
 export const surfaceBackgroundLight = "#faf9f8";
@@ -88,16 +87,6 @@ export const surfaceShadowNone = "0 0.30000001192092896px 0.8999999761581421px 0
 export const surfaceShadowSmall = "0 0.6000000238418579px 1.7999999523162842px 0 #0000001a, 0 3.200000047683716px 7.199999809265137px 0 #00000021"; // Primarily used as a hover effect for cards
 export const surfaceShadowMedium = "0 1.2000000476837158px 3.5999999046325684px 0 #0000001a, 0 6.400000095367432px 14.399999618530273px 0 #00000021"; // Primarily used for dropdown menus and tooltips
 export const surfaceShadowLarge = "0 4.800000190734863px 14.399999618530273px 0 #0000002e, 0 25.600000381469727px 57.599998474121094px 0 #00000038"; // Primarily used for dialogs
-export const surfaceBorderRadiusNone = "0";
-export const surfaceBorderRadiusSmall = "2px";
-export const surfaceBorderRadiusMedium = "4px";
-export const surfaceBorderRadiusLarge = "6px";
-export const surfaceBorderWidthNone = "0";
-export const surfaceBorderWidthSmall = "1px";
-export const surfaceBorderWidthMedium = "2px";
-export const surfaceBorderWidthLarge = "4px";
-export const surfaceSizeSmall = "0px 8px";
-export const surfaceSizeMedium = "6px 16px";
 export const supportSupportSurfaceColorInfo = "#f7f9fc";
 export const supportSupportSurfaceColorDanger = "#f4e1e2";
 export const supportSupportSurfaceColorSuccess = "#f6fff8";
@@ -114,6 +103,7 @@ export const iconsIconsInfo = "#053662";
 export const iconsIconsDanger = "#ce3e39";
 export const iconsIconsSuccess = "#42814a";
 export const iconsIconsWarning = "#f8bb47";
+export const iconsIconsPrimaryInvert = "#ffffff";
 export const iconsSizeXsmall = "14px";
 export const iconsSizeSmall = "16px";
 export const iconsSizeMedium = "20px";
@@ -139,6 +129,10 @@ export const layoutMarginXlarge = "32px";
 export const layoutMarginXxlarge = "40px";
 export const layoutMarginXxxlarge = "48px";
 export const layoutMarginHuge = "56px";
+export const layoutBorderRadiusNone = "0";
+export const layoutBorderRadiusSmall = "2px";
+export const layoutBorderRadiusMedium = "4px";
+export const layoutBorderRadiusLarge = "6px";
 export const typographyFontFamiliesBcSans = "'BC Sans'";
 export const typographyLineHeightsXxdense = "1.313rem";
 export const typographyLineHeightsXdense = "1.688rem";

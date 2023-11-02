@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 17 Oct 2023 21:20:25 GMT
+ * Generated on Thu, 02 Nov 2023 21:18:42 GMT
  */
 
 :root {
@@ -29,7 +29,6 @@
   --bcds-surface-tertiary-active: #2E5DD7;
   --bcds-surface-danger-default: #ce3e39;
   --bcds-surface-danger-hover: #a2312d;
-  --bcds-surface-danger-disabled: #edebe9;
   --bcds-surface-danger-active: #2E5DD7;
   --bcds-surface-background-white: #ffffff;
   --bcds-surface-background-light: #faf9f8;
@@ -89,16 +88,6 @@
   --bcds-surface-shadow-small: 0 0.6000000238418579px 1.7999999523162842px 0 #0000001a, 0 3.200000047683716px 7.199999809265137px 0 #00000021; /* Primarily used as a hover effect for cards */
   --bcds-surface-shadow-medium: 0 1.2000000476837158px 3.5999999046325684px 0 #0000001a, 0 6.400000095367432px 14.399999618530273px 0 #00000021; /* Primarily used for dropdown menus and tooltips */
   --bcds-surface-shadow-large: 0 4.800000190734863px 14.399999618530273px 0 #0000002e, 0 25.600000381469727px 57.599998474121094px 0 #00000038; /* Primarily used for dialogs */
-  --bcds-surface-border-radius-none: 0;
-  --bcds-surface-border-radius-small: 2px;
-  --bcds-surface-border-radius-medium: 4px;
-  --bcds-surface-border-radius-large: 6px;
-  --bcds-surface-border-width-none: 0;
-  --bcds-surface-border-width-small: 1px;
-  --bcds-surface-border-width-medium: 2px;
-  --bcds-surface-border-width-large: 4px;
-  --bcds-surface-size-small: 0px 8px;
-  --bcds-surface-size-medium: 6px 16px;
   --bcds-support-support-surface-color-info: #f7f9fc;
   --bcds-support-support-surface-color-danger: #f4e1e2;
   --bcds-support-support-surface-color-success: #f6fff8;
@@ -115,6 +104,7 @@
   --bcds-icons-icons-danger: #ce3e39;
   --bcds-icons-icons-success: #42814a;
   --bcds-icons-icons-warning: #f8bb47;
+  --bcds-icons-icons-primary-invert: #ffffff;
   --bcds-icons-size-xsmall: 14px;
   --bcds-icons-size-small: 16px;
   --bcds-icons-size-medium: 20px;
@@ -140,6 +130,10 @@
   --bcds-layout-margin-xxlarge: 40px;
   --bcds-layout-margin-xxxlarge: 48px;
   --bcds-layout-margin-huge: 56px;
+  --bcds-layout-border-radius-none: 0;
+  --bcds-layout-border-radius-small: 2px;
+  --bcds-layout-border-radius-medium: 4px;
+  --bcds-layout-border-radius-large: 6px;
   --bcds-typography-font-families-bc-sans: 'BC Sans';
   --bcds-typography-line-heights-xxdense: 1.313rem;
   --bcds-typography-line-heights-xdense: 1.688rem;
