@@ -1,13 +1,13 @@
 {
   "name": "@bcgov/design-tokens",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Design tokens for BC Design System",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bcgov/design-system.git"
   },
   "keywords": [
-    "design-system",
+    "design system",
     "design tokens",
     "figma",
     "tokens studio",
