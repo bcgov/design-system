@@ -1,0 +1,105 @@
+{
+  "colors": [
+    {
+      "color": "bc-blue",
+      "id": "bc-blue-tag",
+      "textValue": "BC Blue tag"
+    },
+    {
+      "color": "bc-gold",
+      "id": "bc-gold-tag",
+      "textValue": "BC Gold tag"
+    },
+    {
+      "color": "dark",
+      "id": "dark",
+      "textValue": "Dark tag"
+    },
+    {
+      "color": "blue",
+      "id": "blue-tag",
+      "textValue": "Blue tag"
+    },
+    {
+      "color": "green",
+      "id": "green-tag",
+      "textValue": "Green tag"
+    },
+    {
+      "color": "yellow",
+      "id": "yellow-tag",
+      "textValue": "Yellow tag"
+    },
+    {
+      "color": "red",
+      "id": "red-tag",
+      "textValue": "Red tag"
+    },
+    {
+      "color": "grey",
+      "id": "grey-tag",
+      "textValue": "Grey tag"
+    }
+  ],
+  "pets": [
+    {
+      "id": "cats",
+      "textValue": "Cats",
+      "color": "yellow"
+    },
+    {
+      "id": "dogs",
+      "textValue": "Dogs",
+      "color": "red"
+    },
+    {
+      "id": "birds",
+      "textValue": "Birds",
+      "color": "green"
+    }
+  ],
+  "fish": [
+    {
+      "id": "salmon",
+      "textValue": "Salmon"
+    },
+    {
+      "id": "halibut",
+      "textValue": "Halibut"
+    },
+    {
+      "id": "trout",
+      "textValue": "Trout"
+    },
+    {
+      "id": "pike",
+      "textValue": "Pike"
+    },
+    {
+      "id": "bass",
+      "textValue": "Bass"
+    }
+  ],
+  "fileTypes": [
+    {
+      "id": "txt",
+      "textValue": "Text"
+    },
+    {
+      "id": "doc",
+      "textValue": "Word Doc"
+    },
+    {
+      "id": "ppt",
+      "textValue": "PowerPoint"
+    },
+    {
+      "id": "pdf",
+      "textValue": "PDF"
+    },
+    {
+      "id": "mp3",
+      "textValue": "MP3"
+    }
+  ]
+}

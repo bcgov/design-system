@@ -1,0 +1,14 @@
+.react-aria-TagGroup {
+  color: var(--typography-color-primary, #2d2d2d);
+  font: var(--typography-regular-label, 400 0.875rem/1.313rem "BC Sans");
+}
+
+.react-aria-Label,
+.react-aria-Text {
+  display: block;
+  margin: var(--layout-margin-small) var(--layout-margin-none);
+}
+
+.react-aria-Text.error {
+  color: var(--surface-danger-default, #ce3e39);
+}
