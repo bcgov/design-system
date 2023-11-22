@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 02 Nov 2023 21:18:42 GMT
+ * Generated on Wed, 22 Nov 2023 20:31:25 GMT
  */
 
 :root {
@@ -30,6 +30,7 @@
   --surface-danger-default: #ce3e39;
   --surface-danger-hover: #a2312d;
   --surface-danger-active: #2E5DD7;
+  --surface-danger-disabled: #edebe9;
   --surface-background-white: #ffffff;
   --surface-background-light: #faf9f8;
   --surface-border-light: #d8d8d8;
@@ -88,6 +89,16 @@
   --surface-shadow-small: 0 0.6000000238418579px 1.7999999523162842px 0 #0000001a, 0 3.200000047683716px 7.199999809265137px 0 #00000021; /* Primarily used as a hover effect for cards */
   --surface-shadow-medium: 0 1.2000000476837158px 3.5999999046325684px 0 #0000001a, 0 6.400000095367432px 14.399999618530273px 0 #00000021; /* Primarily used for dropdown menus and tooltips */
   --surface-shadow-large: 0 4.800000190734863px 14.399999618530273px 0 #0000002e, 0 25.600000381469727px 57.599998474121094px 0 #00000038; /* Primarily used for dialogs */
+  --surface-border-radius-none: 0;
+  --surface-border-radius-small: 2px;
+  --surface-border-radius-medium: 4px;
+  --surface-border-radius-large: 6px;
+  --surface-border-width-none: 0;
+  --surface-border-width-small: 1px;
+  --surface-border-width-medium: 2px;
+  --surface-border-width-large: 4px;
+  --surface-size-small: 0px 8px;
+  --surface-size-medium: 6px 16px;
   --support-support-surface-color-info: #f7f9fc;
   --support-support-surface-color-danger: #f4e1e2;
   --support-support-surface-color-success: #f6fff8;
@@ -130,10 +141,6 @@
   --layout-margin-xxlarge: 40px;
   --layout-margin-xxxlarge: 48px;
   --layout-margin-huge: 56px;
-  --layout-border-radius-none: 0;
-  --layout-border-radius-small: 2px;
-  --layout-border-radius-medium: 4px;
-  --layout-border-radius-large: 6px;
   --typography-font-families-bc-sans: 'BC Sans';
   --typography-line-heights-xxdense: 1.313rem;
   --typography-line-heights-xdense: 1.688rem;
