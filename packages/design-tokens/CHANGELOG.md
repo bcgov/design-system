@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.0.0
+
+### Changed
+
+- (breaking) `borderRadius` moved from `layout` group to `surface` group
+
+### Added
+
+- Added `surface.color.danger.disabled`
+- Added `borderWidth` to `surface` group
+- Added `surface.size.small` and `surface.size.medium` ([multi-value spacing tokens](https://docs.tokens.studio/available-tokens/spacing-tokens))
+
 ## 1.0.0
 
 ### Changed
