@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 02 Nov 2023 21:18:42 GMT
+ * Generated on Wed, 22 Nov 2023 20:31:26 GMT
  */
 
 export const bcdsSurfaceOpacity0 = 0;
@@ -29,6 +29,7 @@ export const bcdsSurfaceTertiaryActive = "#2E5DD7";
 export const bcdsSurfaceDangerDefault = "#ce3e39";
 export const bcdsSurfaceDangerHover = "#a2312d";
 export const bcdsSurfaceDangerActive = "#2E5DD7";
+export const bcdsSurfaceDangerDisabled = "#edebe9";
 export const bcdsSurfaceBackgroundWhite = "#ffffff";
 export const bcdsSurfaceBackgroundLight = "#faf9f8";
 export const bcdsSurfaceBorderLight = "#d8d8d8";
@@ -87,6 +88,16 @@ export const bcdsSurfaceShadowNone = "0 0.30000001192092896px 0.8999999761581421
 export const bcdsSurfaceShadowSmall = "0 0.6000000238418579px 1.7999999523162842px 0 #0000001a, 0 3.200000047683716px 7.199999809265137px 0 #00000021"; // Primarily used as a hover effect for cards
 export const bcdsSurfaceShadowMedium = "0 1.2000000476837158px 3.5999999046325684px 0 #0000001a, 0 6.400000095367432px 14.399999618530273px 0 #00000021"; // Primarily used for dropdown menus and tooltips
 export const bcdsSurfaceShadowLarge = "0 4.800000190734863px 14.399999618530273px 0 #0000002e, 0 25.600000381469727px 57.599998474121094px 0 #00000038"; // Primarily used for dialogs
+export const bcdsSurfaceBorderRadiusNone = "0";
+export const bcdsSurfaceBorderRadiusSmall = "2px";
+export const bcdsSurfaceBorderRadiusMedium = "4px";
+export const bcdsSurfaceBorderRadiusLarge = "6px";
+export const bcdsSurfaceBorderWidthNone = "0";
+export const bcdsSurfaceBorderWidthSmall = "1px";
+export const bcdsSurfaceBorderWidthMedium = "2px";
+export const bcdsSurfaceBorderWidthLarge = "4px";
+export const bcdsSurfaceSizeSmall = "0px 8px";
+export const bcdsSurfaceSizeMedium = "6px 16px";
 export const bcdsSupportSupportSurfaceColorInfo = "#f7f9fc";
 export const bcdsSupportSupportSurfaceColorDanger = "#f4e1e2";
 export const bcdsSupportSupportSurfaceColorSuccess = "#f6fff8";
@@ -129,10 +140,6 @@ export const bcdsLayoutMarginXlarge = "32px";
 export const bcdsLayoutMarginXxlarge = "40px";
 export const bcdsLayoutMarginXxxlarge = "48px";
 export const bcdsLayoutMarginHuge = "56px";
-export const bcdsLayoutBorderRadiusNone = "0";
-export const bcdsLayoutBorderRadiusSmall = "2px";
-export const bcdsLayoutBorderRadiusMedium = "4px";
-export const bcdsLayoutBorderRadiusLarge = "6px";
 export const bcdsTypographyFontFamiliesBcSans = "'BC Sans'";
 export const bcdsTypographyLineHeightsXxdense = "1.313rem";
 export const bcdsTypographyLineHeightsXdense = "1.688rem";

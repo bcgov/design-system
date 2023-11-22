@@ -4,7 +4,7 @@ This package is being used to test publishing design tokens from Figma to npm.
 
 Questions? Please email the <a href="mailto:corporatewebdesign@gov.bc.ca">GDX OSS Design Team</a>.
 
-See main repository: https://github.com/bcgov/design-tokens
+See main repository: https://github.com/bcgov/design-system
 
 To use, install this package (`npm i @bcgov/design-tokens`) and import the design tokens for your platform. Reference the design tokens according to your platform's needs.
 
