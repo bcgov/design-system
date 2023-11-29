@@ -3,13 +3,13 @@
   "version": "0.0.2",
   "type": "module",
   "scripts": {
-    "vite": "vite",
-    "build-vite": "tsc && vite build",
+    "rollup": "rollup -c --bundleConfigAsCjs",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "rollup": "rollup -c --bundleConfigAsCjs"
+    "storybook-dev": "storybook dev -p 6006",
+    "storybook-build": "storybook build",
+    "vite-dev": "vite",
+    "vite-build": "tsc && vite build",
+    "vite-preview": "vite preview"
   },
   "main": "dist/cjs/index.cjs",
   "module": "dist/esm/index.js",

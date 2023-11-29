@@ -74,13 +74,13 @@ Components live in `./src/components` and are targeted by the build process with
 
 Storybook stories live in `./src/stories`.
 
-Run `npm run storybook` to access the Storybook instance for the component library.
+Run `npm run storybook-dev` to access the Storybook instance for the component library.
 
 ### Vite kitchen sink application
 
 Vite uses the components code directly from `./src/components` in groups of content in `./src/pages`.
 
-Run `npm run vite` to access the Vite React demo app.
+Run `npm run vite-dev` to access the Vite React demo app.
 
 ### Publish new versions
 
@@ -88,4 +88,4 @@ To generate an updated copy of the package for distribution, run the included Ro
 
 This will place artifacts in the `dist` folder, which is targeted for publishing in `package.json` with the [`files` field](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#files).
 
-Update the package version in `package.json` and run `npm run publish` to push a new version.
+Update the package version in `package.json` and run `npm publish` to push a new version.
