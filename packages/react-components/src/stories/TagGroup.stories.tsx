@@ -58,9 +58,9 @@ export const MultipleTags: Story = {
 };
 
 export const MultipleTagsInEachColor: Story = {
-  render: () => {
+  render: (args) => {
     return (
-      <TagGroup label="Colored tags">
+      <TagGroup label="Colored tags" {...args}>
         <TagList
           items={[
             {
@@ -107,6 +107,13 @@ export const MultipleTagsInEachColor: Story = {
         />
       </TagGroup>
     );
+  },
+};
+
+export const ColorsRemovable: Story = {
+  ...MultipleTagsInEachColor,
+  args: {
+    onRemove: () => alert("onRemove()"),
   },
 };
 
@@ -238,6 +245,39 @@ export const DisabledTagGroup: Story = {
   args: {
     label: "Tag group with a disabled tag",
     disabledKeys: ["3"],
+  },
+  render: ({ ...args }) => {
+    return (
+      <TagGroup {...args}>
+        <TagList
+          items={[
+            {
+              id: "1",
+              textValue: "First",
+            },
+            {
+              id: "2",
+              textValue: "Second",
+            },
+            {
+              id: "3",
+              textValue: "Third",
+            },
+            {
+              id: "4",
+              textValue: "Fourth",
+            },
+          ]}
+        />
+      </TagGroup>
+    );
+  },
+};
+
+export const WithError: Story = {
+  args: {
+    label: "Tag group with an error",
+    errorMessage: "Error message slot",
   },
   render: ({ ...args }) => {
     return (

@@ -36,6 +36,7 @@ The `Tag` component can be passed a `color` prop with one of the following value
 If no value is passed, the tag colour defaults to `blue`.
 
 <Canvas of={TagGroupStories.MultipleTagsInEachColor} />
+<Canvas of={TagGroupStories.ColorsRemovable} />
 
 ## Tags with icons
 
@@ -62,3 +63,9 @@ The example below shows a tag group with the first and third tags selected. Inte
 The tag group takes a `disabledKeys` array prop to mark items as disabled. Disabled tags are skipped over when using keyboard navigation.
 
 <Canvas of={TagGroupStories.DisabledTagGroup} />
+
+## Error message
+
+Use the `errorMessage` prop to provide an error message string.
+
+<Canvas of={TagGroupStories.WithError} />
