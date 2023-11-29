@@ -5,8 +5,6 @@ import {
   TagRenderProps,
 } from "react-aria-components";
 
-import "@bcgov/design-tokens/css/variables.css";
-import "@bcgov/bc-sans/css/BC_Sans.css";
 import "./Tag.css";
 
 export interface TagProps extends ReactAriaTagProps {
