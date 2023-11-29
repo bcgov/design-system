@@ -3,9 +3,14 @@
 # -----------
 FROM node:lts-alpine as build-stage
 
-# Copy package.json and package-lock.json, install dependencies
+# Copy package.json and package-lock.json
 WORKDIR /app
 COPY package*.json .
+
+# Print npm config to check for proxy field
+RUN npm config list
+
+# Install dependencies
 RUN npm install
 
 # Copy required files
