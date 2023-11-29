@@ -12,19 +12,36 @@ To use, install this package and import the components into your application.
 
 `npm install @bcgov/design-system-react-components`
 
-## Use
+## BC Sans font dependency
+
+This package installs [@bcgov/bc-sans](https://www.npmjs.com/package/@bcgov/bc-sans) as a peer dependency. You must import the font-face declarations from @bcgov/bc-sans and ensure the font is reachable for your end user. The React components require that the `BC Sans` font-face is available to display correctly. The components do not ship their own copies of the font to minimize your bundle size.
+
+**Important!** If you are on a BC Government-provisioned laptop, you already have the BC Sans font installed on your machine. This package uses `BC Sans` (with a space) for its font styles. If you are using this component library but not supplying the font, it's possible that your machine will still display the font correctly for you, **but not your end user**. Make sure to check this by disabling the font on your machine or by testing with another machine.
+
+### Use
 
 ```jsx
 // App.jsx
 
+// If you're already importing the BC Sans font-face somewhere else in your
+// project, there is no need to import it again. Just make sure the `BC Sans`
+// declaration and font files are available.
+import "@bcgov/bc-sans/css/BC_Sans.css";
+
+// Import the individual components you need
 import { TagGroup, TagList } from "@bcgov/design-system-react-components";
 
 export default function App() {
   return (
-    <TagGroup aria-label="Tags">
-      <TagList items={[]}>
+    <TagGroup aria-label="Tag group with two items">
+      <TagList
+        items={[
+          { id: "one", textValue: "One" },
+          { id: "two", textValue: "Two" },
+        ]}
+      />
     </TagGroup>
-  )
+  );
 }
 ```
 
@@ -32,6 +49,7 @@ export default function App() {
 
 | Component              | React Aria Components docs link                           |
 | ---------------------- | --------------------------------------------------------- |
+| Button                 | https://react-spectrum.adobe.com/react-aria/Button.html   |
 | TagGroup, TagList, Tag | https://react-spectrum.adobe.com/react-aria/TagGroup.html |
 
 ## Supported React versions
