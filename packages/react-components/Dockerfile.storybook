@@ -23,7 +23,7 @@ RUN npm run storybook-build
 # -----------
 # Serve stage
 # -----------
-FROM nginxinc/nginx-unprivileged:1.25 as serve-stage
+FROM nginxinc/nginx-unprivileged:alpine as serve-stage
 
 # Copy nginx configuration
 COPY ./nginx.storybook.conf /etc/nginx/nginx.conf
