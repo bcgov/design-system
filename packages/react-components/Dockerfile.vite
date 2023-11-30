@@ -1,4 +1,4 @@
-# Dockerfile.storybook
+# Dockerfile.vite
 
 # -----------
 # Build stage
@@ -16,11 +16,15 @@ RUN npm config list
 RUN npm install
 
 # Copy required files
+COPY index.html ./
+COPY tsconfig.json ./
+COPY tsconfig.vite.json ./
+COPY vite.config.ts ./
 COPY src ./src
-COPY .storybook ./.storybook
+COPY .vite ./.vite
 
-# Run Storybook build script, which places built files in /app/storybook-static
-RUN npm run storybook-build
+# Run Vite build script, which places built files in /app/vite-dist
+RUN npm run vite-build
 
 # -----------
 # Serve stage
@@ -28,10 +32,10 @@ RUN npm run storybook-build
 FROM nginxinc/nginx-unprivileged:alpine as serve-stage
 
 # Copy nginx configuration
-COPY ./nginx.storybook.conf /etc/nginx/nginx.conf
+COPY ./nginx.vite.conf /etc/nginx/nginx.conf
 
-# Copy built Storybook files to nginx public web root folder
-COPY --from=build-stage /app/storybook-static /usr/share/nginx/html
+# Copy built Vite files to nginx public web root folder
+COPY --from=build-stage /app/vite-dist /usr/share/nginx/html
 
-EXPOSE 8080
+EXPOSE 5555
 CMD ["nginx", "-g", "daemon off;"]
