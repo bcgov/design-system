@@ -1,0 +1,31 @@
+{
+  "name": "design-tokens",
+  "version": "2.0.0",
+  "description": "Transformation pipeline for design tokens for BC Design System",
+  "scripts": {
+    "build": "node build-output.js",
+    "prepare-npm-package": "cp -R build/* dist",
+    "publish-npm-package": "cd dist && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcgov/design-system.git"
+  },
+  "keywords": [
+    "design system",
+    "design tokens",
+    "figma",
+    "tokens studio",
+    "style-dictionary"
+  ],
+  "author": "Tyler Krys <Tyler.Krys@gov.bc.ca>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bcgov/design-system/issues"
+  },
+  "homepage": "https://github.com/bcgov/design-system#readme",
+  "dependencies": {
+    "@tokens-studio/sd-transforms": "^0.12.0",
+    "style-dictionary": "^3.9.0"
+  }
+}
