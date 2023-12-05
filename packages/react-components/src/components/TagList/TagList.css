@@ -1,0 +1,14 @@
+.react-aria-TagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--layout-padding-small);
+  width: fit-content;
+}
+
+.horizontal {
+  flex-direction: row;
+}
+
+.vertical {
+  flex-direction: column;
+}

@@ -1,0 +1,71 @@
+{/* TagGroup.mdx */}
+
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+
+import * as TagGroupStories from "./TagGroup.stories";
+
+<Meta of={TagGroupStories} />
+
+# TagGroup
+
+A tag group is a focusable list of **tags** (labels, categories, keywords, filters, or other items) with support for keyboard navigation, selection, and removal. It is built using the [React Aria TagGroup](https://react-spectrum.adobe.com/react-aria/TagGroup.html).
+
+## A TagGroup holds a TagList, which holds Tags
+
+The `Tag` component is used internally by the `TagList` component, rendered based on the `items` props. A `TagList` is surrounded by a `TagGroup`.
+
+A TagGroup should have either a `label` (rendered on top of the `TagList`) or an `aria-label` (not rendered, but read by screen readers) to give context.
+
+<Canvas of={TagGroupStories.SingleTag} />
+
+<Canvas of={TagGroupStories.MultipleTags} />
+
+## Coloured tags
+
+The `Tag` component can be passed a `color` prop with one of the following values:
+
+- `bc-blue`
+- `bc-gold`
+- `blue`
+- `dark`
+- `gray` or `grey`
+- `green`
+- `red`
+- `yellow`
+
+If no value is passed, the tag colour defaults to `blue`.
+
+<Canvas of={TagGroupStories.MultipleTagsInEachColor} />
+<Canvas of={TagGroupStories.ColorsRemovable} />
+
+## Tags with icons
+
+Pass a React element to the optional `icon` prop of a tag to add an icon to the tag.
+
+<Canvas of={TagGroupStories.TagsWithIcons} />
+
+## Removable tags
+
+A group of tags can be made removable by passing an `onRemove` callback function to the `TagGroup` component. `onRemove()` gets called when the "X" button on a tag is pressed, or when a user hits delete or backspace when one or more tags is selected.
+
+<Canvas of={TagGroupStories.RemovableTagGroup} />
+
+## Selection example
+
+Props for `selectionMode`, `selectedKeys`, and `onSelectionChange` allow you to manage the state of the list of the tags.
+
+The example below shows a tag group with the first and third tags selected. Interacting with any of the tags calls `onSelectionChange()`.
+
+<Canvas of={TagGroupStories.SelectionTagGroup} />
+
+## Disabled tag example
+
+The tag group takes a `disabledKeys` array prop to mark items as disabled. Disabled tags are skipped over when using keyboard navigation.
+
+<Canvas of={TagGroupStories.DisabledTagGroup} />
+
+## Error message
+
+Use the `errorMessage` prop to provide an error message string.
+
+<Canvas of={TagGroupStories.WithError} />

@@ -1,0 +1,48 @@
+{/* Button.mdx */}
+
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+
+import * as ButtonStories from "./Button.stories";
+
+<Meta of={ButtonStories} />
+
+# Button
+
+A button allows a user to perform an action, with mouse, touch, and keyboard interactions. It is built using the [React Aria Button](https://react-spectrum.adobe.com/react-aria/Button.html).
+
+## Variants
+
+Variants let you control the button's look. Available variants include:
+
+- `primary` (default, used for a call to action)
+- `secondary`
+- `tertiary`
+- `link` (button styled like a link)
+
+If no `variant` prop is passed, the button defaults to `primary`.
+
+<Canvas of={ButtonStories.Primary} />
+<Canvas of={ButtonStories.Secondary} />
+<Canvas of={ButtonStories.Tertiary} />
+<Canvas of={ButtonStories.Link} />
+
+## Size
+
+Choose from medium and small button sizes:
+
+<Canvas of={ButtonStories.Medium} />
+<Canvas of={ButtonStories.Small} />
+
+## Danger
+
+Use the `danger` boolean prop to mark a button that is destructive (delete actions, actions that can't be undone, etc).
+
+<Canvas of={ButtonStories.Danger} />
+
+## Icons
+
+Icons can be dropped into the button as React children. You can also get an icon-only square button (fixed width) with the `isIconButton` boolean.
+
+<Canvas of={ButtonStories.PlaceholderIconButton} />
+<Canvas of={ButtonStories.RightIcon} />
+<Canvas of={ButtonStories.LeftIcon} />

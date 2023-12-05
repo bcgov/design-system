@@ -1,0 +1,40 @@
+# Dockerfile.vite
+
+# -----------
+# Build stage
+# -----------
+FROM node:lts-alpine as build-stage
+
+# Copy package.json and package-lock.json
+WORKDIR /app
+COPY package*.json .
+
+# Print npm config
+RUN npm config list
+
+# Install dependencies
+RUN npm install
+
+# Copy required files
+COPY index.html ./
+COPY tsconfig.json ./
+COPY tsconfig.vite.json ./
+COPY vite.config.ts ./
+COPY src ./src
+
+# Run Vite build script, which places built files in /app/vite-dist
+RUN npm run vite-build
+
+# -----------
+# Serve stage
+# -----------
+FROM nginxinc/nginx-unprivileged:alpine as serve-stage
+
+# Copy nginx configuration
+COPY ./nginx.vite.conf /etc/nginx/nginx.conf
+
+# Copy built Vite files to nginx public web root folder
+COPY --from=build-stage /app/vite-dist /usr/share/nginx/html
+
+EXPOSE 5555
+CMD ["nginx", "-g", "daemon off;"]

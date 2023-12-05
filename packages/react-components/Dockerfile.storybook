@@ -1,0 +1,37 @@
+# Dockerfile.storybook
+
+# -----------
+# Build stage
+# -----------
+FROM node:lts-alpine as build-stage
+
+# Copy package.json and package-lock.json
+WORKDIR /app
+COPY package*.json .
+
+# Print npm config
+RUN npm config list
+
+# Install dependencies
+RUN npm install
+
+# Copy required files
+COPY src ./src
+COPY .storybook ./.storybook
+
+# Run Storybook build script, which places built files in /app/storybook-static
+RUN npm run storybook-build
+
+# -----------
+# Serve stage
+# -----------
+FROM nginxinc/nginx-unprivileged:alpine as serve-stage
+
+# Copy nginx configuration
+COPY ./nginx.storybook.conf /etc/nginx/nginx.conf
+
+# Copy built Storybook files to nginx public web root folder
+COPY --from=build-stage /app/storybook-static /usr/share/nginx/html
+
+EXPOSE 8080
+CMD ["nginx", "-g", "daemon off;"]
