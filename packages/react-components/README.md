@@ -1,5 +1,7 @@
 # @bcgov/design-system-react-components
 
+[![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+
 This package contains a library of React components built using [React Aria Components](https://react-spectrum.adobe.com/react-aria/react-aria-components.html) to implement the BC Design System.
 
 Questions? Please email the <a href="mailto:DesignSystem@gov.bc.ca">GDX OSS Design Team</a>.
