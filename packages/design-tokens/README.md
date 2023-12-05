@@ -1,8 +1,10 @@
 # Design Tokens for BC Design System
 
-This package is being used to test publishing design tokens from Figma to npm.
+[![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
-Questions? Please email the <a href="mailto:corporatewebdesign@gov.bc.ca">GDX OSS Design Team</a>.
+This package is used to export and publish design tokens from Figma to npm for the BC Design System.
+
+Questions? Please email the <a href="mailto:DesignSystem@gov.bc.ca">GDX OSS Design Team</a>.
 
 ## Workflow
 
