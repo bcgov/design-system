@@ -9,32 +9,28 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thanks for taking the time to fill out this bug report! Please provide as much information as possible, including screenshots if possible.
   - type: input
     id: component
     attributes:
       label: Component
       description: Which component does this bug affect?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
       label: Description
-      description: Describe the error or unexpected behaviour you observed
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      description: Describe the error or unexpected behaviour you observed, and provide screenshots if possible
+      placeholder: Tell us what's going wrong
     validations:
       required: true
   - type: textarea
     id: reproduction
     attributes:
       label: Steps to reproduce
-      description: What were you doing when the bug occurred?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      description: Describe the circumstances under which the bug occurs
+      placeholder: What were you doing when the bug occurred?
     validations:
       required: true
   - type: textarea
@@ -42,7 +38,6 @@ body:
     attributes:
       label: Technical information
       description: What browsers or platforms does the bug affect?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      placeholder: Desktop or mobile? All browsers, or only one?
     validations:
       required: true
