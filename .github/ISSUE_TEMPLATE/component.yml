@@ -1,0 +1,51 @@
+name: New component
+description: Propose a new component to be added to the design system
+title: "[Component request]: "
+labels: ["component"]
+projects: ["bcgov/121"]
+assignees:
+  - mkernohanbc
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We evaluate prospective new components based on:
+        * Demonstrable impact in terms of functionality or usability of government digital service
+        * Evidence that the functional need can't be met using existing components
+        * Demand from the user community
+  - type: input
+    id: name
+    attributes:
+      label: Component name
+      description: A short, descriptive name for this component
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Summary of what the component does, and its expected behaviour
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Brief explanation of why this component is required, and how it will enhance application or service functionality and usability
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Links to any examples, research or code to support your proposal, if available
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true

@@ -1,0 +1,48 @@
+name: Bug
+description: Report an error or unexpected behaviour in a component
+title: "[Bug]: "
+labels: ["bug"]
+projects: ["bcgov/121"]
+assignees:
+  - mkernohanbc
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: component
+    attributes:
+      label: Component
+      description: Which component does this bug affect?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the error or unexpected behaviour you observed
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: What were you doing when the bug occurred?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: technical
+    attributes:
+      label: Technical information
+      description: What browsers or platforms does the bug affect?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true

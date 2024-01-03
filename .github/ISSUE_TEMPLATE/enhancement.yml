@@ -1,0 +1,51 @@
+name: Enhancement
+description: Suggest a change to how an existing component looks or behaves
+title: "[Enhancement]: "
+labels: ["enhancement"]
+projects: ["bcgov/121"]
+assignees:
+  - mkernohanbc
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We evaluate prospective enhancements based on:
+        * Demonstrable impact in terms of functionality or usability of government digital service
+        * Technical complexity and impact on existing services
+        * Demand from the user community
+  - type: input
+    id: name
+    attributes:
+      label: Related component
+      description: Which component does this proposed enhancement affect?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the proposed change
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Explain why you are proposing this change, and the expected benefit to the user
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Links to any examples, research or code to support your proposal, if available
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
