@@ -1,8 +1,8 @@
 # @bcgov/design-tokens
 
-This package is being used to test publishing design tokens from Figma to npm.
+This package is used to export and publish design tokens from Figma to npm for the BC Design System.
 
-Questions? Please email the <a href="mailto:corporatewebdesign@gov.bc.ca">GDX OSS Design Team</a>.
+Questions? Please email the <a href="mailto:DesignSystem@gov.bc.ca">GDX OSS Design Team</a>.
 
 See main repository: https://github.com/bcgov/design-system
 
