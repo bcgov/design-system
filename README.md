@@ -1,4 +1,26 @@
-# BC Government Design System [![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+# B.C. Design System [![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+
+> [!IMPORTANT]
+> The B.C. Design System is currently in active development. We are releasing new guidance and assets in stages. The legacy design system will eventually be fully deprecated and archived.
+
+The B.C. Design System will give design and software development teams the building blocks to deliver intuitive, accessible digital services. It will replace [the legacy design system](https://developer.gov.bc.ca/Design-System/About-the-Design-System).
+
+## B.C. Design Tokens
+
+The B.C. Design Tokens package is the first release as part of the new design system.
+
+Design tokens provide a method to quickly and consistently implement the province's look and feel for digital services. They offer a set of standardized options to help developers style user interfaces in a consistent and future-proof way.
+
+* [Installable package on npm](https://www.npmjs.com/package/@bcgov/design-tokens)
+* [Figma library](https://www.figma.com/community/file/1326994583954765832)
+
+## Contact
+
+The B.C. Design System is maintained by Government Digital Experience (GDX), a division of the Ministry of Citizens' Services. You can contact the design system team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca), or [open an issue](https://github.com/bcgov/design-system/issues/new/choose).
+
+## Legacy documentation
+> [!WARNING]
+> This content and the associated assets/code are no longer supported.
 
 The Design System helps developers and designers build better digital products and services.
 
@@ -6,41 +28,7 @@ It’s a collection of digital resources and tools – including a library of re
 
 Components are collectively built by the government community, meet accessibility standards and are open for input and improvement.
 
-## Documentation
-
-https://developer.gov.bc.ca/Design-System/About-the-Design-System
-
-## Files in this repository
-
-```
-docs/           - Project Documentation
-└── images        
-└── icons         
-
-openshift/      - OpenShift-specific files
-├── scripts     - helper scripts
-└── templates   - application templates
-```
-
-## Deployment (Local Development)
-
-* Developer Workstation Requirements/Setup
-* Application Specific Setup
-
-## Deployment (OpenShift)
-
-See (openshift/Readme.md)
-
-## Getting Help or Reporting an Issue
-
-To report bugs/issues/feature requests, please file an [issue](https://github.com/BCDevOps/opendev-template/issues/).
-
-## How to Propose a Component
-
-If you would like to propose a component to the design system, please see our [Propose a Component](.github/ISSUE_TEMPLATE/propose-a-new-component.md) guideline.
-
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). 
-By participating in this project you agree to abide by its terms.
+* [Developer documentation](https://developer.gov.bc.ca/Design-System/About-the-Design-System)
 
 ## License
 
