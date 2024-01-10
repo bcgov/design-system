@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 22 Nov 2023 20:31:26 GMT
+ * Generated on Wed, 10 Jan 2024 17:50:02 GMT
  */
 
 export const bcdsSurfaceOpacity0 = 0;
@@ -14,7 +14,7 @@ export const bcdsSurfaceOpacity70 = 0.7;
 export const bcdsSurfaceOpacity80 = 0.8;
 export const bcdsSurfaceOpacity90 = 0.9;
 export const bcdsSurfaceOpacity100 = 1;
-export const bcdsSurfacePrimaryDefault = "#013366";
+export const bcdsSurfacePrimaryDefault = "#053662";
 export const bcdsSurfacePrimaryHover = "#1E5189";
 export const bcdsSurfacePrimaryDisabled = "#edebe9";
 export const bcdsSurfacePrimaryActive = "#2E5DD7";

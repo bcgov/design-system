@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 22 Nov 2023 20:31:26 GMT
+ * Generated on Wed, 10 Jan 2024 17:50:02 GMT
  */
 
 export const surfaceOpacity0 = 0;
@@ -14,7 +14,7 @@ export const surfaceOpacity70 = 0.7;
 export const surfaceOpacity80 = 0.8;
 export const surfaceOpacity90 = 0.9;
 export const surfaceOpacity100 = 1;
-export const surfacePrimaryDefault = "#013366";
+export const surfacePrimaryDefault = "#053662";
 export const surfacePrimaryHover = "#1E5189";
 export const surfacePrimaryDisabled = "#edebe9";
 export const surfacePrimaryActive = "#2E5DD7";
