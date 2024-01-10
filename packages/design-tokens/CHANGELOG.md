@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.1
+
+### Changed
+
+- Updated `surface.primary.default` to `#053662`
+
 ## 2.0.0
 
 ### Changed
