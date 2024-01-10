@@ -1,13 +1,15 @@
 # B.C. Design System [![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
-> [!IMPORTANT]
-> The B.C. Design System is currently in active development. We are releasing new guidance and assets in stages. The legacy design system will eventually be fully deprecated and archived.
+> [!NOTE]
+> This project is currently being redeveloped. If you have questions, [contact the design system team](#contact) or [open an issue](https://github.com/bcgov/design-system/issues).
 
-The B.C. Design System will give design and software development teams the building blocks to deliver intuitive, accessible digital services. It will replace [the legacy design system](https://developer.gov.bc.ca/Design-System/About-the-Design-System).
+The B.C. Design System will give design and software development teams the building blocks to deliver intuitive, accessible digital services. 
+
+It will replace [the legacy design system](#legacy-documentation). The legacy design system will eventually be deprecated and archived.
 
 ## B.C. Design Tokens
 
-The B.C. Design Tokens package is the first release as part of the new design system.
+The [B.C. Design Tokens package](https://github.com/bcgov/design-system/tree/docs/packages/design-tokens) is the first release as part of the new design system.
 
 Design tokens provide a method to quickly and consistently implement the province's look and feel for digital services. They offer a set of standardized options to help developers style user interfaces in a consistent and future-proof way.
 
@@ -20,7 +22,7 @@ The B.C. Design System is maintained by Government Digital Experience (GDX), a d
 
 ## Legacy documentation
 > [!WARNING]
-> This content and the associated assets/code are no longer supported.
+> This content and the associated code and assets are no longer supported.
 
 The Design System helps developers and designers build better digital products and services.
 
