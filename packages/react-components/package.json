@@ -55,7 +55,7 @@
     "storybook": "^7.6.1",
     "tslib": "^2.6.2",
     "typescript": "^5.3.2",
-    "vite": "^5.0.4"
+    "vite": "^5.0.12"
   },
   "author": "Tyler Krys <Tyler.Krys@gov.bc.ca>",
   "license": "Apache-2.0",
