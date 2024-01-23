@@ -78,6 +78,27 @@ const sd = StyleDictionary.extend({
         },
       ],
     },
+    cjs: {
+      transformGroup: "tokens-studio",
+      buildPath: "build/cjs/",
+      files: [
+        {
+          destination: "variables.js",
+          format: "javascript/module-flat",
+        },
+      ],
+    },
+    cjsPrefixed: {
+      transformGroup: "tokens-studio",
+      prefix: "bcds",
+      buildPath: "build/cjs-prefixed/",
+      files: [
+        {
+          destination: "variables.js",
+          format: "javascript/module-flat",
+        },
+      ],
+    },
   },
 });
 
