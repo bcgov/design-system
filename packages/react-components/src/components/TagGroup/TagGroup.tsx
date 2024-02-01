@@ -22,11 +22,18 @@ export default function TagGroup({
 }: TagGroupProps) {
   return (
     <ReactAriaTagGroup {...props}>
-      {label && <Label>{label}</Label>}
+      {label && <Label className="react-aria-TagGroup--Label">{label}</Label>}
       {children}
-      {description && <Text slot="description">{description}</Text>}
+      {description && (
+        <Text
+          slot="description"
+          className="react-aria-TagGroup--Text-description"
+        >
+          {description}
+        </Text>
+      )}
       {errorMessage && (
-        <Text slot="errorMessage" className="react-aria-Text error">
+        <Text slot="errorMessage" className="react-aria-TagGroup--Text-error">
           {errorMessage}
         </Text>
       )}

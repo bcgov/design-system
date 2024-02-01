@@ -5,10 +5,10 @@
   width: fit-content;
 }
 
-.horizontal {
+.react-aria-TagList.horizontal {
   flex-direction: row;
 }
 
-.vertical {
+.react-aria-TagList.vertical {
   flex-direction: column;
 }
