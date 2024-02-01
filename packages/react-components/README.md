@@ -52,6 +52,7 @@ export default function App() {
 | Component              | React Aria Components docs link                           |
 | ---------------------- | --------------------------------------------------------- |
 | Button                 | https://react-spectrum.adobe.com/react-aria/Button.html   |
+| Select                 | https://react-spectrum.adobe.com/react-aria/Select.html   |
 | TagGroup, TagList, Tag | https://react-spectrum.adobe.com/react-aria/TagGroup.html |
 
 ## Supported React versions
