@@ -1,4 +1,5 @@
 import ButtonPage from "./Button";
+import SelectPage from "./Select";
 import TagGroupPage from "./TagGroup";
 
-export { ButtonPage, TagGroupPage };
+export { ButtonPage, SelectPage, TagGroupPage };
