@@ -1,0 +1,74 @@
+{/* Select.mdx */}
+
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+
+import * as SelectStories from "./Select.stories";
+
+<Meta of={SelectStories} />
+
+# Select
+
+A select displays a collapsible list of options and allows a user to select one of them.
+
+It is built using the [React Aria Select](https://react-spectrum.adobe.com/react-aria/Select.html).
+
+## Flat list of items
+
+Options in the select component are implemented using React Aria's [Collection Components API](https://react-spectrum.adobe.com/react-aria/collections.html) via the `items` and `sections` props.
+
+Use the `items` prop to supply a flat array of options to the select component:
+
+<Canvas of={SelectStories.SelectTemplate} />
+
+## Sectioned lists of items
+
+Use the `sections` prop to supply an array of sections that group `items` visually.
+
+Each section object can be labelled with an optional `header`.
+
+<Canvas of={SelectStories.Sections} />
+
+## Size
+
+Choose from medium (default) and small select sizes:
+
+<Canvas of={SelectStories.Small} />
+<Canvas of={SelectStories.Medium} />
+
+## Required
+
+By default, select fields are not required, and "(optional)" appears in the label. Use `isRequired` to mark the select field as required:
+
+<Canvas of={SelectStories.Required} />
+
+## Disabled
+
+Use the `isDisabled` prop to disable a select component.
+
+<Canvas of={SelectStories.Disabled} />
+
+## Danger
+
+Use the `isDestructive` boolean prop on an item to mark that option as dangerous/destructive (delete actions, actions that can't be undone, etc).
+
+<Canvas of={SelectStories.FlatWithDestructionOption} />
+
+## Icons
+
+Use either or both of the `iconLeft` and `iconRight` slots to add icons to options:
+
+<Canvas of={SelectStories.LeftIcon} />
+<Canvas of={SelectStories.RightIcon} />
+<Canvas of={SelectStories.BothIcons} />
+
+## Options with labels and descriptions
+
+Use the optional `description` prop on an item to provide more context for the option:
+
+<Canvas of={SelectStories.OptionDescriptions} />
+
+## Placeholder text
+
+The `placeholder` prop can be used for displaying text within the select component before an option is chosen. If `placeholder` isn't passed, the default "Select an item" text will appear.
+
+<Canvas of={SelectStories.Placeholder} />

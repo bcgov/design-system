@@ -24,11 +24,9 @@ export default function TagList<T extends object>({
       className={`react-aria-TagList ${orientation}`}
       {...props}
       renderEmptyState={renderEmptyState}
+      items={items}
     >
-      {items &&
-        Array.from(items).map((item: TagProps) => {
-          return <Tag {...item} key={item.id} />;
-        })}
+      {(item) => <Tag {...item} key={item.id} />}
     </ReactAriaTagList>
   );
 }

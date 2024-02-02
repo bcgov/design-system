@@ -3,12 +3,13 @@
   font: var(--typography-regular-label, 400 0.875rem/1.313rem "BC Sans");
 }
 
-.react-aria-Label,
-.react-aria-Text {
+.react-aria-TagGroup--Label,
+.react-aria-TagGroup--Text-description,
+.react-aria-TagGroup--Text-error {
   display: block;
   margin: var(--layout-margin-small) var(--layout-margin-none);
 }
 
-.react-aria-Text.error {
+.react-aria-TagGroup--Text-error {
   color: var(--surface-danger-default, #ce3e39);
 }

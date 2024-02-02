@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.0.3
+
+### Changed
+
+- Use `react-aria-components` v1.0.1, `@bcgov/bc-sans` v2.0.1.
+- In TagList, use render prop pattern [rather than array.map()](https://react-spectrum.adobe.com/react-aria/collections.html#why-not-array-map) for performance.
+- TagGroup sub-components get explicit class names to prevent styling collisions with sub-component instances in other components.
+
+### Added
+
+- Added Select component.
+
 ## 0.0.2
 
 ### Changed
