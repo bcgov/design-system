@@ -5,7 +5,14 @@
 
 The B.C. Design System will give design and software development teams the building blocks to deliver intuitive, accessible digital services. 
 
-It will replace [the legacy design system](#legacy-documentation). The legacy design system will eventually be deprecated and archived.
+The B.C. Design System will comprise 4 core elements:
+
+* [Design tokens](#bc-design-tokens) (currently in beta)
+* React component library (in development)
+* Design library in Figma (in development)
+* Documentation hub (in development)
+
+It will replace [the legacy design system](#legacy-documentation). Legacy component and documentation will be deprecated and archived.
 
 ## B.C. Design Tokens
 
@@ -15,6 +22,18 @@ Design tokens provide a method to quickly and consistently implement the provinc
 
 * [Installable package on npm](https://www.npmjs.com/package/@bcgov/design-tokens)
 * [Figma library](https://www.figma.com/community/file/1326994583954765832)
+
+## Component library
+
+The component library will provide an inventory of reusable user interface components, including:
+
+* Components in Figma
+* Reference implementations in React
+* Support for other languages and frameworks is currently out-of-scope.
+
+The component library is currently in active development.
+
+A [proof-of-concept/preview](https://www.npmjs.com/package/@bcgov/design-system-react-components) of the React library is published on npm.
 
 ## Contact
 
