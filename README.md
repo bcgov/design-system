@@ -12,7 +12,7 @@ The B.C. Design System will comprise 4 core elements:
 * Design library in Figma (in development)
 * Documentation hub (in development)
 
-It will replace [the legacy design system](#legacy-documentation). Legacy component and documentation will be deprecated and archived.
+The new design system will replace [the legacy design system](#legacy-documentation). Legacy component and documentation will be deprecated and archived.
 
 ## B.C. Design Tokens
 
@@ -25,7 +25,7 @@ Design tokens provide a method to quickly and consistently implement the provinc
 
 ## Component library
 
-The component library will provide an inventory of reusable user interface components, including:
+The component library will provide an inventory of reusable UI components, including:
 
 * Components in Figma
 * Reference implementations in React
