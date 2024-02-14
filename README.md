@@ -1,46 +1,53 @@
-# BC Government Design System [![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+# B.C. Design System [![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
-The Design System helps developers and designers build better digital products and services.
+> [!NOTE]
+> **February 2024**: The B.C. Design System is currently in active development. If you have questions, [contact the design system team](#contact) or [open an issue](https://github.com/bcgov/design-system/issues).
 
-It’s a collection of digital resources and tools – including a library of reusable UI/interface components and design patterns. The system makes it easier and faster to build custom B.C. government websites and applications.
+The B.C. Design System will give design and software development teams the building blocks to deliver intuitive, accessible digital services. 
 
-Components are collectively built by the government community, meet accessibility standards and are open for input and improvement.
+The B.C. Design System will comprise 4 core elements:
 
-## Documentation
+* [Design tokens](#bc-design-tokens) (currently in beta)
+* React component library (in development)
+* Design library in Figma (in development)
+* Documentation hub (in development)
 
-https://developer.gov.bc.ca/Design-System/About-the-Design-System
+The new design system will replace [the legacy design system](#legacy-documentation). Legacy component and documentation will be deprecated and archived.
 
-## Files in this repository
+## B.C. Design Tokens
 
-```
-docs/           - Project Documentation
-└── images        
-└── icons         
+The [B.C. Design Tokens package](https://github.com/bcgov/design-system/tree/docs/packages/design-tokens) is the first release as part of the new design system.
 
-openshift/      - OpenShift-specific files
-├── scripts     - helper scripts
-└── templates   - application templates
-```
+Design tokens provide a method to quickly and consistently implement the province's look and feel for digital services. They offer a set of standardized options to help developers style user interfaces in a consistent and future-proof way.
 
-## Deployment (Local Development)
+* [Installable package on npm](https://www.npmjs.com/package/@bcgov/design-tokens)
+* [Source code](https://github.com/bcgov/design-system/tree/master/packages/design-tokens)
+* [Figma library](https://www.figma.com/community/file/1326994583954765832)
 
-* Developer Workstation Requirements/Setup
-* Application Specific Setup
+## Component library
 
-## Deployment (OpenShift)
+The component library will provide an inventory of reusable UI components, including:
 
-See (openshift/Readme.md)
+* Components in Figma
+* Reference implementations in React
+* Support for other languages and frameworks is currently out-of-scope.
 
-## Getting Help or Reporting an Issue
+The component library is currently in active development.
 
-To report bugs/issues/feature requests, please file an [issue](https://github.com/BCDevOps/opendev-template/issues/).
+A [proof-of-concept/preview](https://www.npmjs.com/package/@bcgov/design-system-react-components) of the React library is published on npm.
 
-## How to Propose a Component
+## Contact
 
-If you would like to propose a component to the design system, please see our [Propose a Component](.github/ISSUE_TEMPLATE/propose-a-new-component.md) guideline.
+The B.C. Design System is maintained by Government Digital Experience (GDX), a division of the Ministry of Citizens' Services. You can contact the design system team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca), or [open an issue](https://github.com/bcgov/design-system/issues/new/choose).
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). 
-By participating in this project you agree to abide by its terms.
+## Legacy documentation
+> [!WARNING]
+> The previous B.C. government design system is not actively supported. These resources are provided for reference only. These resources will be officially deprecated and archived after the new BCDS component library is released.
+
+Documentation and components for the legacy design system are accessible in this repo and on DevHub:
+
+* [Developer documentation](https://developer.gov.bc.ca/Design-System/About-the-Design-System)
+* [Source code](https://github.com/bcgov/design-system/tree/master/components)
 
 ## License
 

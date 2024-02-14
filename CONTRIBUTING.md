@@ -1,6 +1,8 @@
+> [!WARNING]
+> **February 2024:** The contribution criteria and process are currently being redeveloped. An updated backlog will be published soon. If you have questions about how you can contribute to the design system, email <designsystem@gov.bc.ca>.
 
 # How you can contribute
-The BC Design System needs a strong community behind it to make it successful. You can contribute by reporting bugs, editing documentation, participating in discussions, or even creating new components. Your contribution to it will ensure it helps meets user needs from across the BC government. 
+The B.C. Design System needs a strong community behind it to make it successful. You can contribute by reporting bugs, editing documentation, participating in discussions, or even creating new components. Your contribution to it will ensure it helps meets user needs from across the BC government. 
 
 ## Discussing styles and components
 You can discuss the existing styles and components in the Design System, or ones being developed, by commenting on issues in the [component and design pattern backlog](https://github.com/bcgov/design-system/projects/1). Alternatively, you can email <designsystem@gov.bc.ca>.
