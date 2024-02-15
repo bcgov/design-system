@@ -29,6 +29,21 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const items = [
+  {
+    id: "1",
+    label: "Option one",
+  },
+  {
+    id: "2",
+    label: "Option two",
+  },
+  {
+    id: "3",
+    label: "Option three",
+  },
+];
+
 export const SelectTemplate: Story = {
   args: {
     label: "Label",
@@ -36,20 +51,7 @@ export const SelectTemplate: Story = {
     isRequired: false,
     isDisabled: false,
     isInvalid: false,
-    items: [
-      {
-        id: "1",
-        label: "Option one",
-      },
-      {
-        id: "2",
-        label: "Option two",
-      },
-      {
-        id: "3",
-        label: "Option three",
-      },
-    ],
+    items: items,
   },
 };
 
@@ -156,33 +158,35 @@ export const Invalid: Story = {
   },
 };
 
+const sections = [
+  {
+    header: "Fruit",
+    id: "section-fruit",
+    items: [
+      { id: "apple", label: "Apple" },
+      { id: "banana", label: "Banana" },
+      { id: "orange", label: "Orange" },
+      { id: "honeydew", label: "Honeydew" },
+    ],
+  },
+  {
+    header: "Vegetable",
+    id: "section-vegetable",
+    items: [
+      { id: "cabbage", label: "Cabbage" },
+      { id: "broccoli", label: "Broccoli" },
+      { id: "carrots", label: "Carrots" },
+      { id: "lettuce", label: "Lettuce" },
+    ],
+  },
+];
+
 export const Sections: Story = {
   args: {
     ...SelectTemplate.args,
     label: "Sectioned options",
     items: undefined,
-    sections: [
-      {
-        header: "Fruit",
-        id: "section-fruit",
-        items: [
-          { id: "apple", label: "Apple" },
-          { id: "banana", label: "Banana" },
-          { id: "orange", label: "Orange" },
-          { id: "honeydew", label: "Honeydew" },
-        ],
-      },
-      {
-        header: "Vegetable",
-        id: "section-vegetable",
-        items: [
-          { id: "cabbage", label: "Cabbage" },
-          { id: "broccoli", label: "Broccoli" },
-          { id: "carrots", label: "Carrots" },
-          { id: "lettuce", label: "Lettuce" },
-        ],
-      },
-    ],
+    sections: sections,
   },
 };
 
@@ -191,7 +195,7 @@ export const FlatWithDestructionOption: Story = {
     ...SelectTemplate.args,
     label: "Destruction option",
     items: [
-      ...SelectTemplate.args.items,
+      ...items,
       {
         id: "4",
         isDestructive: true,
@@ -205,7 +209,7 @@ export const SectionsWithDestructionOption: Story = {
   args: {
     label: "Sectioned with destruction option",
     sections: [
-      ...Sections.args.sections,
+      ...sections,
       {
         id: "destruction-section",
         items: [
@@ -220,27 +224,29 @@ export const SectionsWithDestructionOption: Story = {
   },
 };
 
+const itemsWithDescriptions = [
+  {
+    id: 1,
+    label: "Option one label",
+    description: "Description of option one",
+  },
+  {
+    id: 2,
+    label: "Option two label",
+    description: "Description of option two",
+  },
+  {
+    id: 3,
+    label: "Option three label",
+    description: "Description of option three",
+  },
+];
+
 export const OptionDescriptions: Story = {
   args: {
     ...SelectTemplate.args,
     label: "Options with descriptions",
-    items: [
-      {
-        id: 1,
-        label: "Option one label",
-        description: "Description of option one",
-      },
-      {
-        id: 2,
-        label: "Option two label",
-        description: "Description of option two",
-      },
-      {
-        id: 3,
-        label: "Option three label",
-        description: "Description of option three",
-      },
-    ],
+    items: itemsWithDescriptions,
   },
 };
 
@@ -250,15 +256,15 @@ export const LeftIcon: Story = {
     label: "Options with left icons",
     items: [
       {
-        ...SelectTemplate.args.items[0],
+        ...items[0],
         iconLeft: iconPlaceholder,
       },
       {
-        ...SelectTemplate.args.items[1],
+        ...items[1],
         iconLeft: iconPlaceholder,
       },
       {
-        ...SelectTemplate.args.items[2],
+        ...items[2],
         iconLeft: iconPlaceholder,
       },
     ],
@@ -271,15 +277,15 @@ export const RightIcon: Story = {
     label: "Options with right icons",
     items: [
       {
-        ...SelectTemplate.args.items[0],
+        ...items[0],
         iconRight: iconPlaceholder,
       },
       {
-        ...SelectTemplate.args.items[1],
+        ...items[1],
         iconRight: iconPlaceholder,
       },
       {
-        ...SelectTemplate.args.items[2],
+        ...items[2],
         iconRight: iconPlaceholder,
       },
     ],
@@ -292,16 +298,19 @@ export const BothIcons: Story = {
     label: "Options with both icons",
     items: [
       {
-        ...LeftIcon.args.items[0],
-        ...RightIcon.args.items[0],
+        ...items[0],
+        iconLeft: iconPlaceholder,
+        iconRight: iconPlaceholder,
       },
       {
-        ...LeftIcon.args.items[1],
-        ...RightIcon.args.items[1],
+        ...items[1],
+        iconLeft: iconPlaceholder,
+        iconRight: iconPlaceholder,
       },
       {
-        ...LeftIcon.args.items[2],
-        ...RightIcon.args.items[2],
+        ...items[2],
+        iconLeft: iconPlaceholder,
+        iconRight: iconPlaceholder,
       },
     ],
   },
@@ -313,15 +322,15 @@ export const DescriptionAndLeftIcon: Story = {
     label: "Options with descriptions and left icons",
     items: [
       {
-        ...OptionDescriptions.args.items[0],
+        ...itemsWithDescriptions[0],
         iconLeft: iconPlaceholder,
       },
       {
-        ...OptionDescriptions.args.items[1],
+        ...itemsWithDescriptions[1],
         iconLeft: iconPlaceholder,
       },
       {
-        ...OptionDescriptions.args.items[2],
+        ...itemsWithDescriptions[2],
         iconLeft: iconPlaceholder,
       },
     ],
@@ -334,15 +343,15 @@ export const DescriptionAndRightIcon: Story = {
     label: "Options with descriptions and right icons",
     items: [
       {
-        ...OptionDescriptions.args.items[0],
+        ...itemsWithDescriptions[0],
         iconRight: iconPlaceholder,
       },
       {
-        ...OptionDescriptions.args.items[1],
+        ...itemsWithDescriptions[1],
         iconRight: iconPlaceholder,
       },
       {
-        ...OptionDescriptions.args.items[2],
+        ...itemsWithDescriptions[2],
         iconRight: iconPlaceholder,
       },
     ],
@@ -355,17 +364,17 @@ export const DescriptionAndBothIcons: Story = {
     label: "Options with descriptions and both icons",
     items: [
       {
-        ...OptionDescriptions.args.items[0],
+        ...itemsWithDescriptions[0],
         iconLeft: iconPlaceholder,
         iconRight: iconPlaceholder,
       },
       {
-        ...OptionDescriptions.args.items[1],
+        ...itemsWithDescriptions[1],
         iconLeft: iconPlaceholder,
         iconRight: iconPlaceholder,
       },
       {
-        ...OptionDescriptions.args.items[2],
+        ...itemsWithDescriptions[2],
         iconLeft: iconPlaceholder,
         iconRight: iconPlaceholder,
       },
@@ -379,17 +388,17 @@ export const DescriptionBothIconsAndDestruction: Story = {
     label: "Options with descriptions, icons, destruction",
     items: [
       {
-        ...OptionDescriptions.args.items[0],
+        ...itemsWithDescriptions[0],
         iconLeft: iconPlaceholder,
         iconRight: iconPlaceholder,
       },
       {
-        ...OptionDescriptions.args.items[1],
+        ...itemsWithDescriptions[1],
         iconLeft: iconPlaceholder,
         iconRight: iconPlaceholder,
       },
       {
-        ...OptionDescriptions.args.items[2],
+        ...itemsWithDescriptions[2],
         iconLeft: iconPlaceholder,
         iconRight: iconPlaceholder,
         isDestructive: true,
