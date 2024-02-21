@@ -21,7 +21,7 @@ The [B.C. Design Tokens package](https://github.com/bcgov/design-system/tree/doc
 Design tokens provide a method to quickly and consistently implement the province's look and feel for digital services. They offer a set of standardized options to help developers style user interfaces in a consistent and future-proof way.
 
 * [Installable package on npm](https://www.npmjs.com/package/@bcgov/design-tokens)
-* [Source code](https://github.com/bcgov/design-system/tree/master/packages/design-tokens)
+* [Source code](https://github.com/bcgov/design-system/tree/main/packages/design-tokens)
 * [Figma library](https://www.figma.com/community/file/1326994583954765832)
 
 ## Component library
@@ -47,7 +47,7 @@ The B.C. Design System is maintained by Government Digital Experience (GDX), a d
 Documentation and components for the legacy design system are accessible in this repo and on DevHub:
 
 * [Developer documentation](https://developer.gov.bc.ca/Design-System/About-the-Design-System)
-* [Source code](https://github.com/bcgov/design-system/tree/master/components)
+* [Source code](https://github.com/bcgov/design-system/tree/main/components)
 
 ## License
 
