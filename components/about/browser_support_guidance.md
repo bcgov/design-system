@@ -78,4 +78,4 @@ If your website or application doesn’t support IE, you can create a page telli
 
 ### Download
 
-* [Images](https://github.com/bcgov/design-system/tree/master/components/assets/unsupported-browsers)
+* [Images](https://github.com/bcgov/design-system/tree/main/components/assets/unsupported-browsers)
