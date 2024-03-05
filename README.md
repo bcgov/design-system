@@ -46,7 +46,7 @@ The B.C. Design System is maintained by Government Digital Experience (GDX), a d
 
 Documentation and components for the legacy design system are accessible in this repo and on DevHub:
 
-* [Developer documentation](https://developer.gov.bc.ca/Design-System/About-the-Design-System)
+* [Developer documentation](https://classic.developer.gov.bc.ca/Design-System/About-the-Design-System)
 * [Source code](https://github.com/bcgov/design-system/tree/main/components)
 
 ## License
