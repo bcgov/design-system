@@ -21,7 +21,7 @@ export default function TagList<T extends object>({
 }: TagListProps<T>) {
   return (
     <ReactAriaTagList
-      className={`react-aria-TagList ${orientation}`}
+      className={`bcds-react-aria-TagList ${orientation}`}
       {...props}
       renderEmptyState={renderEmptyState}
       items={items}

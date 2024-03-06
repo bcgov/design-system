@@ -21,7 +21,7 @@ export default function Button({
 }: ButtonProps) {
   return (
     <ReactAriaButton
-      className={`react-aria-Button ${size} ${variant} ${
+      className={`bcds-react-aria-Button ${size} ${variant} ${
         danger ? "danger" : ""
       } ${isIconButton ? "icon" : ""}`}
       {...props}
