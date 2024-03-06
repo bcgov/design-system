@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   ButtonPrimaryMedium,
   ButtonPrimaryMediumDisabled,
@@ -65,6 +67,14 @@ import {
   ButtonLinkSmallDisabledDanger,
 } from "./ButtonDanger";
 
+function FlexRow({ children }: React.PropsWithChildren) {
+  return (
+    <div style={{ display: "flex", gap: "8px", alignItems: "flex-start" }}>
+      {children}
+    </div>
+  );
+}
+
 export default function ButtonPage() {
   return (
     <>
@@ -73,154 +83,154 @@ export default function ButtonPage() {
       <hr />
 
       <h3>Primary Button Medium</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonPrimaryMediumIcon />
         <ButtonPrimaryMedium />
         <ButtonPrimaryMediumIconDisabled />
         <ButtonPrimaryMediumDisabled />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Primary Button Small</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonPrimarySmallIcon />
         <ButtonPrimarySmall />
         <ButtonPrimarySmallIconDisabled />
         <ButtonPrimarySmallDisabled />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Secondary Button Medium</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonSecondaryMediumIcon />
         <ButtonSecondaryMedium />
         <ButtonSecondaryMediumIconDisabled />
         <ButtonSecondaryMediumDisabled />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Secondary Button Small</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonSecondarySmallIcon />
         <ButtonSecondarySmall />
         <ButtonSecondarySmallIconDisabled />
         <ButtonSecondarySmallDisabled />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Tertiary Button Medium</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonTertiaryMediumIcon />
         <ButtonTertiaryMedium />
         <ButtonTertiaryMediumIconDisabled />
         <ButtonTertiaryMediumDisabled />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Tertiary Button Small</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonTertiarySmallIcon />
         <ButtonTertiarySmall />
         <ButtonTertiarySmallIconDisabled />
         <ButtonTertiarySmallDisabled />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Link Button Medium</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonLinkMedium />
         <ButtonLinkMediumDisabled />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Link Button Small</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonLinkSmall />
         <ButtonLinkSmallDisabled />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Primary Button Medium Danger</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonPrimaryMediumDangerIcon />
         <ButtonPrimaryMediumDanger />
         <ButtonPrimaryMediumDisabledDangerIcon />
         <ButtonPrimaryMediumDisabledDanger />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Primary Button Small Danger</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonPrimarySmallDangerIcon />
         <ButtonPrimarySmallDanger />
         <ButtonPrimarySmallDisabledDangerIcon />
         <ButtonPrimarySmallDisabledDanger />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Secondary Button Medium Danger</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonSecondaryMediumDangerIcon />
         <ButtonSecondaryMediumDanger />
         <ButtonSecondaryMediumDisabledDangerIcon />
         <ButtonSecondaryMediumDisabledDanger />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Secondary Button Small Danger</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonSecondarySmallDangerIcon />
         <ButtonSecondarySmallDanger />
         <ButtonSecondarySmallDisabledDangerIcon />
         <ButtonSecondarySmallDisabledDanger />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Tertiary Button Medium Danger</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonTertiaryMediumDangerIcon />
         <ButtonTertiaryMediumDanger />
         <ButtonTertiaryMediumDisabledDangerIcon />
         <ButtonTertiaryMediumDisabledDanger />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Tertiary Button Small Danger</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonTertiarySmallDangerIcon />
         <ButtonTertiarySmallDanger />
         <ButtonTertiarySmallDisabledDangerIcon />
         <ButtonTertiarySmallDisabledDanger />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Link Button Medium Danger</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonLinkMediumDanger />
         <ButtonLinkMediumDisabledDanger />
-      </div>
+      </FlexRow>
 
       <hr />
 
       <h3>Link Button Small Danger</h3>
-      <div style={{ display: "flex", gap: "8px" }}>
+      <FlexRow>
         <ButtonLinkSmallDanger />
         <ButtonLinkSmallDisabledDanger />
-      </div>
+      </FlexRow>
     </>
   );
 }
