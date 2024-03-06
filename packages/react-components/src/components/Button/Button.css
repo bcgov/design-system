@@ -1,4 +1,4 @@
-.react-aria-Button {
+.bcds-react-aria-Button {
   border: none;
   border-radius: var(--layout-border-radius-medium, 4px);
   cursor: pointer;
@@ -9,107 +9,109 @@
   padding-left: 16px;
   padding-right: 16px;
 }
-.react-aria-Button[data-disabled] {
+.bcds-react-aria-Button[data-disabled] {
   cursor: not-allowed;
 }
-.react-aria-Button[data-focused] {
+.bcds-react-aria-Button[data-focused] {
   outline: 2px solid var(--surface-primary-active);
 }
 
 /* Icon button */
-.react-aria-Button.icon {
+.bcds-react-aria-Button.icon {
   align-items: center;
   justify-content: space-around;
 }
 
 /* Sizes */
-.react-aria-Button.small {
+.bcds-react-aria-Button.small {
   min-height: 32px;
 }
-.react-aria-Button.small.icon {
+.bcds-react-aria-Button.small.icon {
   padding: unset;
   height: 32px;
   width: 32px;
+  min-width: 32px;
 }
-.react-aria-Button.medium {
+.bcds-react-aria-Button.medium {
   min-height: 40px;
 }
-.react-aria-Button.medium.icon {
+.bcds-react-aria-Button.medium.icon {
   padding: unset;
   height: 40px;
   width: 40px;
+  min-width: 40px;
 }
 
 /* Variant - Primary */
-.react-aria-Button.primary {
+.bcds-react-aria-Button.primary {
   background: var(--surface-primary-default);
   color: var(--typography-color-primary-invert);
 }
-.react-aria-Button.primary.danger {
+.bcds-react-aria-Button.primary.danger {
   background-color: var(--surface-danger-default);
 }
-.react-aria-Button.primary[data-disabled] {
+.bcds-react-aria-Button.primary[data-disabled] {
   background-color: var(--surface-primary-disabled);
   color: var(--typography-color-disabled);
 }
-.react-aria-Button.primary[data-hovered] {
+.bcds-react-aria-Button.primary[data-hovered] {
   background-color: var(--surface-primary-hover);
 }
-.react-aria-Button.primary.danger[data-hovered] {
+.bcds-react-aria-Button.primary.danger[data-hovered] {
   background-color: var(--surface-danger-hover);
 }
 
 /* Variant - Secondary */
-.react-aria-Button.secondary {
+.bcds-react-aria-Button.secondary {
   background-color: var(--surface-secondary-default);
   border: 1px solid var(--surface-border-dark);
   color: var(--typography-color-primary);
 }
-.react-aria-Button.secondary.danger {
+.bcds-react-aria-Button.secondary.danger {
   border-color: var(--surface-support-border-color-danger);
   color: var(--surface-danger-default);
 }
-.react-aria-Button.secondary[data-disabled] {
+.bcds-react-aria-Button.secondary[data-disabled] {
   background-color: var(--surface-primary-disabled);
   border-color: var(--surface-border-light);
   color: var(--typography-color-disabled);
 }
-.react-aria-Button.secondary[data-hovered] {
+.bcds-react-aria-Button.secondary[data-hovered] {
   background-color: var(--surface-secondary-hover);
 }
-.react-aria-Button.secondary.danger[data-hovered] {
+.bcds-react-aria-Button.secondary.danger[data-hovered] {
   background-color: var(--surface-support-surface-color-danger);
 }
 
 /* Variant - Tertiary */
-.react-aria-Button.tertiary {
+.bcds-react-aria-Button.tertiary {
   background-color: var(--surface-tertiary-default);
   color: var(--typography-color-primary);
 }
-.react-aria-Button.tertiary.danger {
+.bcds-react-aria-Button.tertiary.danger {
   color: var(--surface-danger-default);
 }
-.react-aria-Button.tertiary[data-disabled] {
+.bcds-react-aria-Button.tertiary[data-disabled] {
   background-color: var(--surface-tertiary-default);
   color: var(--typography-color-disabled);
 }
-.react-aria-Button.tertiary[data-hovered] {
+.bcds-react-aria-Button.tertiary[data-hovered] {
   background-color: var(--surface-tertiary-hover);
 }
-.react-aria-Button.tertiary.danger[data-hovered] {
+.bcds-react-aria-Button.tertiary.danger[data-hovered] {
   background-color: var(--surface-support-surface-color-danger);
 }
 
 /* Variant - Link */
-.react-aria-Button.link {
+.bcds-react-aria-Button.link {
   background-color: var(--surface-tertiary-default);
   color: var(--typography-color-link);
   text-decoration: underline;
   text-underline-offset: 0.3em;
 }
-.react-aria-Button.link.danger {
+.bcds-react-aria-Button.link.danger {
   color: var(--surface-danger-default);
 }
-.react-aria-Button.link[data-disabled] {
+.bcds-react-aria-Button.link[data-disabled] {
   color: var(--typography-color-disabled);
 }

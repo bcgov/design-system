@@ -14,13 +14,13 @@ To use, install this package and import the components into your application.
 
 `npm install @bcgov/design-system-react-components`
 
-## BC Sans font dependency
+### BC Sans font dependency
 
 This package installs [@bcgov/bc-sans](https://www.npmjs.com/package/@bcgov/bc-sans) as a peer dependency. You must import the font-face declarations from @bcgov/bc-sans and ensure the font is reachable for your end user. The React components require that the `BC Sans` font-face is available to display correctly. The components do not ship their own copies of the font to minimize your bundle size.
 
 **Important!** If you are on a BC Government-provisioned laptop, you already have the BC Sans font installed on your machine. This package uses `BC Sans` (with a space) for its font styles. If you are using this component library but not supplying the font, it's possible that your machine will still display the font correctly for you, **but not your end user**. Make sure to check this by disabling the font on your machine or by testing with another machine.
 
-### Use
+## Use
 
 ```jsx
 // App.jsx
@@ -31,18 +31,33 @@ This package installs [@bcgov/bc-sans](https://www.npmjs.com/package/@bcgov/bc-s
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
 // Import the individual components you need
-import { TagGroup, TagList } from "@bcgov/design-system-react-components";
+import {
+  Button,
+  Header,
+  TagGroup,
+  TagList
+} from "@bcgov/design-system-react-components";
 
 export default function App() {
   return (
-    <TagGroup aria-label="Tag group with two items">
-      <TagList
-        items={[
-          { id: "one", textValue: "One" },
-          { id: "two", textValue: "Two" },
-        ]}
-      />
-    </TagGroup>
+    <Header
+      title="My application"
+      skipLinks={[
+        <a href="#main-content">Skip to main content</a>
+      ]}
+    >
+      <Button variant="primary" size="small">Log in</Button>
+    </Header>
+    <main id="main-content">
+      <TagGroup aria-label="Tag group with two items">
+        <TagList
+          items={[
+            { id: "one", textValue: "One" },
+            { id: "two", textValue: "Two" },
+          ]}
+        />
+      </TagGroup>
+    </main>
   );
 }
 ```
@@ -52,6 +67,7 @@ export default function App() {
 | Component              | React Aria Components docs link                           |
 | ---------------------- | --------------------------------------------------------- |
 | Button                 | https://react-spectrum.adobe.com/react-aria/Button.html   |
+| Header                 | N/A                                                       |
 | Select                 | https://react-spectrum.adobe.com/react-aria/Select.html   |
 | TagGroup, TagList, Tag | https://react-spectrum.adobe.com/react-aria/TagGroup.html |
 
@@ -66,6 +82,10 @@ By targeting v16.4.0 as a minimum, we get to use [React's modern JSX transformat
 ```
 
 This means there's no need for unused `import React from "react"` statements in your JSX files.
+
+## Versions
+
+This project follows semantic versioning. See [CHANGELOG.md](./CHANGELOG.md) for version details.
 
 ## Development
 

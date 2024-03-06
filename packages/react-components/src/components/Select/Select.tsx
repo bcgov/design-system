@@ -100,7 +100,7 @@ export default function Select<T extends object>({
       {({ isOpen, isRequired, isInvalid }) => (
         <>
           {label && (
-            <Label className="react-aria-Select--Label">
+            <Label className="bcds-react-aria-Select--Label">
               {label}
               {!isRequired && (
                 <>
@@ -111,11 +111,12 @@ export default function Select<T extends object>({
             </Label>
           )}
           <Button
-            className={`react-aria-Select--Button ${
+            className={`bcds-react-aria-Select--Button ${
               size === "medium" ? "medium" : "small"
             } ${isInvalid && "invalid"}`}
           >
             <SelectValue
+              className="bcds-react-aria-SelectValue"
               children={(value) => {
                 if (value.selectedText) return value.selectedText;
                 if (placeholder) return placeholder;
@@ -124,9 +125,9 @@ export default function Select<T extends object>({
             />
             {isOpen ? <ChevronUp /> : <ChevronDown />}
           </Button>
-          <Popover className="react-aria-Select--Popover" offset={4}>
+          <Popover className="bcds-react-aria-Select--Popover" offset={4}>
             <ListBox
-              className="react-aria-Select--ListBox"
+              className="bcds-react-aria-Select--ListBox"
               // This ternary statement is used to mock the data for `sections`
               // if a flat list of `items` was passed instead. This allows us to
               // use one component to support both flat and sectioned lists of
@@ -140,9 +141,9 @@ export default function Select<T extends object>({
               }
             >
               {(section: SelectionSectionProps) => (
-                <Section id={section.id}>
+                <Section id={section.id} className="bcds-react-aria-Section">
                   {section?.header && (
-                    <Header className="react-aria-Select--Header">
+                    <Header className="bcds-react-aria-Select--Header">
                       {section.header}
                     </Header>
                   )}
@@ -150,34 +151,34 @@ export default function Select<T extends object>({
                     {(item) => (
                       <ListBoxItem
                         id={item?.id ? item.id : item.label}
-                        className={`react-aria-Select--ListBoxItem ${
+                        className={`bcds-react-aria-Select--ListBoxItem ${
                           item?.isDestructive ? "destructive" : ""
                         }`}
                         textValue={item.label}
                       >
                         {item?.iconLeft && (
-                          <div className="react-aria-Select--ListBoxItem-icon">
+                          <div className="bcds-react-aria-Select--ListBoxItem-icon">
                             {item.iconLeft}
                           </div>
                         )}
-                        <div className="react-aria-Select--ListBoxItem-Text-container">
+                        <div className="bcds-react-aria-Select--ListBoxItem-Text-container">
                           <Text
                             slot="label"
-                            className="react-aria-Select--ListBoxItem-Text-label"
+                            className="bcds-react-aria-Select--ListBoxItem-Text-label"
                           >
                             {item.label}
                           </Text>
                           {item.description && (
                             <Text
                               slot="description"
-                              className="react-aria-Select--ListBoxItem-Text-description"
+                              className="bcds-react-aria-Select--ListBoxItem-Text-description"
                             >
                               {item.description}
                             </Text>
                           )}
                         </div>
                         {item?.iconRight && (
-                          <div className="react-aria-Select--ListBoxItem-icon">
+                          <div className="bcds-react-aria-Select--ListBoxItem-icon">
                             {item.iconRight}
                           </div>
                         )}

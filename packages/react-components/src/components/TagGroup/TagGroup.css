@@ -1,15 +1,15 @@
-.react-aria-TagGroup {
+.bcds-react-aria-TagGroup {
   color: var(--typography-color-primary, #2d2d2d);
   font: var(--typography-regular-label, 400 0.875rem/1.313rem "BC Sans");
 }
 
-.react-aria-TagGroup--Label,
-.react-aria-TagGroup--Text-description,
-.react-aria-TagGroup--Text-error {
+.bcds-react-aria-TagGroup--Label,
+.bcds-react-aria-TagGroup--Text-description,
+.bcds-react-aria-TagGroup--Text-error {
   display: block;
   margin: var(--layout-margin-small) var(--layout-margin-none);
 }
 
-.react-aria-TagGroup--Text-error {
+.bcds-react-aria-TagGroup--Text-error {
   color: var(--surface-danger-default, #ce3e39);
 }

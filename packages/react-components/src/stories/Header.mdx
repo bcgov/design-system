@@ -1,0 +1,59 @@
+{/* Header.mdx */}
+
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+
+import * as HeaderStories from "./Header.stories";
+
+<Meta of={HeaderStories} />
+
+# Header
+
+The Header component is designed to sit at the top of your screen. It returns an [HTML `<header>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header).
+
+<Canvas of={HeaderStories?.HeaderWithTheWorks} />
+
+## Logo link
+
+The B.C. logo is automatically included in the Header. Clicking the logo should take the user back to the root of your site/application. Use the `logoLinkElement` prop to pass an `<a>` tag or a `<Link>` component from your router library. Internally, the Header will replace the `children` prop of your `logoLinkElement` with the SVG B.C. logo.
+
+If you don't pass any `logoLinkElement`, an `<a>` tag with an `href` to `/` is rendered. Using `<a>` instead of a `<Link>` means a full page load in most cases, so make sure to pass `logoLinkElement` according to the best practices of your routing library.
+
+Your `<a>` or `<Link>` should supply a `title` attribute for accessibility.
+
+`logoLinkElement` also supports `<button>`, and CSS rules are included, but keep in mind the semantic and SEO implications of using a `<button>` for navigation.
+
+By default, the Header will use an SVG copy of the B.C. logo that ships with the Header, which is exported as `SvgBcLogo`. If you need, you can pass an alternative image with the `logoImage` prop.
+
+<Canvas of={HeaderStories?.HeaderWithCustomLogoAndLink} />
+
+## Skip links
+
+[Skip links](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html) are an accessibility feature to assist users navigating sequentially through content. In particular, they are required for keyboard users who would otherwise have to tab through many navigation elements to get to your main navigation menu or page content.
+
+In our Header, there is a slot for skip links after the logo link. Use the `skipLinks` prop to pass an array of `<a>` tags or `<Link>` elements depending on your frontend router's capabilities. These will be rendered as list items within a `<ul>`. The links are visually hidden (pushed far to the left off the page by `margin-left`) until they are focused with the Keyboard. To test the visual appearance of the links, click within the component preview and tab past the logo.
+
+Note that if your skip link is pointing to content on the current page, you need to handle placing the corresponding target `id` on the page yourself. For example, use `<main id="main-content">` around your main body content and then add a skip link like: `<a href="#main-content">Skip to main content</a>`
+
+<Canvas of={HeaderStories?.HeaderWithTitleAndSkipLinks} />
+
+## Title
+
+The `title` prop is used for the text to the right of the logo, and it appears in a `<span>` by default. Use the `titleElement` prop with one of these string values if you need the title to appear in a different element: `p`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`
+
+<Canvas of={HeaderStories?.HeaderWithTitleElement} />
+
+If no `title` is passed, the vertical bar to the left of the title won't appear.
+
+<Canvas of={HeaderStories?.HeaderTemplate} />
+
+## `children`
+
+The right side of the Header has a slot for the `children` prop. This is where you can place your application-specific navigation elements like menu buttons.
+
+<Canvas of={HeaderStories?.HeaderWithChildren} />
+
+## Responsive design
+
+You must add your own breakpoint handling if a long `title` or `children` will break your Header on narrow screens. While we don't yet offer any breakpoint logic in the Design System, we recommend [Bootstrap's v5 breakpoints](https://getbootstrap.com/docs/5.0/layout/breakpoints/) and we intend to build features based on these in the future.
+
+The `title` text in the Header will wrap by default, causing the Header to grow vertically.

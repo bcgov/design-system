@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.0.4
+
+### Changed
+
+- Use `react-aria-components` v1.1.1.
+- Updated class names in `Button`, `Select`, `Tag`, `TagGroup`, and `TagList` to add `bcds-` prefix to prevent style collisions with other instances of React Aria Components.
+
+### Added
+
+- Added Header component.
+
 ## 0.0.3
 
 ### Changed

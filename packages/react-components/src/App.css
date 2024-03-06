@@ -1,7 +1,5 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
 }
 
 h1,
@@ -11,4 +9,10 @@ h4,
 h5,
 h6 {
   font-family: var(--typography-font-families-bc-sans);
+}
+
+main {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 1100px;
 }
