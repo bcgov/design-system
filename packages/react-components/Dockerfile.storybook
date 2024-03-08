@@ -8,6 +8,7 @@ FROM node:lts-alpine as build-stage
 # Copy package.json and package-lock.json
 WORKDIR /app
 COPY package.json .
+COPY vite.config.ts .
 
 # Print npm config
 RUN npm config list
