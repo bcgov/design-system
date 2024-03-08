@@ -33,6 +33,7 @@ import "@bcgov/bc-sans/css/BC_Sans.css";
 // Import the individual components you need
 import {
   Button,
+  Footer,
   Header,
   TagGroup,
   TagList
@@ -58,6 +59,7 @@ export default function App() {
         />
       </TagGroup>
     </main>
+    <Footer/>
   );
 }
 ```
@@ -67,6 +69,7 @@ export default function App() {
 | Component              | React Aria Components docs link                           |
 | ---------------------- | --------------------------------------------------------- |
 | Button                 | https://react-spectrum.adobe.com/react-aria/Button.html   |
+| Footer                 | N/A                                                       |
 | Header                 | N/A                                                       |
 | Select                 | https://react-spectrum.adobe.com/react-aria/Select.html   |
 | TagGroup, TagList, Tag | https://react-spectrum.adobe.com/react-aria/TagGroup.html |
