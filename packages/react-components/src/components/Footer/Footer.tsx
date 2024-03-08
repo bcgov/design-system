@@ -73,8 +73,7 @@ export default function Footer({
     // https://www2.gov.bc.ca/gov/content/home/services-a-z
     return (
       <p>
-        We can help in over 120 languages and through Telephone Device For The
-        Deaf (TDD).{" "}
+        We can help in over 220 languages and through other accessible options.{" "}
         <a href="https://www2.gov.bc.ca/gov/content?id=6A77C17D0CCB48F897F8598CCC019111">
           Call, email or text us
         </a>
