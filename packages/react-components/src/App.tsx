@@ -5,6 +5,7 @@ import "@bcgov/design-tokens/css/variables.css";
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
 import Button from "@/components/Button";
+import Footer from "./components/Footer";
 import Header from "@/components/Header";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import { ButtonPage, SelectPage, TagGroupPage } from "@/pages";
@@ -119,6 +120,34 @@ function App() {
         <SelectPage />
         <TagGroupPage />
       </main>
+      <Footer />
+      <Footer
+        acknowledgement={<p>Optional land acknowledgement slot.</p>}
+        logo={<SvgMenuIcon />}
+        contact={<p>Optional contact information slot.</p>}
+        links={
+          <>
+            <span className="more-info">Optional links list</span>
+            <ul>
+              <li>This is a very long link, far longer than the average</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+            </ul>
+          </>
+        }
+        copyright="Copyright 2025 BC Gov"
+      />
     </>
   );
 }

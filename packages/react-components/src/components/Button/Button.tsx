@@ -6,9 +6,21 @@ import {
 import "./Button.css";
 
 export interface ButtonProps extends ReactAriaButtonProps {
+  /**
+   * Defaults to `medium`. `small` is shorter vertically.
+   */
   size?: "small" | "medium";
+  /**
+   * Defaults to `primary`.
+   */
   variant?: "primary" | "secondary" | "tertiary" | "link";
+  /**
+   * For destructive/deletion actions.
+   */
   danger?: boolean;
+  /**
+   * If true, renders a square button intended for a single icon.
+   */
   isIconButton?: boolean;
 }
 
