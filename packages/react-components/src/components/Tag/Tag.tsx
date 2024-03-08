@@ -8,7 +8,13 @@ import {
 import "./Tag.css";
 
 export interface TagProps extends ReactAriaTagProps {
+  /**
+   * Icon that appears to the left of the `textValue` field
+   */
   icon?: React.ReactNode;
+  /**
+   * Background color
+   */
   color?:
     | "bc-blue"
     | "bc-gold"
