@@ -8,8 +8,17 @@ import {
 import "./TagGroup.css";
 
 export interface TagGroupProps extends ReactAriaTagGroupProps {
+  /**
+   * Labels the TagGroup, appears above the tags.
+   */
   label?: string;
+  /**
+   * Extended description of the TagGroup, appears below the tags.
+   */
   description?: string;
+  /**
+   * Error message, appears below the tags and below the optional description.
+   */
   errorMessage?: string;
 }
 
