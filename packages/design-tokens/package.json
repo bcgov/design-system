@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/bcgov/design-system#readme",
   "dependencies": {
-    "@tokens-studio/sd-transforms": "^0.12.2",
-    "style-dictionary": "^3.9.1"
+    "@tokens-studio/sd-transforms": "^0.14.4",
+    "style-dictionary": "^3.9.2"
   }
 }
