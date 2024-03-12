@@ -7,6 +7,7 @@
     "prepare-npm-package": "cp -R build/* dist",
     "publish-npm-package": "cd dist && npm publish --access public"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bcgov/design-system.git"
