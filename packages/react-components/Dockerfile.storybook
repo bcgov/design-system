@@ -19,6 +19,7 @@ RUN npm install
 # Copy required files
 COPY src ./src
 COPY .storybook ./.storybook
+COPY storybook-public ./storybook-public
 
 # Run Storybook build script, which places built files in /app/storybook-static
 RUN npm run storybook-build
