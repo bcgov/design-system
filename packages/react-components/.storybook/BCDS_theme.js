@@ -19,6 +19,10 @@ export default create({
   appBorderColor: tokens.surfaceBorderMedium,
   appBorderRadius: tokens.surfaceBorderRadiusMedium,
 
+  // Text colors
+  textColor: tokens.typographyColorPrimary,
+  textInverseColor: tokens.typographyColorPrimaryInvert,
+
   base: 'light',
   brandTitle: 'B.C. Design System',
   brandUrl: 'https://gov.bc.ca/designsystem',
