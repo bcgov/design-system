@@ -29,6 +29,12 @@ export default create({
   barHoverColor: tokens.surfacePrimaryHover,
   barBg: tokens.surfaceBackgroundLight,
 
+  // Form colors
+  inputBg: tokens.surfaceBackgroundLight,
+  inputBorder: tokens.surfaceBorderLight,
+  inputTextColor: tokens.typographyColorSecondary,
+  inputBorderRadius: tokens.surfaceBorderRadiusMedium,
+
   base: 'light',
   brandTitle: 'B.C. Design System',
   brandUrl: 'https://gov.bc.ca/designsystem',
