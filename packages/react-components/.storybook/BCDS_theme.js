@@ -12,6 +12,13 @@ export default create({
   colorPrimary: tokens.surfaceBrandGold60,
   colorSecondary: tokens.surfaceBrandBlue100,
 
+  // UI
+  appBg: tokens.surfaceBackgroundLight,
+  appContentBg: tokens.surfaceBackgroundWhite,
+  appPreviewBg: tokens.surfaceBackgroundWhite,
+  appBorderColor: tokens.surfaceBorderMedium,
+  appBorderRadius: tokens.surfaceBorderRadiusMedium,
+
   base: 'light',
   brandTitle: 'B.C. Design System',
   brandUrl: 'https://gov.bc.ca/designsystem',
