@@ -9,8 +9,8 @@ export default create({
   fontCode: 'monospace',
 
   // Colour
-  colorPrimary: tokens.surfaceBrandBlue100,
-  colorSecondary: tokens.surfaceBrandGold60,
+  colorPrimary: tokens.surfaceBrandGold60,
+  colorSecondary: tokens.surfaceBrandBlue100,
 
   base: 'light',
   brandTitle: 'B.C. Design System',
