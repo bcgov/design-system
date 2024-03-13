@@ -36,6 +36,5 @@ export default create({
 
   base: "light",
   brandTitle: "B.C. Design System",
-  brandUrl: "https://gov.bc.ca/designsystem",
   brandImage: "BCID_H_rgb_pos.svg", // This lives in storybook-public
 });
