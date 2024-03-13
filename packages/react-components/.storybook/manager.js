@@ -1,6 +1,6 @@
-import { addons } from '@storybook/manager-api';
-import BCDS_theme from './BCDS_theme';
+import { addons } from "@storybook/manager-api";
+import bcdsTheme from "./bcdsTheme";
 
 addons.setConfig({
-  theme: BCDS_theme,
+  theme: bcdsTheme,
 });
