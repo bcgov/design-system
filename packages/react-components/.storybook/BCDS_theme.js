@@ -5,7 +5,7 @@ import * as tokens from '@bcgov/design-tokens/js/variables.js';
 export default create({
 
   // Typography
-  fontBase: 'BC Sans", sans-serif',
+  fontBase: '"BC Sans", sans-serif',
   fontCode: 'monospace',
 
   // Colour
