@@ -1,6 +1,6 @@
 import { create } from '@storybook/theming/create';
 import '@bcgov/bc-sans/css/BC_Sans.css';
-import '@bcgov/design-tokens/js/variables.js';
+import * as tokens from '@bcgov/design-tokens/js/variables.js';
 
 export default create({
 
@@ -9,8 +9,8 @@ export default create({
   fontCode: 'monospace',
 
   // Colour
-  colorPrimary: 'surfaceBrandBlue100',
-  colorSecondary: 'surfaceBrandGold60',
+  colorPrimary: tokens.surfaceBrandBlue100,
+  colorSecondary: tokens.surfaceBrandGold60,
 
   base: 'light',
   brandTitle: 'B.C. Design System',
