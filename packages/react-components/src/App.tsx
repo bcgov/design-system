@@ -4,9 +4,7 @@ import "./App.css";
 import "@bcgov/design-tokens/css/variables.css";
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
-import Button from "@/components/Button";
-import Footer from "./components/Footer";
-import Header from "@/components/Header";
+import { Button, Footer, FooterLinks, Header } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import { ButtonPage, SelectPage, TagGroupPage } from "@/pages";
 
@@ -126,28 +124,77 @@ function App() {
         logo={<SvgMenuIcon />}
         contact={<p>Optional contact information slot.</p>}
         links={
-          <>
-            <span className="more-info">Optional links list</span>
-            <ul>
-              <li>This is a very long link, far longer than the average</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-            </ul>
-          </>
+          <FooterLinks
+            title="Optional links list"
+            links={[
+              <a href="/">Lorem ipsum dolor sit amet</a>,
+              <a href="/">Phasellus vitae condimentum erat</a>,
+              <a href="/">Donec ipsum augue, ornare at blandit sit amet</a>,
+              <a href="/">Etiam luctus nulla venenatis nunc luctus rutrum</a>,
+              <a href="/">Mauris vitae sem quis nibh volutpat condimentum</a>,
+              <a href="/">Nam sed sodales arcu, ut fringilla quam</a>,
+              <a href="/">
+                Curabitur accumsan sapien condimentum semper condimentum
+              </a>,
+            ]}
+          />
         }
         copyright="Copyright 2025 BC Gov"
       />
+      <Footer
+        acknowledgement={
+          <p>
+            Footer with <code>children</code> below:
+          </p>
+        }
+      >
+        <FooterLinks
+          title="Footer Links 1"
+          links={[
+            <a href="/">Lorem ipsum dolor sit amet</a>,
+            <a href="/">Phasellus vitae condimentum erat</a>,
+            <a href="/">Donec ipsum augue, ornare at blandit sit amet</a>,
+            <a href="/">Etiam luctus nulla venenatis nunc luctus rutrum</a>,
+            <a href="/">Mauris vitae sem quis nibh volutpat condimentum</a>,
+            <a href="/">Nam sed sodales arcu, ut fringilla quam</a>,
+            <a href="/">
+              Curabitur accumsan sapien condimentum semper condimentum
+            </a>,
+          ]}
+        />
+        <FooterLinks
+          title="Footer Links 2"
+          links={[
+            <a href="/">Maecenas quis neque nulla</a>,
+            <a href="/">Vivamus pulvinar sed leo ut placerat</a>,
+            <a href="/">Suspendisse potenti</a>,
+            <a href="/">Morbi id diam id enim interdum placerat</a>,
+            <a href="/">Integer sed odio vitae urna placerat sodales</a>,
+            <a href="/">Quisque dignissim ultricies nisl eget consequat</a>,
+            <a href="/">
+              Nullam non nulla tincidunt ligula feugiat porttitor at ac leo
+            </a>,
+            <a href="/">Proin dictum vestibulum accumsan</a>,
+            <a href="/">
+              Duis felis purus, pulvinar eu nunc vitae, congue elementum metus
+            </a>,
+          ]}
+        />
+        <FooterLinks
+          title="Footer Links 3"
+          links={[
+            <a href="/">Lorem ipsum dolor sit amet</a>,
+            <a href="/">Phasellus vitae condimentum erat</a>,
+            <a href="/">Donec ipsum augue, ornare at blandit sit amet</a>,
+            <a href="/">Etiam luctus nulla venenatis nunc luctus rutrum</a>,
+            <a href="/">Mauris vitae sem quis nibh volutpat condimentum</a>,
+            <a href="/">Nam sed sodales arcu, ut fringilla quam</a>,
+            <a href="/">
+              Curabitur accumsan sapien condimentum semper condimentum
+            </a>,
+          ]}
+        />
+      </Footer>
     </>
   );
 }
