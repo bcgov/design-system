@@ -20,6 +20,14 @@ You can pass an alternative land acknowledgement using the `acknowledgement` slo
 
 <Canvas of={FooterStories.LandAcknowledgement} />
 
+## `children`
+
+The central content block of the Footer contains a default logo, contact information text, and a list of links. You can replace all three at once by passing `children`:
+
+<Canvas of={FooterStories.MultipleFooterLinksGroupsInChildrenSlot} />
+
+Alternatively, don't pass a `children` prop, and each of the other props (`logo`, `contact`, `links`) can also be individually replaced as detailed below:
+
 ## Logo
 
 The included Government of B.C. SVG logo can be replaced using the `logo` slot.
@@ -34,9 +42,9 @@ The contact information block can be replaced using the `contact` slot.
 
 ## Links
 
-The links block can be replaced using the `links` slot.
+The links block can be replaced using the `links` slot. Use the included `<FooterLinks/>` element from this library to get a pre-styled list:
 
-<Canvas of={FooterStories.Links} />
+<Canvas of={FooterStories.LinksUsingFooterLinksComponent} />
 
 ## Copyright
 
@@ -46,17 +54,19 @@ Pass a string to the `copyright` prop for custom copyright text.
 
 ## Hide sections
 
+### Hide land acknowledgement section
+
 Hide the land acknowledgement section with the `hideAcknowledgement` boolean prop:
 
 <Canvas of={FooterStories.HideLandAcknowledgement} />
 
-## Hide logo and links section
+### Hide logo and links section
 
 Hide the middle logo and links section with the `hideLogoAndLinks` boolean prop:
 
 <Canvas of={FooterStories.HideLogoAndLinks} />
 
-## Hide copyright
+### Hide copyright section
 
 Hide the copyright field with the `hideCopyright` boolean prop:
 
