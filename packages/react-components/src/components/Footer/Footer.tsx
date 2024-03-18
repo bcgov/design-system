@@ -4,6 +4,45 @@ import { SvgBcLogo } from "..";
 
 import "./Footer.css";
 
+export interface FooterLinksProps {
+  /**
+   * Title for the list of links - associated to the list of links as a `<figcaption>`
+   */
+  title: string;
+  /**
+   * Array of link elements (`<a>` or `<Link>`)
+   */
+  links: React.ReactElement[];
+}
+
+/**
+ * A titled list of links for use in the Footer. Rendered inside a `<figure>`
+ * with the `title` prop inside of the `<figcaption>`.
+ * @param {FooterLinksProps} props
+ * @returns {React.ReactElement}
+ */
+export function FooterLinks({ title, links }: FooterLinksProps) {
+  return (
+    <figure className="bcds-footer--links">
+      {title && (
+        <figcaption className="bcds-footer--links-title">{title}</figcaption>
+      )}
+      {links && (
+        <ul>
+          {Array.isArray(links) &&
+            links.map((link: React.ReactElement, index) => {
+              return (
+                <li key={`${title.toLowerCase().replace(/\s/g, "-")}-${index}`}>
+                  {link}
+                </li>
+              );
+            })}
+        </ul>
+      )}
+    </figure>
+  );
+}
+
 export interface FooterProps {
   /**
    * Land acknowledgement block (defaults to Gov.bc.ca land acknowledgement)
