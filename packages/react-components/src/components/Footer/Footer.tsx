@@ -4,6 +4,45 @@ import { SvgBcLogo } from "..";
 
 import "./Footer.css";
 
+export interface FooterLinksProps {
+  /**
+   * Title for the list of links - associated to the list of links as a `<figcaption>`
+   */
+  title: string;
+  /**
+   * Array of link elements (`<a>` or `<Link>`)
+   */
+  links: React.ReactElement[];
+}
+
+/**
+ * A titled list of links for use in the Footer. Rendered inside a `<figure>`
+ * with the `title` prop inside of the `<figcaption>`.
+ * @param {FooterLinksProps} props
+ * @returns {React.ReactElement}
+ */
+export function FooterLinks({ title, links }: FooterLinksProps) {
+  return (
+    <figure className="bcds-footer--links">
+      {title && (
+        <figcaption className="bcds-footer--links-title">{title}</figcaption>
+      )}
+      {links && (
+        <ul>
+          {Array.isArray(links) &&
+            links.map((link: React.ReactElement, index) => {
+              return (
+                <li key={`${title.toLowerCase().replace(/\s/g, "-")}-${index}`}>
+                  {link}
+                </li>
+              );
+            })}
+        </ul>
+      )}
+    </figure>
+  );
+}
+
 export interface FooterProps {
   /**
    * Land acknowledgement block (defaults to Gov.bc.ca land acknowledgement)
@@ -18,7 +57,9 @@ export interface FooterProps {
    */
   contact?: React.ReactElement;
   /**
-   * Link list block (defaults to Gov.bc.ca link list)
+   * Link list block (defaults to Gov.bc.ca link list).
+   *
+   * Pass the `<FooterLinks>` component for a styles-included list.
    */
   links?: React.ReactElement;
   /**
@@ -39,7 +80,15 @@ export interface FooterProps {
   hideCopyright?: boolean;
 }
 
+/**
+ * A `<footer>` element with default content included.
+ *
+ * Passing `children` replaces `logo`, `contact`, and `links`.
+ * @param {FooterProps} props
+ * @returns {React.ReactElement}
+ */
 export default function Footer({
+  children,
   acknowledgement,
   logo,
   contact,
@@ -48,7 +97,7 @@ export default function Footer({
   hideAcknowledgement = false,
   hideLogoAndLinks = false,
   hideCopyright = false,
-}: FooterProps) {
+}: React.PropsWithChildren<FooterProps>) {
   function defaultAcknowledgement() {
     return (
       <p>
@@ -87,51 +136,30 @@ export default function Footer({
 
   function defaultLinks() {
     return (
-      <>
-        <span className="more-info">More Info</span>
-        <ul>
-          <li>
-            {/* This is the landing page redirection target for gov.bc.ca */}
-            <a href="https://www2.gov.bc.ca/gov/content/home">Home</a>
-          </li>
-          <li>
-            {/* https://www2.gov.bc.ca/gov/content/about-gov-bc-ca */}
-            <a href="https://www2.gov.bc.ca/gov/content?id=3C4F47288DFB454987435AB5EFEFBB7F">
-              About gov.bc.ca
-            </a>
-          </li>
-          <li>
-            {/* https://www2.gov.bc.ca/gov/content/home/disclaimer */}
-            <a href="https://www2.gov.bc.ca/gov/content?id=79F93E018712422FBC8E674A67A70535">
-              Disclaimer
-            </a>
-          </li>
-          <li>
-            {/* https://www2.gov.bc.ca/gov/content/home/privacy */}
-            <a href="https://www2.gov.bc.ca/gov/content?id=9E890E16955E4FF4BF3B0E07B4722932">
-              Privacy
-            </a>
-          </li>
-          <li>
-            {/* https://www2.gov.bc.ca/gov/content/home/accessible-government */}
-            <a href="https://www2.gov.bc.ca/gov/content?id=E08E79740F9C41B9B0C484685CC5E412">
-              Accessibility
-            </a>
-          </li>
-          <li>
-            {/* https://www2.gov.bc.ca/gov/content/home/copyright */}
-            <a href="https://www2.gov.bc.ca/gov/content?id=1AAACC9C65754E4D89A118B875E0FBDA">
-              Copyright
-            </a>
-          </li>
-          <li>
-            {/* https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services */}
-            <a href="https://www2.gov.bc.ca/gov/content?id=6A77C17D0CCB48F897F8598CCC019111">
-              Contact us
-            </a>
-          </li>
-        </ul>
-      </>
+      <FooterLinks
+        title="More Info"
+        links={[
+          <a href="https://www2.gov.bc.ca/gov/content/home">Home</a>,
+          <a href="https://www2.gov.bc.ca/gov/content?id=3C4F47288DFB454987435AB5EFEFBB7F">
+            About gov.bc.ca
+          </a>,
+          <a href="https://www2.gov.bc.ca/gov/content?id=79F93E018712422FBC8E674A67A70535">
+            Disclaimer
+          </a>,
+          <a href="https://www2.gov.bc.ca/gov/content?id=9E890E16955E4FF4BF3B0E07B4722932">
+            Privacy
+          </a>,
+          <a href="https://www2.gov.bc.ca/gov/content?id=E08E79740F9C41B9B0C484685CC5E412">
+            Accessibility
+          </a>,
+          <a href="https://www2.gov.bc.ca/gov/content?id=1AAACC9C65754E4D89A118B875E0FBDA">
+            Copyright
+          </a>,
+          <a href="https://www2.gov.bc.ca/gov/content?id=6A77C17D0CCB48F897F8598CCC019111">
+            Contact us
+          </a>,
+        ]}
+      />
     );
   }
 
@@ -149,14 +177,20 @@ export default function Footer({
       <div className="bcds-footer--container">
         <div className="bcds-footer--container-content">
           {!hideLogoAndLinks && (
-            <div className="bcds-footer--logo-links">
-              <div className="bcds-footer--logo">
-                {logo ? logo : defaultLogo()}
-                {contact ? contact : defaultContact()}
-              </div>
-              <div className="bcds-footer--links">
-                {links ? links : defaultLinks()}
-              </div>
+            <div
+              className={`bcds-footer--logo-links ${children ? "vertical" : "horizontal"}`}
+            >
+              {children ? (
+                children
+              ) : (
+                <>
+                  <div className="bcds-footer--logo">
+                    {logo ? logo : defaultLogo()}
+                    {contact ? contact : defaultContact()}
+                  </div>
+                  {links ? links : defaultLinks()}
+                </>
+              )}
             </div>
           )}
           {!hideLogoAndLinks && !hideCopyright && <hr />}

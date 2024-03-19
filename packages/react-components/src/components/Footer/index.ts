@@ -1,2 +1,2 @@
-export { default } from "./Footer";
-export type { FooterProps } from "./Footer";
+export { default, FooterLinks } from "./Footer";
+export type { FooterProps, FooterLinksProps } from "./Footer";

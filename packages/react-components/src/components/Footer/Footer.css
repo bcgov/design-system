@@ -15,7 +15,7 @@
   border-bottom: var(--layout-border-width-large) solid
     var(--surface-brand-gold-60);
   background-color: var(--surface-brand-gray-110);
-  width: 100%;
+  padding: var(--layout-padding-xlarge);
 }
 
 .bcds-footer
@@ -28,7 +28,7 @@
   color: var(--typography-color-primary-invert);
   font: var(--typography-regular-label);
   max-width: 1100px;
-  padding: var(--layout-padding-xlarge);
+  width: 100%;
 }
 
 .bcds-footer
@@ -68,6 +68,24 @@
   row-gap: var(--layout-padding-medium);
   justify-content: space-between;
   width: 100%;
+}
+
+/* `horizontal` class is the default, when no `children` prop is passed */
+.bcds-footer
+  > .bcds-footer--container
+  > .bcds-footer--container-content
+  > .bcds-footer--logo-links.horizontal {
+  flex-direction: row;
+}
+
+/* `vertical` class is used when a `children` prop is passed */
+.bcds-footer
+  > .bcds-footer--container
+  > .bcds-footer--container-content
+  > .bcds-footer--logo-links.vertical {
+  flex-direction: column;
+  align-items: stretch;
+  row-gap: var(--layout-padding-xlarge);
 }
 
 .bcds-footer
@@ -128,10 +146,31 @@
   > .bcds-footer--container
   > .bcds-footer--container-content
   > .bcds-footer--logo-links
+  > .bcds-footer--links {
+  margin: var(--layout-margin-none);
+}
+
+/*
+  When Footer hasn't been passed `children`, expand the links container to take
+  up 320px, as the default links are narrower.
+*/
+.bcds-footer
+  > .bcds-footer--container
+  > .bcds-footer--container-content
+  > .bcds-footer--logo-links.horizontal
+  > .bcds-footer--links {
+  min-width: 320px;
+}
+
+.bcds-footer
+  > .bcds-footer--container
+  > .bcds-footer--container-content
+  > .bcds-footer--logo-links
   > .bcds-footer--links
-  > .more-info {
+  > .bcds-footer--links-title {
+  display: block;
   font: var(--typography-bold-label);
-  margin-bottom: var(--layout-padding-small);
+  margin-bottom: var(--layout-padding-medium);
   text-transform: uppercase;
 }
 
@@ -141,11 +180,27 @@
   > .bcds-footer--logo-links
   > .bcds-footer--links
   > ul {
-  column-count: 2;
-  column-width: var(--layout-padding-medium);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: var(--layout-padding-xlarge);
+  grid-row-gap: var(--layout-padding-small);
   list-style: none;
+  margin: var(--layout-margin-none);
   padding: var(--layout-padding-none);
-  width: 320px;
+}
+
+/*
+  When a Footer has been passed `children`, the logo-links container fills the
+  full width of the container, so there's room for 4 columns of links.
+*/
+.bcds-footer
+  > .bcds-footer--container
+  > .bcds-footer--container-content
+  > .bcds-footer--logo-links.vertical
+  > .bcds-footer--links
+  > ul {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .bcds-footer
@@ -156,7 +211,6 @@
   > ul
   > li {
   font: var(--typography-regular-label);
-  margin-bottom: var(--layout-padding-small);
 }
 
 .bcds-footer
@@ -196,8 +250,9 @@ p.bcds-footer--copyright {
   margin: var(--layout-margin-none);
 }
 
-/* Tablet - let links drop beneath logo */
+/* Tablet */
 @media (max-width: 991px) {
+  /* Links drop beneath logo in the default configuration */
   .bcds-footer
     > .bcds-footer--container
     > .bcds-footer--container-content
@@ -212,13 +267,24 @@ p.bcds-footer--copyright {
     > .bcds-footer--logo {
     max-width: 324px;
   }
+
+  /*
+    When the `children` prop is used with multiple FooterLinks components,
+    only two columns of links appear on screen at once.
+  */
+  .bcds-footer
+    > .bcds-footer--container
+    > .bcds-footer--container-content
+    > .bcds-footer--logo-links.vertical
+    > .bcds-footer--links
+    > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Extra small screens */
 @media (max-width: 575px) {
-  .bcds-footer
-    > .bcds-footer--acknowledgement
-    > .bcds-footer--acknowledgement-text {
+  .bcds-footer > .bcds-footer--acknowledgement {
     padding: var(--layout-padding-xlarge) var(--layout-padding-medium);
   }
 
@@ -236,5 +302,18 @@ p.bcds-footer--copyright {
     > .bcds-footer--logo-links
     > .bcds-footer--logo {
     gap: var(--layout-padding-medium);
+  }
+
+  /*
+    When the `children` prop is used with multiple FooterLinks components,
+    only one column of links appear on screen at once.
+  */
+  .bcds-footer
+    > .bcds-footer--container
+    > .bcds-footer--container-content
+    > .bcds-footer--logo-links.vertical
+    > .bcds-footer--links
+    > ul {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
