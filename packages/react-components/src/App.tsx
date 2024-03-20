@@ -6,7 +6,7 @@ import "@bcgov/bc-sans/css/BC_Sans.css";
 
 import { Button, Footer, FooterLinks, Header } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
-import { ButtonPage, SelectPage, TagGroupPage } from "@/pages";
+import { ButtonPage, SelectPage, TagGroupPage, TooltipPage } from "@/pages";
 
 // This icon is available as a plain SVG at src/assets/icon-menu.svg
 function SvgMenuIcon() {
@@ -117,6 +117,7 @@ function App() {
         <ButtonPage />
         <SelectPage />
         <TagGroupPage />
+        <TooltipPage />
       </main>
       <Footer />
       <Footer
