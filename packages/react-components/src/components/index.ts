@@ -8,3 +8,4 @@ export { default as SvgBcLogo } from "./SvgBcLogo";
 export { default as Tag } from "./Tag";
 export { default as TagGroup } from "./TagGroup";
 export { default as TagList } from "./TagList";
+export { default as Tooltip, TooltipTrigger } from "./Tooltip";
