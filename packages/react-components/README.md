@@ -66,13 +66,14 @@ export default function App() {
 
 ## Component list
 
-| Component              | React Aria Components docs link                           |
-| ---------------------- | --------------------------------------------------------- |
-| Button                 | https://react-spectrum.adobe.com/react-aria/Button.html   |
-| Footer                 | N/A                                                       |
-| Header                 | N/A                                                       |
-| Select                 | https://react-spectrum.adobe.com/react-aria/Select.html   |
-| TagGroup, TagList, Tag | https://react-spectrum.adobe.com/react-aria/TagGroup.html |
+| Component               | React Aria Components docs link                           |
+| ----------------------- | --------------------------------------------------------- |
+| Button                  | https://react-spectrum.adobe.com/react-aria/Button.html   |
+| Footer                  | N/A                                                       |
+| Header                  | N/A                                                       |
+| Select                  | https://react-spectrum.adobe.com/react-aria/Select.html   |
+| TagGroup, TagList, Tag  | https://react-spectrum.adobe.com/react-aria/TagGroup.html |
+| Tooltip, TooltipTrigger | https://react-spectrum.adobe.com/react-aria/Tooltip.html  |
 
 ## Supported React versions
 

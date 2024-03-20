@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.0.6
+
+### Changed
+
+- Updated Footer component:
+  - Added FooterLinks sub-component for use in `links` slot or new `children` slot.
+  - Default `contact` text updated to match current text on gov.bc.ca.
+  - Style updates to align `acknowledgement` text.
+- Rollup script updated to ensure `dist` directory code freshness.
+
+### Added
+
+- Added Tooltip and TooltipTrigger components.
+
 ## 0.0.5
 
 ### Added
