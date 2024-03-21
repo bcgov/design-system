@@ -1,0 +1,64 @@
+{/* Tooltip.mdx */}
+
+import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+
+import * as TooltipStories from "./Tooltip.stories";
+
+<Meta of={TooltipStories} />
+
+# Tooltip
+
+A Tooltip displays a description of an element on hover or focus. It is built using the [React Aria Tooltip](https://react-spectrum.adobe.com/react-aria/Tooltip.html).
+
+<Canvas of={TooltipStories.TooltipTemplate} />
+
+## Tooltip sits inside a TooltipTrigger
+
+To make a Tooltip appear, it must sit inside of a `TooltipTrigger`, as a sibling of an element that is hover-able or focus-able.
+
+```jsx
+<TooltipTrigger>
+  <Button>Hover or focus</Button>
+  <Tooltip placement="top">
+    This text appears when the button is hovered or focused.
+  </Tooltip>
+</TooltipTrigger>
+```
+
+## `children`
+
+Use the `children` prop for the descriptive text within the Tooltip.
+
+## Placement
+
+The optional `placement` prop determines where the Tooltip displays in relation to the trigger element within `TooltipTrigger`.
+
+See the React Aria Components [Tooltip props documentation](https://react-spectrum.adobe.com/react-aria/Tooltip.html#tooltip-1) for all options.
+
+### Top
+
+<Canvas of={TooltipStories.TopPlacement} />
+
+### Right
+
+<Canvas of={TooltipStories.RightPlacement} />
+
+### Bottom
+
+<Canvas of={TooltipStories.BottomPlacement} />
+
+### Left
+
+<Canvas of={TooltipStories.LeftPlacement} />
+
+## Delay
+
+You can control the pop-in `delay` and pop-out `closeDelay` props on the `TooltipTrigger` parent element. See React Aria Components [TooltipTrigger props documentation](https://react-spectrum.adobe.com/react-aria/Tooltip.html#tooltip-1).
+
+<Canvas of={TooltipStories.Delay} />
+
+## Accessibility
+
+An active Tooltip can be dismissed by pressing the <kbd>Escape</kbd> key, in addition to a blur or mouse-out event.
+
+Learn more about the [ARIA tooltip role at MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role).
