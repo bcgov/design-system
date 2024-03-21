@@ -8,15 +8,15 @@ export default create({
   fontCode: "monospace",
 
   // Colour
-  colorPrimary: tokens.surfaceBrandGold60,
-  colorSecondary: tokens.surfaceBrandBlue100,
+  colorPrimary: tokens.themePrimaryGold,
+  colorSecondary: tokens.themePrimaryBlue,
 
   // UI
-  appBg: tokens.surfaceBackgroundLight,
-  appContentBg: tokens.surfaceBackgroundWhite,
-  appPreviewBg: tokens.surfaceBackgroundWhite,
-  appBorderColor: tokens.surfaceBorderMedium,
-  appBorderRadius: tokens.surfaceBorderRadiusMedium,
+  appBg: tokens.surfaceColorBackgroundLightGray,
+  appContentBg: tokens.surfaceColorBackgroundWhite,
+  appPreviewBg: tokens.surfaceColorBackgroundWhite,
+  appBorderColor: tokens.surfaceColorBorderDefault,
+  appBorderRadius: tokens.layoutBorderRadiusMedium,
 
   // Text colors
   textColor: tokens.typographyColorPrimary,
@@ -24,15 +24,15 @@ export default create({
 
   // Toolbar default and active colors
   barTextColor: tokens.typographyColorSecondary,
-  barSelectedColor: tokens.surfacePrimaryActive,
-  barHoverColor: tokens.surfacePrimaryHover,
-  barBg: tokens.surfaceBackgroundLight,
+  barSelectedColor: tokens.surfaceColorBorderActive,
+  barHoverColor: tokens.surfaceColorMenusHover,
+  barBg: tokens.surfaceColorBackgroundLightGray,
 
   // Form colors
-  inputBg: tokens.surfaceBackgroundLight,
-  inputBorder: tokens.surfaceBorderLight,
+  inputBg: tokens.surfaceColorFormsDefault,
+  inputBorder: tokens.surfaceColorBorderDefault,
   inputTextColor: tokens.typographyColorSecondary,
-  inputBorderRadius: tokens.surfaceBorderRadiusMedium,
+  inputBorderRadius: tokens.layoutBorderRadiusMedium,
 
   base: "light",
   brandTitle: "B.C. Design System",
