@@ -12,7 +12,7 @@ export default create({
   colorSecondary: tokens.themePrimaryBlue,
 
   // UI
-  appBg: tokens.surfaceColorBackgroundLightGray,
+  appBg: tokens.surfaceColorBackgroundLightBlue,
   appContentBg: tokens.surfaceColorBackgroundWhite,
   appPreviewBg: tokens.surfaceColorBackgroundWhite,
   appBorderColor: tokens.surfaceColorBorderDefault,
