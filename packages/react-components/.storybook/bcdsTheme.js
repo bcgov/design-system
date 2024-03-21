@@ -18,14 +18,19 @@ export default create({
   appBorderColor: tokens.surfaceColorBorderDefault,
   appBorderRadius: tokens.layoutBorderRadiusMedium,
 
+  // Buttons
+  buttonBg: tokens.surfaceColorPrimaryButtonDefault,
+  buttonBorder: tokens.surfaceColorBorderDefault,
+
   // Text colors
   textColor: tokens.typographyColorPrimary,
   textInverseColor: tokens.typographyColorPrimaryInvert,
+  textMutedColor: tokens.typographyColorSecondary,
 
   // Toolbar default and active colors
   barTextColor: tokens.typographyColorSecondary,
   barSelectedColor: tokens.surfaceColorBorderActive,
-  barHoverColor: tokens.surfaceColorMenusHover,
+  barHoverColor: tokens.surfaceColorBorderActive,
   barBg: tokens.surfaceColorBackgroundLightGray,
 
   // Form colors
