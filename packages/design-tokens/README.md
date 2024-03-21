@@ -15,9 +15,10 @@ Questions? Please email the <a href="mailto:DesignSystem@gov.bc.ca">GDX OSS Desi
 ## Steps to publish tokens
 
 1. Update token data in the JSON file `input/tokens.json`.
-2. Run `npm run build` to run Style Dictionary, transforming the raw JSON data into usable token formats.
-3. Run `npm run prepare-npm-package` to copy the contents of `build` into `dist`.
-4. Run `npm run publish-npm-package` to publish to `npm`.
+2. Manually update composite tokens to include parent category. Ex: `{fontWeights.regular}` must become `{typography.fontWeights.regular}`.
+3. Run `npm run build` to run Style Dictionary, transforming the raw JSON data into usable token formats.
+4. Run `npm run prepare-npm-package` to copy the contents of `build` into `dist`.
+5. Run `npm run publish-npm-package` to publish to `npm`.
 
 ## Folder structure
 
