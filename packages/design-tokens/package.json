@@ -1,12 +1,13 @@
 {
   "name": "design-tokens",
-  "version": "2.0.1",
+  "version": "3.0.0-rc1",
   "description": "Transformation pipeline for design tokens for BC Design System",
   "scripts": {
     "build": "node build-output.js",
-    "prepare-npm-package": "cp -R build/* dist",
+    "prepare-npm-package": "rm -rf dist/css* && rm -rf dist/js* && cp -R build/* dist",
     "publish-npm-package": "cd dist && npm publish --access public"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bcgov/design-system.git"
@@ -25,7 +26,7 @@
   },
   "homepage": "https://github.com/bcgov/design-system#readme",
   "dependencies": {
-    "@tokens-studio/sd-transforms": "^0.12.2",
-    "style-dictionary": "^3.9.1"
+    "@tokens-studio/sd-transforms": "^0.14.4",
+    "style-dictionary": "^3.9.2"
   }
 }

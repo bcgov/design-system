@@ -1,5 +1,28 @@
 # Changelog
 
+## 3.0.0-rc1
+
+### Changed
+
+- (breaking) Many tokens have been renamed to bring the generated tokens in line with the intended token names from Figma
+- (breaking) `brand` color tokens renamed to `theme` to differentiate from [BC Visual Identity Program](https://www2.gov.bc.ca/gov/content?id=CCB4862101CD43C195FF395CAED00F95)
+- (breaking) `gold` color scale values reworked to be lighter
+- (breaking) `label` font size changed from 0.875rem to 0.75rem
+- (breaking) `surface` group tokens referring to colors now include component names (`button`, `form`, `menu`)
+- (breaking) `surface.border.light` color renamed to `surface.color.border.default`
+- (breaking) `borderRadius` moved from `surface` group to `layout` group
+
+### Added
+
+- `primaryBlue` (equal to `blue100`) and `primaryGold` (equal to `gold100`) dedicated color tokens added
+- `smallBody` font size added at 0.875rem (the old `label` size)
+- `xxxdense` line height added
+
+### Removed
+
+- (breaking) Removed `surface.size` (legacy testing tokens)
+- (breaking) Removed `surface.borderRadius` (these were duplicates from the `layout` group)
+
 ## 2.0.1
 
 ### Changed
