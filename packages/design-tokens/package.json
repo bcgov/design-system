@@ -4,7 +4,7 @@
   "description": "Transformation pipeline for design tokens for BC Design System",
   "scripts": {
     "build": "node build-output.js",
-    "prepare-npm-package": "cp -R build/* dist",
+    "prepare-npm-package": "rm -rf dist && mkdir dist && cp -R build/* dist",
     "publish-npm-package": "cd dist && npm publish --access public"
   },
   "type": "module",
