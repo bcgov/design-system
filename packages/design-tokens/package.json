@@ -1,6 +1,6 @@
 {
   "name": "design-tokens",
-  "version": "2.0.1",
+  "version": "3.0.0-rc1",
   "description": "Transformation pipeline for design tokens for BC Design System",
   "scripts": {
     "build": "node build-output.js",
