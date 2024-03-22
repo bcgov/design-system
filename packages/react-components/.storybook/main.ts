@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-vite";
+import * as tokens from "@bcgov/design-tokens/js/variables.cjs"; // need to add CJS export to TS build pipeline for this to work
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -18,5 +19,15 @@ const config: StorybookConfig = {
     },
   },
   staticDirs: ["../storybook-public"],
+
+  // extra CSS for Storybook docs and UI, injected into <head>
+  previewHead: (head) => `
+    ${head}
+    <style>
+      .sbdocs .sbdocs-content a {
+         color: ${tokens.typographyColorLink};
+      }
+    </style>
+ `,
 };
 export default config;
