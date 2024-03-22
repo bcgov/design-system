@@ -1,10 +1,10 @@
 .bcds-react-aria-Tag {
-  color: var(--typography-color-primary, #2d2d2d);
+  color: var(--typography-color-primary);
   cursor: pointer;
-  border-radius: var(--layout-margin-hair, 2px);
+  border-radius: var(--layout-margin-hair);
   border: 1px solid;
   box-sizing: content-box;
-  font: var(--typography-regular-label, 400 0.875rem/1.313rem "BC Sans");
+  font: var(--typography-regular-label);
   padding: 2px 8px;
   width: fit-content;
 }
@@ -16,7 +16,7 @@
 .bcds-react-aria-Tag--contents .react-aria-Button {
   background: none;
   border: none;
-  color: var(--typography-color-primary, #2d2d2d);
+  color: var(--typography-color-primary);
   cursor: pointer;
   display: flex;
   margin: 0;
@@ -25,65 +25,65 @@
 
 /* Tag colors */
 .bcds-react-aria-Tag.bc-blue {
-  background-color: var(--surface-color-primary-default, #013366);
-  border-color: var(--surface-color-primary-hover, #1e5189);
-  color: var(--typography-color-primary-invert, #ffffff);
+  background-color: var(--theme-primary-blue);
+  border-color: var(--theme-blue-90);
+  color: var(--typography-color-primary-invert);
 }
 .bcds-react-aria-Tag.bc-blue
   .bcds-react-aria-Tag--contents
   > .react-aria-Button {
-  color: var(--typography-color-primary-invert, #ffffff);
+  color: var(--typography-color-primary-invert);
 }
 .bcds-react-aria-Tag.bc-gold {
-  background-color: var(--surface-color-brand-gold-60, #f8ba47);
-  border-color: var(--surface-color-primary-hover, #1e5189);
+  background-color: var(--theme-primary-gold);
+  border-color: var(--theme-blue-90);
 }
 .bcds-react-aria-Tag.blue {
-  background-color: var(--surface-support-surface-color-info, #f7f9fc);
-  border-color: var(--surface-support-border-color-info, #053662);
+  background-color: var(--support-surface-color-info);
+  border-color: var(--support-border-color-info);
 }
 .bcds-react-aria-Tag.dark {
-  border-color: var(--surface-primary-hover, #1e5189);
-  background: var(--surface-brand-gray-110, #252423);
-  color: var(--typography-color-primary-invert, #ffffff);
+  background: var(--theme-gray-110);
+  border-color: var(--theme-blue-90);
+  color: var(--typography-color-primary-invert);
 }
 .bcds-react-aria-Tag.dark .bcds-react-aria-Tag--contents > .react-aria-Button {
-  color: var(--typography-color-primary-invert, #ffffff);
+  color: var(--typography-color-primary-invert);
 }
 .bcds-react-aria-Tag.gray,
 .bcds-react-aria-Tag.grey {
-  background-color: var(--surface-brand-gray-20, #f3f2f1);
-  border-color: var(--surface-border-dark, #353433);
+  background-color: var(--theme-gray-20);
+  border-color: var(--surface-color-border-dark);
 }
 .bcds-react-aria-Tag.green {
-  background-color: var(--surface-support-surface-color-success, #f6fff8);
-  border-color: var(--surface-support-border-color-success, #42814a);
+  background-color: var(--support-surface-color-success);
+  border-color: var(--support-border-color-success);
 }
 .bcds-react-aria-Tag.red {
-  background-color: var(--surface-support-surface-color-danger, #f4e1e2);
-  border-color: var(--surface-support-border-color-danger, #ce3e39);
+  background-color: var(--support-surface-color-danger);
+  border-color: var(--support-border-color-danger);
 }
 .bcds-react-aria-Tag.yellow {
-  background-color: var(--surface-support-surface-color-warning, #fef1d8);
-  border-color: var(--surface-support-border-color-warning, #f8bb47);
+  background-color: var(--support-surface-color-warning);
+  border-color: var(--support-border-color-warning);
 }
 
 /* Selected */
 .bcds-react-aria-Tag[data-selected] {
-  border: 2px solid var(--surface-primary-active, #2e5dd7);
+  border: 2px solid var(--surface-color-border-active);
   padding: 1px 7px;
 }
 
 /* Focused */
 .bcds-react-aria-Tag[data-focused] {
-  outline: 4px solid #3b99fc;
-  outline-offset: 1px;
+  outline: 2px solid var(--surface-color-border-active);
+  outline-offset: 0;
 }
 
 /* Disabled */
 .bcds-react-aria-Tag[data-disabled] {
-  background-color: var(--surface-primary-disabled, #edebe9);
-  border-color: var(--surface-border-light, #d8d8d8);
-  color: var(--typography-color-disabled, #9f9d9c);
+  background-color: var(--surface-color-primary-button-disabled);
+  border-color: var(--surface-color-border-default);
+  color: var(--typography-color-disabled);
   cursor: not-allowed;
 }
