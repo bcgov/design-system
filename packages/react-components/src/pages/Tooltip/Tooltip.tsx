@@ -3,8 +3,9 @@ import { useButton, mergeProps } from "react-aria";
 import { Button, Tooltip, TooltipTrigger } from "@/components";
 
 // https://github.com/adobe/react-spectrum/issues/5733
-function TooltipTriggerElement(props) {
-  const triggerRef = React.useRef();
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function TooltipTriggerElement(props: any) {
+  const triggerRef = React.useRef(null);
   const { buttonProps } = useButton(props, triggerRef);
 
   return React.cloneElement(

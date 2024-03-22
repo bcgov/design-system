@@ -1,4 +1,3 @@
-import React from "react";
 import {
   OverlayArrow,
   Tooltip as ReactAriaTooltip,
@@ -26,19 +25,17 @@ function SvgTooltipArrowUp() {
   );
 }
 
-export default function Tooltip({
-  children,
-  ...props
-}: React.PropsWithChildren<TooltipProps>) {
+export default function Tooltip(props: TooltipProps) {
   return (
     <ReactAriaTooltip className="bcds-react-aria-Tooltip" {...props}>
       <OverlayArrow className="bcds-react-aria-OverlayArrow">
         {/* Up arrow gets rotated by CSS depending on `data-placement` attribute */}
         <SvgTooltipArrowUp />
       </OverlayArrow>
-      {children}
+      <>{props.children}</>
     </ReactAriaTooltip>
   );
 }
 
 export { TooltipTrigger };
+export type { TooltipProps };
