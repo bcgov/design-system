@@ -22,9 +22,9 @@
 
 /* Select input equivalent */
 .bcds-react-aria-Select--Button {
-  background-color: var(--surface-secondary-default);
-  border: 1px solid var(--surface-border-light);
-  border-radius: var(--surface-border-radius-medium);
+  background-color: var(--surface-color-forms-default);
+  border: 1px solid var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -33,24 +33,24 @@
   padding: 0 12px;
 }
 .bcds-react-aria-Select--Button.invalid {
-  border-color: var(--surface-support-border-color-danger);
+  border-color: var(--support-border-color-danger);
 }
 .bcds-react-aria-Select[data-invalid] > .bcds-react-aria-Select--Button {
-  border-color: var(--surface-support-border-color-danger);
+  border-color: var(--support-border-color-danger);
 }
 .bcds-react-aria-Select--Button[data-disabled] {
-  background-color: var(--surface-secondary-disabled);
+  background-color: var(--surface-color-forms-disabled);
   cursor: not-allowed;
 }
 .bcds-react-aria-Select--Button[data-hovered] {
-  border-color: var(--surface-border-dark);
+  border-color: var(--surface-color-border-dark);
 }
 .bcds-react-aria-Select--Button[data-focused] {
-  border-color: var(--surface-primary-active);
+  border-color: var(--surface-color-border-active);
   outline: none;
 }
 .bcds-react-aria-Select--Button[data-pressed] {
-  border-color: var(--surface-primary-active);
+  border-color: var(--surface-color-border-active);
 }
 .bcds-react-aria-Select--Button.medium {
   height: 40px;
@@ -71,20 +71,22 @@
 
 /* Dropdown menu panel */
 .bcds-react-aria-Select--Popover {
-  background-color: var(--surface-secondary-default);
-  border: 1px solid var(--surface-border-light);
-  border-radius: var(--surface-border-radius-medium);
+  background-color: var(--surface-color-forms-default);
+  border: 1px solid var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
   box-shadow: var(--surface-shadow-medium);
   box-sizing: border-box;
   overflow-y: auto;
   padding: var(--layout-margin-hair) var(--layout-margin-xsmall);
-  width: var(--trigger-width);
+  width: var(
+    --trigger-width
+  ); /* Variable provided by Select component https://react-spectrum.adobe.com/react-aria/Select.html#popover-1 */
 }
 .bcds-react-aria-Select--ListBox[data-focused] {
   outline: none;
 }
 .bcds-react-aria-Select--ListBox > .bcds-react-aria-Section:not(:first-child) {
-  border-top: 1px solid var(--surface-border-light);
+  border-top: 1px solid var(--surface-color-border-default);
   margin-top: 1px;
   padding-top: 2px;
 }
@@ -108,7 +110,7 @@
 }
 .bcds-react-aria-Select--ListBoxItem[data-focused],
 .bcds-react-aria-Select--ListBoxItem[data-hovered] {
-  background-color: var(--surface-secondary-hover);
+  background-color: var(--surface-color-secondary-button-hover);
   outline: none;
 }
 .bcds-react-aria-Select--ListBoxItem-icon {
@@ -129,11 +131,11 @@
   font: var(--typography-regular-body);
 }
 .bcds-react-aria-Select--ListBoxItem.destructive {
-  color: var(--surface-danger-default);
+  color: var(--surface-color-primary-danger-button-default);
 }
 .bcds-react-aria-Select--ListBoxItem.destructive
   .bcds-react-aria-Select--ListBoxItem-Text-label {
-  color: var(--surface-danger-default);
+  color: var(--surface-color-primary-danger-button-default);
 }
 .bcds-react-aria-Select--ListBoxItem-Text-description {
   font: var(--typography-regular-label);
