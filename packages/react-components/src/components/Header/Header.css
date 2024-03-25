@@ -4,8 +4,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--surface-background-white);
-  border-bottom-color: var(--surface-border-light);
+  background-color: var(--surface-color-background-white);
+  border-bottom-color: var(--surface-color-border-default);
   border-bottom-style: solid;
   border-bottom-width: var(--layout-border-width-small);
   min-height: 65px;
@@ -37,11 +37,11 @@
 
 .bcds-header > .bcds-header--container > ul.bcds-header--skiplinks li a,
 .bcds-header > .bcds-header--container > ul.bcds-header--skiplinks li button {
-  background-color: var(--surface-background-white);
+  background-color: var(--surface-color-background-white);
   box-sizing: border-box;
   color: var(--typography-color-link);
   font: var(--typography-regular-body);
-  margin-top: -17.5px; /* Center the link visually in a single line header */
+  margin-top: -17.5px; /* Center the link visually in a single line-height header */
   padding: var(--layout-padding-xsmall) var(--layout-padding-medium);
   position: absolute;
   margin-left: -100000px;
@@ -58,7 +58,7 @@
 }
 
 .bcds-header > .bcds-header--container > .bcds-header--line {
-  background-color: var(--surface-border-light);
+  background-color: var(--surface-color-border-default);
   width: 1px;
   height: 32px;
 }
