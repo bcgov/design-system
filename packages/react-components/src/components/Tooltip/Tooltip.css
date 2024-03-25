@@ -1,6 +1,6 @@
 .bcds-react-aria-Tooltip {
-  background-color: var(--surface-brand-gray-110);
-  border-radius: var(--surface-border-radius-medium);
+  background-color: var(--theme-gray-110);
+  border-radius: var(--layout-border-radius-medium);
   box-shadow: var(--surface-shadow-small);
   color: var(--typography-color-primary-invert);
   font: var(--typography-regular-label);
@@ -9,7 +9,7 @@
 }
 
 .bcds-react-aria-Tooltip > .bcds-react-aria-OverlayArrow {
-  color: var(--surface-brand-gray-110);
+  color: var(--theme-gray-110);
 }
 
 .bcds-react-aria-Tooltip[data-placement="top"] > .bcds-react-aria-OverlayArrow,
@@ -29,10 +29,10 @@
 
 /* Top placement */
 .bcds-react-aria-Tooltip[data-placement="top"] {
-  margin-bottom: 10px; /* Offset is equal to the depth of the OverlayArrow */
+  margin-bottom: 10px; /* This offsets the depth of the OverlayArrow */
 }
 .bcds-react-aria-Tooltip[data-placement="top"] > .bcds-react-aria-OverlayArrow {
-  margin-top: -7.5px;
+  margin-top: -4.5px;
 }
 .bcds-react-aria-Tooltip[data-placement="top"]
   > .bcds-react-aria-OverlayArrow
@@ -46,8 +46,7 @@
 }
 .bcds-react-aria-Tooltip[data-placement="right"]
   > .bcds-react-aria-OverlayArrow {
-  margin-top: -2px;
-  margin-right: 4.5px;
+  margin-right: 5px;
 }
 .bcds-react-aria-Tooltip[data-placement="right"]
   > .bcds-react-aria-OverlayArrow
@@ -57,11 +56,11 @@
 
 /* Bottom placement */
 .bcds-react-aria-Tooltip[data-placement="bottom"] {
-  margin-top: 9px;
+  margin-top: 10px;
 }
 .bcds-react-aria-Tooltip[data-placement="bottom"]
   > .bcds-react-aria-OverlayArrow {
-  margin-bottom: 6.5px;
+  margin-bottom: 4.5px;
 }
 
 /* Left placement */
@@ -70,8 +69,7 @@
 }
 .bcds-react-aria-Tooltip[data-placement="left"]
   > .bcds-react-aria-OverlayArrow {
-  margin-top: -2px;
-  margin-left: -5.5px;
+  margin-left: -5px;
 }
 .bcds-react-aria-Tooltip[data-placement="left"]
   > .bcds-react-aria-OverlayArrow
