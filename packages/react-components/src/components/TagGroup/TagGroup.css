@@ -1,6 +1,6 @@
 .bcds-react-aria-TagGroup {
-  color: var(--typography-color-primary, #2d2d2d);
-  font: var(--typography-regular-label, 400 0.875rem/1.313rem "BC Sans");
+  color: var(--typography-color-primary);
+  font: var(--typography-regular-small-body);
 }
 
 .bcds-react-aria-TagGroup--Label,
@@ -11,5 +11,5 @@
 }
 
 .bcds-react-aria-TagGroup--Text-error {
-  color: var(--surface-danger-default, #ce3e39);
+  color: var(--typography-color-danger);
 }

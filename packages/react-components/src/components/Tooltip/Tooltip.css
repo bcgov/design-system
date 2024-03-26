@@ -1,15 +1,15 @@
 .bcds-react-aria-Tooltip {
-  background-color: var(--surface-brand-gray-110);
-  border-radius: var(--surface-border-radius-medium);
+  background-color: var(--theme-gray-110);
+  border-radius: var(--layout-border-radius-medium);
   box-shadow: var(--surface-shadow-small);
   color: var(--typography-color-primary-invert);
-  font: var(--typography-regular-label);
+  font: var(--typography-regular-small-body);
   padding: var(--layout-padding-xsmall) var(--layout-padding-small);
   transform: translate3d(0, 0, 0);
 }
 
 .bcds-react-aria-Tooltip > .bcds-react-aria-OverlayArrow {
-  color: var(--surface-brand-gray-110);
+  color: var(--theme-gray-110);
 }
 
 .bcds-react-aria-Tooltip[data-placement="top"] > .bcds-react-aria-OverlayArrow,

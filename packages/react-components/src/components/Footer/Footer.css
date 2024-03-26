@@ -10,11 +10,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  border-top: var(--layout-border-width-large) solid
-    var(--surface-brand-gold-60);
-  border-bottom: var(--layout-border-width-large) solid
-    var(--surface-brand-gold-60);
-  background-color: var(--surface-brand-gray-110);
+  border-top: var(--layout-border-width-large) solid var(--theme-gold-60);
+  border-bottom: var(--layout-border-width-large) solid var(--theme-gold-60);
+  background-color: var(--theme-gray-110);
   padding: var(--layout-padding-xlarge);
 }
 
@@ -26,7 +24,7 @@
   align-items: center;
   justify-content: stretch;
   color: var(--typography-color-primary-invert);
-  font: var(--typography-regular-label);
+  font: var(--typography-regular-small-body);
   max-width: 1100px;
   width: 100%;
 }
@@ -43,7 +41,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--surface-background-light);
+  background-color: var(--surface-color-background-light-gray);
   padding: var(--layout-padding-xlarge);
 }
 
@@ -116,7 +114,7 @@
   > .bcds-footer--logo-links
   > .bcds-footer--logo
   > p {
-  font: var(--typography-regular-label);
+  font: var(--typography-regular-small-body);
   margin: var(--layout-margin-none);
 }
 
@@ -128,7 +126,7 @@
   > p
   > a {
   color: var(--typography-color-secondary);
-  font: var(--typography-regular-label);
+  font: var(--typography-regular-small-body);
   text-decoration: underline;
 }
 
@@ -169,7 +167,7 @@
   > .bcds-footer--links
   > .bcds-footer--links-title {
   display: block;
-  font: var(--typography-bold-label);
+  font: var(--typography-bold-small-body);
   margin-bottom: var(--layout-padding-medium);
   text-transform: uppercase;
 }
@@ -210,7 +208,7 @@
   > .bcds-footer--links
   > ul
   > li {
-  font: var(--typography-regular-label);
+  font: var(--typography-regular-small-body);
 }
 
 .bcds-footer
@@ -237,9 +235,9 @@
 }
 
 .bcds-footer > .bcds-footer--container > .bcds-footer--container-content > hr {
-  background-color: var(--surface-border-dark);
+  background-color: var(--surface-color-border-dark);
   border: var(--layout-border-width-none);
-  height: var(--surface-border-width-small);
+  height: var(--layout-border-width-small);
   margin: var(--layout-margin-none);
   width: 100%;
 }
