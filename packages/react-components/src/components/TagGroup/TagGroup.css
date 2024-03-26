@@ -1,6 +1,6 @@
 .bcds-react-aria-TagGroup {
   color: var(--typography-color-primary);
-  font: var(--typography-regular-label);
+  font: var(--typography-regular-small-body);
 }
 
 .bcds-react-aria-TagGroup--Label,
