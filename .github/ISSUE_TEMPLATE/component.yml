@@ -1,6 +1,5 @@
 name: New component
 description: Propose a new component to be added to the design system
-title: "[Component request]: "
 labels: ["component"]
 projects: ["bcgov/121"]
 assignees:

@@ -1,6 +1,5 @@
 name: Enhancement
 description: Suggest a change to how an existing component looks or behaves
-title: "[Enhancement]: "
 labels: ["enhancement"]
 projects: ["bcgov/121"]
 assignees:
