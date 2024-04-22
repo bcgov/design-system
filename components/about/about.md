@@ -4,6 +4,9 @@ title: About the Design System
 author: ksingbeil
 ---
 
+> [!WARNING]
+> This version of the design system is archived, and is no longer supported. Visit [gov.bc.ca/designsystem](https://gov.bc.ca/designsystem) to learn more about the new B.C. Design System.
+
 ## About The Design System
 
 The Design System helps developers and designers build better digital products and services.
@@ -17,7 +20,6 @@ Use the Design System if you’re building custom B.C. government and applicatio
 ## The Team
 
 The Design System is managed by a team of designers and developers and the government community. The system is a part of the DevHub, a project by the Developers’ Exchange that brings together UI/interface and back-end resources for digital teams.
-
 
 ## The Community
 
@@ -36,24 +38,30 @@ It provides developers and designers with the tools they need to build great dig
 As part of this, we are committed to making all the tools and resources we create:
 
 ### Maintained
+
 The community and Design System management team will support the maintenance and development of new resources and tools. This means you can flag issues and they’ll be addressed, discuss rationale and directly chat with the management team whenever you need.
 
 ### Collaborative
+
 The system is only valuable if the community finds it valuable. If a tool or resource isn’t meeting your needs, tell us why and work with us to make it better. We’ll also come to you – in your office, at your desk and share what’s new, ask what you need and share how you can get involved.
 
 ### Open
+
 The system is built in GitHub and meant to be shared and improved by everyone. The code is open source and our work is in the open. We are transparent about how choices are made and tools are improved. Ask us…anything.
 
 **Contribute to the Design System**
 
-***Help with design***
--   [Suggest a component](https://developer.gov.bc.ca/Design-System/Propose-a-New-Component)
--   Improve documentation
+**_Help with design_**
 
-***Help with code***
--  Code contribution guide
--   Report an issue
+- [Suggest a component](https://developer.gov.bc.ca/Design-System/Propose-a-New-Component)
+- Improve documentation
 
-***Help with usability***
--   Component discussions
--   Provide research findings
+**_Help with code_**
+
+- Code contribution guide
+- Report an issue
+
+**_Help with usability_**
+
+- Component discussions
+- Provide research findings
