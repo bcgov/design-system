@@ -4,7 +4,8 @@ title: About the Design System
 author: ksingbeil
 ---
 
-**Note:** This version of the design system is archived, and is no longer supported. Visit [gov.bc.ca/designsystem](https://gov.bc.ca/designsystem) to learn more about the new B.C. Design System.
+> [!WARNING]
+> This version of the design system is archived, and is no longer supported. Visit [gov.bc.ca/designsystem](https://gov.bc.ca/designsystem) to learn more about the new B.C. Design System.
 
 ## About The Design System
 
