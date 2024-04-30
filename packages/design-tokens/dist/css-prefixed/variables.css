@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 30 Apr 2024 15:49:02 GMT
+ * Generated on Tue, 30 Apr 2024 20:16:22 GMT
  */
 
 :root {
@@ -71,21 +71,21 @@
   --bcds-layout-border-width-medium: 2px;
   --bcds-layout-border-width-large: 4px;
   --bcds-layout-padding-none: 0;
-  --bcds-layout-padding-xsmall: 4px;
-  --bcds-layout-padding-small: 8px;
-  --bcds-layout-padding-medium: 16px;
-  --bcds-layout-padding-large: 24px;
-  --bcds-layout-padding-xlarge: 32px;
-  --bcds-layout-margin-none: 0;
-  --bcds-layout-margin-hair: 2px;
-  --bcds-layout-margin-xsmall: 4px;
-  --bcds-layout-margin-small: 8px;
-  --bcds-layout-margin-medium: 16px;
-  --bcds-layout-margin-large: 24px;
-  --bcds-layout-margin-xlarge: 32px;
-  --bcds-layout-margin-xxlarge: 40px;
-  --bcds-layout-margin-xxxlarge: 48px;
-  --bcds-layout-margin-huge: 56px;
+  --bcds-layout-padding-xsmall: 0.25rem;
+  --bcds-layout-padding-small: 0.5rem;
+  --bcds-layout-padding-medium: 1rem;
+  --bcds-layout-padding-large: 1.5rem;
+  --bcds-layout-padding-xlarge: 2rem;
+  --bcds-layout-margin-none: 0rem;
+  --bcds-layout-margin-hair: 0.125rem;
+  --bcds-layout-margin-xsmall: 0.25rem;
+  --bcds-layout-margin-small: 0.5rem;
+  --bcds-layout-margin-medium: 1rem;
+  --bcds-layout-margin-large: 1.5rem;
+  --bcds-layout-margin-xlarge: 2rem;
+  --bcds-layout-margin-xxlarge: 2.5rem;
+  --bcds-layout-margin-xxxlarge: 3rem;
+  --bcds-layout-margin-huge: 3.5rem;
   --bcds-layout-border-radius-none: 0;
   --bcds-layout-border-radius-small: 2px;
   --bcds-layout-border-radius-medium: 4px;
@@ -119,6 +119,7 @@
   --bcds-typography-regular-small-body: 400 0.875rem/1.313rem 'BC Sans';
   --bcds-typography-regular-body: 400 1rem/1.688rem 'BC Sans';
   --bcds-typography-regular-large-body: 400 1.125rem/1.913rem 'BC Sans';
+  --bcds-typography-regular-h6: 400 1.125rem/1.913rem 'BC Sans';
   --bcds-typography-regular-h5: 400 1.25rem/2.125rem 'BC Sans';
   --bcds-typography-regular-h4: 400 1.5rem/2.25rem 'BC Sans';
   --bcds-typography-regular-h3: 400 1.75rem/3rem 'BC Sans';
@@ -129,6 +130,7 @@
   --bcds-typography-bold-small-body: 700 0.875rem/1.313rem 'BC Sans';
   --bcds-typography-bold-body: 700 1rem/1.688rem 'BC Sans';
   --bcds-typography-bold-large-body: 700 1.125rem/1.913rem 'BC Sans';
+  --bcds-typography-bold-h6: 700 1.125rem/1.913rem 'BC Sans';
   --bcds-typography-bold-h5: 700 1.25rem/2.125rem 'BC Sans';
   --bcds-typography-bold-h4: 700 1.5rem/2.25rem 'BC Sans';
   --bcds-typography-bold-h3: 700 1.75rem/3rem 'BC Sans';
@@ -139,6 +141,7 @@
   --bcds-typography-italic-small-body: 400 italic 0.875rem/1.313rem 'BC Sans';
   --bcds-typography-italic-body: 400 italic 1rem/1.688rem 'BC Sans';
   --bcds-typography-italic-large-body: 400 italic 1.125rem/1.913rem 'BC Sans';
+  --bcds-typography-italic-h6: 400 italic 1.125rem/1.913rem 'BC Sans';
   --bcds-typography-italic-h5: 400 italic 1.25rem/2.125rem 'BC Sans';
   --bcds-typography-italic-h4: 400 italic 1.5rem/2.25rem 'BC Sans';
   --bcds-typography-italic-h3: 400 italic 1.75rem/3.375rem 'BC Sans';

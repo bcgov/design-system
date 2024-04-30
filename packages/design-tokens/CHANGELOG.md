@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.0.0-rc3
+
+### Changed
+
+- Tokens in `layout` group use `rem` equivalent of previous `px` values where possible in Figma
+
+### Added
+
+- Heading level 6 `typography` group tokens added
+
 ## 3.0.0-rc2
 
 ### Changed
