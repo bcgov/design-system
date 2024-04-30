@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 30 Apr 2024 15:49:02 GMT
+ * Generated on Tue, 30 Apr 2024 20:16:22 GMT
  */
 
 export const surfaceOpacity0 = 0;
@@ -70,21 +70,21 @@ export const layoutBorderWidthSmall = "1px";
 export const layoutBorderWidthMedium = "2px";
 export const layoutBorderWidthLarge = "4px";
 export const layoutPaddingNone = "0";
-export const layoutPaddingXsmall = "4px";
-export const layoutPaddingSmall = "8px";
-export const layoutPaddingMedium = "16px";
-export const layoutPaddingLarge = "24px";
-export const layoutPaddingXlarge = "32px";
-export const layoutMarginNone = "0";
-export const layoutMarginHair = "2px";
-export const layoutMarginXsmall = "4px";
-export const layoutMarginSmall = "8px";
-export const layoutMarginMedium = "16px";
-export const layoutMarginLarge = "24px";
-export const layoutMarginXlarge = "32px";
-export const layoutMarginXxlarge = "40px";
-export const layoutMarginXxxlarge = "48px";
-export const layoutMarginHuge = "56px";
+export const layoutPaddingXsmall = "0.25rem";
+export const layoutPaddingSmall = "0.5rem";
+export const layoutPaddingMedium = "1rem";
+export const layoutPaddingLarge = "1.5rem";
+export const layoutPaddingXlarge = "2rem";
+export const layoutMarginNone = "0rem";
+export const layoutMarginHair = "0.125rem";
+export const layoutMarginXsmall = "0.25rem";
+export const layoutMarginSmall = "0.5rem";
+export const layoutMarginMedium = "1rem";
+export const layoutMarginLarge = "1.5rem";
+export const layoutMarginXlarge = "2rem";
+export const layoutMarginXxlarge = "2.5rem";
+export const layoutMarginXxxlarge = "3rem";
+export const layoutMarginHuge = "3.5rem";
 export const layoutBorderRadiusNone = "0";
 export const layoutBorderRadiusSmall = "2px";
 export const layoutBorderRadiusMedium = "4px";
@@ -118,6 +118,7 @@ export const typographyRegularLabel = "400 0.75rem/1.125rem 'BC Sans'";
 export const typographyRegularSmallBody = "400 0.875rem/1.313rem 'BC Sans'";
 export const typographyRegularBody = "400 1rem/1.688rem 'BC Sans'";
 export const typographyRegularLargeBody = "400 1.125rem/1.913rem 'BC Sans'";
+export const typographyRegularH6 = "400 1.125rem/1.913rem 'BC Sans'";
 export const typographyRegularH5 = "400 1.25rem/2.125rem 'BC Sans'";
 export const typographyRegularH4 = "400 1.5rem/2.25rem 'BC Sans'";
 export const typographyRegularH3 = "400 1.75rem/3rem 'BC Sans'";
@@ -128,6 +129,7 @@ export const typographyBoldLabel = "700 0.75rem/1.125rem 'BC Sans'";
 export const typographyBoldSmallBody = "700 0.875rem/1.313rem 'BC Sans'";
 export const typographyBoldBody = "700 1rem/1.688rem 'BC Sans'";
 export const typographyBoldLargeBody = "700 1.125rem/1.913rem 'BC Sans'";
+export const typographyBoldH6 = "700 1.125rem/1.913rem 'BC Sans'";
 export const typographyBoldH5 = "700 1.25rem/2.125rem 'BC Sans'";
 export const typographyBoldH4 = "700 1.5rem/2.25rem 'BC Sans'";
 export const typographyBoldH3 = "700 1.75rem/3rem 'BC Sans'";
@@ -138,6 +140,7 @@ export const typographyItalicLabel = "400 italic 0.75rem/1.125rem 'BC Sans'";
 export const typographyItalicSmallBody = "400 italic 0.875rem/1.313rem 'BC Sans'";
 export const typographyItalicBody = "400 italic 1rem/1.688rem 'BC Sans'";
 export const typographyItalicLargeBody = "400 italic 1.125rem/1.913rem 'BC Sans'";
+export const typographyItalicH6 = "400 italic 1.125rem/1.913rem 'BC Sans'";
 export const typographyItalicH5 = "400 italic 1.25rem/2.125rem 'BC Sans'";
 export const typographyItalicH4 = "400 italic 1.5rem/2.25rem 'BC Sans'";
 export const typographyItalicH3 = "400 italic 1.75rem/3.375rem 'BC Sans'";
