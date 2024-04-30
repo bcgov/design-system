@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 30 Apr 2024 15:49:02 GMT
+ * Generated on Tue, 30 Apr 2024 20:16:22 GMT
  */
 
 export const bcdsSurfaceOpacity0 = 0;
@@ -70,21 +70,21 @@ export const bcdsLayoutBorderWidthSmall = "1px";
 export const bcdsLayoutBorderWidthMedium = "2px";
 export const bcdsLayoutBorderWidthLarge = "4px";
 export const bcdsLayoutPaddingNone = "0";
-export const bcdsLayoutPaddingXsmall = "4px";
-export const bcdsLayoutPaddingSmall = "8px";
-export const bcdsLayoutPaddingMedium = "16px";
-export const bcdsLayoutPaddingLarge = "24px";
-export const bcdsLayoutPaddingXlarge = "32px";
-export const bcdsLayoutMarginNone = "0";
-export const bcdsLayoutMarginHair = "2px";
-export const bcdsLayoutMarginXsmall = "4px";
-export const bcdsLayoutMarginSmall = "8px";
-export const bcdsLayoutMarginMedium = "16px";
-export const bcdsLayoutMarginLarge = "24px";
-export const bcdsLayoutMarginXlarge = "32px";
-export const bcdsLayoutMarginXxlarge = "40px";
-export const bcdsLayoutMarginXxxlarge = "48px";
-export const bcdsLayoutMarginHuge = "56px";
+export const bcdsLayoutPaddingXsmall = "0.25rem";
+export const bcdsLayoutPaddingSmall = "0.5rem";
+export const bcdsLayoutPaddingMedium = "1rem";
+export const bcdsLayoutPaddingLarge = "1.5rem";
+export const bcdsLayoutPaddingXlarge = "2rem";
+export const bcdsLayoutMarginNone = "0rem";
+export const bcdsLayoutMarginHair = "0.125rem";
+export const bcdsLayoutMarginXsmall = "0.25rem";
+export const bcdsLayoutMarginSmall = "0.5rem";
+export const bcdsLayoutMarginMedium = "1rem";
+export const bcdsLayoutMarginLarge = "1.5rem";
+export const bcdsLayoutMarginXlarge = "2rem";
+export const bcdsLayoutMarginXxlarge = "2.5rem";
+export const bcdsLayoutMarginXxxlarge = "3rem";
+export const bcdsLayoutMarginHuge = "3.5rem";
 export const bcdsLayoutBorderRadiusNone = "0";
 export const bcdsLayoutBorderRadiusSmall = "2px";
 export const bcdsLayoutBorderRadiusMedium = "4px";
@@ -118,6 +118,7 @@ export const bcdsTypographyRegularLabel = "400 0.75rem/1.125rem 'BC Sans'";
 export const bcdsTypographyRegularSmallBody = "400 0.875rem/1.313rem 'BC Sans'";
 export const bcdsTypographyRegularBody = "400 1rem/1.688rem 'BC Sans'";
 export const bcdsTypographyRegularLargeBody = "400 1.125rem/1.913rem 'BC Sans'";
+export const bcdsTypographyRegularH6 = "400 1.125rem/1.913rem 'BC Sans'";
 export const bcdsTypographyRegularH5 = "400 1.25rem/2.125rem 'BC Sans'";
 export const bcdsTypographyRegularH4 = "400 1.5rem/2.25rem 'BC Sans'";
 export const bcdsTypographyRegularH3 = "400 1.75rem/3rem 'BC Sans'";
@@ -128,6 +129,7 @@ export const bcdsTypographyBoldLabel = "700 0.75rem/1.125rem 'BC Sans'";
 export const bcdsTypographyBoldSmallBody = "700 0.875rem/1.313rem 'BC Sans'";
 export const bcdsTypographyBoldBody = "700 1rem/1.688rem 'BC Sans'";
 export const bcdsTypographyBoldLargeBody = "700 1.125rem/1.913rem 'BC Sans'";
+export const bcdsTypographyBoldH6 = "700 1.125rem/1.913rem 'BC Sans'";
 export const bcdsTypographyBoldH5 = "700 1.25rem/2.125rem 'BC Sans'";
 export const bcdsTypographyBoldH4 = "700 1.5rem/2.25rem 'BC Sans'";
 export const bcdsTypographyBoldH3 = "700 1.75rem/3rem 'BC Sans'";
@@ -138,6 +140,7 @@ export const bcdsTypographyItalicLabel = "400 italic 0.75rem/1.125rem 'BC Sans'"
 export const bcdsTypographyItalicSmallBody = "400 italic 0.875rem/1.313rem 'BC Sans'";
 export const bcdsTypographyItalicBody = "400 italic 1rem/1.688rem 'BC Sans'";
 export const bcdsTypographyItalicLargeBody = "400 italic 1.125rem/1.913rem 'BC Sans'";
+export const bcdsTypographyItalicH6 = "400 italic 1.125rem/1.913rem 'BC Sans'";
 export const bcdsTypographyItalicH5 = "400 italic 1.25rem/2.125rem 'BC Sans'";
 export const bcdsTypographyItalicH4 = "400 italic 1.5rem/2.25rem 'BC Sans'";
 export const bcdsTypographyItalicH3 = "400 italic 1.75rem/3.375rem 'BC Sans'";

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 30 Apr 2024 15:49:02 GMT
+ * Generated on Tue, 30 Apr 2024 20:16:22 GMT
  */
 
 export const surfaceOpacity0 : number;
@@ -121,6 +121,7 @@ export const typographyRegularLabel : string;
 export const typographyRegularSmallBody : string;
 export const typographyRegularBody : string;
 export const typographyRegularLargeBody : string;
+export const typographyRegularH6 : string;
 export const typographyRegularH5 : string;
 export const typographyRegularH4 : string;
 export const typographyRegularH3 : string;
@@ -131,6 +132,7 @@ export const typographyBoldLabel : string;
 export const typographyBoldSmallBody : string;
 export const typographyBoldBody : string;
 export const typographyBoldLargeBody : string;
+export const typographyBoldH6 : string;
 export const typographyBoldH5 : string;
 export const typographyBoldH4 : string;
 export const typographyBoldH3 : string;
@@ -141,6 +143,7 @@ export const typographyItalicLabel : string;
 export const typographyItalicSmallBody : string;
 export const typographyItalicBody : string;
 export const typographyItalicLargeBody : string;
+export const typographyItalicH6 : string;
 export const typographyItalicH5 : string;
 export const typographyItalicH4 : string;
 export const typographyItalicH3 : string;

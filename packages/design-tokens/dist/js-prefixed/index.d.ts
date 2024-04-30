@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 30 Apr 2024 15:49:02 GMT
+ * Generated on Tue, 30 Apr 2024 20:16:22 GMT
  */
 
 export const bcdsSurfaceOpacity0 : number;
@@ -121,6 +121,7 @@ export const bcdsTypographyRegularLabel : string;
 export const bcdsTypographyRegularSmallBody : string;
 export const bcdsTypographyRegularBody : string;
 export const bcdsTypographyRegularLargeBody : string;
+export const bcdsTypographyRegularH6 : string;
 export const bcdsTypographyRegularH5 : string;
 export const bcdsTypographyRegularH4 : string;
 export const bcdsTypographyRegularH3 : string;
@@ -131,6 +132,7 @@ export const bcdsTypographyBoldLabel : string;
 export const bcdsTypographyBoldSmallBody : string;
 export const bcdsTypographyBoldBody : string;
 export const bcdsTypographyBoldLargeBody : string;
+export const bcdsTypographyBoldH6 : string;
 export const bcdsTypographyBoldH5 : string;
 export const bcdsTypographyBoldH4 : string;
 export const bcdsTypographyBoldH3 : string;
@@ -141,6 +143,7 @@ export const bcdsTypographyItalicLabel : string;
 export const bcdsTypographyItalicSmallBody : string;
 export const bcdsTypographyItalicBody : string;
 export const bcdsTypographyItalicLargeBody : string;
+export const bcdsTypographyItalicH6 : string;
 export const bcdsTypographyItalicH5 : string;
 export const bcdsTypographyItalicH4 : string;
 export const bcdsTypographyItalicH3 : string;
