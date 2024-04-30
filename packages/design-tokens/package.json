@@ -1,10 +1,10 @@
 {
   "name": "design-tokens",
-  "version": "3.0.0-rc1",
-  "description": "Transformation pipeline for design tokens for BC Design System",
+  "version": "3.0.0-rc2",
+  "description": "Transformation pipeline for design tokens for B.C. Design System",
   "scripts": {
-    "build": "node build-output.js",
-    "prepare-npm-package": "rm -rf dist/css* && rm -rf dist/js* && cp -R build/* dist",
+    "build": "rm -rf build/cjs* && rm -rf build/css* && rm -rf build/js* && node build-output.js",
+    "prepare-npm-package": "rm -rf dist/cjs* && rm -rf dist/css* && rm -rf dist/js* && cp -R build/* dist",
     "publish-npm-package": "cd dist && npm publish --access public"
   },
   "type": "module",

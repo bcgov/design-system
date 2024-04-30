@@ -62,8 +62,12 @@ const sd = StyleDictionary.extend({
       buildPath: "build/js/",
       files: [
         {
-          destination: "variables.js",
+          destination: "index.js",
           format: "javascript/es6",
+        },
+        {
+          destination: "index.d.ts",
+          format: "typescript/es6-declarations",
         },
       ],
     },
@@ -73,8 +77,41 @@ const sd = StyleDictionary.extend({
       buildPath: "build/js-prefixed/",
       files: [
         {
-          destination: "variables.js",
+          destination: "index.js",
           format: "javascript/es6",
+        },
+        {
+          destination: "index.d.ts",
+          format: "typescript/es6-declarations",
+        },
+      ],
+    },
+    cjs: {
+      transformGroup: "tokens-studio",
+      buildPath: "build/cjs/",
+      files: [
+        {
+          destination: "index.js",
+          format: "javascript/module-flat",
+        },
+        {
+          destination: "index.d.ts",
+          format: "typescript/es6-declarations",
+        },
+      ],
+    },
+    cjsPrefixed: {
+      transformGroup: "tokens-studio",
+      prefix: "bcds",
+      buildPath: "build/cjs-prefixed/",
+      files: [
+        {
+          destination: "index.js",
+          format: "javascript/module-flat",
+        },
+        {
+          destination: "index.d.ts",
+          format: "typescript/es6-declarations",
         },
       ],
     },
