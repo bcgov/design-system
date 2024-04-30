@@ -1,6 +1,6 @@
 {
   "name": "design-tokens",
-  "version": "3.0.0-rc1",
+  "version": "3.0.0-rc2",
   "description": "Transformation pipeline for design tokens for B.C. Design System",
   "scripts": {
     "build": "rm -rf build/cjs* && rm -rf build/css* && rm -rf build/js* && node build-output.js",
