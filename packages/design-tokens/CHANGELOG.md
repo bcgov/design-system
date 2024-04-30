@@ -1,5 +1,16 @@
 # Changelog
 
+## 3.0.0-rc2
+
+### Changed
+
+- (breaking) File names for JavaScript tokens are renamed from `variables.js` to `index.js` for shorter import statements
+
+### Added
+
+- CommonJS variables are included in `cjs` and `cjs-prefixed` directories (with and without the `bcds` prefix) in addition to the existing ESM variables in `js` and `js-prefixed` directories
+- TypeScript type definitions are shipped with the JavaScript tokens
+
 ## 3.0.0-rc1
 
 ### Changed
