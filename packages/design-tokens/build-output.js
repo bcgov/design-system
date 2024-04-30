@@ -62,8 +62,12 @@ const sd = StyleDictionary.extend({
       buildPath: "build/js/",
       files: [
         {
-          destination: "variables.js",
+          destination: "index.js",
           format: "javascript/es6",
+        },
+        {
+          destination: "index.d.ts",
+          format: "typescript/es6-declarations",
         },
       ],
     },
@@ -73,8 +77,12 @@ const sd = StyleDictionary.extend({
       buildPath: "build/js-prefixed/",
       files: [
         {
-          destination: "variables.js",
+          destination: "index.js",
           format: "javascript/es6",
+        },
+        {
+          destination: "index.d.ts",
+          format: "typescript/es6-declarations",
         },
       ],
     },
@@ -83,8 +91,12 @@ const sd = StyleDictionary.extend({
       buildPath: "build/cjs/",
       files: [
         {
-          destination: "variables.js",
+          destination: "index.js",
           format: "javascript/module-flat",
+        },
+        {
+          destination: "index.d.ts",
+          format: "typescript/es6-declarations",
         },
       ],
     },
@@ -94,8 +106,12 @@ const sd = StyleDictionary.extend({
       buildPath: "build/cjs-prefixed/",
       files: [
         {
-          destination: "variables.js",
+          destination: "index.js",
           format: "javascript/module-flat",
+        },
+        {
+          destination: "index.d.ts",
+          format: "typescript/es6-declarations",
         },
       ],
     },
