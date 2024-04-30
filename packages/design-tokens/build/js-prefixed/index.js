@@ -1,10 +1,6 @@
 /**
  * Do not edit directly
-<<<<<<< HEAD
- * Generated on Thu, 21 Mar 2024 18:19:40 GMT
-=======
- * Generated on Mon, 22 Jan 2024 21:48:30 GMT
->>>>>>> cfc2189 (Add CommonJS build output targets)
+ * Generated on Tue, 30 Apr 2024 15:49:02 GMT
  */
 
 export const bcdsSurfaceOpacity0 = 0;
