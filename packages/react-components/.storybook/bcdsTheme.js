@@ -1,6 +1,6 @@
 import { create } from "@storybook/theming/create";
 import "@bcgov/bc-sans/css/BC_Sans.css";
-import * as tokens from "@bcgov/design-tokens/js/variables.js";
+import * as tokens from "@bcgov/design-tokens/js";
 
 export default create({
   // Typography
