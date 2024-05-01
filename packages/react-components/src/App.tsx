@@ -1,7 +1,7 @@
 import { Menu, MenuItem, MenuTrigger, Popover } from "react-aria-components";
 
 import "./App.css";
-import "@bcgov/design-tokens/css/variables.css";
+import * as tokens from "@bcgov/design-tokens/js";
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
 import { Button, Footer, FooterLinks, Header } from "@/components";
@@ -74,14 +74,32 @@ function App() {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                font: "var(--typography-regular-body)",
+                font: tokens.typographyRegularBody,
                 listStyle: "none",
                 paddingLeft: 0,
               }}
             >
-              <li style={{ padding: "0 var(--layout-padding-medium" }}>Link</li>
-              <li style={{ padding: "0 var(--layout-padding-medium" }}>Link</li>
-              <li style={{ padding: "0 var(--layout-padding-medium" }}>Link</li>
+              <li
+                style={{
+                  padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
+                }}
+              >
+                Link
+              </li>
+              <li
+                style={{
+                  padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
+                }}
+              >
+                Link
+              </li>
+              <li
+                style={{
+                  padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
+                }}
+              >
+                Link
+              </li>
             </ul>
           ) : (
             <MenuTrigger>
@@ -91,17 +109,23 @@ function App() {
               <Popover>
                 <Menu>
                   <MenuItem
-                    style={{ padding: "0 var(--layout-padding-medium" }}
+                    style={{
+                      padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
+                    }}
                   >
                     Link
                   </MenuItem>
                   <MenuItem
-                    style={{ padding: "0 var(--layout-padding-medium" }}
+                    style={{
+                      padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
+                    }}
                   >
                     Link
                   </MenuItem>
                   <MenuItem
-                    style={{ padding: "0 var(--layout-padding-medium" }}
+                    style={{
+                      padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
+                    }}
                   >
                     Link
                   </MenuItem>
