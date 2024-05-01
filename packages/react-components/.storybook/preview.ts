@@ -2,15 +2,14 @@ import type { Preview } from "@storybook/react";
 import bcdsTheme from "./bcdsTheme";
 
 import "@bcgov/bc-sans/css/BC_Sans.css";
-import "@bcgov/design-tokens/css/variables.css";
 
 import "./global.css";
 
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
-    docs: { 
-      theme: bcdsTheme, 
+    docs: {
+      theme: bcdsTheme,
     },
     controls: {
       matchers: {
