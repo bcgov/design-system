@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 30 Apr 2024 20:16:22 GMT
+ * Generated on Wed, 01 May 2024 18:02:21 GMT
  */
 
 export const bcdsSurfaceOpacity0 : number;
