@@ -11,7 +11,6 @@ const meta = {
   },
   argTypes: {
     items: {
-      control: "array",
       value: {
         id: { control: "text", description: "Unique ID for the tag" },
         color: { control: "text", description: "Tag color" },

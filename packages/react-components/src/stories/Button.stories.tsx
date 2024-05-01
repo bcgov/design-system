@@ -21,7 +21,6 @@ const meta = {
         "Defaults to 'primary', also 'secondary', 'tertiary', 'link'",
     },
     onPress: {
-      control: "function",
       description: "Click/press handler",
     },
     danger: {
