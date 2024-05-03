@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import TagGroup from "../components/TagGroup";
-import TagList from "../components/TagList";
+import { TagGroup, TagList } from "../components";
 
 const meta = {
   title: "Components/TagGroup/TagList",
@@ -11,7 +10,6 @@ const meta = {
   },
   argTypes: {
     items: {
-      control: "array",
       value: {
         id: { control: "text", description: "Unique ID for the tag" },
         color: { control: "text", description: "Tag color" },
