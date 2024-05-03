@@ -26,6 +26,7 @@ const config: StorybookConfig = {
     <style>
       .sbdocs .sbdocs-content a {
          color: ${tokens.typographyColorLink};
+         text-decoration: underline;
       }
     </style>
  `,
