@@ -1,5 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-vite";
-import * as tokens from "@bcgov/design-tokens/js/variables.cjs"; // need to add CJS export to TS build pipeline for this to work
+import * as tokens from "@bcgov/design-tokens/cjs/index.js"; // need to add CJS export to TS build pipeline for this to work
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
