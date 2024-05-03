@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-vite";
+import * as tokens from "@bcgov/design-tokens/cjs";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -18,5 +19,16 @@ const config: StorybookConfig = {
     },
   },
   staticDirs: ["../storybook-public"],
+
+  // extra CSS for Storybook docs and UI, injected into <head>
+  previewHead: (head) => `
+    ${head}
+    <style>
+      .sbdocs .sbdocs-content a {
+         color: ${tokens.typographyColorLink};
+         text-decoration: underline;
+      }
+    </style>
+ `,
 };
 export default config;
