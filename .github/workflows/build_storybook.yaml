@@ -27,7 +27,7 @@ jobs:
           driver-opts: network=host
 
       - name: Build image with docker build
-        run: docker build ./packages/react-components/ -f ./packages/react-components/Dockerfile.storybook
+        run: docker build ./packages/react-components/ -f ./packages/react-components/Dockerfile.storybook -t design-system-react-components-storybook:latest
 
       - name: Login to OpenShift Silver image registry
         uses: docker/login-action@v3
