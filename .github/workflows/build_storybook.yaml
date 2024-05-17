@@ -1,0 +1,42 @@
+name: Build and push React component library app images
+
+on:
+  push:
+    paths:
+      - packages/react-components/**
+    branches: [main]
+  workflow_dispatch:
+
+# Cancel any currently running builds to save GitHub Actions hours.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  storybook-build-and-push:
+    name: Storybook build and push
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          driver-opts: network=host
+
+      - name: Build image with docker build
+        run: docker build ./packages/react-components/ -f ./packages/react-components/Dockerfile.storybook
+
+      - name: Login to OpenShift Silver image registry
+        uses: docker/login-action@v3
+        with:
+          registry: image-registry.apps.silver.devops.gov.bc.ca
+          username: ${{ secrets.OPENSHIFT_SILVER_SERVICEACCOUNT_USERNAME }}
+          password: ${{ secrets.OPENSHIFT_SILVER_SERVICEACCOUNT_PASSWORD }}
+
+      - name: Tag and push Docker image
+        run: |
+          docker tag design-system-react-components-storybook:latest image-registry.apps.silver.devops.gov.bc.ca/${{ secrets.OPENSHIFT_SILVER_LICENSE_PLATE }}-tools/design-system-react-components-storybook:develop
+          docker push image-registry.apps.silver.devops.gov.bc.ca/${{ secrets.OPENSHIFT_SILVER_LICENSE_PLATE }}-tools/design-system-react-components-storybook --all-tags
