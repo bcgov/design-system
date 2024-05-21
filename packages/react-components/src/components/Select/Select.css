@@ -17,7 +17,7 @@
 
 /* "(optional)" text after Label*/
 .bcds-react-aria-Select--Label > .optional {
-  color: var(--typography-color-disabled);
+  color: var(--typography-color-secondary);
 }
 
 /* Select input equivalent */
