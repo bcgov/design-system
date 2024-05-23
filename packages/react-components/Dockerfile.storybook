@@ -4,6 +4,8 @@
 # Build stage
 # -----------
 FROM node:lts-alpine as build-stage
+ARG GITHUB_SHA
+ENV GITHUB_SHA=$GITHUB_SHA
 
 # Copy package.json and package-lock.json
 WORKDIR /app
@@ -22,7 +24,7 @@ COPY .storybook ./.storybook
 COPY storybook-public ./storybook-public
 
 # Run Storybook build script, which places built files in /app/storybook-static
-RUN npm run storybook-build
+RUN STORYBOOK_GITHUB_SHA=$GITHUB_SHA npm run storybook-build
 
 # -----------
 # Serve stage
