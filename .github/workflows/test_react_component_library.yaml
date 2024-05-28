@@ -31,6 +31,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./packages/react-components
 
       - name: Run test suite with npm script
         run: npm run test:ci
+        working-directory: ./packages/react-components
