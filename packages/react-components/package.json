@@ -8,6 +8,8 @@
     "storybook-dev": "storybook dev -p 6006",
     "storybook-build": "storybook build",
     "test": "npx jest --config=./jest.config.ts",
+    "test:ci": "npx jest --ci --config=./jest.config.ts",
+    "test:watch": "npx jest --watch --config=./jest.config.ts",
     "vite-dev": "vite",
     "vite-build": "tsc && vite build",
     "vite-preview": "vite preview"
