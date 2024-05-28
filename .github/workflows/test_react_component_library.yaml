@@ -20,10 +20,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Read .nvmrc
+        run: echo "::set-output name=NVMRC::$(cat .nvmrc)"
+        id: nvm
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "${{ steps.nvm.outputs.NVMRC }}"
 
       - name: Install dependencies
         run: npm install
