@@ -1,0 +1,32 @@
+name: Run test suite for React component library
+
+on:
+  pull_request:
+    paths:
+      - packages/react-components/**
+  workflow_dispatch:
+
+# Cancel any currently running builds to save GitHub Actions hours.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  react-components-test:
+    name: Test suite run
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run test suite with npm script
+        run: npm run test:ci
