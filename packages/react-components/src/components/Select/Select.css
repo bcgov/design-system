@@ -9,6 +9,7 @@
 
 /* Label above select input */
 .bcds-react-aria-Select--Label {
+  color: var(--typography-color-secondary);
   font: var(--typography-regular-small-body);
 }
 .bcds-react-aria-Select[data-disabled] > .bcds-react-aria-Select--Label {
