@@ -27,7 +27,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: $GITHUB_NVMRC_VERSION
+          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
 
       - name: Install dependencies
         run: npm install
