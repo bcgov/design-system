@@ -22,6 +22,7 @@ jobs:
 
       - name: Read .nvmrc
         run: echo "::set-output name=NVMRC::$(cat .nvmrc)"
+        working-directory: ./packages/react-components
         id: nvm
 
       - name: Set up Node.js
