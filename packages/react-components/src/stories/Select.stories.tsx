@@ -7,6 +7,13 @@ const meta = {
   component: Select,
   parameters: {
     layout: "centered",
+    a11y: {
+      config: {
+        // overrides automated accessibility testing for aria-hidden-focus to suppress a known false positive
+        // see https://react-spectrum.adobe.com/react-aria/Select.html#false-positives for more information
+        rules: [{ id: 'aria-hidden-focus', enabled: false }],
+      }
+    }
   },
   argTypes: {
     size: {
