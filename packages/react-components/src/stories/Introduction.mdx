@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Source } from "@storybook/blocks";
 
 import packageJson from "../../package.json";
 
@@ -17,18 +17,44 @@ export const link =
 
 # B.C. Design System React Components
 
-This Storybook instance holds React component stories for the [B.C. Design System](https://gov.bc.ca/designsystem). Open the Components menu on the left to explore the components that are currently available.
+This is a UI workshop for React components included in the [B.C. Design System](https://gov.bc.ca/designsystem). This app provides:
 
-Questions? Please email the <a href="mailto:DesignSystem@gov.bc.ca">GDX OSS Design Team</a>.
+- Fully rendered, configurable previews of each released component
+- Detailed technical docs
+- Automated accessibility testing and validation
 
-## NPM package
+Use the left-hand navigation pane to browse component docs and rendered previews.
 
-This library is available from npm as [`@bcgov/design-system-react-components`](https://www.npmjs.com/package/@bcgov/design-system-react-components).
+## Install the component library
+
+To start using these components in your project, [install the component library](https://www.npmjs.com/package/@bcgov/design-system-react-components) via npm:
+
+<Source code={`npm install @bcgov/design-system-react-components`} />
+
+### Dependencies
+
+The component library supports [React versions 16.14.0](https://react.dev/versions) and later. It relies on these packages as core dependencies:
+
+- [B.C. Design Tokens](https://www.npmjs.com/package/@bcgov/design-tokens) (Government of British Columbia): used to style components
+- [BC Sans](https://www.npmjs.com/package/@bcgov/bc-sans) (Government of British Columbia): standard font, required for use in B.C. government digital services
+- [React Aria Components](https://www.npmjs.com/package/react-aria-components) (Adobe): provides unstyled primitives used as a base for some components
 
 ## Design tokens
 
-This library uses [`@bcgov/design-tokens`](https://www.npmjs.com/package/@bcgov/design-tokens) for styling. Learn more about our design tokens in our [B.C. Design Tokens Figma community file](https://www.figma.com/community/file/1326994583954765832).
+This library uses [@bcgov/design-tokens](https://www.npmjs.com/package/@bcgov/design-tokens) for styling. Design tokens are shipped as CSS and JavaScript variables, and include TypeScript support. Tokens can also be used separately from the component library if needed.
 
-## Version
+- [Learn more about design tokens](https://www2.gov.bc.ca/gov/content/digital/design-system/foundations/design-tokens)
+- [Developer docs](https://www2.gov.bc.ca/gov/content/digital/design-system/foundations/design-tokens/developers)
+
+## Current version
 
 This Storybook instance was built from v{packageJson.version}{link}.
+
+[View the changelog](/docs/changelog--docs) for this release.
+
+## Contact
+
+To ask a question, give feedback or report a bug, you can:
+
+- [Open an issue on GitHub](https://github.com/bcgov/design-system/issues)
+- Email <a href="mailto:designsystem@gov.bc.ca">designsystem@gov.bc.ca</a>
