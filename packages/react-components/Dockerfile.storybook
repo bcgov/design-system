@@ -19,6 +19,7 @@ RUN npm config list
 RUN npm install
 
 # Copy required files
+COPY CHANGELOG.md ./CHANGELOG.md
 COPY src ./src
 COPY .storybook ./.storybook
 COPY storybook-public ./storybook-public
