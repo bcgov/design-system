@@ -8,6 +8,7 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
+    "@storybook/addon-designs",
     // "@storybook/addon-storysource", // not currently working as expected - see issue #376
   ],
   framework: {
