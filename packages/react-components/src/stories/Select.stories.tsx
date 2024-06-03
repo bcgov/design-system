@@ -81,6 +81,12 @@ const iconPlaceholder = (
   </svg>
 );
 
+export const FlatList: Story = {
+  args: {
+    ...SelectTemplate.args,
+  }
+};
+
 export const Small: Story = {
   args: {
     ...SelectTemplate.args,
