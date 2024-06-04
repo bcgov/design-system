@@ -44,6 +44,7 @@ const items = [
   },
 ];
 
+/** Use the `items` prop to supply a flat array of options to the select component: */
 export const SelectTemplate: Story = {
   args: {
     label: "Label",
@@ -81,6 +82,7 @@ const iconPlaceholder = (
   </svg>
 );
 
+/** Small select size: */
 export const Small: Story = {
   args: {
     ...SelectTemplate.args,
@@ -89,6 +91,7 @@ export const Small: Story = {
   },
 };
 
+/** Medium (default) select size: */
 export const Medium: Story = {
   args: {
     ...SelectTemplate.args,
@@ -97,6 +100,7 @@ export const Medium: Story = {
   },
 };
 
+/** By default, select fields are not required, and "(optional)" appears in the label. Use `isRequired` to mark the select field as required: */
 export const Required: Story = {
   args: {
     ...SelectTemplate.args,
