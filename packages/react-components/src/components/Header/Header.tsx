@@ -8,7 +8,7 @@ export interface HeaderProps {
   /**
    * Link element that surrounds the logo. Use what's appropriate for your
    * router, like a `<Link>`. Defaults to a generic HTML link element like
-   * `<a href="/" title="Government of British Columbia">`.
+   * `<a href="/" title="Government of British Columbia">`
    */
   logoLinkElement?: React.ReactElement;
   /**
