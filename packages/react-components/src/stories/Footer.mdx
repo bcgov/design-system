@@ -1,18 +1,32 @@
 {/* Footer.mdx */}
 
-import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { Canvas, Controls, Meta, Primary, Source, Story, Subtitle } from "@storybook/blocks";
 
 import * as FooterStories from "./Footer.stories";
 
 <Meta of={FooterStories} />
 
 # Footer
+<Subtitle>The Footer component is designed to sit at the bottom of your page.</Subtitle>
 
-The Footer component is designed to sit at the bottom of your page. It returns an [HTML `<footer>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer).
+<Source code={`import { Footer } from "@bcgov/design-system-react-components"; `} language="typescript" />
 
-If no props are passed to the `<Footer/>`, you will get the default content that matches what's found on [gov.bc.ca](https://gov.bc.ca). This content is baked into the component - there is no API request to get content for display. Links use generic `<a>` elements and point to GUID-based permalinks on gov.bc.ca where possible. The year in the copyright field is generated automatically.
+## Usage and resources
+The footer component returns an [HTML `<footer>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer).
 
+If no props are passed to the `<footer/>`, it includes default content that matches [the gov.bc.ca footer](https://www2.gov.bc.ca/gov/content/home#cmf-ui-footer). This content is baked into the component - there is no API request to get content for display. Links use generic `<a>` elements and point to GUID-based permalinks on gov.bc.ca where possible. The year in the copyright field is generated automatically.
+
+Learn more about working with the footer component:
+
+* [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content/digital/design-system/components/footer)
+* [View the select component in Figma](#)
+
+## Controls
 <Canvas of={FooterStories.FooterDefault} />
+<Controls of={FooterStories.FooterDefault} />
+
+### Responsive design
+The `links` list will drop below the `logo` and `contact` when there's no longer room for both side by side. The amount of padding in each section is reduced on very small screens.
 
 ## Land acknowledgement
 
@@ -71,7 +85,3 @@ Hide the middle logo and links section with the `hideLogoAndLinks` boolean prop:
 Hide the copyright field with the `hideCopyright` boolean prop:
 
 <Canvas of={FooterStories.HideCopyright} />
-
-## Responsive design
-
-The `links` list will drop below the `logo` and `contact` when there's no longer room for both side by side. The amount of padding in each section is reduced on very small screens.
