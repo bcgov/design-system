@@ -16,7 +16,7 @@ jobs:
   storybook-build-and-push:
     name: Storybook build and push
     runs-on: ubuntu-latest
-    if: ${{ github.repository == "bcgov/design-system" }}
+    if: github.repository == 'bcgov/design-system'
 
     steps:
       - name: Checkout code
@@ -49,7 +49,7 @@ jobs:
   vite-build-and-push:
     name: Vite build and push
     runs-on: ubuntu-latest
-    if: ${{ github.repository == "bcgov/design-system" }}
+    if: github.repository == 'bcgov/design-system'
 
     steps:
       - name: Checkout code
