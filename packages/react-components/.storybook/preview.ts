@@ -11,6 +11,7 @@ const preview: Preview = {
     actions: { argTypesRegex: "^on[A-Z].*" },
     docs: {
       theme: bcdsTheme,
+      toc: true,
     },
     controls: {
       matchers: {
