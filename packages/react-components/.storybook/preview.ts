@@ -7,6 +7,7 @@ import "./global.css";
 
 const preview: Preview = {
   parameters: {
+    tags: ['autodocs'],
     actions: { argTypesRegex: "^on[A-Z].*" },
     docs: {
       theme: bcdsTheme,
