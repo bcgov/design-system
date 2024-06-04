@@ -1,16 +1,33 @@
 {/* Button.mdx */}
 
-import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { Canvas, Controls, Meta, Primary, Source, Story, Subtitle } from "@storybook/blocks";
 
 import * as ButtonStories from "./Button.stories";
 
 <Meta of={ButtonStories} />
 
 # Button
+<Subtitle>A button allows a user to perform an action, with mouse, touch, and keyboard interactions. </Subtitle>
 
-A button allows a user to perform an action, with mouse, touch, and keyboard interactions. It is built using the [React Aria Button](https://react-spectrum.adobe.com/react-aria/Button.html).
+<Source code={`import { Button } from "@bcgov/design-system-react-components"; `} language="typescript" />
 
-## Variants
+## Usage and resources
+
+Learn more about working with the button component:
+
+* [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content/digital/design-system/components/buttons)
+* [View the select component in Figma](#)
+
+This component is based on [React Aria Button](https://react-spectrum.adobe.com/react-aria/Button.html). Consult the React Aria documentation for additional technical information.
+
+## Controls
+
+<Primary of={ButtonStories} />
+<Controls of={ButtonStories.ButtonTemplate} />
+
+## Configuration
+
+### Variants
 
 Variants let you control the button's look. Available variants include:
 
@@ -26,22 +43,24 @@ If no `variant` prop is passed, the button defaults to `primary`.
 <Canvas of={ButtonStories.Tertiary} />
 <Canvas of={ButtonStories.Link} />
 
-## Size
+### Size
 
 Choose from medium and small button sizes:
 
 <Canvas of={ButtonStories.Medium} />
 <Canvas of={ButtonStories.Small} />
 
-## Danger
+### Danger
 
 Use the `danger` boolean prop to mark a button that is destructive (delete actions, actions that can't be undone, etc).
 
 <Canvas of={ButtonStories.Danger} />
 
-## Icons
+### Icons
 
 Icons can be dropped into the button as React children. You can also get an icon-only square button (fixed width) with the `isIconButton` boolean.
+
+When using an icon-only button, you must also pass an `aria-label` or `aria-labelledby` prop to ensure the button is accessible.
 
 <Canvas of={ButtonStories.PlaceholderIconButton} />
 <Canvas of={ButtonStories.RightIcon} />
