@@ -6,8 +6,8 @@ import "@bcgov/bc-sans/css/BC_Sans.css";
 import "./global.css";
 
 const preview: Preview = {
+  tags: ['autodocs'],
   parameters: {
-    tags: ['autodocs'],
     actions: { argTypesRegex: "^on[A-Z].*" },
     docs: {
       theme: bcdsTheme,
