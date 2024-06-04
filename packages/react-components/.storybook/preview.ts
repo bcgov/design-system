@@ -10,6 +10,9 @@ const preview: Preview = {
     actions: { argTypesRegex: "^on[A-Z].*" },
     docs: {
       theme: bcdsTheme,
+      canvas: {
+        withToolbar: true,
+       },
     },
     controls: {
       matchers: {
