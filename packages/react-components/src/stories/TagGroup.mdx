@@ -1,6 +1,6 @@
 {/* TagGroup.mdx */}
 
-import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import { Canvas, Controls, Meta, Primary, Source, Story, Subtitle } from "@storybook/blocks";
 
 import * as TagGroupStories from "./TagGroup.stories";
 
@@ -8,9 +8,22 @@ import * as TagGroupStories from "./TagGroup.stories";
 
 # TagGroup
 
-A tag group is a focusable list of **tags** (labels, categories, keywords, filters, or other items) with support for keyboard navigation, selection, and removal. It is built using the [React Aria TagGroup](https://react-spectrum.adobe.com/react-aria/TagGroup.html).
+<Subtitle>A tag group is a focusable list of tags (labels, categories, keywords, filters, or other items) with support for keyboard navigation, selection, and removal.</Subtitle>
 
-## A TagGroup holds a TagList, which holds Tags
+<Source code={`import { TagGroup, TagList } from "@bcgov/design-system-react-components"; `} language="typescript" />
+
+## Usage and resources
+
+Learn more about working with the TagGroup component:
+
+* [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content/digital/design-system/components/tags)
+* [View the select component in Figma](#)
+
+This component is based on [React Aria TagGroup](https://react-spectrum.adobe.com/react-aria/TagGroup.html), including the [TagList](https://react-spectrum.adobe.com/react-aria/TagGroup.html#taglist) and [Tag](https://react-spectrum.adobe.com/react-aria/TagGroup.html#tag) subcomponents. Consult the React Aria documentation for additional technical information.
+
+## Configuration
+
+### A TagGroup holds a TagList, which holds Tags
 
 The `Tag` component is used internally by the `TagList` component, rendered based on the `items` props. A `TagList` is surrounded by a `TagGroup`.
 
@@ -20,7 +33,7 @@ A TagGroup should have either a `label` (rendered on top of the `TagList`) or an
 
 <Canvas of={TagGroupStories.MultipleTags} />
 
-## Coloured tags
+### Coloured tags
 
 The `Tag` component can be passed a `color` prop with one of the following values:
 
@@ -38,19 +51,19 @@ If no value is passed, the tag colour defaults to `blue`.
 <Canvas of={TagGroupStories.MultipleTagsInEachColor} />
 <Canvas of={TagGroupStories.ColorsRemovable} />
 
-## Tags with icons
+### Tags with icons
 
 Pass a React element to the optional `icon` prop of a tag to add an icon to the tag.
 
 <Canvas of={TagGroupStories.TagsWithIcons} />
 
-## Removable tags
+### Removable tags
 
 A group of tags can be made removable by passing an `onRemove` callback function to the `TagGroup` component. `onRemove()` gets called when the "X" button on a tag is pressed, or when a user hits delete or backspace when one or more tags is selected.
 
 <Canvas of={TagGroupStories.RemovableTagGroup} />
 
-## Selection example
+### Selection example
 
 Props for `selectionMode`, `selectedKeys`, and `onSelectionChange` allow you to manage the state of the list of the tags.
 
@@ -58,13 +71,13 @@ The example below shows a tag group with the first and third tags selected. Inte
 
 <Canvas of={TagGroupStories.SelectionTagGroup} />
 
-## Disabled tag example
+### Disabled tag example
 
 The tag group takes a `disabledKeys` array prop to mark items as disabled. Disabled tags are skipped over when using keyboard navigation.
 
 <Canvas of={TagGroupStories.DisabledTagGroup} />
 
-## Error message
+### Error message
 
 Use the `errorMessage` prop to provide an error message string.
 
