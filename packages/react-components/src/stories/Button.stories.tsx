@@ -84,6 +84,8 @@ const iconPlaceholder = (
 export const Icon: Story = {
   ...ButtonTemplate,
   args: {
+    "aria-label":
+      "Icon-only buttons need discernible text labels for accessibility",
     children: iconPlaceholder,
     isIconButton: true,
   },
@@ -175,15 +177,5 @@ export const Small: Story = {
   args: {
     children: "Small",
     size: "small",
-  },
-};
-
-export const PlaceholderIconButton: Story = {
-  ...ButtonTemplate,
-  ...Icon,
-  args: {
-    isIconButton: true,
-    children: <>{iconPlaceholder}</>,
-    size: "medium",
   },
 };
