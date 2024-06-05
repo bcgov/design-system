@@ -97,11 +97,19 @@ This project follows semantic versioning. See [CHANGELOG.md](./CHANGELOG.md) for
 
 Components live in `./src/components` and are targeted by the build process with an export in `./src/index.ts`.
 
+#### Testing components with Jest
+
+Unit tests can be run with Jest using `npm run test`.
+
 ### Storybook
 
 Storybook stories live in `./src/stories`.
 
 Run `npm run storybook-dev` to access the Storybook instance for the component library.
+
+#### Testing with Storybook Test Runner
+
+With Storybook running locally, use the `npm run test-storybook` script to run `@storybook/test-runner` using the configuration defined in `./.storybook/test-runner.ts`. [Learn more about Storybook Test Runner](https://storybook.js.org/docs/writing-tests/test-runner).
 
 ### Vite kitchen sink application
 
