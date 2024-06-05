@@ -13,6 +13,59 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+export const TagGroupTemplate: Story = {
+  render: (args) => {
+    return (
+      <TagGroup label="Tags" {...args}>
+        <TagList
+          items={[
+            {
+              id: "bc-blue-tag",
+              color: "bc-blue",
+              textValue: "BC Blue tag",
+            },
+            {
+              id: "bc-gold-tag",
+              color: "bc-gold",
+              textValue: "BC Gold tag",
+            },
+            {
+              id: "dark",
+              color: "dark",
+              textValue: "Dark tag",
+            },
+            {
+              id: "blue-tag",
+              color: "blue",
+              textValue: "Blue tag",
+            },
+            {
+              id: "green-tag",
+              color: "green",
+              textValue: "Green tag",
+            },
+            {
+              id: "yellow-tag",
+              color: "yellow",
+              textValue: "Yellow tag",
+            },
+            {
+              id: "red-tag",
+              color: "red",
+              textValue: "Red tag",
+            },
+            {
+              id: "grey-tag",
+              color: "grey",
+              textValue: "Grey tag",
+            },
+          ]}
+        />
+      </TagGroup>
+    );
+  },
+};
+
 export const SingleTag: Story = {
   render: () => {
     return (
