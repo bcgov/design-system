@@ -177,13 +177,3 @@ export const Small: Story = {
     size: "small",
   },
 };
-
-export const PlaceholderIconButton: Story = {
-  ...ButtonTemplate,
-  ...Icon,
-  args: {
-    isIconButton: true,
-    children: <>{iconPlaceholder}</>,
-    size: "medium",
-  },
-};
