@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { TagGroup, TagList } from "../components";
 
 const meta = {
-  title: "Components/TagGroup/TagGroup",
+  title: "Components/TagGroup",
   component: TagGroup,
   parameters: {
     layout: "centered",
