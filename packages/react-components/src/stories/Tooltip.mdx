@@ -1,21 +1,36 @@
 {/* Tooltip.mdx */}
 
-import { Canvas, Controls, Meta, Primary, Source, Story, Subtitle } from "@storybook/blocks";
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
 
 import * as TooltipStories from "./Tooltip.stories";
 
 <Meta of={TooltipStories} />
 
 # Tooltip
-<Subtitle>A tooltip displays a description of an element on hover or focus.</Subtitle>
 
-<Source code={`import { Tooltip } from "@bcgov/design-system-react-components"; `} language="typescript" />
+<Subtitle>
+  A tooltip displays a description of an element on hover or focus.
+</Subtitle>
+
+<Source
+  code={`import { Tooltip } from "@bcgov/design-system-react-components"; `}
+  language="typescript"
+/>
 
 ## Usage and resources
+
 Learn more about working with the tooltip component:
 
-* [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content/digital/design-system/components/tooltip)
-* [View the select component in Figma](#)
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content/digital/design-system/components/tooltip)
+- [View the select component in Figma](#)
 
 This component is based on [React Aria Tooltip](https://react-spectrum.adobe.com/react-aria/Tooltip.html). Consult the React Aria documentation for additional technical information.
 
@@ -26,6 +41,7 @@ An active tooltip can be dismissed by pressing the <kbd>Escape</kbd> key, in add
 Learn more about the [ARIA tooltip role at MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role).
 
 ## Controls
+
 <Canvas of={TooltipStories.TooltipTemplate} />
 <Controls of={TooltipStories.TooltipTemplate} />
 

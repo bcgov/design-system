@@ -1,23 +1,38 @@
 {/* Header.mdx */}
 
-import { Canvas, Controls, Meta, Primary, Source, Story, Subtitle } from "@storybook/blocks";
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
 
 import * as HeaderStories from "./Header.stories";
 
 <Meta of={HeaderStories} />
 
 # Header
-<Subtitle>The header component is designed to sit at the top of your page. </Subtitle>
 
-<Source code={`import { Header } from "@bcgov/design-system-react-components"; `} language="typescript" />
+<Subtitle>
+  The header component is designed to sit at the top of your page.{" "}
+</Subtitle>
+
+<Source
+  code={`import { Header } from "@bcgov/design-system-react-components"; `}
+  language="typescript"
+/>
 
 ## Usage and resources
+
 The header component returns an [HTML `<header>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header).
 
 Learn more about working with the footer component:
 
-* [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content/digital/design-system/components/header)
-* [View the select component in Figma](#)
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content/digital/design-system/components/header)
+- [View the select component in Figma](#)
 
 ### Responsive design
 
@@ -26,6 +41,7 @@ You must add your own breakpoint handling if a long `title` or `children` will b
 The `title` text in the Header will wrap by default, causing the Header to grow vertically.
 
 ## Controls
+
 <Canvas of={HeaderStories?.HeaderWithTheWorks} />
 <Controls of={HeaderStories?.HeaderWithTheWorks} />
 

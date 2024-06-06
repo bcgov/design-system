@@ -1,26 +1,42 @@
 {/* Select.mdx */}
 
-import { Canvas, Controls, Meta, Primary, Source, Story, Subtitle } from "@storybook/blocks";
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
 
 import * as SelectStories from "./Select.stories";
 
 <Meta of={SelectStories} />
 
 # Select
-<Subtitle>The select component displays a collapsible list of options and enables a user to select one of them.</Subtitle>
 
-<Source code={`import { Select } from "@bcgov/design-system-react-components"; `} language="typescript" />
+<Subtitle>
+  The select component displays a collapsible list of options and enables a user
+  to select one of them.
+</Subtitle>
+
+<Source
+  code={`import { Select } from "@bcgov/design-system-react-components"; `}
+  language="typescript"
+/>
 
 ## Usage and resources
 
 Learn more about working with the select component:
 
-* [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content/digital/design-system/components/select)
-* [View the select component in Figma](#)
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content/digital/design-system/components/select)
+- [View the select component in Figma](#)
 
 This component is based on [React Aria Select](https://react-spectrum.adobe.com/react-aria/Select.html). Consult the React Aria documentation for additional technical information.
 
 ### Accessibility
+
 This component may trigger [a known false positive](https://react-spectrum.adobe.com/react-aria/Select.html#false-positives) for `aria-hidden-focus` in automated accessibility testing tools.
 
 ## Controls
