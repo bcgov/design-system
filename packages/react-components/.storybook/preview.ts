@@ -10,6 +10,9 @@ const preview: Preview = {
     actions: { argTypesRegex: "^on[A-Z].*" },
     docs: {
       theme: bcdsTheme,
+      canvas: {
+        withToolbar: true,
+      },
     },
     controls: {
       matchers: {
@@ -19,7 +22,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ["Introduction","Changelog"],
+        order: ["Introduction", "Changelog"],
       },
     },
   },

@@ -1,6 +1,14 @@
 {/* Select.mdx */}
 
-import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
 
 import * as SelectStories from "./Select.stories";
 
@@ -8,19 +16,45 @@ import * as SelectStories from "./Select.stories";
 
 # Select
 
-A select displays a collapsible list of options and allows a user to select one of them.
+<Subtitle>
+  The select component displays a collapsible list of options and enables a user
+  to select one of them.
+</Subtitle>
 
-It is built using the [React Aria Select](https://react-spectrum.adobe.com/react-aria/Select.html).
+<Source
+  code={`import { Select } from "@bcgov/design-system-react-components"; `}
+  language="typescript"
+/>
 
-## Flat list of items
+## Usage and resources
+
+Learn more about working with the select component:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content/digital/design-system/components/select)
+- [View the select component in Figma](#)
+
+This component is based on [React Aria Select](https://react-spectrum.adobe.com/react-aria/Select.html). Consult the React Aria documentation for additional technical information.
+
+### Accessibility
+
+This component may trigger [a known false positive](https://react-spectrum.adobe.com/react-aria/Select.html#false-positives) for `aria-hidden-focus` in automated accessibility testing tools.
+
+## Controls
+
+<Primary of={SelectStories} />
+<Controls of={SelectStories.SelectTemplate} />
+
+## Configuration
+
+### Flat list of items
 
 Options in the select component are implemented using React Aria's [Collection Components API](https://react-spectrum.adobe.com/react-aria/collections.html) via the `items` and `sections` props.
 
 Use the `items` prop to supply a flat array of options to the select component:
 
-<Canvas of={SelectStories.SelectTemplate} />
+<Canvas of={SelectStories.FlatList} />
 
-## Sectioned lists of items
+### Sectioned lists of items
 
 Use the `sections` prop to supply an array of sections that group `items` visually.
 
@@ -28,32 +62,32 @@ Each section object can be labelled with an optional `header`.
 
 <Canvas of={SelectStories.Sections} />
 
-## Size
+### Size
 
 Choose from medium (default) and small select sizes:
 
 <Canvas of={SelectStories.Small} />
 <Canvas of={SelectStories.Medium} />
 
-## Required
+### Required
 
 By default, select fields are not required, and "(optional)" appears in the label. Use `isRequired` to mark the select field as required:
 
 <Canvas of={SelectStories.Required} />
 
-## Disabled
+### Disabled
 
 Use the `isDisabled` prop to disable a select component.
 
 <Canvas of={SelectStories.Disabled} />
 
-## Danger
+### Danger
 
 Use the `isDestructive` boolean prop on an item to mark that option as dangerous/destructive (delete actions, actions that can't be undone, etc).
 
 <Canvas of={SelectStories.FlatWithDestructionOption} />
 
-## Icons
+### Icons
 
 Use either or both of the `iconLeft` and `iconRight` slots to add icons to options:
 
@@ -61,13 +95,13 @@ Use either or both of the `iconLeft` and `iconRight` slots to add icons to optio
 <Canvas of={SelectStories.RightIcon} />
 <Canvas of={SelectStories.BothIcons} />
 
-## Options with labels and descriptions
+### Options with labels and descriptions
 
 Use the optional `description` prop on an item to provide more context for the option:
 
 <Canvas of={SelectStories.OptionDescriptions} />
 
-## Placeholder text
+### Placeholder text
 
 The `placeholder` prop can be used for displaying text within the select component before an option is chosen. If `placeholder` isn't passed, the default "Select an item" text will appear.
 

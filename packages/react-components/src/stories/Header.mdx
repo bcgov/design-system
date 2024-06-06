@@ -1,6 +1,14 @@
 {/* Header.mdx */}
 
-import { Canvas, Controls, Meta, Story } from "@storybook/blocks";
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
 
 import * as HeaderStories from "./Header.stories";
 
@@ -8,11 +16,38 @@ import * as HeaderStories from "./Header.stories";
 
 # Header
 
-The Header component is designed to sit at the top of your page. It returns an [HTML `<header>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header).
+<Subtitle>
+  The header component is designed to sit at the top of your page.{" "}
+</Subtitle>
+
+<Source
+  code={`import { Header } from "@bcgov/design-system-react-components"; `}
+  language="typescript"
+/>
+
+## Usage and resources
+
+The header component returns an [HTML `<header>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header).
+
+Learn more about working with the footer component:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content/digital/design-system/components/header)
+- [View the select component in Figma](#)
+
+### Responsive design
+
+You must add your own breakpoint handling if a long `title` or `children` will break your Header on narrow screens. While we don't yet offer any breakpoint logic in the design system, we recommend [Bootstrap's v5 breakpoints](https://getbootstrap.com/docs/5.0/layout/breakpoints/) and we intend to build features based on these in the future.
+
+The `title` text in the Header will wrap by default, causing the Header to grow vertically.
+
+## Controls
 
 <Canvas of={HeaderStories?.HeaderWithTheWorks} />
+<Controls of={HeaderStories?.HeaderWithTheWorks} />
 
-## Logo link
+## Configuration
+
+### Logo link
 
 The B.C. logo is automatically included in the Header. Clicking the logo should take the user back to the root of your site/application. Use the `logoLinkElement` prop to pass an `<a>` tag or a `<Link>` component from your router library. Internally, the Header will replace the `children` prop of your `logoLinkElement` with the SVG B.C. logo.
 
@@ -26,7 +61,7 @@ By default, the Header will use an SVG copy of the B.C. logo that ships with the
 
 <Canvas of={HeaderStories?.HeaderWithCustomLogoAndLink} />
 
-## Skip links
+### Skip links
 
 [Skip links](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html) are an accessibility feature to assist users navigating sequentially through content. In particular, they are required for keyboard users who would otherwise have to tab through many navigation elements to get to your main navigation menu or page content.
 
@@ -36,7 +71,7 @@ Note that if your skip link is pointing to content on the current page, you need
 
 <Canvas of={HeaderStories?.HeaderWithTitleAndSkipLinks} />
 
-## Title
+### Title
 
 The `title` prop is used for the text to the right of the logo, and it appears in a `<span>` by default. Use the `titleElement` prop with one of these string values if you need the title to appear in a different element: `p`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`
 
@@ -46,14 +81,8 @@ If no `title` is passed, the vertical bar to the left of the title won't appear.
 
 <Canvas of={HeaderStories?.HeaderTemplate} />
 
-## `children`
+### `children`
 
 The right side of the Header has a slot for the `children` prop. This is where you can place your application-specific navigation elements like menu buttons.
 
 <Canvas of={HeaderStories?.HeaderWithChildren} />
-
-## Responsive design
-
-You must add your own breakpoint handling if a long `title` or `children` will break your Header on narrow screens. While we don't yet offer any breakpoint logic in the Design System, we recommend [Bootstrap's v5 breakpoints](https://getbootstrap.com/docs/5.0/layout/breakpoints/) and we intend to build features based on these in the future.
-
-The `title` text in the Header will wrap by default, causing the Header to grow vertically.
