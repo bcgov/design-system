@@ -1,0 +1,52 @@
+.bcds-react-aria-TextField {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: var(--layout-margin-small);
+  background: var(--surface-color-forms-default);
+  height: var(--layout-margin-xxlarge);
+  padding: var(--layout-padding-small);
+  border-radius: var(--layout-borderRadius-default);
+  border: 1px solid var(--surface-color-border-default);
+}
+
+.bcds-react-aria-Label {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+}
+
+.bcds-react-aria-Input {
+  font: var(--typography-regular-body);
+  color: var(--typography-color-primary);
+}
+
+/* Sizes */
+.bcds-react-aria-TextField.small {
+  min-height: var(--layout-margin-xlarge);
+}
+
+.bcds-react-aria-TextField.medium {
+  min-height: var(--layout-margin-xxlarge);
+}
+
+/* States */
+.bcds-react-aria-TextField[data-disabled] {
+  background: var(--surface-color-forms-disabled);
+  cursor: not-allowed;
+}
+
+.bcds-react-aria-TextField[data-hovered] {
+  background: var (--surface-color-menus-hover);
+}
+
+.bcds-react-aria-TextField[data-focused] {
+  border-radius: --layout-border-radius-large;
+  border: var(--layout-borderWidth-small) solid
+    var(--surface-color-border-active);
+}
+
+.bcds-react-aria-TextField[data-invalid] {
+  border-radius: var(--layout-borderRadius-default);
+  border: 1px solid var(--typography-color-danger);
+  background: var(--surface-color-forms-default);
+}
