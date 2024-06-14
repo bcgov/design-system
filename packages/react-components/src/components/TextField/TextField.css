@@ -7,7 +7,8 @@
   height: var(--layout-margin-xxlarge);
   padding: var(--layout-padding-small);
   border-radius: var(--layout-borderRadius-default);
-  border: 1px solid var(--surface-color-border-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
 }
 
 .bcds-react-aria-TextField--Label {
@@ -29,24 +30,24 @@
   min-height: var(--layout-margin-xxlarge);
 }
 
-/* States */
-.bcds-react-aria-TextField[data-hovered] {
+/* Input states */
+.bcds-react-aria-TextField--Input[data-hovered] {
   background: var(--surface-color-menus-hover);
 }
 
-.bcds-react-aria-TextField[data-focused] {
+.bcds-react-aria-TextField--Input[data-focused] {
   border-radius: var(--layout-border-radius-large);
   border: var(--layout-borderWidth-small) solid
     var(--surface-color-border-active);
 }
 
-.bcds-react-aria-TextField[data-invalid] {
+.bcds-react-aria-TextField--Input[data-invalid] {
   border-radius: var(--layout-borderRadius-default);
   border: 1px solid var(--support-border-color-danger);
   background: var(--surface-color-forms-default);
 }
 
-.bcds-react-aria-TextField[data-disabled] {
+.bcds-react-aria-TextField--Input[data-disabled] {
   background: var(--surface-color-forms-disabled);
   cursor: not-allowed;
 }
