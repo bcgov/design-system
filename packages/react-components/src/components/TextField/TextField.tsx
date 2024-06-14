@@ -26,13 +26,17 @@ export default function TextField({
   ...props
 }: TextFieldProps) {
   return (
-    <ReactAriaTextField
-      className={`bcds-react-aria-TextField ${size}`}
-      {...props}
-    >
+    <ReactAriaTextField className="bcds-react-aria-TextField" {...props}>
       <Label className="bcds-react-aria-TextField--Label">{label}</Label>
-      <Input className="bcds-react-aria-TextField--Input" />
-      {description && <Text slot="description">{description}</Text>}
+      <Input className={`bcds-react-aria-TextField--Input ${size}`} />
+      {description && (
+        <Text
+          slot="description"
+          className={`bcds-react-aria-TextField--Description`}
+        >
+          {description}
+        </Text>
+      )}
       <FieldError>{errorMessage}</FieldError>
     </ReactAriaTextField>
   );
