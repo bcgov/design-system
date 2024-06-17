@@ -17,6 +17,7 @@
 /* Styles for the text description below the input field */
 .bcds-react-aria-TextField--Description {
   font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
 }
 
 /* Styles for the input field */
@@ -43,7 +44,7 @@
 
 /* Input states */
 .bcds-react-aria-TextField--Input[data-hovered] {
-  background: var(--surface-color-menus-hover);
+  border-color: var(--surface-color-border-dark);
 }
 
 .bcds-react-aria-TextField--Input[data-focused] {
