@@ -11,14 +11,17 @@ import {
 import "./TextField.css";
 
 export interface TextFieldProps extends ReactAriaTextFieldProps {
-  /** Sets size of input field */
+  /* Sets size of text input field */
   size?: "medium" | "small";
+  /* Sets text label above text input field */
   label?: string;
+  /* Sets optional description text below text input field */
   description?: string;
+  /* Used for data validation and error handling */
   errorMessage?: string | ((validation: ValidationResult) => string);
-  /** Left icon slot in text input field */
+  /* Icon slot to left of text input field */
   iconLeft?: React.ReactElement;
-  /** Right icon slot in text input field */
+  /* Icon slot to right of text input field */
   iconRight?: React.ReactElement;
 }
 

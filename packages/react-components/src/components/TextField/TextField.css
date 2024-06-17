@@ -32,8 +32,7 @@
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
-  margin: var(--layout-margin-small) var(--layout-margin-none)
-    var(--layout-margin-small) var(--layout-margin-none);
+  margin: var(--layout-margin-small) var(--layout-margin-none);
   padding: var(--layout-padding-small) 12px;
 }
 
@@ -85,7 +84,7 @@
   cursor: not-allowed;
 }
 
-/* Styles for the error message slot*/
+/* Styles for the error message slot */
 .bcds-react-aria-TextField--Error {
   font: var(--typography-regular-body);
   color: var(--typography-color-danger);

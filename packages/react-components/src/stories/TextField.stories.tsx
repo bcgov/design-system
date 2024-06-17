@@ -44,7 +44,13 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const TextFieldTemplate: Story = {};
+export const TextFieldTemplate: Story = {
+  args: {
+    label: "Label",
+    size: "medium",
+    type: "text",
+  },
+};
 
 const iconPlaceholder = (
   <svg
