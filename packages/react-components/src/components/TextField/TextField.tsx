@@ -21,7 +21,7 @@ export interface TextFieldProps extends ReactAriaTextFieldProps {
 export default function TextField({
   size = "medium",
   label = "Label",
-  description = "Description or helper text",
+  description,
   errorMessage,
   ...props
 }: TextFieldProps) {
