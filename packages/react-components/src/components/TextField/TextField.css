@@ -20,36 +20,38 @@
   color: var(--typography-color-secondary);
 }
 
-/* Styles for the input field */
-.bcds-react-aria-TextField--Input {
-  font: var(--typography-regular-body);
+/* Styles for the input field container */
+.bcds-react-aria-TextField--container {
   color: var(--typography-color-primary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--layout-margin-small);
   background: var(--surface-color-forms-default);
   box-sizing: border-box;
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
-  padding: var(--layout-padding-small) 12px;
   margin: var(--layout-margin-small) var(--layout-margin-none)
     var(--layout-margin-small) var(--layout-margin-none);
-  gap: var(--layout-margin-small);
-}
-
-/* Styles for the error message slot*/
-.bcds-react-aria-TextField--Error {
-  font: var(--typography-regular-body);
-  color: var(--typography-color-danger);
+  padding: var(--layout-padding-small) 12px;
 }
 
 /* Sizes */
-.bcds-react-aria-TextField--Input.small {
+.bcds-react-aria-TextField--container.small {
   /* using margin token is kludgy, consider adding component-specific token for input sizing */
   height: var(--layout-margin-xlarge);
 }
 
-.bcds-react-aria-TextField--Input.medium {
+.bcds-react-aria-TextField--container.medium {
   /* using margin token is kludgy, consider adding component-specific token for input sizing */
   height: var(--layout-margin-xxlarge);
+}
+
+/* Text input field */
+.bcds-react-aria-TextField--Input {
+  font: var(--typography-regular-body);
+  padding: var(--layout-padding-none);
 }
 
 /* Input states */
@@ -57,10 +59,19 @@
   border-color: var(--surface-color-border-dark);
 }
 
-.bcds-react-aria-TextField--Input[data-focused] {
+.bcds-react-aria-TextField--container:focus-within {
   border-radius: var(--layout-border-radius-large);
-  border: var(--layout-borderWidth-small) solid
+  border: var(--layout-border-width-small) solid
     var(--surface-color-border-active);
+}
+
+.bcds-react-aria-TextField--container
+  > .bcds-react-aria-TextField--Input[data-focused] {
+  outline: none;
+}
+
+.bcds-react-aria-TextField--Input {
+  border: none;
 }
 
 .bcds-react-aria-TextField--Input[data-invalid] {
@@ -72,4 +83,10 @@
 .bcds-react-aria-TextField--Input[data-disabled] {
   background: var(--surface-color-forms-disabled);
   cursor: not-allowed;
+}
+
+/* Styles for the error message slot*/
+.bcds-react-aria-TextField--Error {
+  font: var(--typography-regular-body);
+  color: var(--typography-color-danger);
 }
