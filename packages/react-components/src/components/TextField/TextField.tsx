@@ -16,19 +16,31 @@ export interface TextFieldProps extends ReactAriaTextFieldProps {
   label?: string;
   description?: string;
   errorMessage?: string | ((validation: ValidationResult) => string);
+  /** Left icon slot in text input field */
+  iconLeft?: React.ReactElement;
+  /** Right icon slot in text input field */
+  iconRight?: React.ReactElement;
 }
 
 export default function TextField({
   size = "medium",
-  label = "Label",
+  label,
   description,
   errorMessage,
+  iconLeft,
+  iconRight,
   ...props
 }: TextFieldProps) {
   return (
     <ReactAriaTextField className="bcds-react-aria-TextField" {...props}>
-      <Label className="bcds-react-aria-TextField--Label">{label}</Label>
-      <Input className={`bcds-react-aria-TextField--Input ${size}`} />
+      {label && (
+        <Label className="bcds-react-aria-TextField--Label">{label}</Label>
+      )}
+      <div className={`bcds-react-aria-TextField--container ${size}`}>
+        {iconLeft}
+        <Input className="bcds-react-aria-TextField--Input" />
+        {iconRight}
+      </div>
       {description && (
         <Text
           slot="description"
