@@ -22,7 +22,7 @@ export default function TextField({
   size = "medium",
   label = "Label",
   description = "Description or helper text",
-  errorMessage = "Error message",
+  errorMessage,
   ...props
 }: TextFieldProps) {
   return (

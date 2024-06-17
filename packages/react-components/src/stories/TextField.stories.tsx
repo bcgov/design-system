@@ -15,6 +15,10 @@ const meta = {
       control: { type: "radio" },
       description: "Defaults to 'medium', also supports 'small'",
     },
+    type: {
+      options: ["text", "search", "email", "url", "tel", "password"],
+      control: { type: "radio" },
+    },
     label: {
       control: { type: "text" },
       description: "Text that appears above the input field",
@@ -26,6 +30,14 @@ const meta = {
     isInvalid: {
       control: "boolean",
       description: "Is the user's input valid?",
+    },
+    minLength: {
+      control: "number",
+      description: "Minimum length for this input",
+    },
+    maxLength: {
+      control: "number",
+      description: "Maximum length for this input",
     },
   },
 } satisfies Meta<typeof TextField>;
