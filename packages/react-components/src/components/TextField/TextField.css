@@ -1,8 +1,8 @@
 .bcds-react-aria-TextField {
   display: inline-flex;
   flex-direction: column;
-  gap: var(--layout-margin-small);
   /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
+  align-self: stretch;
   max-width: -moz-available;
   max-width: -webkit-fill-available;
 }
@@ -25,21 +25,31 @@
   font: var(--typography-regular-body);
   color: var(--typography-color-primary);
   background: var(--surface-color-forms-default);
+  box-sizing: border-box;
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
   padding: var(--layout-padding-small) 12px;
+  margin: var(--layout-margin-small) var(--layout-margin-none)
+    var(--layout-margin-small) var(--layout-margin-none);
+  gap: var(--layout-margin-small);
+}
+
+/* Styles for the error message slot*/
+.bcds-react-aria-TextField--Error {
+  font: var(--typography-regular-body);
+  color: var(--typography-color-danger);
 }
 
 /* Sizes */
-.bcds-react-aria-TextField--Input .small {
+.bcds-react-aria-TextField--Input.small {
   /* using margin token is kludgy, consider adding component-specific token for input sizing */
-  min-height: var(--layout-margin-xlarge);
+  height: var(--layout-margin-xlarge);
 }
 
-.bcds-react-aria-TextField--Input .medium {
+.bcds-react-aria-TextField--Input.medium {
   /* using margin token is kludgy, consider adding component-specific token for input sizing */
-  min-height: var(--layout-margin-xxlarge);
+  height: var(--layout-margin-xxlarge);
 }
 
 /* Input states */
@@ -54,7 +64,7 @@
 }
 
 .bcds-react-aria-TextField--Input[data-invalid] {
-  border-radius: var(--layout-borderRadius-default);
+  border-radius: var(--layout-border-radius-medium);
   border: 1px solid var(--support-border-color-danger);
   background: var(--surface-color-forms-default);
 }

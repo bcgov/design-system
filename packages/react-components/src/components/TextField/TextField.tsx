@@ -37,7 +37,9 @@ export default function TextField({
           {description}
         </Text>
       )}
-      <FieldError>{errorMessage}</FieldError>
+      <FieldError className="bcds-react-aria-TextField--Error">
+        {errorMessage}
+      </FieldError>
     </ReactAriaTextField>
   );
 }
