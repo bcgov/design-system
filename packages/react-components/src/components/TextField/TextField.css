@@ -93,6 +93,17 @@
   background: var(--surface-color-forms-default);
 }
 
+.bcds-react-aria-TextField[data-readonly]
+  > .bcds-react-aria-TextField--container {
+  background: var(--surface-color-forms-disabled);
+}
+
+.bcds-react-aria-TextField[data-readonly]
+  > .bcds-react-aria-TextField--container
+  > .bcds-react-aria-TextField--Input {
+  background: var(--surface-color-forms-disabled);
+}
+
 /* Styles for the error message slot */
 .bcds-react-aria-TextField--Error {
   font: var(--typography-regular-body);

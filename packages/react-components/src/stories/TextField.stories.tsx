@@ -30,13 +30,17 @@ const meta = {
       control: "boolean",
       description: "Is the user's input valid?",
     },
+    isReadOnly: {
+      control: "boolean",
+      description: "Locks the field to its current value",
+    },
     minLength: {
       control: "number",
-      description: "Minimum length for this input",
+      description: "Minimum character length for this input",
     },
     maxLength: {
       control: "number",
-      description: "Maximum length for this input",
+      description: "Maximum character length for this input",
     },
   },
 } satisfies Meta<typeof TextField>;
@@ -115,5 +119,16 @@ export const PasswordField: Story = {
     label: "Password",
     size: "medium",
     type: "password",
+  },
+};
+
+export const ReadOnlyTextField: Story = {
+  args: {
+    label: "Label",
+    size: "medium",
+    type: "text",
+    value: "This field is locked",
+    description: "It can be copied but not edited",
+    isReadOnly: true,
   },
 };
