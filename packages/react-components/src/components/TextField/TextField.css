@@ -10,12 +10,12 @@
 /* Styles for the text label above the input field */
 .bcds-react-aria-TextField--Label {
   font: var(--typography-regular-small-body);
-  color: var(--typography-color-secondary);
+  color: var(--typography-color-primary);
   padding: var(--layout-margin-hair) 0px;
 }
 
 .bcds-react-aria-TextField--Label .required {
-  color: var(--typography-color-placeholder);
+  color: var(--typography-color-secondary);
 }
 
 /* Styles for the text description below the input field */

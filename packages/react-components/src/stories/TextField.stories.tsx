@@ -57,7 +57,6 @@ export const TextFieldTemplate: Story = {
     label: "Label",
     size: "medium",
     type: "text",
-    value: "Input value",
     description: "Optional description or helper text",
   },
 };
