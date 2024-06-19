@@ -18,6 +18,10 @@ const meta = {
       options: ["text", "search", "email", "url", "tel", "password"],
       control: { type: "radio" },
     },
+    value: {
+      control: { type: "text" },
+      description: "Input value",
+    },
     label: {
       control: { type: "text" },
       description: "Text that appears above the input field",
