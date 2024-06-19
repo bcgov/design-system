@@ -57,6 +57,7 @@ export const TextFieldTemplate: Story = {
     label: "Label",
     size: "medium",
     type: "text",
+    value: "Input value",
     description: "Optional description or helper text",
   },
 };
@@ -66,6 +67,13 @@ export const SmallTextField: Story = {
     ...TextFieldTemplate.args,
     size: "small",
     description: "This is a thinner variant of the input field",
+  },
+};
+
+export const RequiredTextField: Story = {
+  args: {
+    ...TextFieldTemplate.args,
+    isRequired: true,
   },
 };
 

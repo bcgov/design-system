@@ -23,6 +23,8 @@ export interface TextFieldProps extends ReactAriaTextFieldProps {
   iconLeft?: React.ReactElement;
   /* Icon slot to right of text input field */
   iconRight?: React.ReactElement;
+  /* Sets input as required or optional */
+  isRequired?: boolean;
 }
 
 export default function TextField({
@@ -32,12 +34,20 @@ export default function TextField({
   errorMessage,
   iconLeft,
   iconRight,
+  isRequired,
   ...props
 }: TextFieldProps) {
   return (
     <ReactAriaTextField className="bcds-react-aria-TextField" {...props}>
       {label && (
-        <Label className="bcds-react-aria-TextField--Label">{label}</Label>
+        <Label className="bcds-react-aria-TextField--Label">
+          {label}{" "}
+          {isRequired && (
+            <span className="bcds-react-aria-TextField--Label required">
+              (required)
+            </span>
+          )}
+        </Label>
       )}
       <div className={`bcds-react-aria-TextField--container ${size}`}>
         {iconLeft}
