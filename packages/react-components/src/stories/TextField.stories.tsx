@@ -78,10 +78,45 @@ const iconPlaceholder = (
   </svg>
 );
 
+const iconSearch = (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g id="20px/Search" clip-path="url(#clip0_717_6325)">
+      <path
+        id="Search icon"
+        d="M20.7361 19.5586C21.088 19.9101 21.088 20.4375 20.7361 20.7539C20.5953 20.9297 20.3842 21 20.1731 21C19.9267 21 19.7155 20.9297 19.5396 20.7539L14.824 16.0429C13.5572 17.0625 11.9736 17.625 10.2845 17.625C6.27274 17.625 3 14.3555 3 10.3125C3 6.30468 6.23754 3 10.2845 3C14.2962 3 17.6041 6.30468 17.6041 10.3125C17.6041 12.0352 17.0411 13.6172 16.0205 14.8477L20.7361 19.5586ZM4.68916 10.3125C4.68916 13.4414 7.18769 15.9375 10.3197 15.9375C13.4164 15.9375 15.9501 13.4414 15.9501 10.3125C15.9501 7.21874 13.4164 4.6875 10.3197 4.6875C7.18769 4.6875 4.68916 7.21874 4.68916 10.3125Z"
+        stroke="currentColor"
+        stroke-width="1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_717_6325">
+        <rect width="20" height="20" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
 export const TextFieldWithIcons: Story = {
   args: {
     ...TextFieldTemplate.args,
     iconLeft: iconPlaceholder,
     iconRight: iconPlaceholder,
+  },
+};
+
+export const TextFieldSearch: Story = {
+  args: {
+    label: "Search",
+    size: "medium",
+    type: "search",
+    iconLeft: iconSearch,
   },
 };
