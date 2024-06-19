@@ -36,6 +36,10 @@
   padding: var(--layout-padding-small) 12px;
 }
 
+.bcds-react-aria-TextField--Input {
+  border: none;
+}
+
 /* Sizes */
 .bcds-react-aria-TextField--container.small {
   /* using margin token is kludgy, consider adding component-specific token for input sizing */
@@ -53,9 +57,11 @@
   padding: var(--layout-padding-none);
 }
 
-/* Input states */
-.bcds-react-aria-TextField--Input[data-hovered] {
-  border-color: var(--surface-color-border-dark);
+/* Hover and focus states */
+
+.bcds-react-aria-TextField--container
+  > .bcds-react-aria-TextField--Input[data-focused] {
+  outline: none;
 }
 
 .bcds-react-aria-TextField--container:focus-within {
@@ -64,24 +70,27 @@
     var(--surface-color-border-active);
 }
 
-.bcds-react-aria-TextField--container
-  > .bcds-react-aria-TextField--Input[data-focused] {
-  outline: none;
+.bcds-react-aria-TextField--container:hover {
+  border-color: var(--surface-color-border-dark);
 }
 
-.bcds-react-aria-TextField--Input {
-  border: none;
-}
+/* Disabled and invalid states */
 
-.bcds-react-aria-TextField--Input[data-invalid] {
-  border-radius: var(--layout-border-radius-medium);
-  border: 1px solid var(--support-border-color-danger);
-  background: var(--surface-color-forms-default);
+.bcds-react-aria-TextField[data-disabled]
+  > .bcds-react-aria-TextField--container {
+  background: var(--surface-color-forms-disabled);
+  cursor: not-allowed;
 }
 
 .bcds-react-aria-TextField--Input[data-disabled] {
-  background: var(--surface-color-forms-disabled);
   cursor: not-allowed;
+}
+
+.bcds-react-aria-TextField[data-invalid]
+  > .bcds-react-aria-TextField--container {
+  border-radius: var(--layout-border-radius-medium);
+  border: 1px solid var(--support-border-color-danger);
+  background: var(--surface-color-forms-default);
 }
 
 /* Styles for the error message slot */
