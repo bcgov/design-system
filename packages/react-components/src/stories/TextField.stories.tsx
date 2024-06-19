@@ -57,6 +57,15 @@ export const TextFieldTemplate: Story = {
     label: "Label",
     size: "medium",
     type: "text",
+    description: "Optional description or helper text",
+  },
+};
+
+export const SmallTextField: Story = {
+  args: {
+    ...TextFieldTemplate.args,
+    size: "small",
+    description: "This is a thinner variant of the input field",
   },
 };
 
@@ -106,6 +115,7 @@ export const TextFieldWithIcons: Story = {
     ...TextFieldTemplate.args,
     iconLeft: iconPlaceholder,
     iconRight: iconPlaceholder,
+    description: "You can use either, both or neither icon slot as needed",
   },
 };
 
@@ -115,6 +125,7 @@ export const SearchField: Story = {
     size: "medium",
     type: "search",
     iconLeft: iconSearch,
+    description: "Icon slots can be used to provide additional visual context",
   },
 };
 
@@ -123,6 +134,16 @@ export const PasswordField: Story = {
     label: "Password",
     size: "medium",
     type: "password",
+    value: "password",
+    description: "Input is automatically obscured",
+  },
+};
+
+export const DisabledTextField: Story = {
+  args: {
+    ...TextFieldTemplate.args,
+    description: "This field is disabled and cannot be interacted with",
+    isDisabled: true,
   },
 };
 
@@ -132,7 +153,20 @@ export const ReadOnlyTextField: Story = {
     size: "medium",
     type: "text",
     value: "This field is locked",
-    description: "It can be copied but not edited",
+    description: "Input can be selected and copied but not edited",
     isReadOnly: true,
+  },
+};
+
+export const TextFieldError: Story = {
+  args: {
+    ...TextFieldTemplate.args,
+    label: "This is a URL field",
+    type: "url",
+    value: "This value is invalid",
+    description:
+      "This component supports custom, real-time and server-side data validation",
+    isInvalid: true,
+    errorMessage: "Error messages can be customised or passed programmatically",
   },
 };
