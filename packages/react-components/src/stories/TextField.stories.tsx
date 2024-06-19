@@ -101,11 +101,19 @@ export const TextFieldWithIcons: Story = {
   },
 };
 
-export const TextFieldSearch: Story = {
+export const SearchField: Story = {
   args: {
     label: "Search",
     size: "medium",
     type: "search",
     iconLeft: iconSearch,
+  },
+};
+
+export const PasswordField: Story = {
+  args: {
+    label: "Password",
+    size: "medium",
+    type: "password",
   },
 };
