@@ -73,6 +73,9 @@
   border-radius: var(--layout-border-radius-large);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-active);
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
 }
 
 .bcds-react-aria-TextField--container:hover {

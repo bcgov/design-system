@@ -25,6 +25,7 @@ export interface TextFieldProps extends ReactAriaTextFieldProps {
   iconRight?: React.ReactElement;
 }
 
+/* Icon displayed when input is in invalid state */
 const iconError = (
   <svg
     width="20"
