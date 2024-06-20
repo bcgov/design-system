@@ -114,6 +114,6 @@
 
 /* Styles for the error message slot */
 .bcds-react-aria-TextField--Error {
-  font: var(--typography-regular-body);
+  font: var(--typography-regular-small-body);
   color: var(--typography-color-danger);
 }
