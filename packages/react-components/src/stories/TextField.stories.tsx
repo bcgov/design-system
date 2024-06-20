@@ -26,6 +26,10 @@ const meta = {
       control: { type: "text" },
       description: "Text that appears above the input field",
     },
+    isRequired: {
+      control: "boolean",
+      description: "Is this input required?",
+    },
     isDisabled: {
       control: "boolean",
       description: "Is the input disabled?",

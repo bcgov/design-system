@@ -42,6 +42,7 @@
 
 .bcds-react-aria-TextField--Input {
   border: none;
+  flex-grow: 1;
 }
 
 /* Sizes */
