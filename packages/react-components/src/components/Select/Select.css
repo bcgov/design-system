@@ -21,6 +21,12 @@
   color: var(--typography-color-secondary);
 }
 
+/* Error message */
+.bcds-react-aria-Select--Error {
+  font: var(--typography-regular-body);
+  color: var(--typography-color-danger);
+}
+
 /* Select input equivalent */
 .bcds-react-aria-Select--Button {
   background-color: var(--surface-color-forms-default);

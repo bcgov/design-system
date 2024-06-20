@@ -2,6 +2,7 @@ import React from "react";
 import {
   Button,
   Collection,
+  FieldError,
   Header,
   Key,
   Label,
@@ -14,6 +15,7 @@ import {
   SelectProps as ReactAriaSelectProps,
   SelectValue,
   Text,
+  ValidationResult,
 } from "react-aria-components";
 
 import "./Select.css";
@@ -50,6 +52,8 @@ export interface SelectProps<T extends object> extends ReactAriaSelectProps<T> {
   placeholder?: string;
   /** Defaults to `medium` */
   size?: "small" | "medium";
+  /* Used for data validation and error handling */
+  errorMessage?: string | ((validation: ValidationResult) => string);
 }
 
 function ChevronDown() {
@@ -93,6 +97,7 @@ export default function Select<T extends object>({
   label,
   placeholder,
   size = "medium",
+  errorMessage,
   ...props
 }: SelectProps<T>) {
   return (
@@ -125,6 +130,9 @@ export default function Select<T extends object>({
             />
             {isOpen ? <ChevronUp /> : <ChevronDown />}
           </Button>
+          <FieldError className="bcds-react-aria-Select--Error">
+            {errorMessage}
+          </FieldError>
           <Popover className="bcds-react-aria-Select--Popover" offset={4}>
             <ListBox
               className="bcds-react-aria-Select--ListBox"
