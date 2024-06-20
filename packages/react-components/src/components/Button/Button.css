@@ -13,7 +13,9 @@
   cursor: not-allowed;
 }
 .bcds-react-aria-Button[data-focused] {
-  outline: 2px solid var(--surface-color-border-active);
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
 }
 
 /* Icon button */
