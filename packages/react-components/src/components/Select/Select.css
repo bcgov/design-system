@@ -9,6 +9,8 @@
 
 /* Label above select input */
 .bcds-react-aria-Select--Label {
+  display: flex;
+  padding: var(--layout-padding-small) var(--layout-padding-none);
   color: var(--typography-color-secondary);
   font: var(--typography-regular-small-body);
 }
@@ -18,6 +20,7 @@
 
 /* "(optional)" text after Label*/
 .bcds-react-aria-Select--Label > .optional {
+  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
   color: var(--typography-color-secondary);
 }
 
