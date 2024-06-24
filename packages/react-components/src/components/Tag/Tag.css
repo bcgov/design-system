@@ -77,7 +77,7 @@
 /* Focused */
 .bcds-react-aria-Tag[data-focused] {
   outline: 2px solid var(--surface-color-border-active);
-  outline-offset: 0;
+  outline-offset: var(--layout-margin-hair);
 }
 
 /* Disabled */
