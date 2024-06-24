@@ -8,9 +8,10 @@
 
 /* Label above select input */
 .bcds-react-aria-Select--Label {
+  display: flex;
   color: var(--typography-color-secondary);
   font: var(--typography-regular-small-body);
-  gap: var(--layout-margin-xsmall);
+  padding: var(--layout-padding-small) var(--layout-padding-none);
 }
 .bcds-react-aria-Select[data-disabled] > .bcds-react-aria-Select--Label {
   color: var(--typography-color-disabled);
@@ -18,12 +19,13 @@
 
 /* "(optional)" text after Label*/
 .bcds-react-aria-Select--Label > .optional {
-  color: var(--typography-color-secondary);
+  color: var(--typography-color-primary);
+  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
 }
 
 /* Error message */
 .bcds-react-aria-Select--Error {
-  font: var(--typography-regular-body);
+  font: var(--typography-regular-small-body);
   color: var(--typography-color-danger);
 }
 
@@ -36,9 +38,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--layout-margin-small);
-  padding: var(--layout-padding-small) 12px;
-  margin: var(--layout-margin-xsmall) var(--layout-margin-none);
 }
 .bcds-react-aria-Select--Button.invalid {
   border-color: var(--support-border-color-danger);
