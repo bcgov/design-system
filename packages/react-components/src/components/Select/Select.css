@@ -1,6 +1,7 @@
 .bcds-react-aria-Select {
   display: inline-flex;
   flex-direction: column;
+  gap: var(--layout-margin-xsmall);
   /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
   max-width: -moz-available;
   max-width: -webkit-fill-available;
@@ -10,7 +11,6 @@
 .bcds-react-aria-Select--Label {
   color: var(--typography-color-secondary);
   font: var(--typography-regular-small-body);
-  gap: var(--layout-margin-xsmall);
 }
 .bcds-react-aria-Select[data-disabled] > .bcds-react-aria-Select--Label {
   color: var(--typography-color-disabled);
@@ -35,10 +35,9 @@
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: var(--layout-margin-small);
-  padding: var(--layout-padding-small) 12px;
-  margin: var(--layout-margin-xsmall) var(--layout-margin-none);
+  align-items: center;
+  padding: 0 12px;
 }
 .bcds-react-aria-Select--Button.invalid {
   border-color: var(--support-border-color-danger);
