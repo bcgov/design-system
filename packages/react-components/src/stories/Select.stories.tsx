@@ -11,9 +11,9 @@ const meta = {
       config: {
         // overrides automated accessibility testing for aria-hidden-focus to suppress a known false positive
         // see https://react-spectrum.adobe.com/react-aria/Select.html#false-positives for more information
-        rules: [{ id: 'aria-hidden-focus', enabled: false }],
-      }
-    }
+        rules: [{ id: "aria-hidden-focus", enabled: false }],
+      },
+    },
   },
   argTypes: {
     size: {
@@ -168,6 +168,7 @@ export const Invalid: Story = {
     ...SelectTemplate.args,
     label: "Invalid example",
     isInvalid: true,
+    errorMessage: "Error messages can be customised or passed programmatically",
   },
 };
 

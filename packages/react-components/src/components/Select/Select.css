@@ -26,6 +26,8 @@
 
 /* Error message */
 .bcds-react-aria-Select--Error {
+  display: flex;
+  padding: var(--layout-padding-small) var(--layout-padding-none);
   font: var(--typography-regular-small-body);
   color: var(--typography-color-danger);
 }
