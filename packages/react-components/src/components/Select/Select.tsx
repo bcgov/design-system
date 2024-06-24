@@ -127,6 +127,7 @@ export default function Select<T extends object>({
               {label}
               {!isRequired && (
                 <>
+                  {" "}
                   <span className="optional">(optional)</span>
                 </>
               )}
