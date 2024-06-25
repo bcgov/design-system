@@ -70,13 +70,16 @@
 
 /* Selected */
 .bcds-react-aria-Tag[data-selected] {
-  border: 2px solid var(--surface-color-border-active);
-  padding: 1px 7px;
+  border-radius: var(--layout-border-radius-small);
+  border: var(--layout-border-width-medium) solid
+    var(--surface-color-border-active);
+  padding: var(--layout-margin-hair) var(--layout-padding-small);
 }
 
 /* Focused */
 .bcds-react-aria-Tag[data-focused] {
-  outline: 2px solid var(--surface-color-border-active);
+  outline: var(--layout-border-width-medium) solid
+    var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
 }
 
