@@ -46,17 +46,6 @@
   flex-grow: 1;
 }
 
-/* Sizes */
-.bcds-react-aria-TextArea--container.small {
-  /* using margin token is kludgy, consider adding component-specific token for input sizing */
-  height: var(--layout-margin-xlarge);
-}
-
-.bcds-react-aria-TextArea--container.medium {
-  /* using margin token is kludgy, consider adding component-specific token for input sizing */
-  height: var(--layout-margin-xxlarge);
-}
-
 /* Text input field */
 .bcds-react-aria-TextArea--Input {
   font: var(--typography-regular-body);
