@@ -44,7 +44,7 @@ const iconError = (
 );
 
 export default function TextField({
-  size = "medium",
+  size,
   label,
   description,
   errorMessage,
@@ -66,7 +66,9 @@ export default function TextField({
               )}
             </Label>
           )}
-          <div className={`bcds-react-aria-TextField--container ${size}`}>
+          <div
+            className={`bcds-react-aria-TextField--container ${size === "small" ? "small" : "medium"}`}
+          >
             {iconLeft}
             <Input className="bcds-react-aria-TextField--Input" />
             {isInvalid && iconError}
