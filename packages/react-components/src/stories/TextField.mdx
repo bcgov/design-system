@@ -33,9 +33,62 @@ Learn more about working with the text field component:
 - [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content/digital/design-system/components/text-field)
 - [View the text field component in Figma](#)
 
-This component is based on [React Aria TextField](https://react-spectrum.adobe.com/react-aria/TextField.html). Consult the React Aria documentation for additional technical information.
+This component is based on [React Aria TextField](https://react-spectrum.adobe.com/react-aria/TextField.html). Consult the React Aria documentation for additional technical information and a full list of supported props.
+
+### Validation
+
+Default and custom data validation support is built in, using the [React Aria FieldError subcomponent](https://react-spectrum.adobe.com/react-aria/forms.html#validation).
 
 ## Controls
 
 <Primary of={TextFieldStories} />
 <Controls of={TextFieldStories.TextFieldTemplate} />
+
+## Configuration
+
+### Size
+
+The `size` prop enables you to choose between medium (default) and small (reduced height) versions:
+
+<Canvas of={TextFieldStories.MediumTextField} />
+<Canvas of={TextFieldStories.SmallTextField} />
+
+### Required
+
+By default, input fields are marked as optional. Use the `isRequired` prop to mark an input as required, and display a text label:
+
+<Canvas of={TextFieldStories.RequiredTextField} />
+
+### Icons
+
+You can display icons in a text field by passing an image to either or both of the `iconLeft` and `iconRight` slots:
+
+<Canvas of={TextFieldStories.TextFieldWithIcons} />
+
+Icons can be used to provide an additional visual indicator of a text field's function, like a search field:
+
+<Canvas of={TextFieldStories.SearchField} />
+
+### Input types
+
+Use the `type` prop to define the type of input a text field expects. If no `type` prop is provided, the attribute defaults to `text`.
+
+For example, setting the type to `password` automatically obscures input:
+
+<Canvas of={TextFieldStories.PasswordField} />
+
+Types like `url`, `tel` or `email` are used for data validation. Consult the MDN documentation for [a full list of valid input type attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types).
+
+### States
+
+Use `isDisabled` to disable a text field. A disabled field cannot be focused or interacted with:
+
+<Canvas of={TextFieldStories.DisabledTextField} />
+
+Use `isReadOnly` to lock a field to its current value. A read-only input can be focused and copied, but cannot be edited:
+
+<Canvas of={TextFieldStories.ReadOnlyTextField} />
+
+The `isInvalid` prop should be set programmatically when an input is invalid. It renders an error icon in the input field, changes the border colour and displays an `errorMessage` (using the [FieldError subcomponent](https://react-spectrum.adobe.com/react-aria/TextField.html#validation)):
+
+<Canvas of={TextFieldStories.TextFieldError} />

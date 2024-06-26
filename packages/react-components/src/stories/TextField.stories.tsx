@@ -65,11 +65,18 @@ export const TextFieldTemplate: Story = {
   },
 };
 
+export const MediumTextField: Story = {
+  args: {
+    ...TextFieldTemplate.args,
+    description: "This is the default/medium size variant of the input field",
+  },
+};
+
 export const SmallTextField: Story = {
   args: {
     ...TextFieldTemplate.args,
     size: "small",
-    description: "This is a thinner variant of the input field",
+    description: "The small size variant has reduced height",
   },
 };
 
