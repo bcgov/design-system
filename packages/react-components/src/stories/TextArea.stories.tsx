@@ -53,3 +53,13 @@ export const TextAreaTemplate: Story = {
     description: "Optional description or helper text",
   },
 };
+
+export const TextAreaError: Story = {
+  args: {
+    label: "Label",
+    description: "Optional description or helper text",
+    isRequired: true,
+    isInvalid: true,
+    errorMessage: "Error message",
+  },
+};
