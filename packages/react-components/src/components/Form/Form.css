@@ -1,0 +1,4 @@
+.bcds-react-aria-Form {
+  display: inline-flex;
+  gap: var(--layout-margin-small);
+}
