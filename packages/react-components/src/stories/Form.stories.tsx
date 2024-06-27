@@ -4,7 +4,7 @@ import { Form } from "../components";
 import { FormProps } from "@/components/Form";
 
 const meta = {
-  title: "Components/Form",
+  title: "Components/Form/Form",
   component: Form,
   parameters: {
     layout: "centered",
