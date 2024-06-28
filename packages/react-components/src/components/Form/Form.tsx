@@ -8,5 +8,5 @@ import "./Form.css";
 export interface FormProps extends ReactAriaFormProps {}
 
 export default function Form({ ...props }: FormProps) {
-  return <ReactAriaForm className={`bcds-react-aria-Form`} {...props} />;
+  return <ReactAriaForm {...props} />;
 }

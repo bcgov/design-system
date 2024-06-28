@@ -3,3 +3,14 @@
   flex-direction: column;
   gap: var(--layout-margin-medium);
 }
+
+.bcds-react-aria-Form--field {
+  display: flex;
+  gap: var(--layout-margin-xsmall);
+}
+
+.bcds-react-aria-Form--buttonGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--layout-margin-xsmall);
+}
