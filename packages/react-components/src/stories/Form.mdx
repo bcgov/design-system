@@ -25,13 +25,36 @@ import * as FormStories from "./Form.stories";
 
 ## Usage and resources
 
-TKTK
+Form is a utility component that acts as a container for a set of input components. It is based on [React Aria Form](https://react-spectrum.adobe.com/react-aria/Form.html).
 
-## Controls
+The Form component renders an HTML `<form>` element, and acts as a [form landmark](https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/form.html) for accessibility purposes.
 
-<Primary of={FormStories} />
-<Controls of={FormStories.FormTemplate} />
+Wrapping related input components in a Form enables you to configure validation and submission behaviour for a set of components as a group.
 
-## Configuration
+Consult the React Aria documentation for more information about configuring:
 
-TKTK
+- [Events](https://react-spectrum.adobe.com/react-aria/Form.html#events)
+- [Validation](https://react-spectrum.adobe.com/react-aria/Form.html#validation)
+- [Props](https://react-spectrum.adobe.com/react-aria/Form.html#props)
+
+### Alternative ways to build forms
+
+The Form component is useful for composing simple forms or inputs within your UI. For more complex use cases, the B.C. Public Service maintains two powerful form-building products:
+
+- [Common Hosted Forms Service (CHEFS)](https://digital.gov.bc.ca/bcgov-common-components/common-hosted-form-service/)
+- [CMS Forms](https://digital.gov.bc.ca/bcgov-common-components/cms-forms/)
+
+## Styling
+
+The Form component ships with minimal CSS, as its child components will usually have their own styling baked in.
+
+If needed, you can write additional rules for the `.bcds-react-aria-Form` class, or pass a `className` prop to override the styling entirely.
+
+## Example
+
+In this example, the Form component wraps around Select and Button components to compose a simple form.
+
+Button functionality is derived from the `type` prop.
+
+<Canvas of={FormStories.ComposedFormExample} />
+<Controls of={FormStories.ComposedFormExample} />

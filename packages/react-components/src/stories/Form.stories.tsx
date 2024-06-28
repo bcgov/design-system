@@ -23,8 +23,8 @@ export const FormTemplate: Story = {
 export const ComposedFormExample: Story = {
   args: {},
   render: ({ ...args }: FormProps) => (
-    <Form {...args}>
-      <div>
+    <Form className={`bcds-react-aria-Form`} {...args}>
+      <div className={`.bcds-react-aria-Form--field`}>
         <Select
           items={[
             {
@@ -48,9 +48,12 @@ export const ComposedFormExample: Story = {
           isRequired
         />
       </div>
-      <div>
+      <div className={`bcds-react-aria-Form--buttonGroup`}>
         <Button variant="primary" size="small" type="submit">
           Submit
+        </Button>
+        <Button variant="secondary" size="small" type="reset">
+          Reset
         </Button>
       </div>
     </Form>
