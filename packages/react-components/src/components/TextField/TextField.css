@@ -50,11 +50,13 @@
 .bcds-react-aria-TextField--container.small {
   /* using margin token is kludgy, consider adding component-specific token for input sizing */
   height: var(--layout-margin-xlarge);
+  min-height: var(--layout-margin-xlarge);
 }
 
 .bcds-react-aria-TextField--container.medium {
   /* using margin token is kludgy, consider adding component-specific token for input sizing */
   height: var(--layout-margin-xxlarge);
+  min-height: var(--layout-margin-xxlarge);
 }
 
 /* Text input field */
