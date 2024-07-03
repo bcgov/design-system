@@ -41,6 +41,7 @@ export default function TextArea({
   label,
   description,
   errorMessage,
+  maxLength,
   ...props
 }: TextAreaProps) {
   return (
@@ -67,6 +68,11 @@ export default function TextArea({
               className={`bcds-react-aria-TextArea--Description`}
             >
               {description}
+              {maxLength && (
+                <span className="bcds-react-aria-TextArea--Counter">
+                  Counter/{maxLength}
+                </span>
+              )}
             </Text>
           )}
           <FieldError className="bcds-react-aria-TextArea--Error">
