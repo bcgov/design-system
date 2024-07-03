@@ -15,11 +15,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const FormTemplate: Story = {
-  args: {},
-  render: ({ ...args }: FormProps) => <Form {...args} />,
-};
-
 export const ComposedFormExample: Story = {
   args: {},
   render: ({ ...args }: FormProps) => (
