@@ -27,7 +27,7 @@
 
 .bcds-react-aria-TextArea--Counter {
   padding-left: var(--layout-padding-medium);
-  color: var(--typography-color-placeholder);
+  color: var(--typography-color-secondary);
 }
 
 /* Styles for the input field container */
