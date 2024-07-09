@@ -46,7 +46,7 @@ export default function TextArea({
 }: TextAreaProps) {
   return (
     <ReactAriaTextField className="bcds-react-aria-TextArea" {...props}>
-      {({ isRequired, isInvalid }) => (
+      {({ isRequired }) => (
         <>
           {label && (
             <Label className="bcds-react-aria-TextArea--Label">
@@ -59,7 +59,6 @@ export default function TextArea({
             </Label>
           )}
           <div className={`bcds-react-aria-TextArea--container`}>
-            {isInvalid && iconError}
             <ReactAriaTextArea className="bcds-react-aria-TextArea--Input" />
           </div>
           {description && (
@@ -76,6 +75,9 @@ export default function TextArea({
             </Text>
           )}
           <FieldError className="bcds-react-aria-TextArea--Error">
+            <span className="bcds-react-aria-TextAria--iconError">
+              {iconError}
+            </span>
             {errorMessage}
           </FieldError>
         </>

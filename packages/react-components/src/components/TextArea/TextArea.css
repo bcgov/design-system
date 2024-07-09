@@ -111,3 +111,8 @@
   font: var(--typography-regular-small-body);
   color: var(--typography-color-danger);
 }
+
+.bcds-react-aria-TextAria--iconError {
+  vertical-align: middle;
+  padding-right: var(--layout-padding-xsmall);
+}
