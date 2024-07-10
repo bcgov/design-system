@@ -63,3 +63,28 @@ export const TextAreaError: Story = {
     errorMessage: "Error message",
   },
 };
+
+export const TextAreaWithMaxLength: Story = {
+  args: {
+    label: "Label",
+    description: "This text area has a maximum length, and displays a counter.",
+    maxLength: 500,
+  },
+};
+
+export const DisabledTextArea: Story = {
+  args: {
+    label: "Label",
+    description: "This text area is disabled",
+    isDisabled: true,
+  },
+};
+
+export const ReadOnlyTextArea: Story = {
+  args: {
+    label: "Label",
+    value: "This text area is set to read-only.",
+    description: "It is focusable, and the value can be copied but not edited.",
+    isReadOnly: true,
+  },
+};
