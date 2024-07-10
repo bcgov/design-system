@@ -112,7 +112,7 @@
   color: var(--typography-color-danger);
 }
 
-.bcds-react-aria-TextAria--iconError {
+.bcds-react-aria-TextArea--iconError {
   vertical-align: middle;
   padding-right: var(--layout-padding-xsmall);
 }

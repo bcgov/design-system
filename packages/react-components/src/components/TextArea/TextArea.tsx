@@ -75,7 +75,7 @@ export default function TextArea({
             </Text>
           )}
           <FieldError className="bcds-react-aria-TextArea--Error">
-            <span className="bcds-react-aria-TextAria--iconError">
+            <span className="bcds-react-aria-TextArea--iconError">
               {iconError}
             </span>
             {errorMessage}
