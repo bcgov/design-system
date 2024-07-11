@@ -2,6 +2,8 @@
   display: inline-flex;
   flex-direction: column;
   gap: var(--layout-margin-medium);
+  width: 100%;
+  max-width: 100%;
 }
 
 .bcds-react-aria-Form--field {
