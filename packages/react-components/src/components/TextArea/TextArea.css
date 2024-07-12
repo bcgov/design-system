@@ -19,19 +19,27 @@
   padding: var(--layout-padding-none) var(--layout-padding-xsmall);
 }
 
-/* Styles for the text description below the input field */
+/* Styles for the description and character count slot below the input field */
 .bcds-react-aria-TextArea--Description {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-secondary);
 }
 
-.bcds-react-aria-TextArea--Counter {
+/* Description label */
+.bcds-react-aria-TextArea--Description .text {
+  position: relative;
+  float: inline-start;
+}
+
+/* Character counter */
+.bcds-react-aria-TextArea--Description .counter {
+  position: relative;
+  float: inline-end;
   padding-left: var(--layout-padding-medium);
-  color: var(--typography-color-secondary);
 }
 
 /* Styles for the input field container */
-.bcds-react-aria-TextArea--container {
+.bcds-react-aria-TextArea--Container {
   color: var(--typography-color-primary);
   display: flex;
   flex-direction: row;
@@ -59,12 +67,12 @@
 
 /* Hover and focus states */
 
-.bcds-react-aria-TextArea--container
+.bcds-react-aria-TextArea--Container
   > .bcds-react-aria-TextArea--Input[data-focused] {
   outline: none;
 }
 
-.bcds-react-aria-TextArea--container:focus-within {
+.bcds-react-aria-TextArea--Container:focus-within {
   border-radius: var(--layout-border-radius-large);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-active);
@@ -73,14 +81,14 @@
   outline-offset: var(--layout-margin-hair);
 }
 
-.bcds-react-aria-TextArea--container:hover {
+.bcds-react-aria-TextArea--Container:hover {
   border-color: var(--surface-color-border-dark);
 }
 
 /* Disabled and invalid states */
 
 .bcds-react-aria-TextArea[data-disabled]
-  > .bcds-react-aria-TextArea--container {
+  > .bcds-react-aria-TextArea--Container {
   background: var(--surface-color-forms-disabled);
   cursor: not-allowed;
 }
@@ -89,19 +97,19 @@
   cursor: not-allowed;
 }
 
-.bcds-react-aria-TextArea[data-invalid] > .bcds-react-aria-TextArea--container {
+.bcds-react-aria-TextArea[data-invalid] > .bcds-react-aria-TextArea--Container {
   border-radius: var(--layout-border-radius-medium);
   border: 1px solid var(--support-border-color-danger);
   background: var(--surface-color-forms-default);
 }
 
 .bcds-react-aria-TextArea[data-readonly]
-  > .bcds-react-aria-TextArea--container {
+  > .bcds-react-aria-TextArea--Container {
   background: var(--surface-color-forms-disabled);
 }
 
 .bcds-react-aria-TextArea[data-readonly]
-  > .bcds-react-aria-TextArea--container
+  > .bcds-react-aria-TextArea--Container
   > .bcds-react-aria-TextArea--Input {
   background: var(--surface-color-forms-disabled);
 }

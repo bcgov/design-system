@@ -45,37 +45,39 @@ export default function TextArea({
   ...props
 }: TextAreaProps) {
   return (
-    <ReactAriaTextField className="bcds-react-aria-TextArea" {...props}>
+    <ReactAriaTextField className={`bcds-react-aria-TextArea`} {...props}>
       {({ isRequired }) => (
         <>
           {label && (
-            <Label className="bcds-react-aria-TextArea--Label">
+            <Label className={`bcds-react-aria-TextArea--Label`}>
               {label}
               {isRequired && (
-                <span className="bcds-react-aria-TextArea--Label required">
+                <span className={`bcds-react-aria-TextArea--Label required`}>
                   (required)
                 </span>
               )}
             </Label>
           )}
-          <div className={`bcds-react-aria-TextArea--container`}>
-            <ReactAriaTextArea className="bcds-react-aria-TextArea--Input" />
+          <div className={`bcds-react-aria-TextArea--Container`}>
+            <ReactAriaTextArea className={`bcds-react-aria-TextArea--Input`} />
           </div>
-          {description && (
-            <Text
-              slot="description"
-              className={`bcds-react-aria-TextArea--Description`}
-            >
-              {description}
-              {maxLength && (
-                <span className="bcds-react-aria-TextArea--Counter">
-                  Counter/{maxLength}
-                </span>
-              )}
-            </Text>
-          )}
-          <FieldError className="bcds-react-aria-TextArea--Error">
-            <span className="bcds-react-aria-TextArea--iconError">
+          <div className={`bcds-react-aria-TextArea--Description`}>
+            {description && (
+              <Text
+                slot="description"
+                className={`bcds-react-aria-TextArea--Description text`}
+              >
+                {description}
+              </Text>
+            )}
+            {maxLength && (
+              <div className={`bcds-react-aria-TextArea--Description counter`}>
+                Counter/{maxLength}
+              </div>
+            )}
+          </div>
+          <FieldError className={`bcds-react-aria-TextArea--Error`}>
+            <span className={`bcds-react-aria-TextArea--iconError`}>
               {iconError}
             </span>
             {errorMessage}

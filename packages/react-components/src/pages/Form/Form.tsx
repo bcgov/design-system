@@ -49,7 +49,12 @@ export default function FormPage() {
           <TextField type="url" label="Website" name="url" />
         </div>
         <div>
-          <TextArea label="Comments" name="comments" />
+          <TextArea
+            label="Comments"
+            name="comments"
+            maxLength={500}
+            description="Placeholder description"
+          />
         </div>
         <div>
           <TooltipTrigger delay={0} closeDelay={1000}>
