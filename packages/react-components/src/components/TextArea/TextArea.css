@@ -23,19 +23,20 @@
 .bcds-react-aria-TextArea--Description {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-secondary);
+  display: grid;
+  gap: var(--layout-margin-medium);
 }
 
 /* Description label */
 .bcds-react-aria-TextArea--Description .text {
-  position: relative;
-  float: inline-start;
+  justify-self: flex-start;
+  grid-row: 1;
 }
 
 /* Character counter */
 .bcds-react-aria-TextArea--Description .counter {
-  position: relative;
-  float: inline-end;
-  padding-left: var(--layout-padding-medium);
+  justify-self: flex-end;
+  grid-row: 1;
 }
 
 /* Styles for the input field container */
