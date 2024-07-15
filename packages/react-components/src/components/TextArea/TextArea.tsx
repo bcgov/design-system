@@ -61,21 +61,25 @@ export default function TextArea({
           <div className={`bcds-react-aria-TextArea--Container`}>
             <ReactAriaTextArea className={`bcds-react-aria-TextArea--Input`} />
           </div>
-          <div className={`bcds-react-aria-TextArea--Description`}>
-            {description && (
-              <Text
-                slot="description"
-                className={`bcds-react-aria-TextArea--Description text`}
-              >
-                {description}
-              </Text>
-            )}
-            {maxLength && (
-              <div className={`bcds-react-aria-TextArea--Description counter`}>
-                Counter/{maxLength}
-              </div>
-            )}
-          </div>
+          {description || maxLength ? (
+            <div className={`bcds-react-aria-TextArea--Description`}>
+              {description && (
+                <Text
+                  slot="description"
+                  className={`bcds-react-aria-TextArea--Description text`}
+                >
+                  {description}
+                </Text>
+              )}
+              {maxLength && (
+                <div
+                  className={`bcds-react-aria-TextArea--Description counter`}
+                >
+                  Counter/{maxLength}
+                </div>
+              )}
+            </div>
+          ) : null}
           <FieldError className={`bcds-react-aria-TextArea--Error`}>
             <span className={`bcds-react-aria-TextArea--iconError`}>
               {iconError}
