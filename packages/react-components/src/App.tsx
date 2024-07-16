@@ -11,7 +11,6 @@ import {
   SelectPage,
   TagGroupPage,
   TooltipPage,
-  TextFieldPage,
   TextAreaPage,
 } from "@/pages";
 
@@ -149,7 +148,6 @@ function App() {
         <SelectPage />
         <TagGroupPage />
         <TooltipPage />
-        <TextFieldPage />
         <TextAreaPage />
       </main>
       <Footer />

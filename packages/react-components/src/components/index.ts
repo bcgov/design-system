@@ -8,6 +8,5 @@ export { default as SvgBcLogo } from "./SvgBcLogo";
 export { default as Tag } from "./Tag";
 export { default as TagGroup } from "./TagGroup";
 export { default as TagList } from "./TagList";
-export { default as TextField } from "./TextField";
 export { default as TextArea } from "./TextArea";
 export { default as Tooltip, TooltipTrigger } from "./Tooltip";
