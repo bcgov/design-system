@@ -35,7 +35,7 @@ export default function Tag({ color = "blue", icon, id, textValue }: TagProps) {
       textValue={textValue}
     >
       {({ allowsRemoving, isDisabled }: TagRenderProps) => (
-        <div className="bcds-react-aria-Tag--contents">
+        <>
           {icon}
           {textValue}
           {!isDisabled && allowsRemoving && (
@@ -57,7 +57,7 @@ export default function Tag({ color = "blue", icon, id, textValue }: TagProps) {
               </svg>
             </ReactAriaButton>
           )}
-        </div>
+        </>
       )}
     </ReactAriaTag>
   );
