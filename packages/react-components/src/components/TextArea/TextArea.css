@@ -55,19 +55,15 @@
   padding: var(--layout-padding-small) 12px;
 }
 
-.bcds-react-aria-TextArea--Input {
-  border: none;
-  flex-grow: 1;
-}
-
 /* Text input field */
 .bcds-react-aria-TextArea--Input {
   font: var(--typography-regular-body);
   padding: var(--layout-padding-none);
+  border: none;
+  flex-grow: 1;
 }
 
 /* Hover and focus states */
-
 .bcds-react-aria-TextArea--Container
   > .bcds-react-aria-TextArea--Input[data-focused] {
   outline: none;
@@ -87,7 +83,6 @@
 }
 
 /* Disabled and invalid states */
-
 .bcds-react-aria-TextArea[data-disabled]
   > .bcds-react-aria-TextArea--Container {
   background: var(--surface-color-forms-disabled);
@@ -121,6 +116,7 @@
   color: var(--typography-color-danger);
 }
 
+/* Warning icon */
 .bcds-react-aria-TextArea--Error::before {
   content: url("../src/assets/icon-error.svg");
   display: inline-block;
