@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   TextField as ReactAriaTextField,
   TextFieldProps as ReactAriaTextFieldProps,
@@ -24,8 +25,17 @@ export default function TextArea({
   description,
   errorMessage,
   maxLength,
+  onChange,
+  value,
   ...props
 }: TextAreaProps) {
+  const [charCount, setCharCount] = useState(value ? value.length : 0);
+
+  function handleChange(text: string) {
+    if (onChange) onChange(text);
+    setCharCount(text.length);
+  }
+
   return (
     <ReactAriaTextField className={`bcds-react-aria-TextArea`} {...props}>
       {({ isRequired }) => (
@@ -41,7 +51,11 @@ export default function TextArea({
             </Label>
           )}
           <div className={`bcds-react-aria-TextArea--Container`}>
-            <ReactAriaTextArea className={`bcds-react-aria-TextArea--Input`} />
+            <ReactAriaTextArea
+              className={`bcds-react-aria-TextArea--Input`}
+              value={value}
+              onChange={(e) => handleChange(e.target.value)}
+            />
           </div>
           {description || maxLength ? (
             <div className={`bcds-react-aria-TextArea--Description`}>
@@ -57,7 +71,7 @@ export default function TextArea({
                 <div
                   className={`bcds-react-aria-TextArea--Description counter`}
                 >
-                  Counter/{maxLength}
+                  {charCount}/{maxLength}
                 </div>
               )}
             </div>
