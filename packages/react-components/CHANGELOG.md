@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.7
+
+### Changed
+
+- Use `@bcgov/design-tokens` v3.0.0.
+  - Tag component's text appears visually smaller than the TagGroup's label, description, and error fields after a change in the `label` font-size token (`0.75rem` to `0.875rem`) and addition of `smallBody` font-size token (`0.875rem`).
+- Use `react-aria-components` v1.2.1.
+- Select component label uses `secondary` text color.
+- Select component "(optional)" label uses `secondary` text color instead of `disabled`.
+
 ## 0.0.6
 
 ### Changed
