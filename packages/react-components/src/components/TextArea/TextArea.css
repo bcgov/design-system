@@ -59,8 +59,13 @@
 .bcds-react-aria-TextArea--Input {
   font: var(--typography-regular-body);
   padding: var(--layout-padding-none);
+  color: var(--typography-color-primary);
   border: none;
   flex-grow: 1;
+}
+
+.bcds-rect-aria-TextArea--Input::placeholder {
+  color: var(--typography-color-placeholder);
 }
 
 /* Hover and focus states */
