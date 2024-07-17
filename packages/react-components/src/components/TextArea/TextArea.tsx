@@ -29,6 +29,7 @@ export default function TextArea({
   value,
   ...props
 }: TextAreaProps) {
+  // handler for character counter, displayed when a maxLength is set
   const [charCount, setCharCount] = useState(value ? value.length : 0);
 
   function handleChange(text: string) {
