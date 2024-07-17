@@ -152,7 +152,7 @@ export const PasswordField: Story = {
     label: "Password",
     size: "medium",
     type: "password",
-    value: "password",
+    value: "s&mU9ZHu5d5^uP",
     description: "Input is automatically obscured",
   },
 };
