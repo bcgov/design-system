@@ -41,11 +41,6 @@
   padding: var(--layout-padding-small) 12px;
 }
 
-.bcds-react-aria-TextField--Input {
-  border: none;
-  flex-grow: 1;
-}
-
 /* Sizes */
 .bcds-react-aria-TextField--container.small {
   /* using margin token is kludgy, consider adding component-specific token for input sizing */
@@ -63,6 +58,13 @@
 .bcds-react-aria-TextField--Input {
   font: var(--typography-regular-body);
   padding: var(--layout-padding-none);
+  color: var(--typography-color-primary);
+  border: none;
+  flex-grow: 1;
+}
+
+.bcds-react-aria-TextField--Input::placeholder {
+  color: var(--typography-color-placeholder);
 }
 
 /* Hover and focus states */
