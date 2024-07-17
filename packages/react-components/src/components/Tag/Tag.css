@@ -3,17 +3,14 @@
   cursor: pointer;
   border-radius: var(--layout-margin-hair);
   border: 1px solid;
-  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font: var(--typography-regular-label);
   padding: 2px 8px;
   width: fit-content;
 }
-.bcds-react-aria-Tag--contents {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.bcds-react-aria-Tag--contents .react-aria-Button {
+.bcds-react-aria-Tag .react-aria-Button {
   background: none;
   border: none;
   color: var(--typography-color-primary);
@@ -29,9 +26,7 @@
   border-color: var(--theme-blue-90);
   color: var(--typography-color-primary-invert);
 }
-.bcds-react-aria-Tag.bc-blue
-  .bcds-react-aria-Tag--contents
-  > .react-aria-Button {
+.bcds-react-aria-Tag.bc-blue .react-aria-Button {
   color: var(--typography-color-primary-invert);
 }
 .bcds-react-aria-Tag.bc-gold {
@@ -47,7 +42,7 @@
   border-color: var(--theme-blue-90);
   color: var(--typography-color-primary-invert);
 }
-.bcds-react-aria-Tag.dark .bcds-react-aria-Tag--contents > .react-aria-Button {
+.bcds-react-aria-Tag.dark .react-aria-Button {
   color: var(--typography-color-primary-invert);
 }
 .bcds-react-aria-Tag.gray,
@@ -73,7 +68,6 @@
   border-radius: var(--layout-border-radius-small);
   border: var(--layout-border-width-medium) solid
     var(--surface-color-border-active);
-  padding: var(--layout-margin-hair) var(--layout-padding-small);
 }
 
 /* Focused */
