@@ -1,7 +1,8 @@
 .bcds-react-aria-Select {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  gap: var(--layout-margin-xsmall);
+  gap: var(--layout-margin-small);
+  align-items: flex-start;
   /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
   max-width: -moz-available;
   max-width: -webkit-fill-available;
@@ -9,8 +10,6 @@
 
 /* Label above select input */
 .bcds-react-aria-Select--Label {
-  display: flex;
-  padding: var(--layout-padding-small) var(--layout-padding-none);
   color: var(--typography-color-secondary);
   font: var(--typography-regular-small-body);
 }
@@ -26,8 +25,6 @@
 
 /* Error message */
 .bcds-react-aria-Select--Error {
-  display: flex;
-  padding: var(--layout-padding-small) var(--layout-padding-none);
   font: var(--typography-regular-small-body);
   color: var(--typography-color-danger);
 }

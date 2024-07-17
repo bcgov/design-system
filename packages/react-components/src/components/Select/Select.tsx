@@ -119,7 +119,7 @@ export default function Select<T extends object>({
   ...props
 }: SelectProps<T>) {
   return (
-    <ReactAriaSelect {...props}>
+    <ReactAriaSelect {...props} className="bcds-react-aria-Select">
       {({ isOpen, isRequired, isInvalid }) => (
         <>
           {label && (
