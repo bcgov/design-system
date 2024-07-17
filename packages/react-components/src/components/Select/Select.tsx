@@ -124,13 +124,7 @@ export default function Select<T extends object>({
         <>
           {label && (
             <Label className="bcds-react-aria-Select--Label">
-              {label}
-              {!isRequired && (
-                <>
-                  {" "}
-                  <span className="optional">(optional)</span>
-                </>
-              )}
+              {isRequired ? label : `${label} (optional)`}
             </Label>
           )}
           <Button

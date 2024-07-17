@@ -17,12 +17,6 @@
   color: var(--typography-color-disabled);
 }
 
-/* "(optional)" text after Label*/
-.bcds-react-aria-Select--Label > .optional {
-  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
-  color: var(--typography-color-secondary);
-}
-
 /* Error message */
 .bcds-react-aria-Select--Error {
   font: var(--typography-regular-small-body);
