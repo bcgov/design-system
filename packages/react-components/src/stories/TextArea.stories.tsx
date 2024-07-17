@@ -54,13 +54,11 @@ export const TextAreaTemplate: Story = {
   },
 };
 
-export const TextAreaError: Story = {
+export const RequiredTextArea: Story = {
   args: {
     label: "Label",
     description: "Optional description or helper text",
     isRequired: true,
-    isInvalid: true,
-    errorMessage: "Error message",
   },
 };
 
@@ -86,5 +84,15 @@ export const ReadOnlyTextArea: Story = {
     value: "This text area is set to read-only.",
     description: "It is focusable, and the value can be copied but not edited.",
     isReadOnly: true,
+  },
+};
+
+export const TextAreaError: Story = {
+  args: {
+    label: "Label",
+    description: "Optional description or helper text",
+    isRequired: true,
+    isInvalid: true,
+    errorMessage: "Error message",
   },
 };
