@@ -42,42 +42,40 @@ export default function TextArea({
       {({ isRequired }) => (
         <>
           {label && (
-            <Label className={`bcds-react-aria-TextArea--Label`}>
+            <Label className="bcds-react-aria-TextArea--Label">
               {label}
               {isRequired && (
-                <span className={`bcds-react-aria-TextArea--Label required`}>
+                <span className="bcds-react-aria-TextArea--Label required">
                   (required)
                 </span>
               )}
             </Label>
           )}
-          <div className={`bcds-react-aria-TextArea--Container`}>
+          <div className="bcds-react-aria-TextArea--Container">
             <ReactAriaTextArea
-              className={`bcds-react-aria-TextArea--Input`}
+              className="bcds-react-aria-TextArea--Input"
               value={value}
               onChange={(e) => handleChange(e.target.value)}
             />
           </div>
           {description || maxLength ? (
-            <div className={`bcds-react-aria-TextArea--Description`}>
+            <div className="bcds-react-aria-TextArea--Description">
               {description && (
                 <Text
                   slot="description"
-                  className={`bcds-react-aria-TextArea--Description text`}
+                  className="bcds-react-aria-TextArea--Description text"
                 >
                   {description}
                 </Text>
               )}
               {maxLength && (
-                <div
-                  className={`bcds-react-aria-TextArea--Description counter`}
-                >
+                <div className="bcds-react-aria-TextArea--Description counter">
                   {charCount}/{maxLength}
                 </div>
               )}
             </div>
           ) : null}
-          <FieldError className={`bcds-react-aria-TextArea--Error`}>
+          <FieldError className="bcds-react-aria-TextArea--Error">
             {errorMessage}
           </FieldError>
         </>
