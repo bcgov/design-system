@@ -1,7 +1,8 @@
 .bcds-react-aria-Select {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  gap: var(--layout-margin-xsmall);
+  gap: var(--layout-margin-small);
+  align-items: flex-start;
   /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
   max-width: -moz-available;
   max-width: -webkit-fill-available;
@@ -16,9 +17,10 @@
   color: var(--typography-color-disabled);
 }
 
-/* "(optional)" text after Label*/
-.bcds-react-aria-Select--Label > .optional {
-  color: var(--typography-color-secondary);
+/* Error message */
+.bcds-react-aria-Select--Error {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-danger);
 }
 
 /* Select input equivalent */
@@ -48,7 +50,9 @@
 }
 .bcds-react-aria-Select--Button[data-focused] {
   border-color: var(--surface-color-border-active);
-  outline: none;
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
 }
 .bcds-react-aria-Select--Button[data-pressed] {
   border-color: var(--surface-color-border-active);
@@ -78,7 +82,7 @@
   box-shadow: var(--surface-shadow-medium);
   box-sizing: border-box;
   overflow-y: auto;
-  padding: var(--layout-margin-hair) var(--layout-margin-xsmall);
+  padding: var(--layout-margin-hair) var(--layout-padding-xsmall);
   width: var(
     --trigger-width
   ); /* Variable provided by Select component https://react-spectrum.adobe.com/react-aria/Select.html#popover-1 */
@@ -96,7 +100,7 @@
 .bcds-react-aria-Select--Header {
   color: var(--typography-color-secondary);
   font: var(--typography-regular-small-body);
-  padding: var(--layout-margin-hair) var(--layout-margin-small);
+  padding: var(--layout-margin-hair) var(--layout-padding-small);
 }
 
 /* ListBox option item */
