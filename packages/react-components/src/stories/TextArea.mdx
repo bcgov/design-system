@@ -48,3 +48,23 @@ As a general rule, the `placeholder` attribute should not be used on text fields
 <Controls of={TextAreaStories.TextAreaTemplate} />
 
 ## Configuration
+
+### Maximum length
+
+The `maxLength` prop can be used to limit the amount of text a user can input. When `maxLength` is passed, a character counter renders below the input field:
+
+<Canvas of={TextAreaStories.TextAreaWithMaxLength} />
+
+### States
+
+Use `isDisabled` to disable a text area. A disabled text area cannot be focused or interacted with:
+
+<Canvas of={TextAreaStories.DisabledTextArea} />
+
+Use `isReadOnly` to lock a text area to its current value. A read-only text area can be focused and copied, but cannot be edited:
+
+<Canvas of={TextAreaStories.ReadOnlyTextArea} />
+
+The `isInvalid` prop should be set programmatically when an input is invalid. It renders an error icon in the input field, changes the border colour and displays an `errorMessage` (using the FieldError subcomponent):
+
+<Canvas of={TextAreaStories.TextAreaError} />
