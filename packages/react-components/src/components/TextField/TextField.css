@@ -96,6 +96,7 @@
 }
 
 .bcds-react-aria-TextField--Input[data-disabled] {
+  color: var(--typography-color-placeholder);
   cursor: not-allowed;
 }
 
