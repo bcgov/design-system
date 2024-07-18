@@ -34,6 +34,7 @@
   gap: var(--layout-margin-small);
   align-items: center;
   padding: 0 12px;
+  max-width: 100%;
 }
 .bcds-react-aria-Select--Button.invalid {
   border-color: var(--support-border-color-danger);
