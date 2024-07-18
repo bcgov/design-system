@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.0.8
+
+### Changed
+
+- Updated Button component focus state.
+- Updated Tag component focus and select states.
+- Fixed Select component long option text overflow bug.
+
+### Added
+
+- Added TextField component.
+
 ## 0.0.7
 
 ### Changed
