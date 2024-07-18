@@ -1,5 +1,5 @@
 .bcds-react-aria-Form {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   gap: var(--layout-margin-medium);
   width: 100%;
@@ -9,10 +9,13 @@
 .bcds-react-aria-Form--field {
   display: flex;
   gap: var(--layout-margin-xsmall);
+  width: 100%;
+  max-width: 100%;
 }
 
 .bcds-react-aria-Form--buttonGroup {
-  display: flex;
+  display: inline-flex;
+  flex-direction: row;
+  margin: var(--layout-margin-medium) var(--layout-margin-none);
   align-items: flex-start;
-  gap: var(--layout-margin-xsmall);
 }
