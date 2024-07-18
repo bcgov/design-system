@@ -12,6 +12,7 @@ import {
   TagGroupPage,
   TooltipPage,
   TextAreaPage,
+  TextFieldPage,
 } from "@/pages";
 
 // This icon is available as a plain SVG at src/assets/icon-menu.svg
@@ -149,6 +150,7 @@ function App() {
         <TagGroupPage />
         <TooltipPage />
         <TextAreaPage />
+        <TextFieldPage />
       </main>
       <Footer />
       <Footer
