@@ -5,7 +5,10 @@ import {
 
 import "./Form.css";
 
-export interface FormProps extends ReactAriaFormProps {}
+export interface FormProps extends ReactAriaFormProps {
+  /* CSS class applied to the <form> element */
+  className?: string;
+}
 
 export default function Form({ ...props }: FormProps) {
   return <ReactAriaForm {...props} />;
