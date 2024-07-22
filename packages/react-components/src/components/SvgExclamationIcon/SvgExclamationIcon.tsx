@@ -1,4 +1,4 @@
-// This logo is available as a plain SVG at src/assets/icon-warning.svg
+// This icon is available as a plain SVG at src/assets/icon-exclamation.svg
 export default function SvgExclamationIcon({
   id = "Exclamation icon",
   currentColor = "#CE3E39",
