@@ -124,6 +124,7 @@
 /* Warning icon */
 .bcds-react-aria-TextArea--Error::before {
   content: url("../src/assets/icon-exclamation.svg");
+  color: var(--icons-color-danger);
   display: inline-block;
   vertical-align: middle;
   padding-right: var(--layout-padding-xsmall);
