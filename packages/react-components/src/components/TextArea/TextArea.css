@@ -13,7 +13,7 @@
   color: var(--typography-color-primary);
 }
 
-.bcds-react-aria-TextArea--Label .required {
+.bcds-react-aria-TextArea--Label > .required {
   color: var(--typography-color-secondary);
   padding: var(--layout-padding-none) var(--layout-padding-xsmall);
 }

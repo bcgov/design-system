@@ -45,11 +45,7 @@ export default function TextArea({
           {label && (
             <Label className="bcds-react-aria-TextArea--Label">
               {label}
-              {isRequired && (
-                <span className="bcds-react-aria-TextArea--Label required">
-                  (required)
-                </span>
-              )}
+              {isRequired && <span className="required">(required)</span>}
             </Label>
           )}
           <div className="bcds-react-aria-TextArea--Container">
