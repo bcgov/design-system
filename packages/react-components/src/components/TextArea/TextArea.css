@@ -117,15 +117,14 @@
 
 /* Styles for the error message slot */
 .bcds-react-aria-TextArea--Error {
+  display: flex;
   font: var(--typography-regular-small-body);
   color: var(--typography-color-danger);
 }
 
-/* Warning icon */
-.bcds-react-aria-TextArea--Error::before {
-  content: url("../src/assets/icon-exclamation.svg");
-  color: var(--icons-color-danger);
-  display: inline-block;
-  vertical-align: middle;
+.bcds-react-aria-TextArea--Error > svg {
   padding-right: var(--layout-padding-xsmall);
+  color: var(--icons-color-danger);
+  width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
 }

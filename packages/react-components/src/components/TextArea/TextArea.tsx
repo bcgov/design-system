@@ -10,6 +10,7 @@ import {
 } from "react-aria-components";
 
 import "./TextArea.css";
+import SvgExclamationIcon from "../SvgExclamationIcon";
 
 export interface TextAreaProps extends ReactAriaTextFieldProps {
   /* Sets text label above text input field */
@@ -39,7 +40,7 @@ export default function TextArea({
 
   return (
     <ReactAriaTextField className={`bcds-react-aria-TextArea`} {...props}>
-      {({ isRequired }) => (
+      {({ isRequired, isInvalid }) => (
         <>
           {label && (
             <Label className="bcds-react-aria-TextArea--Label">
@@ -72,9 +73,12 @@ export default function TextArea({
               )}
             </div>
           ) : null}
-          <FieldError className="bcds-react-aria-TextArea--Error">
-            {errorMessage}
-          </FieldError>
+          {isInvalid && (
+            <div className="bcds-react-aria-TextArea--Error">
+              <SvgExclamationIcon />
+              <FieldError>{errorMessage}</FieldError>
+            </div>
+          )}
         </>
       )}
     </ReactAriaTextField>
