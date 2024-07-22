@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { TextArea } from "../components";
 
 const meta = {
-  title: "Components/TextArea/TextArea",
+  title: "Components/Text Inputs/Text Area (multi-line)",
   component: TextArea,
   parameters: {
     layout: "centered",
