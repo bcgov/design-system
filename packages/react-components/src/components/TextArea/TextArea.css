@@ -11,7 +11,6 @@
 .bcds-react-aria-TextArea--Label {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-primary);
-  padding: var(--layout-margin-hair) 0px;
 }
 
 .bcds-react-aria-TextArea--Label .required {
@@ -21,10 +20,10 @@
 
 /* Styles for the description and character count slot below the input field */
 .bcds-react-aria-TextArea--Description {
-  font: var(--typography-regular-small-body);
-  color: var(--typography-color-secondary);
   display: grid;
   gap: var(--layout-margin-medium);
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
 }
 
 /* Description label */
@@ -51,8 +50,8 @@
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
-  margin: var(--layout-margin-small) var(--layout-margin-none);
   padding: var(--layout-padding-small) 12px;
+  margin: var(--layout-margin-small) var(--layout-margin-none);
 }
 
 /* Text input field */
