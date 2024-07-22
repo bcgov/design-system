@@ -123,7 +123,7 @@
 
 /* Warning icon */
 .bcds-react-aria-TextArea--Error::before {
-  content: url("../src/assets/icon-error.svg");
+  content: url("../src/assets/icon-exclamation.svg");
   display: inline-block;
   vertical-align: middle;
   padding-right: var(--layout-padding-xsmall);
