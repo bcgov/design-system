@@ -3,13 +3,25 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Button, Form, Select, TextField } from "../components";
 import { FormProps } from "@/components/Form";
 
+import "./Form.css";
+
 const meta = {
-  title: "Utility/Form",
+  title: "Utility/Form wrapper",
   component: Form,
   parameters: {
     layout: "centered",
   },
-  argTypes: {},
+  argTypes: {
+    validationBehavior: {
+      options: ["native", "aria"],
+      control: { type: "radio" },
+      description: "Defaults to 'native'",
+    },
+    className: {
+      control: { type: "text" },
+      description: "Apply CSS class to form",
+    },
+  },
 } satisfies Meta<typeof Form>;
 
 export default meta;
@@ -18,9 +30,10 @@ type Story = StoryObj<typeof meta>;
 export const ComposedFormExample: Story = {
   args: {
     validationBehavior: "native",
+    className: "bcds-react-aria-Form",
   },
   render: ({ ...args }: FormProps) => (
-    <Form className={`bcds-react-aria-Form`} {...args}>
+    <Form {...args}>
       <div className="field">
         <TextField isRequired label="Name" />
       </div>
