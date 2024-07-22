@@ -13,5 +13,5 @@ export interface FormProps extends ReactAriaFormProps {
 }
 
 export default function Form({ ...props }: FormProps) {
-  return <ReactAriaForm validationBehavior="native" {...props} />;
+  return <ReactAriaForm {...props} />;
 }

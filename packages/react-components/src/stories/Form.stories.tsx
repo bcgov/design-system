@@ -16,7 +16,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const ComposedFormExample: Story = {
-  args: {},
+  args: {
+    validationBehavior: "native",
+  },
   render: ({ ...args }: FormProps) => (
     <Form className={`bcds-react-aria-Form`} {...args}>
       <div className="field">
