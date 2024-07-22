@@ -1,0 +1,129 @@
+.bcds-react-aria-TextArea {
+  display: inline-flex;
+  flex-direction: column;
+  /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
+  align-self: stretch;
+  max-width: -moz-available;
+  max-width: -webkit-fill-available;
+}
+
+/* Styles for the text label above the input field */
+.bcds-react-aria-TextArea--Label {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-primary);
+}
+
+.bcds-react-aria-TextArea--Label > .required {
+  color: var(--typography-color-secondary);
+  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
+}
+
+/* Styles for the description and character count slot below the input field */
+.bcds-react-aria-TextArea--Description {
+  display: grid;
+  gap: var(--layout-margin-medium);
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+}
+
+/* Description label */
+.bcds-react-aria-TextArea--Description > .text {
+  justify-self: flex-start;
+  grid-row: 1;
+}
+
+/* Character counter */
+.bcds-react-aria-TextArea--Description > .counter {
+  justify-self: flex-end;
+  grid-row: 1;
+}
+
+/* Styles for the input field container */
+.bcds-react-aria-TextArea--Container {
+  color: var(--typography-color-primary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--layout-margin-small);
+  background: var(--surface-color-forms-default);
+  box-sizing: border-box;
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  padding: var(--layout-padding-small) 12px;
+  margin: var(--layout-margin-small) var(--layout-margin-none);
+}
+
+/* Text input field */
+.bcds-react-aria-TextArea--Input {
+  font: var(--typography-regular-body);
+  padding: var(--layout-padding-none);
+  color: var(--typography-color-primary);
+  border: none;
+  flex-grow: 1;
+}
+
+.bcds-rect-aria-TextArea--Input::placeholder {
+  color: var(--typography-color-placeholder);
+}
+
+/* Hover and focus states */
+.bcds-react-aria-TextArea--Container
+  > .bcds-react-aria-TextArea--Input[data-focused] {
+  outline: none;
+}
+
+.bcds-react-aria-TextArea--Container:focus-within {
+  border-radius: var(--layout-border-radius-large);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-active);
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+}
+
+.bcds-react-aria-TextArea--Container:hover {
+  border-color: var(--surface-color-border-dark);
+}
+
+/* Disabled and invalid states */
+.bcds-react-aria-TextArea[data-disabled]
+  > .bcds-react-aria-TextArea--Container {
+  background: var(--surface-color-forms-disabled);
+  cursor: not-allowed;
+}
+
+.bcds-react-aria-TextArea--Input[data-disabled] {
+  cursor: not-allowed;
+}
+
+.bcds-react-aria-TextArea[data-invalid] > .bcds-react-aria-TextArea--Container {
+  border-radius: var(--layout-border-radius-medium);
+  border: 1px solid var(--support-border-color-danger);
+  background: var(--surface-color-forms-default);
+}
+
+.bcds-react-aria-TextArea[data-readonly]
+  > .bcds-react-aria-TextArea--Container {
+  background: var(--surface-color-forms-disabled);
+}
+
+.bcds-react-aria-TextArea[data-readonly]
+  > .bcds-react-aria-TextArea--Container
+  > .bcds-react-aria-TextArea--Input {
+  background: var(--surface-color-forms-disabled);
+}
+
+/* Styles for the error message slot */
+.bcds-react-aria-TextArea--Error {
+  display: flex;
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-danger);
+}
+
+.bcds-react-aria-TextArea--Error > svg {
+  padding-right: var(--layout-padding-xsmall);
+  color: var(--icons-color-danger);
+  width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
+}
