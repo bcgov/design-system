@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { TextArea } from "../components";
 
 const meta = {
-  title: "Components/TextArea",
+  title: "Components/TextArea/TextArea",
   component: TextArea,
   parameters: {
     layout: "centered",
@@ -40,6 +40,10 @@ const meta = {
     maxLength: {
       control: "number",
       description: "Maximum character length for this input",
+    },
+    errorMessage: {
+      control: { type: "text" },
+      description: "Error message text that appears when `isInvalid` is true",
     },
   },
 } satisfies Meta<typeof TextArea>;
