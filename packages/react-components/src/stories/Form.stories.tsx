@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Form, Select, Button } from "../components";
+import { Button, Form, Select, TextField } from "../components";
 import { FormProps } from "@/components/Form";
 
 const meta = {
@@ -19,7 +19,13 @@ export const ComposedFormExample: Story = {
   args: {},
   render: ({ ...args }: FormProps) => (
     <Form className={`bcds-react-aria-Form`} {...args}>
-      <div className={`.bcds-react-aria-Form--field`}>
+      <div className="field">
+        <TextField isRequired label="Name" />
+      </div>
+      <div className="field">
+        <TextField label="Email address" type="email" />
+      </div>
+      <div className="field">
         <Select
           items={[
             {
@@ -43,7 +49,7 @@ export const ComposedFormExample: Story = {
           isRequired
         />
       </div>
-      <div className={`bcds-react-aria-Form--buttonGroup`}>
+      <div className="buttonGroup">
         <Button variant="primary" size="small" type="submit">
           Submit
         </Button>

@@ -1,21 +1,22 @@
 .bcds-react-aria-Form {
   display: flex;
   flex-direction: column;
-  gap: var(--layout-margin-medium);
+  gap: var(--layout-margin-small);
   width: 100%;
   max-width: 100%;
 }
 
-.bcds-react-aria-Form--field {
+.bcds-react-aria-Form > .field {
   display: flex;
   gap: var(--layout-margin-xsmall);
   width: 100%;
   max-width: 100%;
 }
 
-.bcds-react-aria-Form--buttonGroup {
+.bcds-react-aria-Form > .buttonGroup {
   display: inline-flex;
   flex-direction: row;
-  margin: var(--layout-margin-medium) var(--layout-margin-none);
   align-items: flex-start;
+  gap: var(--layout-margin-none) var(--layout-margin-small);
+  margin: var(--layout-margin-small) var(--layout-margin-none);
 }
