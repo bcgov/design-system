@@ -1,5 +1,5 @@
 // This icon is available as a plain SVG at src/assets/icon-exclamation.svg
-export default function SvgExclamationIcon({ id = "Exclamation icon" }) {
+export default function SvgExclamationIcon({ id = "exclamation-icon" }) {
   return (
     <svg
       id={id}
