@@ -11,7 +11,6 @@
 .bcds-react-aria-TextField--Label {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-primary);
-  padding: var(--layout-margin-hair) 0px;
 }
 
 .bcds-react-aria-TextField--Label .required {
