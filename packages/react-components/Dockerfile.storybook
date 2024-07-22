@@ -3,7 +3,7 @@
 # -----------
 # Build stage
 # -----------
-FROM node:lts-alpine as build-stage
+FROM node:lts-alpine AS build-stage
 ARG GITHUB_SHA
 ENV GITHUB_SHA=$GITHUB_SHA
 
@@ -30,7 +30,7 @@ RUN STORYBOOK_GITHUB_SHA=$GITHUB_SHA npm run storybook-build
 # -----------
 # Serve stage
 # -----------
-FROM nginxinc/nginx-unprivileged:alpine as serve-stage
+FROM nginxinc/nginx-unprivileged:alpine AS serve-stage
 
 # Copy nginx configuration
 COPY ./nginx.storybook.conf /etc/nginx/nginx.conf

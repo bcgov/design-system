@@ -3,7 +3,7 @@
 # -----------
 # Build stage
 # -----------
-FROM node:lts-alpine as build-stage
+FROM node:lts-alpine AS build-stage
 
 # Copy package.json and package-lock.json
 WORKDIR /app
@@ -28,7 +28,7 @@ RUN npm run vite-build
 # -----------
 # Serve stage
 # -----------
-FROM nginxinc/nginx-unprivileged:alpine as serve-stage
+FROM nginxinc/nginx-unprivileged:alpine AS serve-stage
 
 # Copy nginx configuration
 COPY ./nginx.vite.conf /etc/nginx/nginx.conf
