@@ -61,15 +61,12 @@ export default function TextArea({
           {description || maxLength ? (
             <div className="bcds-react-aria-TextArea--Description">
               {description && (
-                <Text
-                  slot="description"
-                  className="bcds-react-aria-TextArea--Description text"
-                >
+                <Text slot="description" className="text">
                   {description}
                 </Text>
               )}
               {maxLength && (
-                <div className="bcds-react-aria-TextArea--Description counter">
+                <div className="counter">
                   {charCount}/{maxLength}
                 </div>
               )}

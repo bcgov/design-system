@@ -28,13 +28,13 @@
 }
 
 /* Description label */
-.bcds-react-aria-TextArea--Description .text {
+.bcds-react-aria-TextArea--Description > .text {
   justify-self: flex-start;
   grid-row: 1;
 }
 
 /* Character counter */
-.bcds-react-aria-TextArea--Description .counter {
+.bcds-react-aria-TextArea--Description > .counter {
   justify-self: flex-end;
   grid-row: 1;
 }
