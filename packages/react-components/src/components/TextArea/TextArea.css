@@ -11,17 +11,14 @@
 .bcds-react-aria-TextArea--Label {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-primary);
-}
-
-.bcds-react-aria-TextArea--Label > .required {
-  color: var(--typography-color-secondary);
-  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
 
 /* Styles for the description and character count slot below the input field */
 .bcds-react-aria-TextArea--Description {
   display: grid;
   gap: var(--layout-margin-medium);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
   font: var(--typography-regular-small-body);
   color: var(--typography-color-secondary);
 }
@@ -51,7 +48,6 @@
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
   padding: var(--layout-padding-small) 12px;
-  margin: var(--layout-margin-small) var(--layout-margin-none);
 }
 
 /* Text input field */

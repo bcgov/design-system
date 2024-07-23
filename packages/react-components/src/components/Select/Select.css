@@ -1,7 +1,6 @@
 .bcds-react-aria-Select {
   display: flex;
   flex-direction: column;
-  gap: var(--layout-margin-small);
   align-items: flex-start;
   /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
   max-width: -moz-available;
@@ -12,6 +11,7 @@
 .bcds-react-aria-Select--Label {
   color: var(--typography-color-secondary);
   font: var(--typography-regular-small-body);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
 .bcds-react-aria-Select[data-disabled] > .bcds-react-aria-Select--Label {
   color: var(--typography-color-disabled);

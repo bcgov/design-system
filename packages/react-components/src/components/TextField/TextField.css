@@ -11,6 +11,7 @@
 .bcds-react-aria-TextField--Label {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-primary);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
 
 .bcds-react-aria-TextField--Label .required {
@@ -22,6 +23,7 @@
 .bcds-react-aria-TextField--Description {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-secondary);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
 
 /* Styles for the input field container */
@@ -36,7 +38,6 @@
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
-  margin: var(--layout-margin-small) var(--layout-margin-none);
   padding: var(--layout-padding-small) 12px;
 }
 

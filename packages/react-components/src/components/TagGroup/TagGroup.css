@@ -7,7 +7,7 @@
 .bcds-react-aria-TagGroup--Text-description,
 .bcds-react-aria-TagGroup--Text-error {
   display: block;
-  margin: var(--layout-margin-small) var(--layout-margin-none);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
 
 .bcds-react-aria-TagGroup--Text-error {
