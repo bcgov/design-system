@@ -58,7 +58,12 @@ export default function TextField({
         <>
           {label && (
             <Label className="bcds-react-aria-TextField--Label">
-              {isRequired ? `${label} (required)` : label}
+              {label}
+              {isRequired && (
+                <span className="bcds-react-aria-TextField--Label required">
+                  (required)
+                </span>
+              )}
             </Label>
           )}
           <div
