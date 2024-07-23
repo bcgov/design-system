@@ -14,11 +14,6 @@
   padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
 
-.bcds-react-aria-TextField--Label .required {
-  color: var(--typography-color-secondary);
-  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
-}
-
 /* Styles for the text description below the input field */
 .bcds-react-aria-TextField--Description {
   font: var(--typography-regular-small-body);
