@@ -1,0 +1,93 @@
+{/* Form.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as FormStories from "./Form.stories";
+
+<Meta of={FormStories} />
+
+# Form wrapper
+
+<Subtitle>Semantic wrapper for input components</Subtitle>
+
+<Source
+  code={`import { Form } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Form is a utility component that acts as a container for a set of input components. It uses [React Aria Form](https://react-spectrum.adobe.com/react-aria/Form.html), renders an HTML `<form>` element, and acts as a [form landmark](https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/form.html) for accessibility purposes.
+
+Wrapping related input components in a Form enables you to configure validation and submission behaviour for a set of components as a group.
+
+Consult the React Aria documentation for more information about configuring:
+
+- [Events](https://react-spectrum.adobe.com/react-aria/Form.html#events)
+- [Validation](https://react-spectrum.adobe.com/react-aria/Form.html#validation)
+- [Props](https://react-spectrum.adobe.com/react-aria/Form.html#props)
+
+### Alternative ways to build forms
+
+The Form component is useful for composing simple forms or inputs within your UI. For more complex use cases, the B.C. Public Service maintains two full-featured form builders:
+
+- [Common Hosted Forms Service (CHEFS)](https://digital.gov.bc.ca/bcgov-common-components/common-hosted-form-service/)
+- [CMS Forms](https://digital.gov.bc.ca/bcgov-common-components/cms-forms/)
+
+You should also review the [guidance on creating forms and surveys](https://digital.gov.bc.ca/topics/forms-and-surveys/) on digital.gov.bc.ca.
+
+## Styling
+
+By default, Form renders without any additional CSS applied (other than that baked into its child components.)
+
+You can pass the `className` prop to apply custom styling to a group of components in a form.
+
+## Validation behaviour
+
+Pass the `validationBehavior` prop to change which validation method is used. By default, this is set to `native`.
+
+- [Learn more about form validation](https://react-spectrum.adobe.com/react-aria/Form.html#validation)
+
+## Example
+
+In this example, the Form component wraps around Text Field, Select and Button components to compose a simple form, which is styled using a boilerplate `.bcds-react-aria-Form` class.
+
+Button functionality is derived from the `type` prop.
+
+<Canvas of={FormStories.ComposedFormExample} />
+<Controls of={FormStories.ComposedFormExample} />
+
+### CSS for this example form
+
+```css
+.bcds-react-aria-Form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-small);
+  width: 100%;
+  max-width: 100%;
+}
+
+.bcds-react-aria-Form > .field {
+  display: flex;
+  gap: var(--layout-margin-xsmall);
+  width: 100%;
+  max-width: 100%;
+}
+
+.bcds-react-aria-Form > .buttonGroup {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--layout-margin-none) var(--layout-margin-small);
+  margin: var(--layout-margin-small) var(--layout-margin-none);
+}
+```
