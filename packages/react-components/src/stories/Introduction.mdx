@@ -1,4 +1,4 @@
-import { Meta, Source } from "@storybook/blocks";
+import { Meta, Source, Subtitle } from "@storybook/blocks";
 
 import packageJson from "../../package.json";
 
@@ -15,9 +15,14 @@ export const link =
 
 <Meta title="Introduction" />
 
-# B.C. Design System React Components
+# B.C. Design System React Components v{packageJson.version}
 
-This is a UI workshop for React components included in the [B.C. Design System](https://gov.bc.ca/designsystem). This app provides:
+<Subtitle>
+  UI workshop for React components included in the [B.C. Design
+  System](https://gov.bc.ca/designsystem)
+</Subtitle>
+
+This app provides:
 
 - Fully rendered, configurable previews of each released component
 - Detailed technical docs
