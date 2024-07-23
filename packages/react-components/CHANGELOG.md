@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.9
+
+### Changed
+
+- TextField label has extra padding removed.
+
+### Added
+
+- Added TextArea component.
+
 ## 0.0.8
 
 ### Changed

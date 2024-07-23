@@ -2,11 +2,13 @@
 
 [![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
-This package contains a library of React components built using [React Aria Components](https://react-spectrum.adobe.com/react-aria/react-aria-components.html) to implement the BC Design System.
+This package contains a library of React components built using [React Aria Components](https://react-spectrum.adobe.com/react-aria/components.html) to implement the [B.C. Design System](https://gov.bc.ca/designsystem).
 
 Questions? Please email the <a href="mailto:DesignSystem@gov.bc.ca">GDX OSS Design Team</a>.
 
-See repository: https://github.com/bcgov/design-system
+Storybook: https://designsystem.gov.bc.ca/react-components/
+
+GitHub Repository: https://github.com/bcgov/design-system
 
 To use, install this package and import the components into your application.
 
@@ -66,14 +68,15 @@ export default function App() {
 
 ## Component list
 
-| Component               | React Aria Components docs link                           |
-| ----------------------- | --------------------------------------------------------- |
-| Button                  | https://react-spectrum.adobe.com/react-aria/Button.html   |
-| Footer                  | N/A                                                       |
-| Header                  | N/A                                                       |
-| Select                  | https://react-spectrum.adobe.com/react-aria/Select.html   |
-| TagGroup, TagList, Tag  | https://react-spectrum.adobe.com/react-aria/TagGroup.html |
-| Tooltip, TooltipTrigger | https://react-spectrum.adobe.com/react-aria/Tooltip.html  |
+| Component               | React Aria Components docs link                            |
+| ----------------------- | ---------------------------------------------------------- |
+| Button                  | https://react-spectrum.adobe.com/react-aria/Button.html    |
+| Footer                  | N/A                                                        |
+| Header                  | N/A                                                        |
+| Select                  | https://react-spectrum.adobe.com/react-aria/Select.html    |
+| TagGroup, TagList, Tag  | https://react-spectrum.adobe.com/react-aria/TagGroup.html  |
+| TextArea, TextField     | https://react-spectrum.adobe.com/react-aria/TextField.html |
+| Tooltip, TooltipTrigger | https://react-spectrum.adobe.com/react-aria/Tooltip.html   |
 
 ## Supported React versions
 
@@ -107,6 +110,18 @@ Storybook stories live in `./src/stories`.
 
 Run `npm run storybook-dev` to access the Storybook instance for the component library.
 
+New versions of Storybook are automatically built in a GitHub Actions workflow and deployed in the `-dev` namespace in the OpenShift Silver cluster. See `.github/build_react_component_library_apps.yaml`.
+
+To deploy a new version of Storybook into `-test` or `-prod`, log in to the OpenShift CLI and run:
+
+```sh
+# Create a new layer in the `test` ImageStream from the latest `develop` image:
+oc tag ed91fb-tools/design-system-react-components-storybook:develop ed91fb-tools/design-system-react-components-storybook:test
+
+# `develop` to `production`
+oc tag ed91fb-tools/design-system-react-components-storybook:develop ed91fb-tools/design-system-react-components-storybook:production
+```
+
 #### Testing with Storybook Test Runner
 
 With Storybook running locally, use the `npm run test-storybook` script to run `@storybook/test-runner` using the configuration defined in `./.storybook/test-runner.ts`. [Learn more about Storybook Test Runner](https://storybook.js.org/docs/writing-tests/test-runner).
@@ -124,3 +139,5 @@ To generate an updated copy of the package for distribution, run the included Ro
 This will place artifacts in the `dist` folder, which is targeted for publishing in `package.json` with the [`files` field](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#files).
 
 Update the package version in `package.json` and run `npm publish` to push a new version.
+
+To publish a beta/release candidate version, use `npm publish --tag next`.
