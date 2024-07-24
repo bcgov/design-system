@@ -1,0 +1,67 @@
+name: Publish @bcgov/design-system-react-components to npm @next
+
+on:
+  pull_request:
+    paths:
+      - packages/react-components/**
+    branches: [main]
+    types: [closed]
+
+jobs:
+  publish-react-component-library:
+    name: Public @bcgov/design-system-react-components
+    # Only run on merge, not close without merge
+    if: github.event.pull_request.merged == true
+    # Only run in bcgov/design-system repo, not forks
+    if: github.repository == 'bcgov/design-system'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Read .nvmrc
+      run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
+      working-directory: ./packages/react-components
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+
+    - name: Install dependencies
+      run: npm install
+      working-directory: ./packages/react-components
+
+    - name: Install jq
+      run: sudo apt-get install -y jq
+
+    # Use `jq` to change the package.json version to look like:
+    #
+    #   <version in package.json>-pr<PR # that caused the workflow run>
+    #
+    # So package.json version v1.2.3 with a run caused by merging PR #456 to
+    # `main` causes the version of the package on npm to look like:
+    #
+    #   1.2.3-pr456
+    #
+    # This is to ensure that it's easy to map an npm version to a particular PR.
+    #
+    - name: Update version in package.json
+      run: |
+        PR_NUMBER=${{ github.event.pull_request.number }}
+        CURRENT_VERSION=$(jq -r '.version' package.json)
+        NEW_VERSION="${CURRENT_VERSION}-pr${PR_NUMBER}"
+        jq --arg new_version "$NEW_VERSION" '.version = $new_version' package.json > tmp.json && mv tmp.json package.json
+      shell: bash
+      working-directory: ./packages/react-components
+
+    - name: Build with Rollup script
+      run: npm run rollup
+      working-directory: ./packages/react-components
+
+    - name: Publish to npm
+      run: npm publish --tag next
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      working-directory: ./packages/react-components
