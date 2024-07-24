@@ -72,6 +72,7 @@ export default function App() {
 | ----------------------- | ---------------------------------------------------------- |
 | Button                  | https://react-spectrum.adobe.com/react-aria/Button.html    |
 | Footer                  | N/A                                                        |
+| Form                    | https://react-spectrum.adobe.com/react-aria/Form.html      |
 | Header                  | N/A                                                        |
 | Select                  | https://react-spectrum.adobe.com/react-aria/Select.html    |
 | TagGroup, TagList, Tag  | https://react-spectrum.adobe.com/react-aria/TagGroup.html  |
