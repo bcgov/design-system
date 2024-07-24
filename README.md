@@ -1,43 +1,41 @@
 # B.C. Design System [![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
-> [!NOTE]
-> **May 2024**: The B.C. Design System is currently in active development. If you have questions, [contact the design system team](#contact) or [open an issue](https://github.com/bcgov/design-system/issues).
+> [!NOTE] > **July 2024**: The B.C. Design System is currently in active development. If you have questions, [contact the design system team](#contact) or [open an issue](https://github.com/bcgov/design-system/issues).
 
-The B.C. Design System will give design and software development teams the building blocks to deliver intuitive, accessible digital services.
+The B.C. Design System gives design and software development teams the building blocks to deliver intuitive, accessible digital services.
 
 The B.C. Design System comprises 4 core elements:
 
 - [Design tokens](#bc-design-tokens)
-- [React component library](#component-library) (in development)
-- Design library in Figma (in development)
+- [Figma and React component libraries](#component-library)
 - [Documentation hub](https://gov.bc.ca/designsystem)
 
 The new design system replaces [the legacy design system](#legacy-documentation), which has now been archived.
 
 ## B.C. Design Tokens
 
-The [B.C. Design Tokens package](https://github.com/bcgov/design-system/tree/docs/packages/design-tokens) is the first release as part of the new design system.
-
-Design tokens provide a method to quickly and consistently implement the province's look and feel for digital services. They offer a set of standardized options to help developers style user interfaces in a consistent and future-proof way.
+The [B.C. Design Tokens package](https://github.com/bcgov/design-system/tree/docs/packages/design-tokens) provides a method to quickly and consistently implement the province's look and feel for digital services. They offer a set of standardized options to help developers style user interfaces in a consistent and future-proof way.
 
 - [Installable package on npm](https://www.npmjs.com/package/@bcgov/design-tokens)
 - [Source code](https://github.com/bcgov/design-system/tree/main/packages/design-tokens)
-- [Figma library](https://www.figma.com/community/file/1326994583954765832)
+- [Figma library](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+- [Design tokens docs](https://www2.gov.bc.ca/gov/content?id=5993A3D597F1454CB0E5DFA02DBB2EB7)
 
 ## Component library
 
-The component library will provide an inventory of reusable UI components, including:
+The component library provides an inventory of reusable UI components, implemented in Figma and React. Support for other languages and frameworks is currently out-of-scope.
 
-- Reusable components in Figma
-- Reference implementations in React
+The component library is currently in active development. New components are added when both Figma and React implementations are complete and fully documented.
 
-Support for other languages and frameworks is currently out-of-scope.
-
-The component library is currently in active development. A [developer preview](https://www.npmjs.com/package/@bcgov/design-system-react-components) of the React library is published on npm.
+- [Installable package on npm](https://www.npmjs.com/package/@bcgov/design-system-react-components)
+- [Source code](https://github.com/bcgov/design-system/tree/main/packages/react-components)
+- [Storybook UI workshop](https://designsystem.gov.bc.ca/react-components/)
+- [Figma library](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+- [Component docs](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43)
 
 ## Contact
 
-The B.C. Design System is maintained by Government Digital Experience (GDX), a division of the Ministry of Citizens' Services. You can contact the design system team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca), or [open an issue](https://github.com/bcgov/design-system/issues/new/choose).
+The B.C. Design System is maintained by Service BC and Government Digital Experience (GDX), part of the Ministry of Citizens' Services. You can contact the design system team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca), or [open an issue](https://github.com/bcgov/design-system/issues/new/choose).
 
 ## Legacy documentation
 
