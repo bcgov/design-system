@@ -1,6 +1,6 @@
 {
   "name": "@bcgov/design-system-react-components",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "type": "module",
   "scripts": {
     "rollup": "rm -rf dist && rollup -c --bundleConfigAsCjs",

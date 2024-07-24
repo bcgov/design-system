@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.0.10
+
+### Changed
+
+- Select, TextArea, and TextField components use "(required)" in label when `isRequired` prop is true, rather than "(optional)" when false.
+- Select, TagGroup, TextArea, and TextField components have text slot spacing adjusted for consistency between components.
+
+### Added
+
+- Added Form utility component.
+
 ## 0.0.9
 
 ### Changed
