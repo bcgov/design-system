@@ -1,5 +1,26 @@
 # Changelog
 
+# 0.1.0
+
+This is a milestone release that contains the following components:
+
+- Button
+- Footer
+- Form
+- Header
+- Select
+- TagGroup (TagList, Tag)
+- TextArea
+- TextField
+- Tooltip (TooltipTrigger)
+
+This release uses:
+
+- `react-aria-components` v1.2.1
+- `@bcgov/design-tokens`v3.0.0
+
+No component changes from v0.0.10.
+
 ## 0.0.10
 
 ### Changed
