@@ -18,7 +18,7 @@ The [B.C. Design Tokens package](https://github.com/bcgov/design-system/tree/doc
 
 - [Installable package on npm](https://www.npmjs.com/package/@bcgov/design-tokens)
 - [Source code](https://github.com/bcgov/design-system/tree/main/packages/design-tokens)
-- [Figma library](https://www.figma.com/community/file/1326994583954765832)
+- [Figma library](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
 - [Design tokens docs](https://www2.gov.bc.ca/gov/content?id=5993A3D597F1454CB0E5DFA02DBB2EB7)
 
 ## Component library
@@ -30,7 +30,7 @@ The component library is currently in active development. New components are add
 - [Installable package on npm](https://www.npmjs.com/package/@bcgov/design-system-react-components)
 - [Source code](https://github.com/bcgov/design-system/tree/main/packages/react-components)
 - [Storybook UI workshop](https://designsystem.gov.bc.ca/react-components/)
-- [Figma library]()
+- [Figma library](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
 - [Component docs](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43)
 
 ## Contact
