@@ -162,3 +162,7 @@ From the [Releases page](https://github.com/bcgov/design-system/releases), click
 For "Choose a tag", select the tag you created. For the previous tag, use the previous version of the same package.
 
 Copy the Changelog notes for the new version and link to the npm page for the new version.
+
+### GitHub Actions
+
+GitHub Actions to build and test the library are located in `/.github/workflows` in the project root.
