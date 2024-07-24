@@ -165,4 +165,4 @@ Copy the Changelog notes for the new version and link to the npm page for the ne
 
 ### GitHub Actions
 
-GitHub Actions to build, test, and publish new versions of the library are located in `/.github/workflows` in the project root.
+GitHub Actions to build, test, and publish new versions (on the `next` tag on npm) of the library are located in `/.github/workflows` in the project root.
