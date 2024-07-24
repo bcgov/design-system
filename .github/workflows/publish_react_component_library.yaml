@@ -9,7 +9,7 @@ on:
 
 jobs:
   publish-react-component-library:
-    name: Public @bcgov/design-system-react-components
+    name: Publish @bcgov/design-system-react-components@next
     # Only run on merge, not close without merge AND
     # only run in bcgov/design-system repo, not forks.
     if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Read .nvmrc
         run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
