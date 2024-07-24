@@ -135,6 +135,8 @@ Run `npm run vite-dev` to access the Vite React demo app.
 
 ### Publish new versions
 
+#### npm package
+
 To generate an updated copy of the package for distribution, run the included Rollup script: `npm run rollup`.
 
 This will place artifacts in the `dist` folder, which is targeted for publishing in `package.json` with the [`files` field](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#files).
@@ -142,3 +144,21 @@ This will place artifacts in the `dist` folder, which is targeted for publishing
 Update the package version in `package.json` and run `npm publish` to push a new version.
 
 To publish a beta/release candidate version, use `npm publish --tag next`.
+
+#### GitHub release
+
+GitHub releases are based on git tags.
+
+```sh
+# From your `main` branch, cut a new tag locally based on a commit SHA
+git tag @bcgov/design-system-react-components@<version here> <commit SHA here>
+
+# Push the tag to GitHub
+git push --tags
+```
+
+From the [Releases page](https://github.com/bcgov/design-system/releases), click "Draft a new release".
+
+For "Choose a tag", select the tag you created. For the previous tag, use the previous version of the same package.
+
+Copy the Changelog notes for the new version and link to the npm page for the new version.
