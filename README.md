@@ -1,6 +1,7 @@
 # B.C. Design System [![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
-> [!NOTE] > **July 2024**: The B.C. Design System is currently in active development. If you have questions, [contact the design system team](#contact) or [open an issue](https://github.com/bcgov/design-system/issues).
+> [!NOTE]
+> **July 2024**: The B.C. Design System is currently in active development. If you have questions, [contact the design system team](#contact) or [open an issue](https://github.com/bcgov/design-system/issues).
 
 The B.C. Design System gives design and software development teams the building blocks to deliver intuitive, accessible digital services.
 
