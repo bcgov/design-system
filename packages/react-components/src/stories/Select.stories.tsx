@@ -35,6 +35,10 @@ const meta = {
       description:
         "Text label that appears inside the select input before an option has been selected",
     },
+    errorMessage: {
+      control: { type: "text" },
+      description: "Text displayed when the input is invalid",
+    },
   },
 } satisfies Meta<typeof Select>;
 
