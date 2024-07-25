@@ -75,3 +75,23 @@ export const ComposedFormExample: Story = {
     </Form>
   ),
 };
+
+export const LoginFormExample: Story = {
+  args: {
+    validationBehavior: "native",
+    className: "bcds-react-aria-Form--horizontal",
+  },
+  render: ({ ...args }: FormProps) => (
+    <Form {...args}>
+      <div className="field">
+        <TextField isRequired label="Username" type="email" size="small" />
+      </div>
+      <div className="field">
+        <TextField isRequired label="Password" type="password" size="small" />
+      </div>
+      <Button variant="primary" type="submit" size="small">
+        Log in
+      </Button>
+    </Form>
+  ),
+};

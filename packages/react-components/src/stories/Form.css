@@ -21,3 +21,16 @@
   gap: var(--layout-margin-none) var(--layout-margin-small);
   margin: var(--layout-margin-small) var(--layout-margin-none);
 }
+
+.bcds-react-aria-Form--horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: var(--layout-margin-small);
+  width: 100%;
+  max-width: 100%;
+}
+
+.bcds-react-aria-Form--horizontal > .field {
+  display: flex;
+  gap: var(--layout-margin-small);
+}
