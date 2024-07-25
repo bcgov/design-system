@@ -7,8 +7,6 @@ import {
   Key,
   Label,
   ListBox,
-  ListBoxItem,
-  ListBoxItemProps as ReactAriaListBoxItemProps,
   Popover,
   Section,
   Select as ReactAriaSelect,
@@ -18,20 +16,9 @@ import {
   ValidationResult,
 } from "react-aria-components";
 
-import "./Select.css";
+import { ListBoxItem, ListBoxItemProps } from ".";
 
-export interface ListBoxItemProps extends ReactAriaListBoxItemProps {
-  /** Text label for the option. Provide an `id` if this is not unique. */
-  label: string;
-  /** Descriptive text that appears below the option's label */
-  description?: string;
-  /** Marks an option visually with red text to indicate a destructive/dangerous option */
-  isDestructive?: boolean;
-  /** Left icon slot */
-  iconLeft?: React.ReactElement;
-  /** Right icon slot */
-  iconRight?: React.ReactElement;
-}
+import "./Select.css";
 
 export interface SelectionSectionProps {
   id: Key;
@@ -112,6 +99,7 @@ const iconError = (
 
 /** Select displays a collapsible list of options and allows a user to select one of them. */
 export default function Select<T extends object>({
+  children,
   items,
   sections,
   label,
@@ -158,68 +146,50 @@ export default function Select<T extends object>({
             {errorMessage}
           </FieldError>
           <Popover className="bcds-react-aria-Select--Popover" offset={4}>
-            <ListBox
-              className="bcds-react-aria-Select--ListBox"
-              // This ternary statement is used to mock the data for `sections`
-              // if a flat list of `items` was passed instead. This allows us to
-              // use one component to support both flat and sectioned lists of
-              // items. If this causes problems, maybe in the future we break
-              // this into separate components or add additional logic to
-              // support different markup within the same component.
-              items={
-                sections
-                  ? sections
-                  : [{ id: "section", header: "", items: items ? items : [] }]
-              }
-            >
-              {(section: SelectionSectionProps) => (
-                <Section id={section.id} className="bcds-react-aria-Section">
-                  {section?.header && (
-                    <Header className="bcds-react-aria-Select--Header">
-                      {section.header}
-                    </Header>
-                  )}
-                  <Collection items={section.items}>
-                    {(item) => (
-                      <ListBoxItem
-                        id={item?.id ? item.id : item.label}
-                        className={`bcds-react-aria-Select--ListBoxItem ${
-                          item?.isDestructive ? "destructive" : ""
-                        }`}
-                        textValue={item.label}
-                      >
-                        {item?.iconLeft && (
-                          <div className="bcds-react-aria-Select--ListBoxItem-icon">
-                            {item.iconLeft}
-                          </div>
-                        )}
-                        <div className="bcds-react-aria-Select--ListBoxItem-Text-container">
-                          <Text
-                            slot="label"
-                            className="bcds-react-aria-Select--ListBoxItem-Text-label"
-                          >
-                            {item.label}
-                          </Text>
-                          {item.description && (
-                            <Text
-                              slot="description"
-                              className="bcds-react-aria-Select--ListBoxItem-Text-description"
-                            >
-                              {item.description}
-                            </Text>
-                          )}
-                        </div>
-                        {item?.iconRight && (
-                          <div className="bcds-react-aria-Select--ListBoxItem-icon">
-                            {item.iconRight}
-                          </div>
-                        )}
-                      </ListBoxItem>
-                    )}
-                  </Collection>
+            {children ? (
+              <ListBox className="bcds-react-aria-Select--ListBox">
+                <Section className="bcds-react-aria-Section">
+                  <Collection>{children}</Collection>
                 </Section>
-              )}
-            </ListBox>
+              </ListBox>
+            ) : (
+              <ListBox
+                className="bcds-react-aria-Select--ListBox"
+                // This ternary statement is used to mock the data for `sections`
+                // if a flat list of `items` was passed instead. This allows us to
+                // use one component to support both flat and sectioned lists of
+                // items. If this causes problems, maybe in the future we break
+                // this into separate components or add additional logic to
+                // support different markup within the same component.
+                items={
+                  sections
+                    ? sections
+                    : [{ id: "section", header: "", items: items ? items : [] }]
+                }
+              >
+                {(section: SelectionSectionProps) => (
+                  <Section id={section.id} className="bcds-react-aria-Section">
+                    {section?.header && (
+                      <Header className="bcds-react-aria-Select--Header">
+                        {section.header}
+                      </Header>
+                    )}
+                    <Collection items={section.items}>
+                      {(item) => (
+                        <ListBoxItem
+                          id={item?.id}
+                          description={item?.description}
+                          label={item?.label}
+                          iconLeft={item?.iconLeft}
+                          iconRight={item?.iconRight}
+                          isDestructive={item?.isDestructive}
+                        />
+                      )}
+                    </Collection>
+                  </Section>
+                )}
+              </ListBox>
+            )}
           </Popover>
         </>
       )}

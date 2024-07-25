@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Select } from "../components";
+import { Select, ListBoxItem } from "../components";
 
 const meta = {
   title: "Components/Select/Select",
@@ -427,6 +427,18 @@ export const DescriptionBothIconsAndDestruction: Story = {
         iconRight: iconPlaceholder,
         isDestructive: true,
       },
+    ],
+  },
+};
+
+export const WithChildren: Story = {
+  args: {
+    ...SelectTemplate.args,
+    label: "Select with children",
+    children: [
+      <ListBoxItem id="1" label="Item 1" href="https://example.org" />,
+      <ListBoxItem id="2" label="Item 2" />,
+      <ListBoxItem id="3" label="Item 3" />,
     ],
   },
 };

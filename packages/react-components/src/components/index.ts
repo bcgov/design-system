@@ -4,7 +4,7 @@ export { default as Button } from "./Button";
 export { default as Header } from "./Header";
 export { default as Footer, FooterLinks } from "./Footer";
 export { default as Form } from "./Form";
-export { default as Select } from "./Select";
+export { default as Select, ListBoxItem } from "./Select";
 export { default as SvgBcLogo } from "./SvgBcLogo";
 export { default as Tag } from "./Tag";
 export { default as TagGroup } from "./TagGroup";
