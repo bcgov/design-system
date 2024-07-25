@@ -25,6 +25,11 @@ const meta = {
       control: { type: "text" },
       description: "Text label that appears above the select button",
     },
+    description: {
+      control: { type: "text" },
+      description:
+        "Additional description or helper text below the select button",
+    },
     placeholder: {
       control: { type: "text" },
       description:
@@ -55,6 +60,7 @@ export const SelectTemplate: Story = {
   args: {
     label: "Label",
     size: "medium",
+    description: "Optional description or helper text",
     isRequired: false,
     isDisabled: false,
     isInvalid: false,
