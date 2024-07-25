@@ -67,6 +67,12 @@
   color: var(--typography-color-placeholder);
 }
 
+.bcds-react-aria-TextField--container > .iconError {
+  color: var(--icons-color-danger);
+  min-width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
+}
+
 /* Hover and focus states */
 
 .bcds-react-aria-TextField--container
