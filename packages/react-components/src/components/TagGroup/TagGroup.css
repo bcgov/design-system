@@ -18,6 +18,6 @@
 .bcds-react-aria-TagGroup--Text-error > svg {
   padding-right: var(--layout-padding-xsmall);
   color: var(--icons-color-danger);
-  width: var(--icons-size-medium);
+  min-width: var(--icons-size-medium);
   height: var(--icons-size-medium);
 }
