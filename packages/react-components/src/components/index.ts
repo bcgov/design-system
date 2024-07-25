@@ -1,5 +1,6 @@
 import "@bcgov/design-tokens/css/variables.css";
 
+export { default as Alert } from "./Alert";
 export { default as Button } from "./Button";
 export { default as Header } from "./Header";
 export { default as Footer, FooterLinks } from "./Footer";

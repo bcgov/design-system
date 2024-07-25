@@ -1,0 +1,48 @@
+.bcds-Alert {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--layout-margin-small);
+  padding: var(--layout-padding-medium) var(--layout-padding-large);
+}
+
+.bcds-Alert--container {
+  display: flex;
+  flex-direction: column;
+}
+
+.bcds-Alert--container > .title {
+  font: var(--typography-bold-body);
+  color: var(--typography-color-primary);
+}
+
+.bcds-Alert--container > .description {
+  font: var(--typography-regular-body);
+  color: var(--typography-color-primary);
+}
+
+.bcds-Alert--icon {
+  min-width: var(--icons-size-large);
+  height: var(--icons-size-large);
+}
+
+.bcds-Alert--icon > svg {
+}
+
+/* Alert themes */
+
+.info {
+  background-color: var(--support-surfaceColor-info);
+  border: var(--layout-border-width-small) solid
+    var(--support-border-color-info);
+  border-radius: var(--layout-border-radius-medium);
+}
+
+.bcds-Alert > .success {
+}
+
+.bcds-Alert > .warning {
+}
+
+.bcds-Alert > .danger {
+}
