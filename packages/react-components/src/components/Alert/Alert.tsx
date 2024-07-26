@@ -1,10 +1,12 @@
 import "./Alert.css";
-import SvgInfoIcon from "../SvgInfoIcon";
-import SvgCheckIcon from "../SvgCheckIcon";
-import SvgExclamationIcon from "../SvgExclamationIcon";
-import SvgExclamationCircleIcon from "../SvgExclamationCircleIcon";
-import SvgCloseIcon from "../SvgCloseIcon";
-import Button from "../Button";
+import {
+  Button,
+  SvgInfoIcon,
+  SvgCheckIcon,
+  SvgExclamationIcon,
+  SvgExclamationCircleIcon,
+  SvgCloseIcon,
+} from "@/components";
 
 export interface AlertProps extends React.PropsWithChildren {
   /* Alert theme */
