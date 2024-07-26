@@ -27,7 +27,11 @@ export default function Alert({
       <span className="bcds-Alert--icon">
         {variant === "info" ? (
           <SvgInfoIcon />
+        ) : variant === "success" ? (
+          <SvgExclamationIcon />
         ) : variant === "warning" ? (
+          <SvgExclamationIcon />
+        ) : variant === "danger" ? (
           <SvgExclamationIcon />
         ) : null}
       </span>

@@ -24,36 +24,64 @@
 
 .bcds-Alert--icon {
   display: inline-flex;
-  vertical-align: middle;
 }
 
 .bcds-Alert--icon > svg {
-  min-width: var(--icons-size-large);
-  height: var(--icons-size-large);
+  min-width: var(--icons-size-medium);
 }
 
 .bcds-Alert--closeIcon {
+  display: inline-flex;
 }
 
 .bcds-Alert--closeIcon > svg {
-  min-width: var(--icons-size-large);
-  height: var(--icons-size-large);
+  min-width: var(--icons-size-medium);
 }
 
-/* Alert themes */
-
+/* Info variant */
 .info {
-  background-color: var(--support-surfaceColor-info);
+  background-color: var(--support-surface-color-info);
   border: var(--layout-border-width-small) solid
     var(--support-border-color-info);
   border-radius: var(--layout-border-radius-medium);
 }
 
-.bcds-Alert > .success {
+.info > .bcds-Alert--icon {
+  color: var(--icons-color-info);
 }
 
-.bcds-Alert > .warning {
+/* Success variant */
+.success {
+  background-color: var(--suport-surface-color-success);
+  border: var(--layout-border-width-small) solid
+    var(--support-border-color-success);
+  border-radius: var(--layout-border-radius-medium);
 }
 
-.bcds-Alert > .danger {
+.success > .bcds-Alert--icon {
+  color: var(--icons-color-success);
+}
+
+/* Warning variant */
+.warning {
+  background-color: var(--support-surface-color-warning);
+  border: var(--layout-border-width-small) solid
+    var(--support-border-color-warning);
+  border-radius: var(--layout-border-radius-medium);
+}
+
+.warning > .bcds-Alert--icon {
+  color: var(--icons-color-warning);
+}
+
+/* Danger variant */
+.danger {
+  background-color: var(--support-surface-color-danger);
+  border: var(--layout-border-width-small) solid
+    var(--support-border-color-danger);
+  border-radius: var(--layout-border-radius-medium);
+}
+
+.danger > .bcds-Alert--icon {
+  color: var(--icons-color-danger);
 }
