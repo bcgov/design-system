@@ -1,4 +1,4 @@
-export default function SvgExclamationIcon({ id = "exclamation-icon" }) {
+export default function SvgCheckIcon({ id = "check-icon" }) {
   return (
     <svg
       id={id}

@@ -1,6 +1,8 @@
 import "./Alert.css";
 import SvgInfoIcon from "../SvgInfoIcon";
+import SvgCheckIcon from "../SvgCheckIcon";
 import SvgExclamationIcon from "../SvgExclamationIcon";
+import SvgExclamationCircleIcon from "../SvgExclamationCircleIcon";
 
 export interface AlertProps {
   /* Alert theme */
@@ -20,11 +22,11 @@ function getIcon(variant: string) {
     case "info":
       return <SvgInfoIcon />;
     case "success":
-      return <SvgInfoIcon />;
+      return <SvgCheckIcon />;
     case "warning":
       return <SvgExclamationIcon />;
     case "danger":
-      return <SvgExclamationIcon />;
+      return <SvgExclamationCircleIcon />;
     default:
       return;
   }

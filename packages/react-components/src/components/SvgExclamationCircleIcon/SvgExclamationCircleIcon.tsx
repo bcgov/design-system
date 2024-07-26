@@ -1,4 +1,6 @@
-export default function SvgExclamationIcon({ id = "exclamation-icon" }) {
+export default function SvgExclamationCircleIcon({
+  id = "exclamation-icon-circle",
+}) {
   return (
     <svg
       id={id}
