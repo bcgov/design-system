@@ -1,5 +1,6 @@
 import "./Alert.css";
 import SvgInfoIcon from "../SvgInfoIcon";
+import SvgExclamationIcon from "../SvgExclamationIcon";
 
 export interface AlertProps {
   /* Alert theme */
@@ -10,24 +11,35 @@ export interface AlertProps {
   title?: string;
   /* Alert description */
   description?: string;
+  /* Alert closeable state */
+  closeable?: boolean;
 }
 
 export default function Alert({
   variant = "info",
   title,
   description,
-  icon,
+  closeable,
   ...props
 }: AlertProps) {
   return (
     <div className={`bcds-Alert ${variant}`} {...props}>
-      <div className="bcds-Alert--icon">
-        <SvgInfoIcon />
-      </div>
+      <span className="bcds-Alert--icon">
+        {variant === "info" ? (
+          <SvgInfoIcon />
+        ) : variant === "warning" ? (
+          <SvgExclamationIcon />
+        ) : null}
+      </span>
       <div className="bcds-Alert--container">
-        <div className="title">{title}</div>
-        <div className="description">{description}</div>
+        <span className="title">{title}</span>
+        <span className="description">{description}</span>
       </div>
+      {closeable && (
+        <span className="bcds-Alert--closeIcon">
+          <SvgInfoIcon />
+        </span>
+      )}
     </div>
   );
 }

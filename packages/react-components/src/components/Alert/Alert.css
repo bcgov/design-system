@@ -1,7 +1,8 @@
 .bcds-Alert {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   gap: var(--layout-margin-small);
   padding: var(--layout-padding-medium) var(--layout-padding-large);
 }
@@ -22,11 +23,21 @@
 }
 
 .bcds-Alert--icon {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.bcds-Alert--icon > svg {
   min-width: var(--icons-size-large);
   height: var(--icons-size-large);
 }
 
-.bcds-Alert--icon > svg {
+.bcds-Alert--closeIcon {
+}
+
+.bcds-Alert--closeIcon > svg {
+  min-width: var(--icons-size-large);
+  height: var(--icons-size-large);
 }
 
 /* Alert themes */

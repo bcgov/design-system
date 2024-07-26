@@ -23,6 +23,10 @@ const meta = {
       control: { type: "text" },
       description: "Sets the alert text",
     },
+    closeable: {
+      control: { type: "boolean" },
+      description: "Whether an alert can be closed",
+    },
   },
 } satisfies Meta<typeof Alert>;
 
