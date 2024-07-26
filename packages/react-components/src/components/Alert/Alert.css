@@ -6,6 +6,7 @@
   padding: var(--layout-padding-medium) var(--layout-padding-large);
 }
 
+/* Alert content */
 .bcds-Alert--container {
   display: flex;
   flex-direction: column;
@@ -21,6 +22,7 @@
   color: var(--typography-color-primary);
 }
 
+/* Left icon */
 .bcds-Alert--icon {
   display: inline-flex;
   align-self: first baseline;
@@ -31,6 +33,7 @@
   height: var(--icons-size-medium);
 }
 
+/* Close icon button */
 .bcds-Alert--closeIcon {
   display: inline-flex;
   align-self: first baseline;
