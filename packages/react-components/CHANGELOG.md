@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+### Changed
+
+- Use `react-aria-components` v1.3.1.
+
 # 0.1.0
 
 This is a milestone release that contains the following components:
