@@ -16,9 +16,9 @@ export interface InlineAlertProps extends React.PropsWithChildren {
   /* Alert description */
   description?: string;
   /* Alert closeable state */
-  closeable?: boolean;
+  isCloseable?: boolean;
   /* Show or hide left icon */
-  icon?: boolean;
+  showIcon?: boolean;
 }
 
 function getIcon(variant: string) {
@@ -40,14 +40,14 @@ export default function InlineAlert({
   variant = "info",
   title,
   description,
-  icon = true,
-  closeable = false,
+  showIcon = true,
+  isCloseable = false,
   children,
   ...props
 }: InlineAlertProps) {
   return (
     <div className={`bcds-Inline-Alert ${variant}`} {...props}>
-      {icon && (
+      {showIcon && (
         <span className="bcds-Inline-Alert--icon">{getIcon(variant)}</span>
       )}
       <div className="bcds-Inline-Alert--container">
@@ -59,7 +59,7 @@ export default function InlineAlert({
           </div>
         )}
       </div>
-      {closeable && (
+      {isCloseable && (
         <span className="bcds-Inline-Alert--closeIcon">
           <Button
             variant="tertiary"

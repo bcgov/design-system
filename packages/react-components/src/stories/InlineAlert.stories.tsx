@@ -23,11 +23,11 @@ const meta = {
       control: { type: "text" },
       description: "Sets the alert text",
     },
-    icon: {
+    showIcon: {
       control: { type: "boolean" },
       description: "Show or hide the left icon",
     },
-    closeable: {
+    isCloseable: {
       control: { type: "boolean" },
       description: "Whether an alert can be closed",
     },
@@ -51,8 +51,8 @@ export const InlineAlertWithActions: Story = {
     variant: "success",
     title: "This is a successful alert",
     description: "Also this alert has some actions",
-    icon: true,
-    closeable: true,
+    showIcon: true,
+    isCloseable: true,
     children: [
       <Button variant="secondary" size="small">
         Do a smaller thing
