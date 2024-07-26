@@ -9,8 +9,6 @@ import Button from "../Button";
 export interface AlertProps {
   /* Alert theme */
   variant?: "info" | "success" | "warning" | "danger";
-  /* Icon displayed at left of alert */
-  icon?: React.ReactElement;
   /* Alert title */
   title?: string;
   /* Alert description */
