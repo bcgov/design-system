@@ -45,6 +45,7 @@
 .bcds-Inline-Alert--closeIcon {
   display: inline-flex;
   align-self: first baseline;
+  color: var(--icons-color-primary);
 }
 
 .bcds-Inline-Alert--closeIcon > svg {
