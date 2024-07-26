@@ -6,7 +6,7 @@ import SvgExclamationCircleIcon from "../SvgExclamationCircleIcon";
 import SvgCloseIcon from "../SvgCloseIcon";
 import Button from "../Button";
 
-export interface AlertProps {
+export interface AlertProps extends React.PropsWithChildren {
   /* Alert theme */
   variant?: "info" | "success" | "warning" | "danger";
   /* Alert title */
@@ -15,8 +15,6 @@ export interface AlertProps {
   description?: string;
   /* Alert closeable state */
   closeable?: boolean;
-  /* Children slot, used for additional actions */
-  children?: React.ReactElement;
 }
 
 function getIcon(variant: string) {
@@ -48,7 +46,11 @@ export default function Alert({
       <div className="bcds-Alert--container">
         <span className="title">{title}</span>
         <span className="description">{description}</span>
-        {children && <div className="actions">{children}</div>}
+        {children && (
+          <div className="actions">
+            <>{children}</>
+          </div>
+        )}
       </div>
       {closeable && (
         <span className="bcds-Alert--closeIcon">

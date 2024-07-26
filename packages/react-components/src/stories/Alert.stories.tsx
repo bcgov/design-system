@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Alert } from "../components";
+import { Alert, Button } from "../components";
 import { AlertProps } from "@/components/Alert";
 
 const meta = {
@@ -40,4 +40,21 @@ export const AlertTemplate: Story = {
     description: "This is an alert description",
   },
   render: ({ ...args }: AlertProps) => <Alert {...args} />,
+};
+
+export const AlertWithActions: Story = {
+  args: {
+    variant: "success",
+    title: "This is a successful alert",
+    description: "Also this alert has some actions",
+    closeable: true,
+    children: [
+      <Button variant="secondary" size="small">
+        Do a smaller thing
+      </Button>,
+      <Button variant="primary" size="small">
+        Do a thing
+      </Button>,
+    ],
+  },
 };

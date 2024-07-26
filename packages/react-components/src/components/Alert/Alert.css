@@ -23,7 +23,10 @@
 }
 
 .bcds-Alert--container > .actions {
+  display: flex;
+  flex-direction: row;
   align-self: flex-end;
+  padding: var(--layout-padding-small) var(--layout-padding-none);
 }
 
 /* Left icon */
