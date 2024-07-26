@@ -23,20 +23,22 @@
 
 .bcds-Alert--icon {
   display: inline-flex;
-  align-self: center;
+  align-self: first baseline;
 }
 
 .bcds-Alert--icon > svg {
   min-width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
 }
 
 .bcds-Alert--closeIcon {
   display: inline-flex;
-  align-self: center;
+  align-self: first baseline;
 }
 
 .bcds-Alert--closeIcon > svg {
   min-width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
 }
 
 /* Info variant */

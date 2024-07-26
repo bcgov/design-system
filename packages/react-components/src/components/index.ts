@@ -10,6 +10,7 @@ export { default as SvgBcLogo } from "./SvgBcLogo";
 export { default as SvgCheckIcon } from "./SvgCheckIcon";
 export { default as SvgExclamationIcon } from "./SvgExclamationIcon";
 export { default as SvgExclamationCircleIcon } from "./SvgExclamationCircleIcon";
+export { default as SvgCloseIcon } from "./SvgCloseIcon";
 export { default as SvgInfoIcon } from "./SvgInfoIcon";
 export { default as Tag } from "./Tag";
 export { default as TagGroup } from "./TagGroup";

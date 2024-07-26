@@ -3,6 +3,8 @@ import SvgInfoIcon from "../SvgInfoIcon";
 import SvgCheckIcon from "../SvgCheckIcon";
 import SvgExclamationIcon from "../SvgExclamationIcon";
 import SvgExclamationCircleIcon from "../SvgExclamationCircleIcon";
+import SvgCloseIcon from "../SvgCloseIcon";
+import Button from "../Button";
 
 export interface AlertProps {
   /* Alert theme */
@@ -48,7 +50,15 @@ export default function Alert({
       </div>
       {closeable && (
         <span className="bcds-Alert--closeIcon">
-          <SvgInfoIcon />
+          <Button
+            variant="tertiary"
+            isIconButton
+            size="small"
+            aria-label="close"
+            type="button"
+          >
+            <SvgCloseIcon />
+          </Button>
         </span>
       )}
     </div>
