@@ -15,6 +15,21 @@ export interface AlertProps {
   closeable?: boolean;
 }
 
+function getIcon(variant: string) {
+  switch (variant) {
+    case "info":
+      return <SvgInfoIcon />;
+    case "success":
+      return <SvgInfoIcon />;
+    case "warning":
+      return <SvgExclamationIcon />;
+    case "danger":
+      return <SvgExclamationIcon />;
+    default:
+      return;
+  }
+}
+
 export default function Alert({
   variant = "info",
   title,
@@ -24,17 +39,7 @@ export default function Alert({
 }: AlertProps) {
   return (
     <div className={`bcds-Alert ${variant}`} {...props}>
-      <span className="bcds-Alert--icon">
-        {variant === "info" ? (
-          <SvgInfoIcon />
-        ) : variant === "success" ? (
-          <SvgExclamationIcon />
-        ) : variant === "warning" ? (
-          <SvgExclamationIcon />
-        ) : variant === "danger" ? (
-          <SvgExclamationIcon />
-        ) : null}
-      </span>
+      <span className="bcds-Alert--icon">{getIcon(variant)}</span>
       <div className="bcds-Alert--container">
         <span className="title">{title}</span>
         <span className="description">{description}</span>
