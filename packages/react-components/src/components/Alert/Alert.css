@@ -1,8 +1,7 @@
 .bcds-Alert {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--layout-margin-small);
   padding: var(--layout-padding-medium) var(--layout-padding-large);
 }
@@ -24,6 +23,7 @@
 
 .bcds-Alert--icon {
   display: inline-flex;
+  align-self: center;
 }
 
 .bcds-Alert--icon > svg {
@@ -32,6 +32,7 @@
 
 .bcds-Alert--closeIcon {
   display: inline-flex;
+  align-self: center;
 }
 
 .bcds-Alert--closeIcon > svg {
