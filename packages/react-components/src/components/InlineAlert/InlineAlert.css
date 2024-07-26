@@ -1,4 +1,4 @@
-.bcds-Alert {
+.bcds-Inline-Alert {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -7,22 +7,22 @@
 }
 
 /* Alert content */
-.bcds-Alert--container {
+.bcds-Inline-Alert--container {
   display: flex;
   flex-direction: column;
 }
 
-.bcds-Alert--container > .title {
+.bcds-Inline-Alert--container > .title {
   font: var(--typography-bold-body);
   color: var(--typography-color-primary);
 }
 
-.bcds-Alert--container > .description {
+.bcds-Inline-Alert--container > .description {
   font: var(--typography-regular-body);
   color: var(--typography-color-primary);
 }
 
-.bcds-Alert--container > .actions {
+.bcds-Inline-Alert--container > .actions {
   display: flex;
   flex-direction: row;
   align-self: flex-end;
@@ -30,23 +30,23 @@
 }
 
 /* Left icon */
-.bcds-Alert--icon {
+.bcds-Inline-Alert--icon {
   display: inline-flex;
   align-self: first baseline;
 }
 
-.bcds-Alert--icon > svg {
+.bcds-Inline-Alert--icon > svg {
   min-width: var(--icons-size-medium);
   height: var(--icons-size-medium);
 }
 
 /* Close icon button */
-.bcds-Alert--closeIcon {
+.bcds-Inline-Alert--closeIcon {
   display: inline-flex;
   align-self: first baseline;
 }
 
-.bcds-Alert--closeIcon > svg {
+.bcds-Inline-Alert--closeIcon > svg {
   min-width: var(--icons-size-medium);
   height: var(--icons-size-medium);
 }
@@ -59,7 +59,7 @@
   border-radius: var(--layout-border-radius-medium);
 }
 
-.info > .bcds-Alert--icon {
+.info > .bcds-Inline-Alert--icon {
   color: var(--icons-color-info);
 }
 
@@ -71,7 +71,7 @@
   border-radius: var(--layout-border-radius-medium);
 }
 
-.success > .bcds-Alert--icon {
+.success > .bcds-Inline-Alert--icon {
   color: var(--icons-color-success);
 }
 
@@ -83,7 +83,7 @@
   border-radius: var(--layout-border-radius-medium);
 }
 
-.warning > .bcds-Alert--icon {
+.warning > .bcds-Inline-Alert--icon {
   color: var(--icons-color-warning);
 }
 
@@ -95,6 +95,6 @@
   border-radius: var(--layout-border-radius-medium);
 }
 
-.danger > .bcds-Alert--icon {
+.danger > .bcds-Inline-Alert--icon {
   color: var(--icons-color-danger);
 }

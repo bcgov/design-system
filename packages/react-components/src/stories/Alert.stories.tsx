@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Alert, Button } from "../components";
-import { AlertProps } from "@/components/Alert";
+import { InlineAlert, Button } from "../components";
+import { InlineAlertProps } from "@/components/InlineAlert";
 
 const meta = {
-  title: "Components/Alert/Alert",
-  component: Alert,
+  title: "Components/Inline Alert/Inline Alert",
+  component: InlineAlert,
   parameters: {
     layout: "centered",
   },
@@ -28,21 +28,21 @@ const meta = {
       description: "Whether an alert can be closed",
     },
   },
-} satisfies Meta<typeof Alert>;
+} satisfies Meta<typeof InlineAlert>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const AlertTemplate: Story = {
+export const InlineAlertTemplate: Story = {
   args: {
     variant: "info",
     title: "This is an alert title",
     description: "This is an alert description",
   },
-  render: ({ ...args }: AlertProps) => <Alert {...args} />,
+  render: ({ ...args }: InlineAlertProps) => <InlineAlert {...args} />,
 };
 
-export const AlertWithActions: Story = {
+export const InlineAlertWithActions: Story = {
   args: {
     variant: "success",
     title: "This is a successful alert",

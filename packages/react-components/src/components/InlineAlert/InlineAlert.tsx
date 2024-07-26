@@ -1,4 +1,4 @@
-import "./Alert.css";
+import "./InlineAlert.css";
 import {
   Button,
   SvgInfoIcon,
@@ -8,7 +8,7 @@ import {
   SvgCloseIcon,
 } from "@/components";
 
-export interface AlertProps extends React.PropsWithChildren {
+export interface InlineAlertProps extends React.PropsWithChildren {
   /* Alert theme */
   variant?: "info" | "success" | "warning" | "danger";
   /* Alert title */
@@ -34,18 +34,18 @@ function getIcon(variant: string) {
   }
 }
 
-export default function Alert({
+export default function InlineAlert({
   variant = "info",
   title,
   description,
   closeable,
   children,
   ...props
-}: AlertProps) {
+}: InlineAlertProps) {
   return (
-    <div className={`bcds-Alert ${variant}`} {...props}>
-      <span className="bcds-Alert--icon">{getIcon(variant)}</span>
-      <div className="bcds-Alert--container">
+    <div className={`bcds-Inline-Alert ${variant}`} {...props}>
+      <span className="bcds-Inline-Alert--icon">{getIcon(variant)}</span>
+      <div className="bcds-Inline-Alert--container">
         <span className="title">{title}</span>
         <span className="description">{description}</span>
         {children && (
@@ -55,7 +55,7 @@ export default function Alert({
         )}
       </div>
       {closeable && (
-        <span className="bcds-Alert--closeIcon">
+        <span className="bcds-Inline-Alert--closeIcon">
           <Button
             variant="tertiary"
             isIconButton
