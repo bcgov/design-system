@@ -22,6 +22,10 @@
   color: var(--typography-color-primary);
 }
 
+.bcds-Alert--container > .actions {
+  align-self: flex-end;
+}
+
 /* Left icon */
 .bcds-Alert--icon {
   display: inline-flex;

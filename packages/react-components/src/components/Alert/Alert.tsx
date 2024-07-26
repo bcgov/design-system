@@ -15,6 +15,8 @@ export interface AlertProps {
   description?: string;
   /* Alert closeable state */
   closeable?: boolean;
+  /* Children slot, used for additional actions */
+  children?: React.ReactElement;
 }
 
 function getIcon(variant: string) {
@@ -37,6 +39,7 @@ export default function Alert({
   title,
   description,
   closeable,
+  children,
   ...props
 }: AlertProps) {
   return (
@@ -45,6 +48,7 @@ export default function Alert({
       <div className="bcds-Alert--container">
         <span className="title">{title}</span>
         <span className="description">{description}</span>
+        {children && <div className="actions">{children}</div>}
       </div>
       {closeable && (
         <span className="bcds-Alert--closeIcon">
