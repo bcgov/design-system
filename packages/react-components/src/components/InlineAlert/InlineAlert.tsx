@@ -2,7 +2,7 @@ import "./InlineAlert.css";
 import {
   Button,
   SvgInfoIcon,
-  SvgCheckIcon,
+  SvgCheckCircleIcon,
   SvgExclamationIcon,
   SvgExclamationCircleIcon,
   SvgCloseIcon,
@@ -26,7 +26,7 @@ function getIcon(variant: string) {
     case "info":
       return <SvgInfoIcon />;
     case "success":
-      return <SvgCheckIcon />;
+      return <SvgCheckCircleIcon />;
     case "warning":
       return <SvgExclamationIcon />;
     case "danger":

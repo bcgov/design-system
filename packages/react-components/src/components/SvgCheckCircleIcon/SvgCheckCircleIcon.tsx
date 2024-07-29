@@ -1,4 +1,4 @@
-export default function SvgCheckIcon({ id = "check-icon" }) {
+export default function SvgCheckCircleIcon({ id = "check-icon" }) {
   return (
     <svg
       id={id}
