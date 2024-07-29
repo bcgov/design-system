@@ -24,13 +24,13 @@ export interface InlineAlertProps extends React.PropsWithChildren {
 function getIcon(variant: string) {
   switch (variant) {
     case "info":
-      return <SvgInfoIcon />;
+      return <SvgInfoIcon aria-hidden="true" />;
     case "success":
-      return <SvgCheckCircleIcon />;
+      return <SvgCheckCircleIcon aria-hidden="true" />;
     case "warning":
-      return <SvgExclamationIcon />;
+      return <SvgExclamationIcon aria-hidden="true" />;
     case "danger":
-      return <SvgExclamationCircleIcon />;
+      return <SvgExclamationCircleIcon aria-hidden="true" />;
     default:
       return;
   }
@@ -65,7 +65,7 @@ export default function InlineAlert({
             variant="tertiary"
             isIconButton
             size="small"
-            aria-label="close"
+            aria-label="Close this alert"
             type="button"
           >
             <SvgCloseIcon />
