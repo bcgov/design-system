@@ -24,13 +24,13 @@ export interface InlineAlertProps extends React.PropsWithChildren {
 function getIcon(variant: string) {
   switch (variant) {
     case "info":
-      return <SvgInfoIcon aria-hidden="true" />;
+      return <SvgInfoIcon />;
     case "success":
-      return <SvgCheckCircleIcon aria-hidden="true" />;
+      return <SvgCheckCircleIcon />;
     case "warning":
-      return <SvgExclamationIcon aria-hidden="true" />;
+      return <SvgExclamationIcon />;
     case "danger":
-      return <SvgExclamationCircleIcon aria-hidden="true" />;
+      return <SvgExclamationCircleIcon />;
     default:
       return;
   }
