@@ -19,6 +19,8 @@ export interface InlineAlertProps extends React.PropsWithChildren {
   isCloseable?: boolean;
   /* Show or hide left icon */
   showIcon?: boolean;
+  /* Sets ARIA role attribute to "alert" — use cautiously */
+  alertRole?: boolean;
 }
 
 function getIcon(variant: string) {
@@ -42,6 +44,7 @@ export default function InlineAlert({
   description,
   showIcon = true,
   isCloseable = false,
+  alertRole = false,
   children,
   ...props
 }: InlineAlertProps) {
@@ -50,7 +53,10 @@ export default function InlineAlert({
       {showIcon && (
         <span className="bcds-Inline-Alert--icon">{getIcon(variant)}</span>
       )}
-      <div className="bcds-Inline-Alert--container">
+      <div
+        className="bcds-Inline-Alert--container"
+        role={alertRole ? "alert" : undefined}
+      >
         <span className="title">{title}</span>
         <span className="description">{description}</span>
         {children && (
