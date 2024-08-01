@@ -30,6 +30,12 @@ Learn more about working with the inline alert component:
 - [Usage and best practice guidance]()
 - [View the select component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
 
+### ARIA roles
+
+By default, an inline alert renders with the [ARIA "note" role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/note_role). If needed, you can use the `alertRole` prop to instead assign it the ["alert" role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
+
+This setting should be used with caution, and only when the alert requires the user's immediate attention.
+
 ## Controls
 
 <Primary of={InlineAlertStories} />
@@ -65,3 +71,5 @@ If no `variant` prop is passed, the alert defaults to the `info` theme.
 #### Danger
 
 <Canvas of={InlineAlertStories.DangerAlert} />
+
+### Title and description
