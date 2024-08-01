@@ -87,6 +87,13 @@ export const DangerAlert: Story = {
   },
 };
 
+export const InlineAlertWithoutIcon: Story = {
+  args: {
+    title: "This alert has no visible icon",
+    showIcon: false,
+  },
+};
+
 export const InlineAlertWithActions: Story = {
   args: {
     variant: "success",

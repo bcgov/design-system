@@ -72,4 +72,12 @@ If no `variant` prop is passed, the alert defaults to the `info` theme.
 
 <Canvas of={InlineAlertStories.DangerAlert} />
 
-### Title and description
+### Alert content
+
+Use the `title` optional `description` props to populate an alert's content:
+
+<Canvas of={InlineAlertStories.InlineAlertTemplate} />
+
+The `showIcon` prop enables you to hide the theme icon on the left:
+
+<Canvas of={InlineAlertStories.InlineAlertWithoutIcon} />
