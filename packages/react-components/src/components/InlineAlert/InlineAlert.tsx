@@ -58,7 +58,7 @@ export default function InlineAlert({
         role={alertRole ? "alert" : "note"}
       >
         <span className="title">{title}</span>
-        <span className="description">{description}</span>
+        {description && <span className="description">{description}</span>}
         {children && (
           <div className="actions">
             <>{children}</>
