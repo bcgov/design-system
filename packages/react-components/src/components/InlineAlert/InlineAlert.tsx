@@ -55,7 +55,7 @@ export default function InlineAlert({
       )}
       <div
         className="bcds-Inline-Alert--container"
-        role={alertRole ? "alert" : undefined}
+        role={alertRole ? "alert" : "note"}
       >
         <span className="title">{title}</span>
         <span className="description">{description}</span>
