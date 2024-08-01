@@ -16,4 +16,52 @@ import * as InlineAlertStories from "./InlineAlert.stories";
 
 # Inline Alert
 
-<Subtitle>TKTK</Subtitle>
+<Subtitle>An inline alert displays an important message to the user.</Subtitle>
+
+<Source
+  code={`import { InlineAlert } from "@bcgov/design-system-react-components"; `}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Learn more about working with the inline alert component:
+
+- [Usage and best practice guidance]()
+- [View the select component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+## Controls
+
+<Primary of={InlineAlertStories} />
+<Controls of={InlineAlertStories.InlineAlertTemplate} />
+
+## Configuration
+
+### Variants
+
+The inline alert ships with 4 themes for different use cases. Each theme has a different colour scheme and icon.
+
+The alert theme is set by the `variant` prop:
+
+- `info`
+- `success`
+- `warning`
+- `danger`
+
+If no `variant` prop is passed, the alert defaults to the `info` theme.
+
+#### Info
+
+<Canvas of={InlineAlertStories.InfoAlert} />
+
+#### Success
+
+<Canvas of={InlineAlertStories.SuccessAlert} />
+
+#### Warning
+
+<Canvas of={InlineAlertStories.WarningAlert} />
+
+#### Danger
+
+<Canvas of={InlineAlertStories.DangerAlert} />

@@ -31,6 +31,10 @@ const meta = {
       control: { type: "boolean" },
       description: "Whether an alert can be closed",
     },
+    alertRole: {
+      control: { type: "boolean" },
+      description: "Sets the ARIA `alert` role. Use with caution",
+    },
   },
 } satisfies Meta<typeof InlineAlert>;
 
@@ -41,16 +45,54 @@ export const InlineAlertTemplate: Story = {
   args: {
     variant: "info",
     title: "This is an alert title",
-    description: "This is an alert description",
+    description:
+      "The alert description is used to provide additional explanatory or helper text.",
   },
   render: ({ ...args }: InlineAlertProps) => <InlineAlert {...args} />,
+};
+
+export const InfoAlert: Story = {
+  args: {
+    variant: "info",
+    title: "This is an alert with the 'info' theme",
+    description:
+      "This is the default alert theme. Use it to provide a generic informational alert.",
+  },
+};
+
+export const SuccessAlert: Story = {
+  args: {
+    variant: "success",
+    title: "This is an alert with the 'success' theme",
+    description:
+      "Use this alert theme to indicate a positive or success state.",
+  },
+};
+
+export const WarningAlert: Story = {
+  args: {
+    variant: "warning",
+    title: "This is an alert with the 'warning' theme",
+    description:
+      "Use this alert theme to indicate a non-urgent problem or notice.",
+  },
+};
+
+export const DangerAlert: Story = {
+  args: {
+    variant: "danger",
+    title: "This is an alert with the 'danger' theme",
+    description:
+      "Use this alert theme to communicate an urgent warning or error to the user",
+  },
 };
 
 export const InlineAlertWithActions: Story = {
   args: {
     variant: "success",
-    title: "This is a successful alert",
-    description: "Also this alert has some actions",
+    title: "This is a success alert with some additional actions",
+    description:
+      "This alert uses button components in the children slot to provide additional actions for the user to take.",
     showIcon: true,
     isCloseable: true,
     children: [
