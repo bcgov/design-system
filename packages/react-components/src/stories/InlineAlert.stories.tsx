@@ -23,7 +23,7 @@ const meta = {
       control: { type: "text" },
       description: "Sets the alert text",
     },
-    showIcon: {
+    hideIcon: {
       control: { type: "boolean" },
       description: "Show or hide the left icon",
     },
@@ -90,7 +90,7 @@ export const DangerAlert: Story = {
 export const InlineAlertWithoutIcon: Story = {
   args: {
     title: "This alert has no visible icon",
-    showIcon: false,
+    hideIcon: true,
   },
 };
 
@@ -100,7 +100,6 @@ export const InlineAlertWithActions: Story = {
     title: "This is a success alert with some additional actions",
     description:
       "This alert uses button components in the children slot to provide additional actions for the user to take.",
-    showIcon: true,
     isCloseable: true,
     children: [
       <Button variant="secondary" size="small">
