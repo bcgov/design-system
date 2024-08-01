@@ -94,6 +94,13 @@ export const InlineAlertWithoutIcon: Story = {
   },
 };
 
+export const CloseableAlert: Story = {
+  args: {
+    title: "This alert is closeable",
+    isCloseable: true,
+  },
+};
+
 export const InlineAlertWithActions: Story = {
   args: {
     variant: "success",

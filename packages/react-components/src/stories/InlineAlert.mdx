@@ -74,10 +74,22 @@ If no `variant` prop is passed, the alert defaults to the `info` theme.
 
 ### Alert content
 
-Use the `title` optional `description` props to populate an alert's content:
+Use the `title` and optional `description` props to populate an alert's content:
 
 <Canvas of={InlineAlertStories.InlineAlertTemplate} />
 
-The `showIcon` prop enables you to hide the theme icon on the left:
+Pass `hideIcon` to hide the theme icon on the left:
 
 <Canvas of={InlineAlertStories.InlineAlertWithoutIcon} />
+
+### Closeable alerts
+
+Pass `isCloseable` to display a close button on the right-hand side of the alert:
+
+<Canvas of={InlineAlertStories.CloseableAlert} />
+
+### Additional actions
+
+An inline alert has a `children` slot, into which you can pass additional components. It is designed to work well with [the button component](?path=/docs/components-button-button--docs), to enable the user to take additional actions:
+
+<Canvas of={InlineAlertStories.InlineAlertWithActions} />
