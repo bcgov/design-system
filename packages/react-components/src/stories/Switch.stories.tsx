@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ToggleButton } from "../components";
+import { Switch } from "../components";
 
 const meta = {
-  title: "Components/Toggle Button/Toggle Button",
-  component: ToggleButton,
+  title: "Components/Switch/Switch",
+  component: Switch,
   parameters: {
     layout: "centered",
   },
   argTypes: {},
-} satisfies Meta<typeof ToggleButton>;
+} satisfies Meta<typeof Switch>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const ToggleButtonTemplate: Story = {
+export const SwitchTemplate: Story = {
   args: {},
 };

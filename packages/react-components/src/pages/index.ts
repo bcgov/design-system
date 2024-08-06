@@ -3,7 +3,7 @@ import SelectPage from "./Select";
 import TagGroupPage from "./TagGroup";
 import TextAreaPage from "./TextArea";
 import TextFieldPage from "./TextField";
-import ToggleButtonPage from "./ToggleButton";
+import SwitchPage from "./Switch";
 import TooltipPage from "./Tooltip";
 
 export {
@@ -12,6 +12,6 @@ export {
   TagGroupPage,
   TextAreaPage,
   TextFieldPage,
-  ToggleButtonPage,
+  SwitchPage,
   TooltipPage,
 };

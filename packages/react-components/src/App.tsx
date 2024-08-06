@@ -12,7 +12,7 @@ import {
   TagGroupPage,
   TextAreaPage,
   TextFieldPage,
-  ToggleButtonPage,
+  SwitchPage,
   TooltipPage,
 } from "@/pages";
 
@@ -147,7 +147,7 @@ function App() {
       <main>
         <h1>Components</h1>
         <ButtonPage />
-        <ToggleButtonPage />
+        <SwitchPage />
         <SelectPage />
         <TagGroupPage />
         <TooltipPage />
