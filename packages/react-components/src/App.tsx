@@ -10,9 +10,10 @@ import {
   ButtonPage,
   SelectPage,
   TagGroupPage,
-  TooltipPage,
   TextAreaPage,
   TextFieldPage,
+  ToggleButtonPage,
+  TooltipPage,
 } from "@/pages";
 
 // This icon is available as a plain SVG at src/assets/icon-menu.svg
@@ -146,6 +147,7 @@ function App() {
       <main>
         <h1>Components</h1>
         <ButtonPage />
+        <ToggleButtonPage />
         <SelectPage />
         <TagGroupPage />
         <TooltipPage />
