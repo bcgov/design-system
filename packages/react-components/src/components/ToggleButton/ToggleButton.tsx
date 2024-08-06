@@ -7,6 +7,11 @@ import "./ToggleButton.css";
 
 export interface ToggleButtonProps extends ReactAriaToggleButtonProps {}
 
-export default function ToggleButton({...props}: ToggleButtonProps) {
-    return ();
+export default function ToggleButton({ ...props }: ToggleButtonProps) {
+  return (
+    <ReactAriaToggleButton
+      className={`bcds-react-aria-ToggleButton`}
+      {...props}
+    />
+  );
 }
