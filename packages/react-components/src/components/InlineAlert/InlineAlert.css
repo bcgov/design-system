@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: row;
   align-self: flex-end;
-  gap: var(--layout-margin-xsmall);
+  gap: var(--layout-margin-small);
   padding: var(--layout-padding-small) var(--layout-padding-none);
 }
 
