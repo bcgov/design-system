@@ -1,2 +1,65 @@
 .bcds-react-aria-Switch {
+  display: flex;
+  align-items: center;
+  gap: var(--layout-margin-small);
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+  forced-color-adjust: none;
+}
+
+/* Container */
+.bcds-react-aria-Switch > .indicator {
+  align-items: center;
+  width: var(--layout-margin-xxlarge);
+  height: var(--icons-size-medium);
+  background-color: var(--surface-color-forms-disabled);
+  border-radius: var(--icons-size-medium);
+  transition: all 200ms;
+}
+
+/* Indicator */
+.bcds-react-aria-Switch > .indicator::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
+  background-color: var(--surface-color-background-light-gray);
+  border: var(--layout-border-width-medium) solid
+    var(--surface-color-border-medium);
+  border-radius: var(--icons-size-small);
+  transition: all 200ms;
+}
+
+/* Selected */
+.bcds-react-aria-Switch[data-selected] > .indicator {
+  background-color: var(--surface-color-primary-button-default);
+}
+
+.bcds-react-aria-Switch[data-selected] > .indicator::before {
+  transform: translateX(100%);
+  border: var(--layout-border-width-medium) solid
+    var(--surface-color-primary-button-default);
+}
+
+/* Hover */
+.bcds-react-aria-Switch[data-hovered] > .indicator {
+}
+
+.bcds-react-aria-Switch[data-hovered] > .indicator::before {
+}
+
+/* Disabled */
+.bcds-react-aria-Switch[data-disabled] > .indicator {
+  background-color: var(--surface-color-forms-disabled);
+}
+
+.bcds-react-aria-Switch[data-disabled] > .indicator::before {
+}
+
+/* Focus state */
+.bcds-react-aria-Switch[data-focus-visible] > .indicator {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
 }

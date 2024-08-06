@@ -15,5 +15,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const SwitchTemplate: Story = {
-  args: {},
+  args: {
+    children: "Label",
+  },
 };

@@ -5,8 +5,22 @@ import {
 
 import "./Switch.css";
 
-export interface SwitchProps extends ReactAriaSwitchProps {}
+export interface SwitchProps extends ReactAriaSwitchProps {
+  children?: React.ReactNode;
+  /* Label positioning relative to switch */
+  labelPosition?: "left" | "right";
+}
 
-export default function Switch({ ...props }: SwitchProps) {
-  return <ReactAriaSwitch className={`bcds-react-aria-Switch`} {...props} />;
+export default function Switch({
+  labelPosition = "right",
+  children,
+  ...props
+}: SwitchProps) {
+  return (
+    <ReactAriaSwitch className={`bcds-react-aria-Switch`} {...props}>
+      {labelPosition === "left" && <>{children}</>}
+      <div className="indicator" />
+      {labelPosition === "right" && <>{children}</>}
+    </ReactAriaSwitch>
+  );
 }
