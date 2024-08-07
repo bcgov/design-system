@@ -15,6 +15,10 @@ const meta = {
       control: { type: "radio" },
       description: "Sets the position of the text label",
     },
+    isSelected: {
+      control: "boolean",
+      description: "Whether a switch is currently selected",
+    },
     isDisabled: {
       control: "boolean",
       description: "Disables the switch",
@@ -22,6 +26,10 @@ const meta = {
     isReadOnly: {
       control: "boolean",
       description: "Sets the switch to read-only",
+    },
+    defaultSelected: {
+      control: "boolean",
+      description: "Sets the switch to 'on' by default",
     },
   },
 } satisfies Meta<typeof Switch>;
@@ -45,6 +53,14 @@ export const LabelReversed: Story = {
   },
 };
 
+export const DefaultSelectedSwitch: Story = {
+  ...SwitchTemplate,
+  args: {
+    children: "This switch is selected by default",
+    defaultSelected: true,
+  },
+};
+
 export const DisabledSwitch: Story = {
   ...SwitchTemplate,
   args: {
@@ -57,6 +73,7 @@ export const ReadOnlySwitch: Story = {
   ...SwitchTemplate,
   args: {
     children: "Read-only switch",
+    isSelected: true,
     isReadOnly: true,
   },
 };
