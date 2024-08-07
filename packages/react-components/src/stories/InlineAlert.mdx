@@ -30,12 +30,6 @@ Learn more about working with the inline alert component:
 - [Usage and best practice guidance]()
 - [View the select component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
 
-### ARIA roles
-
-By default, an inline alert renders with the [ARIA "note" role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/note_role). If needed, you can use the `alertRole` prop to instead assign it the ["alert" role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
-
-This setting should be used with caution, and only when the alert requires the user's immediate attention.
-
 ## Controls
 
 <Primary of={InlineAlertStories} />
@@ -93,3 +87,15 @@ Pass `isCloseable` to display a close button on the right-hand side of the alert
 An inline alert has a `children` slot, into which you can pass additional components. It is designed to work well with [the button component](?path=/docs/components-button-button--docs), to enable the user to take additional actions:
 
 <Canvas of={InlineAlertStories.InlineAlertWithActions} />
+
+### ARIA roles
+
+By default, an inline alert renders with the [ARIA "note" role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/note_role).
+
+Use the `role` prop to set a different role. You can pass [any valid ARIA role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles), but these are the recommended options:
+
+- [complementary](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role)
+- [status](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
+- [alert](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
+
+**Note**: the "alert" role should be used with caution, and only when the alert requires the user's immediate attention.

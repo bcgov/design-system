@@ -31,9 +31,9 @@ const meta = {
       control: { type: "boolean" },
       description: "Whether an alert can be closed",
     },
-    alertRole: {
-      control: { type: "boolean" },
-      description: "Sets the ARIA `alert` role. Use with caution",
+    role: {
+      control: { type: "text" },
+      description: "Sets ARIA role for the alert",
     },
   },
 } satisfies Meta<typeof InlineAlert>;
