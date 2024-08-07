@@ -34,7 +34,8 @@
 /* Left icon */
 .bcds-Inline-Alert--icon {
   display: inline-flex;
-  align-self: first baseline;
+  align-self: flex-start;
+  padding-top: var(--layout-padding-xsmall);
 }
 
 .bcds-Inline-Alert--icon > svg {
