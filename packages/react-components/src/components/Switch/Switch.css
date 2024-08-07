@@ -44,22 +44,42 @@
 
 /* Hover */
 .bcds-react-aria-Switch[data-hovered] > .indicator {
+  cursor: pointer;
+}
+
+.bcds-react-aria-Switch[data-hovered][data-selected] > .indicator {
+  cursor: pointer;
+  background-color: var(--surface-color-primary-button-hover);
 }
 
 .bcds-react-aria-Switch[data-hovered] > .indicator::before {
+  border: var(--layout-border-width-medium) solid
+    var(--surface-color-border-dark);
 }
 
-/* Disabled */
-.bcds-react-aria-Switch[data-disabled] > .indicator {
-  background-color: var(--surface-color-forms-disabled);
-}
-
-.bcds-react-aria-Switch[data-disabled] > .indicator::before {
-}
-
-/* Focus state */
+/* Focused */
 .bcds-react-aria-Switch[data-focus-visible] > .indicator {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
+}
+
+/* Disabled */
+.bcds-react-aria-Switch[data-disabled] {
+  color: var(--typography-color-disabled);
+}
+
+.bcds-react-aria-Switch[data-disabled] > .indicator {
+  background-color: var(--surface-color-forms-disabled);
+  cursor: not-allowed;
+}
+
+.bcds-react-aria-Switch[data-disabled] > .indicator::before {
+  border: var(--layout-border-width-medium) solid
+    var(--surface-color-border-default);
+}
+
+/* Read only */
+.bcds-react-aria-Switch[data-readonly] > .indicator {
+  cursor: not-allowed;
 }
