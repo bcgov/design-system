@@ -16,9 +16,3 @@ main {
   padding: 2rem;
   max-width: 1100px;
 }
-
-.alertGroup {
-  display: flex;
-  flex-direction: column;
-  gap: var(--layout-margin-small);
-}

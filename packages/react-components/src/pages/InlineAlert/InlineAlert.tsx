@@ -4,7 +4,13 @@ export default function InlineAlertPage() {
   return (
     <>
       <h2>Inline Alert</h2>
-      <div className="alertGroup">
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "var(--layout-margin-small",
+        }}
+      >
         <InlineAlert
           variant="info"
           title="This is a general informational alert"
@@ -48,7 +54,7 @@ export default function InlineAlertPage() {
         />
         <InlineAlert
           variant="info"
-          showIcon={false}
+          hideIcon={true}
           title="This alert has no icon"
         />
       </div>
