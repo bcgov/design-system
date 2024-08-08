@@ -53,8 +53,14 @@ export default function InlineAlert({
       {!hideIcon && (
         <span className="bcds-Inline-Alert--icon">{getIcon(variant)}</span>
       )}
-      <div className="bcds-Inline-Alert--container" role={role}>
-        <span className="title">{title}</span>
+      <div
+        className="bcds-Inline-Alert--container"
+        role={role}
+        aria-labelledby="alert-title"
+      >
+        <span className="title" id="alert-title">
+          {title}
+        </span>
         {description && <span className="description">{description}</span>}
         {children && (
           <div className="actions">
