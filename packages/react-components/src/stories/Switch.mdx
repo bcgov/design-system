@@ -1,0 +1,68 @@
+{/* Switch.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as SwitchStories from "./Switch.stories";
+
+<Meta of={SwitchStories} />
+
+# Switch
+
+<Subtitle>A switch enables the user to toggle a setting on or off.</Subtitle>
+
+<Source
+  code={`import { Switch } from "@bcgov/design-system-react-components"; `}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Learn more about working with the switch component:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=A2B9EFCADAC940AA8E7A0A7E91D49097)
+- [View the switch component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+This component is based on [React Aria Switch](https://react-spectrum.adobe.com/react-aria/Switch.html). It renders an `<input>` with the [ARIA switch role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role).
+
+## Controls
+
+<Primary of={SwitchStories} />
+<Controls of={SwitchStories.SwitchTemplate} />
+
+## Configuration
+
+### Label
+
+Pass a text label to the `children` slot. This text will render as a `<label>`, and will be automatically associated to the switch.
+
+If you do not provide a visible label, you must use the `aria-label` or `aria-labelledby` props to label the switch for assistive technologies.
+
+#### Label position
+
+By default, the text label renders to the right of the switch. Use the `labelPosition` prop to move the label to the left:
+
+<Canvas of={SwitchStories.LabelReversed} />
+
+### States
+
+You can use the `isSelected` prop to make a switch controlled. You can also use the `name` and `value` props to integrate a switch into an HTML form. Consult [the React Aria documentation](https://react-spectrum.adobe.com/react-aria/Switch.html#value) for more information.
+
+By default, a switch is not selected. Pass `defaultSelected` to make a switch selected by default:
+
+<Canvas of={SwitchStories.DefaultSelectedSwitch} />
+
+Use `isDisabled` to disable a switch. A disabled switch cannot be focused or selected:
+
+<Canvas of={SwitchStories.DisabledSwitch} />
+
+Use `isReadOnly` to lock a switch to its current value. A read-only switch can be focused, but cannot be selected:
+
+<Canvas of={SwitchStories.ReadOnlySwitch} />
