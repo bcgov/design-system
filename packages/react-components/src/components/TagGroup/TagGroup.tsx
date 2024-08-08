@@ -6,7 +6,7 @@ import {
 } from "react-aria-components";
 
 import "./TagGroup.css";
-import SvgExclamationIcon from "../SvgExclamationIcon";
+import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 
 export interface TagGroupProps extends ReactAriaTagGroupProps {
   /**
