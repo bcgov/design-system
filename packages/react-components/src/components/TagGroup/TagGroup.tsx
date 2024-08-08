@@ -6,6 +6,7 @@ import {
 } from "react-aria-components";
 
 import "./TagGroup.css";
+import SvgExclamationIcon from "../SvgExclamationIcon";
 
 export interface TagGroupProps extends ReactAriaTagGroupProps {
   /**
@@ -48,6 +49,7 @@ export default function TagGroup({
           slot="errorMessage"
           className="bcds-react-aria-TagGroup--Text-error"
         >
+          <SvgExclamationIcon />
           {errorMessage}
         </Text>
       )}
