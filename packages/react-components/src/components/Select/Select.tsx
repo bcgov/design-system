@@ -52,7 +52,9 @@ export interface SelectProps<T extends object> extends ReactAriaSelectProps<T> {
   placeholder?: string;
   /** Defaults to `medium` */
   size?: "small" | "medium";
-  /* Used for data validation and error handling */
+  /** Description or helper text that renders below the select input */
+  description?: string;
+  /** Used for data validation and error handling */
   errorMessage?: string | ((validation: ValidationResult) => string);
 }
 
@@ -113,6 +115,7 @@ export default function Select<T extends object>({
   items,
   sections,
   label,
+  description,
   placeholder,
   size = "medium",
   errorMessage,
@@ -143,6 +146,14 @@ export default function Select<T extends object>({
             {isInvalid && iconError}
             {isOpen ? <ChevronUp /> : <ChevronDown />}
           </Button>
+          {description && (
+            <Text
+              slot="description"
+              className={`bcds-react-aria-Select--Description`}
+            >
+              {description}
+            </Text>
+          )}
           <FieldError className="bcds-react-aria-Select--Error">
             {errorMessage}
           </FieldError>
