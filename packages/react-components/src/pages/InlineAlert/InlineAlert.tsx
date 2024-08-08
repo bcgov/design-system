@@ -43,7 +43,6 @@ export default function InlineAlertPage() {
               <Button variant="primary" size="small">
                 This is a primary button
               </Button>
-              ,
             </>,
           ]}
         />
