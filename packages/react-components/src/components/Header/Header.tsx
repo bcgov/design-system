@@ -1,6 +1,6 @@
 import React from "react";
 
-import SvgBcLogo from "../SvgBcLogo";
+import SvgBcLogo from "../Icons/SvgBcLogo";
 
 import "./Header.css";
 

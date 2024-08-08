@@ -10,7 +10,7 @@ import {
 } from "react-aria-components";
 
 import "./TextArea.css";
-import SvgExclamationIcon from "../SvgExclamationIcon";
+import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 
 export interface TextAreaProps extends ReactAriaTextFieldProps {
   /* Sets text label above text input field */
