@@ -57,6 +57,11 @@
     var(--surface-color-border-dark);
 }
 
+.bcds-react-aria-Switch[data-hovered][data-selected] > .indicator::before {
+  border: var(--layout-border-width-medium) solid
+    var(--surface-color-primary-button-default);
+}
+
 /* Focused */
 .bcds-react-aria-Switch[data-focus-visible] > .indicator {
   outline: solid var(--layout-border-width-medium)
