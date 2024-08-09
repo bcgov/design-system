@@ -1,3 +1,4 @@
+import React from "react";
 import "./InlineAlert.css";
 import {
   Button,
@@ -21,6 +22,8 @@ export interface InlineAlertProps extends React.PropsWithChildren {
   isIconHidden?: boolean;
   /* ARIA role */
   role?: React.AriaRole | undefined;
+  /* Close button handling */
+  onClose?: () => void;
 }
 
 function getIcon(variant: string) {
@@ -46,6 +49,7 @@ export default function InlineAlert({
   isCloseable = false,
   role = "note",
   children,
+  onClose,
   ...props
 }: InlineAlertProps) {
   return (
@@ -76,6 +80,7 @@ export default function InlineAlert({
             size="small"
             aria-label="Close this alert"
             type="button"
+            onPress={onClose}
           >
             <SvgCloseIcon />
           </Button>
