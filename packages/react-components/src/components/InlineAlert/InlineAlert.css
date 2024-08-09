@@ -40,6 +40,8 @@
   display: inline-flex;
   align-self: first baseline;
   color: var(--icons-color-primary);
+  position: relative;
+  bottom: var(--layout-margin-hair);
 }
 
 .bcds-Inline-Alert--closeIcon > svg {
