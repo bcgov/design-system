@@ -8,6 +8,7 @@ import { Button, Footer, FooterLinks, Header } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
   ButtonPage,
+  InlineAlertPage,
   SelectPage,
   TagGroupPage,
   TextAreaPage,
@@ -148,6 +149,7 @@ function App() {
         <h1>Components</h1>
         <ButtonPage />
         <SwitchPage />
+        <InlineAlertPage />
         <SelectPage />
         <TagGroupPage />
         <TooltipPage />

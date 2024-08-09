@@ -17,6 +17,13 @@
   color: var(--typography-color-disabled);
 }
 
+/* Text description below select input */
+.bcds-react-aria-Select--Description {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
+}
+
 /* Error message */
 .bcds-react-aria-Select--Error {
   font: var(--typography-regular-small-body);
