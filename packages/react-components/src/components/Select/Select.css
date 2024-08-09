@@ -17,7 +17,7 @@
   color: var(--typography-color-disabled);
 }
 
-/* Rext description below select input */
+/* Text description below select input */
 .bcds-react-aria-Select--Description {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-secondary);

@@ -23,7 +23,7 @@ const meta = {
       control: { type: "text" },
       description: "Sets the alert text",
     },
-    hideIcon: {
+    isIconHidden: {
       control: { type: "boolean" },
       description: "Show or hide the left icon",
     },
@@ -90,7 +90,7 @@ export const DangerAlert: Story = {
 export const InlineAlertWithoutIcon: Story = {
   args: {
     title: "This alert has no visible icon",
-    hideIcon: true,
+    isIconHidden: true,
   },
 };
 
