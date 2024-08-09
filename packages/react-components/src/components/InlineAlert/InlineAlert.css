@@ -1,0 +1,96 @@
+.bcds-Inline-Alert {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--layout-margin-small);
+  padding: var(--layout-padding-medium) var(--layout-padding-large);
+}
+
+/* Alert content */
+.bcds-Inline-Alert--container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.bcds-Inline-Alert--container > .title {
+  font: var(--typography-bold-body);
+  color: var(--typography-color-primary);
+}
+
+.bcds-Inline-Alert--container > .description {
+  font: var(--typography-regular-body);
+  color: var(--typography-color-primary);
+}
+
+/* Left icon */
+.bcds-Inline-Alert--icon {
+  display: inline-flex;
+  align-self: flex-start;
+  padding-top: var(--layout-padding-xsmall);
+}
+
+.bcds-Inline-Alert--icon > svg {
+  min-width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
+}
+
+/* Close icon button */
+.bcds-Inline-Alert--closeIcon {
+  display: inline-flex;
+  align-self: first baseline;
+  color: var(--icons-color-primary);
+}
+
+.bcds-Inline-Alert--closeIcon > svg {
+  min-width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
+}
+
+/* Info variant */
+.bcds-Inline-Alert.info {
+  background-color: var(--support-surface-color-info);
+  border: var(--layout-border-width-small) solid
+    var(--support-border-color-info);
+  border-radius: var(--layout-border-radius-medium);
+}
+
+.bcds-Inline-Alert.info > .bcds-Inline-Alert--icon {
+  color: var(--icons-color-info);
+}
+
+/* Success variant */
+.bcds-Inline-Alert.success {
+  background-color: var(--suport-surface-color-success);
+  border: var(--layout-border-width-small) solid
+    var(--support-border-color-success);
+  border-radius: var(--layout-border-radius-medium);
+}
+
+.bcds-Inline-Alert.success > .bcds-Inline-Alert--icon {
+  color: var(--icons-color-success);
+}
+
+/* Warning variant */
+.bcds-Inline-Alert.warning {
+  background-color: var(--support-surface-color-warning);
+  border: var(--layout-border-width-small) solid
+    var(--support-border-color-warning);
+  border-radius: var(--layout-border-radius-medium);
+}
+
+.bcds-Inline-Alert.warning > .bcds-Inline-Alert--icon {
+  color: var(--icons-color-warning);
+}
+
+/* Danger variant */
+.bcds-Inline-Alert.danger {
+  background-color: var(--support-surface-color-danger);
+  border: var(--layout-border-width-small) solid
+    var(--support-border-color-danger);
+  border-radius: var(--layout-border-radius-medium);
+}
+
+.bcds-Inline-Alert.danger > .bcds-Inline-Alert--icon {
+  color: var(--icons-color-danger);
+}
