@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { InlineAlert, Button } from "../components";
+import { InlineAlert } from "../components";
 import { InlineAlertProps } from "@/components/InlineAlert";
 
 const meta = {
@@ -98,23 +98,5 @@ export const CloseableAlert: Story = {
   args: {
     title: "This alert is closeable",
     isCloseable: true,
-  },
-};
-
-export const InlineAlertWithActions: Story = {
-  args: {
-    variant: "success",
-    title: "This is a success alert with some additional actions",
-    description:
-      "This alert uses button components in the children slot to provide additional actions for the user to take.",
-    isCloseable: true,
-    children: [
-      <Button variant="secondary" size="small">
-        Do a smaller thing
-      </Button>,
-      <Button variant="primary" size="small">
-        Do a thing
-      </Button>,
-    ],
   },
 };

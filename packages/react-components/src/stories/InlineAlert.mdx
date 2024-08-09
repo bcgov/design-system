@@ -76,17 +76,15 @@ Pass `isIconHidden` to hide the theme icon on the left:
 
 <Canvas of={InlineAlertStories.InlineAlertWithoutIcon} />
 
+Alternatively, you can use pass components and content into the `children` slot, replacing the default `title` and `description` pattern with your own composition.
+
 ### Closeable alerts
 
 Pass `isCloseable` to display a close button on the right-hand side of the alert:
 
 <Canvas of={InlineAlertStories.CloseableAlert} />
 
-### Additional actions
-
-An inline alert has a `children` slot, into which you can pass additional components. It is designed to work well with [the button component](?path=/docs/components-button-button--docs), to enable the user to take additional actions:
-
-<Canvas of={InlineAlertStories.InlineAlertWithActions} />
+Use the `onClose` prop to pass a callback function that is called when the close button is pressed. Use `onClose` to configure the close/hide behaviour with your app's state management library.
 
 ### ARIA roles
 

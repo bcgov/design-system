@@ -62,14 +62,17 @@ export default function InlineAlert({
         role={role}
         aria-labelledby="alert-title"
       >
-        <span className="title" id="alert-title">
-          {title}
-        </span>
-        {description && <span className="description">{description}</span>}
-        {children && (
-          <div className="actions">
-            <>{children}</>
-          </div>
+        {children ? (
+          children
+        ) : (
+          <>
+            {title && (
+              <span className="title" id="alert-title">
+                {title}
+              </span>
+            )}
+            {description && <span className="description">{description}</span>}
+          </>
         )}
       </div>
       {isCloseable && (

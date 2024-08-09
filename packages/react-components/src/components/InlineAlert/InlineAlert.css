@@ -23,14 +23,6 @@
   color: var(--typography-color-primary);
 }
 
-.bcds-Inline-Alert--container > .actions {
-  display: flex;
-  flex-direction: row;
-  align-self: flex-end;
-  gap: var(--layout-margin-small);
-  padding: var(--layout-padding-small) var(--layout-padding-none);
-}
-
 /* Left icon */
 .bcds-Inline-Alert--icon {
   display: inline-flex;
