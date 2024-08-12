@@ -2,6 +2,7 @@ import React from "react";
 import "./InlineAlert.css";
 import {
   Button,
+  ButtonGroup,
   SvgInfoIcon,
   SvgCheckCircleIcon,
   SvgExclamationIcon,
@@ -16,6 +17,8 @@ export interface InlineAlertProps extends React.PropsWithChildren {
   title?: string;
   /* Alert description */
   description?: string;
+  /* Button group */
+  buttons?: React.ReactNode;
   /* Alert closeable state */
   isCloseable?: boolean;
   /* Show or hide left icon */
@@ -48,6 +51,7 @@ export default function InlineAlert({
   isIconHidden = false,
   isCloseable = false,
   role = "note",
+  buttons,
   children,
   onClose,
   ...props
@@ -60,7 +64,7 @@ export default function InlineAlert({
       <div
         className="bcds-Inline-Alert--container"
         role={role}
-        aria-labelledby="alert-title"
+        aria-labelledby="alert-title" // this doesn't work
       >
         {children ? (
           children
@@ -72,6 +76,11 @@ export default function InlineAlert({
               </span>
             )}
             {description && <span className="description">{description}</span>}
+            {buttons && (
+              <ButtonGroup alignment="end" orientation="horizontal">
+                {buttons}
+              </ButtonGroup>
+            )}
           </>
         )}
       </div>
