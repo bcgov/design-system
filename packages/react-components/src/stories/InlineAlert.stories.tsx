@@ -87,7 +87,7 @@ export const DangerAlert: Story = {
     variant: "danger",
     title: "This is an alert with the 'danger' theme",
     description:
-      "Use this alert theme to communicate an urgent warning or error to the user",
+      "Use this alert theme to communicate an urgent warning or error to the user.",
   },
 };
 
@@ -109,7 +109,7 @@ export const AlertWithButtons: Story = {
   args: {
     title: "This is an alert with additional buttons",
     description:
-      "It renders a ButtonGroup area, into which you can pass button components",
+      "It renders a ButtonGroup area, into which you can pass button components.",
     variant: "success",
     buttons: [
       <Button variant="primary">Button 1</Button>,
