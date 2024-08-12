@@ -34,16 +34,14 @@ export default function InlineAlertPage() {
         <InlineAlert
           variant="info"
           title="This is an alert that also has additional actions"
-          description="It uses button components in the children slot to display additional important actions that the user can take."
-          children={[
-            <>
-              <Button variant="secondary" size="small">
-                This is a secondary button
-              </Button>
-              <Button variant="primary" size="small">
-                This is a primary button
-              </Button>
-            </>,
+          description="It uses button components to display additional important actions that the user can take."
+          buttons={[
+            <Button variant="secondary" size="small">
+              This is a secondary button
+            </Button>,
+            <Button variant="primary" size="small">
+              This is a primary button
+            </Button>,
           ]}
         />
         <InlineAlert
@@ -53,7 +51,7 @@ export default function InlineAlertPage() {
         />
         <InlineAlert
           variant="info"
-          hideIcon={true}
+          isIconHidden={true}
           title="This alert has no icon"
         />
       </div>
