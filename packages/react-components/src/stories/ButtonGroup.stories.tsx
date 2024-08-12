@@ -20,7 +20,7 @@ const meta = {
       control: { type: "radio" },
       description: "Alignment of buttons within group",
     },
-    "aria-label": {
+    ariaLabel: {
       control: { type: "text" },
       description: "Semantic label for the button group",
     },
@@ -34,6 +34,7 @@ export const ButtonGroupTemplate: Story = {
   args: {
     alignment: "start",
     orientation: "horizontal",
+    ariaLabel: "A group of buttons",
     children: [
       <Button variant="primary">Button 1</Button>,
       <Button variant="secondary">Button 2</Button>,

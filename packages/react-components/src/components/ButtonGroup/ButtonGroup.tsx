@@ -6,12 +6,13 @@ export interface ButtonGroupProps extends React.PropsWithChildren {
   /* Sets alignment of button group */
   alignment?: "start" | "center" | "end";
   /* Semantic label for button group */
-  "aria-label"?: string | undefined;
+  ariaLabel?: string | undefined;
 }
 
 export default function ButtonGroup({
   orientation = "horizontal",
   alignment = "start",
+  ariaLabel,
   children,
   ...props
 }: ButtonGroupProps) {
@@ -19,6 +20,7 @@ export default function ButtonGroup({
     <div
       className={`bcds-ButtonGroup ${orientation} ${alignment}`}
       role="group"
+      aria-label={ariaLabel}
       {...props}
     >
       {children}
