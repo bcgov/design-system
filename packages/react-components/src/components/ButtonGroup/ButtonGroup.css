@@ -1,6 +1,7 @@
 .bcds-ButtonGroup {
   display: flex;
   gap: var(--layout-margin-small);
+  flex-grow: 1;
 }
 
 .bcds-ButtonGroup.horizontal {
@@ -9,4 +10,12 @@
 
 .bcds-ButtonGroup.vertical {
   flex-direction: column;
+}
+
+.bcds-ButtonGroup.start {
+  align-items: flex-start;
+}
+
+.bcds-ButtonGroup.end {
+  align-items: flex-end;
 }
