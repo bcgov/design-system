@@ -10,8 +10,8 @@ export interface ButtonGroupProps extends React.PropsWithChildren {
 }
 
 export default function ButtonGroup({
-  orientation,
-  alignment,
+  orientation = "horizontal",
+  alignment = "start",
   children,
   ...props
 }: ButtonGroupProps) {
