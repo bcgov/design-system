@@ -4,7 +4,7 @@ import { Button, ButtonGroup } from "../components";
 import { ButtonGroupProps } from "@/components/ButtonGroup";
 
 const meta = {
-  title: "Components/Button/Button group",
+  title: "Components/Button/ButtonGroup",
   component: ButtonGroup,
   parameters: {
     layout: "centered",

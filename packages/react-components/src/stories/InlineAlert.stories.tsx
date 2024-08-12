@@ -23,6 +23,10 @@ const meta = {
       control: { type: "text" },
       description: "Sets the alert text",
     },
+    buttons: {
+      control: { type: "object" },
+      description: "Expects an array of button components",
+    },
     isIconHidden: {
       control: { type: "boolean" },
       description: "Show or hide the left icon",
