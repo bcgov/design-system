@@ -16,6 +16,10 @@
   justify-content: flex-start;
 }
 
+.bcds-ButtonGroup.center {
+  justify-content: center;
+}
+
 .bcds-ButtonGroup.end {
   justify-content: flex-end;
 }

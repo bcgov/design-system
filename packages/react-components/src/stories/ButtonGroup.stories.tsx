@@ -4,7 +4,7 @@ import { Button, ButtonGroup } from "../components";
 import { ButtonGroupProps } from "@/components/ButtonGroup";
 
 const meta = {
-  title: "Utility/Button group",
+  title: "Components/Button/Button group",
   component: ButtonGroup,
   parameters: {
     layout: "centered",
@@ -13,7 +13,12 @@ const meta = {
     orientation: {
       options: ["horizontal", "vertical"],
       control: { type: "radio" },
-      description: "Layout of button group",
+      description: "Layout of button group as a whole",
+    },
+    alignment: {
+      options: ["start", "center", "end"],
+      control: { type: "radio" },
+      description: "Alignment of buttons within group",
     },
     "aria-label": {
       control: { type: "text" },
@@ -27,6 +32,7 @@ type Story = StoryObj<typeof meta>;
 
 export const ButtonGroupTemplate: Story = {
   args: {
+    alignment: "start",
     orientation: "horizontal",
     children: [
       <Button variant="primary">Button 1</Button>,
@@ -41,6 +47,19 @@ export const VerticalButtonGroup: Story = {
   ...ButtonGroupTemplate,
   args: {
     orientation: "vertical",
+    children: [
+      <Button variant="primary">Button 1</Button>,
+      <Button variant="secondary">Button 2</Button>,
+      <Button variant="secondary">Button 3</Button>,
+    ],
+  },
+};
+
+export const CenteredButtonGroup: Story = {
+  ...ButtonGroupTemplate,
+  args: {
+    orientation: "horizontal",
+    alignment: "center",
     children: [
       <Button variant="primary">Button 1</Button>,
       <Button variant="secondary">Button 2</Button>,

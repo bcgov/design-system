@@ -4,7 +4,7 @@ export interface ButtonGroupProps extends React.PropsWithChildren {
   /* Sets layout of button group */
   orientation?: "horizontal" | "vertical";
   /* Sets alignment of button group */
-  alignment?: "start" | "end";
+  alignment?: "start" | "center" | "end";
   /* Semantic label for button group */
   "aria-label"?: string | undefined;
 }

@@ -11,6 +11,7 @@ import {
 } from "@storybook/blocks";
 
 import * as ButtonGroupStories from "./ButtonGroup.stories";
+import * as InlineAlertStories from "./InlineAlert.stories";
 
 <Meta of={ButtonGroupStories} />
 
@@ -19,8 +20,43 @@ import * as ButtonGroupStories from "./ButtonGroup.stories";
 <Subtitle>Layout component for buttons</Subtitle>
 
 <Source
-  code={`import { ButtonGroup} from "@bcgov/design-system-react-components";`}
+  code={`import { ButtonGroup } from "@bcgov/design-system-react-components";`}
   language="typescript"
 />
 
 ## Usage and resources
+
+ButtonGroup is a utility component intended for use when multiple buttons need to be rendered alongside one another. It contains basic styling to ensure proper spacing between the buttons.
+
+ButtonGroup renders a `<div>` with the [ARIA "group" role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). It expects an array of [buttons](/docs/components-button-button--docs), passed via the `children` prop.
+
+### Example
+
+ButtonGroup is used to populate buttons within the [Inline Alert component](/docs/components-inline-alert-inline-alert--docs):
+
+<Canvas of={InlineAlertStories.AlertWithButtons} />
+
+## Controls
+
+<Canvas of={ButtonGroupStories.ButtonGroupTemplate} />
+<Controls of={ButtonGroupStories.ButtonGroupTemplate} />
+
+## Layout
+
+By default, ButtonGroup renders buttons in a horizontal row, starting from the left edge.
+
+### Orientation
+
+Use the `orientation` prop to toggle the orientation of the button group between `horizontal` and `vertical` layouts:
+
+<Canvas of={ButtonGroupStories.VerticalButtonGroup} />
+
+### Alignment
+
+Use the `alignment` prop to set the alignment of the buttons within the group:
+
+- `start` (left or top, depending on orientation)
+- `center`
+- `end` (right or bottom, depending on orentation)
+
+<Canvas of={ButtonGroupStories.CenteredButtonGroup} />
