@@ -112,8 +112,12 @@ export const AlertWithButtons: Story = {
       "It renders a ButtonGroup area, into which you can pass button components.",
     variant: "success",
     buttons: [
-      <Button variant="primary">Button 1</Button>,
-      <Button variant="secondary">Button 2</Button>,
+      <Button variant="primary" size="small">
+        Button 1
+      </Button>,
+      <Button variant="secondary" size="small">
+        Button 2
+      </Button>,
     ],
   },
 };
