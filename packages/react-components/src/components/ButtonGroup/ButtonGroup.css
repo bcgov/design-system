@@ -1,2 +1,12 @@
 .bcds-ButtonGroup {
+  display: flex;
+  gap: var(--layout-margin-small);
+}
+
+.bcds-ButtonGroup.horizontal {
+  flex-direction: row;
+}
+
+.bcds-ButtonGroup.vertical {
+  flex-direction: column;
 }
