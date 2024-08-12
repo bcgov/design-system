@@ -64,7 +64,7 @@ export default function InlineAlert({
       <div
         className="bcds-Inline-Alert--container"
         role={role}
-        aria-labelledby="alert-title" // this doesn't work
+        aria-labelledby={"alert-title"}
       >
         {children ? (
           children
