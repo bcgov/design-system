@@ -35,11 +35,30 @@
   height: var(--icons-size-medium);
 }
 
-/* Close icon button */
+/* Closeable */
+.bcds-Inline-Alert.closeable {
+  /*
+    Because the close icon button is removed from the document flow, we
+    manually adjust the padding to push the `--container` element off the right
+    edge of the InlineAlert.
+  */
+  padding: var(--layout-padding-medium) 52px var(--layout-padding-medium)
+    var(--layout-padding-large);
+}
+
 .bcds-Inline-Alert--closeIcon {
-  display: inline-flex;
   align-self: first baseline;
   color: var(--icons-color-primary);
+  position: relative;
+}
+
+.bcds-Inline-Alert--closeIcon > button {
+  position: absolute;
+  /*
+    Centers the button vertically.
+    Button height (32px) minus line-height of text (27px) divided by 2.
+  */
+  top: -2.5px;
 }
 
 .bcds-Inline-Alert--closeIcon > svg {
