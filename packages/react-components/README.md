@@ -71,10 +71,13 @@ export default function App() {
 | Component               | React Aria Components docs link                            |
 | ----------------------- | ---------------------------------------------------------- |
 | Button                  | https://react-spectrum.adobe.com/react-aria/Button.html    |
+| ButtonGroup             | N/A                                                        |
 | Footer                  | N/A                                                        |
 | Form                    | https://react-spectrum.adobe.com/react-aria/Form.html      |
 | Header                  | N/A                                                        |
+| InlineAlert             | N/A                                                        |
 | Select                  | https://react-spectrum.adobe.com/react-aria/Select.html    |
+| Switch                  | https://react-spectrum.adobe.com/react-aria/Switch.html    |
 | TagGroup, TagList, Tag  | https://react-spectrum.adobe.com/react-aria/TagGroup.html  |
 | TextArea, TextField     | https://react-spectrum.adobe.com/react-aria/TextField.html |
 | Tooltip, TooltipTrigger | https://react-spectrum.adobe.com/react-aria/Tooltip.html   |
