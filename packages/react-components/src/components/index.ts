@@ -11,6 +11,8 @@ export { default as SvgBcLogo } from "./Icons/SvgBcLogo";
 export { default as SvgCheckCircleIcon } from "./Icons/SvgCheckCircleIcon";
 export { default as SvgExclamationIcon } from "./Icons/SvgExclamationIcon";
 export { default as SvgExclamationCircleIcon } from "./Icons/SvgExclamationCircleIcon";
+export { default as SvgChevronUpIcon } from "./Icons/SvgChevronUpIcon";
+export { default as SvgChevronDownIcon } from "./Icons/SvgChevronDownIcon";
 export { default as SvgCloseIcon } from "./Icons/SvgCloseIcon";
 export { default as SvgInfoIcon } from "./Icons/SvgInfoIcon";
 export { default as Tag } from "./Tag";
