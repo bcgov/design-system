@@ -57,7 +57,10 @@ export default function InlineAlert({
   ...props
 }: InlineAlertProps) {
   return (
-    <div className={`bcds-Inline-Alert ${variant}`} {...props}>
+    <div
+      className={`bcds-Inline-Alert ${variant} ${isCloseable ? "closeable" : null}`}
+      {...props}
+    >
       {!isIconHidden && (
         <span className="bcds-Inline-Alert--icon">{getIcon(variant)}</span>
       )}
