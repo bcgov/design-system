@@ -1,4 +1,5 @@
 import ButtonPage from "./Button";
+import ButtonGroupPage from "./ButtonGroup";
 import InlineAlertPage from "./InlineAlert";
 import SelectPage from "./Select";
 import TagGroupPage from "./TagGroup";
@@ -9,6 +10,7 @@ import TooltipPage from "./Tooltip";
 
 export {
   ButtonPage,
+  ButtonGroupPage,
   InlineAlertPage,
   SelectPage,
   TagGroupPage,

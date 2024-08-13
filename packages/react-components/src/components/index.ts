@@ -2,6 +2,7 @@ import "@bcgov/design-tokens/css/variables.css";
 
 export { default as InlineAlert } from "./InlineAlert";
 export { default as Button } from "./Button";
+export { default as ButtonGroup } from "./ButtonGroup";
 export { default as Header } from "./Header";
 export { default as Footer, FooterLinks } from "./Footer";
 export { default as Form } from "./Form";
