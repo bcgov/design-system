@@ -89,7 +89,7 @@ export default function InlineAlert({
           <Button
             variant="tertiary"
             isIconButton
-            size="small"
+            size="xsmall"
             aria-label="Close this alert"
             type="button"
             onPress={onClose}
