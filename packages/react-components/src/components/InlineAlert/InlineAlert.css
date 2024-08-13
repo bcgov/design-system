@@ -94,3 +94,8 @@
 .bcds-Inline-Alert.danger > .bcds-Inline-Alert--icon {
   color: var(--icons-color-danger);
 }
+
+/* Button group */
+.bcds-Inline-Alert--container > .bcds-ButtonGroup {
+  padding-top: var(--layout-padding-small);
+}

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { InlineAlert } from "../components";
+import { InlineAlert, Button } from "../components";
 import { InlineAlertProps } from "@/components/InlineAlert";
 
 const meta = {
@@ -22,6 +22,10 @@ const meta = {
     description: {
       control: { type: "text" },
       description: "Sets the alert text",
+    },
+    buttons: {
+      control: { type: "object" },
+      description: "Expects an array of button components",
     },
     isIconHidden: {
       control: { type: "boolean" },
@@ -83,7 +87,7 @@ export const DangerAlert: Story = {
     variant: "danger",
     title: "This is an alert with the 'danger' theme",
     description:
-      "Use this alert theme to communicate an urgent warning or error to the user",
+      "Use this alert theme to communicate an urgent warning or error to the user.",
   },
 };
 
@@ -98,5 +102,22 @@ export const CloseableAlert: Story = {
   args: {
     title: "This alert is closeable",
     isCloseable: true,
+  },
+};
+
+export const AlertWithButtons: Story = {
+  args: {
+    title: "This is an alert with additional buttons",
+    description:
+      "It renders a ButtonGroup area, into which you can pass button components.",
+    variant: "success",
+    buttons: [
+      <Button variant="primary" size="small">
+        Button 1
+      </Button>,
+      <Button variant="secondary" size="small">
+        Button 2
+      </Button>,
+    ],
   },
 };
