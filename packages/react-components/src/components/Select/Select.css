@@ -30,6 +30,10 @@
   color: var(--typography-color-danger);
 }
 
+.bcds-react-aria-Select--errorIcon > svg {
+  color: var(--icons-color-danger);
+}
+
 /* Select input equivalent */
 .bcds-react-aria-Select--Button {
   background-color: var(--surface-color-forms-default);
