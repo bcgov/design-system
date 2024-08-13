@@ -1,10 +1,15 @@
 # Changelog
 
-## 0.1.2
+## 0.1.3
 
 ### Added
 
 - ButtonGroup component
+
+## 0.1.2
+
+### Added
+
 - InlineAlert component
 - Switch component
 
