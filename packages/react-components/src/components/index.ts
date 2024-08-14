@@ -12,6 +12,7 @@ export { default as Select } from "./Select";
 export { default as SvgBcLogo } from "./Icons/SvgBcLogo";
 export { default as SvgCheckIcon } from "./Icons/SvgCheckIcon";
 export { default as SvgCheckCircleIcon } from "./Icons/SvgCheckCircleIcon";
+export { default as SvgDashIcon } from "./Icons/SvgDashIcon";
 export { default as SvgExclamationIcon } from "./Icons/SvgExclamationIcon";
 export { default as SvgExclamationCircleIcon } from "./Icons/SvgExclamationCircleIcon";
 export { default as SvgCloseIcon } from "./Icons/SvgCloseIcon";
