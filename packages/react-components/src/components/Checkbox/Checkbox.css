@@ -1,2 +1,42 @@
 .bcds-react-aria-Checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: var(--layout-margin-small);
+  align-items: center;
+}
+
+/* Checkbox */
+.bcds-react-aria-Checkbox > .checkbox {
+  width: var(--icons-size-small);
+  height: var(--icons-size-small);
+  min-width: var(--icons-size-small);
+  background-color: var(--surface-color-secondary-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-medium);
+  border-radius: var(--layout-border-radius-small);
+  cursor: pointer;
+}
+
+/* Label */
+.bcds-react-aria-Checkbox > .label {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+}
+
+/* States */
+.bcds-react-aria-Checkbox[data-hovered] > .checkbox {
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-dark);
+}
+
+.bcds-react-aria-Checkbox[data-pressed] > .checkbox {
+  background-color: var(--surface-color-primary-button-default);
+}
+
+.bcds-react-aria-Checkbox[data-selected] > .checkbox {
+  background-color: var(--surface-color-primary-button-default);
+}
+
+.bcds-react-aria-Checkbox[data-selected] > .checkbox > .icon {
+  color: var(--icons-color-primary-invert);
 }

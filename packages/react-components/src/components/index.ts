@@ -10,6 +10,7 @@ export { default as Footer, FooterLinks } from "./Footer";
 export { default as Form } from "./Form";
 export { default as Select } from "./Select";
 export { default as SvgBcLogo } from "./Icons/SvgBcLogo";
+export { default as SvgCheckIcon } from "./Icons/SvgCheckIcon";
 export { default as SvgCheckCircleIcon } from "./Icons/SvgCheckCircleIcon";
 export { default as SvgExclamationIcon } from "./Icons/SvgExclamationIcon";
 export { default as SvgExclamationCircleIcon } from "./Icons/SvgExclamationCircleIcon";
