@@ -9,10 +9,15 @@ import "./Checkbox.css";
 import React from "react";
 
 export interface CheckboxProps extends ReactAriaCheckboxProps {
-  children: React.ReactElement;
+  children: React.ReactNode;
 }
 
-export default function Checkbox({ children, ...props }: CheckboxProps) {
+export default function Checkbox({
+  isSelected,
+  isDisabled,
+  children,
+  ...props
+}: CheckboxProps) {
   return (
     <ReactAriaCheckbox className="bcds-react-aria-Checkbox" {...props}>
       <div className="checkbox">

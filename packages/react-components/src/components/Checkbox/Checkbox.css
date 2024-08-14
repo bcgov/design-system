@@ -7,6 +7,8 @@
 
 /* Checkbox */
 .bcds-react-aria-Checkbox > .checkbox {
+  display: flex;
+  justify-content: space-around;
   width: var(--icons-size-small);
   height: var(--icons-size-small);
   min-width: var(--icons-size-small);
@@ -17,26 +19,58 @@
   cursor: pointer;
 }
 
+.bcds-react-aria-Checkbox > .checkbox > .icon {
+  align-self: center;
+}
+
 /* Label */
 .bcds-react-aria-Checkbox > .label {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-secondary);
 }
 
-/* States */
+/* Focus */
+.bcds-react-aria-Checkbox[data-focused] > .checkbox {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+}
+
+/* Hover */
 .bcds-react-aria-Checkbox[data-hovered] > .checkbox {
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-dark);
 }
 
+.bcds-react-aria-Checkbox[data-selected][data-hovered] > .checkbox {
+  background-color: var(--surface-color-primary-button-hover);
+}
+
+/* Pressed */
 .bcds-react-aria-Checkbox[data-pressed] > .checkbox {
   background-color: var(--surface-color-primary-button-default);
 }
 
+/* Selected */
 .bcds-react-aria-Checkbox[data-selected] > .checkbox {
   background-color: var(--surface-color-primary-button-default);
 }
 
 .bcds-react-aria-Checkbox[data-selected] > .checkbox > .icon {
   color: var(--icons-color-primary-invert);
+}
+
+/* Disabled */
+.bcds-react-aria-Checkbox[data-disabled] > .checkbox {
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-medium);
+  background-color: var(--surface-color-forms-disabled);
+}
+
+.bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox {
+  background-color: var(--surface-color-forms-disabled);
+}
+
+.bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox > .icon {
+  color: var(--icons-color-disabled);
 }
