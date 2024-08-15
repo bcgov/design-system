@@ -24,7 +24,7 @@ export default function Checkbox({ children, ...props }: CheckboxProps) {
                 <SvgCheckIcon />
               </span>
             )}
-            {isIndeterminate && (
+            {isIndeterminate && !isSelected && (
               <span className="icon">
                 <SvgDashIcon />
               </span>
