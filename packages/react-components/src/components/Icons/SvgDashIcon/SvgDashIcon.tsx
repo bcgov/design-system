@@ -3,7 +3,7 @@ export default function SvgDashIcon({ id = "dash-icon" }) {
     <svg
       id={id}
       width="8"
-      height="2"
+      height="10"
       viewBox="0 0 8 2"
       xmlns="http://www.w3.org/2000/svg"
     >

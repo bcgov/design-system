@@ -83,4 +83,11 @@
 
 .bcds-react-aria-Checkbox[data-indeterminate] > .checkbox > .icon {
   color: var(--icons-color-primary-invert);
+  align-self: center;
+  vertical-align: middle;
+}
+
+/* Read-only */
+.bcds-react-aria-Checkbox[data-readonly] > .checkbox {
+  cursor: not-allowed;
 }

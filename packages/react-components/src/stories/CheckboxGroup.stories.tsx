@@ -1,22 +1,58 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Checkbox, CheckboxGroup } from "../components";
-import { CheckboxProps } from "../components/Checkbox";
 import { CheckboxGroupProps } from "../components/CheckboxGroup";
 
 const meta = {
-  title: "Components/Checkbox/CheckboxGroup",
+  title: "Components/CheckboxGroup",
   component: CheckboxGroup,
   parameters: {
     layout: "centered",
   },
-  argTypes: {},
+  argTypes: {
+    label: {
+      control: { type: "text" },
+      description: "Text label for checkbox group",
+    },
+    description: {
+      control: { type: "text" },
+      description: "Additional description or helper text",
+    },
+    orientation: {
+      control: { type: "radio" },
+      options: ["horizontal", "vertical"],
+      description: "Sets layout of checkboxes",
+    },
+    errorMessage: {
+      control: { type: "text" },
+      description: "Error message displayed when input is invalid",
+    },
+    children: {
+      control: { type: "object" },
+      description: "Expects an array of checkbox components",
+    },
+  },
 } satisfies Meta<typeof CheckboxGroup>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const CheckboxGroupTemplate: Story = {
-  args: {},
+  args: {
+    orientation: "vertical",
+    children: [
+      <Checkbox value="1">Checkbox 1</Checkbox>,
+      <Checkbox value="2">Checkbox 2</Checkbox>,
+      <Checkbox value="3">Checkbox 3</Checkbox>,
+      <Checkbox value="4" isDisabled>
+        Checkbox 4 is disabled
+      </Checkbox>,
+      <Checkbox value="5" isIndeterminate>
+        Checkbox 5 is indeterminate
+      </Checkbox>,
+      <Checkbox value="6">Checkboxes 6 and 7 are synced</Checkbox>,
+      <Checkbox value="6">Checkboxes 6 and 7 are synced</Checkbox>,
+    ],
+  },
   render: ({ ...args }: CheckboxGroupProps) => <CheckboxGroup {...args} />,
 };

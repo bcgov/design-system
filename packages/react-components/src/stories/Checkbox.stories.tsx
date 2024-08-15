@@ -4,7 +4,7 @@ import { Checkbox } from "../components";
 import { CheckboxProps } from "../components/Checkbox";
 
 const meta = {
-  title: "Components/Checkbox/Checkbox",
+  title: "Components/CheckboxGroup/Checkbox",
   component: Checkbox,
   parameters: {
     layout: "centered",
@@ -16,6 +16,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const CheckboxTemplate: Story = {
-  args: {},
+  args: { children: "This is a checkbox label" },
   render: ({ ...args }: CheckboxProps) => <Checkbox {...args} />,
 };
