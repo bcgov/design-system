@@ -65,6 +65,7 @@
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-medium);
   background-color: var(--surface-color-forms-disabled);
+  cursor: not-allowed;
 }
 
 .bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox {

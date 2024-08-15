@@ -16,7 +16,7 @@
 
 .bcds-react-aria-CheckboxGroup--options.horizontal {
   flex-direction: row;
-  gap: var(--layout-margin-large);
+  gap: var(--layout-margin-medium);
 }
 
 /* Parts */
