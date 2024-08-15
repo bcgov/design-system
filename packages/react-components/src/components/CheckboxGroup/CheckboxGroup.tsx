@@ -10,8 +10,12 @@ import type {
   ValidationResult,
 } from "react-aria-components";
 
+import "./CheckboxGroup.css";
+
 export interface CheckboxGroupProps extends ReactAriaCheckboxGroupProps {
   children?: React.ReactNode;
+  /* Group orientation */
+  orientation?: "horizontal" | "vertical";
   /* Group label */
   label?: string;
   /* Group description */
@@ -21,6 +25,7 @@ export interface CheckboxGroupProps extends ReactAriaCheckboxGroupProps {
 }
 
 export default function CheckboxGroup({
+  orientation = "vertical",
   label,
   description,
   errorMessage,
@@ -35,7 +40,9 @@ export default function CheckboxGroup({
       {label && (
         <Label className="bcds-react-aria-CheckboxGroup--label">{label}</Label>
       )}
-      {children}
+      <div className={`bcds-react-aria-CheckboxGroup--options ${orientation}`}>
+        {children}
+      </div>
       {description && (
         <Text
           slot="description"

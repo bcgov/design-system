@@ -74,3 +74,12 @@
 .bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox > .icon {
   color: var(--icons-color-disabled);
 }
+
+/* Indeterminate */
+.bcds-react-aria-Checkbox[data-indeterminate] > .checkbox {
+  background-color: var(--surface-color-primary-button-default);
+}
+
+.bcds-react-aria-Checkbox[data-indeterminate] > .checkbox > .icon {
+  color: var(--icons-color-primary-invert);
+}
