@@ -1,5 +1,6 @@
 .bcds-react-aria-CheckboxGroup {
   display: flex;
+  flex-direction: column;
   gap: var(--layout-margin-small);
 }
 
@@ -20,10 +21,19 @@
 
 /* Parts */
 .bcds-react-aria-CheckboxGroup--label {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-primary);
 }
 
 .bcds-react-aria-CheckboxGroup--description {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
 }
 
 .bcds-react-aria-CheckboxGroup--error {
+  display: inline-flex;
+  flex-direction: row;
+  gap: var(--layout-margin-xsmall);
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-danger);
 }

@@ -11,6 +11,7 @@ import type {
 } from "react-aria-components";
 
 import "./CheckboxGroup.css";
+import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 
 export interface CheckboxGroupProps extends ReactAriaCheckboxGroupProps {
   children?: React.ReactNode;
@@ -37,23 +38,34 @@ export default function CheckboxGroup({
       className="bcds-react-aria-CheckboxGroup"
       {...props}
     >
-      {label && (
-        <Label className="bcds-react-aria-CheckboxGroup--label">{label}</Label>
+      {({ isInvalid }) => (
+        <>
+          {label && (
+            <Label className="bcds-react-aria-CheckboxGroup--label">
+              {label}
+            </Label>
+          )}
+          <div
+            className={`bcds-react-aria-CheckboxGroup--options ${orientation}`}
+          >
+            {children}
+          </div>
+          {description && (
+            <Text
+              slot="description"
+              className="bcds-react-aria-CheckboxGroup--description"
+            >
+              {description}
+            </Text>
+          )}
+          {isInvalid && (
+            <div className="bcds-react-aria-CheckboxGroup--error">
+              <SvgExclamationIcon />
+              <FieldError>{errorMessage}</FieldError>
+            </div>
+          )}
+        </>
       )}
-      <div className={`bcds-react-aria-CheckboxGroup--options ${orientation}`}>
-        {children}
-      </div>
-      {description && (
-        <Text
-          slot="description"
-          className="bcds-react-aria-CheckboxGroup--description"
-        >
-          {description}
-        </Text>
-      )}
-      <FieldError className="bcds-react-aria-CheckboxGroup--error">
-        {errorMessage}
-      </FieldError>
     </ReactAriaCheckboxGroup>
   );
 }

@@ -4,7 +4,7 @@ export default function CheckboxGroupPage() {
   return (
     <>
       <h2>Checkboxes</h2>
-      <CheckboxGroup>
+      <CheckboxGroup label="Select some items">
         <Checkbox value="1">Checkbox 1</Checkbox>
         <Checkbox value="2">Checkbox 2</Checkbox>
         <Checkbox value="3" isIndeterminate>
@@ -17,9 +17,24 @@ export default function CheckboxGroupPage() {
         <Checkbox value="5">Checkbox 6 (same value as 5)</Checkbox>
       </CheckboxGroup>
       <h2>Horizontal checkboxes</h2>
-      <CheckboxGroup orientation="horizontal">
+      <CheckboxGroup orientation="horizontal" label="Select some items">
         <Checkbox value="1">Checkbox 1</Checkbox>
         <Checkbox value="2">Checkbox 2</Checkbox>
+        <Checkbox value="3">Checkbox 3</Checkbox>
+        <Checkbox value="4" isDisabled>
+          Checkbox 4
+        </Checkbox>
+      </CheckboxGroup>
+      <h2>Checkbox group with errors</h2>
+      <CheckboxGroup
+        label="Select some items"
+        isInvalid
+        errorMessage="This is an error message"
+      >
+        <Checkbox value="1">Checkbox 1</Checkbox>
+        <Checkbox value="2" isInvalid>
+          Checkbox 2 is invalid
+        </Checkbox>
         <Checkbox value="3">Checkbox 3</Checkbox>
         <Checkbox value="4" isDisabled>
           Checkbox 4
