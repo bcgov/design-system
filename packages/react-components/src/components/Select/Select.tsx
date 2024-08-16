@@ -18,11 +18,9 @@ import {
   ValidationResult,
 } from "react-aria-components";
 
-import {
-  SvgExclamationIcon,
-  SvgChevronUpIcon,
-  SvgChevronDownIcon,
-} from "@/components";
+import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
+import SvgChevronUpIcon from "../Icons/SvgChevronUpIcon";
+import SvgChevronDownIcon from "../Icons/SvgChevronDownIcon";
 
 import "./Select.css";
 
