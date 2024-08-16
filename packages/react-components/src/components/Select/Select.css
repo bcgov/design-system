@@ -30,7 +30,10 @@
   color: var(--typography-color-danger);
 }
 
-.bcds-react-aria-Select--errorIcon > svg {
+/* Error icon */
+.bcds-react-aria-Select[data-invalid]
+  > .bcds-react-aria-Select--Button
+  > svg:not(:last-child) {
   color: var(--icons-color-danger);
 }
 

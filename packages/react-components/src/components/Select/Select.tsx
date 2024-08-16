@@ -97,11 +97,7 @@ export default function Select<T extends object>({
                 return "Select an item";
               }}
             />
-            {isInvalid && (
-              <span className="bcds-react-aria-Select--errorIcon">
-                <SvgExclamationIcon />
-              </span>
-            )}
+            {isInvalid && <SvgExclamationIcon />}
             {isOpen ? <SvgChevronUpIcon /> : <SvgChevronDownIcon />}
           </Button>
           {description && (
