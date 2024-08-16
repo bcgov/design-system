@@ -30,6 +30,13 @@
   color: var(--typography-color-danger);
 }
 
+/* Error icon */
+.bcds-react-aria-Select[data-invalid]
+  > .bcds-react-aria-Select--Button
+  > svg:not(:last-child) {
+  color: var(--icons-color-danger);
+}
+
 /* Select input equivalent */
 .bcds-react-aria-Select--Button {
   background-color: var(--surface-color-forms-default);
