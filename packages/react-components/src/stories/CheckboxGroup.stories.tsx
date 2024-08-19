@@ -69,16 +69,27 @@ export const CheckboxGroupWithErrors: Story = {
     errorMessage: "Error messages can be customised or passed programmatically",
     children: [
       <Checkbox value="1" isRequired>
-        Checkbox 1
+        Option 1
       </Checkbox>,
-      <Checkbox value="2" isIndeterminate>
-        Checkbox 2
-      </Checkbox>,
-      <Checkbox value="3">Checkbox 3</Checkbox>,
-      <Checkbox value="4">Checkbox 4</Checkbox>,
+      <Checkbox value="2">Option 2</Checkbox>,
+      <Checkbox value="3">Option 3</Checkbox>,
+      <Checkbox value="4">Option 4</Checkbox>,
     ],
     isInvalid: true,
     isRequired: true,
   },
   render: ({ ...args }: CheckboxGroupProps) => <CheckboxGroup {...args} />,
+};
+
+export const HorizontalCheckboxGroup: Story = {
+  args: {
+    orientation: "horizontal",
+    label: "This checkbox group is laid out horizontally",
+    children: [
+      <Checkbox value="1">Option 1</Checkbox>,
+      <Checkbox value="2">Option 2</Checkbox>,
+      <Checkbox value="3">Option 3</Checkbox>,
+      <Checkbox value="4">Option 4</Checkbox>,
+    ],
+  },
 };
