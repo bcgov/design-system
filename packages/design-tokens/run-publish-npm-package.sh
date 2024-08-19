@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # The dist directory is used as the root for the published design tokens package
 cd dist
 

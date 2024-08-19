@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Remove existing dist target directories
 rm -rf dist/cjs*
 rm -rf dist/css*

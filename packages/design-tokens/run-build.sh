@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Remove existing build target directories
 rm -rf build/cjs*
 rm -rf build/css*
