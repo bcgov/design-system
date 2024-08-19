@@ -5,7 +5,7 @@
   "scripts": {
     "build": "./run-build.sh",
     "prepare-npm-package": "./run-prepare-npm-package.sh",
-    "publish-npm-package": "cd dist && npm publish --access public",
+    "publish-npm-package": "./run-publish-npm-package.sh",
     "test": "node --test build-output.test.js"
   },
   "type": "module",
