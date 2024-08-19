@@ -1,6 +1,8 @@
 import { exec } from "child_process";
+import { existsSync } from "fs";
 import { test } from "node:test";
 import assert from "node:assert";
+import { join } from "path";
 
 test("build-output.js should complete without errors", async () => {
   try {
@@ -23,5 +25,25 @@ test("build-output.js should complete without errors", async () => {
     assert.ok(true);
   } catch (error) {
     assert.fail(error.message);
+  }
+});
+
+test("output files should exist after running build-output.js", async () => {
+  const outputFiles = [
+    "build/css/variables.css",
+    "build/css-prefixed/variables.css",
+    "build/js/index.js",
+    "build/js/index.d.ts",
+    "build/js-prefixed/index.js",
+    "build/js-prefixed/index.d.ts",
+    "build/cjs/index.js",
+    "build/cjs/index.d.ts",
+    "build/cjs-prefixed/index.js",
+    "build/cjs-prefixed/index.d.ts",
+  ];
+
+  for (const file of outputFiles) {
+    const filePath = join(process.cwd(), file);
+    assert.ok(existsSync(filePath), `Expected file ${file} to exist`);
   }
 });
