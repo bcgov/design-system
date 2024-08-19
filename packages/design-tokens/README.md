@@ -18,12 +18,11 @@ See `dist/README.md` for how to use the design tokens in your project.
 
 ## Steps to update and publish tokens
 
-1. Update token data in the JSON file `input/tokens.json`.
+1. Update token data in the JSON file `input/tokens.json` and the `version` field in `./package.json`.
 2. Manually update composite tokens to include parent category. Ex: `{fontWeights.regular}` must become `{typography.fontWeights.regular}`.
 3. Run `npm run build` to run Style Dictionary, transforming the raw JSON data into usable token formats.
-4. Run `npm run prepare-npm-package` to copy the contents of `build` into `dist`.
-5. Manually update the package version in `dist/package.json`.
-6. Run `npm run publish-npm-package` to publish the contents of `dist` to npm.
+4. [Ensure `jq` is installed](https://jqlang.github.io/jq/) on your system and then run `npm run prepare-npm-package` to copy the contents of `build` into `dist`.
+5. Run `npm run publish-npm-package` to publish the contents of `dist` to npm (defaults to using the `latest` tag). If publishing to the pre-release `next` tag, use `npm run publish-npm-package -- --tag next`.
 
 ## Test the build script
 
