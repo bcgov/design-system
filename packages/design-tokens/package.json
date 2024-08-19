@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "Transformation pipeline for design tokens for B.C. Design System",
   "scripts": {
-    "build": "rm -rf build/cjs* && rm -rf build/css* && rm -rf build/js* && node build-output.js",
+    "build": "./run-build.sh",
     "prepare-npm-package": "rm -rf dist/cjs* && rm -rf dist/css* && rm -rf dist/js* && cp -R build/* dist",
     "publish-npm-package": "cd dist && npm publish --access public",
     "test": "node --test build-output.test.js"
