@@ -19,16 +19,8 @@ export default function Checkbox({ children, ...props }: CheckboxProps) {
       {({ isRequired, isSelected, isIndeterminate }) => (
         <>
           <div className="checkbox">
-            {isSelected && (
-              <span className="icon">
-                <SvgCheckIcon />
-              </span>
-            )}
-            {isIndeterminate && !isSelected && (
-              <span className="icon">
-                <SvgDashIcon />
-              </span>
-            )}
+            {isSelected && <SvgCheckIcon />}
+            {isIndeterminate && !isSelected && <SvgDashIcon />}
           </div>
           <span className="label">
             {children} {isRequired && "(required)"}

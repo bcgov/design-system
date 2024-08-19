@@ -7,7 +7,9 @@
 
 /* Checkbox */
 .bcds-react-aria-Checkbox > .checkbox {
+  align-self: first baseline;
   display: flex;
+  margin-top: var(--layout-margin-hair);
   justify-content: space-around;
   width: var(--icons-size-small);
   height: var(--icons-size-small);
@@ -19,7 +21,7 @@
   cursor: pointer;
 }
 
-.bcds-react-aria-Checkbox > .checkbox > .icon {
+.bcds-react-aria-Checkbox > .checkbox > svg {
   align-self: center;
 }
 
@@ -56,7 +58,7 @@
   background-color: var(--surface-color-primary-button-default);
 }
 
-.bcds-react-aria-Checkbox[data-selected] > .checkbox > .icon {
+.bcds-react-aria-Checkbox[data-selected] > .checkbox > svg {
   color: var(--icons-color-primary-invert);
 }
 
@@ -72,7 +74,7 @@
   background-color: var(--surface-color-forms-disabled);
 }
 
-.bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox > .icon {
+.bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox > svg {
   color: var(--icons-color-disabled);
 }
 
@@ -81,7 +83,7 @@
   background-color: var(--surface-color-primary-button-default);
 }
 
-.bcds-react-aria-Checkbox[data-indeterminate] > .checkbox > .icon {
+.bcds-react-aria-Checkbox[data-indeterminate] > .checkbox > svg {
   color: var(--icons-color-primary-invert);
   align-self: center;
   vertical-align: middle;
