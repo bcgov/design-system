@@ -1,5 +1,5 @@
 import { exec } from "child_process";
-import { existsSync } from "fs";
+import { existsSync, readFileSync } from "fs";
 import { test } from "node:test";
 import assert from "node:assert";
 import { join } from "path";
@@ -45,5 +45,59 @@ test("output files should exist after running build-output.js", async () => {
   for (const file of outputFiles) {
     const filePath = join(process.cwd(), file);
     assert.ok(existsSync(filePath), `Expected file ${file} to exist`);
+  }
+});
+
+test("theme.blue.100 should be present in all output files", async () => {
+  const checks = [
+    {
+      file: "build/css/variables.css",
+      token: "--theme-blue-100: #013366;",
+    },
+    {
+      file: "build/css-prefixed/variables.css",
+      token: "--bcds-theme-blue-100: #013366;",
+    },
+    {
+      file: "build/js/index.js",
+      token: 'export const themeBlue100 = "#013366";',
+    },
+    {
+      file: "build/js/index.d.ts",
+      token: "export const themeBlue100 : string;",
+    },
+    {
+      file: "build/js-prefixed/index.js",
+      token: 'export const bcdsThemeBlue100 = "#013366";',
+    },
+    {
+      file: "build/js-prefixed/index.d.ts",
+      token: "export const bcdsThemeBlue100 : string;",
+    },
+    {
+      file: "build/cjs/index.js",
+      token: '"themeBlue100": "#013366"',
+    },
+    {
+      file: "build/cjs/index.d.ts",
+      token: "export const themeBlue100 : string;",
+    },
+    {
+      file: "build/cjs-prefixed/index.js",
+      token: '"bcdsThemeBlue100": "#013366"',
+    },
+    {
+      file: "build/cjs-prefixed/index.d.ts",
+      token: "export const bcdsThemeBlue100 : string;",
+    },
+  ];
+
+  for (const { file, token } of checks) {
+    const filePath = join(process.cwd(), file);
+    const fileContent = readFileSync(filePath, "utf-8");
+    assert.ok(
+      fileContent.includes(token),
+      `Expected token "${token}" to be present in file ${file}`
+    );
   }
 });
