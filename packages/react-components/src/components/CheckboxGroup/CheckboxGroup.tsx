@@ -38,11 +38,11 @@ export default function CheckboxGroup({
       className="bcds-react-aria-CheckboxGroup"
       {...props}
     >
-      {({ isInvalid }) => (
+      {({ isRequired, isInvalid }) => (
         <>
           {label && (
             <Label className="bcds-react-aria-CheckboxGroup--label">
-              {label}
+              {label} {isRequired && "(required)"}
             </Label>
           )}
           <div

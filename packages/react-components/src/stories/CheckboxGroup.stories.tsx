@@ -39,9 +39,13 @@ type Story = StoryObj<typeof meta>;
 
 export const CheckboxGroupTemplate: Story = {
   args: {
+    label: "This is a checkbox group",
+    description: "This is some additional description text",
     orientation: "vertical",
     children: [
-      <Checkbox value="1">Checkbox 1</Checkbox>,
+      <Checkbox value="1" isRequired>
+        Checkbox 1
+      </Checkbox>,
       <Checkbox value="2">Checkbox 2</Checkbox>,
       <Checkbox value="3">Checkbox 3</Checkbox>,
       <Checkbox value="4" isDisabled>
@@ -53,6 +57,28 @@ export const CheckboxGroupTemplate: Story = {
       <Checkbox value="6">Checkboxes 6 and 7 are synced</Checkbox>,
       <Checkbox value="6">Checkboxes 6 and 7 are synced</Checkbox>,
     ],
+  },
+  render: ({ ...args }: CheckboxGroupProps) => <CheckboxGroup {...args} />,
+};
+
+export const CheckboxGroupWithErrors: Story = {
+  args: {
+    orientation: "vertical",
+    label: "This checkbox group has errors",
+    description: "Description and/or helper text",
+    errorMessage: "Error messages can be customised or passed programmatically",
+    children: [
+      <Checkbox value="1" isRequired>
+        Checkbox 1
+      </Checkbox>,
+      <Checkbox value="2" isIndeterminate>
+        Checkbox 2
+      </Checkbox>,
+      <Checkbox value="3">Checkbox 3</Checkbox>,
+      <Checkbox value="4">Checkbox 4</Checkbox>,
+    ],
+    isInvalid: true,
+    isRequired: true,
   },
   render: ({ ...args }: CheckboxGroupProps) => <CheckboxGroup {...args} />,
 };

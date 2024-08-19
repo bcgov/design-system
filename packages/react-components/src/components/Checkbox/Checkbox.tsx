@@ -16,7 +16,7 @@ export interface CheckboxProps extends ReactAriaCheckboxProps {
 export default function Checkbox({ children, ...props }: CheckboxProps) {
   return (
     <ReactAriaCheckbox className="bcds-react-aria-Checkbox" {...props}>
-      {({ isSelected, isIndeterminate }) => (
+      {({ isRequired, isSelected, isIndeterminate }) => (
         <>
           <div className="checkbox">
             {isSelected && (
@@ -30,7 +30,9 @@ export default function Checkbox({ children, ...props }: CheckboxProps) {
               </span>
             )}
           </div>
-          <span className="label">{children}</span>
+          <span className="label">
+            {children} {isRequired && "(required)"}
+          </span>
         </>
       )}
     </ReactAriaCheckbox>

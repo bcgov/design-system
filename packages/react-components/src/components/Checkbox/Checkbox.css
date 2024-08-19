@@ -91,3 +91,13 @@
 .bcds-react-aria-Checkbox[data-readonly] > .checkbox {
   cursor: not-allowed;
 }
+
+/* Invalid */
+.bcds-react-aria-Checkbox[data-invalid] > svg {
+  color: var(--icons-color-danger);
+}
+
+.bcds-react-aria-Checkbox[data-invalid] > .checkbox {
+  border: var(--layout-border-width-small) solid
+    var(--support-border-color-danger);
+}
