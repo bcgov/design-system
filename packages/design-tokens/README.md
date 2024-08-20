@@ -8,7 +8,7 @@ Questions? Please email the <a href="mailto:DesignSystem@gov.bc.ca">GDX OSS Desi
 
 ## Tokens usage
 
-See `dist/README.md` for how to use the design tokens in your project.
+See `dist/README.md` (the README shipped with [the published package](https://www.npmjs.com/package/@bcgov/design-tokens)) for how to use the design tokens in your project.
 
 ## Development workflow
 
