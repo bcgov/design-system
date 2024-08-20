@@ -67,7 +67,7 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Publish to npm with @next tag
-        run: npm run publish-npm-package -- --tag next
+        run: npm run publish-npm-package -- --access public --tag next
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         working-directory: ./packages/design-tokens
