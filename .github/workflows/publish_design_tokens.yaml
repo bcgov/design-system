@@ -35,6 +35,17 @@ jobs:
       - name: Install jq
         run: sudo apt-get install -y jq
 
+      - name: Run build script
+        run: npm run build
+        working-directory: ./packages/design-tokens
+
+      - name: Prepare npm package for publishing
+        run: npm run prepare-npm-package
+        working-directory: ./packages/design-tokens
+
+      - name: Set up .npmrc configuration
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
       # Use `jq` to change the package.json version to look like:
       #
       #   <version in package.json>-pr<PR # that caused the workflow run>
@@ -54,17 +65,6 @@ jobs:
           jq --arg new_version "$NEW_VERSION" '.version = $new_version' package.json > tmp.json && mv tmp.json package.json
         shell: bash
         working-directory: ./packages/design-tokens/dist
-
-      - name: Run build script
-        run: npm run build
-        working-directory: ./packages/design-tokens
-
-      - name: Prepare npm package for publishing
-        run: npm run prepare-npm-package
-        working-directory: ./packages/design-tokens
-
-      - name: Set up .npmrc configuration
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Publish to npm with @next tag
         run: npm run publish-npm-package -- --tag next
