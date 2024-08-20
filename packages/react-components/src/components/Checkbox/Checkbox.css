@@ -103,3 +103,7 @@
   border: var(--layout-border-width-small) solid
     var(--support-border-color-danger);
 }
+
+.bcds-react-aria-Checkbox[data-selected][data-invalid] > .checkbox {
+  background-color: var(--icons-color-danger);
+}
