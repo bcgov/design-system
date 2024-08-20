@@ -18,7 +18,7 @@ import * as CheckboxStories from "./Checkbox.stories";
 # CheckboxGroup
 
 <Subtitle>
-  A checkbox group enables the user to select one or more options from a list.
+  Checkboxes enable the user to select one or more options from a list.
 </Subtitle>
 
 <Source
@@ -35,7 +35,7 @@ Learn more about working with the CheckboxGroup and Checkbox components:
 
 This component is based on the React Aria [Checkbox](https://react-spectrum.adobe.com/react-aria/Checkbox.html) and [CheckboxGroup](https://react-spectrum.adobe.com/react-aria/CheckboxGroup.html) components. Consult the React Aria documentation for additional technical information.
 
-### validation
+### Validation
 
 Default and custom data validation support is built in, using the [React Aria FieldError subcomponent](https://react-spectrum.adobe.com/react-aria/CheckboxGroup.html#validation).
 
@@ -50,22 +50,27 @@ Each component has its own set of supported props.
 
 ## Controls
 
+### CheckboxGroup controls
+
 <Canvas of={CheckboxGroupStories.CheckboxGroupTemplate} />
 <Controls of={CheckboxGroupStories.CheckboxGroupTemplate} />
 
-## Checkbox
-
-`Checkbox` renders a focusable and selectable checkbox, along with a text label:
+### Checkbox controls
 
 <Canvas of={CheckboxStories.CheckboxTemplate} />
+<Controls of={CheckboxStories.CheckboxTemplate} />
 
-Pass the label text to the `children` slot. Each checkbox should also have a unique identifier, set via the `value` prop. This is used for data validation and submission.
+## Checkbox
+
+`Checkbox` renders a focusable and selectable checkbox, along with a text label (set via the `children` slot).
+
+Each checkbox should also have a unique identifier, set using the `value` prop. This is used for data validation and submission. If two checkboxes have the same `value`, selecting one will set both to `isSelected`.
 
 Use `defaultSelected` to make a checkbox selected by default:
 
 <Canvas of={CheckboxStories.DefaultSelectedCheckbox} />
 
-Use `isRequired` to mark a checkbox as mandatory:
+Use `isRequired` to mark a checkbox as mandatory and display a "(required)" label:
 
 <Canvas of={CheckboxStories.RequiredCheckbox} />
 
@@ -79,7 +84,7 @@ Set `isReadOnly` to lock a checkbox to its current value. A read-only checkbox c
 
 <Canvas of={CheckboxStories.ReadOnlyCheckbox} />
 
-A checkbox can be put in [an 'indeterminate' (neither selected nor deselected) state](https://react-spectrum.adobe.com/react-aria/Checkbox.html#indeterminate) using `isIndeterminate`:
+A checkbox can be put in [an 'indeterminate' (mixed/uncertain) state](https://react-spectrum.adobe.com/react-aria/Checkbox.html#indeterminate) using `isIndeterminate`:
 
 <Canvas of={CheckboxStories.IndeterminateCheckbox} />
 
@@ -98,6 +103,12 @@ If you do not provide a visible `label`, you must instead pass an `aria-label` p
 You can toggle the layout of a checkbox group between `vertical` (default) and `horizontal` using the `orientation` prop:
 
 <Canvas of={CheckboxGroupStories.HorizontalCheckboxGroup} />
+
+### Required input
+
+Pass `isRequired` to make input mandatory, and display an additional "(required)" label:
+
+<Canvas of={CheckboxGroupStories.RequiredCheckboxGroup} />
 
 ### Disabled state
 

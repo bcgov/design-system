@@ -12,7 +12,7 @@ const meta = {
   argTypes: {
     value: {
       control: { type: "text" },
-      description: "Unique identifier, used for validation and data submission",
+      description: "Unique identifier used for validation and data submission",
     },
     children: {
       control: { type: "object" },

@@ -23,13 +23,26 @@ const meta = {
       options: ["horizontal", "vertical"],
       description: "Sets layout of checkboxes",
     },
+    defaultValue: {
+      control: { type: "object" },
+      description:
+        "Array of values which should be selected by default (uncontrolled)",
+    },
     errorMessage: {
-      control: { type: "text" },
+      control: { type: "object" },
       description: "Error message displayed when input is invalid",
     },
     children: {
       control: { type: "object" },
-      description: "Expects an array of checkbox components",
+      description: "Expects an array of `Checkbox` components",
+    },
+    isRequired: {
+      control: { type: "boolean" },
+      description: "Whether an input is mandatory or optional",
+    },
+    isInvalid: {
+      control: { type: "boolean" },
+      description: "Set when input values are invalid",
     },
     isDisabled: {
       control: { type: "boolean" },
@@ -80,6 +93,19 @@ export const HorizontalCheckboxGroup: Story = {
   args: {
     orientation: "horizontal",
     label: "This checkbox group is laid out horizontally",
+    children: [
+      <Checkbox value="1">Option 1</Checkbox>,
+      <Checkbox value="2">Option 2</Checkbox>,
+      <Checkbox value="3">Option 3</Checkbox>,
+      <Checkbox value="4">Option 4</Checkbox>,
+    ],
+  },
+};
+
+export const RequiredCheckboxGroup: Story = {
+  args: {
+    label: "This checkbox group requires an input",
+    isRequired: true,
     children: [
       <Checkbox value="1">Option 1</Checkbox>,
       <Checkbox value="2">Option 2</Checkbox>,
