@@ -11,12 +11,15 @@ import {
 } from "@storybook/blocks";
 
 import * as CheckboxGroupStories from "./CheckboxGroup.stories";
+import * as CheckboxStories from "./Checkbox.stories";
 
 <Meta of={CheckboxGroupStories} />
 
 # CheckboxGroup
 
-<Subtitle>TKTK</Subtitle>
+<Subtitle>
+  A checkbox group enables the user to select one or more options from a list.
+</Subtitle>
 
 <Source
   code={`import { CheckboxGroup, Checkbox } from "@bcgov/design-system-react-components";`}
@@ -24,3 +27,60 @@ import * as CheckboxGroupStories from "./CheckboxGroup.stories";
 />
 
 ## Usage and resources
+
+Learn more about working with the CheckboxGroup and Checkbox components:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=074FAD78863442AEAF2453BC18B28D2A)
+- [View the select component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+This component is based on the React Aria [Checkbox](https://react-spectrum.adobe.com/react-aria/Checkbox.html) and [CheckboxGroup](https://react-spectrum.adobe.com/react-aria/CheckboxGroup.html) components. Consult the React Aria documentation for additional technical information.
+
+## Configuration
+
+A checkbox group comprises two components:
+
+- [Checkbox](#checkbox) defines an individual list item
+- [CheckboxGroup](#checkboxgroup-1) provides a wrapper for multiple `Checkbox` components, and handles state management and data validation
+
+Each component has its own set of supported props.
+
+## Controls
+
+<Canvas of={CheckboxGroupStories.CheckboxGroupTemplate} />
+<Controls of={CheckboxGroupStories.CheckboxGroupTemplate} />
+
+## Checkbox
+
+`Checkbox` renders a focusable and selectable checkbox, along with a text label:
+
+<Canvas of={CheckboxStories.CheckboxTemplate} />
+
+Pass the label text to the `children` slot. Each checkbox should also have a unique identifier, set via the `value` prop. This is used for data validation and submission.
+
+Use `defaultSelected` to make a checkbox selected by default:
+
+<Canvas of={CheckboxStories.DefaultSelectedCheckbox} />
+
+Use `isRequired` to mark a checkbox as mandatory:
+
+<Canvas of={CheckboxStories.RequiredCheckbox} />
+
+### States
+
+Disable a checkbox using `isDisabled`. A disabled checkbox cannot be focused or selected:
+
+<Canvas of={CheckboxStories.DisabledCheckbox} />
+
+Set `isReadOnly` to lock a checkbox to its current value. A read-only checkbox can be focused, but cannot be selected:
+
+<Canvas of={CheckboxStories.ReadOnlyCheckbox} />
+
+A checkbox can be put in [an 'indeterminate' (neither selected nor deselected) state](https://react-spectrum.adobe.com/react-aria/Checkbox.html#indeterminate) using `isIndeterminate`:
+
+<Canvas of={CheckboxStories.IndeterminateCheckbox} />
+
+`isIndeterminate` overrides the checkbox's appearance, until it is set to `false` (for example, conditionally based on other selections.)
+
+## CheckboxGroup
+
+`CheckboxGroup` wraps multiple `Checkbox` components into a group. It expects an array of checkboxes passed as `children`.
