@@ -31,6 +31,10 @@ const meta = {
       control: { type: "object" },
       description: "Expects an array of checkbox components",
     },
+    isDisabled: {
+      control: { type: "boolean" },
+      description: "Disables the entire checkbox group",
+    },
   },
 } satisfies Meta<typeof CheckboxGroup>;
 
@@ -40,7 +44,6 @@ type Story = StoryObj<typeof meta>;
 export const CheckboxGroupTemplate: Story = {
   args: {
     label: "This is a checkbox group",
-    description: "This is some additional description text",
     orientation: "vertical",
     children: [
       <Checkbox value="1" isRequired>
@@ -61,6 +64,45 @@ export const CheckboxGroupTemplate: Story = {
   render: ({ ...args }: CheckboxGroupProps) => <CheckboxGroup {...args} />,
 };
 
+export const CheckboxGroupWithLabelAndDescription: Story = {
+  args: {
+    label: "This is the primary label",
+    description: "This is an additional description field.",
+    children: [
+      <Checkbox value="1">Option 1</Checkbox>,
+      <Checkbox value="2">Option 2</Checkbox>,
+      <Checkbox value="3">Option 3</Checkbox>,
+    ],
+  },
+};
+
+export const HorizontalCheckboxGroup: Story = {
+  args: {
+    orientation: "horizontal",
+    label: "This checkbox group is laid out horizontally",
+    children: [
+      <Checkbox value="1">Option 1</Checkbox>,
+      <Checkbox value="2">Option 2</Checkbox>,
+      <Checkbox value="3">Option 3</Checkbox>,
+      <Checkbox value="4">Option 4</Checkbox>,
+    ],
+  },
+};
+
+export const DisabledCheckboxGroup: Story = {
+  args: {
+    label: "This checkbox group has been disabled",
+    description: "None of the options can be focused or selected",
+    isDisabled: true,
+    children: [
+      <Checkbox value="1">Option 1</Checkbox>,
+      <Checkbox value="2">Option 2</Checkbox>,
+      <Checkbox value="3">Option 3</Checkbox>,
+      <Checkbox value="4">Option 4</Checkbox>,
+    ],
+  },
+};
+
 export const CheckboxGroupWithErrors: Story = {
   args: {
     orientation: "vertical",
@@ -79,17 +121,4 @@ export const CheckboxGroupWithErrors: Story = {
     isRequired: true,
   },
   render: ({ ...args }: CheckboxGroupProps) => <CheckboxGroup {...args} />,
-};
-
-export const HorizontalCheckboxGroup: Story = {
-  args: {
-    orientation: "horizontal",
-    label: "This checkbox group is laid out horizontally",
-    children: [
-      <Checkbox value="1">Option 1</Checkbox>,
-      <Checkbox value="2">Option 2</Checkbox>,
-      <Checkbox value="3">Option 3</Checkbox>,
-      <Checkbox value="4">Option 4</Checkbox>,
-    ],
-  },
 };

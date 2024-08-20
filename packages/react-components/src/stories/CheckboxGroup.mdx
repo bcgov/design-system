@@ -35,6 +35,10 @@ Learn more about working with the CheckboxGroup and Checkbox components:
 
 This component is based on the React Aria [Checkbox](https://react-spectrum.adobe.com/react-aria/Checkbox.html) and [CheckboxGroup](https://react-spectrum.adobe.com/react-aria/CheckboxGroup.html) components. Consult the React Aria documentation for additional technical information.
 
+### validation
+
+Default and custom data validation support is built in, using the [React Aria FieldError subcomponent](https://react-spectrum.adobe.com/react-aria/CheckboxGroup.html#validation).
+
 ## Configuration
 
 A checkbox group comprises two components:
@@ -83,4 +87,30 @@ A checkbox can be put in [an 'indeterminate' (neither selected nor deselected) s
 
 ## CheckboxGroup
 
-`CheckboxGroup` wraps multiple `Checkbox` components into a group. It expects an array of checkboxes passed as `children`.
+`CheckboxGroup` wraps multiple checkboxes into a group. It expects an array of `Checkbox` components passed as `children`.
+
+Use the `label` and `description` props to explain the purpose of a checkbox group:
+
+<Canvas of={CheckboxGroupStories.CheckboxGroupWithLabelAndDescription} />
+
+If you do not provide a visible `label`, you must instead pass an `aria-label` prop for use by assistive technologies.
+
+You can toggle the layout of a checkbox group between `vertical` (default) and `horizontal` using the `orientation` prop:
+
+<Canvas of={CheckboxGroupStories.HorizontalCheckboxGroup} />
+
+### Disabled state
+
+You can disable an entire checkbox group using `isDisabled`:
+
+<Canvas of={CheckboxGroupStories.DisabledCheckboxGroup} />
+
+### Validation and error handling
+
+You can [configure validation behaviour](https://react-spectrum.adobe.com/react-aria/CheckboxGroup.html#validation) at the group or individual checkbox level. Set the `isInvalid` prop to display error messages based on your app's validation logic.
+
+You can also use a [Form wrapper](/docs/utility-form-wrapper--docs) to configure validation and submission behaviour for multiple input components.
+
+<Canvas of={CheckboxGroupStories.CheckboxGroupWithErrors} />
+
+`CheckboxGroup` uses the FieldError subcomponent to render error messages. You can pass custom or dynamically-generated content to the `errorMessage` slot.
