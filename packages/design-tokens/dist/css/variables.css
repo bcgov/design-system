@@ -101,7 +101,7 @@
   --typography-line-heights-auto: AUTO;
   --typography-font-weights-regular: 400;
   --typography-font-weights-bold: 700;
-  --typography-font-weights-italic: Italic;
+  --typography-font-weights-italic: Italic; /* DEPRECATED - will be removed in next major version. */
   --typography-font-weights-italic-weight: 400;
   --typography-font-weights-italic-style: italic;
   --typography-font-size-label: 0.75rem;

@@ -101,7 +101,7 @@
   --bcds-typography-line-heights-auto: AUTO;
   --bcds-typography-font-weights-regular: 400;
   --bcds-typography-font-weights-bold: 700;
-  --bcds-typography-font-weights-italic: Italic;
+  --bcds-typography-font-weights-italic: Italic; /* DEPRECATED - will be removed in next major version. */
   --bcds-typography-font-weights-italic-weight: 400;
   --bcds-typography-font-weights-italic-style: italic;
   --bcds-typography-font-size-label: 0.75rem;

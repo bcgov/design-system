@@ -103,6 +103,7 @@ export const typographyLineHeightsXxsparse : string;
 export const typographyLineHeightsAuto : string;
 export const typographyFontWeightsRegular : number;
 export const typographyFontWeightsBold : number;
+/** DEPRECATED - will be removed in next major version. */
 export const typographyFontWeightsItalic : string;
 export const typographyFontWeightsItalicWeight : number;
 export const typographyFontWeightsItalicStyle : string;
