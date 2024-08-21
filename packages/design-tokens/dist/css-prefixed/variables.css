@@ -14,96 +14,108 @@
   --bcds-surface-opacity-80: 0.8;
   --bcds-surface-opacity-90: 0.9;
   --bcds-surface-opacity-100: 1;
-  --bcds-surface-shadow-none: 0 0.30000001192092896px 0.8999999761581421px 0 #0000001a, 0 1.600000023841858px 3.5999999046325684px 0 #00000021;
-  --bcds-surface-shadow-small: 0 0.6000000238418579px 1.7999999523162842px 0 #0000001a, 0 3.200000047683716px 7.199999809265137px 0 #00000021; /* Primarily used as a hover effect for cards */
-  --bcds-surface-shadow-medium: 0 1.2000000476837158px 3.5999999046325684px 0 #0000001a, 0 6.400000095367432px 14.399999618530273px 0 #00000021; /* Primarily used for dropdown menus and tooltips */
-  --bcds-surface-shadow-large: 0 4.800000190734863px 14.399999618530273px 0 #0000002e, 0 25.600000381469727px 57.599998474121094px 0 #00000038; /* Primarily used for dialogs */
-  --bcds-surface-color-primary-button-default: #013366;
-  --bcds-surface-color-primary-button-hover: #1E5189;
-  --bcds-surface-color-primary-button-disabled: #EDEBE9;
-  --bcds-surface-color-primary-danger-button-default: #CE3E39;
-  --bcds-surface-color-primary-danger-button-hover: #A2312D;
-  --bcds-surface-color-primary-danger-button-disabled: #EDEBE9;
-  --bcds-surface-color-secondary-button-default: #FFFFFF;
-  --bcds-surface-color-secondary-button-hover: #EDEBE9;
-  --bcds-surface-color-secondary-button-disabled: #EDEBE9;
-  --bcds-surface-color-tertiary-button-default: rgba(255,255,255,0);
-  --bcds-surface-color-tertiary-button-hover: #ECEAE8;
-  --bcds-surface-color-tertiary-button-disabled: #EDEBE9;
-  --bcds-surface-color-menus-default: #FFFFFF;
-  --bcds-surface-color-menus-hover: #EDEBE9;
-  --bcds-surface-color-forms-default: #FFFFFF;
-  --bcds-surface-color-forms-disabled: #EDEBE9;
-  --bcds-surface-color-background-white: #FFFFFF;
-  --bcds-surface-color-background-light-gray: #FAF9F8;
-  --bcds-surface-color-background-light-blue: #F1F8FE;
-  --bcds-surface-color-background-dark-blue: #053662;
-  --bcds-surface-color-border-default: #D8D8D8;
-  --bcds-surface-color-border-medium: #898785;
-  --bcds-surface-color-border-dark: #353433;
-  --bcds-surface-color-border-active: #2E5DD7;
-  --bcds-surface-color-overlay-default: rgba(0,0,0,0.45);
+  --bcds-surface-shadow-none: 0 0.30000001192092896px 0.8999999761581421px 0 #0000001a, 0 1.600000023841858px 3.5999999046325684px 0 #00000021; /* Default shadow for most content and UI elements */
+  --bcds-surface-shadow-small: 0 0.6000000238418579px 1.7999999523162842px 0 #0000001a, 0 3.200000047683716px 7.199999809265137px 0 #00000021; /* Reduced shadow for secondary UI elements */
+  --bcds-surface-shadow-medium: 0 1.2000000476837158px 3.5999999046325684px 0 #0000001a, 0 6.400000095367432px 14.399999618530273px 0 #00000021; /* Standard shadow for UI elements like cards and buttons */
+  --bcds-surface-shadow-large: 0 4.800000190734863px 14.399999618530273px 0 #0000002e, 0 25.600000381469727px 57.599998474121094px 0 #00000038; /* Larger shadow for emphasis. Use sparingly */
+  --bcds-surface-color-primary-button-default: #013366; /* Default fill colour for primary buttons */
+  --bcds-surface-color-primary-button-hover: #1E5189; /* Fill colour used when user hovers over primary button */
+  --bcds-surface-color-primary-button-disabled: #EDEBE9; /* Fill colour for inactive primary buttons */
+  --bcds-surface-color-primary-danger-button-default: #CE3E39; /* Default fill colour for buttons in danger/warning state */
+  --bcds-surface-color-primary-danger-button-hover: #A2312D; /* Fill colour used when user hovers over danger/warning button */
+  --bcds-surface-color-primary-danger-button-disabled: #EDEBE9; /* Default fill colour for disabled danger/warning button */
+  --bcds-surface-color-primary-default: #013366; /* Default theme colour for components and layout */
+  --bcds-surface-color-primary-hover: #1E5189; /* Hover variant of surface.color.primary.default */
+  --bcds-surface-color-primary-pressed: #01264C; /* Selected/pressed variant of surface.color.primary.default */
+  --bcds-surface-color-primary-disabled: #EDEBE9; /* Disabled/inactive variant of surface.color.primary default */
+  --bcds-surface-color-secondary-button-default: #FFFFFF; /* Fill colour for secondary buttons */
+  --bcds-surface-color-secondary-button-hover: #EDEBE9; /* Fill colour used when user hovers over secondary button */
+  --bcds-surface-color-secondary-button-disabled: #EDEBE9; /* Fill colour for inactive secondary buttons */
+  --bcds-surface-color-secondary-button-pressed: #E0DEDC;
+  --bcds-surface-color-secondary-default: #FFFFFF; /* Light theme colour for components and layout */
+  --bcds-surface-color-secondary-hover: #EDEBE9; /* Hover variant of surface.color.secondary.default */
+  --bcds-surface-color-secondary-pressed: #E0DEDC; /* Selected/pressed variant of surface.color.secondary.default */
+  --bcds-surface-color-secondary-disabled: #EDEBE9; /* Disabled/inactive variant of surface.color.secondary default */
+  --bcds-surface-color-tertiary-button-default: rgba(255,255,255,0); /* Default fill colour for tertiary buttons */
+  --bcds-surface-color-tertiary-button-hover: #ECEAE8; /* Fill colour used when user hovers over tertiary button */
+  --bcds-surface-color-tertiary-button-disabled: #EDEBE9; /* Fill colour for inactive tertiary buttons */
+  --bcds-surface-color-tertiary-default: #FFFFFF; /* Alternative light theme colour for components and layout */
+  --bcds-surface-color-tertiary-hover: #ECEAE8; /* Hover variant of surface.color.tertiary.default */
+  --bcds-surface-color-tertiary-pressed: #E0DEDC; /* Selected/pressed variant of surface.color.tertiary.default */
+  --bcds-surface-color-tertiary-disabled: #EDEBE9; /* Disabled/inactive variant of surface.color.tertiary default */
+  --bcds-surface-color-menus-default: #FFFFFF; /* Default fill colour for menu items */
+  --bcds-surface-color-menus-hover: #EDEBE9; /* Fill colour used when user hovers over a menu item */
+  --bcds-surface-color-forms-default: #FFFFFF; /* Default fill colour for form/input fields */
+  --bcds-surface-color-forms-disabled: #EDEBE9; /* Fill colour for inactive/disabled form/input fields */
+  --bcds-surface-color-background-white: #FFFFFF; /* White background */
+  --bcds-surface-color-background-light-gray: #FAF9F8; /* Default background colour for layout */
+  --bcds-surface-color-background-light-blue: #F1F8FE; /* Light blue background */
+  --bcds-surface-color-background-dark-blue: #053662; /* Dark blue background */
+  --bcds-surface-color-border-default: #D8D8D8; /* Lighter border colour for UI elements */
+  --bcds-surface-color-border-medium: #898785; /* Default border colour for UI elements */
+  --bcds-surface-color-border-dark: #353433; /* Used as a hover colour for form fields and inputs */
+  --bcds-surface-color-border-active: #2E5DD7; /* Used as the active stroke colour for UI elements */
+  --bcds-surface-color-overlay-default: rgba(0,0,0,0.45); /* Background overlay colour for images and modal dialogues */
   --bcds-support-surface-color-info: #F7F9FC;
-  --bcds-support-surface-color-danger: #F4E1E2;
-  --bcds-support-surface-color-success: #F6FFF8;
-  --bcds-support-surface-color-warning: #FEF1D8;
-  --bcds-support-border-color-info: #053662;
-  --bcds-support-border-color-danger: #CE3E39;
-  --bcds-support-border-color-success: #42814A;
-  --bcds-support-border-color-warning: #F8BB47;
-  --bcds-icons-size-xsmall: 14px;
+  --bcds-support-surface-color-danger: #F4E1E2; /* Background colour for error, failure or danger messages */
+  --bcds-support-surface-color-success: #F6FFF8; /* Background colour for success messages */
+  --bcds-support-surface-color-warning: #FEF1D8; /* Background colour for warning messages */
+  --bcds-support-border-color-info: #053662; /* Border stroke for general/informational messages */
+  --bcds-support-border-color-danger: #CE3E39; /* Border stroke for error, failure or danger messages */
+  --bcds-support-border-color-success: #42814A; /* Border stroke for success messages */
+  --bcds-support-border-color-warning: #F8BB47; /* Border stroke for warning messages */
+  --bcds-icons-size-xsmall: 14px; /* Smallest icon size */
   --bcds-icons-size-small: 16px;
-  --bcds-icons-size-medium: 20px;
+  --bcds-icons-size-medium: 20px; /* Default icon size */
   --bcds-icons-size-large: 24px;
-  --bcds-icons-size-xlarge: 32px;
-  --bcds-icons-color-primary: #2D2D2D;
-  --bcds-icons-color-secondary: #474543;
-  --bcds-icons-color-disabled: #9F9D9C;
-  --bcds-icons-color-link: #255A90;
-  --bcds-icons-color-info: #053662;
-  --bcds-icons-color-danger: #CE3E39;
-  --bcds-icons-color-success: #42814A;
-  --bcds-icons-color-warning: #F8BB47;
-  --bcds-icons-color-primary-invert: #FFFFFF;
+  --bcds-icons-size-xlarge: 32px; /* Largest icon size */
+  --bcds-icons-color-primary: #2D2D2D; /* Default colour for icons */
+  --bcds-icons-color-secondary: #474543; /* Alternative colour for secondary/miscellaneous icons */
+  --bcds-icons-color-disabled: #9F9D9C; /* Use only for inactive/disabled icons */
+  --bcds-icons-color-link: #255A90; /* Use for hyperlinked icons */
+  --bcds-icons-color-info: #053662; /* Emphasis colour for icons in general/informational state */
+  --bcds-icons-color-danger: #CE3E39; /* Emphasis colour for icons in error, failure or danger state */
+  --bcds-icons-color-success: #42814A; /* Emphasis colour for icons in success state */
+  --bcds-icons-color-warning: #F8BB47; /* Emphasis colour for icons in warning state */
+  --bcds-icons-color-primary-invert: #FFFFFF; /* Default colour for icons on dark backgrounds */
   --bcds-layout-border-width-none: 0;
   --bcds-layout-border-width-small: 1px;
   --bcds-layout-border-width-medium: 2px;
   --bcds-layout-border-width-large: 4px;
-  --bcds-layout-padding-none: 0;
-  --bcds-layout-padding-xsmall: 0.25rem;
+  --bcds-layout-padding-none: 0; /* No padding */
+  --bcds-layout-padding-xsmall: 0.25rem; /* Smallest padding value for layout */
   --bcds-layout-padding-small: 0.5rem;
-  --bcds-layout-padding-medium: 1rem;
+  --bcds-layout-padding-medium: 1rem; /* Default padding value for layout */
   --bcds-layout-padding-large: 1.5rem;
-  --bcds-layout-padding-xlarge: 2rem;
-  --bcds-layout-margin-none: 0rem;
-  --bcds-layout-margin-hair: 0.125rem;
+  --bcds-layout-padding-xlarge: 2rem; /* Largest padding value for layout */
+  --bcds-layout-margin-none: 0rem; /* No margin */
+  --bcds-layout-margin-hair: 0.125rem; /* Smallest margin value for layout */
   --bcds-layout-margin-xsmall: 0.25rem;
-  --bcds-layout-margin-small: 0.5rem;
+  --bcds-layout-margin-small: 0.5rem; /* Default margin value for layout */
   --bcds-layout-margin-medium: 1rem;
   --bcds-layout-margin-large: 1.5rem;
   --bcds-layout-margin-xlarge: 2rem;
   --bcds-layout-margin-xxlarge: 2.5rem;
   --bcds-layout-margin-xxxlarge: 3rem;
-  --bcds-layout-margin-huge: 3.5rem;
+  --bcds-layout-margin-huge: 3.5rem; /* Largest margin value for layout */
   --bcds-layout-border-radius-none: 0;
   --bcds-layout-border-radius-small: 2px;
   --bcds-layout-border-radius-medium: 4px;
   --bcds-layout-border-radius-large: 6px;
-  --bcds-typography-font-families-bc-sans: 'BC Sans';
-  --bcds-typography-line-heights-xxxdense: 1.125rem;
+  --bcds-typography-font-families-bc-sans: 'BC Sans'; /* BC Sans font. Requires BC Sans package */
+  --bcds-typography-line-heights-xxxdense: 1.125rem; /* Smallest line height */
   --bcds-typography-line-heights-xxdense: 1.313rem;
   --bcds-typography-line-heights-xdense: 1.688rem;
   --bcds-typography-line-heights-dense: 1.913rem;
-  --bcds-typography-line-heights-regular: 2.125rem;
+  --bcds-typography-line-heights-regular: 2.125rem; /* Default line height */
   --bcds-typography-line-heights-sparse: 2.25rem;
   --bcds-typography-line-heights-xsparse: 3rem;
-  --bcds-typography-line-heights-xxsparse: 3.375rem;
-  --bcds-typography-line-heights-auto: AUTO;
-  --bcds-typography-font-weights-regular: 400;
-  --bcds-typography-font-weights-bold: 700;
-  --bcds-typography-font-weights-italic: Italic; /* DEPRECATED - will be removed in next major version. */
-  --bcds-typography-font-weights-italic-weight: 400;
-  --bcds-typography-font-weights-italic-style: italic;
+  --bcds-typography-line-heights-xxsparse: 3.375rem; /* Largest line height */
+  --bcds-typography-line-heights-auto: AUTO; /* System token, used to generate type styles */
+  --bcds-typography-font-weights-regular: 400; /* System token, used to generate text styles */
+  --bcds-typography-font-weights-bold: 700; /* System token, used to generate text styles */
+  --bcds-typography-font-weights-italic-weight: 400; /* System token, used to generate text styles */
+  --bcds-typography-font-weights-italic-style: italic; /* System token, used to generate text styles */
   --bcds-typography-font-size-label: 0.75rem;
   --bcds-typography-font-size-small-body: 0.875rem;
   --bcds-typography-font-size-body: 1rem;
@@ -114,84 +126,84 @@
   --bcds-typography-font-size-h2: 2rem;
   --bcds-typography-font-size-h1: 2.25rem;
   --bcds-typography-font-size-display: 3rem;
-  --bcds-typography-letter-spacing-0: 0em;
-  --bcds-typography-paragraph-spacing-0: 0;
-  --bcds-typography-regular-label: 400 0.75rem/1.125rem 'BC Sans';
-  --bcds-typography-regular-small-body: 400 0.875rem/1.313rem 'BC Sans';
-  --bcds-typography-regular-body: 400 1rem/1.688rem 'BC Sans';
-  --bcds-typography-regular-large-body: 400 1.125rem/1.913rem 'BC Sans';
-  --bcds-typography-regular-h6: 400 1.125rem/1.913rem 'BC Sans';
-  --bcds-typography-regular-h5: 400 1.25rem/2.125rem 'BC Sans';
-  --bcds-typography-regular-h4: 400 1.5rem/2.25rem 'BC Sans';
-  --bcds-typography-regular-h3: 400 1.75rem/3rem 'BC Sans';
-  --bcds-typography-regular-h2: 400 2rem/3.375rem 'BC Sans';
-  --bcds-typography-regular-h1: 400 2.25rem/3rem 'BC Sans';
-  --bcds-typography-regular-display: 400 3rem/AUTO 'BC Sans';
-  --bcds-typography-bold-label: 700 0.75rem/1.125rem 'BC Sans';
-  --bcds-typography-bold-small-body: 700 0.875rem/1.313rem 'BC Sans';
-  --bcds-typography-bold-body: 700 1rem/1.688rem 'BC Sans';
-  --bcds-typography-bold-large-body: 700 1.125rem/1.913rem 'BC Sans';
-  --bcds-typography-bold-h6: 700 1.125rem/1.913rem 'BC Sans';
-  --bcds-typography-bold-h5: 700 1.25rem/2.125rem 'BC Sans';
-  --bcds-typography-bold-h4: 700 1.5rem/2.25rem 'BC Sans';
-  --bcds-typography-bold-h3: 700 1.75rem/3rem 'BC Sans';
-  --bcds-typography-bold-h2: 700 2rem/3rem 'BC Sans';
-  --bcds-typography-bold-h1: 700 2.25rem/3.375rem 'BC Sans';
-  --bcds-typography-bold-display: 700 3rem/AUTO 'BC Sans';
-  --bcds-typography-italic-label: 400 italic 0.75rem/1.125rem 'BC Sans';
-  --bcds-typography-italic-small-body: 400 italic 0.875rem/1.313rem 'BC Sans';
-  --bcds-typography-italic-body: 400 italic 1rem/1.688rem 'BC Sans';
-  --bcds-typography-italic-large-body: 400 italic 1.125rem/1.913rem 'BC Sans';
-  --bcds-typography-italic-h6: 400 italic 1.125rem/1.913rem 'BC Sans';
-  --bcds-typography-italic-h5: 400 italic 1.25rem/2.125rem 'BC Sans';
-  --bcds-typography-italic-h4: 400 italic 1.5rem/2.25rem 'BC Sans';
-  --bcds-typography-italic-h3: 400 italic 1.75rem/3.375rem 'BC Sans';
-  --bcds-typography-italic-h2: 400 italic 2rem/3rem 'BC Sans';
-  --bcds-typography-italic-h1: 400 italic 2.25rem/3.375rem 'BC Sans';
-  --bcds-typography-italic-display: 400 italic 3rem/AUTO 'BC Sans';
+  --bcds-typography-letter-spacing-0: 0em; /* System token, used to generate type styles */
+  --bcds-typography-paragraph-spacing-0: 0; /* System token, used to generate type styles */
+  --bcds-typography-regular-label: 400 0.75rem/1.125rem 'BC Sans'; /* Labels and captions */
+  --bcds-typography-regular-small-body: 400 0.875rem/1.313rem 'BC Sans'; /* Smaller body text */
+  --bcds-typography-regular-body: 400 1rem/1.688rem 'BC Sans'; /* Default body text */
+  --bcds-typography-regular-large-body: 400 1.125rem/1.913rem 'BC Sans'; /* Larger body text */
+  --bcds-typography-regular-h6: 400 1.125rem/1.913rem 'BC Sans'; /* Alternate (unbolded) style for Heading 6 */
+  --bcds-typography-regular-h5: 400 1.25rem/2.125rem 'BC Sans'; /* Alternate (unbolded) style for Heading 5 */
+  --bcds-typography-regular-h4: 400 1.5rem/2.25rem 'BC Sans'; /* Alternate (unbolded) style for Heading 4 */
+  --bcds-typography-regular-h3: 400 1.75rem/3rem 'BC Sans'; /* Alternate (unbolded) style for Heading 3 */
+  --bcds-typography-regular-h2: 400 2rem/3.375rem 'BC Sans'; /* Alternate (unbolded) style for Heading 2 */
+  --bcds-typography-regular-h1: 400 2.25rem/3rem 'BC Sans'; /* Alternate (unbolded) style for Heading 1 */
+  --bcds-typography-regular-display: 400 3rem/AUTO 'BC Sans'; /* Extra-large body text size. Do not use for headings */
+  --bcds-typography-bold-label: 700 0.75rem/1.125rem 'BC Sans'; /* Labels and captions (bolded) */
+  --bcds-typography-bold-small-body: 700 0.875rem/1.313rem 'BC Sans'; /* Default for small body text (bolded) */
+  --bcds-typography-bold-body: 700 1rem/1.688rem 'BC Sans'; /* Default for body text (bolded) */
+  --bcds-typography-bold-large-body: 700 1.125rem/1.913rem 'BC Sans'; /* Larger text size for body text (bolded) */
+  --bcds-typography-bold-h6: 700 1.125rem/1.913rem 'BC Sans'; /* Default style for Heading 6. Includes all sizing/spacing values for H6 */
+  --bcds-typography-bold-h5: 700 1.25rem/2.125rem 'BC Sans'; /* Default style for Heading 6. Includes all sizing/spacing values for H5 */
+  --bcds-typography-bold-h4: 700 1.5rem/2.25rem 'BC Sans'; /* Default style for Heading 6. Includes all sizing/spacing values for H4 */
+  --bcds-typography-bold-h3: 700 1.75rem/3rem 'BC Sans'; /* Default style for Heading 6. Includes all sizing/spacing values for H3 */
+  --bcds-typography-bold-h2: 700 2rem/3rem 'BC Sans'; /* Default style for Heading 6. Includes all sizing/spacing values for H2 */
+  --bcds-typography-bold-h1: 700 2.25rem/3.375rem 'BC Sans'; /* Default style for Heading 6. Includes all sizing/spacing values for H1 */
+  --bcds-typography-bold-display: 700 3rem/AUTO 'BC Sans'; /* Extra-large font size (bolded). Do not use for headings */
+  --bcds-typography-italic-label: 400 italic 0.75rem/1.125rem 'BC Sans'; /* Labels and captions (italic) */
+  --bcds-typography-italic-small-body: 400 italic 0.875rem/1.313rem 'BC Sans'; /* Small body text (italic) */
+  --bcds-typography-italic-body: 400 italic 1rem/1.688rem 'BC Sans'; /* Default for body text (italic) */
+  --bcds-typography-italic-large-body: 400 italic 1.125rem/1.913rem 'BC Sans'; /* Larger text size for body text (italic) */
+  --bcds-typography-italic-h6: 400 italic 1.125rem/1.913rem 'BC Sans'; /* Alternate (italic) style for Heading 6 */
+  --bcds-typography-italic-h5: 400 italic 1.25rem/2.125rem 'BC Sans'; /* Alternate (italic) style for Heading 5 */
+  --bcds-typography-italic-h4: 400 italic 1.5rem/2.25rem 'BC Sans'; /* Alternate (italic) style for Heading 4 */
+  --bcds-typography-italic-h3: 400 italic 1.75rem/3.375rem 'BC Sans'; /* Alternate (italic) style for Heading 3 */
+  --bcds-typography-italic-h2: 400 italic 2rem/3rem 'BC Sans'; /* Alternate (italic) style for Heading 2 */
+  --bcds-typography-italic-h1: 400 italic 2.25rem/3.375rem 'BC Sans'; /* Alternate (italic) style for Heading 1 */
+  --bcds-typography-italic-display: 400 italic 3rem/AUTO 'BC Sans'; /* Extra-large font size (italic). Do not use for headings */
   --bcds-typography-text-case-none: none;
-  --bcds-typography-text-decoration-none: none;
-  --bcds-typography-paragraph-indent-0: 0px;
-  --bcds-typography-color-primary: #2D2D2D;
-  --bcds-typography-color-secondary: #474543;
-  --bcds-typography-color-placeholder: #9F9D9C;
-  --bcds-typography-color-disabled: #9F9D9C;
-  --bcds-typography-color-link: #255A90;
-  --bcds-typography-color-danger: #CE3E39;
-  --bcds-typography-color-primary-invert: #FFFFFF;
-  --bcds-typography-color-secondary-invert: #ECEAE8;
-  --bcds-theme-gold-10: #FEF8E8;
-  --bcds-theme-gold-20: #FEF0D8;
-  --bcds-theme-gold-30: #FDE9C4;
-  --bcds-theme-gold-40: #FCE2B0;
-  --bcds-theme-gold-50: #FBDA9D;
-  --bcds-theme-gold-60: #FBD389;
-  --bcds-theme-gold-70: #FACC75;
-  --bcds-theme-gold-80: #F9C462;
-  --bcds-theme-gold-90: #F8BA47;
-  --bcds-theme-gold-100: #FCBA19;
-  --bcds-theme-blue-10: #F1F8FE;
-  --bcds-theme-blue-20: #D8EAFD;
-  --bcds-theme-blue-30: #C1DDFC;
-  --bcds-theme-blue-40: #A8D0FB;
-  --bcds-theme-blue-50: #91C4FA;
-  --bcds-theme-blue-60: #7AB8F9;
-  --bcds-theme-blue-70: #5595D9;
-  --bcds-theme-blue-80: #3470B1;
-  --bcds-theme-blue-90: #1E5189;
-  --bcds-theme-blue-100: #013366;
-  --bcds-theme-gray-10: #FAF9F8;
-  --bcds-theme-gray-20: #F3F2F1;
-  --bcds-theme-gray-30: #ECEAE8;
-  --bcds-theme-gray-40: #E0DEDC;
-  --bcds-theme-gray-50: #D1CFCD;
-  --bcds-theme-gray-60: #C6C5C3;
-  --bcds-theme-gray-70: #9F9D9C;
-  --bcds-theme-gray-80: #605E5C;
-  --bcds-theme-gray-90: #3D3C3B;
-  --bcds-theme-gray-100: #353433;
-  --bcds-theme-gray-110: #252423;
-  --bcds-theme-gray-white: #FFFFFF;
-  --bcds-theme-primary-blue: #013366;
-  --bcds-theme-primary-gold: #FCBA19;
+  --bcds-typography-text-decoration-none: none; /* System token, used to generate type styles */
+  --bcds-typography-paragraph-indent-0: 0px; /* System token, used to generate type styles */
+  --bcds-typography-color-primary: #2D2D2D; /* Default colour for all body text and headings */
+  --bcds-typography-color-secondary: #474543; /* Alternative colour for secondary/miscellaneous text */
+  --bcds-typography-color-placeholder: #9F9D9C; /* Use for placeholder text in forms */
+  --bcds-typography-color-disabled: #9F9D9C; /* Use only for text in inactive user interface elements */
+  --bcds-typography-color-link: #255A90; /* Use for hyperlinks in body text and headings */
+  --bcds-typography-color-danger: #CE3E39; /* Use for error, failure or danger message text */
+  --bcds-typography-color-primary-invert: #FFFFFF; /* Default colour for text on dark backgrounds */
+  --bcds-typography-color-secondary-invert: #ECEAE8; /* Secondary colour for text on dark backgrounds */
+  --bcds-theme-gold-10: #FEF8E8; /* Gold scale — lightest */
+  --bcds-theme-gold-20: #FEF0D8; /* Gold scale */
+  --bcds-theme-gold-30: #FDE9C4; /* Gold scale */
+  --bcds-theme-gold-40: #FCE2B0; /* Gold scale */
+  --bcds-theme-gold-50: #FBDA9D; /* Gold scale */
+  --bcds-theme-gold-60: #FBD389; /* Gold scale */
+  --bcds-theme-gold-70: #FACC75; /* Gold scale */
+  --bcds-theme-gold-80: #F9C462; /* Gold scale */
+  --bcds-theme-gold-90: #F8BA47; /* Gold scale */
+  --bcds-theme-gold-100: #FCBA19; /* Gold scale — darkest */
+  --bcds-theme-blue-10: #F1F8FE; /* Blue scale — lightest */
+  --bcds-theme-blue-20: #D8EAFD; /* Blue scale */
+  --bcds-theme-blue-30: #C1DDFC; /* Blue scale */
+  --bcds-theme-blue-40: #A8D0FB; /* Blue scale */
+  --bcds-theme-blue-50: #91C4FA; /* Blue scale */
+  --bcds-theme-blue-60: #7AB8F9; /* Blue scale */
+  --bcds-theme-blue-70: #5595D9; /* Blue scale */
+  --bcds-theme-blue-80: #3470B1; /* Blue scale */
+  --bcds-theme-blue-90: #1E5189; /* Blue scale */
+  --bcds-theme-blue-100: #013366; /* Blue scale — darkest */
+  --bcds-theme-gray-10: #FAF9F8; /* Greyscale — lightest */
+  --bcds-theme-gray-20: #F3F2F1; /* Greyscale */
+  --bcds-theme-gray-30: #ECEAE8; /* Greyscale */
+  --bcds-theme-gray-40: #E0DEDC; /* Greyscale */
+  --bcds-theme-gray-50: #D1CFCD; /* Greyscale */
+  --bcds-theme-gray-60: #C6C5C3; /* Greyscale */
+  --bcds-theme-gray-70: #9F9D9C; /* Greyscale */
+  --bcds-theme-gray-80: #605E5C; /* Greyscale */
+  --bcds-theme-gray-90: #3D3C3B; /* Greyscale */
+  --bcds-theme-gray-100: #353433; /* Greyscale */
+  --bcds-theme-gray-110: #252423; /* Greyscale — darkest */
+  --bcds-theme-gray-white: #FFFFFF; /* White */
+  --bcds-theme-primary-blue: #013366; /* Primary Blue (Blue 100) */
+  --bcds-theme-primary-gold: #FCBA19; /* Primary Gold (Gold 100) */
 }
