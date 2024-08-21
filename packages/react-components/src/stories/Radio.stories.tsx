@@ -19,7 +19,7 @@ const meta = {
       description: "Text label",
     },
     isDisabled: {
-      control: { type: "boolean" },
+      control: "boolean",
       description: "Disables a radio button",
     },
   },

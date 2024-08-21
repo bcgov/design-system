@@ -1,2 +1,61 @@
 .bcds-react-aria-Radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--layout-margin-small);
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+  forced-color-adjust: none;
+}
+
+/* Selector */
+.bcds-react-aria-Radio:before {
+  content: "";
+  display: block;
+  width: var(--icons-size-xsmall);
+  height: var(--icons-size-xsmall);
+  box-sizing: border-box;
+  background-color: var(--surface-color-background-light-gray);
+  border-radius: var(--icons-size-small);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-medium);
+  transition: all 200ms;
+}
+
+/* Selected */
+.bcds-react-aria-Radio[data-selected] {
+  &:before {
+    border: 5px solid var(--surface-color-primary-button-default);
+  }
+}
+
+/* Focused */
+.bcds-react-aria-Radio[data-focus-visible] {
+  &:before {
+    outline: solid var(--layout-border-width-medium)
+      var(--surface-color-border-active);
+    outline-offset: var(--layout-margin-hair);
+  }
+}
+
+/* Disabled */
+.bcds-react-aria-Radio[data-disabled] {
+  color: var(--typography-color-disabled);
+
+  &:before {
+    cursor: not-allowed;
+  }
+}
+
+.bcds-react-aria-radio[data-selected][data-disabled] {
+  &:before {
+    border: 5px solid var(--surface-color-border-default);
+  }
+}
+
+/* Read only */
+.bcds-react-aria-Radio[data-readonly] {
+  &:before {
+    cursor: not-allowed;
+  }
 }

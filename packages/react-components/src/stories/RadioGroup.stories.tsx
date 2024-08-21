@@ -10,6 +10,11 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
+    orientation: {
+      control: { type: "radio" },
+      optioms: ["vertical", "horizontal"],
+      description: "Sets layout of radio buttons",
+    },
     label: {
       control: { type: "text" },
       description: "Labels a radio group",
@@ -32,7 +37,13 @@ export const RadioGroupTemplate: Story = {
   args: {
     label: "Text label",
     description: "Additional description text",
-    children: [<Radio value="1">Option 1</Radio>],
+    children: [
+      <Radio value="1">Option 1</Radio>,
+      <Radio value="2">Option 2</Radio>,
+      <Radio value="3" isDisabled>
+        Option 3
+      </Radio>,
+    ],
   },
   render: ({ ...args }: RadioGroupProps) => <RadioGroup {...args} />,
 };
