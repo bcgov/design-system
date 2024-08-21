@@ -1,6 +1,5 @@
 /**
- * Do not edit directly
- * Generated on Wed, 01 May 2024 18:02:21 GMT
+ * Do not edit directly, this file was auto-generated.
  */
 
 export const bcdsSurfaceOpacity0 : number;
@@ -105,6 +104,8 @@ export const bcdsTypographyLineHeightsAuto : string;
 export const bcdsTypographyFontWeightsRegular : number;
 export const bcdsTypographyFontWeightsBold : number;
 export const bcdsTypographyFontWeightsItalic : string;
+export const bcdsTypographyFontWeightsItalicWeight : number;
+export const bcdsTypographyFontWeightsItalicStyle : string;
 export const bcdsTypographyFontSizeLabel : string;
 export const bcdsTypographyFontSizeSmallBody : string;
 export const bcdsTypographyFontSizeBody : string;

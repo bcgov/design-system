@@ -1,6 +1,5 @@
 /**
- * Do not edit directly
- * Generated on Wed, 01 May 2024 18:02:21 GMT
+ * Do not edit directly, this file was auto-generated.
  */
 
 :root {
@@ -103,6 +102,8 @@
   --bcds-typography-font-weights-regular: 400;
   --bcds-typography-font-weights-bold: 700;
   --bcds-typography-font-weights-italic: Italic;
+  --bcds-typography-font-weights-italic-weight: 400;
+  --bcds-typography-font-weights-italic-style: italic;
   --bcds-typography-font-size-label: 0.75rem;
   --bcds-typography-font-size-small-body: 0.875rem;
   --bcds-typography-font-size-body: 1rem;

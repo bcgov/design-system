@@ -1,6 +1,5 @@
 /**
- * Do not edit directly
- * Generated on Wed, 01 May 2024 18:02:21 GMT
+ * Do not edit directly, this file was auto-generated.
  */
 
 module.exports = {
@@ -103,6 +102,8 @@ module.exports = {
   "typographyFontWeightsRegular": 400,
   "typographyFontWeightsBold": 700,
   "typographyFontWeightsItalic": "Italic",
+  "typographyFontWeightsItalicWeight": 400,
+  "typographyFontWeightsItalicStyle": "italic",
   "typographyFontSizeLabel": "0.75rem",
   "typographyFontSizeSmallBody": "0.875rem",
   "typographyFontSizeBody": "1rem",

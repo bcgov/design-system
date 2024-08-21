@@ -1,6 +1,5 @@
 /**
- * Do not edit directly
- * Generated on Wed, 01 May 2024 18:02:21 GMT
+ * Do not edit directly, this file was auto-generated.
  */
 
 export const surfaceOpacity0 : number;
@@ -105,6 +104,8 @@ export const typographyLineHeightsAuto : string;
 export const typographyFontWeightsRegular : number;
 export const typographyFontWeightsBold : number;
 export const typographyFontWeightsItalic : string;
+export const typographyFontWeightsItalicWeight : number;
+export const typographyFontWeightsItalicStyle : string;
 export const typographyFontSizeLabel : string;
 export const typographyFontSizeSmallBody : string;
 export const typographyFontSizeBody : string;
