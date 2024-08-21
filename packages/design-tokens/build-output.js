@@ -3,6 +3,77 @@ import StyleDictionary from "style-dictionary";
 
 register(StyleDictionary);
 
+// TODO: Remove the `bcds` custom transformations and keep the default new
+//       behavior for these tokens when we have a breaking change that will
+//       move us to a new major version.
+
+// Matches 6 or 8 digit hex color codes
+const hexColorRegex = /#([0-9a-fA-F]{6}([0-9a-fA-F]{2})?)/g;
+
+// Keep old capitalization of hex codes behavior.
+StyleDictionary.registerTransform({
+  name: "bcds/css/color/uppercase",
+  type: "value",
+  filter: function (token) {
+    return token.type === "color";
+  },
+  transform: function (token) {
+    return hexColorRegex.test(token)
+      ? token.original.value.toUpperCase()
+      : token.original.value;
+  },
+});
+
+// Matches dimension rules with leading "0" characters like "0px"
+const leadingZeroValueRegex = /^0(?:em||px|rem|%)$/g;
+
+// Keep old "0" dimension value behavior where units are left off the "0" token.
+StyleDictionary.registerTransform({
+  name: "bcds/css/size/zero",
+  type: "value",
+  filter: function (token) {
+    return token.type === "dimension";
+  },
+  transform: function (token) {
+    return leadingZeroValueRegex.test(token) ? "0" : token.original.value;
+  },
+});
+
+// Keep old "italic" font v3 values.
+// Without this transformation, the order of the `font` shorthand tokens for the
+// italic font faces has its first two values flipped. The new default format
+// with Style Dictionary v4 and sd-transforms v1 is better - it matches the CSS
+// `font` shorthand: https://developer.mozilla.org/en-US/docs/Web/CSS/font
+StyleDictionary.registerTransform({
+  name: "bcds/css/typography/italic",
+  type: "value",
+  transitive: true,
+  filter: function (token) {
+    if (token.type === "typography" && token?.name?.includes("Italic")) {
+      return true;
+    }
+
+    return false;
+  },
+  transform: function (token) {
+    // `token` ex: `italic 400 1rem/1.688rem 'BC Sans'`
+    const arr = token.value.split(" ");
+
+    let newArr = [];
+
+    arr.forEach((chunk, index) => {
+      if (index === 1) {
+        newArr.unshift(chunk);
+      } else {
+        newArr.push(chunk);
+      }
+    });
+
+    // Returns ex: `400 italic 1rem/1.688rem 'BC Sans'`
+    return newArr.join(" ");
+  },
+});
+
 const sd = new StyleDictionary({
   source: ["input/tokens.json"],
   preprocessors: ["tokens-studio"],
@@ -13,6 +84,9 @@ const sd = new StyleDictionary({
     css: {
       transformGroup: "tokens-studio",
       transforms: [
+        "bcds/css/typography/italic",
+        "bcds/css/color/uppercase",
+        "bcds/css/size/zero",
         "ts/descriptionToComment",
         "ts/size/px",
         "ts/opacity",
@@ -36,6 +110,9 @@ const sd = new StyleDictionary({
       transformGroup: "tokens-studio",
       prefix: "bcds",
       transforms: [
+        "bcds/css/typography/italic",
+        "bcds/css/color/uppercase",
+        "bcds/css/size/zero",
         "ts/descriptionToComment",
         "ts/size/px",
         "ts/opacity",
