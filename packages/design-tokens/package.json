@@ -1,6 +1,6 @@
 {
   "name": "design-tokens",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Transformation pipeline for design tokens for B.C. Design System",
   "scripts": {
     "build": "./run-build.sh",
