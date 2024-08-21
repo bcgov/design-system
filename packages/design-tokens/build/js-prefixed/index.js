@@ -1,6 +1,5 @@
 /**
- * Do not edit directly
- * Generated on Wed, 01 May 2024 18:02:21 GMT
+ * Do not edit directly, this file was auto-generated.
  */
 
 export const bcdsSurfaceOpacity0 = 0;
@@ -101,7 +100,9 @@ export const bcdsTypographyLineHeightsXxsparse = "3.375rem";
 export const bcdsTypographyLineHeightsAuto = "AUTO";
 export const bcdsTypographyFontWeightsRegular = 400;
 export const bcdsTypographyFontWeightsBold = 700;
-export const bcdsTypographyFontWeightsItalic = "Italic";
+export const bcdsTypographyFontWeightsItalic = "Italic"; // DEPRECATED - will be removed in next major version.
+export const bcdsTypographyFontWeightsItalicWeight = 400;
+export const bcdsTypographyFontWeightsItalicStyle = "italic";
 export const bcdsTypographyFontSizeLabel = "0.75rem";
 export const bcdsTypographyFontSizeSmallBody = "0.875rem";
 export const bcdsTypographyFontSizeBody = "1rem";

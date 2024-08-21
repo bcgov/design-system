@@ -1,6 +1,5 @@
 /**
- * Do not edit directly
- * Generated on Wed, 01 May 2024 18:02:21 GMT
+ * Do not edit directly, this file was auto-generated.
  */
 
 export const surfaceOpacity0 = 0;
@@ -101,7 +100,9 @@ export const typographyLineHeightsXxsparse = "3.375rem";
 export const typographyLineHeightsAuto = "AUTO";
 export const typographyFontWeightsRegular = 400;
 export const typographyFontWeightsBold = 700;
-export const typographyFontWeightsItalic = "Italic";
+export const typographyFontWeightsItalic = "Italic"; // DEPRECATED - will be removed in next major version.
+export const typographyFontWeightsItalicWeight = 400;
+export const typographyFontWeightsItalicStyle = "italic";
 export const typographyFontSizeLabel = "0.75rem";
 export const typographyFontSizeSmallBody = "0.875rem";
 export const typographyFontSizeBody = "1rem";
