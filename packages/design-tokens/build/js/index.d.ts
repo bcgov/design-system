@@ -103,6 +103,7 @@ export const typographyLineHeightsXxsparse : string;
 export const typographyLineHeightsAuto : string;
 export const typographyFontWeightsRegular : number;
 export const typographyFontWeightsBold : number;
+export const typographyFontWeightsItalic : string;
 export const typographyFontWeightsItalicWeight : number;
 export const typographyFontWeightsItalicStyle : string;
 export const typographyFontSizeLabel : string;

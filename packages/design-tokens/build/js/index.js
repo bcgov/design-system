@@ -100,6 +100,7 @@ export const typographyLineHeightsXxsparse = "3.375rem";
 export const typographyLineHeightsAuto = "AUTO";
 export const typographyFontWeightsRegular = 400;
 export const typographyFontWeightsBold = 700;
+export const typographyFontWeightsItalic = "Italic";
 export const typographyFontWeightsItalicWeight = 400;
 export const typographyFontWeightsItalicStyle = "italic";
 export const typographyFontSizeLabel = "0.75rem";

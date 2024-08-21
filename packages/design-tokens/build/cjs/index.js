@@ -101,6 +101,7 @@ module.exports = {
   "typographyLineHeightsAuto": "AUTO",
   "typographyFontWeightsRegular": 400,
   "typographyFontWeightsBold": 700,
+  "typographyFontWeightsItalic": "Italic",
   "typographyFontWeightsItalicWeight": 400,
   "typographyFontWeightsItalicStyle": "italic",
   "typographyFontSizeLabel": "0.75rem",

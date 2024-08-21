@@ -100,6 +100,7 @@ export const bcdsTypographyLineHeightsXxsparse = "3.375rem";
 export const bcdsTypographyLineHeightsAuto = "AUTO";
 export const bcdsTypographyFontWeightsRegular = 400;
 export const bcdsTypographyFontWeightsBold = 700;
+export const bcdsTypographyFontWeightsItalic = "Italic";
 export const bcdsTypographyFontWeightsItalicWeight = 400;
 export const bcdsTypographyFontWeightsItalicStyle = "italic";
 export const bcdsTypographyFontSizeLabel = "0.75rem";

@@ -103,6 +103,7 @@ export const bcdsTypographyLineHeightsXxsparse : string;
 export const bcdsTypographyLineHeightsAuto : string;
 export const bcdsTypographyFontWeightsRegular : number;
 export const bcdsTypographyFontWeightsBold : number;
+export const bcdsTypographyFontWeightsItalic : string;
 export const bcdsTypographyFontWeightsItalicWeight : number;
 export const bcdsTypographyFontWeightsItalicStyle : string;
 export const bcdsTypographyFontSizeLabel : string;

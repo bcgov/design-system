@@ -101,6 +101,7 @@ module.exports = {
   "bcdsTypographyLineHeightsAuto": "AUTO",
   "bcdsTypographyFontWeightsRegular": 400,
   "bcdsTypographyFontWeightsBold": 700,
+  "bcdsTypographyFontWeightsItalic": "Italic",
   "bcdsTypographyFontWeightsItalicWeight": 400,
   "bcdsTypographyFontWeightsItalicStyle": "italic",
   "bcdsTypographyFontSizeLabel": "0.75rem",
