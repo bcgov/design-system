@@ -1,12 +1,17 @@
-import { registerTransforms } from "@tokens-studio/sd-transforms";
+import { register } from "@tokens-studio/sd-transforms";
 import StyleDictionary from "style-dictionary";
 
-registerTransforms(StyleDictionary);
+register(StyleDictionary);
 
-const sd = StyleDictionary.extend({
+const sd = new StyleDictionary({
   source: ["input/tokens.json"],
+  preprocessors: ["tokens-studio"],
+  log: {
+    verbosity: "verbose",
+  },
   platforms: {
     css: {
+      transformGroup: "tokens-studio",
       transforms: [
         "ts/descriptionToComment",
         "ts/size/px",
@@ -15,13 +20,9 @@ const sd = StyleDictionary.extend({
         "ts/typography/fontWeight",
         "ts/resolveMath",
         "ts/size/css/letterspacing",
-        "ts/typography/css/fontFamily",
-        "ts/typography/css/shorthand",
-        "ts/border/css/shorthand",
-        "ts/shadow/css/shorthand",
         "ts/color/css/hexrgba",
         "ts/color/modifiers",
-        "name/cti/kebab",
+        "name/kebab",
       ],
       buildPath: "build/css/",
       files: [
@@ -32,6 +33,7 @@ const sd = StyleDictionary.extend({
       ],
     },
     cssPrefixed: {
+      transformGroup: "tokens-studio",
       prefix: "bcds",
       transforms: [
         "ts/descriptionToComment",
@@ -41,13 +43,9 @@ const sd = StyleDictionary.extend({
         "ts/typography/fontWeight",
         "ts/resolveMath",
         "ts/size/css/letterspacing",
-        "ts/typography/css/fontFamily",
-        "ts/typography/css/shorthand",
-        "ts/border/css/shorthand",
-        "ts/shadow/css/shorthand",
         "ts/color/css/hexrgba",
         "ts/color/modifiers",
-        "name/cti/kebab",
+        "name/kebab",
       ],
       buildPath: "build/css-prefixed/",
       files: [
@@ -118,5 +116,5 @@ const sd = StyleDictionary.extend({
   },
 });
 
-sd.cleanAllPlatforms();
-sd.buildAllPlatforms();
+await sd.cleanAllPlatforms();
+await sd.buildAllPlatforms();
