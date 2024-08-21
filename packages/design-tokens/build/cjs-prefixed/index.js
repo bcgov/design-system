@@ -1,6 +1,5 @@
 /**
- * Do not edit directly
- * Generated on Wed, 01 May 2024 18:02:21 GMT
+ * Do not edit directly, this file was auto-generated.
  */
 
 module.exports = {
@@ -102,7 +101,8 @@ module.exports = {
   "bcdsTypographyLineHeightsAuto": "AUTO",
   "bcdsTypographyFontWeightsRegular": 400,
   "bcdsTypographyFontWeightsBold": 700,
-  "bcdsTypographyFontWeightsItalic": "Italic",
+  "bcdsTypographyFontWeightsItalicWeight": 400,
+  "bcdsTypographyFontWeightsItalicStyle": "italic",
   "bcdsTypographyFontSizeLabel": "0.75rem",
   "bcdsTypographyFontSizeSmallBody": "0.875rem",
   "bcdsTypographyFontSizeBody": "1rem",
