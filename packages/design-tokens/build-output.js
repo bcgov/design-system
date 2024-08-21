@@ -12,7 +12,7 @@ const hexColorRegex = /#([0-9a-fA-F]{6}([0-9a-fA-F]{2})?)/g;
 
 // Keep old capitalization of hex codes behavior.
 StyleDictionary.registerTransform({
-  name: "bcds/css/color/uppercase",
+  name: "bcds/color/uppercase",
   type: "value",
   filter: function (token) {
     return token.type === "color";
@@ -39,13 +39,29 @@ StyleDictionary.registerTransform({
   },
 });
 
+StyleDictionary.registerTransform({
+  name: "bcds/js/size/zero",
+  type: "value",
+  filter: function (token) {
+    return token.type === "dimension";
+  },
+  transform: function (token) {
+    // `layout.margin.none` was already using "0rem" so handle it specifically.
+    if (["layoutMarginNone", "bcdsLayoutMarginNone"].includes(token.name)) {
+      return "0rem";
+    }
+
+    return token.value === "0rem" ? "0" : token.value;
+  },
+});
+
 // Keep old "italic" font v3 values.
 // Without this transformation, the order of the `font` shorthand tokens for the
 // italic font faces has its first two values flipped. The new default format
 // with Style Dictionary v4 and sd-transforms v1 is better - it matches the CSS
 // `font` shorthand: https://developer.mozilla.org/en-US/docs/Web/CSS/font
 StyleDictionary.registerTransform({
-  name: "bcds/css/typography/italic",
+  name: "bcds/typography/italic",
   type: "value",
   transitive: true,
   filter: function (token) {
@@ -84,8 +100,8 @@ const sd = new StyleDictionary({
     css: {
       transformGroup: "tokens-studio",
       transforms: [
-        "bcds/css/typography/italic",
-        "bcds/css/color/uppercase",
+        "bcds/typography/italic",
+        "bcds/color/uppercase",
         "bcds/css/size/zero",
         "ts/descriptionToComment",
         "ts/size/px",
@@ -110,8 +126,8 @@ const sd = new StyleDictionary({
       transformGroup: "tokens-studio",
       prefix: "bcds",
       transforms: [
-        "bcds/css/typography/italic",
-        "bcds/css/color/uppercase",
+        "bcds/typography/italic",
+        "bcds/color/uppercase",
         "bcds/css/size/zero",
         "ts/descriptionToComment",
         "ts/size/px",
@@ -134,6 +150,11 @@ const sd = new StyleDictionary({
     },
     js: {
       transformGroup: "tokens-studio",
+      transforms: [
+        "bcds/typography/italic",
+        "bcds/color/uppercase",
+        "bcds/js/size/zero",
+      ],
       buildPath: "build/js/",
       files: [
         {
@@ -148,6 +169,11 @@ const sd = new StyleDictionary({
     },
     jsPrefixed: {
       transformGroup: "tokens-studio",
+      transforms: [
+        "bcds/typography/italic",
+        "bcds/color/uppercase",
+        "bcds/js/size/zero",
+      ],
       prefix: "bcds",
       buildPath: "build/js-prefixed/",
       files: [
@@ -163,6 +189,11 @@ const sd = new StyleDictionary({
     },
     cjs: {
       transformGroup: "tokens-studio",
+      transforms: [
+        "bcds/typography/italic",
+        "bcds/color/uppercase",
+        "bcds/js/size/zero",
+      ],
       buildPath: "build/cjs/",
       files: [
         {
@@ -177,6 +208,11 @@ const sd = new StyleDictionary({
     },
     cjsPrefixed: {
       transformGroup: "tokens-studio",
+      transforms: [
+        "bcds/typography/italic",
+        "bcds/color/uppercase",
+        "bcds/js/size/zero",
+      ],
       prefix: "bcds",
       buildPath: "build/cjs-prefixed/",
       files: [
