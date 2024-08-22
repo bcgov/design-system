@@ -157,6 +157,13 @@ function App() {
         <TooltipPage />
         <TextAreaPage />
         <TextFieldPage />
+        <div style={{ backgroundColor: "red", padding: "3rem" }}>
+          <Button onPress={() => console.log(tokens.typographyItalicBody)}>
+            Log
+          </Button>
+          <p style={{ font: tokens.typographyItalicBody }}>Old font</p>
+          <p style={{ font: "italic 400 1rem/1.688rem 'BC Sans'" }}>New font</p>
+        </div>
       </main>
       <Footer />
       <Footer

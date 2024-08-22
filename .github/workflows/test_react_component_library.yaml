@@ -12,8 +12,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  jest-unit-tests:
-    name: Jest unit tests
+  vitest-unit-tests:
+    name: Vitest unit tests
     runs-on: ubuntu-latest
 
     steps:
@@ -34,7 +34,7 @@ jobs:
         working-directory: ./packages/react-components
 
       - name: Run test suite with npm script
-        run: npm run test:ci
+        run: npm run test
         working-directory: ./packages/react-components
 
   playwright-accessibility-tests:

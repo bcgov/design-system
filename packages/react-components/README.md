@@ -104,9 +104,9 @@ This project follows semantic versioning. See [CHANGELOG.md](./CHANGELOG.md) for
 
 Components live in `./src/components` and are targeted by the build process with an export in `./src/index.ts`.
 
-#### Testing components with Jest
+#### Testing components with Vitest
 
-Unit tests can be run with Jest using `npm run test`.
+Unit tests can be run with Vitest using `npm run test`.
 
 ### Storybook
 
@@ -171,5 +171,5 @@ Copy the Changelog notes for the new version and link to the npm page for the ne
 GitHub Actions are located in `/.github/workflows` in the project root. Actions are included to:
 
 - Build the Storybook and Vite applications on merge to `main`
-- Test (Jest and Playwright) on pull request
+- Test (Vitest and Playwright) on pull request
 - Publish new versions of the library on npm (`next` tag) on merge to `main`
