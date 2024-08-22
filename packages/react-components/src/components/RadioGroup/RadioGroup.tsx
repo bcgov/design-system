@@ -32,7 +32,7 @@ export default function RadioGroup({
   ...props
 }: RadioGroupProps) {
   return (
-    <ReactAriaRadioGroup className={`bcds-react-aria-RadioGroup`} {...props}>
+    <ReactAriaRadioGroup className="bcds-react-aria-RadioGroup" {...props}>
       {({ isRequired, isInvalid }) => (
         <>
           {label && (
