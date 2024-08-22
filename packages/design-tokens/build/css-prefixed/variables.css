@@ -114,6 +114,7 @@
   --bcds-typography-line-heights-auto: AUTO; /* System token, used to generate type styles */
   --bcds-typography-font-weights-regular: 400; /* System token, used to generate text styles */
   --bcds-typography-font-weights-bold: 700; /* System token, used to generate text styles */
+  --bcds-typography-font-weights-italic: Italic; /* DEPRECATED - will be removed in next major version. */
   --bcds-typography-font-weights-italic-weight: 400; /* System token, used to generate text styles */
   --bcds-typography-font-weights-italic-style: italic; /* System token, used to generate text styles */
   --bcds-typography-font-size-label: 0.75rem;

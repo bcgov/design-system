@@ -113,6 +113,7 @@ export const bcdsTypographyLineHeightsXxsparse = "3.375rem"; // Largest line hei
 export const bcdsTypographyLineHeightsAuto = "AUTO"; // System token, used to generate type styles
 export const bcdsTypographyFontWeightsRegular = 400; // System token, used to generate text styles
 export const bcdsTypographyFontWeightsBold = 700; // System token, used to generate text styles
+export const bcdsTypographyFontWeightsItalic = "Italic"; // DEPRECATED - will be removed in next major version.
 export const bcdsTypographyFontWeightsItalicWeight = 400; // System token, used to generate text styles
 export const bcdsTypographyFontWeightsItalicStyle = "italic"; // System token, used to generate text styles
 export const bcdsTypographyFontSizeLabel = "0.75rem";

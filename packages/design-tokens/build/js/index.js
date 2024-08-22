@@ -113,6 +113,7 @@ export const typographyLineHeightsXxsparse = "3.375rem"; // Largest line height
 export const typographyLineHeightsAuto = "AUTO"; // System token, used to generate type styles
 export const typographyFontWeightsRegular = 400; // System token, used to generate text styles
 export const typographyFontWeightsBold = 700; // System token, used to generate text styles
+export const typographyFontWeightsItalic = "Italic"; // DEPRECATED - will be removed in next major version.
 export const typographyFontWeightsItalicWeight = 400; // System token, used to generate text styles
 export const typographyFontWeightsItalicStyle = "italic"; // System token, used to generate text styles
 export const typographyFontSizeLabel = "0.75rem";

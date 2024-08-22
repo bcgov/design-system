@@ -188,6 +188,8 @@ export const bcdsTypographyLineHeightsAuto : string;
 export const bcdsTypographyFontWeightsRegular : number;
 /** System token, used to generate text styles */
 export const bcdsTypographyFontWeightsBold : number;
+/** DEPRECATED - will be removed in next major version. */
+export const bcdsTypographyFontWeightsItalic : string;
 /** System token, used to generate text styles */
 export const bcdsTypographyFontWeightsItalicWeight : number;
 /** System token, used to generate text styles */
