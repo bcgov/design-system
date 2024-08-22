@@ -1,5 +1,25 @@
 # Changelog
 
+## 3.1.0
+
+### Added
+
+- Comments added to tokens to document intended usage
+- `layout.padding.hair` added to match `layout.margin.hair`
+- New color tokens added:
+  - `surface.color.primary.default`
+  - `surface.color.primary.hover`
+  - `surface.color.primary.pressed`
+  - `surface.color.primary.disabled`
+  - `surface.color.secondary.default`
+  - `surface.color.secondary.hover`
+  - `surface.color.secondary.pressed`
+  - `surface.color.secondary.disabled`
+  - `surface.color.tertiary.default`
+  - `surface.color.tertiary.hover`
+  - `surface.color.tertiary.pressed`
+  - `surface.color.tertiary.disabled`
+
 ## 3.0.1
 
 ### Changed
