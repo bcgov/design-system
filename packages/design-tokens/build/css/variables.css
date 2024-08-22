@@ -14,96 +14,108 @@
   --surface-opacity-80: 0.8;
   --surface-opacity-90: 0.9;
   --surface-opacity-100: 1;
-  --surface-shadow-none: 0 0.30000001192092896px 0.8999999761581421px 0 #0000001a, 0 1.600000023841858px 3.5999999046325684px 0 #00000021;
-  --surface-shadow-small: 0 0.6000000238418579px 1.7999999523162842px 0 #0000001a, 0 3.200000047683716px 7.199999809265137px 0 #00000021; /* Primarily used as a hover effect for cards */
-  --surface-shadow-medium: 0 1.2000000476837158px 3.5999999046325684px 0 #0000001a, 0 6.400000095367432px 14.399999618530273px 0 #00000021; /* Primarily used for dropdown menus and tooltips */
-  --surface-shadow-large: 0 4.800000190734863px 14.399999618530273px 0 #0000002e, 0 25.600000381469727px 57.599998474121094px 0 #00000038; /* Primarily used for dialogs */
-  --surface-color-primary-button-default: #013366;
-  --surface-color-primary-button-hover: #1E5189;
-  --surface-color-primary-button-disabled: #EDEBE9;
-  --surface-color-primary-danger-button-default: #CE3E39;
-  --surface-color-primary-danger-button-hover: #A2312D;
-  --surface-color-primary-danger-button-disabled: #EDEBE9;
-  --surface-color-secondary-button-default: #FFFFFF;
-  --surface-color-secondary-button-hover: #EDEBE9;
-  --surface-color-secondary-button-disabled: #EDEBE9;
-  --surface-color-tertiary-button-default: rgba(255,255,255,0);
-  --surface-color-tertiary-button-hover: #ECEAE8;
-  --surface-color-tertiary-button-disabled: #EDEBE9;
-  --surface-color-menus-default: #FFFFFF;
-  --surface-color-menus-hover: #EDEBE9;
-  --surface-color-forms-default: #FFFFFF;
-  --surface-color-forms-disabled: #EDEBE9;
-  --surface-color-background-white: #FFFFFF;
-  --surface-color-background-light-gray: #FAF9F8;
-  --surface-color-background-light-blue: #F1F8FE;
-  --surface-color-background-dark-blue: #053662;
-  --surface-color-border-default: #D8D8D8;
-  --surface-color-border-medium: #898785;
-  --surface-color-border-dark: #353433;
-  --surface-color-border-active: #2E5DD7;
-  --surface-color-overlay-default: rgba(0,0,0,0.45);
+  --surface-shadow-none: 0 0.30000001192092896px 0.8999999761581421px 0 #0000001a, 0 1.600000023841858px 3.5999999046325684px 0 #00000021; /* Default shadow for most content and UI elements */
+  --surface-shadow-small: 0 0.6000000238418579px 1.7999999523162842px 0 #0000001a, 0 3.200000047683716px 7.199999809265137px 0 #00000021; /* Reduced shadow for secondary UI elements */
+  --surface-shadow-medium: 0 1.2000000476837158px 3.5999999046325684px 0 #0000001a, 0 6.400000095367432px 14.399999618530273px 0 #00000021; /* Standard shadow for UI elements like cards and buttons */
+  --surface-shadow-large: 0 4.800000190734863px 14.399999618530273px 0 #0000002e, 0 25.600000381469727px 57.599998474121094px 0 #00000038; /* Larger shadow for emphasis. Use sparingly */
+  --surface-color-primary-button-default: #013366; /* Default fill colour for primary buttons */
+  --surface-color-primary-button-hover: #1E5189; /* Fill colour used when user hovers over primary button */
+  --surface-color-primary-button-disabled: #EDEBE9; /* Fill colour for inactive primary buttons */
+  --surface-color-primary-danger-button-default: #CE3E39; /* Default fill colour for buttons in danger/warning state */
+  --surface-color-primary-danger-button-hover: #A2312D; /* Fill colour used when user hovers over danger/warning button */
+  --surface-color-primary-danger-button-disabled: #EDEBE9; /* Default fill colour for disabled danger/warning button */
+  --surface-color-primary-default: #013366; /* Default theme colour for components and layout */
+  --surface-color-primary-hover: #1E5189; /* Hover variant of surface.color.primary.default */
+  --surface-color-primary-pressed: #01264C; /* Selected/pressed variant of surface.color.primary.default */
+  --surface-color-primary-disabled: #EDEBE9; /* Disabled/inactive variant of surface.color.primary default */
+  --surface-color-secondary-button-default: #FFFFFF; /* Fill colour for secondary buttons */
+  --surface-color-secondary-button-hover: #EDEBE9; /* Fill colour used when user hovers over secondary button */
+  --surface-color-secondary-button-disabled: #EDEBE9; /* Fill colour for inactive secondary buttons */
+  --surface-color-secondary-default: #FFFFFF; /* Light theme colour for components and layout */
+  --surface-color-secondary-hover: #EDEBE9; /* Hover variant of surface.color.secondary.default */
+  --surface-color-secondary-pressed: #E0DEDC; /* Selected/pressed variant of surface.color.secondary.default */
+  --surface-color-secondary-disabled: #EDEBE9; /* Disabled/inactive variant of surface.color.secondary default */
+  --surface-color-tertiary-button-default: rgba(255,255,255,0); /* Default fill colour for tertiary buttons */
+  --surface-color-tertiary-button-hover: #ECEAE8; /* Fill colour used when user hovers over tertiary button */
+  --surface-color-tertiary-button-disabled: #EDEBE9; /* Fill colour for inactive tertiary buttons */
+  --surface-color-tertiary-default: #FFFFFF; /* Alternative light theme colour for components and layout */
+  --surface-color-tertiary-hover: #ECEAE8; /* Hover variant of surface.color.tertiary.default */
+  --surface-color-tertiary-pressed: #E0DEDC; /* Selected/pressed variant of surface.color.tertiary.default */
+  --surface-color-tertiary-disabled: #EDEBE9; /* Disabled/inactive variant of surface.color.tertiary default */
+  --surface-color-menus-default: #FFFFFF; /* Default fill colour for menu items */
+  --surface-color-menus-hover: #EDEBE9; /* Fill colour used when user hovers over a menu item */
+  --surface-color-forms-default: #FFFFFF; /* Default fill colour for form/input fields */
+  --surface-color-forms-disabled: #EDEBE9; /* Fill colour for inactive/disabled form/input fields */
+  --surface-color-background-white: #FFFFFF; /* White background */
+  --surface-color-background-light-gray: #FAF9F8; /* Default background colour for layout */
+  --surface-color-background-light-blue: #F1F8FE; /* Light blue background */
+  --surface-color-background-dark-blue: #053662; /* Dark blue background */
+  --surface-color-border-default: #D8D8D8; /* Lighter border colour for UI elements */
+  --surface-color-border-medium: #898785; /* Default border colour for UI elements */
+  --surface-color-border-dark: #353433; /* Used as a hover colour for form fields and inputs */
+  --surface-color-border-active: #2E5DD7; /* Used as the active stroke colour for UI elements */
+  --surface-color-overlay-default: rgba(0,0,0,0.45); /* Background overlay colour for images and modal dialogues */
   --support-surface-color-info: #F7F9FC;
-  --support-surface-color-danger: #F4E1E2;
-  --support-surface-color-success: #F6FFF8;
-  --support-surface-color-warning: #FEF1D8;
-  --support-border-color-info: #053662;
-  --support-border-color-danger: #CE3E39;
-  --support-border-color-success: #42814A;
-  --support-border-color-warning: #F8BB47;
-  --icons-size-xsmall: 14px;
+  --support-surface-color-danger: #F4E1E2; /* Background colour for error, failure or danger messages */
+  --support-surface-color-success: #F6FFF8; /* Background colour for success messages */
+  --support-surface-color-warning: #FEF1D8; /* Background colour for warning messages */
+  --support-border-color-info: #053662; /* Border stroke for general/informational messages */
+  --support-border-color-danger: #CE3E39; /* Border stroke for error, failure or danger messages */
+  --support-border-color-success: #42814A; /* Border stroke for success messages */
+  --support-border-color-warning: #F8BB47; /* Border stroke for warning messages */
+  --icons-size-xsmall: 14px; /* Smallest icon size */
   --icons-size-small: 16px;
-  --icons-size-medium: 20px;
+  --icons-size-medium: 20px; /* Default icon size */
   --icons-size-large: 24px;
-  --icons-size-xlarge: 32px;
-  --icons-color-primary: #2D2D2D;
-  --icons-color-secondary: #474543;
-  --icons-color-disabled: #9F9D9C;
-  --icons-color-link: #255A90;
-  --icons-color-info: #053662;
-  --icons-color-danger: #CE3E39;
-  --icons-color-success: #42814A;
-  --icons-color-warning: #F8BB47;
-  --icons-color-primary-invert: #FFFFFF;
+  --icons-size-xlarge: 32px; /* Largest icon size */
+  --icons-color-primary: #2D2D2D; /* Default colour for icons */
+  --icons-color-secondary: #474543; /* Alternative colour for secondary/miscellaneous icons */
+  --icons-color-disabled: #9F9D9C; /* Use only for inactive/disabled icons */
+  --icons-color-link: #255A90; /* Use for hyperlinked icons */
+  --icons-color-info: #053662; /* Emphasis colour for icons in general/informational state */
+  --icons-color-danger: #CE3E39; /* Emphasis colour for icons in error, failure or danger state */
+  --icons-color-success: #42814A; /* Emphasis colour for icons in success state */
+  --icons-color-warning: #F8BB47; /* Emphasis colour for icons in warning state */
+  --icons-color-primary-invert: #FFFFFF; /* Default colour for icons on dark backgrounds */
   --layout-border-width-none: 0;
   --layout-border-width-small: 1px;
   --layout-border-width-medium: 2px;
   --layout-border-width-large: 4px;
-  --layout-padding-none: 0;
+  --layout-padding-none: 0; /* No padding */
+  --layout-padding-hair: 0.125rem; /* Smallest padding value for layout */
   --layout-padding-xsmall: 0.25rem;
   --layout-padding-small: 0.5rem;
-  --layout-padding-medium: 1rem;
+  --layout-padding-medium: 1rem; /* Default padding value for layout */
   --layout-padding-large: 1.5rem;
-  --layout-padding-xlarge: 2rem;
-  --layout-margin-none: 0rem;
-  --layout-margin-hair: 0.125rem;
+  --layout-padding-xlarge: 2rem; /* Largest padding value for layout */
+  --layout-margin-none: 0rem; /* No margin */
+  --layout-margin-hair: 0.125rem; /* Smallest margin value for layout */
   --layout-margin-xsmall: 0.25rem;
-  --layout-margin-small: 0.5rem;
+  --layout-margin-small: 0.5rem; /* Default margin value for layout */
   --layout-margin-medium: 1rem;
   --layout-margin-large: 1.5rem;
   --layout-margin-xlarge: 2rem;
   --layout-margin-xxlarge: 2.5rem;
   --layout-margin-xxxlarge: 3rem;
-  --layout-margin-huge: 3.5rem;
+  --layout-margin-huge: 3.5rem; /* Largest margin value for layout */
   --layout-border-radius-none: 0;
   --layout-border-radius-small: 2px;
   --layout-border-radius-medium: 4px;
   --layout-border-radius-large: 6px;
-  --typography-font-families-bc-sans: 'BC Sans';
-  --typography-line-heights-xxxdense: 1.125rem;
+  --typography-font-families-bc-sans: 'BC Sans'; /* BC Sans font. Requires BC Sans package */
+  --typography-line-heights-xxxdense: 1.125rem; /* Smallest line height */
   --typography-line-heights-xxdense: 1.313rem;
   --typography-line-heights-xdense: 1.688rem;
   --typography-line-heights-dense: 1.913rem;
-  --typography-line-heights-regular: 2.125rem;
+  --typography-line-heights-regular: 2.125rem; /* Default line height */
   --typography-line-heights-sparse: 2.25rem;
   --typography-line-heights-xsparse: 3rem;
-  --typography-line-heights-xxsparse: 3.375rem;
-  --typography-line-heights-auto: AUTO;
-  --typography-font-weights-regular: 400;
-  --typography-font-weights-bold: 700;
-  --typography-font-weights-italic: Italic; /* DEPRECATED - will be removed in next major version. */
-  --typography-font-weights-italic-weight: 400;
-  --typography-font-weights-italic-style: italic;
+  --typography-line-heights-xxsparse: 3.375rem; /* Largest line height */
+  --typography-line-heights-auto: AUTO; /* System token, used to generate type styles */
+  --typography-font-weights-regular: 400; /* System token, used to generate text styles */
+  --typography-font-weights-bold: 700; /* System token, used to generate text styles */
+  --typography-font-weights-italic-weight: 400; /* System token, used to generate text styles */
+  --typography-font-weights-italic-style: italic; /* System token, used to generate text styles */
   --typography-font-size-label: 0.75rem;
   --typography-font-size-small-body: 0.875rem;
   --typography-font-size-body: 1rem;
@@ -114,84 +126,84 @@
   --typography-font-size-h2: 2rem;
   --typography-font-size-h1: 2.25rem;
   --typography-font-size-display: 3rem;
-  --typography-letter-spacing-0: 0em;
-  --typography-paragraph-spacing-0: 0;
-  --typography-regular-label: 400 0.75rem/1.125rem 'BC Sans';
-  --typography-regular-small-body: 400 0.875rem/1.313rem 'BC Sans';
-  --typography-regular-body: 400 1rem/1.688rem 'BC Sans';
-  --typography-regular-large-body: 400 1.125rem/1.913rem 'BC Sans';
-  --typography-regular-h6: 400 1.125rem/1.913rem 'BC Sans';
-  --typography-regular-h5: 400 1.25rem/2.125rem 'BC Sans';
-  --typography-regular-h4: 400 1.5rem/2.25rem 'BC Sans';
-  --typography-regular-h3: 400 1.75rem/3rem 'BC Sans';
-  --typography-regular-h2: 400 2rem/3.375rem 'BC Sans';
-  --typography-regular-h1: 400 2.25rem/3rem 'BC Sans';
-  --typography-regular-display: 400 3rem/AUTO 'BC Sans';
-  --typography-bold-label: 700 0.75rem/1.125rem 'BC Sans';
-  --typography-bold-small-body: 700 0.875rem/1.313rem 'BC Sans';
-  --typography-bold-body: 700 1rem/1.688rem 'BC Sans';
-  --typography-bold-large-body: 700 1.125rem/1.913rem 'BC Sans';
-  --typography-bold-h6: 700 1.125rem/1.913rem 'BC Sans';
-  --typography-bold-h5: 700 1.25rem/2.125rem 'BC Sans';
-  --typography-bold-h4: 700 1.5rem/2.25rem 'BC Sans';
-  --typography-bold-h3: 700 1.75rem/3rem 'BC Sans';
-  --typography-bold-h2: 700 2rem/3rem 'BC Sans';
-  --typography-bold-h1: 700 2.25rem/3.375rem 'BC Sans';
-  --typography-bold-display: 700 3rem/AUTO 'BC Sans';
-  --typography-italic-label: 400 italic 0.75rem/1.125rem 'BC Sans';
-  --typography-italic-small-body: 400 italic 0.875rem/1.313rem 'BC Sans';
-  --typography-italic-body: 400 italic 1rem/1.688rem 'BC Sans';
-  --typography-italic-large-body: 400 italic 1.125rem/1.913rem 'BC Sans';
-  --typography-italic-h6: 400 italic 1.125rem/1.913rem 'BC Sans';
-  --typography-italic-h5: 400 italic 1.25rem/2.125rem 'BC Sans';
-  --typography-italic-h4: 400 italic 1.5rem/2.25rem 'BC Sans';
-  --typography-italic-h3: 400 italic 1.75rem/3.375rem 'BC Sans';
-  --typography-italic-h2: 400 italic 2rem/3rem 'BC Sans';
-  --typography-italic-h1: 400 italic 2.25rem/3.375rem 'BC Sans';
-  --typography-italic-display: 400 italic 3rem/AUTO 'BC Sans';
+  --typography-letter-spacing-0: 0em; /* System token, used to generate type styles */
+  --typography-paragraph-spacing-0: 0; /* System token, used to generate type styles */
+  --typography-regular-label: 400 0.75rem/1.125rem 'BC Sans'; /* Labels and captions */
+  --typography-regular-small-body: 400 0.875rem/1.313rem 'BC Sans'; /* Smaller body text */
+  --typography-regular-body: 400 1rem/1.688rem 'BC Sans'; /* Default body text */
+  --typography-regular-large-body: 400 1.125rem/1.913rem 'BC Sans'; /* Larger body text */
+  --typography-regular-h6: 400 1.125rem/1.913rem 'BC Sans'; /* Alternate (unbolded) style for Heading 6 */
+  --typography-regular-h5: 400 1.25rem/2.125rem 'BC Sans'; /* Alternate (unbolded) style for Heading 5 */
+  --typography-regular-h4: 400 1.5rem/2.25rem 'BC Sans'; /* Alternate (unbolded) style for Heading 4 */
+  --typography-regular-h3: 400 1.75rem/3rem 'BC Sans'; /* Alternate (unbolded) style for Heading 3 */
+  --typography-regular-h2: 400 2rem/3.375rem 'BC Sans'; /* Alternate (unbolded) style for Heading 2 */
+  --typography-regular-h1: 400 2.25rem/3rem 'BC Sans'; /* Alternate (unbolded) style for Heading 1 */
+  --typography-regular-display: 400 3rem/AUTO 'BC Sans'; /* Extra-large body text size. Do not use for headings */
+  --typography-bold-label: 700 0.75rem/1.125rem 'BC Sans'; /* Labels and captions (bolded) */
+  --typography-bold-small-body: 700 0.875rem/1.313rem 'BC Sans'; /* Default for small body text (bolded) */
+  --typography-bold-body: 700 1rem/1.688rem 'BC Sans'; /* Default for body text (bolded) */
+  --typography-bold-large-body: 700 1.125rem/1.913rem 'BC Sans'; /* Larger text size for body text (bolded) */
+  --typography-bold-h6: 700 1.125rem/1.913rem 'BC Sans'; /* Default style for Heading 6. Includes all sizing/spacing values for H6 */
+  --typography-bold-h5: 700 1.25rem/2.125rem 'BC Sans'; /* Default style for Heading 6. Includes all sizing/spacing values for H5 */
+  --typography-bold-h4: 700 1.5rem/2.25rem 'BC Sans'; /* Default style for Heading 6. Includes all sizing/spacing values for H4 */
+  --typography-bold-h3: 700 1.75rem/3rem 'BC Sans'; /* Default style for Heading 6. Includes all sizing/spacing values for H3 */
+  --typography-bold-h2: 700 2rem/3rem 'BC Sans'; /* Default style for Heading 6. Includes all sizing/spacing values for H2 */
+  --typography-bold-h1: 700 2.25rem/3.375rem 'BC Sans'; /* Default style for Heading 6. Includes all sizing/spacing values for H1 */
+  --typography-bold-display: 700 3rem/AUTO 'BC Sans'; /* Extra-large font size (bolded). Do not use for headings */
+  --typography-italic-label: 400 italic 0.75rem/1.125rem 'BC Sans'; /* Labels and captions (italic) */
+  --typography-italic-small-body: 400 italic 0.875rem/1.313rem 'BC Sans'; /* Small body text (italic) */
+  --typography-italic-body: 400 italic 1rem/1.688rem 'BC Sans'; /* Default for body text (italic) */
+  --typography-italic-large-body: 400 italic 1.125rem/1.913rem 'BC Sans'; /* Larger text size for body text (italic) */
+  --typography-italic-h6: 400 italic 1.125rem/1.913rem 'BC Sans'; /* Alternate (italic) style for Heading 6 */
+  --typography-italic-h5: 400 italic 1.25rem/2.125rem 'BC Sans'; /* Alternate (italic) style for Heading 5 */
+  --typography-italic-h4: 400 italic 1.5rem/2.25rem 'BC Sans'; /* Alternate (italic) style for Heading 4 */
+  --typography-italic-h3: 400 italic 1.75rem/3.375rem 'BC Sans'; /* Alternate (italic) style for Heading 3 */
+  --typography-italic-h2: 400 italic 2rem/3rem 'BC Sans'; /* Alternate (italic) style for Heading 2 */
+  --typography-italic-h1: 400 italic 2.25rem/3.375rem 'BC Sans'; /* Alternate (italic) style for Heading 1 */
+  --typography-italic-display: 400 italic 3rem/AUTO 'BC Sans'; /* Extra-large font size (italic). Do not use for headings */
   --typography-text-case-none: none;
-  --typography-text-decoration-none: none;
-  --typography-paragraph-indent-0: 0px;
-  --typography-color-primary: #2D2D2D;
-  --typography-color-secondary: #474543;
-  --typography-color-placeholder: #9F9D9C;
-  --typography-color-disabled: #9F9D9C;
-  --typography-color-link: #255A90;
-  --typography-color-danger: #CE3E39;
-  --typography-color-primary-invert: #FFFFFF;
-  --typography-color-secondary-invert: #ECEAE8;
-  --theme-gold-10: #FEF8E8;
-  --theme-gold-20: #FEF0D8;
-  --theme-gold-30: #FDE9C4;
-  --theme-gold-40: #FCE2B0;
-  --theme-gold-50: #FBDA9D;
-  --theme-gold-60: #FBD389;
-  --theme-gold-70: #FACC75;
-  --theme-gold-80: #F9C462;
-  --theme-gold-90: #F8BA47;
-  --theme-gold-100: #FCBA19;
-  --theme-blue-10: #F1F8FE;
-  --theme-blue-20: #D8EAFD;
-  --theme-blue-30: #C1DDFC;
-  --theme-blue-40: #A8D0FB;
-  --theme-blue-50: #91C4FA;
-  --theme-blue-60: #7AB8F9;
-  --theme-blue-70: #5595D9;
-  --theme-blue-80: #3470B1;
-  --theme-blue-90: #1E5189;
-  --theme-blue-100: #013366;
-  --theme-gray-10: #FAF9F8;
-  --theme-gray-20: #F3F2F1;
-  --theme-gray-30: #ECEAE8;
-  --theme-gray-40: #E0DEDC;
-  --theme-gray-50: #D1CFCD;
-  --theme-gray-60: #C6C5C3;
-  --theme-gray-70: #9F9D9C;
-  --theme-gray-80: #605E5C;
-  --theme-gray-90: #3D3C3B;
-  --theme-gray-100: #353433;
-  --theme-gray-110: #252423;
-  --theme-gray-white: #FFFFFF;
-  --theme-primary-blue: #013366;
-  --theme-primary-gold: #FCBA19;
+  --typography-text-decoration-none: none; /* System token, used to generate type styles */
+  --typography-paragraph-indent-0: 0px; /* System token, used to generate type styles */
+  --typography-color-primary: #2D2D2D; /* Default colour for all body text and headings */
+  --typography-color-secondary: #474543; /* Alternative colour for secondary/miscellaneous text */
+  --typography-color-placeholder: #9F9D9C; /* Use for placeholder text in forms */
+  --typography-color-disabled: #9F9D9C; /* Use only for text in inactive user interface elements */
+  --typography-color-link: #255A90; /* Use for hyperlinks in body text and headings */
+  --typography-color-danger: #CE3E39; /* Use for error, failure or danger message text */
+  --typography-color-primary-invert: #FFFFFF; /* Default colour for text on dark backgrounds */
+  --typography-color-secondary-invert: #ECEAE8; /* Secondary colour for text on dark backgrounds */
+  --theme-gold-10: #FEF8E8; /* Gold scale — lightest */
+  --theme-gold-20: #FEF0D8; /* Gold scale */
+  --theme-gold-30: #FDE9C4; /* Gold scale */
+  --theme-gold-40: #FCE2B0; /* Gold scale */
+  --theme-gold-50: #FBDA9D; /* Gold scale */
+  --theme-gold-60: #FBD389; /* Gold scale */
+  --theme-gold-70: #FACC75; /* Gold scale */
+  --theme-gold-80: #F9C462; /* Gold scale */
+  --theme-gold-90: #F8BA47; /* Gold scale */
+  --theme-gold-100: #FCBA19; /* Gold scale — darkest */
+  --theme-blue-10: #F1F8FE; /* Blue scale — lightest */
+  --theme-blue-20: #D8EAFD; /* Blue scale */
+  --theme-blue-30: #C1DDFC; /* Blue scale */
+  --theme-blue-40: #A8D0FB; /* Blue scale */
+  --theme-blue-50: #91C4FA; /* Blue scale */
+  --theme-blue-60: #7AB8F9; /* Blue scale */
+  --theme-blue-70: #5595D9; /* Blue scale */
+  --theme-blue-80: #3470B1; /* Blue scale */
+  --theme-blue-90: #1E5189; /* Blue scale */
+  --theme-blue-100: #013366; /* Blue scale — darkest */
+  --theme-gray-10: #FAF9F8; /* Greyscale — lightest */
+  --theme-gray-20: #F3F2F1; /* Greyscale */
+  --theme-gray-30: #ECEAE8; /* Greyscale */
+  --theme-gray-40: #E0DEDC; /* Greyscale */
+  --theme-gray-50: #D1CFCD; /* Greyscale */
+  --theme-gray-60: #C6C5C3; /* Greyscale */
+  --theme-gray-70: #9F9D9C; /* Greyscale */
+  --theme-gray-80: #605E5C; /* Greyscale */
+  --theme-gray-90: #3D3C3B; /* Greyscale */
+  --theme-gray-100: #353433; /* Greyscale */
+  --theme-gray-110: #252423; /* Greyscale — darkest */
+  --theme-gray-white: #FFFFFF; /* White */
+  --theme-primary-blue: #013366; /* Primary Blue (Blue 100) */
+  --theme-primary-gold: #FCBA19; /* Primary Gold (Gold 100) */
 }
