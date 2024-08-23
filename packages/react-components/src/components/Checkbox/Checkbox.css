@@ -45,17 +45,17 @@
 }
 
 .bcds-react-aria-Checkbox[data-selected][data-hovered] > .checkbox {
-  background-color: var(--surface-color-primary-button-hover);
+  background-color: var(--surface-color-primary-hover);
 }
 
 /* Pressed */
 .bcds-react-aria-Checkbox[data-pressed] > .checkbox {
-  background-color: var(--surface-color-primary-button-default);
+  background-color: var(--surface-color-primary-default);
 }
 
 /* Selected */
 .bcds-react-aria-Checkbox[data-selected] > .checkbox {
-  background-color: var(--surface-color-primary-button-default);
+  background-color: var(--surface-color-primary-default);
 }
 
 .bcds-react-aria-Checkbox[data-selected] > .checkbox > svg {
@@ -66,12 +66,12 @@
 .bcds-react-aria-Checkbox[data-disabled] > .checkbox {
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-medium);
-  background-color: var(--surface-color-forms-disabled);
+  background-color: var(--surface-color-primary-disabled);
   cursor: not-allowed;
 }
 
 .bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox {
-  background-color: var(--surface-color-forms-disabled);
+  background-color: var(--surface-color-primary-disabled);
 }
 
 .bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox > svg {
@@ -80,7 +80,7 @@
 
 /* Indeterminate */
 .bcds-react-aria-Checkbox[data-indeterminate] > .checkbox {
-  background-color: var(--surface-color-primary-button-default);
+  background-color: var(--surface-color-primary-default);
 }
 
 .bcds-react-aria-Checkbox[data-indeterminate] > .checkbox > svg {
