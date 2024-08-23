@@ -12,7 +12,7 @@
   align-items: center;
   width: var(--layout-margin-xxlarge);
   height: var(--icons-size-medium);
-  background-color: var(--surface-color-forms-disabled);
+  background-color: var(--surface-color-primary-disabled);
   border-radius: var(--icons-size-medium);
   transition: all 200ms;
 }
@@ -24,7 +24,7 @@
   box-sizing: border-box;
   width: var(--icons-size-medium);
   height: var(--icons-size-medium);
-  background-color: var(--surface-color-primary-disabled);
+  background-color: var(--surface-color-secondary-default);
   border: var(--layout-border-width-medium) solid
     var(--surface-color-border-medium);
   border-radius: var(--icons-size-small);
