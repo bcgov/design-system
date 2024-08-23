@@ -38,7 +38,7 @@ module.exports = {
   "surfaceColorTertiaryButtonDefault": "rgba(255,255,255,0)",
   "surfaceColorTertiaryButtonHover": "#ECEAE8",
   "surfaceColorTertiaryButtonDisabled": "#EDEBE9",
-  "surfaceColorTertiaryDefault": "#FFFFFF",
+  "surfaceColorTertiaryDefault": "#FFFFFF00",
   "surfaceColorTertiaryHover": "#ECEAE8",
   "surfaceColorTertiaryPressed": "#E0DEDC",
   "surfaceColorTertiaryDisabled": "#EDEBE9",

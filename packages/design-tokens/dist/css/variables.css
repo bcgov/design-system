@@ -38,7 +38,7 @@
   --surface-color-tertiary-button-default: rgba(255,255,255,0); /* Default fill colour for tertiary buttons */
   --surface-color-tertiary-button-hover: #ECEAE8; /* Fill colour used when user hovers over tertiary button */
   --surface-color-tertiary-button-disabled: #EDEBE9; /* Fill colour for inactive tertiary buttons */
-  --surface-color-tertiary-default: #FFFFFF; /* Alternative light theme colour for components and layout */
+  --surface-color-tertiary-default: #FFFFFF00; /* Alternative light theme colour for components and layout */
   --surface-color-tertiary-hover: #ECEAE8; /* Hover variant of surface.color.tertiary.default */
   --surface-color-tertiary-pressed: #E0DEDC; /* Selected/pressed variant of surface.color.tertiary.default */
   --surface-color-tertiary-disabled: #EDEBE9; /* Disabled/inactive variant of surface.color.tertiary default */
