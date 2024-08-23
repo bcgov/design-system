@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.1.1
+
+### Changed
+
+- `surface.color.tertiary.default` is fixed so it gets alpha channel data (`#FFFFFF` corrected to `#FFFFFF00`)
+
 ## 3.1.0
 
 ### Added
