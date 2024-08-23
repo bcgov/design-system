@@ -3,7 +3,7 @@ import {
   FormProps as ReactAriaFormProps,
 } from "react-aria-components";
 
-export type FormProps = ReactAriaFormProps;
+export interface FormProps extends ReactAriaFormProps {}
 
 export default function Form({ ...props }: FormProps) {
   return <ReactAriaForm {...props} />;
