@@ -97,7 +97,7 @@
   box-shadow: var(--surface-shadow-medium);
   box-sizing: border-box;
   overflow-y: auto;
-  padding: var(--layout-margin-hair) var(--layout-padding-xsmall);
+  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
   width: var(
     --trigger-width
   ); /* Variable provided by Select component https://react-spectrum.adobe.com/react-aria/Select.html#popover-1 */
@@ -115,7 +115,7 @@
 .bcds-react-aria-Select--Header {
   color: var(--typography-color-secondary);
   font: var(--typography-regular-small-body);
-  padding: var(--layout-margin-hair) var(--layout-padding-small);
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
 }
 
 /* ListBox option item */
