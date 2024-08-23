@@ -29,6 +29,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const RadioTemplate: Story = {
-  args: { value: "1", children: "Text label" },
+  args: {
+    value: "example",
+    children: "Text label",
+  },
   render: ({ ...args }: RadioProps) => <Radio {...args} />,
 };
