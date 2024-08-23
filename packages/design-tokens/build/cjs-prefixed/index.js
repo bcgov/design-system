@@ -38,7 +38,7 @@ module.exports = {
   "bcdsSurfaceColorTertiaryButtonDefault": "rgba(255,255,255,0)",
   "bcdsSurfaceColorTertiaryButtonHover": "#ECEAE8",
   "bcdsSurfaceColorTertiaryButtonDisabled": "#EDEBE9",
-  "bcdsSurfaceColorTertiaryDefault": "#FFFFFF",
+  "bcdsSurfaceColorTertiaryDefault": "#FFFFFF00",
   "bcdsSurfaceColorTertiaryHover": "#ECEAE8",
   "bcdsSurfaceColorTertiaryPressed": "#E0DEDC",
   "bcdsSurfaceColorTertiaryDisabled": "#EDEBE9",
