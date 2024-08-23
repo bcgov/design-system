@@ -80,6 +80,7 @@
 }
 
 .bcds-react-aria-Switch[data-disabled] > .indicator::before {
+  background-color: var(--theme-gray-10);
   border: var(--layout-border-width-medium) solid
     var(--surface-color-border-default);
 }
