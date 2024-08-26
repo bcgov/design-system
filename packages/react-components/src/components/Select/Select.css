@@ -120,13 +120,13 @@
 
 /* ListBox option item */
 .bcds-react-aria-Select--ListBoxItem {
-  border-radius: var(--layout-margin-xsmall);
+  border-radius: var(--layout-border-radius-medium);
   cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--layout-margin-small);
-  padding: 6.5px var(--layout-padding-small);
+  padding: var(--layout-padding-small);
 }
 .bcds-react-aria-Select--ListBoxItem[data-focused],
 .bcds-react-aria-Select--ListBoxItem[data-hovered] {
