@@ -10,6 +10,8 @@
 
 /* Selector */
 .bcds-react-aria-Radio:before {
+  align-self: first baseline;
+  margin-top: var(--layout-margin-xsmall);
   content: "";
   display: block;
   width: var(--icons-size-xsmall);
