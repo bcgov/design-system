@@ -23,6 +23,10 @@ const meta = {
       control: { type: "text" },
       description: "Additional description or helper text",
     },
+    defaultValue: {
+      control: { type: "text" },
+      description: "Sets a default selected value",
+    },
     children: {
       control: { type: "object" },
       description: "Expects an array of Radio components",
@@ -71,6 +75,19 @@ export const HorizontalRadioGroup: Story = {
   },
 };
 
+export const RadioGroupWithDefaultValue: Story = {
+  args: {
+    label: "This radio group has a value selected by default",
+    defaultValue: "3",
+    children: [
+      <Radio value="1">Option 1</Radio>,
+      <Radio value="2">Option 2</Radio>,
+      <Radio value="3">Option 3</Radio>,
+      <Radio value="4">Option 4</Radio>,
+    ],
+  },
+};
+
 export const RadioGroupWithErrors: Story = {
   args: {
     label: "Text label",
@@ -81,7 +98,7 @@ export const RadioGroupWithErrors: Story = {
       <Radio value="3">Option 3</Radio>,
     ],
     isInvalid: true,
-    errorMessage: "Error message",
+    errorMessage: "Error messages can be customised or passed programmatically",
   },
 };
 
@@ -116,6 +133,7 @@ export const ReadOnlyRadioGroup: Story = {
   args: {
     label: "This radio group is set to read-only",
     description: "Its value is locked and cannot be changed",
+    defaultValue: "2",
     isReadOnly: true,
     children: [
       <Radio value="1">Option 1</Radio>,

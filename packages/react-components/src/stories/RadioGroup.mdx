@@ -35,6 +35,10 @@ Learn more about working with the RadioGroup component:
 
 This component is based on [React Aria RadioGroup](https://react-spectrum.adobe.com/react-aria/RadioGroup.html) and the [Radio](https://react-spectrum.adobe.com/react-aria/RadioGroup.html#radio) subcomponent.
 
+### Validation
+
+Default and custom data validation support is built in, using the [React Aria FieldError subcomponent](https://react-spectrum.adobe.com/react-aria/forms.html#validation).
+
 ## Controls
 
 <Primary of={RadioGroupStories} />
@@ -46,11 +50,22 @@ A radio group is made up of two components: `RadioGroup` (the parent container) 
 
 To populate a `RadioGroup`, pass an array of `Radio` components to the `children` slot.
 
-### RadioGroup
+### Radio
 
-Use the `label` and `description` props to explain the purpose of an input. If you do not use a visible `label`, you must instead use `aria-label` or `aria-labelledby` to label the input for assistive technologies:
+Each `Radio` expects:
+
+- A unique identifier, set via the `value` prop
+- A text label, passed to the `children` slot
 
 <Canvas of={RadioGroupStories.RadioGroupTemplate} />
+
+To disable an individual item, use the `isDisabled` prop on a `Radio`:
+
+<Canvas of={RadioGroupStories.RadioGroupWithDisabledOption} />
+
+### RadioGroup
+
+Use the `label` and `description` props to explain the purpose of an input. If you do not use a visible `label`, you must instead use `aria-label` or `aria-labelledby` to label the input for assistive technologies.
 
 Use `orientation` to toggle a radio group between `vertical` (default) and `horizontal` layouts:
 
@@ -62,6 +77,10 @@ Set `isRequired` to mark an input as mandatory, and display an additional "(requ
 
 <Canvas of={RadioGroupStories.RequiredRadioGroup} />
 
+An [uncontrolled default value](https://react-spectrum.adobe.com/react-aria/RadioGroup.html#default-value) can be set using the `defaultValue` prop, which expects a `value` matching one of the `Radio` options:
+
+<Canvas of={RadioGroupStories.RadioGroupWithDefaultValue} />
+
 Use `isDisabled` to disable an entire radio group:
 
 <Canvas of={RadioGroupStories.DisabledRadioGroup} />
@@ -70,4 +89,8 @@ Use `isReadOnly` to lock a radio group to its currently-selected value:
 
 <Canvas of={RadioGroupStories.ReadOnlyRadioGroup} />
 
-### Radio
+The `isInvalid` prop should be set programmatically when a selection is invalid:
+
+<Canvas of={RadioGroupStories.RadioGroupWithErrors} />
+
+Validation and error handling uses the [FieldError](https://react-spectrum.adobe.com/react-aria/RadioGroup.html#validation) subcomponent. Use the `errorMessage` prop to set or customise the error message text.
