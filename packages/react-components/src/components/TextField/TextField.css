@@ -103,7 +103,8 @@
 .bcds-react-aria-TextField[data-invalid]
   > .bcds-react-aria-TextField--container {
   border-radius: var(--layout-border-radius-medium);
-  border: 1px solid var(--support-border-color-danger);
+  border: var(--layout-border-width-small) solid
+    var(--support-border-color-danger);
   background: var(--surface-color-forms-default);
 }
 
