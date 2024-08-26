@@ -92,6 +92,7 @@ export const RadioGroupWithErrors: Story = {
   args: {
     label: "Text label",
     description: "Additional description text",
+    defaultValue: "1",
     children: [
       <Radio value="1">Option 1</Radio>,
       <Radio value="2">Option 2</Radio>,
