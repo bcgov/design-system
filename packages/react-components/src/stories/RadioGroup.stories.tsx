@@ -40,9 +40,7 @@ export const RadioGroupTemplate: Story = {
     children: [
       <Radio value="1">Option 1</Radio>,
       <Radio value="2">Option 2</Radio>,
-      <Radio value="3" isDisabled>
-        Option 3
-      </Radio>,
+      <Radio value="3">Option 3</Radio>,
     ],
   },
   render: ({ ...args }: RadioGroupProps) => <RadioGroup {...args} />,
@@ -58,6 +56,18 @@ export const RequiredRadioGroup: Story = {
       <Radio value="3">Option 3</Radio>,
     ],
     isRequired: true,
+  },
+};
+
+export const HorizontalRadioGroup: Story = {
+  args: {
+    label: "This is a horizontal radio group",
+    orientation: "horizontal",
+    children: [
+      <Radio value="1">Option 1</Radio>,
+      <Radio value="2">Option 2</Radio>,
+      <Radio value="3">Option 3</Radio>,
+    ],
   },
 };
 
@@ -99,5 +109,18 @@ export const DisabledRadioGroup: Story = {
       <Radio value="3">Option 3</Radio>,
     ],
     isDisabled: true,
+  },
+};
+
+export const ReadOnlyRadioGroup: Story = {
+  args: {
+    label: "This radio group is set to read-only",
+    description: "Its value is locked and cannot be changed",
+    isReadOnly: true,
+    children: [
+      <Radio value="1">Option 1</Radio>,
+      <Radio value="2">Option 2</Radio>,
+      <Radio value="3">Option 3</Radio>,
+    ],
   },
 };

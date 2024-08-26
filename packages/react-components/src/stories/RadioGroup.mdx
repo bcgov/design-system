@@ -41,3 +41,33 @@ This component is based on [React Aria RadioGroup](https://react-spectrum.adobe.
 <Controls of={RadioGroupStories.RadioGroupTemplate} />
 
 ## Configuration
+
+A radio group is made up of two components: `RadioGroup` (the parent container) and any number of `Radio` components (each representing a single option.)
+
+To populate a `RadioGroup`, pass an array of `Radio` components to the `children` slot.
+
+### RadioGroup
+
+Use the `label` and `description` props to explain the purpose of an input. If you do not use a visible `label`, you must instead use `aria-label` or `aria-labelledby` to label the input for assistive technologies:
+
+<Canvas of={RadioGroupStories.RadioGroupTemplate} />
+
+Use `orientation` to toggle a radio group between `vertical` (default) and `horizontal` layouts:
+
+<Canvas of={RadioGroupStories.HorizontalRadioGroup} />
+
+#### States
+
+Set `isRequired` to mark an input as mandatory, and display an additional "(required)" label:
+
+<Canvas of={RadioGroupStories.RequiredRadioGroup} />
+
+Use `isDisabled` to disable an entire radio group:
+
+<Canvas of={RadioGroupStories.DisabledRadioGroup} />
+
+Use `isReadOnly` to lock a radio group to its currently-selected value:
+
+<Canvas of={RadioGroupStories.ReadOnlyRadioGroup} />
+
+### Radio
