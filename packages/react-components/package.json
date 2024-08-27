@@ -67,7 +67,7 @@
     "rollup-plugin-peer-deps-external": "2.2.4",
     "rollup-plugin-postcss": "4.0.2",
     "storybook": "8.2.9",
-    "ts-jest": "29.2.4",
+    "ts-jest": "29.2.5",
     "ts-node": "10.9.2",
     "tslib": "2.6.3",
     "typescript": "5.5.4",
