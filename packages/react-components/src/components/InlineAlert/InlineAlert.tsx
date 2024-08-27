@@ -1,5 +1,3 @@
-import React from "react";
-
 import Button from "../Button";
 import ButtonGroup from "../ButtonGroup";
 import SvgCheckCircleIcon from "../Icons/SvgCheckCircleIcon";

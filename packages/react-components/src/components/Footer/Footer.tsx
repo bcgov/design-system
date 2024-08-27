@@ -1,5 +1,3 @@
-import React from "react";
-
 import SvgBcLogo from "../Icons/SvgBcLogo";
 
 import "./Footer.css";
