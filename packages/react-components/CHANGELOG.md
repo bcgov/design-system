@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.4
+
+### Changed
+
+- Use `react-aria-components` v1.3.3.
+- Use `@bcgov/design-tokens` v3.1.1.
+- InlineAlert close button is adjusted so it doesn't cause its container to stretch when there's only a single line of text in the alert.
+- Select component list item vertical padding is updated, making lists slightly taller.
+
 ## 0.1.3
 
 ### Added
