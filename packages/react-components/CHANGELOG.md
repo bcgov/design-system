@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+No changes from v0.2.0.
+
 ## 0.2.0
 
 This is a milestone release that contains the following new components:
