@@ -16,6 +16,7 @@
 
 .bcds-react-aria-TextArea--Label > .requiredIcon {
   color: var(--icons-color-danger);
+  text-decoration: none;
 }
 
 /* Styles for the description and character count slot below the input field */

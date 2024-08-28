@@ -29,9 +29,9 @@ function getRequiredIndicator(requiredConvention: string) {
       return "(required)";
     case "asterisk":
       return (
-        <span className="requiredIcon" aria-label="Required">
+        <abbr title="Required" className="requiredIcon">
           *
-        </span>
+        </abbr>
       );
     default:
       return;
