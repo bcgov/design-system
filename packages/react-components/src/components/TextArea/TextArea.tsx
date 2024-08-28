@@ -19,6 +19,23 @@ export interface TextAreaProps extends ReactAriaTextFieldProps {
   description?: string;
   /* Used for data validation and error handling */
   errorMessage?: string | ((validation: ValidationResult) => string);
+  /* Styling for required input indicator */
+  requiredConvention?: "text" | "asterisk";
+}
+
+function getRequiredIndicator(requiredConvention: string) {
+  switch (requiredConvention) {
+    case "text":
+      return "(required)";
+    case "asterisk":
+      return (
+        <span className="requiredIcon" aria-label="Required">
+          *
+        </span>
+      );
+    default:
+      return;
+  }
 }
 
 export default function TextArea({
@@ -28,6 +45,7 @@ export default function TextArea({
   maxLength,
   onChange,
   value,
+  requiredConvention = "text",
   ...props
 }: TextAreaProps) {
   // handler for character counter, displayed when a maxLength is set
@@ -44,7 +62,7 @@ export default function TextArea({
         <>
           {label && (
             <Label className="bcds-react-aria-TextArea--Label">
-              {isRequired ? `${label} (required)` : label}
+              {label} {isRequired && getRequiredIndicator(requiredConvention)}
             </Label>
           )}
           <div className="bcds-react-aria-TextArea--Container">

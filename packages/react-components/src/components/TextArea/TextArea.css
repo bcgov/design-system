@@ -14,6 +14,10 @@
   padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
 
+.bcds-react-aria-TextArea--Label > .requiredIcon {
+  color: var(--icons-color-danger);
+}
+
 /* Styles for the description and character count slot below the input field */
 .bcds-react-aria-TextArea--Description {
   display: grid;
