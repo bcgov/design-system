@@ -5,12 +5,11 @@ import {
 } from "react-aria-components";
 
 import "./Dialog.css";
+import React from "react";
 
 export interface DialogProps extends ReactAriaDialogProps {
   children?: React.ReactNode;
 }
-
-export { DialogTrigger };
 
 export default function Dialog({ children, ...props }: DialogProps) {
   return (
@@ -19,3 +18,5 @@ export default function Dialog({ children, ...props }: DialogProps) {
     </ReactAriaDialog>
   );
 }
+
+export { DialogTrigger };
