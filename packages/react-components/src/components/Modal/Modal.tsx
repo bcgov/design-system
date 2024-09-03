@@ -1,4 +1,7 @@
-import { Modal as ReactAriaModal } from "react-aria-components";
+import {
+  Modal as ReactAriaModal,
+  ModalOverlay as ReactAriaModalOverlay,
+} from "react-aria-components";
 
 import "./Modal.css";
 import React from "react";
@@ -9,8 +12,10 @@ export interface ModalProps {
 
 export default function Modal({ children, ...props }: ModalProps) {
   return (
-    <ReactAriaModal className="bcds-react-aria-Modal" {...props}>
-      {children}
-    </ReactAriaModal>
+    <ReactAriaModalOverlay className="bcds-react-aria-Modal--Overlay">
+      <ReactAriaModal className="bcds-react-aria-Modal--Container" {...props}>
+        {children}
+      </ReactAriaModal>
+    </ReactAriaModalOverlay>
   );
 }

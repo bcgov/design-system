@@ -3,3 +3,29 @@
   flex-direction: column;
   gap: var(--layout-margin-small);
 }
+
+.bcds-react-aria-Dialog--Header {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--layout-padding-medium) var(--layout-padding-large);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+}
+
+.bcds-react-aria-Dialog--Title {
+  align-self: flex-start;
+  flex-grow: 1;
+  font: var(--typography-bold-h5);
+  color: var(--typography-color-primary);
+}
+
+.bcds-react-aria-Dialog--closeIcon {
+  align-self: flex-end;
+  color: var(--icons-color-primary);
+}
+
+.bcds-react-aria-Dialog--Description {
+  font: var(--typography-regular-body);
+  color: var(--typography-color-primary);
+}

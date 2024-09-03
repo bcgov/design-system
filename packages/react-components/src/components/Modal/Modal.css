@@ -1,3 +1,19 @@
-.bcds-react-aria-Modal {
+.bcds-react-aria-Modal--Overlay {
+  position: fixed;
+  inset: 0;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--layout-margin-small);
+  background: var(--surface-color-overlay-default);
+}
+
+.bcds-react-aria-Modal--Container {
+  width: 600px;
+  border-radius: var(--layout-border-radius-medium);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  background: var(--surface-color-forms-default);
+  box-shadow: var(--surface-shadow-large);
 }
