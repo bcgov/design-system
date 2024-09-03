@@ -1,6 +1,7 @@
 import ButtonPage from "./Button";
 import ButtonGroupPage from "./ButtonGroup";
 import InlineAlertPage from "./InlineAlert";
+import ModalDialogPage from "./ModalDialog";
 import SelectPage from "./Select";
 import TagGroupPage from "./TagGroup";
 import TextAreaPage from "./TextArea";
@@ -12,6 +13,7 @@ export {
   ButtonPage,
   ButtonGroupPage,
   InlineAlertPage,
+  ModalDialogPage,
   SelectPage,
   TagGroupPage,
   TextAreaPage,

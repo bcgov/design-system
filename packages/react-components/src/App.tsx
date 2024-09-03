@@ -10,6 +10,7 @@ import {
   ButtonPage,
   ButtonGroupPage,
   InlineAlertPage,
+  ModalDialogPage,
   SelectPage,
   TagGroupPage,
   TextAreaPage,
@@ -152,6 +153,7 @@ function App() {
         <ButtonGroupPage />
         <SwitchPage />
         <InlineAlertPage />
+        <ModalDialogPage />
         <SelectPage />
         <TagGroupPage />
         <TooltipPage />
