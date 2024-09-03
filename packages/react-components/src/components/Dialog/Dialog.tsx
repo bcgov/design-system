@@ -12,7 +12,6 @@ import "./Dialog.css";
 import React from "react";
 
 export interface DialogProps extends ReactAriaDialogProps {
-  children?: React.ReactNode;
   title?: string;
   description?: string;
   buttons?: React.ReactNode;
@@ -27,35 +26,40 @@ export default function Dialog({
 }: DialogProps) {
   return (
     <ReactAriaDialog className="bcds-react-aria-Dialog" {...props}>
-      {children ? (
-        children
-      ) : (
+      {({ close }) => (
         <>
-          <div className="bcds-react-aria-Dialog--Header">
-            {title && (
-              <div className="bcds-react-aria-Dialog--Title">{title}</div>
-            )}
-            <div className="bcds-react-aria-Dialog--closeIcon">
-              <Button
-                variant="tertiary"
-                isIconButton
-                size="small"
-                aria-label="Close"
-                type="button"
-              >
-                <SvgCloseIcon />
-              </Button>
-            </div>
-          </div>
-          {description && (
-            <div className="bcds-react-aria-Dialog--Description">
-              {description}
-            </div>
-          )}
-          {buttons && (
-            <ButtonGroup alignment="end" orientation="horizontal">
-              {buttons}
-            </ButtonGroup>
+          {children ? (
+            children
+          ) : (
+            <>
+              <div className="bcds-react-aria-Dialog--Header">
+                {title && (
+                  <div className="bcds-react-aria-Dialog--Title">{title}</div>
+                )}
+                <div className="bcds-react-aria-Dialog--closeIcon">
+                  <Button
+                    variant="tertiary"
+                    isIconButton
+                    size="small"
+                    aria-label="Close"
+                    type="button"
+                    onPress={close}
+                  >
+                    <SvgCloseIcon />
+                  </Button>
+                </div>
+              </div>
+              {description && (
+                <div className="bcds-react-aria-Dialog--Description">
+                  {description}
+                </div>
+              )}
+              {buttons && (
+                <ButtonGroup alignment="end" orientation="horizontal">
+                  {buttons}
+                </ButtonGroup>
+              )}
+            </>
           )}
         </>
       )}

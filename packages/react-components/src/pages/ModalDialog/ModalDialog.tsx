@@ -11,14 +11,14 @@ export default function ModalDialogPage() {
             title="This is a modal dialog"
             description="It has some additional description text"
             buttons={[
-              <Button variant="tertiary" size="small">
+              <Button variant="tertiary" size="small" onPress={close}>
                 Cancel
               </Button>,
               <Button variant="primary" size="small">
                 Continue
               </Button>,
             ]}
-          />
+          ></Dialog>
         </Modal>
       </DialogTrigger>
     </>
