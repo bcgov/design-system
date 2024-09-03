@@ -23,8 +23,8 @@ export const ModalDialogExample: Story = {
   render: ({ ...args }) => (
     <DialogTrigger>
       <Button variant="primary">Open dialog</Button>
-      <Modal>
-        <Dialog {...args}></Dialog>
+      <Modal {...args}>
+        <Dialog></Dialog>
       </Modal>
     </DialogTrigger>
   ),

@@ -1,3 +1,5 @@
 .bcds-react-aria-Dialog {
   display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-small);
 }
