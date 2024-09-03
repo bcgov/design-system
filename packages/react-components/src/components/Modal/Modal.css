@@ -7,6 +7,15 @@
   align-items: center;
   gap: var(--layout-margin-small);
   background: var(--surface-color-overlay-default);
+  /* This variable is set by React Aria */
+  height: var(--visual-viewport-height);
+
+  &[data-entering] {
+    animation-delay: 200ms;
+  }
+  &[data-exiting] {
+    animation-delay: 200ms;
+  }
 }
 
 .bcds-react-aria-Modal--Container {
