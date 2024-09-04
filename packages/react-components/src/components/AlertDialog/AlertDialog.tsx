@@ -24,6 +24,8 @@ export interface AlertDialogProps extends ReactAriaDialogProps {
   description?: string;
   /* Button group */
   buttons?: React.ReactNode;
+  /* ARIA role */
+  role?: "dialog" | "alertdialog";
 }
 
 /* Sets correct left icon for selected variant */
@@ -46,6 +48,7 @@ function getIcon(variant: string) {
 
 export default function AlertDialog({
   variant = "info",
+  role = "alertdialog",
   title,
   description,
   buttons,
@@ -54,6 +57,7 @@ export default function AlertDialog({
   return (
     <ReactAriaDialog
       className={`bcds-react-aria-AlertDialog ${variant}`}
+      role={role}
       {...props}
     >
       {({ close }) => (
