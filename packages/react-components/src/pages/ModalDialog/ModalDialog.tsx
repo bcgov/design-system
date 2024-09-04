@@ -3,7 +3,7 @@ import { AlertDialog, Button, DialogTrigger, Modal } from "@/components";
 export default function ModalDialogPage() {
   return (
     <>
-      <h2>Alert Dialog</h2>
+      <h2>Alert Dialog (Dismissable)</h2>
       <DialogTrigger>
         <Button variant="primary">Open an alert dialog</Button>
         <Modal>

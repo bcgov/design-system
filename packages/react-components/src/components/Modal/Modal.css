@@ -19,7 +19,8 @@
 }
 
 .bcds-react-aria-Modal--Container {
-  width: 600px;
+  width: 900px;
+  max-width: 600px;
   border-radius: var(--layout-border-radius-medium);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);

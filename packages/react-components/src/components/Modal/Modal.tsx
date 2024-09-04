@@ -1,14 +1,12 @@
 import {
   Modal as ReactAriaModal,
   ModalOverlay as ReactAriaModalOverlay,
+  ModalOverlayProps as ReactAriaModalOverlayProps,
 } from "react-aria-components";
 
 import "./Modal.css";
-import React from "react";
 
-export interface ModalProps {
-  children?: React.ReactNode;
-}
+export interface ModalProps extends ReactAriaModalOverlayProps {}
 
 export default function Modal({ children, ...props }: ModalProps) {
   return (
