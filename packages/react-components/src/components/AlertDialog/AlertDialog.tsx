@@ -16,12 +16,17 @@ import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 import SvgExclamationCircleIcon from "../Icons/SvgExclamationCircleIcon";
 
 export interface AlertDialogProps extends ReactAriaDialogProps {
+  /* Dialog theme */
   variant?: "info" | "confirmation" | "warning" | "error" | "destructive";
+  /* Dialog title */
   title?: string;
+  /* Dialog description */
   description?: string;
+  /* Button group */
   buttons?: React.ReactNode;
 }
 
+/* Sets correct left icon for selected variant */
 function getIcon(variant: string) {
   switch (variant) {
     case "info":
@@ -34,14 +39,16 @@ function getIcon(variant: string) {
       return <SvgExclamationCircleIcon />;
     case "destructive":
       return <SvgExclamationCircleIcon />;
+    default:
+      return;
   }
 }
 
 export default function AlertDialog({
-  buttons,
-  description,
-  title,
   variant = "info",
+  title,
+  description,
+  buttons,
   ...props
 }: AlertDialogProps) {
   return (
@@ -56,7 +63,9 @@ export default function AlertDialog({
               {getIcon(variant)}
             </div>
             {title && (
-              <div className="bcds-react-aria-AlertDialog--Title">{title}</div>
+              <div className="bcds-react-aria-AlertDialog--Title" slot="title">
+                {title}
+              </div>
             )}
             <div className="bcds-react-aria-AlertDialog--closeIcon">
               <Button
@@ -72,7 +81,10 @@ export default function AlertDialog({
             </div>
           </div>
           {description && (
-            <div className="bcds-react-aria-AlertDialog--Description">
+            <div
+              className="bcds-react-aria-AlertDialog--Description"
+              slot="description"
+            >
               {description}
             </div>
           )}
