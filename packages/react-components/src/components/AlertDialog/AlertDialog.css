@@ -1,0 +1,40 @@
+.bcds-react-aria-AlertDialog {
+  display: flex;
+  flex-direction: column;
+}
+
+.bcds-react-aria-AlertDialog--Header {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--layout-padding-medium) var(--layout-padding-large);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+}
+
+.bcds-react-aria-AlertDialog--Title {
+  flex-grow: 1;
+  font: var(--typography-bold-h5);
+  color: var(--typography-color-primary);
+}
+
+.bcds-react-aria-AlertDialog--Icon {
+  justify-self: flex-start;
+}
+
+.bcds-react-aria-AlertDialog--closeIcon {
+  justify-self: flex-end;
+  color: var(--icons-color-primary);
+}
+
+.bcds-react-aria-AlertDialog--Description {
+  font: var(--typography-regular-body);
+  color: var(--typography-color-primary);
+  padding: var(--layout-padding-medium) var(--layout-padding-large);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+}
+
+.bcds-react-aria-AlertDialog > .bcds-ButtonGroup {
+  padding: var(--layout-padding-medium) var(--layout-padding-large);
+}

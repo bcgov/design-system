@@ -1,13 +1,13 @@
-import { Button, Dialog, DialogTrigger, Modal } from "@/components";
+import { AlertDialog, Button, DialogTrigger, Modal } from "@/components";
 
 export default function ModalDialogPage() {
   return (
     <>
-      <h2>Modal Dialog</h2>
+      <h2>Alert Dialog</h2>
       <DialogTrigger>
-        <Button variant="primary">Open a modal dialog</Button>
+        <Button variant="primary">Open an alert dialog</Button>
         <Modal>
-          <Dialog
+          <AlertDialog
             title="This is a modal dialog"
             description="It has some additional description text"
             buttons={[
@@ -18,7 +18,7 @@ export default function ModalDialogPage() {
                 Continue
               </Button>,
             ]}
-          ></Dialog>
+          ></AlertDialog>
         </Modal>
       </DialogTrigger>
     </>
