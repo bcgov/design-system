@@ -48,7 +48,7 @@ function getIcon(variant: string) {
 
 export default function AlertDialog({
   variant = "info",
-  role = "alertdialog",
+  role = "dialog",
   title,
   description,
   buttons,
