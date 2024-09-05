@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Button, Modal, Dialog, DialogTrigger } from "../components";
 
 const meta = {
-  title: "Components/ModalDialog/Modal",
+  title: "Components/Dialogs/Modal",
   component: Modal,
   parameters: {
     layout: "centered",
