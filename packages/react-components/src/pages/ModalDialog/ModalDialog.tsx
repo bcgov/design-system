@@ -1,12 +1,19 @@
-import { AlertDialog, Button, DialogTrigger, Modal } from "@/components";
+import {
+  AlertDialog,
+  Button,
+  Dialog,
+  DialogTrigger,
+  Modal,
+} from "@/components";
 
 export default function ModalDialogPage() {
   return (
     <>
-      <h2>Alert Dialog (Dismissable)</h2>
+      <h2>Alert Dialog</h2>
+      <h3>Info Alert Dialog</h3>
       <DialogTrigger>
         <Button variant="primary">Open an alert dialog</Button>
-        <Modal>
+        <Modal modalHeight={"auto"} modalWidth={600}>
           <AlertDialog
             title="This is a modal dialog"
             description="It has some additional description text"
@@ -21,10 +28,10 @@ export default function ModalDialogPage() {
           ></AlertDialog>
         </Modal>
       </DialogTrigger>
-      <h2>Warning Alert Dialog</h2>
+      <h3>Warning Alert Dialog</h3>
       <DialogTrigger>
         <Button variant="primary">Open a warning dialog</Button>
-        <Modal>
+        <Modal modalHeight={"auto"} modalWidth={600}>
           <AlertDialog
             variant="warning"
             title="This is a warning dialog"
@@ -40,10 +47,10 @@ export default function ModalDialogPage() {
           />
         </Modal>
       </DialogTrigger>
-      <h2>Error Alert Dialog</h2>
+      <h3>Error Alert Dialog</h3>
       <DialogTrigger>
         <Button variant="primary">Open a warning dialog</Button>
-        <Modal>
+        <Modal modalHeight={"auto"} modalWidth={600}>
           <AlertDialog
             variant="error"
             title="This is an error dialog"
@@ -57,6 +64,15 @@ export default function ModalDialogPage() {
               </Button>,
             ]}
           />
+        </Modal>
+      </DialogTrigger>
+      <h2>Generic Dialog</h2>
+      <DialogTrigger>
+        <Button variant="secondary">Open a generic dialog</Button>
+        <Modal modalHeight={"auto"} modalWidth={600}>
+          <Dialog isCloseable>
+            <h2>This is just some title text</h2>
+          </Dialog>
         </Modal>
       </DialogTrigger>
     </>

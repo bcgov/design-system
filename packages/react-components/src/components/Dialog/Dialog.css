@@ -3,12 +3,21 @@
   flex-direction: column;
 }
 
-.bcds-react-aria-Dialog--closeIcon {
-  justify-self: flex-end;
-  color: var(--icons-color-primary);
+.bcds-react-aria-Dialog--Container {
+  position: relative;
+  padding: var(--layout-padding-medium);
 }
 
-.bcds-react-aria-Dialog--Container {
-  display: flex;
-  flex-direction: column;
+/* Close icon */
+.bcds-react-aria-Dialog--closeIcon {
+  color: var(--icons-color-primary);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: var(--layout-padding-small);
+
+  > svg {
+    min-width: var(--icons-size-medium);
+    height: var(--icons-size-medium);
+  }
 }
