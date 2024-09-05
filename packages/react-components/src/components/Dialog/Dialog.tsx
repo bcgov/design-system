@@ -24,22 +24,20 @@ export default function Dialog({
     <ReactAriaDialog className="bcds-react-aria-Dialog" {...props}>
       {({ close }) => (
         <>
-          <div className="bcds-react-aria-Dialog--Header">
-            {isCloseable && (
-              <div className="bcds-react-aria-Dialog--closeIcon">
-                <Button
-                  variant="tertiary"
-                  isIconButton
-                  size="small"
-                  aria-label="Close"
-                  type="button"
-                  onPress={close}
-                >
-                  <SvgCloseIcon />
-                </Button>
-              </div>
-            )}
-          </div>
+          {isCloseable && (
+            <div className="bcds-react-aria-Dialog--closeIcon">
+              <Button
+                variant="tertiary"
+                isIconButton
+                size="small"
+                aria-label="Close"
+                type="button"
+                onPress={close}
+              >
+                <SvgCloseIcon />
+              </Button>
+            </div>
+          )}
           <div className="bcds-react-aria-Dialog--Container">{children}</div>
         </>
       )}
