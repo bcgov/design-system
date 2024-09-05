@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button, Modal, Dialog, DialogTrigger } from "../components";
+import { Button, Modal, DialogTrigger } from "../components";
+import { ModalProps } from "@/components/Modal";
 
 const meta = {
   title: "Components/Dialogs/Modal",
@@ -8,7 +9,20 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  argTypes: {},
+  argTypes: {
+    modalHeight: {
+      control: { type: "text" },
+      description: "Sets the height of the modal",
+    },
+    modalWidth: {
+      control: { type: "text" },
+      description: "Sets the width of the modal",
+    },
+  },
+  args: {
+    modalHeight: 200,
+    modalWidth: 600,
+  },
 } satisfies Meta<typeof Modal>;
 
 export default meta;
@@ -16,16 +30,10 @@ type Story = StoryObj<typeof meta>;
 
 export const ModalTemplate: Story = {
   args: {},
-};
-
-export const ModalDialogExample: Story = {
-  args: {},
-  render: ({ ...args }) => (
+  render: ({ ...args }: ModalProps) => (
     <DialogTrigger>
-      <Button variant="primary">Open dialog</Button>
-      <Modal {...args}>
-        <Dialog></Dialog>
-      </Modal>
+      <Button>Open an empty modal</Button>
+      <Modal {...args}></Modal>
     </DialogTrigger>
   ),
 };
