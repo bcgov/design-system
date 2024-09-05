@@ -24,6 +24,8 @@ export interface AlertDialogProps extends ReactAriaDialogProps {
   description?: string;
   /* Show or hide left icon */
   isIconHidden?: boolean;
+  /* Show or hide close button */
+  isCloseable?: boolean;
   /* Button group */
   buttons?: React.ReactNode;
 }
@@ -50,6 +52,7 @@ export default function AlertDialog({
   variant = "info",
   role = "dialog",
   title,
+  isCloseable = true,
   isIconHidden = false,
   description,
   buttons,
@@ -74,18 +77,20 @@ export default function AlertDialog({
                 {title}
               </div>
             )}
-            <div className="bcds-react-aria-AlertDialog--closeIcon">
-              <Button
-                variant="tertiary"
-                isIconButton
-                size="small"
-                aria-label="Close"
-                type="button"
-                onPress={close}
-              >
-                <SvgCloseIcon />
-              </Button>
-            </div>
+            {isCloseable && (
+              <div className="bcds-react-aria-AlertDialog--closeIcon">
+                <Button
+                  variant="tertiary"
+                  isIconButton
+                  size="small"
+                  aria-label="Close"
+                  type="button"
+                  onPress={close}
+                >
+                  <SvgCloseIcon />
+                </Button>
+              </div>
+            )}
           </div>
           {description && (
             <div
