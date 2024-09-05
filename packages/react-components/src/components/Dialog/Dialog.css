@@ -5,6 +5,7 @@
 
 .bcds-react-aria-Dialog--Container {
   position: relative;
+  min-height: var(--layout-margin-medium);
   padding: var(--layout-padding-medium);
 }
 

@@ -39,6 +39,12 @@ const meta = {
       description: "Sets ARIA role",
     },
   },
+  args: {
+    variant: "info",
+    isCloseable: true,
+    isIconHidden: false,
+    role: "dialog",
+  },
 } satisfies Meta<typeof AlertDialog>;
 
 export default meta;
@@ -52,9 +58,6 @@ export const AlertDialogTemplate: Story = {
       <Button variant="secondary">Button 1</Button>,
       <Button variant="primary">Button 2</Button>,
     ],
-    isIconHidden: false,
-    isCloseable: true,
-    role: "dialog",
   },
   render: ({ ...args }: AlertDialogProps) => (
     <DialogTrigger>

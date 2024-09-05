@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Dialog } from "../components";
+import { Button, Dialog, DialogTrigger, Modal } from "../components";
+import { DialogProps } from "../components/Dialog";
 
 const meta = {
   title: "Components/Dialogs/Dialog",
@@ -8,12 +9,38 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  argTypes: {},
+  argTypes: {
+    isCloseable: {
+      control: { type: "radio" },
+      description: "Toggles display of close icon",
+    },
+    children: {
+      control: { type: "object" },
+      description: "Populates dialog content",
+    },
+  },
+  args: {
+    isCloseable: true,
+  },
 } satisfies Meta<typeof Dialog>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const DialogTemplate: Story = {
-  args: {},
+  args: {
+    children: [
+      <div>
+        <h2>Alert title</h2>
+      </div>,
+    ],
+  },
+  render: ({ ...args }: DialogProps) => (
+    <DialogTrigger>
+      <Button>Open the dialog</Button>
+      <Modal modalHeight={"auto"} modalWidth={600}>
+        <Dialog {...args} />
+      </Modal>
+    </DialogTrigger>
+  ),
 };
