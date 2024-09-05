@@ -22,10 +22,10 @@ export interface AlertDialogProps extends ReactAriaDialogProps {
   title?: string;
   /* Dialog description */
   description?: string;
+  /* Show or hide left icon */
+  isIconHidden?: boolean;
   /* Button group */
   buttons?: React.ReactNode;
-  /* ARIA role */
-  role?: "dialog" | "alertdialog";
 }
 
 /* Sets correct left icon for selected variant */
@@ -50,6 +50,7 @@ export default function AlertDialog({
   variant = "info",
   role = "dialog",
   title,
+  isIconHidden = false,
   description,
   buttons,
   ...props
@@ -63,9 +64,11 @@ export default function AlertDialog({
       {({ close }) => (
         <>
           <div className="bcds-react-aria-AlertDialog--Header">
-            <div className="bcds-react-aria-AlertDialog--Icon">
-              {getIcon(variant)}
-            </div>
+            {!isIconHidden && (
+              <div className="bcds-react-aria-AlertDialog--Icon">
+                {getIcon(variant)}
+              </div>
+            )}
             {title && (
               <div className="bcds-react-aria-AlertDialog--Title" slot="title">
                 {title}
