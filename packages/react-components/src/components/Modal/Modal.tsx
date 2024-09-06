@@ -15,12 +15,18 @@ export interface ModalProps extends ReactAriaModalOverlayProps {
 
 export default function Modal({
   children,
+  isDismissable,
+  isKeyboardDismissDisabled,
   modalHeight = "auto",
   modalWidth = 600,
   ...props
 }: ModalProps) {
   return (
-    <ReactAriaModalOverlay className="bcds-react-aria-Modal--Overlay">
+    <ReactAriaModalOverlay
+      className="bcds-react-aria-Modal--Overlay"
+      isDismissable={isDismissable}
+      isKeyboardDismissDisabled={isKeyboardDismissDisabled}
+    >
       <ReactAriaModal
         className="bcds-react-aria-Modal--Container"
         style={{ width: modalWidth, height: modalHeight }}

@@ -11,7 +11,7 @@ const meta = {
   },
   argTypes: {
     isCloseable: {
-      control: { type: "radio" },
+      control: { type: "boolean" },
       description: "Toggles display of close icon",
     },
     children: {

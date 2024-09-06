@@ -12,11 +12,12 @@ import "./Dialog.css";
 export interface DialogProps extends ReactAriaDialogProps {
   /* Show or hide close button */
   isCloseable?: boolean;
+  /* Used to populate dialog content */
   children?: React.ReactNode;
 }
 
 export default function Dialog({
-  isCloseable = true,
+  isCloseable,
   children,
   ...props
 }: DialogProps) {

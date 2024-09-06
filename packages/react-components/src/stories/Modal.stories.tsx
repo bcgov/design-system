@@ -10,6 +10,15 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
+    isDismissable: {
+      control: { type: "boolean" },
+      description: "Whether to close the modal when user interacts outside it",
+    },
+    isKeyboardDismissDisabled: {
+      control: { type: "boolean" },
+      description:
+        "Whether pressing the escape key to close the modal should be disabled",
+    },
     modalHeight: {
       control: { type: "text" },
       description: "Sets the height of the modal",

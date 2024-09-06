@@ -1,8 +1,12 @@
 import {
   AlertDialog,
   Button,
+  ButtonGroup,
   Dialog,
   DialogTrigger,
+  Form,
+  TextField,
+  Select,
   Modal,
 } from "@/components";
 
@@ -67,11 +71,51 @@ export default function ModalDialogPage() {
         </Modal>
       </DialogTrigger>
       <h2>Generic Dialog</h2>
+      <h3>Empty dialog (closeable and dismissable)</h3>
       <DialogTrigger>
         <Button variant="secondary">Open a generic dialog</Button>
-        <Modal modalHeight={"auto"} modalWidth={600}>
-          <Dialog isCloseable>
-            <h2>This is just some title text</h2>
+        <Modal modalHeight={"auto"} modalWidth={600} isDismissable>
+          <Dialog isCloseable></Dialog>
+        </Modal>
+      </DialogTrigger>
+      <h3>Generic dialog with composed form</h3>
+      <DialogTrigger>
+        <Button variant="secondary">Open a generic dialog</Button>
+        <Modal modalHeight={"auto"} modalWidth={600} isDismissable>
+          <Dialog>
+            <span style={{ font: "var(--typography-bold-h3" }}>
+              This dialog contains a form
+            </span>
+            <Form
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "var(--layout-margin-small)",
+              }}
+            >
+              <TextField isRequired label="Name" />
+              <TextField isRequired type="email" label="Email address" />
+              <Select
+                items={[
+                  { id: "vancouver", label: "Vancouver" },
+                  { id: "victoria", label: "Victoria" },
+                  { id: "kelowna", label: "Kelowna" },
+                  { id: "kamloops", label: "Kamloops" },
+                  { id: "princegeorge", label: "Prince George" },
+                  { id: "princerupert", label: "Prince Rupert" },
+                ]}
+                label="City"
+                isRequired
+              />
+              <ButtonGroup alignment="start" orientation="horizontal">
+                <Button variant="primary" type="submit">
+                  Submit
+                </Button>
+                <Button variant="secondary" type="reset">
+                  Reset
+                </Button>
+              </ButtonGroup>
+            </Form>
           </Dialog>
         </Modal>
       </DialogTrigger>
