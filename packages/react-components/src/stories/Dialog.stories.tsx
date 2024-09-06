@@ -38,7 +38,7 @@ export const DialogTemplate: Story = {
   render: ({ ...args }: DialogProps) => (
     <DialogTrigger>
       <Button>Open the dialog</Button>
-      <Modal modalHeight={"auto"} modalWidth={600}>
+      <Modal>
         <Dialog {...args} />
       </Modal>
     </DialogTrigger>

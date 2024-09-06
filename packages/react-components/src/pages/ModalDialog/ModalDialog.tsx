@@ -17,7 +17,7 @@ export default function ModalDialogPage() {
       <h3>Info Alert Dialog</h3>
       <DialogTrigger>
         <Button variant="primary">Open an alert dialog</Button>
-        <Modal modalHeight={"auto"} modalWidth={600}>
+        <Modal>
           <AlertDialog
             title="This is a modal dialog"
             description="It has some additional description text"
@@ -35,7 +35,7 @@ export default function ModalDialogPage() {
       <h3>Warning Alert Dialog</h3>
       <DialogTrigger>
         <Button variant="primary">Open a warning dialog</Button>
-        <Modal modalHeight={"auto"} modalWidth={600}>
+        <Modal>
           <AlertDialog
             variant="warning"
             title="This is a warning dialog"
@@ -54,7 +54,7 @@ export default function ModalDialogPage() {
       <h3>Error Alert Dialog</h3>
       <DialogTrigger>
         <Button variant="primary">Open a warning dialog</Button>
-        <Modal modalHeight={"auto"} modalWidth={600}>
+        <Modal>
           <AlertDialog
             variant="error"
             title="This is an error dialog"
@@ -74,50 +74,62 @@ export default function ModalDialogPage() {
       <h3>Empty dialog (closeable and dismissable)</h3>
       <DialogTrigger>
         <Button variant="secondary">Open a generic dialog</Button>
-        <Modal modalHeight={"auto"} modalWidth={600} isDismissable>
+        <Modal isDismissable>
           <Dialog isCloseable></Dialog>
         </Modal>
       </DialogTrigger>
       <h3>Generic dialog with composed form</h3>
       <DialogTrigger>
         <Button variant="secondary">Open a generic dialog</Button>
-        <Modal modalHeight={"auto"} modalWidth={600} isDismissable>
+        <Modal isDismissable>
           <Dialog>
-            <span style={{ font: "var(--typography-bold-h3" }}>
-              This dialog contains a form
-            </span>
-            <Form
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "var(--layout-margin-small)",
-              }}
-            >
-              <TextField isRequired label="Name" />
-              <TextField isRequired type="email" label="Email address" />
-              <Select
-                items={[
-                  { id: "vancouver", label: "Vancouver" },
-                  { id: "victoria", label: "Victoria" },
-                  { id: "kelowna", label: "Kelowna" },
-                  { id: "kamloops", label: "Kamloops" },
-                  { id: "princegeorge", label: "Prince George" },
-                  { id: "princerupert", label: "Prince Rupert" },
-                ]}
-                label="City"
-                isRequired
-              />
-              <ButtonGroup alignment="start" orientation="horizontal">
-                <Button variant="primary" type="submit">
-                  Submit
-                </Button>
-                <Button variant="secondary" type="reset">
-                  Reset
-                </Button>
-              </ButtonGroup>
-            </Form>
+            <div style={{ padding: "var(--layout-padding-medium" }}>
+              <span style={{ font: "var(--typography-bold-h3" }}>
+                This dialog contains a form
+              </span>
+              <Form
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "var(--layout-margin-small)",
+                }}
+              >
+                <TextField isRequired label="Name" />
+                <TextField isRequired type="email" label="Email address" />
+                <Select
+                  items={[
+                    { id: "vancouver", label: "Vancouver" },
+                    { id: "victoria", label: "Victoria" },
+                    { id: "kelowna", label: "Kelowna" },
+                    { id: "kamloops", label: "Kamloops" },
+                    { id: "princegeorge", label: "Prince George" },
+                    { id: "princerupert", label: "Prince Rupert" },
+                  ]}
+                  label="City"
+                  isRequired
+                />
+                <ButtonGroup alignment="start" orientation="horizontal">
+                  <Button variant="primary" type="submit">
+                    Submit
+                  </Button>
+                  <Button variant="secondary" type="reset">
+                    Reset
+                  </Button>
+                </ButtonGroup>
+              </Form>
+            </div>
           </Dialog>
         </Modal>
+      </DialogTrigger>
+      <h2>Default style</h2>
+      <DialogTrigger>
+        <Button>Open a default style dialog</Button>
+        <Modal>Some stuff goes here</Modal>
+      </DialogTrigger>
+      <h3>Override style</h3>
+      <DialogTrigger>
+        <Button>Open a square dialog</Button>
+        <Modal style={{ width: "300px", height: "300px" }}></Modal>
       </DialogTrigger>
     </>
   );

@@ -20,7 +20,9 @@
 .bcds-react-aria-Modal--Container {
   box-sizing: border-box;
   max-width: 100vw;
+  width: 600px;
   max-height: 100vh;
+  height: auto;
   margin: var(--layout-margin-large);
   border-radius: var(--layout-border-radius-medium);
   border: var(--layout-border-width-small) solid

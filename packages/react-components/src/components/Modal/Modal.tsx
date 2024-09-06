@@ -6,32 +6,21 @@ import {
 
 import "./Modal.css";
 
-export interface ModalProps extends ReactAriaModalOverlayProps {
-  /* Sets height of modal container */
-  modalHeight: string | number;
-  /* Sets width of modal container */
-  modalWidth: string | number;
-}
-
 export default function Modal({
   children,
   isDismissable,
   isKeyboardDismissDisabled,
-  modalHeight = "auto",
-  modalWidth = 600,
+  shouldCloseOnInteractOutside,
   ...props
-}: ModalProps) {
+}: ReactAriaModalOverlayProps) {
   return (
     <ReactAriaModalOverlay
       className="bcds-react-aria-Modal--Overlay"
       isDismissable={isDismissable}
       isKeyboardDismissDisabled={isKeyboardDismissDisabled}
+      shouldCloseOnInteractOutside={shouldCloseOnInteractOutside}
     >
-      <ReactAriaModal
-        className="bcds-react-aria-Modal--Container"
-        style={{ width: modalWidth, height: modalHeight }}
-        {...props}
-      >
+      <ReactAriaModal className="bcds-react-aria-Modal--Container" {...props}>
         {children}
       </ReactAriaModal>
     </ReactAriaModalOverlay>

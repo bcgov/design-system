@@ -19,19 +19,8 @@ const meta = {
       description:
         "Whether pressing the escape key to close the modal should be disabled",
     },
-    modalHeight: {
-      control: { type: "text" },
-      description: "Sets the height of the modal",
-    },
-    modalWidth: {
-      control: { type: "text" },
-      description: "Sets the width of the modal",
-    },
   },
-  args: {
-    modalHeight: 200,
-    modalWidth: 600,
-  },
+  args: {},
 } satisfies Meta<typeof Modal>;
 
 export default meta;

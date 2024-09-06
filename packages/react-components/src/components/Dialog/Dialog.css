@@ -1,12 +1,11 @@
 .bcds-react-aria-Dialog {
   display: flex;
   flex-direction: column;
+  min-height: var(--layout-margin-xxxlarge);
 }
 
 .bcds-react-aria-Dialog--Container {
   position: relative;
-  min-height: var(--layout-margin-medium);
-  padding: var(--layout-padding-medium);
 }
 
 /* Close icon */
