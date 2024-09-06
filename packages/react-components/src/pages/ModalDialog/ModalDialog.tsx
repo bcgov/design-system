@@ -82,7 +82,7 @@ export default function ModalDialogPage() {
       <DialogTrigger>
         <Button variant="secondary">Open a generic dialog</Button>
         <Modal isDismissable>
-          <Dialog>
+          <Dialog isCloseable>
             <div style={{ padding: "var(--layout-padding-medium" }}>
               <span style={{ font: "var(--typography-bold-h3" }}>
                 This dialog contains a form
@@ -121,15 +121,19 @@ export default function ModalDialogPage() {
           </Dialog>
         </Modal>
       </DialogTrigger>
-      <h2>Default style</h2>
+      <h2>Empty modals</h2>
+      <h3>Default style</h3>
       <DialogTrigger>
-        <Button>Open a default style dialog</Button>
-        <Modal>Some stuff goes here</Modal>
+        <Button>Open a default style modal</Button>
+        <Modal isDismissable>Some stuff goes here</Modal>
       </DialogTrigger>
       <h3>Override style</h3>
       <DialogTrigger>
-        <Button>Open a square dialog</Button>
-        <Modal style={{ width: "300px", height: "300px" }}></Modal>
+        <Button>Open a square modal</Button>
+        <Modal
+          style={{ width: "300px", height: "300px" }}
+          isDismissable
+        ></Modal>
       </DialogTrigger>
     </>
   );
