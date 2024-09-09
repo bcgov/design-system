@@ -11,13 +11,73 @@ import {
 } from "@storybook/blocks";
 
 import * as AlertDialogStories from "./AlertDialog.stories";
+import * as ModalStories from "./Modal.stories";
+import * as DialogStories from "./Dialog.stories";
 
 <Meta title="Components/Dialogs/Dialogs" />
 
 # Dialogs
 
-<Subtitle>TKTK</Subtitle>
+<Subtitle>
+  Dialogs present important information to the user, and block interaction with
+  the rest of the interface until they take an action or dismiss the dialog.
+</Subtitle>
+
+<Source
+  code={`import { AlertDialog, Dialog, DialogTrigger, Modal } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+The B.C. Design System provides two methods to build an interruptive dialog:
+
+- [Dialog](#dialog): a generic content container, in which you can assemble your own UI
+- [Alert Dialog](#alert-dialog): a pre-composed dialog template, suitable for common error messages or notifications
+
+Learn more about working with the dialog components:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=6A0A247719CA42DDB9B8BAD47D46F69C)
+- [View the button component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+These components are based on these React Aria components:
+
+- [Modal](https://react-spectrum.adobe.com/react-aria/Modal.html)
+- [Dialog](https://react-spectrum.adobe.com/react-aria/Dialog.html)
+
+Consult the React Aria documentation for additional technical information.
+
+### Anatomy
+
+To create a modal dialog in your UI, you need:
+
+- A `<DialogTrigger>` element
+- A trigger event or element (commonly a [button](?path=/docs/components-button-button--docs), positioned as the first child inside a `<DialogTrigger>`)
+- A [`<Modal>`](#modal), which creates a blocking overlay over the entire UI when activated
+- A [`<Dialog>`](#dialog), placed inside the `<Modal>` and containing some content and/or components
+
+Structurally, a modal dialog is assembled like this:
+
+```javascript
+<DialogTrigger>
+  <Button>This button activates the modal</Button>
+  <Modal>
+    <Dialog>This dialog contains some content and/or components</Dialog>
+  </Modal>
+</DialogTrigger>
+```
+
+## Modal
+
+<Canvas of={ModalStories.ModalTemplate} />
+<Controls of={ModalStories.ModalTemplate} />
+
+## Dialog
+
+<Canvas of={DialogStories.DialogTemplate} />
+<Controls of={DialogStories.DialogTemplate} />
 
 ## Alert Dialog
 
 <Canvas of={AlertDialogStories.AlertDialogTemplate} />
+<Controls of={AlertDialogStories.AlertDialogTemplate} />
