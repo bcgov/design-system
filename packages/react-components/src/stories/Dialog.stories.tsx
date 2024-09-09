@@ -27,9 +27,15 @@ const meta = {
       control: { type: "object" },
       description: "Populates dialog content",
     },
+    role: {
+      control: { type: "radio" },
+      options: ["alertdialog", "dialog"],
+      description: "Sets ARIA role",
+    },
   },
   args: {
     isCloseable: true,
+    role: "dialog",
   },
 } satisfies Meta<typeof Dialog>;
 

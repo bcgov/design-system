@@ -14,7 +14,7 @@ import * as AlertDialogStories from "./AlertDialog.stories";
 import * as ModalStories from "./Modal.stories";
 import * as DialogStories from "./Dialog.stories";
 
-<Meta title="Components/Dialogs/Dialogs" />
+<Meta title="Components/Dialogs" />
 
 # Dialogs
 
@@ -32,7 +32,7 @@ import * as DialogStories from "./Dialog.stories";
 
 The B.C. Design System provides two methods to build an interruptive dialog:
 
-- [Dialog](#dialog): a generic content container, in which you can assemble your own UI
+- [Dialog](#dialog): an empty container, in which you can assemble your own UI
 - [Alert Dialog](#alert-dialog): a pre-composed dialog template, suitable for common error messages or notifications
 
 Learn more about working with the dialog components:
@@ -56,7 +56,7 @@ To create a modal dialog in your UI, you need:
 - A [`<Modal>`](#modal), which creates a blocking overlay over the entire UI when activated
 - A [`<Dialog>`](#dialog), placed inside the `<Modal>` and containing some content and/or components
 
-Structurally, a modal dialog is assembled like this:
+Structurally, these components are assembled like this:
 
 ```javascript
 <DialogTrigger>
@@ -72,12 +72,23 @@ Structurally, a modal dialog is assembled like this:
 <Canvas of={ModalStories.ModalTemplate} />
 <Controls of={ModalStories.ModalTemplate} />
 
+When triggered by a `<DialogTrigger>`, a modal renders two components:
+
+- `<ModalOverlay>`: a translucent overlay that covers the entire UI and blocks interaction until it is dismissed
+- `<Modal>`: a container element, positioned in the centre of the screen
+
+Use the `isDismissable` prop (defaults to `true`) to control whether the user can dismiss a modal by clicking outside the `<Modal>` container.
+
+Use `isKeyboardDismissDisabled` (defaults to `false`) to control whether the user can dismiss a modal by pressing 'Escape'.
+
 ## Dialog
 
 <Canvas of={DialogStories.DialogTemplate} />
 <Controls of={DialogStories.DialogTemplate} />
 
 ## Alert Dialog
+
+An alert dialog is a pre-composed dialog template, suitable for common error messages or notifications. [View full docs for the Alert Dialog component.](?path=/docs/components-dialogs-alertdialog--docs)
 
 <Canvas of={AlertDialogStories.AlertDialogTemplate} />
 <Controls of={AlertDialogStories.AlertDialogTemplate} />

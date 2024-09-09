@@ -18,11 +18,12 @@ export interface DialogProps extends ReactAriaDialogProps {
 
 export default function Dialog({
   isCloseable,
+  role = "dialog",
   children,
   ...props
 }: DialogProps) {
   return (
-    <ReactAriaDialog className="bcds-react-aria-Dialog" {...props}>
+    <ReactAriaDialog className="bcds-react-aria-Dialog" role={role} {...props}>
       {({ close }) => (
         <>
           <div className="bcds-react-aria-Dialog--Container">

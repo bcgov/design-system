@@ -82,6 +82,16 @@ export const AlertDialogWithoutIcon: Story = {
   },
 };
 
+export const AlertDialogWithoutCloseButton: Story = {
+  ...AlertDialogTemplate,
+  args: {
+    isCloseable: false,
+    title: "This dialog is not closeable",
+    description:
+      "It does not render a close button. Click outside the dialog to dismiss this example.",
+  },
+};
+
 export const ConfirmationAlert: Story = {
   ...AlertDialogTemplate,
   args: {
