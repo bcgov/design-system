@@ -18,7 +18,8 @@ import * as AlertDialogStories from "./AlertDialog.stories";
 
 <Subtitle>
   An alert dialog is a pre-composed dialog template, suitable for common error
-  messages or notifications.
+  messages or notifications that require the user to provide confirmation or
+  take an action before proceeding.
 </Subtitle>
 
 <Source
@@ -30,6 +31,19 @@ import * as AlertDialogStories from "./AlertDialog.stories";
 
 <Primary of={AlertDialogStories} />
 <Controls of={AlertDialogStories.AlertDialogTemplate} />
+
+### Anatomy
+
+Alert Dialogs are implemented by using `DialogTrigger` and `Modal` as wrappers, much like the generic [Dialog](/?path=/docs/components-dialogs--docs):
+
+```javascript
+<DialogTrigger>
+  <Button>This button activates the modal</Button>
+  <Modal>
+    <AlertDialog />
+  </Modal>
+</DialogTrigger>
+```
 
 ## Slots
 

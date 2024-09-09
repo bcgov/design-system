@@ -75,20 +75,40 @@ Structurally, these components are assembled like this:
 When triggered by a `<DialogTrigger>`, a modal renders two components:
 
 - `<ModalOverlay>`: a translucent overlay that covers the entire UI and blocks interaction until it is dismissed
-- `<Modal>`: a container element, positioned in the centre of the screen
+- `<Modal>`: a container element, positioned in the centre of the screen. Expects a [Dialog](#dialog) or [Alert Dialog](#alert-dialog) as children
 
 Use the `isDismissable` prop (defaults to `true`) to control whether the user can dismiss a modal by clicking outside the `<Modal>` container.
 
 Use `isKeyboardDismissDisabled` (defaults to `false`) to control whether the user can dismiss a modal by pressing 'Escape'.
+
+### Controlled state
+
+Instead of using a trigger element inside a `<DialogTrigger>`, you can also [use React Aria's APIs to make a modal's state controlled](https://react-spectrum.adobe.com/react-aria/Modal.html#controlled-open-state), and integrate it with your app's business logic and state management approach.
+
+### Styling
+
+You can pass a `style` object to a `Modal` to apply your own styling to the container element:
+
+<Canvas of={ModalStories.CustomSizeModal} />
 
 ## Dialog
 
 <Canvas of={DialogStories.DialogTemplate} />
 <Controls of={DialogStories.DialogTemplate} />
 
+`Dialog` is a generic content container, that can be used inside a `Modal` (or other patterns like [popovers](https://react-spectrum.adobe.com/react-aria/Popover.html).)
+
+You can pass a set of components to the `children` slot to compose your own dialog UI:
+
+<Canvas of={DialogStories.DialogWithForm} />
+
+### Styling
+
+You can pass a `style` object to a `Dialog` to apply custom styling and layout rules. You can also write additional CSS rules for the `.bcds-react-aria-Dialog--Container` class.
+
 ## Alert Dialog
 
-An alert dialog is a pre-composed dialog template, suitable for common error messages or notifications. [View full docs for the Alert Dialog component.](?path=/docs/components-dialogs-alertdialog--docs)
+An alert dialog is a pre-composed dialog template, suitable for common error messages or notifications that require the user to provide confirmation or take an action before proceeding. [View full docs for the Alert Dialog component.](?path=/docs/components-dialogs-alertdialog--docs)
 
 <Canvas of={AlertDialogStories.AlertDialogTemplate} />
 <Controls of={AlertDialogStories.AlertDialogTemplate} />

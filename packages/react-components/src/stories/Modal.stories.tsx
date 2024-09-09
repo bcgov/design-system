@@ -82,7 +82,7 @@ export const CustomSizeModal: Story = {
         }}
         {...args}
       >
-        This modal has a fixed width and height
+        This modal has custom width and height rules applied
       </Modal>
     </DialogTrigger>
   ),
