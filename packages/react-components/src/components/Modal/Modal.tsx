@@ -10,6 +10,8 @@ export default function Modal({
   children,
   isDismissable,
   isKeyboardDismissDisabled,
+  isOpen,
+  defaultOpen,
   shouldCloseOnInteractOutside,
   ...props
 }: ReactAriaModalOverlayProps) {
@@ -18,6 +20,8 @@ export default function Modal({
       className="bcds-react-aria-Modal--Overlay"
       isDismissable={isDismissable}
       isKeyboardDismissDisabled={isKeyboardDismissDisabled}
+      isOpen={isOpen}
+      defaultOpen={defaultOpen}
       shouldCloseOnInteractOutside={shouldCloseOnInteractOutside}
     >
       <ReactAriaModal className="bcds-react-aria-Modal--Container" {...props}>

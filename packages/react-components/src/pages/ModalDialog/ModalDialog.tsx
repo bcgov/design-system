@@ -84,7 +84,7 @@ export default function ModalDialogPage() {
         <Modal isDismissable>
           <Dialog isCloseable>
             <div style={{ padding: "var(--layout-padding-medium" }}>
-              <span style={{ font: "var(--typography-bold-h3" }}>
+              <span style={{ font: "var(--typography-bold-h3)" }}>
                 This dialog contains a form
               </span>
               <Form

@@ -52,19 +52,83 @@ type Story = StoryObj<typeof meta>;
 
 export const AlertDialogTemplate: Story = {
   args: {
-    title: "Alert title",
-    description: "Alert description",
+    title: "Alert dialog title",
+    description: "Alert dialog description",
     buttons: [
-      <Button variant="secondary">Button 1</Button>,
-      <Button variant="primary">Button 2</Button>,
+      <Button variant="tertiary">Button 1</Button>,
+      <Button variant="secondary">Button 2</Button>,
     ],
   },
   render: ({ ...args }: AlertDialogProps) => (
     <DialogTrigger>
       <Button>Open the alert dialog</Button>
-      <Modal modalHeight={"auto"} modalWidth={600}>
+      <Modal>
         <AlertDialog {...args} />
       </Modal>
     </DialogTrigger>
   ),
+};
+
+export const AlertDialogWithoutIcon: Story = {
+  ...AlertDialogTemplate,
+  args: {
+    isIconHidden: true,
+    title: "Alert dialog title",
+    description: "This dialog renders without an icon",
+    buttons: [
+      <Button variant="tertiary">Button 1</Button>,
+      <Button variant="secondary">Button 2</Button>,
+    ],
+  },
+};
+
+export const ConfirmationAlert: Story = {
+  ...AlertDialogTemplate,
+  args: {
+    title: "Confirmation alert dialog",
+    description: "Displays a green checkmark icon",
+    variant: "confirmation",
+    buttons: [
+      <Button variant="tertiary">Button 1</Button>,
+      <Button variant="secondary">Button 2</Button>,
+    ],
+  },
+};
+
+export const WarningAlert: Story = {
+  ...AlertDialogTemplate,
+  args: {
+    title: "Warning alert dialog",
+    description: "Displays an orange warning icon",
+    variant: "warning",
+    buttons: [
+      <Button variant="tertiary">Button 1</Button>,
+      <Button variant="secondary">Button 2</Button>,
+    ],
+  },
+};
+
+export const ErrorAlert: Story = {
+  ...AlertDialogTemplate,
+  args: {
+    title: "Error alert dialog",
+    description: "Displays a red error icon",
+    variant: "error",
+    buttons: [<Button variant="secondary">Button</Button>],
+  },
+};
+
+export const DestructiveAlert: Story = {
+  ...AlertDialogTemplate,
+  args: {
+    title: "Destructive alert dialog",
+    description: "Displays a red error icon",
+    variant: "destructive",
+    buttons: [
+      <Button variant="tertiary">Button 1</Button>,
+      <Button variant="secondary" danger>
+        Button 2
+      </Button>,
+    ],
+  },
 };
