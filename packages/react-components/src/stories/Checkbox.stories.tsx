@@ -28,7 +28,7 @@ const meta = {
     },
     isIndeterminate: {
       control: { type: "boolean" },
-      description: "Locks a checkbox to an 'inderminate' state",
+      description: "Locks a checkbox to an 'indeterminate' state",
     },
     isDisabled: {
       control: { type: "boolean" },
@@ -36,7 +36,7 @@ const meta = {
     },
     isReadOnly: {
       control: { type: "boolean" },
-      descriptipn: "Locks a checkbox to its current state",
+      description: "Locks a checkbox to its current state",
     },
   },
 } satisfies Meta<typeof Checkbox>;
