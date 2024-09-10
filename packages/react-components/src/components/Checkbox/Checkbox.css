@@ -90,6 +90,9 @@
 .bcds-react-aria-Checkbox[data-indeterminate][data-disabled] > .checkbox {
   background-color: var(--surface-color-primary-disabled);
 }
+.bcds-react-aria-Checkbox[data-indeterminate][data-invalid] > .checkbox {
+  background-color: var(--surface-color-primary-danger-button-default);
+}
 .bcds-react-aria-Checkbox[data-indeterminate] > .checkbox > svg {
   color: var(--icons-color-primary-invert);
   align-self: center;
