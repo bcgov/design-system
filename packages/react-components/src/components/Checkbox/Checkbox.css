@@ -2,7 +2,7 @@
   cursor: pointer;
   display: flex;
   flex-direction: row;
-  gap: var(--layout-margin-small);
+  gap: 10px;
   align-items: center;
 }
 
