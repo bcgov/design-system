@@ -1,6 +1,10 @@
+import { useState } from "react";
+
 import { Checkbox, CheckboxGroup } from "@/components";
 
 export default function CheckboxGroupPage() {
+  const [isSelected, setIsSelected] = useState(false);
+
   return (
     <>
       <h2>Checkboxes</h2>
@@ -19,7 +23,7 @@ export default function CheckboxGroupPage() {
         <Checkbox value="5">Checkbox 5 (same value as 6)</Checkbox>
         <Checkbox value="5">Checkbox 6 (same value as 5)</Checkbox>
       </CheckboxGroup>
-      <h2>Horizontal checkboxes</h2>
+      <h3>Horizontal checkboxes</h3>
       <CheckboxGroup
         orientation="horizontal"
         label="Select some items"
@@ -32,7 +36,7 @@ export default function CheckboxGroupPage() {
           Checkbox 4
         </Checkbox>
       </CheckboxGroup>
-      <h2>Checkbox group with errors</h2>
+      <h3>Checkbox group with errors</h3>
       <CheckboxGroup
         label="Select some items"
         isInvalid
@@ -46,6 +50,18 @@ export default function CheckboxGroupPage() {
         <Checkbox value="3">Checkbox 3</Checkbox>
         <Checkbox value="4" isDisabled>
           Checkbox 4
+        </Checkbox>
+      </CheckboxGroup>
+      <h3>Controlled checkbox</h3>
+      <CheckboxGroup
+        label="A controlled checkbox example"
+        description="This checkbox's state is controlled by a React useState() variable."
+      >
+        <Checkbox
+          isSelected={isSelected}
+          onChange={(isSelected) => setIsSelected(isSelected)}
+        >
+          Controlled
         </Checkbox>
       </CheckboxGroup>
     </>
