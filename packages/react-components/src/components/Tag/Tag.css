@@ -2,12 +2,12 @@
   color: var(--typography-color-primary);
   cursor: pointer;
   border-radius: var(--layout-margin-hair);
-  border: 1px solid;
+  border: var(--layout-border-width-small) solid;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--layout-margin-small);
   font: var(--typography-regular-label);
-  padding: 2px 8px;
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
   width: fit-content;
 }
 .bcds-react-aria-Tag .react-aria-Button {

@@ -1,14 +1,12 @@
-import React from "react";
+import Button from "../Button";
+import ButtonGroup from "../ButtonGroup";
+import SvgCheckCircleIcon from "../Icons/SvgCheckCircleIcon";
+import SvgCloseIcon from "../Icons/SvgCloseIcon";
+import SvgExclamationCircleIcon from "../Icons/SvgExclamationCircleIcon";
+import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
+import SvgInfoIcon from "../Icons/SvgInfoIcon";
+
 import "./InlineAlert.css";
-import {
-  Button,
-  ButtonGroup,
-  SvgInfoIcon,
-  SvgCheckCircleIcon,
-  SvgExclamationIcon,
-  SvgExclamationCircleIcon,
-  SvgCloseIcon,
-} from "@/components";
 
 export interface InlineAlertProps extends React.PropsWithChildren {
   /* Alert theme */

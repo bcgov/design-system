@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.2.1
+
+No changes from v0.2.0.
+
+## 0.2.0
+
+This is a milestone release that contains the following new components:
+
+- ButtonGroup
+- InlineAlert
+- Switch
+
+This release uses:
+
+- `react-aria-components` v1.3.3
+- `@bcgov/design-tokens`v3.1.1
+
+No component changes from v0.1.4.
+
+## 0.1.4
+
+### Changed
+
+- Use `react-aria-components` v1.3.3.
+- Use `@bcgov/design-tokens` v3.1.1.
+- InlineAlert close button is adjusted so it doesn't cause its container to stretch when there's only a single line of text in the alert.
+- Select component list item vertical padding is updated, making lists slightly taller.
+
 ## 0.1.3
 
 ### Added

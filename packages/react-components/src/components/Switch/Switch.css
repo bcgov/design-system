@@ -12,7 +12,7 @@
   align-items: center;
   width: var(--layout-margin-xxlarge);
   height: var(--icons-size-medium);
-  background-color: var(--surface-color-forms-disabled);
+  background-color: var(--surface-color-primary-disabled);
   border-radius: var(--icons-size-medium);
   transition: all 200ms;
 }
@@ -24,7 +24,7 @@
   box-sizing: border-box;
   width: var(--icons-size-medium);
   height: var(--icons-size-medium);
-  background-color: var(--surface-color-background-light-gray);
+  background-color: var(--surface-color-secondary-default);
   border: var(--layout-border-width-medium) solid
     var(--surface-color-border-medium);
   border-radius: var(--icons-size-small);
@@ -33,13 +33,13 @@
 
 /* Selected */
 .bcds-react-aria-Switch[data-selected] > .indicator {
-  background-color: var(--surface-color-primary-button-default);
+  background-color: var(--surface-color-primary-default);
 }
 
 .bcds-react-aria-Switch[data-selected] > .indicator::before {
   transform: translateX(100%);
   border: var(--layout-border-width-medium) solid
-    var(--surface-color-primary-button-default);
+    var(--surface-color-primary-default);
 }
 
 /* Hover */
@@ -49,7 +49,7 @@
 
 .bcds-react-aria-Switch[data-hovered][data-selected] > .indicator {
   cursor: pointer;
-  background-color: var(--surface-color-primary-button-hover);
+  background-color: var(--surface-color-primary-hover);
 }
 
 .bcds-react-aria-Switch[data-hovered] > .indicator::before {
@@ -59,7 +59,7 @@
 
 .bcds-react-aria-Switch[data-hovered][data-selected] > .indicator::before {
   border: var(--layout-border-width-medium) solid
-    var(--surface-color-primary-button-default);
+    var(--surface-color-primary-hover);
 }
 
 /* Focused */
@@ -75,11 +75,12 @@
 }
 
 .bcds-react-aria-Switch[data-disabled] > .indicator {
-  background-color: var(--surface-color-forms-disabled);
+  background-color: var(--surface-color-primary-disabled);
   cursor: not-allowed;
 }
 
 .bcds-react-aria-Switch[data-disabled] > .indicator::before {
+  background-color: var(--theme-gray-10);
   border: var(--layout-border-width-medium) solid
     var(--surface-color-border-default);
 }

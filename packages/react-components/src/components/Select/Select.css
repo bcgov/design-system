@@ -30,6 +30,13 @@
   color: var(--typography-color-danger);
 }
 
+/* Error icon */
+.bcds-react-aria-Select[data-invalid]
+  > .bcds-react-aria-Select--Button
+  > svg:not(:last-child) {
+  color: var(--icons-color-danger);
+}
+
 /* Select input equivalent */
 .bcds-react-aria-Select--Button {
   background-color: var(--surface-color-forms-default);
@@ -90,7 +97,7 @@
   box-shadow: var(--surface-shadow-medium);
   box-sizing: border-box;
   overflow-y: auto;
-  padding: var(--layout-margin-hair) var(--layout-padding-xsmall);
+  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
   width: var(
     --trigger-width
   ); /* Variable provided by Select component https://react-spectrum.adobe.com/react-aria/Select.html#popover-1 */
@@ -108,18 +115,18 @@
 .bcds-react-aria-Select--Header {
   color: var(--typography-color-secondary);
   font: var(--typography-regular-small-body);
-  padding: var(--layout-margin-hair) var(--layout-padding-small);
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
 }
 
 /* ListBox option item */
 .bcds-react-aria-Select--ListBoxItem {
-  border-radius: var(--layout-margin-xsmall);
+  border-radius: var(--layout-border-radius-medium);
   cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--layout-margin-small);
-  padding: 6.5px var(--layout-padding-small);
+  padding: var(--layout-padding-small);
 }
 .bcds-react-aria-Select--ListBoxItem[data-focused],
 .bcds-react-aria-Select--ListBoxItem[data-hovered] {

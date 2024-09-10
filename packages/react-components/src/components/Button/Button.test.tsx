@@ -34,3 +34,27 @@ describe("can be disabled with isDisabled prop", () => {
     expect(button).toBeDisabled();
   });
 });
+
+describe("gets the correct class for each variant", () => {
+  render(<Button variant="primary">Primary</Button>);
+  render(<Button variant="secondary">Secondary</Button>);
+  render(<Button variant="tertiary">Tertiary</Button>);
+  render(<Button variant="link">Link</Button>);
+  const primaryButton = screen.getByText(/primary/i);
+  const secondaryButton = screen.getByText(/secondary/i);
+  const tertiaryButton = screen.getByText(/tertiary/i);
+  const linkButton = screen.getByText(/link/i);
+
+  it("primary button has 'bcds-react-aria-Button' and 'primary' classes", () => {
+    expect(primaryButton).toHaveClass("bcds-react-aria-Button primary");
+  });
+  it("secondary button has 'bcds-react-aria-Button' and 'secondary' classes", () => {
+    expect(secondaryButton).toHaveClass("bcds-react-aria-Button secondary");
+  });
+  it("tertiary button has 'bcds-react-aria-Button' and 'tertiary' classes", () => {
+    expect(tertiaryButton).toHaveClass("bcds-react-aria-Button tertiary");
+  });
+  it("link button has 'bcds-react-aria-Button' and  'link' classes", () => {
+    expect(linkButton).toHaveClass("bcds-react-aria-Button link");
+  });
+});
