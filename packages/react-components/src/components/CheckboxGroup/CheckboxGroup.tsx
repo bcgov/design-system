@@ -14,8 +14,6 @@ import "./CheckboxGroup.css";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 
 export interface CheckboxGroupProps extends ReactAriaCheckboxGroupProps {
-  children?: React.ReactNode;
-  /* Group orientation */
   orientation?: "horizontal" | "vertical";
   /* Group label */
   label?: string;
@@ -48,7 +46,7 @@ export default function CheckboxGroup({
           <div
             className={`bcds-react-aria-CheckboxGroup--options ${orientation}`}
           >
-            {children}
+            <>{children}</>
           </div>
           {description && (
             <Text
