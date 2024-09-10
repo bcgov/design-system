@@ -71,6 +71,9 @@
     var(--surface-color-border-medium);
   background-color: var(--surface-color-primary-disabled);
 }
+.bcds-react-aria-Checkbox[data-disabled] > .label {
+  color: var(--typography-color-disabled);
+}
 
 .bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox {
   background-color: var(--surface-color-primary-disabled);
