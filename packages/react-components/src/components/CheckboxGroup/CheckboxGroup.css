@@ -4,6 +4,17 @@
   gap: var(--layout-margin-small);
 }
 
+/* Flex-wrap */
+.bcds-react-aria-CheckboxGroup.flex-wrap-nowrap {
+  flex-wrap: nowrap;
+}
+.bcds-react-aria-CheckboxGroup.flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+.bcds-react-aria-CheckboxGroup.flex-wrap-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
 /* Orientation */
 .bcds-react-aria-CheckboxGroup--options {
   display: inline-flex;

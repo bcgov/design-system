@@ -14,6 +14,7 @@ import "./CheckboxGroup.css";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 
 export interface CheckboxGroupProps extends ReactAriaCheckboxGroupProps {
+  /* Group orientation, defaults to `vertical` */
   orientation?: "horizontal" | "vertical";
   /* Group label */
   label?: string;
@@ -21,6 +22,8 @@ export interface CheckboxGroupProps extends ReactAriaCheckboxGroupProps {
   description?: string;
   /* Error message */
   errorMessage?: string | ((validation: ValidationResult) => string);
+  /** `flex-wrap` style property, defaults to `nowrap` */
+  flexWrap?: "nowrap" | "wrap" | "wrap-reverse";
 }
 
 export default function CheckboxGroup({
@@ -28,12 +31,13 @@ export default function CheckboxGroup({
   label,
   description,
   errorMessage,
+  flexWrap = "nowrap",
   children,
   ...props
 }: CheckboxGroupProps) {
   return (
     <ReactAriaCheckboxGroup
-      className="bcds-react-aria-CheckboxGroup"
+      className={`bcds-react-aria-CheckboxGroup flex-wrap-${flexWrap}`}
       {...props}
     >
       {({ isRequired, isInvalid }) => (
