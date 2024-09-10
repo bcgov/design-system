@@ -12,8 +12,6 @@ import "./Dialog.css";
 export interface DialogProps extends ReactAriaDialogProps {
   /* Show or hide close button */
   isCloseable?: boolean;
-  /* Used to populate dialog content */
-  children?: React.ReactNode;
 }
 
 export default function Dialog({
@@ -41,7 +39,7 @@ export default function Dialog({
                 </Button>
               </span>
             )}
-            {children}
+            <>{children}</>
           </div>
         </>
       )}
