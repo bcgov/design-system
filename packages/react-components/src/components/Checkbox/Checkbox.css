@@ -16,11 +16,11 @@
   height: var(--icons-size-small);
   min-width: var(--icons-size-small);
   background-color: var(--surface-color-secondary-default);
-  border: var(--layout-border-width-small) solid
-    var(--surface-color-border-medium);
+  border-color: var(--surface-color-border-medium);
+  border-style: solid;
+  border-width: var(--layout-border-width-small);
   border-radius: var(--layout-border-radius-small);
 }
-
 .bcds-react-aria-Checkbox > .checkbox > svg {
   align-self: center;
 }
@@ -40,12 +40,11 @@
 
 /* Hover */
 .bcds-react-aria-Checkbox[data-hovered] > .checkbox {
-  border: var(--layout-border-width-small) solid
-    var(--surface-color-border-dark);
+  border-color: var(--surface-color-border-dark);
 }
-
 .bcds-react-aria-Checkbox[data-selected][data-hovered] > .checkbox {
   background-color: var(--surface-color-primary-hover);
+  border-color: var(--surface-color-primary-hover);
 }
 
 /* Pressed */
@@ -56,8 +55,8 @@
 /* Selected */
 .bcds-react-aria-Checkbox[data-selected] > .checkbox {
   background-color: var(--surface-color-primary-default);
+  border-color: var(--surface-color-primary-default);
 }
-
 .bcds-react-aria-Checkbox[data-selected] > .checkbox > svg {
   color: var(--icons-color-primary-invert);
 }
@@ -67,18 +66,16 @@
   cursor: not-allowed;
 }
 .bcds-react-aria-Checkbox[data-disabled] > .checkbox {
-  border: var(--layout-border-width-small) solid
-    var(--surface-color-border-medium);
+  border-color: var(--surface-color-border-medium);
   background-color: var(--surface-color-primary-disabled);
 }
 .bcds-react-aria-Checkbox[data-disabled] > .label {
   color: var(--typography-color-disabled);
 }
-
 .bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox {
+  border-color: var(--surface-color-primary-disabled);
   background-color: var(--surface-color-primary-disabled);
 }
-
 .bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox > svg {
   color: var(--icons-color-disabled);
 }
@@ -86,9 +83,11 @@
 /* Indeterminate */
 .bcds-react-aria-Checkbox[data-indeterminate] > .checkbox {
   background-color: var(--surface-color-primary-default);
+  border-color: var(--surface-color-primary-default);
 }
 .bcds-react-aria-Checkbox[data-indeterminate][data-disabled] > .checkbox {
   background-color: var(--surface-color-primary-disabled);
+  border-color: var(--surface-color-primary-disabled);
 }
 .bcds-react-aria-Checkbox[data-indeterminate][data-invalid] > .checkbox {
   background-color: var(--surface-color-primary-danger-button-default);
@@ -108,15 +107,12 @@
 }
 
 /* Invalid */
-.bcds-react-aria-Checkbox[data-invalid] > svg {
-  color: var(--icons-color-danger);
-}
-
 .bcds-react-aria-Checkbox[data-invalid] > .checkbox {
-  border: var(--layout-border-width-small) solid
-    var(--support-border-color-danger);
+  border-color: var(--support-border-color-danger);
 }
-
+.bcds-react-aria-Checkbox[data-invalid] > .checkbox > svg {
+  color: var(--icons-color-primary-invert);
+}
 .bcds-react-aria-Checkbox[data-selected][data-invalid] > .checkbox {
-  background-color: var(--icons-color-danger);
+  background-color: var(--surface-color-primary-danger-button-default);
 }
