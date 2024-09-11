@@ -38,7 +38,7 @@ export default function CheckboxGroup({
 }: CheckboxGroupProps) {
   return (
     <ReactAriaCheckboxGroup
-      className={`bcds-react-aria-CheckboxGroup flex-wrap-${flexWrap}`}
+      className={`bcds-react-aria-CheckboxGroup`}
       {...props}
     >
       {({ isRequired, isInvalid }: CheckboxGroupRenderProps) => (
@@ -49,7 +49,7 @@ export default function CheckboxGroup({
             </Label>
           )}
           <div
-            className={`bcds-react-aria-CheckboxGroup--options ${orientation}`}
+            className={`bcds-react-aria-CheckboxGroup--options ${orientation} flex-wrap-${flexWrap}`}
           >
             <>{children}</>
           </div>

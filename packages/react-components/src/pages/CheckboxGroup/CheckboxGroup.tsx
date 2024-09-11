@@ -28,6 +28,7 @@ export default function CheckboxGroupPage() {
         orientation="horizontal"
         label="Select some items"
         description="This is an additional helper text slot."
+        flexWrap="wrap"
       >
         <Checkbox value="1">Checkbox 1</Checkbox>
         <Checkbox value="2">Checkbox 2</Checkbox>
