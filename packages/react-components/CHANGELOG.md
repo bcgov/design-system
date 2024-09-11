@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.2
+
+### Added
+
+- Added CheckboxGroup/Checkbox components.
+
 ## 0.2.1
 
 No changes from v0.2.0.
