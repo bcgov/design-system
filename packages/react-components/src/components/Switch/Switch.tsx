@@ -6,7 +6,6 @@ import {
 import "./Switch.css";
 
 export interface SwitchProps extends ReactAriaSwitchProps {
-  children?: React.ReactNode;
   /* Label positioning relative to switch */
   labelPosition?: "left" | "right";
 }
