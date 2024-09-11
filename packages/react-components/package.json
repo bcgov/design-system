@@ -71,7 +71,7 @@
     "ts-node": "10.9.2",
     "tslib": "2.7.0",
     "typescript": "5.5.4",
-    "vite": "5.4.2"
+    "vite": "5.4.4"
   },
   "author": "Tyler Krys <Tyler.Krys@gov.bc.ca>",
   "license": "Apache-2.0",
