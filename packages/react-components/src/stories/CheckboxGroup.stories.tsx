@@ -48,6 +48,11 @@ const meta = {
       control: { type: "boolean" },
       description: "Disables the entire checkbox group",
     },
+    flexWrap: {
+      control: { type: "radio" },
+      options: ["nowrap", "wrap", "wrap-reverse"],
+      description: "Sets `flex-wrap` property on checkbox items",
+    },
   },
 } satisfies Meta<typeof CheckboxGroup>;
 
