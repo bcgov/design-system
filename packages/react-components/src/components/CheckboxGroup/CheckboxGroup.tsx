@@ -1,5 +1,6 @@
 import {
   CheckboxGroup as ReactAriaCheckboxGroup,
+  CheckboxGroupRenderProps,
   FieldError,
   Label,
   Text,
@@ -40,7 +41,7 @@ export default function CheckboxGroup({
       className={`bcds-react-aria-CheckboxGroup flex-wrap-${flexWrap}`}
       {...props}
     >
-      {({ isRequired, isInvalid }) => (
+      {({ isRequired, isInvalid }: CheckboxGroupRenderProps) => (
         <>
           {label && (
             <Label className="bcds-react-aria-CheckboxGroup--label">
