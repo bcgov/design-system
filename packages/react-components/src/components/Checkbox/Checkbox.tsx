@@ -1,6 +1,7 @@
 import {
   Checkbox as ReactAriaCheckbox,
   CheckboxProps,
+  CheckboxRenderProps,
 } from "react-aria-components";
 
 import SvgCheckIcon from "../Icons/SvgCheckIcon";
@@ -15,7 +16,7 @@ export default function Checkbox({ value, children, ...props }: CheckboxProps) {
       value={value}
       {...props}
     >
-      {({ isRequired, isSelected, isIndeterminate }) => (
+      {({ isRequired, isSelected, isIndeterminate }: CheckboxRenderProps) => (
         <>
           <div className="checkbox">
             {isSelected && !isIndeterminate && <SvgCheckIcon />}
