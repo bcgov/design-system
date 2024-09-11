@@ -122,3 +122,9 @@
   font: var(--typography-regular-small-body);
   color: var(--typography-color-danger);
 }
+
+.bcds-react-aria-TextField--container > .iconError {
+  color: var(--icons-color-danger);
+  min-width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
+}
