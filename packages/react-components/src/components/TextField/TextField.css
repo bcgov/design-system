@@ -123,7 +123,9 @@
   color: var(--typography-color-danger);
 }
 
-.bcds-react-aria-TextField--container > .iconError {
+.bcds-react-aria-TextField[data-invalid]
+  > .bcds-react-aria-TextField--container
+  > svg#exclamation-icon {
   color: var(--icons-color-danger);
   min-width: var(--icons-size-medium);
   height: var(--icons-size-medium);
