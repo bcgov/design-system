@@ -1,6 +1,7 @@
 import {
   RadioGroup as ReactAriaRadioGroup,
   RadioGroupProps as ReactAriaRadioGroupProps,
+  RadioGroupRenderProps,
   FieldError,
   Label,
   Text,
@@ -36,7 +37,7 @@ export default function RadioGroup({
 }: RadioGroupProps) {
   return (
     <ReactAriaRadioGroup className="bcds-react-aria-RadioGroup" {...props}>
-      {({ isRequired, isInvalid }) => (
+      {({ isRequired, isInvalid }: RadioGroupRenderProps) => (
         <>
           {label && (
             <Label className="bcds-react-aria-RadioGroup--label">
