@@ -11,6 +11,7 @@ import {
   ButtonGroupPage,
   CheckboxGroupPage,
   InlineAlertPage,
+  RadioGroupPage,
   SelectPage,
   TagGroupPage,
   TextAreaPage,
@@ -154,6 +155,7 @@ function App() {
         <CheckboxGroupPage />
         <SwitchPage />
         <InlineAlertPage />
+        <RadioGroupPage />
         <SelectPage />
         <TagGroupPage />
         <TooltipPage />

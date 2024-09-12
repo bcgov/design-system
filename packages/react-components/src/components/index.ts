@@ -8,6 +8,8 @@ export { default as CheckboxGroup } from "./CheckboxGroup";
 export { default as Header } from "./Header";
 export { default as Footer, FooterLinks } from "./Footer";
 export { default as Form } from "./Form";
+export { default as Radio } from "./Radio";
+export { default as RadioGroup } from "./RadioGroup";
 export { default as Select } from "./Select";
 export { default as SvgBcLogo } from "./Icons/SvgBcLogo";
 export { default as SvgCheckIcon } from "./Icons/SvgCheckIcon";

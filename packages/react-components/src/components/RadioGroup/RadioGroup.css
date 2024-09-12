@@ -1,0 +1,48 @@
+.bcds-react-aria-RadioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-small);
+}
+
+/* Orientation */
+.bcds-react-aria-RadioGroup--options {
+  display: inline-flex;
+}
+
+.bcds-react-aria-RadioGroup--options.vertical {
+  flex-direction: column;
+  gap: var(--layout-margin-small);
+}
+
+.bcds-react-aria-RadioGroup--options.horizontal {
+  flex-direction: row;
+  gap: var(--layout-margin-medium);
+}
+.bcds-react-aria-RadioGroup--options.horizontal.flex-wrap-nowrap {
+  flex-wrap: nowrap;
+}
+.bcds-react-aria-RadioGroup--options.horizontal.flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+.bcds-react-aria-RadioGroup--options.horizontal.flex-wrap-nowrap {
+  flex-wrap: wrap-reverse;
+}
+
+/* Parts */
+.bcds-react-aria-RadioGroup--label {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-primary);
+}
+
+.bcds-react-aria-RadioGroup--description {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+}
+
+.bcds-react-aria-RadioGroup--error {
+  display: inline-flex;
+  flex-direction: row;
+  gap: var(--layout-margin-xsmall);
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-danger);
+}
