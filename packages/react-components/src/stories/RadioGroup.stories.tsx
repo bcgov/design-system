@@ -31,6 +31,11 @@ const meta = {
       control: { type: "object" },
       description: "Expects an array of Radio components",
     },
+    flexWrap: {
+      control: { type: "radio" },
+      options: ["nowrap", "wrap", "wrap-reverse"],
+      description: "When using a horizontal orientation, sets how options wrap",
+    },
   },
 } satisfies Meta<typeof RadioGroup>;
 
