@@ -55,12 +55,11 @@
 }
 
 /* Hover */
-.bcds-react-aria-Switch[data-hovered] > .indicator {
+.bcds-react-aria-Switch[data-hovered] {
   cursor: pointer;
 }
 
 .bcds-react-aria-Switch[data-hovered][data-selected] > .indicator {
-  cursor: pointer;
   background-color: var(--surface-color-primary-hover);
 }
 
@@ -84,11 +83,11 @@
 /* Disabled */
 .bcds-react-aria-Switch[data-disabled] {
   color: var(--typography-color-disabled);
+  cursor: not-allowed;
 }
 
 .bcds-react-aria-Switch[data-disabled] > .indicator {
   background-color: var(--surface-color-primary-disabled);
-  cursor: not-allowed;
 }
 
 .bcds-react-aria-Switch[data-disabled] > .indicator::before {
@@ -98,6 +97,6 @@
 }
 
 /* Read only */
-.bcds-react-aria-Switch[data-readonly] > .indicator {
+.bcds-react-aria-Switch[data-readonly] {
   cursor: not-allowed;
 }
