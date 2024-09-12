@@ -24,6 +24,12 @@
     var(--surface-color-border-medium);
   transition: all 200ms;
 }
+@media (prefers-reduced-motion) {
+  .bcds-react-aria-Radio:before {
+    /* No animation on radio button circle if user has reduced motion set */
+    transition: none;
+  }
+}
 
 /* Hover */
 .bcds-react-aria-Radio[data-hovered]:before {
