@@ -12,7 +12,7 @@ const meta = {
   argTypes: {
     orientation: {
       control: { type: "radio" },
-      optioms: ["vertical", "horizontal"],
+      options: ["vertical", "horizontal"],
       description: "Sets layout of radio buttons",
     },
     label: {
