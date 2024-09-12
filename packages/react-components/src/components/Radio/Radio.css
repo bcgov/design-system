@@ -26,52 +26,39 @@
 }
 
 /* Hover */
-.bcds-react-aria-Radio[data-hovered] {
-  &:before {
-    border: var(--layout-border-width-small) solid
-      var(--surface-color-border-dark);
-  }
+.bcds-react-aria-Radio[data-hovered]:before {
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-dark);
 }
 
 /* Pressed */
-.bcds-react-aria-Radio[data-pressed] {
-  &:before {
-    border: var(--layout-border-width-small) solid
-      var(--surface-color-border-dark);
-  }
+.bcds-react-aria-Radio[data-pressed]:before {
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-dark);
 }
 
 /* Selected */
-.bcds-react-aria-Radio[data-selected] {
-  &:before {
-    border: 5px solid var(--surface-color-primary-default);
-  }
+.bcds-react-aria-Radio[data-selected]:before {
+  border: 5px solid var(--surface-color-primary-default);
 }
 
 /* Focused */
-.bcds-react-aria-Radio[data-focus-visible] {
-  &:before {
-    outline: solid var(--layout-border-width-medium)
-      var(--surface-color-border-active);
-    outline-offset: var(--layout-margin-hair);
-  }
+.bcds-react-aria-Radio[data-focus-visible]:before {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
 }
 
 /* Invalid */
-
-.bcds-react-aria-Radio[data-invalid] {
-  &:before {
-    border: var(--layout-border-width-small) solid
-      var(--support-border-color-danger);
-  }
+.bcds-react-aria-Radio[data-invalid]:before {
+  border: var(--layout-border-width-small) solid
+    var(--support-border-color-danger);
 }
-
 .bcds-react-aria-Radio[data-selected][data-invalid] {
   color: var(--typography-color-danger);
-
-  &:before {
-    border: 5px solid var(--support-border-color-danger);
-  }
+}
+.bcds-react-aria-Radio[data-selected][data-invalid]:before {
+  border: 5px solid var(--support-border-color-danger);
 }
 
 /* Disabled */
@@ -79,11 +66,8 @@
   color: var(--typography-color-disabled);
   cursor: not-allowed;
 }
-
-.bcds-react-aria-radio[data-selected][data-disabled] {
-  &:before {
-    border: 5px solid var(--surface-color-border-default);
-  }
+.bcds-react-aria-radio[data-selected][data-disabled]:before {
+  border: 5px solid var(--surface-color-border-default);
 }
 
 /* Read only */
