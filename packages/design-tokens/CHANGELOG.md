@@ -1,8 +1,45 @@
 # Changelog
 
+## 3.1.1
+
+### Changed
+
+- `surface.color.tertiary.default` is fixed so it gets alpha channel data (`#FFFFFF` corrected to `#FFFFFF00`)
+
+## 3.1.0
+
+### Added
+
+- Comments added to tokens to document intended usage
+- `layout.padding.hair` added to match `layout.margin.hair`
+- New color tokens added:
+  - `surface.color.primary.default`
+  - `surface.color.primary.hover`
+  - `surface.color.primary.pressed`
+  - `surface.color.primary.disabled`
+  - `surface.color.secondary.default`
+  - `surface.color.secondary.hover`
+  - `surface.color.secondary.pressed`
+  - `surface.color.secondary.disabled`
+  - `surface.color.tertiary.default`
+  - `surface.color.tertiary.hover`
+  - `surface.color.tertiary.pressed`
+  - `surface.color.tertiary.disabled`
+
+## 3.0.1
+
+### Changed
+
+- `typography.fontWeights.italic` is marked as deprecated and will be removed in next major version
+
+### Added
+
+- `typography.fontWeights.italic.style` is added, replacing deprecated `typography.fontWeights.italic`
+- `typography.fontWeights.italic.weight` is added, giving a default weight to italic type
+
 ## 3.0.0
 
-## Changed
+### Changed
 
 - (breaking) Many tokens have been renamed to bring the generated tokens in line with the intended token names from Figma
 - (breaking) `brand` color tokens renamed to `theme` to differentiate from [BC Visual Identity Program](https://www2.gov.bc.ca/gov/content?id=CCB4862101CD43C195FF395CAED00F95)
@@ -14,7 +51,7 @@
 - (breaking) File names for JavaScript tokens are renamed from `variables.js` to `index.js` for shorter import statements
 - Tokens in `layout` group use `rem` equivalent of previous `px` values where possible in Figma
 
-## Added
+### Added
 
 - `primaryBlue` (equal to `blue100`) and `primaryGold` (equal to `gold100`) dedicated color tokens added
 - `smallBody` font size added at 0.875rem (the old `label` size)
@@ -23,7 +60,7 @@
 - TypeScript type definitions are shipped with the JavaScript tokens
 - Heading level 6 `typography` group tokens added
 
-## Removed
+### Removed
 
 - (breaking) Removed `surface.size` (legacy testing tokens)
 - (breaking) Removed `surface.borderRadius` (these were duplicates from the `layout` group)

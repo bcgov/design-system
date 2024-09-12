@@ -4,7 +4,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--surface-color-background-white);
+  background-color: var(--surface-color-forms-default);
   border-bottom-color: var(--surface-color-border-default);
   border-bottom-style: solid;
   border-bottom-width: var(--layout-border-width-small);
@@ -37,7 +37,7 @@
 
 .bcds-header > .bcds-header--container > ul.bcds-header--skiplinks li a,
 .bcds-header > .bcds-header--container > ul.bcds-header--skiplinks li button {
-  background-color: var(--surface-color-background-white);
+  background-color: var(--surface-color-forms-default);
   box-sizing: border-box;
   color: var(--typography-color-link);
   font: var(--typography-regular-body);

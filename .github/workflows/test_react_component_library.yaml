@@ -33,8 +33,20 @@ jobs:
         run: npm install
         working-directory: ./packages/react-components
 
-      - name: Run test suite with npm script
+      # Errors in lint process will cause this job to fail
+      - name: Lint
+        run: npm run lint
+        working-directory: ./packages/react-components
+
+      - name: Run test suite
         run: npm run test:ci
+        working-directory: ./packages/react-components
+
+      # Treat failures in the Vite build as test failures.
+      # We don't need to keep the artifact of this build,
+      # we just care that it completes successfully.
+      - name: Run Vite build
+        run: npm run vite-build
         working-directory: ./packages/react-components
 
   playwright-accessibility-tests:

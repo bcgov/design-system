@@ -1,5 +1,6 @@
 import ButtonPage from "./Button";
 import ButtonGroupPage from "./ButtonGroup";
+import CheckboxGroupPage from "./CheckboxGroup";
 import InlineAlertPage from "./InlineAlert";
 import RadioGroupPage from "./RadioGroup";
 import SelectPage from "./Select";
@@ -12,6 +13,7 @@ import TooltipPage from "./Tooltip";
 export {
   ButtonPage,
   ButtonGroupPage,
+  CheckboxGroupPage,
   InlineAlertPage,
   RadioGroupPage,
   SelectPage,

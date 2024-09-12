@@ -9,6 +9,7 @@ import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
   ButtonPage,
   ButtonGroupPage,
+  CheckboxGroupPage,
   InlineAlertPage,
   RadioGroupPage,
   SelectPage,
@@ -151,6 +152,7 @@ function App() {
         <h1>Components</h1>
         <ButtonPage />
         <ButtonGroupPage />
+        <CheckboxGroupPage />
         <SwitchPage />
         <InlineAlertPage />
         <RadioGroupPage />
