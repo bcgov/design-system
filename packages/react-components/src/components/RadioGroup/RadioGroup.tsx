@@ -21,6 +21,8 @@ export interface RadioGroupProps extends ReactAriaRadioGroupProps {
   description?: string;
   /* Error message */
   errorMessage?: string | ((validation: ValidationResult) => string);
+  /** `flex-wrap` style property, defaults to `nowrap` */
+  flexWrap?: "nowrap" | "wrap" | "wrap-reverse";
 }
 
 export default function RadioGroup({
@@ -29,6 +31,7 @@ export default function RadioGroup({
   description,
   children,
   errorMessage,
+  flexWrap = "nowrap",
   ...props
 }: RadioGroupProps) {
   return (
@@ -40,7 +43,9 @@ export default function RadioGroup({
               {label} {isRequired && "(required)"}
             </Label>
           )}
-          <div className={`bcds-react-aria-RadioGroup--options ${orientation}`}>
+          <div
+            className={`bcds-react-aria-RadioGroup--options ${orientation} flex-wrap-${flexWrap}`}
+          >
             {children}
           </div>
           {description && (

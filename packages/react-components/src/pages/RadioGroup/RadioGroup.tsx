@@ -26,11 +26,13 @@ export default function RadioGroupPage() {
       <RadioGroup
         label="This is a horizontal radio group"
         orientation="horizontal"
+        flexWrap="wrap"
       >
         <Radio value="1">Option 1</Radio>
         <Radio value="2">Option 2</Radio>
         <Radio value="3">Option 3</Radio>
         <Radio value="4">Option 4</Radio>
+        <Radio value="5">Option 5</Radio>
       </RadioGroup>
     </>
   );

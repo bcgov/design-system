@@ -18,6 +18,15 @@
   flex-direction: row;
   gap: var(--layout-margin-medium);
 }
+.bcds-react-aria-RadioGroup--options.horizontal.flex-wrap-nowrap {
+  flex-wrap: nowrap;
+}
+.bcds-react-aria-RadioGroup--options.horizontal.flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+.bcds-react-aria-RadioGroup--options.horizontal.flex-wrap-nowrap {
+  flex-wrap: wrap-reverse;
+}
 
 /* Parts */
 .bcds-react-aria-RadioGroup--label {
