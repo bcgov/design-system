@@ -1,2 +1,2 @@
 export { default } from "./Modal";
-export type { ModalProps } from "./Modal";
+export type { ModalOverlayProps } from "react-aria-components";

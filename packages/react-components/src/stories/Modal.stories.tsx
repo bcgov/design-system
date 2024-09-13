@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button, Modal, DialogTrigger } from "../components";
-import { ModalProps } from "@/components/Modal";
+import type { ModalOverlayProps } from "react-aria-components";
 
 const meta = {
   title: "Components/Dialogs/Modal",
@@ -36,7 +36,7 @@ type Story = StoryObj<typeof meta>;
 
 export const ModalTemplate: Story = {
   args: { isDismissable: true },
-  render: ({ ...args }: ModalProps) => (
+  render: ({ ...args }: ModalOverlayProps) => (
     <DialogTrigger>
       <Button>Open an empty modal</Button>
       <Modal {...args}></Modal>
@@ -49,7 +49,7 @@ export const DefaultOpenModal: Story = {
   args: {
     defaultOpen: true,
   },
-  render: ({ ...args }: ModalProps) => (
+  render: ({ ...args }: ModalOverlayProps) => (
     <DialogTrigger>
       <Button>Re-open the modal</Button>
       <Modal {...args}>
@@ -69,7 +69,7 @@ export const DefaultOpenModal: Story = {
 
 export const CustomSizeModal: Story = {
   args: { isDismissable: true },
-  render: ({ ...args }: ModalProps) => (
+  render: ({ ...args }: ModalOverlayProps) => (
     <DialogTrigger>
       <Button>Open the modal</Button>
       <Modal

@@ -1,7 +1,7 @@
 import {
   Modal as ReactAriaModal,
-  ModalOverlay as ReactAriaModalOverlay,
-  ModalOverlayProps as ReactAriaModalOverlayProps,
+  ModalOverlay,
+  ModalOverlayProps,
 } from "react-aria-components";
 
 import "./Modal.css";
@@ -14,9 +14,9 @@ export default function Modal({
   defaultOpen,
   shouldCloseOnInteractOutside,
   ...props
-}: ReactAriaModalOverlayProps) {
+}: ModalOverlayProps) {
   return (
-    <ReactAriaModalOverlay
+    <ModalOverlay
       className="bcds-react-aria-Modal--Overlay"
       isDismissable={isDismissable}
       isKeyboardDismissDisabled={isKeyboardDismissDisabled}
@@ -27,6 +27,6 @@ export default function Modal({
       <ReactAriaModal className="bcds-react-aria-Modal--Container" {...props}>
         {children}
       </ReactAriaModal>
-    </ReactAriaModalOverlay>
+    </ModalOverlay>
   );
 }
