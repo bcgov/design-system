@@ -6,24 +6,7 @@ import {
 } from "react-aria-components";
 
 import "./Tooltip.css";
-
-// This tooltip arrow is available as a plain SVG at src/assets/tooltip-arrow-up.svg
-function SvgTooltipArrowUp() {
-  return (
-    <svg
-      width="19"
-      height="9"
-      viewBox="0 0 19 9"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M8.4188 1.41421C9.19985 0.633163 10.4662 0.633165 11.2472 1.41421L18.833 9L0.833008 9L8.4188 1.41421Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
+import SvgTooltipArrowUp from "../Icons/SvgTooltipArrowUp";
 
 export default function Tooltip(props: TooltipProps) {
   return (

@@ -16,6 +16,12 @@
   border-radius: var(--icons-size-medium);
   transition: all 200ms;
 }
+@media (prefers-reduced-motion) {
+  /* No animation on Switch container color if user has reduced motion set */
+  .bcds-react-aria-Switch > .indicator {
+    transition: none;
+  }
+}
 
 /* Indicator */
 .bcds-react-aria-Switch > .indicator::before {
@@ -30,6 +36,12 @@
   border-radius: var(--icons-size-small);
   transition: all 200ms;
 }
+@media (prefers-reduced-motion) {
+  /* No animation on Switch circle indicator if user has reduced motion set */
+  .bcds-react-aria-Switch > .indicator::before {
+    transition: none;
+  }
+}
 
 /* Selected */
 .bcds-react-aria-Switch[data-selected] > .indicator {
@@ -43,12 +55,11 @@
 }
 
 /* Hover */
-.bcds-react-aria-Switch[data-hovered] > .indicator {
+.bcds-react-aria-Switch[data-hovered] {
   cursor: pointer;
 }
 
 .bcds-react-aria-Switch[data-hovered][data-selected] > .indicator {
-  cursor: pointer;
   background-color: var(--surface-color-primary-hover);
 }
 
@@ -72,11 +83,11 @@
 /* Disabled */
 .bcds-react-aria-Switch[data-disabled] {
   color: var(--typography-color-disabled);
+  cursor: not-allowed;
 }
 
 .bcds-react-aria-Switch[data-disabled] > .indicator {
   background-color: var(--surface-color-primary-disabled);
-  cursor: not-allowed;
 }
 
 .bcds-react-aria-Switch[data-disabled] > .indicator::before {
@@ -86,6 +97,6 @@
 }
 
 /* Read only */
-.bcds-react-aria-Switch[data-readonly] > .indicator {
+.bcds-react-aria-Switch[data-readonly] {
   cursor: not-allowed;
 }

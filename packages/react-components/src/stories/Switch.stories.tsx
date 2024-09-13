@@ -10,6 +10,10 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
+    children: {
+      control: { type: "object" },
+      description: "Used to set label text",
+    },
     labelPosition: {
       options: ["left", "right"],
       control: { type: "radio" },

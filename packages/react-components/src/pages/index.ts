@@ -1,7 +1,9 @@
 import ButtonPage from "./Button";
 import ButtonGroupPage from "./ButtonGroup";
+import CheckboxGroupPage from "./CheckboxGroup";
 import InlineAlertPage from "./InlineAlert";
 import ModalDialogPage from "./ModalDialog";
+import RadioGroupPage from "./RadioGroup";
 import SelectPage from "./Select";
 import TagGroupPage from "./TagGroup";
 import TextAreaPage from "./TextArea";
@@ -12,8 +14,10 @@ import TooltipPage from "./Tooltip";
 export {
   ButtonPage,
   ButtonGroupPage,
+  CheckboxGroupPage,
   InlineAlertPage,
   ModalDialogPage,
+  RadioGroupPage,
   SelectPage,
   TagGroupPage,
   TextAreaPage,
