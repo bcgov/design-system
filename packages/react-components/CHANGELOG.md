@@ -7,7 +7,7 @@
 - Switch component gets `prefers-reduced-motion` handling to turn off animation for users that prefer reduced motion.
 - Switch component `cursor` styling applies to `children` text in addition to visual switch component.
 
-###
+### Added
 
 - Added RadioGroup/Radio components.
 
