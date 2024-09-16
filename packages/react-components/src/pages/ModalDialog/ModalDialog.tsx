@@ -71,6 +71,27 @@ export default function ModalDialogPage() {
         </Modal>
       </DialogTrigger>
       <h2>Generic Dialog</h2>
+      <h3>Default dialog</h3>
+      <DialogTrigger>
+        <Button variant="secondary">Open a default dialog</Button>
+        <Modal>
+          <Dialog />
+        </Modal>
+      </DialogTrigger>
+      <h3>Empty dialog (dismissable)</h3>
+      <DialogTrigger>
+        <Button variant="secondary">Open an empty dialog</Button>
+        <Modal isDismissable>
+          <Dialog isCloseable={false} />
+        </Modal>
+      </DialogTrigger>
+      <h3>Empty modal (closeable, not dismissable)</h3>
+      <DialogTrigger>
+        <Button variant="secondary">Open an empty dialog</Button>
+        <Modal isKeyboardDismissDisabled>
+          <Dialog isCloseable />
+        </Modal>
+      </DialogTrigger>
       <h3>Empty dialog (closeable and dismissable)</h3>
       <DialogTrigger>
         <Button variant="secondary">Open a generic dialog</Button>
