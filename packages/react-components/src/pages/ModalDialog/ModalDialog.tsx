@@ -22,14 +22,14 @@ export default function ModalDialogPage() {
             title="This is a modal dialog"
             description="It has some additional description text"
             buttons={[
-              <Button variant="tertiary" size="small" onPress={close}>
+              <Button variant="tertiary" size="small">
                 Cancel
               </Button>,
               <Button variant="primary" size="small">
                 Continue
               </Button>,
             ]}
-          ></AlertDialog>
+          />
         </Modal>
       </DialogTrigger>
       <h3>Warning Alert Dialog</h3>
@@ -41,7 +41,7 @@ export default function ModalDialogPage() {
             title="This is a warning dialog"
             description="It has some additional description text"
             buttons={[
-              <Button variant="tertiary" size="small" onPress={close}>
+              <Button variant="tertiary" size="small">
                 Cancel
               </Button>,
               <Button variant="primary" size="small">
@@ -60,7 +60,7 @@ export default function ModalDialogPage() {
             title="This is an error dialog"
             description="It has some additional description text"
             buttons={[
-              <Button variant="tertiary" size="small" onPress={close}>
+              <Button variant="tertiary" size="small">
                 Cancel
               </Button>,
               <Button variant="primary" size="small">
