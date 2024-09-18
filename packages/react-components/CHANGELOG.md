@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.3.0
+
+This is a milestone release that contains the following new components:
+
+- CheckboxGroup/Checkbox
+- RadioGroup/Radio
+
+This release uses:
+
+- `react-aria-components` v1.3.3
+- `@bcgov/design-tokens`v3.1.1
+
+Component changes since v0.2.0:
+
+- Switch component gets `prefers-reduced-motion` handling to turn off animation for users that prefer reduced motion.
+- Switch component `cursor` styling applies to `children` text in addition to visual switch component.
+
 ## 0.2.3
 
 ### Changed
@@ -7,7 +24,7 @@
 - Switch component gets `prefers-reduced-motion` handling to turn off animation for users that prefer reduced motion.
 - Switch component `cursor` styling applies to `children` text in addition to visual switch component.
 
-###
+### Added
 
 - Added RadioGroup/Radio components.
 
