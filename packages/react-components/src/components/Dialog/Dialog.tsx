@@ -15,7 +15,7 @@ export interface DialogProps extends ReactAriaDialogProps {
 }
 
 // This is not currently exported by RAC but we need it to type `close`.
-interface DialogRenderProps {
+export interface DialogRenderProps {
   /** Handler function to close the Dialog */
   close: () => void;
 }

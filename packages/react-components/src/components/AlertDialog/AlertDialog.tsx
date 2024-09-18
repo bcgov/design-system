@@ -6,6 +6,7 @@ import {
 
 import Button from "../Button";
 import ButtonGroup from "../ButtonGroup";
+import { DialogRenderProps } from "../Dialog/Dialog";
 import SvgCheckCircleIcon from "../Icons/SvgCheckCircleIcon";
 import SvgCloseIcon from "../Icons/SvgCloseIcon";
 import SvgExclamationCircleIcon from "../Icons/SvgExclamationCircleIcon";
@@ -63,7 +64,7 @@ export default function AlertDialog({
       role={role}
       {...props}
     >
-      {({ close }) => (
+      {({ close }: DialogRenderProps) => (
         <>
           <div className="bcds-react-aria-AlertDialog--Header">
             {!isIconHidden && (
