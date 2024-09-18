@@ -36,12 +36,12 @@ describe("Dialog", () => {
     expect(text).toBeInTheDocument();
   });
 
-  it("without `isCloseable` passed, no close button is present", () => {
+  it("with `isCloseable` set to `false`, no close button is present", () => {
     render(
       <DialogTrigger>
         <Button>Open</Button>
         <Modal>
-          <Dialog>Lorem ipsum</Dialog>
+          <Dialog isCloseable={false}>Lorem ipsum</Dialog>
         </Modal>
       </DialogTrigger>
     );
@@ -58,7 +58,7 @@ describe("Dialog", () => {
     expect(closeButton).not.toBeInTheDocument();
   });
 
-  it("with `isCloseable` passed, a close button push closes the Dialog", () => {
+  it("without `isCloseable` passed, close button appears by default, press closes the Dialog", () => {
     render(
       <DialogTrigger>
         <Button>Open</Button>
