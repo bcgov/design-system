@@ -21,7 +21,7 @@ export interface DialogRenderProps {
 }
 
 export default function Dialog({
-  isCloseable,
+  isCloseable = true,
   role = "dialog",
   children,
   ...props
