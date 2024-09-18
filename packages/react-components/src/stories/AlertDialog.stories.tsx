@@ -55,8 +55,12 @@ export const AlertDialogTemplate: Story = {
     title: "Alert dialog title",
     description: "Alert dialog description",
     buttons: [
-      <Button variant="tertiary">Button 1</Button>,
-      <Button variant="secondary">Button 2</Button>,
+      <Button variant="tertiary" key="alert-dialog-button-1">
+        Button 1
+      </Button>,
+      <Button variant="secondary" key="alert-dialog-button-2">
+        Button 2
+      </Button>,
     ],
   },
   render: ({ ...args }: AlertDialogProps) => (
@@ -76,8 +80,12 @@ export const AlertDialogWithoutIcon: Story = {
     title: "Alert dialog title",
     description: "This dialog renders without an icon",
     buttons: [
-      <Button variant="tertiary">Button 1</Button>,
-      <Button variant="secondary">Button 2</Button>,
+      <Button variant="tertiary" key="alert-dialog-button-1">
+        Button 1
+      </Button>,
+      <Button variant="secondary" key="alert-dialog-button-2">
+        Button 2
+      </Button>,
     ],
   },
 };
@@ -99,8 +107,12 @@ export const ConfirmationAlert: Story = {
     description: "Displays a green checkmark icon",
     variant: "confirmation",
     buttons: [
-      <Button variant="tertiary">Button 1</Button>,
-      <Button variant="secondary">Button 2</Button>,
+      <Button variant="tertiary" key="alert-dialog-button-1">
+        Button 1
+      </Button>,
+      <Button variant="secondary" key="alert-dialog-button-2">
+        Button 2
+      </Button>,
     ],
   },
 };
@@ -112,8 +124,12 @@ export const WarningAlert: Story = {
     description: "Displays an orange warning icon",
     variant: "warning",
     buttons: [
-      <Button variant="tertiary">Button 1</Button>,
-      <Button variant="secondary">Button 2</Button>,
+      <Button variant="tertiary" key="alert-dialog-button-1">
+        Button 1
+      </Button>,
+      <Button variant="secondary" key="alert-dialog-button-2">
+        Button 2
+      </Button>,
     ],
   },
 };
@@ -124,7 +140,11 @@ export const ErrorAlert: Story = {
     title: "Error alert dialog",
     description: "Displays a red error icon",
     variant: "error",
-    buttons: [<Button variant="secondary">Button</Button>],
+    buttons: [
+      <Button variant="secondary" key="button">
+        Button
+      </Button>,
+    ],
   },
 };
 
@@ -135,8 +155,10 @@ export const DestructiveAlert: Story = {
     description: "Displays a red error icon",
     variant: "destructive",
     buttons: [
-      <Button variant="tertiary">Button 1</Button>,
-      <Button variant="secondary" danger>
+      <Button variant="tertiary" key="alert-dialog-button-1">
+        Button 1
+      </Button>,
+      <Button variant="secondary" danger key="alert-dialog-button-2">
         Button 2
       </Button>,
     ],
