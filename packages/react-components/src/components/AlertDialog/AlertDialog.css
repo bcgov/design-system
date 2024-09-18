@@ -1,33 +1,23 @@
 .bcds-react-aria-AlertDialog {
   display: flex;
   flex-direction: column;
+}
 
-  /* Variant icons */
-  &.info {
-    .bcds-react-aria-AlertDialog--Icon {
-      color: var(--icons-color-primary);
-    }
-  }
-  &.confirmation {
-    .bcds-react-aria-AlertDialog--Icon {
-      color: var(--icons-color-success);
-    }
-  }
-  &.warning {
-    .bcds-react-aria-AlertDialog--Icon {
-      color: var(--icons-color-warning);
-    }
-  }
-  &.error {
-    .bcds-react-aria-AlertDialog--Icon {
-      color: var(--icons-color-danger);
-    }
-  }
-  &.destructive {
-    .bcds-react-aria-AlertDialog--Icon {
-      color: var(--icons-color-danger);
-    }
-  }
+/* Variant icons */
+.bcds-react-aria-AlertDialog.info .bcds-react-aria-AlertDialog--Icon {
+  color: var(--icons-color-primary);
+}
+.bcds-react-aria-AlertDialog.confirmation .bcds-react-aria-AlertDialog--Icon {
+  color: var(--icons-color-success);
+}
+.bcds-react-aria-AlertDialog.warning .bcds-react-aria-AlertDialog--Icon {
+  color: var(--icons-color-warning);
+}
+.bcds-react-aria-AlertDialog.error .bcds-react-aria-AlertDialog--Icon {
+  color: var(--icons-color-danger);
+}
+.bcds-react-aria-AlertDialog.destructive .bcds-react-aria-AlertDialog--Icon {
+  color: var(--icons-color-danger);
 }
 
 .bcds-react-aria-AlertDialog--Header {
