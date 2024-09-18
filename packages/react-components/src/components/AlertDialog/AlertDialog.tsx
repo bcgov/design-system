@@ -6,14 +6,13 @@ import {
 
 import Button from "../Button";
 import ButtonGroup from "../ButtonGroup";
-import SvgCloseIcon from "../Icons/SvgCloseIcon";
-import SvgInfoIcon from "../Icons/SvgInfoIcon";
 import SvgCheckCircleIcon from "../Icons/SvgCheckCircleIcon";
+import SvgCloseIcon from "../Icons/SvgCloseIcon";
+import SvgExclamationCircleIcon from "../Icons/SvgExclamationCircleIcon";
+import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
+import SvgInfoIcon from "../Icons/SvgInfoIcon";
 
 import "./AlertDialog.css";
-import React from "react";
-import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
-import SvgExclamationCircleIcon from "../Icons/SvgExclamationCircleIcon";
 
 export interface AlertDialogProps extends ReactAriaDialogProps {
   /* Dialog theme */
