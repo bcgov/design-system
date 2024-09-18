@@ -20,8 +20,6 @@ export interface AlertDialogProps extends ReactAriaDialogProps {
   variant?: "info" | "confirmation" | "warning" | "error" | "destructive";
   /* Dialog title */
   title?: string;
-  /* Dialog description */
-  description?: string;
   /* Show or hide left icon */
   isIconHidden?: boolean;
   /* Show or hide close button */
@@ -49,12 +47,12 @@ function getIcon(variant: string) {
 }
 
 export default function AlertDialog({
+  children,
   variant = "info",
   role = "dialog",
   title,
   isCloseable = true,
   isIconHidden = false,
-  description,
   buttons,
   ...props
 }: AlertDialogProps) {
@@ -92,12 +90,12 @@ export default function AlertDialog({
               </div>
             )}
           </div>
-          {description && (
+          {children && (
             <div
-              className="bcds-react-aria-AlertDialog--Description"
-              slot="description"
+              className="bcds-react-aria-AlertDialog--children"
+              slot="children"
             >
-              {description}
+              <>{children}</>
             </div>
           )}
           {buttons && (

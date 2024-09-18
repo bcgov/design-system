@@ -57,7 +57,7 @@
   color: var(--icons-color-primary);
 }
 
-.bcds-react-aria-AlertDialog--Description {
+.bcds-react-aria-AlertDialog--children {
   font: var(--typography-regular-body);
   color: var(--typography-color-primary);
   padding: var(--layout-padding-medium) var(--layout-padding-large);

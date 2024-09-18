@@ -20,7 +20,6 @@ export default function ModalDialogPage() {
         <Modal>
           <AlertDialog
             title="This is a modal dialog"
-            description="It has some additional description text"
             buttons={[
               <Button
                 variant="tertiary"
@@ -37,7 +36,9 @@ export default function ModalDialogPage() {
                 Continue
               </Button>,
             ]}
-          />
+          >
+            It has some additional description text
+          </AlertDialog>
         </Modal>
       </DialogTrigger>
       <h3>Warning Alert Dialog</h3>
@@ -47,7 +48,6 @@ export default function ModalDialogPage() {
           <AlertDialog
             variant="warning"
             title="This is a warning dialog"
-            description="It has some additional description text"
             buttons={[
               <Button
                 variant="tertiary"
@@ -64,7 +64,9 @@ export default function ModalDialogPage() {
                 Continue
               </Button>,
             ]}
-          />
+          >
+            It has some additional description text
+          </AlertDialog>
         </Modal>
       </DialogTrigger>
       <h3>Error Alert Dialog</h3>
@@ -74,7 +76,6 @@ export default function ModalDialogPage() {
           <AlertDialog
             variant="error"
             title="This is an error dialog"
-            description="It has some additional description text"
             buttons={[
               <Button
                 variant="tertiary"
@@ -91,7 +92,9 @@ export default function ModalDialogPage() {
                 Continue
               </Button>,
             ]}
-          />
+          >
+            It has some additional description text
+          </AlertDialog>
         </Modal>
       </DialogTrigger>
       <h2>Generic Dialog</h2>

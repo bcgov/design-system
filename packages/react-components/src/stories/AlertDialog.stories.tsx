@@ -17,10 +17,6 @@ const meta = {
       control: { type: "text" },
       description: "Set the alert title",
     },
-    description: {
-      control: { type: "text" },
-      description: "Provides additional description or helper text",
-    },
     buttons: {
       control: { type: "object" },
       description: "Populates the button group",
@@ -53,7 +49,7 @@ type Story = StoryObj<typeof meta>;
 export const AlertDialogTemplate: Story = {
   args: {
     title: "Alert dialog title",
-    description: "Alert dialog description",
+    children: "Alert dialog children slot",
     buttons: [
       <Button variant="tertiary" key="alert-dialog-button-1">
         Button 1
@@ -78,7 +74,7 @@ export const AlertDialogWithoutIcon: Story = {
   args: {
     isIconHidden: true,
     title: "Alert dialog title",
-    description: "This dialog renders without an icon",
+    children: "This dialog renders without an icon",
     buttons: [
       <Button variant="tertiary" key="alert-dialog-button-1">
         Button 1
@@ -95,7 +91,7 @@ export const AlertDialogWithoutCloseButton: Story = {
   args: {
     isCloseable: false,
     title: "This dialog is not closeable",
-    description:
+    children:
       "It does not render a close button. Click outside the dialog to dismiss this example.",
   },
   render: ({ ...args }: AlertDialogProps) => (
@@ -112,7 +108,7 @@ export const ConfirmationAlert: Story = {
   ...AlertDialogTemplate,
   args: {
     title: "Confirmation alert dialog",
-    description: "Displays a green checkmark icon",
+    children: "Displays a green checkmark icon",
     variant: "confirmation",
     buttons: [
       <Button variant="tertiary" key="alert-dialog-button-1">
@@ -129,7 +125,7 @@ export const WarningAlert: Story = {
   ...AlertDialogTemplate,
   args: {
     title: "Warning alert dialog",
-    description: "Displays an orange warning icon",
+    children: "Displays an orange warning icon",
     variant: "warning",
     buttons: [
       <Button variant="tertiary" key="alert-dialog-button-1">
@@ -146,7 +142,7 @@ export const ErrorAlert: Story = {
   ...AlertDialogTemplate,
   args: {
     title: "Error alert dialog",
-    description: "Displays a red error icon",
+    children: "Displays a red error icon",
     variant: "error",
     buttons: [
       <Button variant="secondary" key="button">
@@ -160,7 +156,7 @@ export const DestructiveAlert: Story = {
   ...AlertDialogTemplate,
   args: {
     title: "Destructive alert dialog",
-    description: "Displays a red error icon",
+    children: "Displays a red error icon",
     variant: "destructive",
     buttons: [
       <Button variant="tertiary" key="alert-dialog-button-1">

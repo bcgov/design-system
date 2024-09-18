@@ -12,7 +12,7 @@ describe("AlertDialog", () => {
       <DialogTrigger>
         <Button>Open</Button>
         <Modal>
-          <AlertDialog description="Lorem ipsum" />
+          <AlertDialog>Lorem ipsum</AlertDialog>
         </Modal>
       </DialogTrigger>
     );
@@ -26,7 +26,7 @@ describe("AlertDialog", () => {
       <DialogTrigger>
         <Button>Open</Button>
         <Modal>
-          <AlertDialog description="Lorem ipsum" />
+          <AlertDialog>Lorem ipsum</AlertDialog>
         </Modal>
       </DialogTrigger>
     );
@@ -42,7 +42,7 @@ describe("AlertDialog", () => {
       <DialogTrigger>
         <Button>Open</Button>
         <Modal>
-          <AlertDialog description="Lorem ipsum" isCloseable={false} />
+          <AlertDialog isCloseable={false}>Lorem ipsum</AlertDialog>
         </Modal>
       </DialogTrigger>
     );
@@ -64,7 +64,7 @@ describe("AlertDialog", () => {
       <DialogTrigger>
         <Button>Open</Button>
         <Modal>
-          <AlertDialog description="Lorem ipsum" />
+          <AlertDialog>Lorem ipsum</AlertDialog>
         </Modal>
       </DialogTrigger>
     );
@@ -92,7 +92,6 @@ describe("AlertDialog", () => {
         <Button>Open</Button>
         <Modal>
           <AlertDialog
-            description="Lorem ipsum"
             buttons={[
               <Button
                 variant="secondary"
@@ -109,7 +108,9 @@ describe("AlertDialog", () => {
                 Submit
               </Button>,
             ]}
-          />
+          >
+            Lorem ipsum
+          </AlertDialog>
         </Modal>
       </DialogTrigger>
     );
