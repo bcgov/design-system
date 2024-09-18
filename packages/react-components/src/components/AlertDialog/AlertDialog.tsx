@@ -26,7 +26,7 @@ export interface AlertDialogProps extends ReactAriaDialogProps {
   isIconHidden?: boolean;
   /* Show or hide close button */
   isCloseable?: boolean;
-  /* Button group */
+  /* Array of Button components */
   buttons?: React.ReactNode;
 }
 
