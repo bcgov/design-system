@@ -15,9 +15,8 @@
   top: 0;
   right: 0;
   padding: var(--layout-padding-small);
-
-  > svg {
-    min-width: var(--icons-size-medium);
-    height: var(--icons-size-medium);
-  }
+}
+.bcds-react-aria-Dialog--closeIcon > svg {
+  min-width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
 }
