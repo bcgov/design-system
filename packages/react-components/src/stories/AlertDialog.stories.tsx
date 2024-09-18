@@ -98,6 +98,14 @@ export const AlertDialogWithoutCloseButton: Story = {
     description:
       "It does not render a close button. Click outside the dialog to dismiss this example.",
   },
+  render: ({ ...args }: AlertDialogProps) => (
+    <DialogTrigger>
+      <Button>Open the alert dialog</Button>
+      <Modal isDismissable>
+        <AlertDialog {...args} />
+      </Modal>
+    </DialogTrigger>
+  ),
 };
 
 export const ConfirmationAlert: Story = {
