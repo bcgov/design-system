@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import * as tokens from "@bcgov/design-tokens/js";
 
 import {
   Button,
@@ -46,7 +47,7 @@ export const DialogTemplate: Story = {
   args: {
     children: [
       <div>
-        <h2 style={{ font: "var(--typography-bold-h2)", textAlign: "center" }}>
+        <h2 style={{ font: tokens.typographyBoldH2, textAlign: "center" }}>
           Dialog title
         </h2>
       </div>,
@@ -65,10 +66,10 @@ export const DialogTemplate: Story = {
 export const DialogWithForm: Story = {
   args: {
     children: [
-      <div style={{ padding: "var(--layout-padding-medium" }}>
+      <div style={{ padding: tokens.layoutPaddingMedium }}>
         <span
           style={{
-            font: "var(--typography-bold-h5)",
+            font: tokens.typographyBoldH5,
           }}
         >
           This dialog contains a form
@@ -77,7 +78,7 @@ export const DialogWithForm: Story = {
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "var(--layout-margin-small)",
+            gap: tokens.layoutMarginSmall,
           }}
         >
           <TextField isRequired label="Name" />
