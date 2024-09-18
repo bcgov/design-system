@@ -14,6 +14,12 @@ export interface DialogProps extends ReactAriaDialogProps {
   isCloseable?: boolean;
 }
 
+// This is not currently exported by RAC but we need it to type `close`.
+interface DialogRenderProps {
+  /** Handler function to close the Dialog */
+  close: () => void;
+}
+
 export default function Dialog({
   isCloseable,
   role = "dialog",
@@ -22,7 +28,7 @@ export default function Dialog({
 }: DialogProps) {
   return (
     <ReactAriaDialog className="bcds-react-aria-Dialog" role={role} {...props}>
-      {({ close }) => (
+      {({ close }: DialogRenderProps) => (
         <>
           <div className="bcds-react-aria-Dialog--Container">
             {isCloseable && (
