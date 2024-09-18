@@ -22,10 +22,18 @@ export default function ModalDialogPage() {
             title="This is a modal dialog"
             description="It has some additional description text"
             buttons={[
-              <Button variant="tertiary" size="small">
+              <Button
+                variant="tertiary"
+                size="small"
+                key="info-alert-dialog-cancel"
+              >
                 Cancel
               </Button>,
-              <Button variant="primary" size="small">
+              <Button
+                variant="primary"
+                size="small"
+                key="info-alert-dialog-continue"
+              >
                 Continue
               </Button>,
             ]}
@@ -41,10 +49,18 @@ export default function ModalDialogPage() {
             title="This is a warning dialog"
             description="It has some additional description text"
             buttons={[
-              <Button variant="tertiary" size="small">
+              <Button
+                variant="tertiary"
+                size="small"
+                key="warning-alert-dialog-cancel"
+              >
                 Cancel
               </Button>,
-              <Button variant="primary" size="small">
+              <Button
+                variant="primary"
+                size="small"
+                key="warning-alert-dialog-continue"
+              >
                 Continue
               </Button>,
             ]}
@@ -60,10 +76,18 @@ export default function ModalDialogPage() {
             title="This is an error dialog"
             description="It has some additional description text"
             buttons={[
-              <Button variant="tertiary" size="small">
+              <Button
+                variant="tertiary"
+                size="small"
+                key="error-alert-dialog-cancel"
+              >
                 Cancel
               </Button>,
-              <Button variant="primary" size="small">
+              <Button
+                variant="primary"
+                size="small"
+                key="error-alert-dialog-continue"
+              >
                 Continue
               </Button>,
             ]}
