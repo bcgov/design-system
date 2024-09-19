@@ -11,6 +11,7 @@ import {
   ButtonGroupPage,
   CheckboxGroupPage,
   InlineAlertPage,
+  ModalDialogPage,
   RadioGroupPage,
   SelectPage,
   TagGroupPage,
@@ -155,6 +156,7 @@ function App() {
         <CheckboxGroupPage />
         <SwitchPage />
         <InlineAlertPage />
+        <ModalDialogPage />
         <RadioGroupPage />
         <SelectPage />
         <TagGroupPage />

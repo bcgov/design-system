@@ -1,0 +1,60 @@
+.bcds-react-aria-AlertDialog {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Variant icons */
+.bcds-react-aria-AlertDialog.info .bcds-react-aria-AlertDialog--Icon {
+  color: var(--icons-color-primary);
+}
+.bcds-react-aria-AlertDialog.confirmation .bcds-react-aria-AlertDialog--Icon {
+  color: var(--icons-color-success);
+}
+.bcds-react-aria-AlertDialog.warning .bcds-react-aria-AlertDialog--Icon {
+  color: var(--icons-color-warning);
+}
+.bcds-react-aria-AlertDialog.error .bcds-react-aria-AlertDialog--Icon {
+  color: var(--icons-color-danger);
+}
+.bcds-react-aria-AlertDialog.destructive .bcds-react-aria-AlertDialog--Icon {
+  color: var(--icons-color-danger);
+}
+
+.bcds-react-aria-AlertDialog--Header {
+  display: inline-flex;
+  flex-direction: row;
+  gap: var(--layout-padding-small);
+  justify-content: space-between;
+  padding: var(--layout-padding-medium) var(--layout-padding-large);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+}
+
+.bcds-react-aria-AlertDialog--Title {
+  flex-grow: 1;
+  font: var(--typography-bold-h5);
+  color: var(--typography-color-primary);
+}
+
+.bcds-react-aria-AlertDialog--Icon {
+  justify-self: flex-start;
+  align-self: center;
+  padding-top: var(--layout-padding-xsmall);
+}
+
+.bcds-react-aria-AlertDialog--closeIcon {
+  justify-self: flex-end;
+  color: var(--icons-color-primary);
+}
+
+.bcds-react-aria-AlertDialog--children {
+  font: var(--typography-regular-body);
+  color: var(--typography-color-primary);
+  padding: var(--layout-padding-medium) var(--layout-padding-large);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+}
+
+.bcds-react-aria-AlertDialog > .bcds-ButtonGroup {
+  padding: var(--layout-padding-medium) var(--layout-padding-large);
+}

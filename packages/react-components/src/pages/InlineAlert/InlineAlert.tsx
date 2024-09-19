@@ -36,10 +36,18 @@ export default function InlineAlertPage() {
           title="This is an alert that also has additional actions"
           description="It uses button components to display additional important actions that the user can take."
           buttons={[
-            <Button variant="secondary" size="small">
+            <Button
+              variant="secondary"
+              size="small"
+              key="inline-alert-secondar-button"
+            >
               This is a secondary button
             </Button>,
-            <Button variant="primary" size="small">
+            <Button
+              variant="primary"
+              size="small"
+              key="inline-alert-primary-button"
+            >
               This is a primary button
             </Button>,
           ]}

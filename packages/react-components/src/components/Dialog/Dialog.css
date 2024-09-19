@@ -1,0 +1,22 @@
+.bcds-react-aria-Dialog {
+  display: flex;
+  flex-direction: column;
+  min-height: var(--layout-margin-xxxlarge);
+}
+
+.bcds-react-aria-Dialog--Container {
+  position: relative;
+}
+
+/* Close icon */
+.bcds-react-aria-Dialog--closeIcon {
+  color: var(--icons-color-primary);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: var(--layout-padding-small);
+}
+.bcds-react-aria-Dialog--closeIcon > svg {
+  min-width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
+}

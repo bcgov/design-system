@@ -1,0 +1,55 @@
+/* Styles for overlay element */
+.react-aria-ModalOverlay:has(.bcds-react-aria-Modal) {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--layout-margin-small);
+  background: var(--surface-color-overlay-default);
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+}
+.react-aria-ModalOverlay:has(.bcds-react-aria-Modal)[data-entering] {
+  animation: modal-fade 200ms;
+}
+.react-aria-ModalOverlay:has(.bcds-react-aria-Modal)[data-exiting] {
+  animation: modal-fade 150ms reverse ease-in;
+}
+@media (prefers-reduced-motion) {
+  /* Don't animate modal fade in/out if prefers-reduced-motion is on */
+  .react-aria-ModalOverlay:has(.bcds-react-aria-Modal)[data-entering] {
+    animation: unset;
+  }
+  .react-aria-ModalOverlay:has(.bcds-react-aria-Modal)[data-exiting] {
+    animation: unset;
+  }
+}
+
+@keyframes modal-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Styles for content container */
+.bcds-react-aria-Modal {
+  box-sizing: border-box;
+  max-width: 100vw;
+  width: 600px;
+  max-height: 100vh;
+  min-height: var(--layout-margin-xxxlarge);
+  height: auto;
+  margin: var(--layout-margin-large);
+  border-radius: var(--layout-border-radius-medium);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  background: var(--surface-color-forms-default);
+  box-shadow: var(--surface-shadow-large);
+}

@@ -1,0 +1,114 @@
+{/* Dialogs.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as AlertDialogStories from "./AlertDialog.stories";
+import * as ModalStories from "./Modal.stories";
+import * as DialogStories from "./Dialog.stories";
+
+<Meta title="Components/Dialogs" />
+
+# Dialogs
+
+<Subtitle>
+  Dialogs present important information to the user, and block interaction with
+  the rest of the interface until they take an action or dismiss the dialog.
+</Subtitle>
+
+<Source
+  code={`import { AlertDialog, Dialog, DialogTrigger, Modal } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+The B.C. Design System provides two methods to build an interruptive dialog:
+
+- [Dialog](#dialog): an empty container, in which you can assemble your own UI
+- [Alert Dialog](#alert-dialog): a pre-composed dialog template, suitable for common error messages or notifications
+
+Learn more about working with the dialog components:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=6A0A247719CA42DDB9B8BAD47D46F69C)
+- [View the button component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+These components are based on these React Aria components:
+
+- [Modal](https://react-spectrum.adobe.com/react-aria/Modal.html)
+- [Dialog](https://react-spectrum.adobe.com/react-aria/Dialog.html)
+
+Consult the React Aria documentation for additional technical information.
+
+### Anatomy
+
+To create a modal dialog in your UI, you need:
+
+- A `<DialogTrigger>` element
+- A trigger event or element (commonly a [button](?path=/docs/components-button-button--docs), positioned as the first child inside a `<DialogTrigger>`)
+- A [`<Modal>`](#modal), which creates a blocking overlay over the entire UI when activated
+- A [`<Dialog>`](#dialog), placed inside the `<Modal>` and containing some content and/or components
+
+Structurally, these components are assembled like this:
+
+```javascript
+<DialogTrigger>
+  <Button>This button activates the modal</Button>
+  <Modal>
+    <Dialog>This dialog contains some content and/or components</Dialog>
+  </Modal>
+</DialogTrigger>
+```
+
+## Modal
+
+<Canvas of={ModalStories.ModalTemplate} />
+<Controls of={ModalStories.ModalTemplate} />
+
+When triggered by a `<DialogTrigger>`, a modal renders two components:
+
+- `<ModalOverlay>`: a translucent overlay that covers the entire UI and blocks interaction until it is dismissed
+- `<Modal>`: a container element, positioned in the centre of the screen. Expects a [Dialog](#dialog) or [Alert Dialog](#alert-dialog) as children
+
+Use the `isDismissable` prop (defaults to `true`) to control whether the user can dismiss a modal by clicking outside the `<Modal>` container.
+
+Use `isKeyboardDismissDisabled` (defaults to `false`) to control whether the user can dismiss a modal by pressing 'Escape'.
+
+### Controlled state
+
+Instead of using a trigger element inside a `<DialogTrigger>`, you can also [use React Aria's APIs to make a modal's state controlled](https://react-spectrum.adobe.com/react-aria/Modal.html#controlled-open-state), and integrate it with your app's business logic and state management approach.
+
+### Styling
+
+You can pass a `style` object to a `Modal` to apply your own styling to the container element:
+
+<Canvas of={ModalStories.CustomSizeModal} />
+
+## Dialog
+
+<Canvas of={DialogStories.DialogTemplate} />
+<Controls of={DialogStories.DialogTemplate} />
+
+`Dialog` is a generic content container, that can be used inside a `Modal` (or other patterns like [popovers](https://react-spectrum.adobe.com/react-aria/Popover.html).)
+
+You can pass a set of components to the `children` slot to compose your own dialog UI:
+
+<Canvas of={DialogStories.DialogWithForm} />
+
+### Styling
+
+You can pass a `style` object to a `Dialog` to apply custom styling and layout rules. You can also write additional CSS rules for the `.bcds-react-aria-Dialog--Container` class.
+
+## Alert Dialog
+
+An alert dialog is a pre-composed dialog template, suitable for common error messages or notifications that require the user to provide confirmation or take an action before proceeding. [View full docs for the Alert Dialog component.](?path=/docs/components-dialogs-alertdialog--docs)
+
+<Canvas of={AlertDialogStories.AlertDialogTemplate} />
+<Controls of={AlertDialogStories.AlertDialogTemplate} />

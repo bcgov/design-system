@@ -1,13 +1,16 @@
 import "@bcgov/design-tokens/css/variables.css";
 
-export { default as InlineAlert } from "./InlineAlert";
+export { default as AlertDialog } from "./AlertDialog";
 export { default as Button } from "./Button";
 export { default as ButtonGroup } from "./ButtonGroup";
 export { default as Checkbox } from "./Checkbox";
 export { default as CheckboxGroup } from "./CheckboxGroup";
-export { default as Header } from "./Header";
+export { default as Dialog, DialogTrigger } from "./Dialog";
 export { default as Footer, FooterLinks } from "./Footer";
 export { default as Form } from "./Form";
+export { default as Header } from "./Header";
+export { default as InlineAlert } from "./InlineAlert";
+export { default as Modal } from "./Modal";
 export { default as Radio } from "./Radio";
 export { default as RadioGroup } from "./RadioGroup";
 export { default as Select } from "./Select";
