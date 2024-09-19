@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.4.0
+
+This is a milestone release that contains the following new components:
+
+- AlertDialog
+- Dialog
+- Modal
+
+This release uses:
+
+- `react-aria-components` v1.3.3
+- `@bcgov/design-tokens`v3.1.1
+
+No component changes since v0.3.0.
+
 ## 0.3.1
 
 ### Added
