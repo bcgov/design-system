@@ -11,12 +11,30 @@
   height: 100vh;
   width: 100vw;
   z-index: 1000;
-
-  &[data-entering] {
-    animation-delay: 200ms;
+}
+.react-aria-ModalOverlay:has(.bcds-react-aria-Modal)[data-entering] {
+  animation: modal-fade 200ms;
+}
+.react-aria-ModalOverlay:has(.bcds-react-aria-Modal)[data-exiting] {
+  animation: modal-fade 150ms reverse ease-in;
+}
+@media (prefers-reduced-motion) {
+  /* Don't animate modal fade in/out if prefers-reduced-motion is on */
+  .react-aria-ModalOverlay:has(.bcds-react-aria-Modal)[data-entering] {
+    animation: unset;
   }
-  &[data-exiting] {
-    animation-delay: 200ms;
+  .react-aria-ModalOverlay:has(.bcds-react-aria-Modal)[data-exiting] {
+    animation: unset;
+  }
+}
+
+@keyframes modal-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
