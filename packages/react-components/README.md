@@ -70,14 +70,17 @@ export default function App() {
 
 | Component               | React Aria Components docs link                                |
 | ----------------------- | -------------------------------------------------------------- |
+| AlertDialog             | N/A                                                            |
 | Button                  | https://react-spectrum.adobe.com/react-aria/Button.html        |
 | ButtonGroup             | N/A                                                            |
 | Checkbox                | https://react-spectrum.adobe.com/react-aria/Checkbox.html      |
 | CheckboxGroup           | https://react-spectrum.adobe.com/react-aria/CheckboxGroup.html |
+| Dialog                  | https://react-spectrum.adobe.com/react-aria/Dialog.html        |
 | Footer                  | N/A                                                            |
 | Form                    | https://react-spectrum.adobe.com/react-aria/Form.html          |
 | Header                  | N/A                                                            |
 | InlineAlert             | N/A                                                            |
+| Modal                   | https://react-spectrum.adobe.com/react-aria/Modal.html         |
 | RadioGroup, Radio       | https://react-spectrum.adobe.com/react-aria/RadioGroup.html    |
 | Select                  | https://react-spectrum.adobe.com/react-aria/Select.html        |
 | Switch                  | https://react-spectrum.adobe.com/react-aria/Switch.html        |

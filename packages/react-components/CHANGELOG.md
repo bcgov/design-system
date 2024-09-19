@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1
+
+### Added
+
+- Added AlertDialog, Dialog, and Modal components.
+
 ## 0.3.0
 
 This is a milestone release that contains the following new components:
