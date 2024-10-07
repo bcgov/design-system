@@ -24,6 +24,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const AccordionTemplate: Story = {
-  args: { label: "TKTK", children: "TKTK" },
+  args: {
+    label: "Accordion panel title",
+    children: "This is some content inside an accordion panel.",
+  },
   render: ({ ...args }: AccordionProps) => <Accordion {...args} />,
 };

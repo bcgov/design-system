@@ -1,11 +1,13 @@
 import {
+  Button as ReactAriaButton,
   UNSTABLE_Disclosure as Disclosure,
   UNSTABLE_DisclosurePanel as DisclosurePanel,
   DisclosureProps as DisclosureProps,
 } from "react-aria-components";
 
 import "./Accordion.css";
-import Button from "../Button";
+import SvgChevronUpIcon from "../Icons/SvgChevronUpIcon";
+import SvgChevronDownIcon from "../Icons/SvgChevronDownIcon";
 
 export interface AccordionProps extends DisclosureProps {
   /* Button label text */
@@ -18,9 +20,12 @@ export default function Accordion({
   ...props
 }: AccordionProps) {
   return (
-    <Disclosure {...props}>
-      <Button slot="trigger">{label}</Button>
-      <DisclosurePanel>
+    <Disclosure className="bcds-Accordion" {...props}>
+      <ReactAriaButton className="bcds-Accordion--Button" slot="trigger">
+        {label}
+        <SvgChevronDownIcon />
+      </ReactAriaButton>
+      <DisclosurePanel className="bcds-Accordion--Panel">
         <>{children}</>
       </DisclosurePanel>
     </Disclosure>

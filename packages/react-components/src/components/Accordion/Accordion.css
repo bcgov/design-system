@@ -1,0 +1,25 @@
+.bcds-Accordion {
+  display: flex;
+  flex-direction: column;
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+}
+
+.bcds-Accordion--Button {
+  display: flex;
+  flex-direction: row;
+  padding: var(--layout-padding-small) var(--layout-padding-medium);
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--surface-color-background-light-gray);
+}
+
+.bcds-Accordion--Panel {
+  display: flex;
+  align-items: flex-start;
+  padding: var(--layout-padding-medium);
+  gap: var(--layout-margin-small);
+  background-color: var(--surface-color-forms-default);
+  font: var(--typography-regular-body);
+}
