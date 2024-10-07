@@ -1,5 +1,6 @@
 import "@bcgov/design-tokens/css/variables.css";
 
+export { default as Accordion } from "./Accordion";
 export { default as AlertDialog } from "./AlertDialog";
 export { default as Button } from "./Button";
 export { default as ButtonGroup } from "./ButtonGroup";
