@@ -1,13 +1,13 @@
 import {
   UNSTABLE_Disclosure as Disclosure,
   UNSTABLE_DisclosurePanel as DisclosurePanel,
-  DisclosureProps as ReactAriaDisclosureProps,
+  DisclosureProps as DisclosureProps,
 } from "react-aria-components";
 
 import "./Accordion.css";
 import Button from "../Button";
 
-export interface AccordionProps extends ReactAriaDisclosureProps {
+export interface AccordionProps extends DisclosureProps {
   /* Button label text */
   label?: string;
 }
