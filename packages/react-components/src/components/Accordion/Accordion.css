@@ -18,7 +18,13 @@
   background-color: var(--surface-color-background-light-gray);
   border: none;
   cursor: pointer;
-  font: var(--typography-regular-body);
+  font: var(--typography-bold-body);
+  color: var(--typography-color-primary);
+}
+
+/* Hover */
+.bcds-Accordion--Button[data-hovered] {
+  background-color: var(--surface-color-menus-hover);
 }
 
 /* Accordion content */
