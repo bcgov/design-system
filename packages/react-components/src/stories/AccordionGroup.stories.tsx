@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 export const AccordionGroupTemplate: Story = {
   args: {},
   render: ({ ...args }: AccordionGroupProps) => (
-    <AccordionGroup {...args}>
+    <AccordionGroup {...args} title="TKTK" titleElement="h2">
       <Accordion>TKTK</Accordion>
     </AccordionGroup>
   ),
