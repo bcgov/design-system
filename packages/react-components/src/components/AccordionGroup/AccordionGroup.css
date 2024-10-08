@@ -1,4 +1,25 @@
 .bcds-AccordionGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--layout-border-width-small);
+  background-color: var(--surface-color-border-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  overflow: hidden;
+}
+
+/* Override individual accordion item borders */
+.bcds-AccordionGroup > .bcds-Accordion {
+  border: none;
+  border-radius: var(--layout-border-radius-none);
+}
+
+/* Focus state */
+.bcds-AccordionGroup > .bcds-Accordion[data-focus-visible-within] {
+  border-radius: var(--layout-border-radius-medium);
+  z-index: 1000;
 }
 
 /* Title styles */
