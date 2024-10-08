@@ -21,18 +21,22 @@ export default function Accordion({
 }: AccordionProps) {
   return (
     <Disclosure className="bcds-Accordion" {...props}>
-      <Button
-        className="bcds-Accordion--Button"
-        size="small"
-        variant="link"
-        slot="trigger"
-      >
-        {label}
-        <SvgChevronDownIcon />
-      </Button>
-      <DisclosurePanel className="bcds-Accordion--Panel">
-        <>{children}</>
-      </DisclosurePanel>
+      {({ isExpanded }) => (
+        <>
+          <Button
+            className="bcds-Accordion--Button"
+            size="small"
+            variant="link"
+            slot="trigger"
+          >
+            {label}
+            {isExpanded ? <SvgChevronUpIcon /> : <SvgChevronDownIcon />}
+          </Button>
+          <DisclosurePanel className="bcds-Accordion--Panel">
+            <>{children}</>
+          </DisclosurePanel>
+        </>
+      )}
     </Disclosure>
   );
 }
