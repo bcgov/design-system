@@ -4,18 +4,41 @@
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
+  height: auto;
+  width: auto;
 }
 
 .bcds-Accordion--Button {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   padding: var(--layout-padding-small) var(--layout-padding-medium);
+  gap: var(--layout-margin-small);
   justify-content: space-between;
   align-items: center;
   background-color: var(--surface-color-background-light-gray);
+  border: none;
+  cursor: pointer;
+  font: var(--typography-regular-body);
 }
 
-.bcds-Accordion--Panel {
+/* Focus state */
+.bcds-Accordion[data-focus-visible-within] {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+}
+
+/* Override default focus behaviour for button */
+.bcds-Accordion[data-focus-visible-within] > .bcds-Accordion--Button {
+  outline: none;
+}
+
+/* Expanded */
+.bcds-Accordion[data-expanded] > .bcds-Accordion--Button[slot="trigger"] svg {
+  rotate: 180deg;
+}
+
+.bcds-Accordion[data-expanded] > .bcds-Accordion--Panel {
   display: flex;
   align-items: flex-start;
   padding: var(--layout-padding-medium);
