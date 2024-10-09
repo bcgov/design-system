@@ -4,7 +4,6 @@
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
-  overflow: hidden;
 }
 
 .bcds-Accordion--Button {

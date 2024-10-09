@@ -18,8 +18,8 @@
 
 /* Focus state */
 .bcds-AccordionGroup > .bcds-Accordion[data-focus-visible-within] {
-  border-radius: var(--layout-border-radius-medium);
-  z-index: 1000;
+  border-radius: var(--layout-border-radius-hair);
+  outline-offset: calc(var(--layout-margin-hair) * -1);
 }
 
 /* Title styles */
