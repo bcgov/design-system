@@ -50,3 +50,10 @@
 .bcds-Accordion--Button[data-focused] {
   outline: none;
 }
+
+/* Disabled state */
+.bcds-Accordion[data-disabled] > .bcds-Accordion--Button {
+  background-color: var(--surface-color-forms-disabled);
+  color: var(--typography-color-disabled);
+  cursor: not-allowed;
+}

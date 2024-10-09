@@ -12,9 +12,28 @@ const meta = {
       control: { type: "text" },
       description: "Button text for accordion",
     },
+    id: {
+      control: {
+        type: "text",
+        description: "Unique identifier for the disclosure",
+      },
+    },
     children: {
       control: { type: "object" },
       description: "Accordion content",
+    },
+    isDisabled: {
+      control: "boolean",
+      description: "Disables an accordion item",
+    },
+    isExpanded: {
+      control: "boolean",
+      description: "Whether the disclosure is expanded (controlled)",
+    },
+    defaultExpanded: {
+      control: "boolean",
+      description:
+        "Whether the disclosure is expanded by default (uncontrolled)",
     },
   },
   args: {},
@@ -29,4 +48,12 @@ export const AccordionTemplate: Story = {
     children: "This is some content inside an accordion panel.",
   },
   render: ({ ...args }: AccordionProps) => <Accordion {...args} />,
+};
+
+export const DisabledAccordion: Story = {
+  args: {
+    label: "This accordion item is disabled",
+    children: "This is some content inside an accordion panel.",
+    isDisabled: true,
+  },
 };
