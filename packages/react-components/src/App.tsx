@@ -7,6 +7,7 @@ import "@bcgov/bc-sans/css/BC_Sans.css";
 import { Button, Footer, FooterLinks, Header } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
+  AccordionGroupPage,
   ButtonPage,
   ButtonGroupPage,
   CheckboxGroupPage,
@@ -153,6 +154,7 @@ function App() {
         <h1>Components</h1>
         <ButtonPage />
         <ButtonGroupPage />
+        <AccordionGroupPage />
         <CheckboxGroupPage />
         <SwitchPage />
         <InlineAlertPage />
