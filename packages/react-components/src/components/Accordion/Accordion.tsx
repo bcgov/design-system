@@ -20,7 +20,7 @@ export default function Accordion({
   ...props
 }: AccordionProps) {
   return (
-    <Disclosure className="bcds-Accordion" {...props}>
+    <Disclosure className={`bcds-Accordion`} {...props}>
       {({ isExpanded }) => (
         <>
           <Button

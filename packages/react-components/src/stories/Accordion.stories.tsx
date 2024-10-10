@@ -18,10 +18,6 @@ const meta = {
         description: "Unique identifier for the disclosure",
       },
     },
-    children: {
-      control: { type: "object" },
-      description: "Accordion content",
-    },
     isDisabled: {
       control: "boolean",
       description: "Disables an accordion item",
@@ -34,6 +30,10 @@ const meta = {
       control: "boolean",
       description:
         "Whether the disclosure is expanded by default (uncontrolled)",
+    },
+    children: {
+      control: { type: "object" },
+      description: "Accordion content",
     },
   },
   args: {},

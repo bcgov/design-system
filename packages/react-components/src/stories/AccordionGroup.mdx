@@ -17,7 +17,10 @@ import * as AccordionGroupStories from "./AccordionGroup.stories";
 
 # Accordions
 
-<Subtitle>TKTK</Subtitle>
+<Subtitle>
+  An accordion renders content inside a collapsible container. Multiple
+  accordions can be grouped together.
+</Subtitle>
 
 <Source
   code={`import { Accordion, AccordionGroup } from "@bcgov/design-system-react-components";`}
@@ -33,9 +36,19 @@ Learn more about working with the Accordion and AccordionGroup components:
 
 This component is based on the React Aria [Disclosure](https://react-spectrum.adobe.com/react-aria/Disclosure.html) and [DisclosureGroup](https://react-spectrum.adobe.com/react-aria/DisclosureGroup.html) components. Consult the React Aria documentation for additional technical information.
 
-## Configuration
+### Anatomy
 
-TKTK
+An Accordion can be used singularly, or wrapped inside an AccordionGroup.
+
+AccordionGroup expects some number of Accordions, passed as children:
+
+```javascript
+<AccordionGroup>
+  <Accordion />
+  <Accordion />
+  <Accordion />
+</AccordionGroup>
+```
 
 ## Controls
 

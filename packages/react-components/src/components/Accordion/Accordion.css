@@ -4,6 +4,7 @@
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
+  overflow: hidden;
 }
 
 .bcds-Accordion--Button {
@@ -56,4 +57,16 @@
   background-color: var(--surface-color-forms-disabled);
   color: var(--typography-color-disabled);
   cursor: not-allowed;
+}
+
+/* Dark theme */
+
+.bcds-Accordion.dark {
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-background-dark-blue);
+}
+
+.bcds-Accordion.dark > .bcds-Accordion--Button {
+  background-color: var(--surface-color-primary-default);
+  color: var(--typography-color-primary-invert);
 }
