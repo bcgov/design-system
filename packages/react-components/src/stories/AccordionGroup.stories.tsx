@@ -19,7 +19,7 @@ const meta = {
     allowsMultipleExpanded: {
       control: "boolean",
       description:
-        "Whether multiple accordiom items can be opened simultaneously",
+        "Whether multiple accordion items can be opened simultaneously",
     },
     expandedKeys: {
       control: "object",
@@ -50,28 +50,75 @@ export const AccordionGroupTemplate: Story = {
   args: { title: "Accordion title", titleElement: "h3" },
   render: ({ ...args }: AccordionGroupProps) => (
     <AccordionGroup {...args}>
-      <Accordion label="Accordion 1">TKTK</Accordion>
-      <Accordion label="Accordion 2">TKTK</Accordion>
-      <Accordion label="Accordion 3">TKTK</Accordion>
-      <Accordion label="Accordion 4">TKTK</Accordion>
-      <Accordion label="Accordion 5">TKTK</Accordion>
+      <Accordion label="Accordion 1" id="1">
+        TKTK
+      </Accordion>
+      <Accordion label="Accordion 2" id="2">
+        TKTK
+      </Accordion>
+      <Accordion label="Accordion 3" id="3">
+        TKTK
+      </Accordion>
+      <Accordion label="Accordion 4" id="4">
+        TKTK
+      </Accordion>
+      <Accordion label="Accordion 5" id="5">
+        TKTK
+      </Accordion>
     </AccordionGroup>
   ),
 };
 
 export const MultipleOpenAccordion: Story = {
+  ...AccordionGroupTemplate,
   args: {
     allowsMultipleExpanded: true,
-    title: "This accordion allows multiple slides to be opened simultaneously",
+    title: "Multiple items can be open simultaneously",
+    titleElement: "h3",
+  },
+};
+
+export const AccordionGroupWithDisabledItem: Story = {
+  args: {
+    title: "This accordion group has a single item disabled",
     titleElement: "h3",
   },
   render: ({ ...args }: AccordionGroupProps) => (
     <AccordionGroup {...args}>
-      <Accordion label="Accordion 1">TKTK</Accordion>
-      <Accordion label="Accordion 2">TKTK</Accordion>
-      <Accordion label="Accordion 3">TKTK</Accordion>
-      <Accordion label="Accordion 4">TKTK</Accordion>
-      <Accordion label="Accordion 5">TKTK</Accordion>
+      <Accordion label="Accordion 1" id="1">
+        TKTK
+      </Accordion>
+      <Accordion label="Accordion 2" id="2" isDisabled>
+        TKTK
+      </Accordion>
+      <Accordion label="Accordion 3" id="3">
+        TKTK
+      </Accordion>
+      <Accordion label="Accordion 4" id="4">
+        TKTK
+      </Accordion>
+      <Accordion label="Accordion 5" id="5">
+        TKTK
+      </Accordion>
     </AccordionGroup>
   ),
+};
+
+export const DisabledAccordionGroup: Story = {
+  ...AccordionGroupTemplate,
+  args: {
+    isDisabled: true,
+    title: "This entire accordion group is disabled",
+    titleElement: "h3",
+  },
+};
+
+export const UncontrolledDefaultExpanded: Story = {
+  ...AccordionGroupTemplate,
+  args: {
+    allowsMultipleExpanded: true,
+    defaultExpandedKeys: ["1", "5"],
+    title: "This accordion group has two items open by default",
+    titleElement: "h3",
+  },
 };

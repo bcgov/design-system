@@ -12,14 +12,15 @@ import {
 
 import * as AccordionStories from "./Accordion.stories";
 import * as AccordionGroupStories from "./AccordionGroup.stories";
+import { AccordionGroup } from "@/components";
 
 <Meta title="Components/AccordionGroup" />
 
 # Accordions
 
 <Subtitle>
-  An accordion renders content inside a collapsible container. Multiple
-  accordions can be grouped together.
+  An Accordion renders content inside a collapsible container. An AccordionGroup
+  wraps multiple accordion items into a group.
 </Subtitle>
 
 <Source
@@ -31,7 +32,7 @@ import * as AccordionGroupStories from "./AccordionGroup.stories";
 
 Learn more about working with the Accordion and AccordionGroup components:
 
-- [Usage and best practice guidance]()
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=4E7662C2E0B245AA961329B0C9BA4DAC)
 - [View the select component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
 
 This component is based on the React Aria [Disclosure](https://react-spectrum.adobe.com/react-aria/Disclosure.html) and [DisclosureGroup](https://react-spectrum.adobe.com/react-aria/DisclosureGroup.html) components. Consult the React Aria documentation for additional technical information.
@@ -61,3 +62,23 @@ AccordionGroup expects some number of Accordions, passed as children:
 
 <Canvas of={AccordionGroupStories.AccordionGroupTemplate} />
 <Controls of={AccordionGroupStories.AccordionGroupTemplate} />
+
+## Configuration
+
+### Expanding items by default
+
+If an accordion group is uncontrolled, use the `defaultExpandedKeys` prop (expects an array of accordion `id` values) to make individual items open by default:
+
+<Canvas of={AccordionGroupStories.UncontrolledDefaultExpanded} />
+
+If an accordion group's state is controlled, use the `expandedKeys` prop instead.
+
+### Disabled items
+
+Pass `isDisabled` to an Accordion to disable an individual item:
+
+<Canvas of={AccordionGroupStories.AccordionGroupWithDisabledItem} />
+
+Pass `isDisabled` to an AccordionGroup to disable the entire group:
+
+<Canvas of={AccordionGroupStories.DisabledAccordionGroup} />
