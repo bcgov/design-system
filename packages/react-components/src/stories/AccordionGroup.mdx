@@ -45,7 +45,7 @@ AccordionGroup expects some number of Accordions, passed as children:
 
 ```javascript
 <AccordionGroup>
-  <Accordion />
+  <Accordion>Some content</Accordion>
   <Accordion />
   <Accordion />
 </AccordionGroup>
@@ -53,17 +53,43 @@ AccordionGroup expects some number of Accordions, passed as children:
 
 ## Controls
 
-### Accordion controls
+### Accordion
 
 <Canvas of={AccordionStories.AccordionTemplate} />
 <Controls of={AccordionStories.AccordionTemplate} />
 
-### AccordionGroup controls
+### AccordionGroup
 
 <Canvas of={AccordionGroupStories.AccordionGroupTemplate} />
 <Controls of={AccordionGroupStories.AccordionGroupTemplate} />
 
 ## Configuration
+
+### Populating content in an accordion
+
+Set the title for an accordion item using the `label` prop. Use the `id` prop to set a unique identifier for an accordion.
+
+Populate an accordion's content using the `children` slot. Content in the `children` slot is rendered inside a container with the `bcds-Accordion--Panel` CSS class.
+
+### Creating an accordion group
+
+Pass accordion components to the `children` slot of an accordion group.
+
+Set a title for the group using the `title` prop. By default, the title renders in a `<span>`:
+
+<Canvas of={AccordionGroupStories.AccordionGroupWithDefaultTitle} />
+
+Use `titleElement` to set an alternative heading style (accepts `"h1"` to `"h6"`):
+
+<Canvas of={AccordionGroupStories.AccordionGroupWithHeading} />
+
+### Single or multiple expansion
+
+By default, an accordion group allows only one item to be opened at a time. When the user opens a second item, the first is automatically closed.
+
+Pass `allowsMultipleExpanded` to allow multiple accordions to be opened simultaneously:
+
+<Canvas of={AccordionGroupStories.MultipleOpenAccordion} />
 
 ### Expanding items by default
 

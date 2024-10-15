@@ -69,19 +69,50 @@ export const AccordionGroupTemplate: Story = {
   ),
 };
 
+export const AccordionGroupWithDefaultTitle: Story = {
+  args: {
+    title: "Default title styling",
+  },
+  render: ({ ...args }: AccordionGroupProps) => (
+    <AccordionGroup {...args}>
+      <Accordion label="Accordion 1" id="1">
+        TKTK
+      </Accordion>
+      <Accordion label="Accordion 2" id="2">
+        TKTK
+      </Accordion>
+    </AccordionGroup>
+  ),
+};
+
+export const AccordionGroupWithHeading: Story = {
+  args: {
+    title: "This accordion group has an H4 heading",
+    titleElement: "h4",
+  },
+  render: ({ ...args }: AccordionGroupProps) => (
+    <AccordionGroup {...args}>
+      <Accordion label="Accordion 1" id="1">
+        TKTK
+      </Accordion>
+      <Accordion label="Accordion 2" id="2">
+        TKTK
+      </Accordion>
+    </AccordionGroup>
+  ),
+};
+
 export const MultipleOpenAccordion: Story = {
   ...AccordionGroupTemplate,
   args: {
     allowsMultipleExpanded: true,
     title: "Multiple items can be open simultaneously",
-    titleElement: "h3",
   },
 };
 
 export const AccordionGroupWithDisabledItem: Story = {
   args: {
     title: "This accordion group has a single item disabled",
-    titleElement: "h3",
   },
   render: ({ ...args }: AccordionGroupProps) => (
     <AccordionGroup {...args}>
@@ -109,7 +140,6 @@ export const DisabledAccordionGroup: Story = {
   args: {
     isDisabled: true,
     title: "This entire accordion group is disabled",
-    titleElement: "h3",
   },
 };
 
@@ -119,6 +149,5 @@ export const UncontrolledDefaultExpanded: Story = {
     allowsMultipleExpanded: true,
     defaultExpandedKeys: ["1", "5"],
     title: "This accordion group has two items open by default",
-    titleElement: "h3",
   },
 };

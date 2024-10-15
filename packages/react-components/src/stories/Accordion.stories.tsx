@@ -15,8 +15,8 @@ const meta = {
     id: {
       control: {
         type: "text",
-        description: "Unique identifier for the disclosure",
       },
+      description: "Unique identifier for the disclosure",
     },
     isDisabled: {
       control: "boolean",

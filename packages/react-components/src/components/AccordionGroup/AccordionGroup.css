@@ -25,34 +25,33 @@
 /* Title styles */
 .bcds-AccordionGroup--Title {
   color: var(--typography-color-primary);
+  margin: var(--layout-margin-medium) var(--layout-margin-none);
 }
 
 .bcds-AccordionGroup--Title > h1 {
   font: var(--typography-bold-h1);
-  margin: var(--layout-margin-medium) var(--layout-margin-none);
 }
 
 .bcds-AccordionGroup--Title > h2 {
   font: var(--typography-bold-h2);
-  margin: var(--layout-margin-medium) var(--layout-margin-none);
 }
 
 .bcds-AccordionGroup--Title > h3 {
   font: var(--typography-bold-h3);
-  margin: var(--layout-margin-medium) var(--layout-margin-none);
 }
 
 .bcds-AccordionGroup--Title > h4 {
   font: var(--typography-bold-h4);
-  margin: var(--layout-margin-medium) var(--layout-margin-none);
 }
 
 .bcds-AccordionGroup--Title > h5 {
   font: var(--typography-bold-h5);
-  margin: var(--layout-margin-medium) var(--layout-margin-none);
 }
 
 .bcds-AccordionGroup--Title > h6 {
   font: var(--typography-bold-h6);
-  margin: var(--layout-margin-medium) var(--layout-margin-none);
+}
+
+.bcds-AccordionGroup--Title > span {
+  font: var(--typography-bold-large-body);
 }
