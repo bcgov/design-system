@@ -20,11 +20,11 @@ export default function Accordion({
   ...props
 }: AccordionProps) {
   return (
-    <Disclosure className={`bcds-Accordion`} {...props}>
+    <Disclosure className={`bcds-react-aria-Disclosure`} {...props}>
       {({ isExpanded }) => (
         <>
           <Button
-            className="bcds-Accordion--Button"
+            className="bcds-react-aria-Disclosure--Button"
             size="small"
             variant="link"
             slot="trigger"
@@ -32,7 +32,7 @@ export default function Accordion({
             {label}
             {isExpanded ? <SvgChevronUpIcon /> : <SvgChevronDownIcon />}
           </Button>
-          <DisclosurePanel className="bcds-Accordion--Panel">
+          <DisclosurePanel className="bcds-react-aria-Disclosure--Panel">
             <>{children}</>
           </DisclosurePanel>
         </>

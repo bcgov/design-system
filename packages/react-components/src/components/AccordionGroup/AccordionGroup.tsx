@@ -36,8 +36,12 @@ export default function AccordionGroup({
   }
   return (
     <>
-      {title && <div className="bcds-AccordionGroup--Title">{getTitle()}</div>}
-      <DisclosureGroup className="bcds-AccordionGroup" {...props}>
+      {title && (
+        <div className="bcds-react-aria-DisclosureGroup--Title">
+          {getTitle()}
+        </div>
+      )}
+      <DisclosureGroup className="bcds-react-aria-DisclosureGroup" {...props}>
         {children}
       </DisclosureGroup>
     </>

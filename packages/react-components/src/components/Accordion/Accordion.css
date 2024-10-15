@@ -1,4 +1,4 @@
-.bcds-Accordion {
+.bcds-react-aria-Disclosure {
   display: flex;
   flex-direction: column;
   border: var(--layout-border-width-small) solid
@@ -7,7 +7,7 @@
   overflow: hidden;
 }
 
-.bcds-Accordion--Button {
+.bcds-react-aria-Disclosure--Button {
   display: inline-flex;
   flex-direction: row;
   padding: var(--layout-padding-small) var(--layout-padding-medium);
@@ -22,12 +22,13 @@
 }
 
 /* Hover */
-.bcds-Accordion--Button[data-hovered] {
+.bcds-react-aria-Disclosure--Button[data-hovered] {
   background-color: var(--surface-color-menus-hover);
 }
 
 /* Accordion content */
-.bcds-Accordion[data-expanded] > .bcds-Accordion--Panel {
+.bcds-react-aria-Disclosure[data-expanded]
+  > .bcds-react-aria-Disclosure--Panel {
   display: flex;
   align-items: flex-start;
   padding: var(--layout-padding-medium);
@@ -37,23 +38,25 @@
 }
 
 /* Focus state */
-.bcds-Accordion[data-focus-visible-within] {
+.bcds-react-aria-Disclosure[data-focus-visible-within] {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
 }
 
 /* Override default focus behaviour for button */
-.bcds-Accordion[data-focus-visible-within] > .bcds-Accordion--Button {
+.bcds-react-aria-Disclosure[data-focus-visible-within]
+  > .bcds-react-aria-Disclosure--Button {
   outline: none;
 }
 
-.bcds-Accordion--Button[data-focused] {
+.bcds-react-aria-Disclosure--Button[data-focused] {
   outline: none;
 }
 
 /* Disabled state */
-.bcds-Accordion[data-disabled] > .bcds-Accordion--Button {
+.bcds-react-aria-Disclosure[data-disabled]
+  > .bcds-react-aria-Disclosure--Button {
   background-color: var(--surface-color-forms-disabled);
   color: var(--typography-color-disabled);
   cursor: not-allowed;
@@ -61,12 +64,12 @@
 
 /* Dark theme */
 
-.bcds-Accordion.dark {
+.bcds-react-aria-Disclosure.dark {
   border: var(--layout-border-width-small) solid
     var(--surface-color-background-dark-blue);
 }
 
-.bcds-Accordion.dark > .bcds-Accordion--Button {
+.bcds-react-aria-Disclosure.dark > .bcds-react-aria-Disclosure--Button {
   background-color: var(--surface-color-primary-default);
   color: var(--typography-color-primary-invert);
 }
