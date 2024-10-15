@@ -31,10 +31,10 @@ export const CalloutTemplate: Story = {
     title: "TKTK",
     description: "TKTK",
     buttons: [
-      <Button variant="tertiary" size="small">
+      <Button variant="secondary" size="small">
         Button 1
       </Button>,
-      <Button variant="secondary" size="small">
+      <Button variant="primary" size="small">
         Button 2
       </Button>,
     ],

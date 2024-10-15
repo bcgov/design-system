@@ -2,7 +2,6 @@
   display: flex;
   width: 100%;
   padding: var(--layout-padding-medium);
-  border-radius: var(--layoutr-border-radius-small);
 }
 
 .bcds-Callout--Container {
@@ -25,4 +24,5 @@
   background-color: var(--surface-color-background-light-gray);
   border-left: var(--layout-border-width-large) solid
     var(--support-border-color-info);
+  border-radius: var(--layout-border-radius-medium);
 }

@@ -11,6 +11,8 @@ export interface CalloutProps extends React.PropsWithChildren {
   description?: string;
   /* Button group */
   buttons?: React.ReactNode;
+  /* ARIA role */
+  role?: React.AriaRole | undefined;
 }
 
 export default function Callout({
@@ -18,17 +20,25 @@ export default function Callout({
   title,
   description,
   buttons,
+  role = "note",
   children,
   ...props
 }: CalloutProps) {
   return (
-    <div className={`bcds-Callout ${variant}`} {...props}>
+    <div className={`bcds-Callout ${variant}`} {...props} role={role}>
       {children ? (
         children
       ) : (
         <>
-          <div className="bcds-Callout--Container">
-            {title && <span className="title">{title}</span>}
+          <div
+            className="bcds-Callout--Container"
+            aria-labelledby={"callout-title"}
+          >
+            {title && (
+              <span className="title" id="callout-title">
+                {title}
+              </span>
+            )}
             {description && <span className="description">{description}</span>}
             {buttons && (
               <ButtonGroup alignment="start" orientation="horizontal">
