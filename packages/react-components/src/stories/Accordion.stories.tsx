@@ -16,7 +16,7 @@ const meta = {
       control: {
         type: "text",
       },
-      description: "Unique identifier for the disclosure",
+      description: "Unique identifier for the accordion item",
     },
     isDisabled: {
       control: "boolean",
