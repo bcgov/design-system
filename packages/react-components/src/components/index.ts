@@ -3,6 +3,7 @@ import "@bcgov/design-tokens/css/variables.css";
 export { default as AlertDialog } from "./AlertDialog";
 export { default as Button } from "./Button";
 export { default as ButtonGroup } from "./ButtonGroup";
+export { default as Callout } from "./Callout";
 export { default as Checkbox } from "./Checkbox";
 export { default as CheckboxGroup } from "./CheckboxGroup";
 export { default as Dialog, DialogTrigger } from "./Dialog";
