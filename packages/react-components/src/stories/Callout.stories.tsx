@@ -8,6 +8,11 @@ const meta = {
   component: Callout,
   parameters: { layout: "centered" },
   argTypes: {
+    variant: {
+      options: ["default", "dark"],
+      control: { type: "radio" },
+      description: "Sets the theme of the alert",
+    },
     title: {
       control: { type: "text" },
       description: "Sets the callout title",

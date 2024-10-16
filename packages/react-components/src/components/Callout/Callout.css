@@ -1,7 +1,7 @@
 .bcds-Callout {
   display: flex;
   width: 100%;
-  padding: var(--layout-padding-medium);
+  padding: var(--layout-padding-medium) var(--layout-padding-large);
 }
 
 .bcds-Callout--Container {
@@ -19,10 +19,21 @@
   font: var(--typography-regular-body);
 }
 
-/* Themes */
-.bcds-Callout.info {
+/* Theme - default */
+.bcds-Callout.default {
   background-color: var(--surface-color-background-light-gray);
   border-left: var(--layout-border-width-large) solid
     var(--support-border-color-info);
   border-radius: var(--layout-border-radius-medium);
+}
+
+/* Theme - dark */
+.bcds-Callout.dark {
+  background-color: var(--surface-color-background-dark-blue);
+  border-left: var(--layout-border-width-large) solid var(--theme-primary-gold);
+  border-radius: var(--layout-border-radius-medium);
+}
+
+.bcds-Callout.dark > .bcds-Callout--Container {
+  color: var(--typography-color-primary-invert);
 }

@@ -4,7 +4,7 @@ import "./Callout.css";
 
 export interface CalloutProps extends React.PropsWithChildren {
   /* Callout theme */
-  variant?: "info" | "success" | "warning" | "danger";
+  variant?: "default" | "dark";
   /* Title */
   title?: string;
   /* Description */
@@ -16,7 +16,7 @@ export interface CalloutProps extends React.PropsWithChildren {
 }
 
 export default function Callout({
-  variant = "info",
+  variant = "default",
   title,
   description,
   buttons,
