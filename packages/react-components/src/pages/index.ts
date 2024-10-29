@@ -1,3 +1,4 @@
+import AlertBannerPage from "./AlertBanner";
 import ButtonPage from "./Button";
 import ButtonGroupPage from "./ButtonGroup";
 import CheckboxGroupPage from "./CheckboxGroup";
@@ -12,6 +13,7 @@ import SwitchPage from "./Switch";
 import TooltipPage from "./Tooltip";
 
 export {
+  AlertBannerPage,
   ButtonPage,
   ButtonGroupPage,
   CheckboxGroupPage,

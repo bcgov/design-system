@@ -7,6 +7,7 @@ import "@bcgov/bc-sans/css/BC_Sans.css";
 import { Button, Footer, FooterLinks, Header } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
+  AlertBannerPage,
   ButtonPage,
   ButtonGroupPage,
   CheckboxGroupPage,
@@ -56,6 +57,7 @@ function App() {
 
   return (
     <>
+      <AlertBannerPage />
       <Header title="B.C. Design System Kitchen Sink" />
       <Header
         logoLinkElement={

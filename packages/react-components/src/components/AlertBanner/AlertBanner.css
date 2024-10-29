@@ -1,0 +1,58 @@
+.bcds-AlertBanner {
+  display: flex;
+  flex-direction: row;
+  gap: var(--layout-margin-medium);
+  justify-content: center;
+  padding: var(--layout-padding-small) var(--layout-padding-medium);
+  background-color: var(--surface-color-background-dark-blue);
+}
+
+.bcds-AlertBanner--Icon {
+  justify-self: flex-start;
+  align-self: center;
+  padding-top: var(--layout-padding-xsmall);
+}
+
+.bcds-AlertBanner--Container {
+  font: var(--typography-regular-body);
+  color: var(--typography-color-primary-invert);
+}
+
+.bcds-AlertBanner--closeIcon {
+}
+
+.bcds-AlertBanner--closeIcon > svg {
+  fill: var(--icons-color-primary-invert);
+}
+
+/* Variants */
+.bcds-AlertBanner.info {
+}
+
+.bcds-AlertBanner.info > .bcds-AlertBanner--Icon {
+  color: var(--icons-color-primary-invert);
+}
+
+.bcds-AlertBanner.success {
+}
+
+.bcds-AlertBanner.success > .bcds-AlertBanner--Icon {
+}
+
+.bcds-AlertBanner.warning {
+}
+
+.bcds-AlertBanner.warning > .bcds-AlertBanner--Icon {
+}
+
+.bcds-AlertBanner.error {
+}
+
+.bcds-AlertBanner.error > .bcds-AlertBanner--Icon {
+}
+
+.bcds-AlertBanner.dark {
+}
+
+.bcds-AlertBanner.dark > .bcds-AlertBanner--Icon {
+}
