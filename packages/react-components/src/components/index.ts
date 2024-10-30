@@ -16,6 +16,7 @@ export { default as Radio } from "./Radio";
 export { default as RadioGroup } from "./RadioGroup";
 export { default as Select } from "./Select";
 export { default as SvgBcLogo } from "./Icons/SvgBcLogo";
+export { default as SvgBcOutlineIcon } from "./Icons/SvgBcOutlineIcon";
 export { default as SvgCheckIcon } from "./Icons/SvgCheckIcon";
 export { default as SvgCheckCircleIcon } from "./Icons/SvgCheckCircleIcon";
 export { default as SvgDashIcon } from "./Icons/SvgDashIcon";

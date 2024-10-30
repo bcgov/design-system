@@ -1,5 +1,5 @@
 import { AlertBanner } from "@/components";
-import { SvgChevronDownIcon } from "@/components";
+import { SvgBcOutlineIcon } from "@/components";
 import { useState } from "react";
 
 interface BannerState {
@@ -47,7 +47,7 @@ export default function AlertBannerPage() {
         <AlertBanner
           variant="dark"
           isCloseable={false}
-          customIcon={<SvgChevronDownIcon />}
+          customIcon={<SvgBcOutlineIcon />}
           onClose={() => handleClose("banner5")}
         >
           Dark state with a custom icon and close function disabled
