@@ -7,7 +7,7 @@ import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 import SvgInfoIcon from "../Icons/SvgInfoIcon";
 
 export interface AlertBannerProps extends React.PropsWithChildren {
-  variant?: "info" | "success" | "warning" | "error" | "dark";
+  variant?: "info" | "success" | "warning" | "danger" | "dark";
   isIconHidden?: boolean;
   isCloseable?: boolean;
   role?: React.AriaRole | undefined;
