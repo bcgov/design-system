@@ -13,6 +13,7 @@ export default function AlertBannerPage() {
     banner3: true,
     banner4: true,
     banner5: true,
+    banner6: true,
   });
 
   const handleClose = (bannerId: string) => {
@@ -51,6 +52,15 @@ export default function AlertBannerPage() {
           onClose={() => handleClose("banner5")}
         >
           Dark state with a custom icon and close function disabled
+        </AlertBanner>
+      )}
+      {banners.banner6 && (
+        <AlertBanner variant="info" onClose={() => handleClose("banner6")}>
+          This is an alert banner with a really really long message that I need
+          to keep going and going and going so that it wraps and I can test the
+          styling behaviour la la la oh my god how wide is this viewport why
+          won't you just wrap please just give me a little line break oh there
+          we go
         </AlertBanner>
       )}
     </>

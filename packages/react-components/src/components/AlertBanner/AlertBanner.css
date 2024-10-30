@@ -8,16 +8,23 @@
 }
 
 .bcds-AlertBanner--Icon {
+  align-self: first baseline;
   justify-self: flex-start;
-  align-self: center;
   padding-top: var(--layout-padding-xsmall);
   color: var(--icons-color-primary-invert);
 }
 
 .bcds-AlertBanner--Container {
+  display: inline-flex;
+  gap: var(--layout-margin-medium);
+  align-items: first baseline;
   flex-grow: 1;
   font: var(--typography-regular-body);
   color: var(--typography-color-primary-invert);
+}
+
+.bcds-AlertBanner--closeIcon {
+  align-self: first baseline;
 }
 
 .bcds-AlertBanner--closeIcon > .bcds-react-aria-Button[data-hovered] svg {
