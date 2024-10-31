@@ -115,3 +115,11 @@ export const BannerWithButton: Story = {
     ],
   },
 };
+
+export const UncloseableBanner: Story = {
+  ...AlertBannerTemplate,
+  args: {
+    isCloseable: false,
+    children: ["The close button is disabled on this alert banner"],
+  },
+};
