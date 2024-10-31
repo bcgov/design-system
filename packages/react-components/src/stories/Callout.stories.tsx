@@ -9,7 +9,7 @@ const meta = {
   parameters: { layout: "centered" },
   argTypes: {
     variant: {
-      options: ["default", "dark"],
+      options: ["default", "lightBlue", "darkBlue", "lightGold"],
       control: { type: "radio" },
       description: "Sets the theme of the alert",
     },
@@ -25,6 +25,10 @@ const meta = {
       control: { type: "object" },
       description: "Expects an array of button components",
     },
+    role: {
+      control: { type: "text" },
+      description: "Sets the ARIA role for the callout. Defaults to `note`",
+    },
   },
 } satisfies Meta<typeof Callout>;
 
@@ -33,8 +37,11 @@ type Story = StoryObj<typeof meta>;
 
 export const CalloutTemplate: Story = {
   args: {
-    title: "TKTK",
-    description: "TKTK",
+    variant: "default",
+    title: "Callout title",
+    role: "note",
+    description:
+      "Use the description slot to provide the main content of the callout.",
     buttons: [
       <Button variant="secondary" size="small">
         Button 1
@@ -45,4 +52,12 @@ export const CalloutTemplate: Story = {
     ],
   },
   render: ({ ...args }: CalloutProps) => <Callout {...args} />,
+};
+
+export const TextOnlyCallout: Story = {
+  args: {
+    variant: "default",
+    description:
+      "All of the default content slots are optional. If you don't provide a value, nothing is rendered.",
+  },
 };

@@ -14,7 +14,6 @@ export default function CalloutPage() {
           </Button>,
         ]}
       />
-      <Callout></Callout>
     </>
   );
 }

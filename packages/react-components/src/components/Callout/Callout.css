@@ -27,13 +27,28 @@
   border-radius: var(--layout-border-radius-medium);
 }
 
-/* Theme - dark */
-.bcds-Callout.dark {
+/* Theme - light blue */
+.bcds-Callout.lightBlue {
+  background-color: var(--theme-blue-10);
+  border-left: var(--layout-border-width-large) solid
+    var(--support-border-color-info);
+  border-radius: var(--layout-border-radius-medium);
+}
+
+/* Theme - dark blue  */
+.bcds-Callout.darkBlue {
   background-color: var(--surface-color-background-dark-blue);
   border-left: var(--layout-border-width-large) solid var(--theme-primary-gold);
   border-radius: var(--layout-border-radius-medium);
 }
 
-.bcds-Callout.dark > .bcds-Callout--Container {
+.bcds-Callout.darkBlue > .bcds-Callout--Container {
   color: var(--typography-color-primary-invert);
+}
+
+/* Theme - light gold */
+.bcds-Callout.lightGold {
+  background-color: var(--theme-gold-10);
+  border-left: var(--layout-border-width-large) solid var(--theme-primary-gold);
+  border-radius: var(--layout-border-radius-medium);
 }
