@@ -10,7 +10,7 @@ const meta = {
   component: AlertBanner,
   argTypes: {
     variant: {
-      options: ["info", "success", "warning", "danger", "dark", "beta"],
+      options: ["info", "success", "warning", "danger", "black", "beta"],
       control: { type: "radio" },
       description: "Sets the theme and icon for the alert",
     },
@@ -83,8 +83,8 @@ export const DangerBanner: Story = {
 export const DarkBanner: Story = {
   ...AlertBannerTemplate,
   args: {
-    variant: "dark",
-    children: ["This banner uses the 'dark' theme"],
+    variant: "black",
+    children: ["This banner uses the 'black' theme"],
   },
 };
 

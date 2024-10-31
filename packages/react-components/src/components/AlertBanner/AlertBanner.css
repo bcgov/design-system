@@ -69,9 +69,9 @@
   background-color: var(--support-border-color-danger);
 }
 
-/* Dark theme */
+/* Black theme */
 
-.bcds-Alert-Banner.dark {
+.bcds-Alert-Banner.black {
   background-color: var(--theme-gray-110);
 }
 

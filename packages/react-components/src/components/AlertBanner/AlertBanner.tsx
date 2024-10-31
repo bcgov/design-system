@@ -9,7 +9,7 @@ import SvgInfoIcon from "../Icons/SvgInfoIcon";
 
 export interface AlertBannerProps extends React.PropsWithChildren {
   /* Sets banner theme */
-  variant?: "info" | "success" | "warning" | "danger" | "dark" | "beta";
+  variant?: "info" | "success" | "warning" | "danger" | "black" | "beta";
   /* Hides icon  */
   isIconHidden?: boolean;
   /* Toggles display of close button */
@@ -27,7 +27,7 @@ function getIcon(variant: string) {
   switch (variant) {
     case "info":
       return <SvgInfoIcon />;
-    case "dark":
+    case "black":
       return <SvgInfoIcon />;
     case "success":
       return <SvgCheckCircleIcon />;

@@ -54,7 +54,7 @@ export default function AlertBannerPage() {
       )}
       {banners.banner5 && (
         <AlertBanner
-          variant="dark"
+          variant="black"
           customIcon={<SvgBcOutlineIcon />}
           onClose={() => handleClose("banner5")}
         >
