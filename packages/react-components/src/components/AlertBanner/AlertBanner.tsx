@@ -7,14 +7,21 @@ import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 import SvgInfoIcon from "../Icons/SvgInfoIcon";
 
 export interface AlertBannerProps extends React.PropsWithChildren {
+  /* Sets banner theme */
   variant?: "info" | "success" | "warning" | "danger" | "dark";
+  /* Hides icon  */
   isIconHidden?: boolean;
+  /* Toggles display of close button */
   isCloseable?: boolean;
+  /* Sets ARIA role */
   role?: React.AriaRole | undefined;
+  /* Overrides theme icon  */
   customIcon?: React.ReactNode;
+  /* Controls behaviour of close button */
   onClose?: () => void;
 }
 
+/* Sets correct icon for theme */
 function getIcon(variant: string) {
   switch (variant) {
     case "info":
@@ -43,17 +50,17 @@ export default function AlertBanner({
   ...props
 }: AlertBannerProps) {
   return (
-    <div className={`bcds-AlertBanner ${variant}`} {...props}>
+    <div className={`bcds-Alert-Banner ${variant}`} {...props}>
       {!isIconHidden && (
-        <div className="bcds-AlertBanner--Icon">
+        <div className="bcds-Alert-Banner--Icon">
           {customIcon ? customIcon : getIcon(variant)}
         </div>
       )}
-      <div className="bcds-AlertBanner--Container" role={role}>
+      <div className="bcds-Alert-Banner--Container" role={role}>
         {children}
       </div>
       {isCloseable && (
-        <span className="bcds-AlertBanner--closeIcon">
+        <span className="bcds-Alert-Banner--closeIcon">
           <Button
             variant="tertiary"
             isIconButton

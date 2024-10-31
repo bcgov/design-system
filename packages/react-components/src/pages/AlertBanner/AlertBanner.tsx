@@ -1,4 +1,5 @@
 import { AlertBanner } from "@/components";
+import { Button } from "@/components";
 import { SvgBcOutlineIcon } from "@/components";
 import { useState } from "react";
 
@@ -26,41 +27,38 @@ export default function AlertBannerPage() {
     <>
       {banners.banner1 && (
         <AlertBanner onClose={() => handleClose("banner1")}>
-          This is an alert banner in its default configuration
+          Alert banner in its default configuration
         </AlertBanner>
       )}
       {banners.banner2 && (
         <AlertBanner variant="success" onClose={() => handleClose("banner2")}>
-          Success state
+          Success theme
         </AlertBanner>
       )}
       {banners.banner3 && (
         <AlertBanner variant="warning" onClose={() => handleClose("banner3")}>
-          Warning state
+          Warning theme with an additional call-to-action button
+          <Button variant="secondary" size="small">
+            Take an action
+          </Button>
         </AlertBanner>
       )}
       {banners.banner4 && (
-        <AlertBanner variant="danger" onClose={() => handleClose("banner4")}>
-          Danger state
+        <AlertBanner
+          variant="danger"
+          isCloseable={false}
+          onClose={() => handleClose("banner4")}
+        >
+          Danger theme with close button disabled
         </AlertBanner>
       )}
       {banners.banner5 && (
         <AlertBanner
           variant="dark"
-          isCloseable={false}
           customIcon={<SvgBcOutlineIcon />}
           onClose={() => handleClose("banner5")}
         >
-          Dark state with a custom icon and close function disabled
-        </AlertBanner>
-      )}
-      {banners.banner6 && (
-        <AlertBanner variant="info" onClose={() => handleClose("banner6")}>
-          This is an alert banner with a really really long message that I need
-          to keep going and going and going so that it wraps and I can test the
-          styling behaviour la la la oh my god how wide is this viewport why
-          won't you just wrap please just give me a little line break oh there
-          we go
+          Dark theme with a custom icon
         </AlertBanner>
       )}
     </>

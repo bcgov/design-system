@@ -51,19 +51,57 @@ export const AlertBannerTemplate: Story = {
   render: ({ ...args }: AlertBannerProps) => <AlertBanner {...args} />,
 };
 
-export const AlertBannerWithCustomIcon: Story = {
+export const SuccessBanner: Story = {
+  ...AlertBannerTemplate,
+  args: {
+    variant: "success",
+    children: ["This banner uses the 'success' theme"],
+  },
+};
+
+export const WarningBanner: Story = {
+  ...AlertBannerTemplate,
+  args: {
+    variant: "warning",
+    children: ["This banner uses the 'warning' theme"],
+  },
+};
+
+export const DangerBanner: Story = {
+  ...AlertBannerTemplate,
+  args: {
+    variant: "danger",
+    children: ["This banner uses the 'danger' theme"],
+  },
+};
+
+export const DarkBanner: Story = {
   ...AlertBannerTemplate,
   args: {
     variant: "dark",
+    children: ["This banner uses the 'dark' theme"],
+  },
+};
+
+export const BannerWithCustomIcon: Story = {
+  ...AlertBannerTemplate,
+  args: {
     customIcon: [<SvgBcOutlineIcon />],
     children: ["This alert banner has a custom icon"],
   },
 };
 
-export const AlertBannerWithButton: Story = {
+export const BannerWithoutIcon: Story = {
   ...AlertBannerTemplate,
   args: {
-    variant: "danger",
+    isIconHidden: true,
+    children: ["This banner has its theme icon disabled"],
+  },
+};
+
+export const BannerWithButton: Story = {
+  ...AlertBannerTemplate,
+  args: {
     children: [
       "This alert banner also renders a call to action using a Button component",
       <Button variant="secondary" size="small">
