@@ -1,3 +1,4 @@
+/* The component implements the Chevron Down icon from Font Awesome: https://fontawesome.com/icons/chevron-down */
 export default function SvgChevronDownIcon({ id = "chevron-down-icon" }) {
   return (
     <svg
