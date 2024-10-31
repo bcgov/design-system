@@ -46,7 +46,12 @@ type Story = StoryObj<typeof meta>;
 
 export const AlertBannerTemplate: Story = {
   args: {
+    variant: "info",
+    isIconHidden: false,
+    isCloseable: true,
+    role: "status",
     children: ["This is an alert banner in its default configuration"],
+    onClose: () => alert("onClose()"),
   },
   render: ({ ...args }: AlertBannerProps) => <AlertBanner {...args} />,
 };
