@@ -77,7 +77,7 @@
 
 /* Beta theme */
 .bcds-Alert-Banner.beta {
-  background-color: var(--theme-blue-70);
+  background-color: var(--theme-blue-80);
 }
 
 .bcds-Alert-Banner.beta > .bcds-Alert-Banner--Icon {
