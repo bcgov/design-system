@@ -33,13 +33,16 @@ export default function Callout({
           <div
             className="bcds-Callout--Container"
             aria-labelledby={"callout-title"}
+            role={role}
           >
             {title && (
-              <span className="title" id="callout-title">
+              <span className="bcds-Callout--Title" id="callout-title">
                 {title}
               </span>
             )}
-            {description && <span className="description">{description}</span>}
+            {description && (
+              <span className="bcds-Callout--Description">{description}</span>
+            )}
             {buttons && (
               <ButtonGroup alignment="start" orientation="horizontal">
                 {buttons}

@@ -11,11 +11,11 @@
   gap: var(--layout-margin-small);
 }
 
-.bcds-Callout--Container > .title {
+.bcds-Callout--Container > .bcds-Callout--Title {
   font: var(--typography-bold-large-body);
 }
 
-.bcds-Callout--Container > .description {
+.bcds-Callout--Container > .bcds-Callout--Description {
   font: var(--typography-regular-body);
 }
 

@@ -4,7 +4,7 @@ import { Button, Callout } from "../components";
 import { CalloutProps } from "@/components/Callout";
 
 const meta = {
-  title: "Components/Callout",
+  title: "Components/Callout/Callout",
   component: Callout,
   parameters: { layout: "centered" },
   argTypes: {

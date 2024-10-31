@@ -1,0 +1,40 @@
+{/* Callout.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as CalloutStories from "./Callout.stories";
+
+<Meta of={CalloutStories} />
+
+# Callout
+
+<Subtitle></Subtitle>
+
+<Source
+  code={`import { Callout } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources ## Usage and resources
+
+Learn more about working with the inline alert component:
+
+- [Usage and best practice guidance]()
+- [View the inline alert component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+## Controls
+
+<Primary of={CalloutStories} />
+<Controls of={CalloutStories.CalloutTemplate} />
+
+## Configuration
+
+### Variants
