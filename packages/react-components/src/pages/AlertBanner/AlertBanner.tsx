@@ -61,11 +61,6 @@ export default function AlertBannerPage() {
           Dark theme with a custom icon
         </AlertBanner>
       )}
-      {banners.banner6 && (
-        <AlertBanner variant="beta" onClose={() => handleClose("banner6")}>
-          This product is currently in beta
-        </AlertBanner>
-      )}
     </>
   );
 }
