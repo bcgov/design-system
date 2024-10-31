@@ -13,7 +13,7 @@ export interface AlertBannerProps extends React.PropsWithChildren {
   isIconHidden?: boolean;
   /* Toggles display of close button */
   isCloseable?: boolean;
-  /* Sets ARIA role */
+  /* Sets ARIA role, defaults to 'status' */
   role?: React.AriaRole | undefined;
   /* Overrides theme icon  */
   customIcon?: React.ReactNode;
@@ -43,7 +43,7 @@ export default function AlertBanner({
   variant = "info",
   isIconHidden = false,
   isCloseable = true,
-  role = "note",
+  role = "status",
   onClose,
   children,
   customIcon,
