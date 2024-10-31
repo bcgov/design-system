@@ -1,5 +1,6 @@
 import "./AlertBanner.css";
 import Button from "../Button";
+import SvgBetaIcon from "../Icons/SvgBetaIcon";
 import SvgCheckCircleIcon from "../Icons/SvgCheckCircleIcon";
 import SvgCloseIcon from "../Icons/SvgCloseIcon";
 import SvgExclamationCircleIcon from "../Icons/SvgExclamationCircleIcon";
@@ -8,7 +9,7 @@ import SvgInfoIcon from "../Icons/SvgInfoIcon";
 
 export interface AlertBannerProps extends React.PropsWithChildren {
   /* Sets banner theme */
-  variant?: "info" | "success" | "warning" | "danger" | "dark";
+  variant?: "info" | "success" | "warning" | "danger" | "dark" | "beta";
   /* Hides icon  */
   isIconHidden?: boolean;
   /* Toggles display of close button */
@@ -34,6 +35,8 @@ function getIcon(variant: string) {
       return <SvgExclamationIcon />;
     case "danger":
       return <SvgExclamationCircleIcon />;
+    case "beta":
+      return <SvgBetaIcon />;
     default:
       return;
   }

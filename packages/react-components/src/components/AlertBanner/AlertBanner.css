@@ -74,3 +74,12 @@
 .bcds-Alert-Banner.dark {
   background-color: var(--theme-gray-110);
 }
+
+/* Beta theme */
+.bcds-Alert-Banner.beta {
+  background-color: var(--theme-blue-70);
+}
+
+.bcds-Alert-Banner.beta > .bcds-Alert-Banner--Icon {
+  color: var(--icons-color-primary-invert);
+}

@@ -10,7 +10,7 @@ const meta = {
   component: AlertBanner,
   argTypes: {
     variant: {
-      options: ["info", "success", "warning", "danger", "dark"],
+      options: ["info", "success", "warning", "danger", "dark", "beta"],
       control: { type: "radio" },
       description: "Sets the theme and icon for the alert",
     },
@@ -121,5 +121,14 @@ export const UncloseableBanner: Story = {
   args: {
     isCloseable: false,
     children: ["The close button is disabled on this alert banner"],
+  },
+};
+
+export const BetaBanner: Story = {
+  ...AlertBannerTemplate,
+  args: {
+    variant: "beta",
+    children:
+      "This banner uses the 'beta' theme, intended for use when a product is under development or testing",
   },
 };
