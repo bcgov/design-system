@@ -92,6 +92,15 @@ export const DarkBanner: Story = {
   },
 };
 
+export const BetaBanner: Story = {
+  ...AlertBannerTemplate,
+  args: {
+    variant: "beta",
+    children:
+      "This banner uses the 'beta' theme, intended for use when a product is under development",
+  },
+};
+
 export const BannerWithCustomIcon: Story = {
   ...AlertBannerTemplate,
   args: {
@@ -125,14 +134,5 @@ export const UncloseableBanner: Story = {
   args: {
     isCloseable: false,
     children: ["The close button is disabled on this alert banner"],
-  },
-};
-
-export const BetaBanner: Story = {
-  ...AlertBannerTemplate,
-  args: {
-    variant: "beta",
-    children:
-      "This banner uses the 'beta' theme, intended for use when a product is under development",
   },
 };
