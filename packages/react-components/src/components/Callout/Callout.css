@@ -19,8 +19,8 @@
   font: var(--typography-regular-body);
 }
 
-/* Theme - default */
-.bcds-Callout.default {
+/* Theme - light grey (default0 */
+.bcds-Callout.lightGrey {
   background-color: var(--surface-color-background-light-gray);
   border-left: var(--layout-border-width-large) solid
     var(--support-border-color-info);

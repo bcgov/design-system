@@ -9,7 +9,7 @@ const meta = {
   parameters: { layout: "centered" },
   argTypes: {
     variant: {
-      options: ["default", "lightBlue", "darkBlue", "lightGold"],
+      options: ["lightGrey", "lightBlue", "darkBlue", "lightGold"],
       control: { type: "radio" },
       description: "Sets the theme of the alert",
     },
@@ -42,7 +42,7 @@ type Story = StoryObj<typeof meta>;
 
 export const CalloutTemplate: Story = {
   args: {
-    variant: "default",
+    variant: "lightGrey",
     title: "Callout title",
     role: "note",
     description:
@@ -115,7 +115,7 @@ export const LightGoldTheme: Story = {
 
 export const TextOnlyCallout: Story = {
   args: {
-    variant: "default",
+    variant: "lightGrey",
     description:
       "All of the default content slots are optional. If you don't provide a value, nothing is rendered.",
   },
@@ -123,7 +123,7 @@ export const TextOnlyCallout: Story = {
 
 export const CustomCallout: Story = {
   args: {
-    variant: "default",
+    variant: "lightGrey",
     children: [
       <div
         style={{

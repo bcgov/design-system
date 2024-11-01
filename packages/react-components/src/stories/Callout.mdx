@@ -38,3 +38,30 @@ Learn more about working with the callout component:
 ## Configuration
 
 ### Variants
+
+The callout component ships with a set of predefined colourways, set via the `variant` prop. If no `variant` is passed, it defaults to `lightGrey`:
+
+<Canvas of={CalloutStories.CalloutTemplate} />
+<Canvas of={CalloutStories.LightBlueTheme} />
+<Canvas of={CalloutStories.DarkBlueTheme} />
+<Canvas of={CalloutStories.LightGoldTheme} />
+
+### Callout content
+
+The default callout layout has three content slots, populated via prop:
+
+- `title`: a bolded title field
+- `description`: the central content area
+- `buttons`: a [ButtonGroup](/docs/components-button-buttongroup--docs), that expects an array of [button](/docs/components-button-button--docs) components
+
+Alternatively, you can pass your own content and components to the `children` slot to override the default layout:
+
+<Canvas of={CalloutStories.CustomCallout} />
+
+**Note**: to modify the styling of content in the `children` slot, you can write additional rules for the `.bcds-Callout--Container` CSS class.
+
+### ARIA roles
+
+By default, a callout renders with the [ARIA "note" role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/note_role).
+
+Use the `role` prop to set a different role. You can pass [any valid ARIA role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles), but we recommend using either "note" or "[complementary](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role)".
