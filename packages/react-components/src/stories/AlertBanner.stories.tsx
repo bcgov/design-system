@@ -38,6 +38,10 @@ const meta = {
       control: { type: "object" },
       description: "Function for the close button",
     },
+    betaLabel: {
+      control: { type: "text" },
+      description: "Overrides icon label (only displayed on `beta` variant)",
+    },
   },
 } satisfies Meta<typeof AlertBanner>;
 
