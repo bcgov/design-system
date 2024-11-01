@@ -20,6 +20,8 @@ export interface AlertBannerProps extends React.PropsWithChildren {
   customIcon?: React.ReactNode;
   /* Controls behaviour of close button */
   onClose?: () => void;
+  /* Label displayed next to icon when using "beta" variant */
+  betaLabel?: string;
 }
 
 /* Sets correct icon for theme */
@@ -50,6 +52,7 @@ export default function AlertBanner({
   onClose,
   children,
   customIcon,
+  betaLabel = "Beta",
   ...props
 }: AlertBannerProps) {
   return (
@@ -57,6 +60,9 @@ export default function AlertBanner({
       {!isIconHidden && (
         <div className="bcds-Alert-Banner--Icon">
           {customIcon ? customIcon : getIcon(variant)}
+          {variant === "beta" && (
+            <div className="bcds-Alert-Banner--betaLabel">{betaLabel}</div>
+          )}
         </div>
       )}
       <div className="bcds-Alert-Banner--Container" role={role}>
