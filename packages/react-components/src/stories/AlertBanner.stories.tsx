@@ -133,6 +133,6 @@ export const BetaBanner: Story = {
   args: {
     variant: "beta",
     children:
-      "This banner uses the 'beta' theme, intended for use when a product is under development or testing",
+      "This banner uses the 'beta' theme, intended for use when a product is under development",
   },
 };
