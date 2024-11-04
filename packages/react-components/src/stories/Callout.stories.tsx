@@ -25,6 +25,10 @@ const meta = {
       control: { type: "object" },
       description: "Expects an array of button components",
     },
+    isLeftBorderDisabled: {
+      control: { type: "boolean" },
+      description: "Disables the coloured stroke on a callout",
+    },
     children: {
       control: { type: "object" },
       description:

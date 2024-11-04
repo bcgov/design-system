@@ -52,3 +52,11 @@
   border-left: var(--layout-border-width-large) solid var(--theme-primary-gold);
   border-radius: var(--layout-border-radius-medium);
 }
+
+/* Border disabled */
+.bcds-Callout.lightGrey.noLeftBorder,
+.bcds-Callout.lightGold.noLeftBorder,
+.bcds-Callout.lightBlue.noLeftBorder,
+.bcds-Callout.darkBlue.noLeftBorder {
+  border-left: none;
+}

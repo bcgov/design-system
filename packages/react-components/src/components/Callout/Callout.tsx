@@ -13,6 +13,8 @@ export interface CalloutProps extends React.PropsWithChildren {
   buttons?: React.ReactNode;
   /* ARIA role */
   role?: React.AriaRole | undefined;
+  /* */
+  isLeftBorderDisabled?: boolean;
 }
 
 export default function Callout({
@@ -21,11 +23,18 @@ export default function Callout({
   description,
   buttons,
   role = "note",
+  isLeftBorderDisabled = false,
   children,
   ...props
 }: CalloutProps) {
   return (
-    <div className={`bcds-Callout ${variant}`} {...props} role={role}>
+    <div
+      className={`bcds-Callout ${variant} ${
+        isLeftBorderDisabled ? "noLeftBorder" : ""
+      }`}
+      {...props}
+      role={role}
+    >
       {children ? (
         children
       ) : (
