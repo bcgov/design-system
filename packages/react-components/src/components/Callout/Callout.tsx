@@ -4,7 +4,7 @@ import "./Callout.css";
 
 export interface CalloutProps extends React.PropsWithChildren {
   /* Callout theme */
-  variant?: "lightGrey" | "lightBlue" | "darkBlue" | "lightGold";
+  variant?: "lightGrey" | "lightBlue" | "lightGold" | "Blue" | "Grey" | "Black";
   /* Title */
   title?: string;
   /* Description */
@@ -30,7 +30,7 @@ export default function Callout({
   return (
     <div
       className={`bcds-Callout ${variant} ${
-        isLeftBorderDisabled ? "noLeftBorder" : ""
+        isLeftBorderDisabled ? "noBorder" : ""
       }`}
       {...props}
       role={role}

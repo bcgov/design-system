@@ -9,7 +9,7 @@ const meta = {
   parameters: { layout: "centered" },
   argTypes: {
     variant: {
-      options: ["lightGrey", "lightBlue", "darkBlue", "lightGold"],
+      options: ["lightGrey", "lightBlue", "lightGold", "Blue", "Grey", "Black"],
       control: { type: "radio" },
       description: "Sets the theme of the alert",
     },
@@ -52,10 +52,10 @@ export const CalloutTemplate: Story = {
     description:
       "Use the description slot to provide the main content of the callout.",
     buttons: [
-      <Button variant="secondary" size="small">
+      <Button variant="primary" size="small">
         Button 1
       </Button>,
-      <Button variant="primary" size="small">
+      <Button variant="secondary" size="small">
         Button 2
       </Button>,
     ],
@@ -71,28 +71,10 @@ export const LightBlueTheme: Story = {
     description:
       "Use the description slot to provide the main content of the callout.",
     buttons: [
-      <Button variant="secondary" size="small">
+      <Button variant="primary" size="small">
         Button 1
       </Button>,
-      <Button variant="primary" size="small">
-        Button 2
-      </Button>,
-    ],
-  },
-};
-
-export const DarkBlueTheme: Story = {
-  ...CalloutTemplate,
-  args: {
-    variant: "darkBlue",
-    title: "This callout uses the darkBlue theme",
-    description:
-      "Use the description slot to provide the main content of the callout.",
-    buttons: [
       <Button variant="secondary" size="small">
-        Button 1
-      </Button>,
-      <Button variant="primary" size="small">
         Button 2
       </Button>,
     ],
@@ -107,10 +89,64 @@ export const LightGoldTheme: Story = {
     description:
       "Use the description slot to provide the main content of the callout.",
     buttons: [
+      <Button variant="primary" size="small">
+        Button 1
+      </Button>,
+      <Button variant="secondary" size="small">
+        Button 2
+      </Button>,
+    ],
+  },
+};
+
+export const BlueTheme: Story = {
+  ...CalloutTemplate,
+  args: {
+    variant: "Blue",
+    title: "This callout uses the darkBlue theme",
+    description:
+      "Use the description slot to provide the main content of the callout.",
+    buttons: [
       <Button variant="secondary" size="small">
         Button 1
       </Button>,
-      <Button variant="primary" size="small">
+      <Button variant="secondary" size="small">
+        Button 2
+      </Button>,
+    ],
+  },
+};
+
+export const GreyTheme: Story = {
+  ...CalloutTemplate,
+  args: {
+    variant: "Grey",
+    title: "This callout uses the Grey theme",
+    description:
+      "Use the description slot to provide the main content of the callout.",
+    buttons: [
+      <Button variant="secondary" size="small">
+        Button 1
+      </Button>,
+      <Button variant="secondary" size="small">
+        Button 2
+      </Button>,
+    ],
+  },
+};
+
+export const BlackTheme: Story = {
+  ...CalloutTemplate,
+  args: {
+    variant: "Black",
+    title: "This callout uses the Black theme",
+    description:
+      "Use the description slot to provide the main content of the callout.",
+    buttons: [
+      <Button variant="secondary" size="small">
+        Button 1
+      </Button>,
+      <Button variant="secondary" size="small">
         Button 2
       </Button>,
     ],
