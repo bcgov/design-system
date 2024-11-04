@@ -57,31 +57,34 @@ export default function AlertBanner({
 }: AlertBannerProps) {
   return (
     <div className={`bcds-Alert-Banner ${variant}`} {...props}>
-      {!isIconHidden && (
-        <div className="bcds-Alert-Banner--Icon">
-          {customIcon ? customIcon : getIcon(variant)}
-          {variant === "beta" && (
-            <div className="bcds-Alert-Banner--betaLabel">{betaLabel}</div>
-          )}
+      <div className="bcds-Alert-Banner--Container">
+        {" "}
+        {!isIconHidden && (
+          <span className="bcds-Alert-Banner--Icon">
+            {customIcon ? customIcon : getIcon(variant)}
+            {variant === "beta" && (
+              <span className="bcds-Alert-Banner--betaLabel">{betaLabel}</span>
+            )}
+          </span>
+        )}
+        <div className="bcds-Alert-Banner--Content" role={role}>
+          {children}
         </div>
-      )}
-      <div className="bcds-Alert-Banner--Container" role={role}>
-        {children}
+        {isCloseable && (
+          <span className="bcds-Alert-Banner--closeIcon">
+            <Button
+              variant="tertiary"
+              isIconButton
+              size="small"
+              aria-label="Close this alert"
+              type="button"
+              onPress={onClose}
+            >
+              <SvgCloseIcon />
+            </Button>
+          </span>
+        )}
       </div>
-      {isCloseable && (
-        <span className="bcds-Alert-Banner--closeIcon">
-          <Button
-            variant="tertiary"
-            isIconButton
-            size="small"
-            aria-label="Close this alert"
-            type="button"
-            onPress={onClose}
-          >
-            <SvgCloseIcon />
-          </Button>
-        </span>
-      )}
     </div>
   );
 }
