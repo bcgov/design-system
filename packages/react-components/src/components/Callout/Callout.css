@@ -24,23 +24,21 @@
 /* Theme - light grey (default) */
 .bcds-Callout.lightGrey {
   background-color: var(--surface-color-background-light-gray);
-  border-left: var(--layout-border-width-large) solid
-    var(--support-border-color-info);
+  border-left: var(--layout-border-width-large) solid var(--theme-primary-blue);
   border-radius: var(--layout-border-radius-medium);
 }
 
 /* Theme - light blue */
 .bcds-Callout.lightBlue {
   background-color: var(--theme-blue-10);
-  border-left: var(--layout-border-width-large) solid
-    var(--support-border-color-info);
+  border-left: var(--layout-border-width-large) solid var(--theme-primary-blue);
   border-radius: var(--layout-border-radius-medium);
 }
 
 /* Theme - light gold */
 .bcds-Callout.lightGold {
   background-color: var(--theme-gold-10);
-  border-left: var(--layout-border-width-large) solid var(--theme-primary-gold);
+  border-left: var(--layout-border-width-large) solid var(--theme-primary-blue);
   border-radius: var(--layout-border-radius-medium);
 }
 
@@ -62,7 +60,7 @@
 /* Theme - grey */
 .bcds-Callout.Grey {
   background-color: var(--theme-gray-80);
-  border-left: var(--layout-border-width-large) solid var(--theme-blue-80);
+  border-left: var(--layout-border-width-large) solid var(--theme-primary-gold);
   border-radius: var(--layout-border-radius-medium);
 }
 
@@ -77,7 +75,7 @@
 /* Theme - black */
 .bcds-Callout.Black {
   background-color: var(--theme-gray-100);
-  border-left: var(--layout-border-width-large) solid var(--theme-blue-80);
+  border-left: var(--layout-border-width-large) solid var(--theme-primary-gold);
   border-radius: var(--layout-border-radius-medium);
 }
 
