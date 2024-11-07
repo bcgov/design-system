@@ -56,6 +56,10 @@ The default callout layout has three content slots, populated via prop:
 - `description`: the central content area
 - `buttons`: a [ButtonGroup](/docs/components-button-buttongroup--docs), that expects an array of [button](/docs/components-button-button--docs) components
 
+All of these slots are optional, and are only rendered when passed:
+
+<Canvas of={CalloutStories.TextOnlyCallout} />
+
 Alternatively, you can pass your own content and components to the `children` slot to override the default layout:
 
 <Canvas of={CalloutStories.CustomCallout} />
