@@ -57,7 +57,7 @@ function App() {
 
   return (
     <>
-      <AlertBanner variant="beta" isCloseable={false}>
+      <AlertBanner variant="beta">
         This product is currently in beta
       </AlertBanner>
       <Header title="B.C. Design System Kitchen Sink" />
