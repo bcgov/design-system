@@ -6,7 +6,9 @@ import {
 import "./AccordionGroup.css";
 
 export interface AccordionGroupProps extends DisclosureGroupProps {
+  /* Sets label displayed above accordion group */
   title?: string;
+  /* Sets element type for accordion group title. If not set, defaults to <span> */
   titleElement?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 
