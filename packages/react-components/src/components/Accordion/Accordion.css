@@ -61,15 +61,3 @@
   color: var(--typography-color-disabled);
   cursor: not-allowed;
 }
-
-/* Dark theme */
-
-.bcds-react-aria-Disclosure.dark {
-  border: var(--layout-border-width-small) solid
-    var(--surface-color-background-dark-blue);
-}
-
-.bcds-react-aria-Disclosure.dark > .bcds-react-aria-Disclosure--Button {
-  background-color: var(--surface-color-primary-default);
-  color: var(--typography-color-primary-invert);
-}
