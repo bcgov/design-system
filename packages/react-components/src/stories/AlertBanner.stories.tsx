@@ -10,7 +10,7 @@ const meta = {
   component: AlertBanner,
   argTypes: {
     variant: {
-      options: ["info", "success", "warning", "danger", "black", "beta"],
+      options: ["info", "success", "warning", "danger", "black"],
       control: { type: "radio" },
       description: "Sets the theme and icon for the alert",
     },
@@ -37,10 +37,6 @@ const meta = {
     onClose: {
       control: { type: "object" },
       description: "Function for the close button",
-    },
-    betaLabel: {
-      control: { type: "text" },
-      description: "Overrides icon label (only displayed on `beta` variant)",
     },
   },
 } satisfies Meta<typeof AlertBanner>;
@@ -89,15 +85,6 @@ export const DarkBanner: Story = {
   args: {
     variant: "black",
     children: ["This banner uses the 'black' theme"],
-  },
-};
-
-export const BetaBanner: Story = {
-  ...AlertBannerTemplate,
-  args: {
-    variant: "beta",
-    children:
-      "This banner uses the 'beta' theme, intended for use when a product is under development",
   },
 };
 

@@ -86,27 +86,3 @@
 .bcds-Alert-Banner.black {
   background-color: var(--theme-gray-110);
 }
-
-/* Beta theme */
-.bcds-Alert-Banner.beta {
-  background-color: var(--theme-blue-80);
-}
-
-.bcds-Alert-Banner.beta .bcds-Alert-Banner--Icon {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--layout-margin-small);
-  color: var(--icons-color-primary-invert);
-}
-
-.bcds-Alert-Banner.beta .bcds-Alert-Banner--betaLabel {
-  font: var(--typography-bold-small-body);
-  color: var(--typography-color-secondary);
-  text-transform: uppercase;
-  background-color: var(--surface-color-background-white);
-  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
-  border: var(--layout-border-width-small) solid
-    var(--support-border-color-info);
-  border-radius: var(--layout-border-radius-small);
-}

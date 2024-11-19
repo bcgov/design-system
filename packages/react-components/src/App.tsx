@@ -4,7 +4,7 @@ import "./App.css";
 import * as tokens from "@bcgov/design-tokens/js";
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
-import { AlertBanner, Button, Footer, FooterLinks, Header } from "@/components";
+import { Button, Footer, FooterLinks, Header } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
   AlertBannerPage,
@@ -57,9 +57,6 @@ function App() {
 
   return (
     <>
-      <AlertBanner variant="beta">
-        This product is currently in beta
-      </AlertBanner>
       <Header title="B.C. Design System Kitchen Sink" />
       <Header
         logoLinkElement={

@@ -1,6 +1,5 @@
 import "./AlertBanner.css";
 import Button from "../Button";
-import SvgBetaIcon from "../Icons/SvgBetaIcon";
 import SvgCheckCircleIcon from "../Icons/SvgCheckCircleIcon";
 import SvgCloseIcon from "../Icons/SvgCloseIcon";
 import SvgExclamationCircleIcon from "../Icons/SvgExclamationCircleIcon";
@@ -9,7 +8,7 @@ import SvgInfoIcon from "../Icons/SvgInfoIcon";
 
 export interface AlertBannerProps extends React.PropsWithChildren {
   /* Sets banner theme */
-  variant?: "info" | "success" | "warning" | "danger" | "black" | "beta";
+  variant?: "info" | "success" | "warning" | "danger" | "black";
   /* Hides icon  */
   isIconHidden?: boolean;
   /* Toggles display of close button */
@@ -20,8 +19,6 @@ export interface AlertBannerProps extends React.PropsWithChildren {
   customIcon?: React.ReactNode;
   /* Controls behaviour of close button */
   onClose?: () => void;
-  /* Label displayed next to icon when using "beta" variant */
-  betaLabel?: string;
 }
 
 /* Sets correct icon for theme */
@@ -37,8 +34,6 @@ function getIcon(variant: string) {
       return <SvgExclamationIcon />;
     case "danger":
       return <SvgExclamationCircleIcon />;
-    case "beta":
-      return <SvgBetaIcon />;
     default:
       return;
   }
@@ -52,7 +47,6 @@ export default function AlertBanner({
   onClose,
   children,
   customIcon,
-  betaLabel = "Beta",
   ...props
 }: AlertBannerProps) {
   return (
@@ -62,9 +56,6 @@ export default function AlertBanner({
         {!isIconHidden && (
           <span className="bcds-Alert-Banner--Icon">
             {customIcon ? customIcon : getIcon(variant)}
-            {variant === "beta" && (
-              <span className="bcds-Alert-Banner--betaLabel">{betaLabel}</span>
-            )}
           </span>
         )}
         <div className="bcds-Alert-Banner--Content" role={role}>
