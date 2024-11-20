@@ -1,3 +1,4 @@
+import AlertBannerPage from "./AlertBanner";
 import ButtonPage from "./Button";
 import ButtonGroupPage from "./ButtonGroup";
 import CalloutPage from "./Callout";
@@ -13,6 +14,7 @@ import SwitchPage from "./Switch";
 import TooltipPage from "./Tooltip";
 
 export {
+  AlertBannerPage,
   ButtonPage,
   ButtonGroupPage,
   CalloutPage,

@@ -7,6 +7,7 @@ import "@bcgov/bc-sans/css/BC_Sans.css";
 import { Button, Footer, FooterLinks, Header } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
+  AlertBannerPage,
   ButtonPage,
   ButtonGroupPage,
   CalloutPage,
@@ -150,6 +151,7 @@ function App() {
         </div>
       </Header>
       <Header />
+      <AlertBannerPage />
       <main>
         <h1>Components</h1>
         <ButtonPage />

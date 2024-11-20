@@ -1,0 +1,88 @@
+.bcds-Alert-Banner {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: var(--layout-padding-none) var(--layout-padding-medium);
+}
+
+.bcds-Alert-Banner--Container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--layout-padding-medium);
+  max-width: 1100px;
+  padding: var(--layout-padding-small) var(--layout-padding-none);
+}
+
+.bcds-Alert-Banner--Icon {
+  align-self: first baseline;
+  justify-self: flex-start;
+  padding-top: var(--layout-padding-xsmall);
+  color: var(--icons-color-primary-invert);
+}
+
+.bcds-Alert-Banner--Content {
+  display: inline-flex;
+  gap: var(--layout-margin-medium);
+  align-items: first baseline;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  font: var(--typography-regular-body);
+  color: var(--typography-color-primary-invert);
+}
+
+.bcds-Alert-Banner--closeIcon {
+  align-self: first baseline;
+}
+
+.bcds-Alert-Banner--closeIcon > .bcds-react-aria-Button[data-hovered] svg {
+  color: var(--icons-color-primary);
+}
+
+.bcds-Alert-Banner--closeIcon svg {
+  color: var(--icons-color-primary-invert);
+}
+
+/* Variants */
+
+/* Info theme */
+.bcds-Alert-Banner.info {
+  background-color: var(--surface-color-background-dark-blue);
+}
+
+/* Success theme */
+.bcds-Alert-Banner.success {
+  background-color: var(--support-border-color-success);
+}
+
+/* Warning theme */
+.bcds-Alert-Banner.warning {
+  background-color: var(--support-border-color-warning);
+}
+
+.bcds-Alert-Banner.warning .bcds-Alert-Banner--Icon {
+  color: var(--icons-color-primary);
+}
+
+.bcds-Alert-Banner.warning .bcds-Alert-Banner--Content {
+  color: var(--typography-color-primary);
+}
+
+.bcds-Alert-Banner.warning .bcds-Alert-Banner--closeIcon svg {
+  color: var(--icons-color-primary);
+}
+
+/* Danger theme */
+.bcds-Alert-Banner.danger {
+  background-color: var(--support-border-color-danger);
+}
+
+/* Black theme */
+
+.bcds-Alert-Banner.black {
+  background-color: var(--theme-gray-110);
+}

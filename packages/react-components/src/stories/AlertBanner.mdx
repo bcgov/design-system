@@ -1,0 +1,89 @@
+{/* AlertBanner.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as AlertBannerStories from "./AlertBanner.stories";
+import { AlertBanner } from "../components";
+
+<Meta title="Components/AlertBanner/AlertBanner" />
+
+# Alert Banner
+
+<Subtitle>
+  An alert banner displays an important message about your product or service.
+  It is intended to be placed at the top of the screen, either above or
+  immediately below the header or navbar.
+</Subtitle>
+
+<Source
+  code={`import { AlertBanner } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Learn more about working with the alert banner component:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=8B5DA0E964484966B90D30960AEED39C)
+- [View the button component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+## Controls
+
+<Primary of={AlertBannerStories} />
+<Controls of={AlertBannerStories.AlertBannerTemplate} />
+
+## Configuration
+
+### Variants
+
+The alert banner ships with a set of themes designed for different use-cases, configured via the `variant` prop. Each theme applies a preset colourway and icon. If no `variant` prop is passed, the banner defaults to `info`:
+
+<Canvas of={AlertBannerStories.AlertBannerTemplate} />
+<Canvas of={AlertBannerStories.SuccessBanner} />
+<Canvas of={AlertBannerStories.WarningBanner} />
+<Canvas of={AlertBannerStories.DangerBanner} />
+<Canvas of={AlertBannerStories.DarkBanner} />
+
+**Note**: if you need to modify the styling of an alert banner's content, you can write additional rules for the `.bcds-Alert-Banner--Container` CSS class.
+
+### Alert content
+
+Pass content to the `children` slot to populate an alert banner.
+
+You can also pass in additional components if needed. For example, you can add a call to action button:
+
+<Canvas of={AlertBannerStories.BannerWithButton} />
+
+### Closing an alert banner
+
+By default, an alert banner displays a 'close' button. Use the `onClose` prop to pass a callback function that is called when the close button is pressed. Use `onClose` to configure the close/hide behaviour with your app's state management library.
+
+You can disable the close button by setting the `isCloseable` prop to `false`:
+
+<Canvas of={AlertBannerStories.UncloseableBanner} />
+
+### Icons
+
+Pass a component to the `customIcon` slot to override the predefined icon:
+
+<Canvas of={AlertBannerStories.BannerWithCustomIcon} />
+
+Use the `isIconHidden` prop to hide the theme icon entirely:
+
+<Canvas of={AlertBannerStories.BannerWithoutIcon} />
+
+### ARIA roles
+
+By default, an alert banner renders with the [ARIA "status" role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/status_role).
+
+Use the `role` prop to set a different role. You can pass [any valid ARIA role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles), but we recommend using either "status" or "[alert](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)".
+
+**Note**: the "alert" role should be used with caution, and only when the alert requires the user's immediate attention.

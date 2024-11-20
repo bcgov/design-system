@@ -1,5 +1,6 @@
 import "@bcgov/design-tokens/css/variables.css";
 
+export { default as AlertBanner } from "./AlertBanner";
 export { default as AlertDialog } from "./AlertDialog";
 export { default as Button } from "./Button";
 export { default as ButtonGroup } from "./ButtonGroup";
@@ -16,6 +17,8 @@ export { default as Radio } from "./Radio";
 export { default as RadioGroup } from "./RadioGroup";
 export { default as Select } from "./Select";
 export { default as SvgBcLogo } from "./Icons/SvgBcLogo";
+export { default as SvgBcOutlineIcon } from "./Icons/SvgBcOutlineIcon";
+export { default as SvgBetaIcon } from "./Icons/SvgBetaIcon";
 export { default as SvgCheckIcon } from "./Icons/SvgCheckIcon";
 export { default as SvgCheckCircleIcon } from "./Icons/SvgCheckCircleIcon";
 export { default as SvgDashIcon } from "./Icons/SvgDashIcon";

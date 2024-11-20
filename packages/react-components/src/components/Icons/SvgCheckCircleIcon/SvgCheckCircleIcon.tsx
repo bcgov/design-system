@@ -1,3 +1,4 @@
+/* The component implements the Circle Check icon from Font Awesome: https://fontawesome.com/icons/circle-check */
 export default function SvgCheckCircleIcon({ id = "check-icon" }) {
   return (
     <svg
