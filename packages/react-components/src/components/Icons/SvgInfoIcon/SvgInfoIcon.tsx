@@ -1,3 +1,4 @@
+/* The component implements the Circle Info icon from Font Awesome: https://fontawesome.com/icons/circle-info */
 export default function SvgInfoIcon({ id = "information-icon" }) {
   return (
     <svg

@@ -8,8 +8,10 @@ import { Button, Footer, FooterLinks, Header } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
   AccordionGroupPage,
+  AlertBannerPage,
   ButtonPage,
   ButtonGroupPage,
+  CalloutPage,
   CheckboxGroupPage,
   InlineAlertPage,
   ModalDialogPage,
@@ -150,11 +152,13 @@ function App() {
         </div>
       </Header>
       <Header />
+      <AlertBannerPage />
       <main>
         <h1>Components</h1>
         <ButtonPage />
         <ButtonGroupPage />
         <AccordionGroupPage />
+        <CalloutPage />
         <CheckboxGroupPage />
         <SwitchPage />
         <InlineAlertPage />

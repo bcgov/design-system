@@ -1,6 +1,8 @@
 import AccordionGroupPage from "./AccordionGroup";
+import AlertBannerPage from "./AlertBanner";
 import ButtonPage from "./Button";
 import ButtonGroupPage from "./ButtonGroup";
+import CalloutPage from "./Callout";
 import CheckboxGroupPage from "./CheckboxGroup";
 import InlineAlertPage from "./InlineAlert";
 import ModalDialogPage from "./ModalDialog";
@@ -14,8 +16,10 @@ import TooltipPage from "./Tooltip";
 
 export {
   AccordionGroupPage,
+  AlertBannerPage,
   ButtonPage,
   ButtonGroupPage,
+  CalloutPage,
   CheckboxGroupPage,
   InlineAlertPage,
   ModalDialogPage,
