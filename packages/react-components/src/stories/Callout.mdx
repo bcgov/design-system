@@ -1,0 +1,73 @@
+{/* Callout.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as CalloutStories from "./Callout.stories";
+
+<Meta of={CalloutStories} />
+
+# Callout
+
+<Subtitle></Subtitle>
+
+<Source
+  code={`import { Callout } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Learn more about working with the callout component:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=84AA0EAD468F41149F125E63F91A402F)
+- [View the inline alert component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+## Controls
+
+<Primary of={CalloutStories} />
+<Controls of={CalloutStories.CalloutTemplate} />
+
+## Configuration
+
+### Variants
+
+The callout component ships with a set of predefined colourways, set via the `variant` prop. If no `variant` is passed, it defaults to `lightGrey`:
+
+<Canvas of={CalloutStories.CalloutTemplate} />
+<Canvas of={CalloutStories.LightBlueTheme} />
+<Canvas of={CalloutStories.LightGoldTheme} />
+<Canvas of={CalloutStories.BlueTheme} />
+<Canvas of={CalloutStories.GreyTheme} />
+<Canvas of={CalloutStories.BlackTheme} />
+
+### Callout content
+
+The default callout layout has three content slots, populated via prop:
+
+- `title`: a bolded title field
+- `description`: the central content area
+- `buttons`: a [ButtonGroup](/docs/components-button-buttongroup--docs), that expects an array of [button](/docs/components-button-button--docs) components
+
+All of these slots are optional, and are only rendered when passed:
+
+<Canvas of={CalloutStories.TextOnlyCallout} />
+
+Alternatively, you can pass your own content and components to the `children` slot to override the default layout:
+
+<Canvas of={CalloutStories.CustomCallout} />
+
+**Note**: to modify the styling of content in the `children` slot, you can write additional rules for the `.bcds-Callout--Container` CSS class.
+
+### ARIA roles
+
+By default, a callout renders with the [ARIA "note" role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/note_role).
+
+Use the `role` prop to set a different role. You can pass [any valid ARIA role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles), but we recommend using either "note" or "[complementary](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role)".
