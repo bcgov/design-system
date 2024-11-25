@@ -1,7 +1,4 @@
-import {
-  UNSTABLE_DisclosureGroup as DisclosureGroup,
-  DisclosureGroupProps,
-} from "react-aria-components";
+import { DisclosureGroup, DisclosureGroupProps } from "react-aria-components";
 
 import "./AccordionGroup.css";
 

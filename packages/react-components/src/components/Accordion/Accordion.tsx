@@ -1,6 +1,6 @@
 import {
-  UNSTABLE_Disclosure as Disclosure,
-  UNSTABLE_DisclosurePanel as DisclosurePanel,
+  Disclosure,
+  DisclosurePanel,
   DisclosureProps as DisclosureProps,
 } from "react-aria-components";
 
