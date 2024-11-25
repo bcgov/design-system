@@ -1,3 +1,4 @@
+import AccordionGroupPage from "./AccordionGroup";
 import AlertBannerPage from "./AlertBanner";
 import ButtonPage from "./Button";
 import ButtonGroupPage from "./ButtonGroup";
@@ -14,6 +15,7 @@ import SwitchPage from "./Switch";
 import TooltipPage from "./Tooltip";
 
 export {
+  AccordionGroupPage,
   AlertBannerPage,
   ButtonPage,
   ButtonGroupPage,
