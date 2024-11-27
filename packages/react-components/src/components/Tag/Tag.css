@@ -1,13 +1,10 @@
 .bcds-react-aria-Tag {
   color: var(--typography-color-primary);
   cursor: pointer;
-  border-radius: var(--layout-margin-hair);
   border: var(--layout-border-width-small) solid;
   display: flex;
   align-items: center;
-  gap: var(--layout-margin-small);
   font: var(--typography-regular-label);
-  padding: var(--layout-padding-hair) var(--layout-padding-small);
   width: fit-content;
 }
 .bcds-react-aria-Tag .react-aria-Button {
@@ -61,6 +58,26 @@
 .bcds-react-aria-Tag.yellow {
   background-color: var(--support-surface-color-warning);
   border-color: var(--support-border-color-warning);
+}
+
+/* Tag style */
+.bcds-react-aria-Tag.rectangular {
+  border-radius: var(--layout-border-radius-small);
+}
+.bcds-react-aria-Tag.circular {
+  border-radius: var(--layout-borderRadius-Circular, 9999px);
+}
+
+/* Tag size */
+.bcds-react-aria-Tag.medium {
+  height: var(--layout-padding-xlarge);
+  padding: var(--layout-padding-hair) var(--layout-padding-medium);
+  gap: var(--layout-margin-medium);
+}
+.bcds-react-aria-Tag.small {
+  height: var(--layout-padding-large);
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
+  gap: var(--layout-margin-small);
 }
 
 /* Selected */
