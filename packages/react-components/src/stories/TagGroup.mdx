@@ -53,6 +53,24 @@ A TagGroup should have either a `label` (rendered on top of the `TagList`) or an
 
 <Canvas of={TagGroupStories.MultipleTags} />
 
+### Styled tags
+
+The `Tag` component can be passed a `style` prop with one of the following values:
+
+- `rectangular`
+- `circular`
+
+If no value is passed, the tag style defaults to `rectangular`.
+
+The `Tag` component can be passed a `size` prop with one of the following values:
+
+- `small`
+- `medium`
+
+If no value is passed, the tag size defaults to `small`.
+
+<Canvas of={TagGroupStories.MultipleTagsInEachStyle} />
+
 ### Coloured tags
 
 The `Tag` component can be passed a `color` prop with one of the following values:
@@ -69,7 +87,9 @@ The `Tag` component can be passed a `color` prop with one of the following value
 If no value is passed, the tag colour defaults to `blue`.
 
 <Canvas of={TagGroupStories.MultipleTagsInEachColor} />
+<Canvas of={TagGroupStories.MultipleCircularTagsInEachColor} />
 <Canvas of={TagGroupStories.ColorsRemovable} />
+<Canvas of={TagGroupStories.CircularColorsRemovable} />
 
 ### Tags with icons
 
