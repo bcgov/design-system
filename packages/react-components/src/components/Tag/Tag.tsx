@@ -26,9 +26,9 @@ export interface TagProps extends ReactAriaTagProps {
     | "red"
     | "yellow";
   /**
-   * Style
+   * tagStyle
    */
-  style?: "rectangular" | "circular";
+  tagStyle?: "rectangular" | "circular";
   /**
    * size
    */
@@ -37,7 +37,7 @@ export interface TagProps extends ReactAriaTagProps {
 
 export default function Tag({
   color = "blue",
-  style = "rectangular",
+  tagStyle = "rectangular",
   size = "small",
   icon,
   id,
@@ -45,7 +45,7 @@ export default function Tag({
 }: TagProps) {
   return (
     <ReactAriaTag
-      className={`bcds-react-aria-Tag ${color} ${style} ${size}`}
+      className={`bcds-react-aria-Tag ${color} ${tagStyle} ${size}`}
       id={id}
       textValue={textValue}
     >
