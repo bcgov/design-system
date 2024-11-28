@@ -162,8 +162,113 @@ export const MultipleTagsInEachColor: Story = {
   },
 };
 
+export const MultipleCircularTagsInEachColor: Story = {
+  render: (args) => {
+    return (
+      <TagGroup label="Colored circular tags" {...args}>
+        <TagList
+          items={[
+            {
+              id: "bc-blue-circular-tag",
+              color: "bc-blue",
+              tagStyle: "circular",
+              textValue: "BC Blue tag",
+            },
+            {
+              id: "bc-gold-circular-tag",
+              color: "bc-gold",
+              tagStyle: "circular",
+              textValue: "BC Gold tag",
+            },
+            {
+              id: "dark-circular-tag",
+              color: "dark",
+              tagStyle: "circular",
+              textValue: "Dark tag",
+            },
+            {
+              id: "blue-circular-tag",
+              color: "blue",
+              tagStyle: "circular",
+              textValue: "Blue tag",
+            },
+            {
+              id: "green-circular-tag",
+              color: "green",
+              tagStyle: "circular",
+              textValue: "Green tag",
+            },
+            {
+              id: "yellow-circular-tag",
+              color: "yellow",
+              tagStyle: "circular",
+              textValue: "Yellow tag",
+            },
+            {
+              id: "red-circular-tag",
+              color: "red",
+              tagStyle: "circular",
+              textValue: "Red tag",
+            },
+            {
+              id: "grey-circular-tag",
+              color: "grey",
+              tagStyle: "circular",
+              textValue: "Grey tag",
+            },
+          ]}
+        />
+      </TagGroup>
+    );
+  },
+};
+
+export const MultipleTagsInEachStyle: Story = {
+  render: (args) => {
+    return (
+      <TagGroup label="Styled tags" {...args}>
+        <TagList
+          items={[
+            {
+              id: "rectagular-small-tag",
+              tagStyle: "rectangular",
+              size: "small",
+              textValue: "Rectangular small tag",
+            },
+            {
+              id: "rectagular-medium-tag",
+              tagStyle: "rectangular",
+              size: "medium",
+              textValue: "Rectangular medium tag",
+            },
+            {
+              id: "circular-small-tag",
+              tagStyle: "circular",
+              size: "small",
+              textValue: "Circular small tag",
+            },
+            {
+              id: "circular-medium-tag",
+              tagStyle: "circular",
+              size: "medium",
+              textValue: "Circular medium tag",
+            },
+          ]}
+        />
+      </TagGroup>
+    );
+  },
+};
+
 export const ColorsRemovable: Story = {
   ...MultipleTagsInEachColor,
+  args: {
+    onRemove: () => alert("onRemove()"),
+  },
+};
+
+export const CircularColorsRemovable: Story = {
+  ...MultipleCircularTagsInEachColor,
   args: {
     onRemove: () => alert("onRemove()"),
   },

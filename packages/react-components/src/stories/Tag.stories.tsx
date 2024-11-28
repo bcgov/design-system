@@ -23,6 +23,8 @@ export const SingleTag: Story = {
   args: {
     id: "single-tag",
     color: "blue",
+    tagStyle: "rectangular",
+    size: "small",
     textValue: "Single tag",
   },
   render: (args: TagProps) => (
