@@ -1,0 +1,110 @@
+{/* AccordionGroup.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as AccordionStories from "./Accordion.stories";
+import * as AccordionGroupStories from "./AccordionGroup.stories";
+import { AccordionGroup } from "@/components";
+
+<Meta title="Components/AccordionGroup" />
+
+# Accordions
+
+<Subtitle>
+  An Accordion renders content inside a collapsible container. An AccordionGroup
+  wraps multiple accordion items into a group.
+</Subtitle>
+
+<Source
+  code={`import { Accordion, AccordionGroup } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Learn more about working with the Accordion and AccordionGroup components:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=4E7662C2E0B245AA961329B0C9BA4DAC)
+- [View the select component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+This component is based on the React Aria [Disclosure](https://react-spectrum.adobe.com/react-aria/Disclosure.html) and [DisclosureGroup](https://react-spectrum.adobe.com/react-aria/DisclosureGroup.html) components. Consult the React Aria documentation for additional technical information.
+
+### Anatomy
+
+An Accordion can be used singularly, or wrapped inside an AccordionGroup.
+
+AccordionGroup expects some number of Accordions, passed as children:
+
+```javascript
+<AccordionGroup>
+  <Accordion>Some content</Accordion>
+  <Accordion />
+  <Accordion />
+</AccordionGroup>
+```
+
+## Controls
+
+### Accordion
+
+<Canvas of={AccordionStories.AccordionTemplate} />
+<Controls of={AccordionStories.AccordionTemplate} />
+
+### AccordionGroup
+
+<Canvas of={AccordionGroupStories.AccordionGroupTemplate} />
+<Controls of={AccordionGroupStories.AccordionGroupTemplate} />
+
+## Configuration
+
+### Populating content in an accordion
+
+Set the title for an accordion item using the `label` prop. Use the `id` prop to set a unique identifier for an accordion.
+
+Populate an accordion's content using the `children` slot. Content in the `children` slot is rendered inside a container with the `bcds-react-aria-Disclosure--Panel` CSS class.
+
+### Creating an accordion group
+
+Pass accordion components to the `children` slot of an accordion group.
+
+Set a title for the group using the `title` prop. By default, the title renders in a `<span>`:
+
+<Canvas of={AccordionGroupStories.AccordionGroupWithDefaultTitle} />
+
+Use `titleElement` to set an alternative heading style (accepts `"h1"` to `"h6"`):
+
+<Canvas of={AccordionGroupStories.AccordionGroupWithHeading} />
+
+### Single or multiple expansion
+
+By default, an accordion group allows only one item to be opened at a time. When the user opens a second item, the first is automatically closed.
+
+Pass `allowsMultipleExpanded` to allow multiple accordions to be opened simultaneously:
+
+<Canvas of={AccordionGroupStories.MultipleOpenAccordion} />
+
+### Expanding items by default
+
+If an accordion group is uncontrolled, use the `defaultExpandedKeys` prop (expects an array of accordion `id` values) to make individual items open by default:
+
+<Canvas of={AccordionGroupStories.UncontrolledDefaultExpanded} />
+
+If an accordion group's state is controlled, use the `expandedKeys` prop instead.
+
+### Disabled items
+
+Pass `isDisabled` to an Accordion to disable an individual item:
+
+<Canvas of={AccordionGroupStories.AccordionGroupWithDisabledItem} />
+
+Pass `isDisabled` to an AccordionGroup to disable the entire group:
+
+<Canvas of={AccordionGroupStories.DisabledAccordionGroup} />
