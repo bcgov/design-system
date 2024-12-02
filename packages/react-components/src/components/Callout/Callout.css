@@ -1,6 +1,7 @@
 .bcds-Callout {
   display: flex;
   width: 100%;
+  box-sizing: border-box;
   padding: var(--layout-padding-medium) var(--layout-padding-large);
 }
 
@@ -25,7 +26,9 @@
 .bcds-Callout.lightGrey {
   background-color: var(--surface-color-background-light-gray);
   border-left: var(--layout-border-width-large) solid var(--theme-primary-blue);
-  border-radius: var(--layout-border-radius-medium);
+  border-radius: var(--layout-border-radius-medium)
+    var(--layout-border-radius-none) var(--layout-border-radius-none)
+    var(--layout-border-radius-medium);
 }
 
 /* Theme - light blue */
