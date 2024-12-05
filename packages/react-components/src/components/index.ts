@@ -13,6 +13,7 @@ export { default as Form } from "./Form";
 export { default as Header } from "./Header";
 export { default as InlineAlert } from "./InlineAlert";
 export { default as Modal } from "./Modal";
+export { default as Popover } from "./Popover";
 export { default as Radio } from "./Radio";
 export { default as RadioGroup } from "./RadioGroup";
 export { default as Select } from "./Select";
