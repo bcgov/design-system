@@ -1,0 +1,12 @@
+.bcds-react-aria-Popover {
+  background-color: var(--surface-color-forms-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  box-shadow: var(--surface-shadow-medium);
+  box-sizing: border-box;
+  padding: var(--layout-padding-small) var(--layout-padding-small);
+  width: var(
+    --trigger-width
+  ); /* Variable provided by Menu component: https://react-spectrum.adobe.com/react-aria/Menu.html#popover-1 */
+}
