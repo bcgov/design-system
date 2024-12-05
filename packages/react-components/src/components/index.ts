@@ -32,6 +32,7 @@ export { default as SvgTooltipArrowUp } from "./Icons/SvgTooltipArrowUp";
 export { default as Tag } from "./Tag";
 export { default as TagGroup } from "./TagGroup";
 export { default as TagList } from "./TagList";
+export { default as Text } from "./Text";
 export { default as TextArea } from "./TextArea";
 export { default as TextField } from "./TextField";
 export { default as Switch } from "./Switch";
