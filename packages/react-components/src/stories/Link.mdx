@@ -48,9 +48,16 @@ If a link has an `href`, it renders as an `<a>` element. Otherwise, it will rend
 
 Consult the React Aria documentation for [more information about events and routing](https://react-spectrum.adobe.com/react-aria/Link.html#events).
 
-### Styling
+## Text links
 
-Link ships with styling based on the [B.C. Design System typescale](https://www2.gov.bc.ca/gov/content?id=72C2CD6E05494C84B9A072DD9C6A5342). Pass a CSS class with the `className` prop to override a link's styles with your own.
+### Overriding link styles
+
+Link ships with styling based on the [B.C. Design System typescale](https://www2.gov.bc.ca/gov/content?id=72C2CD6E05494C84B9A072DD9C6A5342). To override this styling, you can:
+
+- Pass your own CSS class with the `className` prop
+- Pass the `isUnstyled` prop to remove all CSS, allowing a link to inherit its styles from its parent elements
+
+<Canvas of={LinkStories.LinkInHeading} />
 
 ### Size
 
@@ -62,22 +69,32 @@ Use the `size` prop to choose between `small`, `medium` and `large` sizes:
 
 If no `size` prop is passed, it will default to `medium`.
 
-Links will match the correct heading style from the design system typescale if enclosed in an element like `<h2>`:
+### Destructive links
 
-<Canvas of={LinkStories.LinkInHeading} />
+Use the `danger` prop to indicate that a link is destructive:
 
-### Link icons
-
-You can pass SVG graphics into the `children` slot to add icons to a link:
-
-<Canvas of={LinkStories.LinkWithLeftIcon} />
-<Canvas of={LinkStories.LinkWithRightIcon} />
-<Canvas of={LinkStories.IconOnlyLink} />
-
-**Note**: when using an icon-only link, you must also pass an accessible label for assistive technologies using the `ariaLabel` prop.
+<Canvas of={LinkStories.DangerLink} />
 
 ### Disabled links
 
 Pass `isDisabled` to disable a link. A disabled link cannot be focused or interacted with:
 
 <Canvas of={LinkStories.DisabledLink} />
+
+## Button links
+
+Use the `isButton` prop to create a link that looks and behaves like the [Button](/docs/components-button-button--docs) component.
+
+The `buttonVariant` prop to choose between the `primary`, `secondary` and `tertiary` button styles:
+
+<Canvas of={LinkStories.PrimaryLinkButton} />
+<Canvas of={LinkStories.SecondaryLinkButton} />
+<Canvas of={LinkStories.TertiaryLinkButton} />
+
+If no `buttonVariant` prop is passed, it will default to `primary`. If `isButton` isn't set, `buttonVariant` won't do anything.
+
+You can use the `isDisabled`, `danger` and `size` props as normal:
+
+<Canvas of={LinkStories.DisabledLinkButton} />
+<Canvas of={LinkStories.DangerLinkButton} />
+<Canvas of={LinkStories.SmallLinkButton} />

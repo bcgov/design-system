@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import * as tokens from "@bcgov/design-tokens/js";
 
-import { Link, SvgInfoIcon } from "../components";
+import { Link } from "../components";
 import { LinkProps } from "@/components/Link";
 
 const meta = {
@@ -13,15 +13,6 @@ const meta = {
       control: { type: "object" },
       description: "Populates link text",
     },
-    size: {
-      options: ["small", "medium", "large"],
-      control: { type: "radio" },
-      description: "Sets text size",
-    },
-    isDisabled: {
-      control: { type: "boolean" },
-      description: "Whether a link is enabled or disabled",
-    },
     href: {
       control: { type: "text" },
       description: "Destination URL",
@@ -29,6 +20,35 @@ const meta = {
     onPress: {
       control: { type: "object" },
       description: "Callback function run on press. Use instead of `href`",
+    },
+    size: {
+      options: ["small", "medium", "large"],
+      control: { type: "radio" },
+      description: "Sets text size",
+    },
+    isButton: {
+      control: { type: "boolean" },
+      description: "Applies button styling",
+    },
+    buttonVariant: {
+      options: ["primary", "secondary", "tertiary"],
+      control: { type: "radio" },
+      description:
+        "Selects which button style is used. Requires `isButton` to be `true`",
+    },
+    isDisabled: {
+      control: { type: "boolean" },
+      description: "Whether a link is enabled or disabled",
+    },
+    isUnstyled: {
+      control: { type: "boolean" },
+      description:
+        "Overrides all styling, allowing link to inherit styling from its parent",
+    },
+    ariaLabel: {
+      control: { type: "text" },
+      description:
+        "Sets aria-label attribute, use if not providing a visible text label",
     },
   },
 } satisfies Meta<typeof Link>;
@@ -73,6 +93,15 @@ export const LargeLink: Story = {
   },
 };
 
+export const DangerLink: Story = {
+  ...LinkTemplate,
+  args: {
+    danger: true,
+    children: ["This link is destructive"],
+    onPress: () => alert("onPress()"),
+  },
+};
+
 export const DisabledLink: Story = {
   ...LinkTemplate,
   args: {
@@ -82,38 +111,72 @@ export const DisabledLink: Story = {
   },
 };
 
-export const LinkWithLeftIcon: Story = {
-  ...LinkTemplate,
-  args: {
-    size: "small",
-    children: [<SvgInfoIcon />, "This link has an icon"],
-    onPress: () => alert("onPress()"),
-  },
-};
-
-export const LinkWithRightIcon: Story = {
-  ...LinkTemplate,
-  args: {
-    size: "small",
-    children: ["This link has an icon", <SvgInfoIcon />],
-    onPress: () => alert("onPress()"),
-  },
-};
-
-export const IconOnlyLink: Story = {
-  ...LinkTemplate,
-  args: {
-    children: [<SvgInfoIcon />],
-    ariaLabel: "Information",
-    onPress: () => alert("onPress()"),
-  },
-};
-
 export const LinkInHeading: Story = {
-  args: { children: ["This link"], onPress: () => alert("onPress()") },
+  args: {
+    children: ["This link"],
+    href: "#",
+    isUnstyled: true,
+  },
   render: ({ ...args }: LinkProps) => (
     <h2 style={{ font: tokens.typographyBoldH2 }}>
       <Link {...args} /> is part of an H2 heading
     </h2>
   ),
+};
+
+export const PrimaryLinkButton: Story = {
+  args: {
+    children: ["This is a link button"],
+    isButton: true,
+    buttonVariant: "primary",
+    onPress: () => alert("onPress()"),
+  },
+};
+
+export const SecondaryLinkButton: Story = {
+  args: {
+    children: ["This is a link button"],
+    isButton: true,
+    buttonVariant: "secondary",
+    onPress: () => alert("onPress()"),
+  },
+};
+
+export const TertiaryLinkButton: Story = {
+  args: {
+    children: ["This is a link button"],
+    isButton: true,
+    buttonVariant: "tertiary",
+    onPress: () => alert("onPress()"),
+  },
+};
+
+export const DisabledLinkButton: Story = {
+  args: {
+    children: ["This link button is disabled"],
+    isButton: true,
+    buttonVariant: "primary",
+    isDisabled: true,
+    onPress: () => alert("onPress()"),
+  },
+};
+
+export const DangerLinkButton: Story = {
+  args: {
+    children: ["This is a destructive link button"],
+    isButton: true,
+    buttonVariant: "primary",
+    danger: true,
+    onPress: () => alert("onPress()"),
+  },
+};
+
+export const SmallLinkButton: Story = {
+  args: {
+    children: ["This is a small link button"],
+    isButton: true,
+    buttonVariant: "primary",
+    size: "small",
+    onPress: () => alert("onPress()"),
+  },
 };
