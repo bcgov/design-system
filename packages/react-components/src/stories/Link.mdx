@@ -1,0 +1,83 @@
+{/* Link.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as LinkStories from "./Link.stories";
+
+<Meta title="Utility/Link" />
+
+# Link
+
+<Subtitle>
+  A link provides a method for the user to navigate to another page, view or
+  resource within your app. They can be used inline within content, or to
+  populate navigation menus.
+</Subtitle>
+
+<Source
+  code={`import { Link } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Link is a utility component for creating accessible and configurable hyperlinks within a user interface.
+
+It is based on [React Aria Link](https://react-spectrum.adobe.com/react-aria/Link.html). Consult the React Aria documentation for additional technical information.
+
+## Controls
+
+<Primary of={LinkStories} />
+<Controls of={LinkStories.LinkTemplate} />
+
+## Configuration
+
+Link text is set via the `children` slot.
+
+You can configure a link's behaviour using the `href` prop to provide a destination URL, or use the `onPress` prop to configure click/press events.
+
+If a link has an `href`, it renders as an `<a>` element. Otherwise, it will render a `<span>` with the ARIA "[link](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/link_role)" role.
+
+Consult the React Aria documentation for [more information about events and routing](https://react-spectrum.adobe.com/react-aria/Link.html#events).
+
+### Styling
+
+Link ships with styling based on the [B.C. Design System typescale](https://www2.gov.bc.ca/gov/content?id=72C2CD6E05494C84B9A072DD9C6A5342). Pass a CSS class with the `className` prop to override a link's styles with your own.
+
+### Size
+
+Use the `size` prop to choose between `small`, `medium` and `large` sizes:
+
+<Canvas of={LinkStories.SmallLink} />
+<Canvas of={LinkStories.MediumLink} />
+<Canvas of={LinkStories.LargeLink} />
+
+If no `size` prop is passed, it will default to `medium`.
+
+Links will match the correct heading style from the design system typescale if enclosed in an element like `<h2>`:
+
+<Canvas of={LinkStories.LinkInHeading} />
+
+### Link icons
+
+You can pass SVG graphics into the `children` slot to add icons to a link:
+
+<Canvas of={LinkStories.LinkWithLeftIcon} />
+<Canvas of={LinkStories.LinkWithRightIcon} />
+<Canvas of={LinkStories.IconOnlyLink} />
+
+**Note**: when using an icon-only link, you must also pass an accessible label for assistive technologies using the `ariaLabel` prop.
+
+### Disabled links
+
+Pass `isDisabled` to disable a link. A disabled link cannot be focused or interacted with:
+
+<Canvas of={LinkStories.DisabledLink} />
