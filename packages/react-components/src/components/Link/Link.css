@@ -1,0 +1,52 @@
+.bcds-react-aria-Link {
+  color: var(--typography-color-link);
+  text-decoration: underline;
+  text-underline-offset: var(--layout-padding-hair);
+  cursor: pointer;
+}
+
+/* Sizing */
+.bcds-react-aria-Link.small {
+  font: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-Link.medium {
+  font: var(--typography-regular-body);
+}
+
+.bcds-react-aria-Link.large {
+  font: var(--typography-regular-large-body);
+}
+
+/* Placeholder large button style */
+.bcds-react-aria-Button.large {
+  min-height: 40px;
+}
+
+/* Hover */
+.bcds-react-aria-Link[data-hovered] {
+  color: var(--surface-color-border-active);
+}
+
+.bcds-react-aria-Link[data-hovered].danger {
+  color: var(--surface-color-primary-danger-button-hover);
+}
+
+/* Focus */
+.bcds-react-aria-Link[data-focus-visible] {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+  border-radius: var(--layout-border-radius-small);
+}
+
+/* Disabled */
+.bcds-react-aria-Link[data-disabled] {
+  color: var(--typography-color-disabled);
+  cursor: not-allowed;
+}
+
+/* Danger */
+.bcds-react-aria-Link.danger {
+  color: var(--typography-color-danger);
+}
