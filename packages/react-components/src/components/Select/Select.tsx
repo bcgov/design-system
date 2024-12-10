@@ -9,7 +9,6 @@ import {
   ListBoxItem,
   ListBoxItemProps as ReactAriaListBoxItemProps,
   ListBoxSection,
-  Popover,
   Select as ReactAriaSelect,
   SelectProps as ReactAriaSelectProps,
   SelectValue,
@@ -17,6 +16,7 @@ import {
   ValidationResult,
 } from "react-aria-components";
 
+import Popover from "../Popover";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 import SvgChevronUpIcon from "../Icons/SvgChevronUpIcon";
 import SvgChevronDownIcon from "../Icons/SvgChevronDownIcon";
@@ -108,7 +108,7 @@ export default function Select<T extends object>({
           <FieldError className="bcds-react-aria-Select--Error">
             {errorMessage}
           </FieldError>
-          <Popover className="bcds-react-aria-Select--Popover" offset={4}>
+          <Popover offset={4}>
             <ListBox
               className="bcds-react-aria-Select--ListBox"
               // This ternary statement is used to mock the data for `sections`
