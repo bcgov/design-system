@@ -19,6 +19,9 @@ export interface LinkProps extends ReactAriaLinkProps {
   danger?: boolean;
   /* Override all styling, let link inherit styles from parent */
   isUnstyled?: boolean;
+  /* Icon slots */
+  iconLeft?: React.ReactElement;
+  iconRight?: React.ReactElement;
 }
 
 export default function Link({
@@ -28,6 +31,8 @@ export default function Link({
   isButton = false,
   buttonVariant = "primary",
   isUnstyled = false,
+  iconLeft,
+  iconRight,
   ariaLabel,
   ...props
 }: LinkProps) {
@@ -45,7 +50,15 @@ export default function Link({
       aria-label={ariaLabel}
       {...props}
     >
-      {children}
+      <>
+        {iconLeft && (
+          <span className="bcds-react-aria-Link--Icon">{iconLeft}</span>
+        )}
+        {children}
+        {iconRight && (
+          <span className="bcds-react-aria-Link--Icon">{iconRight}</span>
+        )}
+      </>
     </ReactAriaLink>
   );
 }

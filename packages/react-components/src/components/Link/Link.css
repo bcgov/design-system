@@ -5,6 +5,14 @@
   cursor: pointer;
 }
 
+/* Icon slots */
+.bcds-react-aria-Link--Icon {
+  display: inline-flex;
+  flex-direction: row;
+  vertical-align: text-bottom;
+  margin: var(--layout-margin-none) var(--layout-margin-xsmall);
+}
+
 /* Sizing */
 .bcds-react-aria-Link.small {
   font: var(--typography-regular-small-body);
@@ -41,7 +49,8 @@
 }
 
 /* Disabled */
-.bcds-react-aria-Link[data-disabled] {
+.bcds-react-aria-Link[data-disabled],
+.bcds-react-aria-Link[data-disabled].danger {
   color: var(--typography-color-disabled);
   cursor: not-allowed;
 }
