@@ -27,12 +27,28 @@ export default function TextPage() {
       </ul>
       <Heading level={4}>Text styling</Heading>
       <Text>
-        The text component also supports standard text styling, like{" "}
-        <b>bolding</b>, <i>italics</i> and{" "}
-        <b>
-          <i>bold italics</i>
-        </b>
-        .
+        The text component also supports standard text styling, like <b>bold</b>{" "}
+        and <i>italic</i>.
+      </Text>
+      <Heading level={4}>Text colour</Heading>
+      <Text>You can modify the colour of text via prop:</Text>
+      <ul>
+        <li>
+          <Text color="primary">Primary (default)</Text>
+        </li>
+        <li>
+          <Text color="secondary">Secondary</Text>
+        </li>
+        <li>
+          <Text color="disabled">Disabled</Text>
+        </li>
+        <li>
+          <Text color="danger">Danger</Text>
+        </li>
+      </ul>
+      <Text>
+        Inverted versions of the primary and secondary colours for use on dark
+        backgrounds are also supported.
       </Text>
     </>
   );

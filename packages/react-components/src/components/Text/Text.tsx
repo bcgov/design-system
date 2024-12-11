@@ -7,11 +7,25 @@ import "./Text.css";
 
 export interface TextProps extends ReactAriaTextProps {
   size?: "small" | "medium" | "large";
+  color?:
+    | "primary"
+    | "primaryInvert"
+    | "secondary"
+    | "secondaryInvert"
+    | "disabled"
+    | "danger";
 }
 
-export default function Text({ size = "medium", ...props }: TextProps) {
+export default function Text({
+  size = "medium",
+  color = "primary",
+  ...props
+}: TextProps) {
   return (
-    <ReactAriaText className={`bcds-react-aria-Text ${size}`} {...props}>
+    <ReactAriaText
+      className={`bcds-react-aria-Text ${size} ${color}`}
+      {...props}
+    >
       {props.children}
     </ReactAriaText>
   );
