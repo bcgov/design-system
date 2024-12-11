@@ -4,7 +4,7 @@ import { Text } from "../components";
 import { TextProps } from "../components/Text";
 
 const meta = {
-  title: "Utility/Text",
+  title: "Utility/Headings and text/Text",
   component: Text,
   parameters: {
     layout: "centered",

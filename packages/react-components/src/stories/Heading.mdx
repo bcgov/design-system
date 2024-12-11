@@ -1,0 +1,24 @@
+{/* Heading.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as HeadingStories from "./Heading.stories";
+
+<Meta of={HeadingStories} />
+
+# Headings
+
+<Subtitle>Utility content for creating section headings</Subtitle>
+
+## Controls
+
+<Canvas of={HeadingStories.HeadingTemplate} />
+<Controls of={HeadingStories.HeadingTemplate} />
