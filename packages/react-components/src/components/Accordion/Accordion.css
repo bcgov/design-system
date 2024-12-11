@@ -1,0 +1,63 @@
+.bcds-react-aria-Disclosure {
+  display: flex;
+  flex-direction: column;
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  overflow: hidden;
+}
+
+.bcds-react-aria-Disclosure--Button {
+  display: inline-flex;
+  flex-direction: row;
+  padding: var(--layout-padding-small) var(--layout-padding-medium);
+  gap: var(--layout-margin-small);
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--surface-color-background-light-gray);
+  border: none;
+  cursor: pointer;
+  font: var(--typography-bold-body);
+  color: var(--typography-color-primary);
+}
+
+/* Hover */
+.bcds-react-aria-Disclosure--Button[data-hovered] {
+  background-color: var(--surface-color-menus-hover);
+}
+
+/* Accordion content */
+.bcds-react-aria-Disclosure[data-expanded]
+  > .bcds-react-aria-Disclosure--Panel {
+  display: flex;
+  align-items: flex-start;
+  padding: var(--layout-padding-medium);
+  gap: var(--layout-margin-small);
+  background-color: var(--surface-color-forms-default);
+  font: var(--typography-regular-body);
+}
+
+/* Focus state */
+.bcds-react-aria-Disclosure[data-focus-visible-within] {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+}
+
+/* Override default focus behaviour for button */
+.bcds-react-aria-Disclosure[data-focus-visible-within]
+  > .bcds-react-aria-Disclosure--Button {
+  outline: none;
+}
+
+.bcds-react-aria-Disclosure--Button[data-focused] {
+  outline: none;
+}
+
+/* Disabled state */
+.bcds-react-aria-Disclosure[data-disabled]
+  > .bcds-react-aria-Disclosure--Button {
+  background-color: var(--surface-color-forms-disabled);
+  color: var(--typography-color-disabled);
+  cursor: not-allowed;
+}
