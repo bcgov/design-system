@@ -3,6 +3,8 @@ import {
   TextProps as ReactAriaTextProps,
 } from "react-aria-components";
 
+import "./Text.css";
+
 export interface TextProps extends ReactAriaTextProps {
   size?: "small" | "medium" | "large";
 }
