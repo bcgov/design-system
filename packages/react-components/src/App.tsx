@@ -156,7 +156,6 @@ function App() {
       <AlertBannerPage />
       <main>
         <h1>Components</h1>
-        <TextPage />
         <ButtonPage />
         <ButtonGroupPage />
         <AccordionGroupPage />
@@ -171,6 +170,7 @@ function App() {
         <TooltipPage />
         <TextAreaPage />
         <TextFieldPage />
+        <TextPage />
       </main>
       <Footer />
       <Footer
