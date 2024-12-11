@@ -13,6 +13,7 @@ export { default as Dialog, DialogTrigger } from "./Dialog";
 export { default as Footer, FooterLinks } from "./Footer";
 export { default as Form } from "./Form";
 export { default as Header } from "./Header";
+export { default as Heading } from "./Heading";
 export { default as InlineAlert } from "./InlineAlert";
 export { default as Modal } from "./Modal";
 export { default as Radio } from "./Radio";

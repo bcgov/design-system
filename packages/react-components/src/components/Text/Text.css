@@ -46,28 +46,3 @@
 .bcds-react-aria-Text.large em {
   font: var(--typography-italic-large-body);
 }
-
-/* Headings */
-h1.bcds-react-aria-Text {
-  font: var(--typography-bold-h1);
-}
-
-h2.bcds-react-aria-Text {
-  font: var(--typography-bold-h2);
-}
-
-h3.bcds-react-aria-Text {
-  font: var(--typography-bold-h3);
-}
-
-h4.bcds-react-aria-Text {
-  font: var(--typography-bold-h4);
-}
-
-h5.bcds-react-aria-Text {
-  font: var(--typography-bold-h5);
-}
-
-h6.bcds-react-aria-Text {
-  font: var(--typography-bold-h6);
-}
