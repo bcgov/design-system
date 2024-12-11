@@ -40,6 +40,11 @@
   color: var(--surface-color-primary-danger-button-hover);
 }
 
+/* Selected */
+.bcds-react-aria-Link[data-current] {
+  color: var(--surface-color-border-active);
+}
+
 /* Focus */
 .bcds-react-aria-Link[data-focus-visible] {
   outline: solid var(--layout-border-width-medium)
