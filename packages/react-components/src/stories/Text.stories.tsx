@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Text } from "../components";
+import { TextProps } from "../components/Text";
 
 const meta = {
   title: "Utility/Text",
@@ -25,5 +26,5 @@ type Story = StoryObj<typeof meta>;
 
 export const TextTemplate: Story = {
   args: { elementType: "span", children: ["This is some text"] },
-  render: ({ ...args }) => <Text {...args} />,
+  render: ({ ...args }: TextProps) => <Text {...args} />,
 };

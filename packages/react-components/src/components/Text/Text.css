@@ -1,21 +1,40 @@
 .bcds-react-aria-Text {
-  font: var(--typography-regular-body);
-}
-
-.bcds-react-aria-Text b,
-.bcds-react-aria-Text strong {
-  font: var(--typography-bold-body);
-}
-
-.bcds-react-aria-Text i,
-.bcds-react-aria-Text em {
-  font: var(--typography-italic-body);
+  color: var(--typography-color-primary);
 }
 
 /* Sizing */
 
+.bcds-react-aria-Text.small {
+  font: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-Text.medium {
+  font: var(--typography-regular-body);
+}
+
 .bcds-react-aria-Text.large {
   font: var(--typography-regular-large-body);
+}
+
+/* Text decoration */
+.bcds-react-aria-Text.small b,
+.bcds-react-aria-Text.small strong {
+  font: var(--typography-bold-small-body);
+}
+
+.bcds-react-aria-Text.small i,
+.bcds-react-aria-Text.small em {
+  font: var(--typography-italic-small-body);
+}
+
+.bcds-react-aria-Text.medium b,
+.bcds-react-aria-Text.medium strong {
+  font: var(--typography-bold-body);
+}
+
+.bcds-react-aria-Text.medium i,
+.bcds-react-aria-Text.medium em {
+  font: var(--typography-italic-body);
 }
 
 .bcds-react-aria-Text.large b,
@@ -28,21 +47,7 @@
   font: var(--typography-italic-large-body);
 }
 
-.bcds-react-aria-Text.small {
-  font: var(--typography-regular-small-body);
-}
-
-.bcds-react-aria-Text.small b,
-.bcds-react-aria-Text.small strong {
-  font: var(--typography-bold-small-body);
-}
-
-.bcds-react-aria-Text.small i,
-.bcds-react-aria-Text.small em {
-  font: var(--typography-italic-small-body);
-}
-
-/* Heading styles */
+/* Headings */
 h1.bcds-react-aria-Text {
   font: var(--typography-bold-h1);
 }
