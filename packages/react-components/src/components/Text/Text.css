@@ -1,0 +1,68 @@
+.bcds-react-aria-Text {
+  font: var(--typography-regular-body);
+}
+
+.bcds-react-aria-Text b,
+.bcds-react-aria-Text strong {
+  font: var(--typography-bold-body);
+}
+
+.bcds-react-aria-Text i,
+.bcds-react-aria-Text em {
+  font: var(--typography-italic-body);
+}
+
+/* Sizing */
+
+.bcds-react-aria-Text.large {
+  font: var(--typography-regular-large-body);
+}
+
+.bcds-react-aria-Text.large b,
+.bcds-react-aria-Text.large strong {
+  font: var(--typography-bold-large-body);
+}
+
+.bcds-react-aria-Text.large i,
+.bcds-react-aria-Text.large em {
+  font: var(--typography-italic-large-body);
+}
+
+.bcds-react-aria-Text.small {
+  font: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-Text.small b,
+.bcds-react-aria-Text.small strong {
+  font: var(--typography-bold-small-body);
+}
+
+.bcds-react-aria-Text.small i,
+.bcds-react-aria-Text.small em {
+  font: var(--typography-italic-small-body);
+}
+
+/* Heading styles */
+h1.bcds-react-aria-Text {
+  font: var(--typography-bold-h1);
+}
+
+h2.bcds-react-aria-Text {
+  font: var(--typography-bold-h2);
+}
+
+h3.bcds-react-aria-Text {
+  font: var(--typography-bold-h3);
+}
+
+h4.bcds-react-aria-Text {
+  font: var(--typography-bold-h4);
+}
+
+h5.bcds-react-aria-Text {
+  font: var(--typography-bold-h5);
+}
+
+h6.bcds-react-aria-Text {
+  font: var(--typography-bold-h6);
+}
