@@ -18,6 +18,7 @@ import {
   RadioGroupPage,
   SelectPage,
   TagGroupPage,
+  TextPage,
   TextAreaPage,
   TextFieldPage,
   SwitchPage,
@@ -155,6 +156,7 @@ function App() {
       <AlertBannerPage />
       <main>
         <h1>Components</h1>
+        <TextPage />
         <ButtonPage />
         <ButtonGroupPage />
         <AccordionGroupPage />
