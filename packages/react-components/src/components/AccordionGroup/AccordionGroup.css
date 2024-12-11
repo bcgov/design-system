@@ -1,0 +1,70 @@
+.bcds-react-aria-DisclosureGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--layout-border-width-small);
+  background-color: var(--surface-color-border-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  overflow: hidden;
+}
+
+/* Override individual accordion item borders */
+.bcds-react-aria-DisclosureGroup > .bcds-react-aria-Disclosure {
+  border: none;
+  border-radius: var(--layout-border-radius-none);
+}
+
+/* Focus state */
+.bcds-react-aria-DisclosureGroup
+  > .bcds-react-aria-Disclosure[data-focus-visible-within] {
+  border-radius: var(--layout-border-radius-hair);
+  outline-offset: calc(var(--layout-margin-hair) * -1);
+}
+
+/* Title styles */
+.bcds-react-aria-DisclosureGroup--Title {
+  color: var(--typography-color-primary);
+  margin: var(--layout-margin-medium) var(--layout-margin-none);
+}
+
+.bcds-react-aria-DisclosureGroup--Title > h1 {
+  font: var(--typography-bold-h1);
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.bcds-react-aria-DisclosureGroup--Title > h2 {
+  font: var(--typography-bold-h2);
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.bcds-react-aria-DisclosureGroup--Title > h3 {
+  font: var(--typography-bold-h3);
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.bcds-react-aria-DisclosureGroup--Title > h4 {
+  font: var(--typography-bold-h4);
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.bcds-react-aria-DisclosureGroup--Title > h5 {
+  font: var(--typography-bold-h5);
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.bcds-react-aria-DisclosureGroup--Title > h6 {
+  font: var(--typography-bold-h6);
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.bcds-react-aria-DisclosureGroup--Title > span {
+  font: var(--typography-bold-large-body);
+}
