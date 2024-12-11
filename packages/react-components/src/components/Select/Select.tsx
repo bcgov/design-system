@@ -8,8 +8,8 @@ import {
   ListBox,
   ListBoxItem,
   ListBoxItemProps as ReactAriaListBoxItemProps,
+  ListBoxSection,
   Popover,
-  Section,
   Select as ReactAriaSelect,
   SelectProps as ReactAriaSelectProps,
   SelectValue,
@@ -124,7 +124,10 @@ export default function Select<T extends object>({
               }
             >
               {(section: SelectionSectionProps) => (
-                <Section id={section.id} className="bcds-react-aria-Section">
+                <ListBoxSection
+                  id={section.id}
+                  className="bcds-react-aria-Section"
+                >
                   {section?.header && (
                     <Header className="bcds-react-aria-Select--Header">
                       {section.header}
@@ -168,7 +171,7 @@ export default function Select<T extends object>({
                       </ListBoxItem>
                     )}
                   </Collection>
-                </Section>
+                </ListBoxSection>
               )}
             </ListBox>
           </Popover>
