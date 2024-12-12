@@ -18,6 +18,7 @@ import {
   RadioGroupPage,
   SelectPage,
   TagGroupPage,
+  TextPage,
   TextAreaPage,
   TextFieldPage,
   SwitchPage,
@@ -169,6 +170,7 @@ function App() {
         <TooltipPage />
         <TextAreaPage />
         <TextFieldPage />
+        <TextPage />
       </main>
       <Footer />
       <Footer

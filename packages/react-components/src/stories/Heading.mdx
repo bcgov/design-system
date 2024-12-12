@@ -1,0 +1,61 @@
+{/* Heading.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as HeadingStories from "./Heading.stories";
+
+<Meta of={HeadingStories} />
+
+# Headings
+
+<Subtitle>Utility content for creating section headings</Subtitle>
+
+<Source
+  code={`import { Heading } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Heading is a utility component that creates a text heading for a section of content. It renders a standard heading element (`<h1>` to `<h6>`), styled to align with the [B.C. Design System typescale](https://www2.gov.bc.ca/gov/content?id=72C2CD6E05494C84B9A072DD9C6A5342).
+
+## Controls
+
+<Canvas of={HeadingStories.HeadingTemplate} />
+<Controls of={HeadingStories.HeadingTemplate} />
+
+## Configuration
+
+Heading text is populated via the `children` slot.
+
+### Styling headings
+
+You can override the default styling of a heading by either:
+
+- Passing a `className` to apply your own CSS class
+- Setting the `isUnstyled` prop to render a heading without any additional CSS, allowing it to inherit its styles from its parent element
+
+<Canvas of={HeadingStories.UnstyledHeading} />
+
+Use the `color` prop to set the text colour, from the options defined in the design system colour palette:
+
+<Canvas of={HeadingStories.PrimaryInvert} />
+
+### Heading level
+
+Use the `level` prop to set the heading level. `level` expects a number from 1 to 6:
+
+<Canvas of={HeadingStories.Heading1} />
+<Canvas of={HeadingStories.Heading2} />
+<Canvas of={HeadingStories.Heading3} />
+<Canvas of={HeadingStories.Heading4} />
+<Canvas of={HeadingStories.Heading5} />
+<Canvas of={HeadingStories.Heading6} />
