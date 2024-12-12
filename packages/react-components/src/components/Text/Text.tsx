@@ -6,7 +6,9 @@ import {
 import "./Text.css";
 
 export interface TextProps extends ReactAriaTextProps {
+  /* Sets text size, defaults to medium */
   size?: "small" | "medium" | "large";
+  /* Sets text color, defaults to primary */
   color?:
     | "primary"
     | "primaryInvert"
@@ -14,6 +16,7 @@ export interface TextProps extends ReactAriaTextProps {
     | "secondaryInvert"
     | "disabled"
     | "danger";
+  /* If true, renders component without CSS class */
   isUnstyled?: boolean;
 }
 
@@ -26,7 +29,7 @@ export default function Text({
   return (
     <ReactAriaText
       className={
-        !isUnstyled ? `bcds-react-aria-Text ${size} ${color}` : undefined
+        isUnstyled ? undefined : `bcds-react-aria-Text ${size} ${color}`
       }
       {...props}
     >

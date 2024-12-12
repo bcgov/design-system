@@ -6,6 +6,7 @@ import {
 import "./Heading.css";
 
 export interface HeadingProps extends ReactAriaHeadingProps {
+  /* If true, renders component without CSS class */
   isUnstyled?: boolean;
 }
 
@@ -15,7 +16,7 @@ export default function Heading({
 }: HeadingProps) {
   return (
     <ReactAriaHeading
-      className={!isUnstyled ? "bcds-react-aria-Heading" : undefined}
+      className={isUnstyled ? undefined : "bcds-react-aria-Heading"}
       {...props}
     />
   );

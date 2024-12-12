@@ -16,6 +16,15 @@ const meta = {
       control: { type: "object" },
       description: "Populates heading text",
     },
+    isUnstyled: {
+      control: { type: "boolean" },
+      description:
+        "Removes CSS class, allowing component to inherit its styles",
+    },
+    className: {
+      control: { type: "text" },
+      description: "Overrides CSS class",
+    },
   },
 } satisfies Meta<typeof Heading>;
 
@@ -25,4 +34,43 @@ type Story = StoryObj<typeof meta>;
 export const HeadingTemplate: Story = {
   args: { level: 1, children: ["This is a heading"] },
   render: ({ ...args }: HeadingProps) => <Heading {...args} />,
+};
+
+export const UnstyledHeading: Story = {
+  ...HeadingTemplate,
+  args: {
+    isUnstyled: true,
+    level: 1,
+    children: ["This heading is unstyled, and can inherit its styling"],
+  },
+};
+
+export const Heading1: Story = {
+  ...HeadingTemplate,
+  args: { level: 1, children: ["Heading 1"] },
+};
+
+export const Heading2: Story = {
+  ...HeadingTemplate,
+  args: { level: 2, children: ["Heading 2"] },
+};
+
+export const Heading3: Story = {
+  ...HeadingTemplate,
+  args: { level: 3, children: ["Heading 3"] },
+};
+
+export const Heading4: Story = {
+  ...HeadingTemplate,
+  args: { level: 4, children: ["Heading 4"] },
+};
+
+export const Heading5: Story = {
+  ...HeadingTemplate,
+  args: { level: 5, children: ["Heading 5"] },
+};
+
+export const Heading6: Story = {
+  ...HeadingTemplate,
+  args: { level: 6, children: ["Heading 6"] },
 };
