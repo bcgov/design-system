@@ -16,6 +16,19 @@ const meta = {
       control: { type: "object" },
       description: "Populates heading text",
     },
+    color: {
+      control: {
+        type: "select",
+        options: [
+          "primary",
+          "primaryInvert",
+          "secondary",
+          "secondaryInvert",
+          "disabled",
+          "danger",
+        ],
+      },
+    },
     isUnstyled: {
       control: { type: "boolean" },
       description:
@@ -34,6 +47,24 @@ type Story = StoryObj<typeof meta>;
 export const HeadingTemplate: Story = {
   args: { level: 1, children: ["This is a heading"] },
   render: ({ ...args }: HeadingProps) => <Heading {...args} />,
+};
+
+export const PrimaryInvert: Story = {
+  args: {
+    level: 2,
+    color: "primaryInvert",
+    children: ["Heading with inverted primary colour"],
+  },
+  render: ({ ...args }: HeadingProps) => (
+    <div
+      style={{
+        backgroundColor: "var(--surface-color-background-dark-blue)",
+        padding: "var(--layout-padding-small) var(--layout-padding-large)",
+      }}
+    >
+      <Heading {...args} />
+    </div>
+  ),
 };
 
 export const UnstyledHeading: Story = {
