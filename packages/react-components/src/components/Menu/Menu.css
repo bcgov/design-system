@@ -1,0 +1,28 @@
+.bcds-react-aria-Menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-small);
+}
+
+.bcds-react-aria-Popover {
+  background-color: var(--surface-color-forms-default);
+  border: 1px solid var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  box-shadow: var(--surface-shadow-medium);
+  box-sizing: border-box;
+  padding: var(--layout-padding-small) var(--layout-padding-small);
+  width: var(
+    --trigger-width
+  ); /* Variable provided by Menu component: https://react-spectrum.adobe.com/react-aria/Menu.html#popover-1 */
+}
+
+/* Sections */
+.bcds-react-aria-Menu .react-aria-Header {
+  font: var(--typography-bold-small-body);
+}
+
+.bcds-react-aria-Menu .react-aria-MenuSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-small);
+}

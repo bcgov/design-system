@@ -14,6 +14,14 @@ export { default as Footer, FooterLinks } from "./Footer";
 export { default as Form } from "./Form";
 export { default as Header } from "./Header";
 export { default as InlineAlert } from "./InlineAlert";
+export {
+  default as Menu,
+  MenuTrigger,
+  SubmenuTrigger,
+  MenuSection,
+  MenuSectionHeader,
+} from "./Menu";
+export { default as MenuItem } from "./MenuItem";
 export { default as Modal } from "./Modal";
 export { default as Popover } from "./Popover";
 export { default as Radio } from "./Radio";
@@ -29,6 +37,7 @@ export { default as SvgExclamationIcon } from "./Icons/SvgExclamationIcon";
 export { default as SvgExclamationCircleIcon } from "./Icons/SvgExclamationCircleIcon";
 export { default as SvgChevronUpIcon } from "./Icons/SvgChevronUpIcon";
 export { default as SvgChevronDownIcon } from "./Icons/SvgChevronDownIcon";
+export { default as SvgChevronRightIcon } from "./Icons/SvgChevronRightIcon";
 export { default as SvgCloseIcon } from "./Icons/SvgCloseIcon";
 export { default as SvgInfoIcon } from "./Icons/SvgInfoIcon";
 export { default as SvgTooltipArrowUp } from "./Icons/SvgTooltipArrowUp";
