@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Heading } from "../components";
-import { HeadingProps } from "react-aria-components";
+import { HeadingProps } from "../components/Heading";
 
 const meta = {
   title: "Utility/Headings and text/Headings",

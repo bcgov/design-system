@@ -14,16 +14,20 @@ export interface TextProps extends ReactAriaTextProps {
     | "secondaryInvert"
     | "disabled"
     | "danger";
+  isUnstyled?: boolean;
 }
 
 export default function Text({
   size = "medium",
   color = "primary",
+  isUnstyled = false,
   ...props
 }: TextProps) {
   return (
     <ReactAriaText
-      className={`bcds-react-aria-Text ${size} ${color}`}
+      className={
+        !isUnstyled ? `bcds-react-aria-Text ${size} ${color}` : undefined
+      }
       {...props}
     >
       {props.children}

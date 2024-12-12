@@ -1,2 +1,2 @@
 export { default } from "./Heading";
-export type { HeadingProps } from "react-aria-components";
+export type { HeadingProps } from "./Heading";
