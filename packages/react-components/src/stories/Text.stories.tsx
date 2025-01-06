@@ -77,6 +77,7 @@ export const DisabledText: Story = {
     color: "disabled",
     children: ["This text uses the 'disabled' colour"],
   },
+  render: ({ ...args }: TextProps) => <Text {...args} aria-disabled="true" />,
 };
 
 export const DangerText: Story = {
