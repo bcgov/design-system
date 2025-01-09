@@ -3,7 +3,7 @@
   gap: var(--layout-margin-xsmall);
   align-items: center;
   background-color: var(--surface-color-secondary-button-disabled);
-  padding: var(--layout-padding-small);
+  padding: var(--layout-padding-xsmall);
   border-radius: var(--layout-border-radius-small);
   box-sizing: content-box;
 }
