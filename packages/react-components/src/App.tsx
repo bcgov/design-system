@@ -22,6 +22,7 @@ import {
   TextFieldPage,
   SwitchPage,
   TooltipPage,
+  ToggleButtonGroupPage,
 } from "@/pages";
 
 // This icon is available as a plain SVG at src/assets/icon-menu.svg
@@ -169,6 +170,7 @@ function App() {
         <TooltipPage />
         <TextAreaPage />
         <TextFieldPage />
+        <ToggleButtonGroupPage />
       </main>
       <Footer />
       <Footer

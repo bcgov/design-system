@@ -1,2 +1,14 @@
 .bcds-react-aria-ToggleButton {
+  font: var(--typography-regular-body);
+  color: var(--typography-color-disabled);
+  border: none;
+  cursor: pointer;
+}
+
+.bcds-react-aria-ToggleButton[data-selected] {
+  background-color: var(--surface-color-secondary-button-default);
+  color: var(--typography-color-primary);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-small);
 }
