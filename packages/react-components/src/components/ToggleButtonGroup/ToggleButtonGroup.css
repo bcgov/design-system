@@ -1,7 +1,25 @@
 .bcds-react-aria-ToggleButtonGroup {
   display: inline-flex;
   gap: var(--layout-margin-small);
+  align-items: center;
   background-color: var(--surface-color-secondary-button-disabled);
   padding: var(--layout-padding-xsmall);
   border-radius: var(--layout-border-radius-small);
+}
+
+/* Orientation */
+.bcds-react-aria-ToggleButtonGroup[data-orientation="horizontal"] {
+  flex-direction: row;
+}
+
+.bcds-react-aria-ToggleButtonGroup[data-orientation="vertical"] {
+  flex-direction: column;
+}
+
+/* Label */
+.bcds-react-aria-ToggleButtonGroup--Label {
+  display: flex;
+  padding: var(--layout-padding-small) var(--layout-padding-none);
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
 }

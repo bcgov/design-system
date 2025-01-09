@@ -1,14 +1,47 @@
 .bcds-react-aria-ToggleButton {
   font: var(--typography-regular-body);
-  color: var(--typography-color-disabled);
+  color: var(--typography-color-secondary);
+  background-color: var(--surface-color-secondary-button-disabled);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-small);
   border: none;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
+/* Active */
 .bcds-react-aria-ToggleButton[data-selected] {
   background-color: var(--surface-color-secondary-button-default);
   color: var(--typography-color-primary);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-small);
+  box-shadow: var(--surface-shadow-small);
+}
+
+/* Hover */
+.bcds-react-aria-ToggleButton[data-hovered] {
+  background-color: var(--surface-color-secondary-button-default);
+  color: var(--typography-color-primary);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-small);
+}
+
+/* Focused */
+.bcds-react-aria-ToggleButton[data-focus-visible] {
+  border-radius: var(--layout-border-radius-small);
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+}
+
+/* Disabled */
+.bcds-react-aria-ToggleButton[data-disabled] {
+  color: var(--typography-color-disabled);
+  cursor: not-allowed;
+}
+
+/* Danger */
+.bcds-react-aria-ToggleButton.danger {
+  color: var(--typography-color-danger);
 }

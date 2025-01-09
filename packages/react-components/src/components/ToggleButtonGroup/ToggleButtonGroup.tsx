@@ -1,20 +1,34 @@
 import {
   ToggleButtonGroup as ReactAriaToggleButtonGroup,
-  ToggleButtonGroupProps,
+  ToggleButtonGroupProps as ReactAriaToggleButtonGroupProps,
+  Text,
 } from "react-aria-components";
 
 import "./ToggleButtonGroup.css";
 
+export interface ToggleButtonGroupProps
+  extends ReactAriaToggleButtonGroupProps {
+  label?: string;
+}
+
 export default function ToggleButtonGroup({
+  label,
   children,
   ...props
 }: ToggleButtonGroupProps) {
   return (
-    <ReactAriaToggleButtonGroup
-      className="bcds-react-aria-ToggleButtonGroup"
-      {...props}
-    >
-      {children}
-    </ReactAriaToggleButtonGroup>
+    <>
+      {label && (
+        <Text className="bcds-react-aria-ToggleButtonGroup--Label">
+          {label}
+        </Text>
+      )}
+      <ReactAriaToggleButtonGroup
+        className="bcds-react-aria-ToggleButtonGroup"
+        {...props}
+      >
+        {children}
+      </ReactAriaToggleButtonGroup>
+    </>
   );
 }
