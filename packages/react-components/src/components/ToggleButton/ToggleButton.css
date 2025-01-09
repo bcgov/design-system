@@ -5,7 +5,7 @@
   padding: var(--layout-padding-xsmall) var(--layout-padding-small);
   border: none;
   cursor: pointer;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 /* Active */
