@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.2.0
+
+### Added
+
+- `bcds-layout-border-radius-circular` is added with value 9999
+
+### Removed
+
+- `bcds-typography-font-weights-italic` is removed as its deprecated
+
 ## 3.1.1
 
 ### Changed
