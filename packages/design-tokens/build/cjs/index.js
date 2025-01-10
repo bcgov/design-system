@@ -102,6 +102,7 @@ module.exports = {
   "layoutBorderRadiusSmall": "2px",
   "layoutBorderRadiusMedium": "4px",
   "layoutBorderRadiusLarge": "6px",
+  "layoutBorderRadiusCircular": "9999px",
   "typographyFontFamiliesBcSans": "'BC Sans'",
   "typographyLineHeightsXxxdense": "1.125rem",
   "typographyLineHeightsXxdense": "1.313rem",
@@ -114,7 +115,6 @@ module.exports = {
   "typographyLineHeightsAuto": "AUTO",
   "typographyFontWeightsRegular": 400,
   "typographyFontWeightsBold": 700,
-  "typographyFontWeightsItalic": "Italic", // DEPRECATED - will be removed in next major version.
   "typographyFontWeightsItalicWeight": 400,
   "typographyFontWeightsItalicStyle": "italic",
   "typographyFontSizeLabel": "0.75rem",
