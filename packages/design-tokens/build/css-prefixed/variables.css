@@ -102,6 +102,7 @@
   --bcds-layout-border-radius-small: 2px;
   --bcds-layout-border-radius-medium: 4px;
   --bcds-layout-border-radius-large: 6px;
+  --bcds-layout-border-radius-circular: 9999px; /* Used for components with a circular radius */
   --bcds-typography-font-families-bc-sans: 'BC Sans'; /* BC Sans font. Requires BC Sans package */
   --bcds-typography-line-heights-xxxdense: 1.125rem; /* Smallest line height */
   --bcds-typography-line-heights-xxdense: 1.313rem;
@@ -114,7 +115,6 @@
   --bcds-typography-line-heights-auto: AUTO; /* System token, used to generate type styles */
   --bcds-typography-font-weights-regular: 400; /* System token, used to generate text styles */
   --bcds-typography-font-weights-bold: 700; /* System token, used to generate text styles */
-  --bcds-typography-font-weights-italic: Italic; /* DEPRECATED - will be removed in next major version. */
   --bcds-typography-font-weights-italic-weight: 400; /* System token, used to generate text styles */
   --bcds-typography-font-weights-italic-style: italic; /* System token, used to generate text styles */
   --bcds-typography-font-size-label: 0.75rem;
