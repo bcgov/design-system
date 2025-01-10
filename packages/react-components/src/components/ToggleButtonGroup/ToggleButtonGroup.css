@@ -4,7 +4,7 @@
   align-items: center;
   background-color: var(--surface-color-secondary-button-disabled);
   padding: var(--layout-padding-xsmall);
-  border-radius: var(--layout-border-radius-small);
+  border-radius: var(--layout-border-radius-medium);
   box-sizing: content-box;
 }
 

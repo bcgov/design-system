@@ -8,6 +8,7 @@
   background-color: var(--surface-color-secondary-button-disabled);
   padding: var(--layout-padding-hair) var(--layout-padding-small);
   border: none;
+  border-radius: var(--layout-border-radius-medium);
   cursor: pointer;
   box-sizing: content-box;
 }
@@ -18,7 +19,7 @@
   color: var(--typography-color-primary);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
-  border-radius: var(--layout-border-radius-small);
+  border-radius: var(--layout-border-radius-medium);
   box-shadow: var(--surface-shadow-small);
 }
 
@@ -28,12 +29,12 @@
   color: var(--typography-color-primary);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
-  border-radius: var(--layout-border-radius-small);
+  border-radius: var(--layout-border-radius-medium);
 }
 
 /* Focused */
 .bcds-react-aria-ToggleButton[data-focus-visible] {
-  border-radius: var(--layout-border-radius-small);
+  border-radius: var(--layout-border-radius-medium);
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
