@@ -6,7 +6,7 @@
   font: var(--typography-regular-body);
   color: var(--typography-color-secondary);
   background-color: var(--surface-color-secondary-button-disabled);
-  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
   border: none;
   cursor: pointer;
   box-sizing: content-box;

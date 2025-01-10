@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ToggleButtonGroup } from "../components";
+import { ToggleButton, ToggleButtonGroup } from "../components";
 import { ToggleButtonGroupProps } from "../components/ToggleButtonGroup";
 
 const meta = {
@@ -10,9 +10,40 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
+    label: {
+      control: { type: "text" },
+      description: "Provides a text label for a button group",
+    },
     children: {
       control: { type: "object" },
-      description: "Expects an array of Toggle Button components",
+      description: "Expects an array of `ToggleButton` components",
+    },
+    selectionMode: {
+      control: { type: "radio" },
+      options: ["single", "multiple"],
+      description:
+        "Sets whether multiple options can be selected at the same time",
+    },
+    disallowEmptySelection: {
+      control: { type: "boolean" },
+      description: "Whether the collection allows empty selection",
+    },
+    selectedKeys: {
+      control: { type: "object" },
+      description: "The currently selected keys in the collection (controlled)",
+    },
+    defaultSelectedKeys: {
+      control: { type: "object" },
+      description: "The initial selected keys in the collection (uncontrolled)",
+    },
+    orientation: {
+      control: { type: "radio" },
+      options: ["horizontal", "vertical"],
+      description: "Sets layout of button group",
+    },
+    isDisabled: {
+      control: { type: "boolean" },
+      description: "Whether all options are disabled",
     },
   },
 } satisfies Meta<typeof ToggleButtonGroup>;
@@ -21,8 +52,31 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const ToggleButtonGroupTemplate: Story = {
-  args: {},
+  args: {
+    children: [
+      <ToggleButton id="1">Button 1</ToggleButton>,
+      <ToggleButton id="2">Button 2</ToggleButton>,
+      <ToggleButton id="3">Button 3</ToggleButton>,
+    ],
+    selectionMode: "single",
+    orientation: "horizontal",
+    disallowEmptySelection: false,
+    isDisabled: false,
+  },
   render: ({ ...args }: ToggleButtonGroupProps) => (
     <ToggleButtonGroup {...args} />
   ),
+};
+
+export const DisabledToggleButtonGroup: Story = {
+  ...ToggleButtonGroupTemplate,
+  args: {
+    label: "This button group is disabled",
+    children: [
+      <ToggleButton id="1">Button 1</ToggleButton>,
+      <ToggleButton id="2">Button 2</ToggleButton>,
+      <ToggleButton id="3">Button 3</ToggleButton>,
+    ],
+    isDisabled: true,
+  },
 };
