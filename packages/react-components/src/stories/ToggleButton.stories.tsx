@@ -18,6 +18,11 @@ const meta = {
       control: { type: "object" },
       description: "Populates button text",
     },
+    size: {
+      control: { type: "radio" },
+      options: ["small", "medium"],
+      description: "Sets button size",
+    },
     danger: {
       control: { type: "boolean" },
       description: "Applies a red colourway",

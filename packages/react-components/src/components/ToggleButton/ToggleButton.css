@@ -1,16 +1,29 @@
 .bcds-react-aria-ToggleButton {
   display: flex;
   flex-direction: row;
+  box-sizing: content-box;
   gap: var(--layout-margin-xsmall);
   align-items: center;
   font: var(--typography-regular-body);
   color: var(--typography-color-secondary);
   background-color: var(--surface-color-secondary-button-disabled);
-  padding: var(--layout-padding-hair) var(--layout-padding-small);
   border: none;
   border-radius: var(--layout-border-radius-medium);
   cursor: pointer;
-  box-sizing: content-box;
+}
+
+/* Size */
+.bcds-react-aria-ToggleButton.small {
+  padding: var(--layout-padding-none) var(--layout-padding-small);
+}
+
+.bcds-react-aria-ToggleButton.medium {
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
+}
+
+/* Pressed */
+.bcds-react-aria-ToggleButton[data-pressed] {
+  background-color: var(--theme-blue-10);
 }
 
 /* Active */
@@ -19,7 +32,6 @@
   color: var(--typography-color-primary);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
-  border-radius: var(--layout-border-radius-medium);
   box-shadow: var(--surface-shadow-small);
 }
 
