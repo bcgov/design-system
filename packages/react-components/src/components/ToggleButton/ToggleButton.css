@@ -22,7 +22,7 @@
 }
 
 /* Pressed */
-.bcds-react-aria-ToggleButton[data-pressed] {
+.bcds-react-aria-ToggleButton[data-hovered][data-pressed] {
   background-color: var(--theme-blue-10);
 }
 
