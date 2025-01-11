@@ -68,25 +68,29 @@ export default function App() {
 
 ## Component list
 
-| Component               | React Aria Components docs link                                |
-| ----------------------- | -------------------------------------------------------------- |
-| AlertDialog             | N/A                                                            |
-| Button                  | https://react-spectrum.adobe.com/react-aria/Button.html        |
-| ButtonGroup             | N/A                                                            |
-| Checkbox                | https://react-spectrum.adobe.com/react-aria/Checkbox.html      |
-| CheckboxGroup           | https://react-spectrum.adobe.com/react-aria/CheckboxGroup.html |
-| Dialog                  | https://react-spectrum.adobe.com/react-aria/Dialog.html        |
-| Footer                  | N/A                                                            |
-| Form                    | https://react-spectrum.adobe.com/react-aria/Form.html          |
-| Header                  | N/A                                                            |
-| InlineAlert             | N/A                                                            |
-| Modal                   | https://react-spectrum.adobe.com/react-aria/Modal.html         |
-| RadioGroup, Radio       | https://react-spectrum.adobe.com/react-aria/RadioGroup.html    |
-| Select                  | https://react-spectrum.adobe.com/react-aria/Select.html        |
-| Switch                  | https://react-spectrum.adobe.com/react-aria/Switch.html        |
-| TagGroup, TagList, Tag  | https://react-spectrum.adobe.com/react-aria/TagGroup.html      |
-| TextArea, TextField     | https://react-spectrum.adobe.com/react-aria/TextField.html     |
-| Tooltip, TooltipTrigger | https://react-spectrum.adobe.com/react-aria/Tooltip.html       |
+| Component               | React Aria Components docs link                                  |
+| ----------------------- | ---------------------------------------------------------------- |
+| AlertBanner             | N/A                                                              |
+| AlertDialog             | N/A                                                              |
+| Accordion               | https://react-spectrum.adobe.com/react-aria/Disclosure.html      |
+| AccordionGroup          | https://react-spectrum.adobe.com/react-aria/DisclosureGroup.html |
+| Button                  | https://react-spectrum.adobe.com/react-aria/Button.html          |
+| ButtonGroup             | N/A                                                              |
+| Callout                 | N/A                                                              |
+| Checkbox                | https://react-spectrum.adobe.com/react-aria/Checkbox.html        |
+| CheckboxGroup           | https://react-spectrum.adobe.com/react-aria/CheckboxGroup.html   |
+| Dialog                  | https://react-spectrum.adobe.com/react-aria/Dialog.html          |
+| Footer                  | N/A                                                              |
+| Form                    | https://react-spectrum.adobe.com/react-aria/Form.html            |
+| Header                  | N/A                                                              |
+| InlineAlert             | N/A                                                              |
+| Modal                   | https://react-spectrum.adobe.com/react-aria/Modal.html           |
+| RadioGroup, Radio       | https://react-spectrum.adobe.com/react-aria/RadioGroup.html      |
+| Select                  | https://react-spectrum.adobe.com/react-aria/Select.html          |
+| Switch                  | https://react-spectrum.adobe.com/react-aria/Switch.html          |
+| TagGroup, TagList, Tag  | https://react-spectrum.adobe.com/react-aria/TagGroup.html        |
+| TextArea, TextField     | https://react-spectrum.adobe.com/react-aria/TextField.html       |
+| Tooltip, TooltipTrigger | https://react-spectrum.adobe.com/react-aria/Tooltip.html         |
 
 ## Supported React versions
 

@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.5.0
+
+This is a milestone release that contains the following new components:
+
+- Accordion and accordion group
+- Alert Banner
+- Callout
+
+This release uses:
+
+- `react-aria-components` v1.5.0
+- `@bcgov/design-tokens`v3.2.0
+
+Component changes since v0.4.0:
+
+- Add an alternative `chip` style to Tag and Tag group component.
+
 ## 0.4.0
 
 This is a milestone release that contains the following new components:
