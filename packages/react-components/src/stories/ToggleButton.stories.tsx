@@ -18,6 +18,11 @@ const meta = {
       control: { type: "object" },
       description: "Populates button text",
     },
+    type: {
+      control: { type: "radio" },
+      options: ["button", "submit", "reset"],
+      description: "The behavior of the button when used in an HTML form",
+    },
     size: {
       control: { type: "radio" },
       options: ["small", "medium"],
@@ -30,6 +35,10 @@ const meta = {
     isDisabled: {
       control: { type: "boolean" },
       description: "Whether a button is disabled",
+    },
+    autoFocus: {
+      control: { type: "boolean" },
+      description: "Whether the element should receive focus on render",
     },
     isSelected: {
       control: { type: "boolean" },
