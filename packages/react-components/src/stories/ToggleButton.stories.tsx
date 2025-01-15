@@ -4,7 +4,7 @@ import { ToggleButton, SvgCheckCircleIcon } from "../components";
 import { ToggleButtonProps } from "../components/ToggleButton";
 
 const meta = {
-  title: "Components/Toggle Button Group/Toggle Button",
+  title: "Components/Toggle buttons/Toggle button",
   component: ToggleButton,
   parameters: {
     layout: "centered",
