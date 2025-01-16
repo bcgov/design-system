@@ -11,6 +11,7 @@ import {
 } from "@storybook/blocks";
 
 import * as MenuStories from "./Menu.stories";
+import * as MenuItemStories from "./MenuItem.stories";
 
 <Meta of={MenuStories} />
 
@@ -65,7 +66,12 @@ Structurally, these components are assembled like this:
 
 ### Menu items
 
-### Dynamic items
+The `MenuItem` subcomponent is used inside `Menu` to compose a static list of options:
+
+<Primary of={MenuItemStories} />
+<Controls of={MenuItemStories.MenuItemTemplate} />
+
+#### Dynamic lists
 
 You can populate a menu dynamically using [React Aria's Collections API](https://react-spectrum.adobe.com/react-aria/collections.html). Pass an array or object containing your options using the `items` prop on your `Menu`:
 
