@@ -1,0 +1,92 @@
+{/* Menu.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as MenuStories from "./Menu.stories";
+
+<Meta of={MenuStories} />
+
+# Menu
+
+<Subtitle>
+  The menu component displays a collapsible list of items in a dropdown menu.
+</Subtitle>
+
+<Source
+  code={`import { Menu, MenuItem, MenuSection, MenuSectionHeader, MenuTrigger, SubmenuTrigger } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Learn more about working with the select component:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=94129932F3384565A638034B69E0C943)
+- [View the menu component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+This component is based on [React Aria Menu](https://react-spectrum.adobe.com/react-aria/Menu.html).
+
+### Anatomy
+
+A menu is composed similarly to a [dialog](/docs/components-dialogs--docs). You need:
+
+- A `<MenuTrigger>` element
+- A trigger element, positioned as the first child inside the `<MenuTrigger>`
+- The `<Menu>` itself
+- Some number of `<MenuItem>` components
+
+Structurally, these components are assembled like this:
+
+```javascript
+<MenuTrigger>
+  <Button>This button activates the menu</Button>
+  <Menu>
+    <MenuItem id="1">Item 1</MenuItem>
+    <MenuItem id="2">Item 2</MenuItem>
+    <MenuItem id="3">Item 3</MenuItem>
+  </Menu>
+</MenuTrigger>
+```
+
+## Controls
+
+<Primary of={MenuStories} />
+<Controls of={MenuStories.MenuTemplate} />
+
+## Configuration
+
+### Menu items
+
+### Dynamic items
+
+You can populate a menu dynamically using [React Aria's Collections API](https://react-spectrum.adobe.com/react-aria/collections.html). Pass an array or object containing your options using the `items` prop on your `Menu`:
+
+<Canvas of={MenuStories.MenuWithDynamicItems} />
+
+The example above is implemented like this:
+
+<Source code={`
+
+const MenuItems = [
+{ id: 1, name: "Item 1" },
+{ id: 2, name: "Item 2" },
+{ id: 3, name: "Item 3" },
+{ id: 4, name: "Item 4" },
+];
+
+<MenuTrigger>
+  <Button>Open the menu</Button>
+  <Menu items={MenuItems}>
+    {(item) => <MenuItem id={item.id}>{item.name}</MenuItem>}
+  </Menu>
+</MenuTrigger>
+
+`} language="typescript"/>
