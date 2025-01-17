@@ -4,11 +4,12 @@ import {
   Button,
   Menu,
   MenuItem,
+  MenuSection,
   MenuTrigger,
   SubmenuTrigger,
   SvgChevronDownIcon,
 } from "../components";
-import { MenuProps } from "../components/Menu";
+import { MenuProps, MenuSectionHeader } from "../components/Menu";
 
 const meta = {
   title: "Components/Menu/Menu",
@@ -55,8 +56,8 @@ export const MenuWithSubmenu: Story = {
         <SubmenuTrigger>
           <MenuItem>Submenu</MenuItem>
           <Menu>
-            <MenuItem id="1">Submenu item 1</MenuItem>
-            <MenuItem id="2">Submenu item 2</MenuItem>
+            <MenuItem id="sub-1">Submenu item 1</MenuItem>
+            <MenuItem id="sub-2">Submenu item 2</MenuItem>
           </Menu>
         </SubmenuTrigger>,
       ],
@@ -81,6 +82,29 @@ export const MenuWithDynamicItems: Story = {
       <Menu items={MenuItems}>
         {(item) => <MenuItem>{item.name}</MenuItem>}
       </Menu>
+    </MenuTrigger>
+  ),
+};
+
+export const MenuWithSections: Story = {
+  args: {
+    children: [
+      <MenuSection id="section-1">
+        <MenuSectionHeader>Section 1</MenuSectionHeader>
+        <MenuItem id="1">Item 1</MenuItem>
+        <MenuItem id="2">Item 2</MenuItem>
+      </MenuSection>,
+      <MenuSection id="section-2">
+        <MenuSectionHeader>Section 2</MenuSectionHeader>
+        <MenuItem id="3">Item 3</MenuItem>
+        <MenuItem id="4">Item 4</MenuItem>
+      </MenuSection>,
+    ],
+  },
+  render: ({ ...args }: MenuProps<object>) => (
+    <MenuTrigger>
+      <Button variant="secondary">Open the menu</Button>
+      <Menu {...args} />
     </MenuTrigger>
   ),
 };

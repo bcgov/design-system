@@ -13,7 +13,7 @@ import {
 import * as MenuStories from "./Menu.stories";
 import * as MenuItemStories from "./MenuItem.stories";
 
-<Meta of={MenuStories} />
+<Meta title="Components/Menu" />
 
 # Menu
 
@@ -96,3 +96,65 @@ const MenuItems = [
 </MenuTrigger>
 
 `} language="typescript"/>
+
+#### Disabled menu items
+
+Pass the `isDisabled` prop to a `MenuItem` to disable it:
+
+<Canvas of={MenuItemStories.DisabledMenuItem} />
+
+### Menu sections
+
+You can use the `MenuSection` and `MenuSectionHeader` subcomponents to create sections within a menu:
+
+<Canvas of={MenuStories.MenuWithSections} />
+
+The example above is implemented like this:
+
+<Source
+  code={`
+<MenuTrigger>
+    <Button />
+    <Menu>
+        <MenuSection>
+            <MenuSectionHeader>
+            <MenuItem>
+            <MenuItem>
+        </MenuSection>
+        <MenuSection>
+            <MenuSectionHeader>
+            <MenuItem>
+            <MenuItem>
+        </MenuSection>
+    </Menu>
+</MenuTrigger>
+`}
+  language="typescript"
+/>
+
+### Submenus
+
+Use the `SubmenuTrigger` component to [create a submenu](https://react-spectrum.adobe.com/react-aria/Menu.html#submenus) within a `Menu`.
+
+<Canvas of={MenuStories.MenuWithSubmenu} />
+
+The first child inside a `SubmenuTrigger` should be the `MenuItem` that will activate the submenu:
+
+<Source
+  code={`
+<MenuTrigger>
+    <Button />
+    <Menu>
+        <MenuItem />
+        <MenuItem />
+        <SubmenuTrigger>
+            <MenuItem />
+            <Menu>
+                <MenuItem />
+            </Menu>
+        </SubmenuTrigger>
+    </Menu>
+</MenuTrigger>
+`}
+  language="typescript"
+/>

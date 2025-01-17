@@ -82,3 +82,25 @@ export const MenuItemTemplate: Story = {
     </MenuTrigger>
   ),
 };
+
+export const DisabledMenuItem: Story = {
+  args: {
+    size: "medium",
+    children: ["Item 2 is disabled"],
+    id: "2",
+    isDisabled: true,
+  },
+  render: ({ ...args }: MenuItemProps) => (
+    <MenuTrigger>
+      <Button variant="secondary">
+        Open the menu <SvgChevronDownIcon />
+      </Button>
+      <Menu>
+        <MenuItem id="1" size="medium">
+          Item 1
+        </MenuItem>
+        <MenuItem {...args} />
+      </Menu>
+    </MenuTrigger>
+  ),
+};
