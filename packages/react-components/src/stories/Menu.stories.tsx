@@ -20,6 +20,22 @@ const meta = {
       control: { type: "object" },
       description: "Expects an array of `MenuItem` components",
     },
+    items: {
+      control: { type: "object" },
+      description: "Array of objects to be rendered as Menu items",
+    },
+    disabledKeys: {
+      control: { type: "object" },
+      description: "Selectively disables individual menu items",
+    },
+    selectedKeys: {
+      control: { type: "object" },
+      description: "The currently selected keys in the collection (controlled)",
+    },
+    defaultSelectedKeys: {
+      control: { type: "object" },
+      description: "The initial selected keys in the collection (uncontrolled)",
+    },
   },
 } satisfies Meta<typeof Menu>;
 

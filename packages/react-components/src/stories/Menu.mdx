@@ -12,6 +12,8 @@ import {
 
 import * as MenuStories from "./Menu.stories";
 import * as MenuItemStories from "./MenuItem.stories";
+import * as MenuTriggerStories from "./MenuTrigger.stories";
+import * as SubmenuTriggerStories from "./SubmenuTrigger.stories";
 
 <Meta title="Components/Menu" />
 
@@ -103,6 +105,8 @@ Pass the `isDisabled` prop to a `MenuItem` to disable it:
 
 <Canvas of={MenuItemStories.DisabledMenuItem} />
 
+You can also use `disabledKeys` to disable some number of keys, using their unique identifiers.
+
 ### Menu sections
 
 You can use the `MenuSection` and `MenuSectionHeader` subcomponents to create sections within a menu:
@@ -158,3 +162,17 @@ The first child inside a `SubmenuTrigger` should be the `MenuItem` that will act
 `}
   language="typescript"
 />
+
+### Menu triggers
+
+`MenuTrigger` and `SubmenuTrigger` have their own props you can use to customise their behaviour:
+
+#### MenuTrigger
+
+<Primary of={MenuTriggerStories} />
+<Controls of={MenuTriggerStories.MenuTriggerTemplate} />
+
+#### SubmenuTrigger
+
+<Primary of={SubmenuTriggerStories} />
+<Controls of={SubmenuTriggerStories.SubmenuTriggerTemplate} />
