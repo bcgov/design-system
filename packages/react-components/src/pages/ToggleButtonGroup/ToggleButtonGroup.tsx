@@ -30,9 +30,7 @@ export default function ToggleButtonGroupPage() {
       <h3>Vertical orientation</h3>
       <ToggleButtonGroup orientation="vertical" label="This is a text label">
         <ToggleButton id="1">Button 1</ToggleButton>
-        <ToggleButton id="2" danger>
-          Button 2
-        </ToggleButton>
+        <ToggleButton id="2">Button 2</ToggleButton>
         <ToggleButton id="3">Button 3</ToggleButton>
       </ToggleButtonGroup>
       <h3>Icon buttons</h3>
