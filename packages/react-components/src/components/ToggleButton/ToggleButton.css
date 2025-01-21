@@ -57,8 +57,3 @@
   color: var(--typography-color-disabled);
   cursor: not-allowed;
 }
-
-/* Danger */
-.bcds-react-aria-ToggleButton.danger {
-  color: var(--typography-color-danger);
-}

@@ -28,10 +28,6 @@ const meta = {
       options: ["small", "medium"],
       description: "Sets button size",
     },
-    danger: {
-      control: { type: "boolean" },
-      description: "Applies a red colourway",
-    },
     isDisabled: {
       control: { type: "boolean" },
       description: "Whether a button is disabled",
@@ -72,11 +68,6 @@ export const ToggleButtonWithIcon: Story = {
   args: {
     children: [<SvgCheckCircleIcon />, "Button with icon"],
   },
-};
-
-export const DangerToggleButton: Story = {
-  ...ToggleButtonTemplate,
-  args: { children: ["Danger colourway"], danger: true },
 };
 
 export const DefaultSelectedToggleButton: Story = {
