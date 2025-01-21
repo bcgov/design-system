@@ -59,6 +59,14 @@ export const ToggleButtonTemplate: Story = {
   render: ({ ...args }: ToggleButtonProps) => <ToggleButton {...args} />,
 };
 
+export const SmallToggleButton: Story = {
+  ...ToggleButtonTemplate,
+  args: {
+    children: [<SvgCheckCircleIcon />, "Button with icon"],
+    size: "small",
+  },
+};
+
 export const ToggleButtonWithIcon: Story = {
   ...ToggleButtonTemplate,
   args: {

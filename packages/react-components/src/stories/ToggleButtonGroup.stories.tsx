@@ -68,6 +68,87 @@ export const ToggleButtonGroupTemplate: Story = {
   ),
 };
 
+export const HorizontalToggleButtonGroup: Story = {
+  ...ToggleButtonGroupTemplate,
+  args: {
+    orientation: "horizontal",
+    children: [
+      <ToggleButton id="1">Button 1</ToggleButton>,
+      <ToggleButton id="2">Button 2</ToggleButton>,
+      <ToggleButton id="3">Button 3</ToggleButton>,
+    ],
+  },
+};
+
+export const VerticalToggleButtonGroup: Story = {
+  ...ToggleButtonGroupTemplate,
+  args: {
+    orientation: "vertical",
+    children: [
+      <ToggleButton id="1">Button 1</ToggleButton>,
+      <ToggleButton id="2">Button 2</ToggleButton>,
+      <ToggleButton id="3">Button 3</ToggleButton>,
+    ],
+  },
+};
+
+export const SingleSelect: Story = {
+  ...ToggleButtonGroupTemplate,
+  args: {
+    children: [
+      <ToggleButton id="light">Light mode</ToggleButton>,
+      <ToggleButton id="dark">Dark mode</ToggleButton>,
+    ],
+    selectionMode: "single",
+    defaultSelectedKeys: ["dark"],
+  },
+};
+
+export const SingleSelectDisallowEmpty: Story = {
+  ...ToggleButtonGroupTemplate,
+  args: {
+    children: [
+      <ToggleButton id="light">Light mode</ToggleButton>,
+      <ToggleButton id="dark">Dark mode</ToggleButton>,
+    ],
+    selectionMode: "single",
+    defaultSelectedKeys: ["dark"],
+    disallowEmptySelection: true,
+  },
+};
+
+export const MultipleSelect: Story = {
+  ...ToggleButtonGroupTemplate,
+  args: {
+    children: [
+      <ToggleButton id="bold">
+        <b>Bold</b>
+      </ToggleButton>,
+      <ToggleButton id="italic">
+        <i>Italic</i>
+      </ToggleButton>,
+      <ToggleButton id="underline">
+        <u>Underline</u>
+      </ToggleButton>,
+    ],
+    selectionMode: "multiple",
+    defaultSelectedKeys: ["bold", "underline"],
+  },
+};
+
+export const GroupWithDisabledOption: Story = {
+  ...ToggleButtonGroupTemplate,
+  args: {
+    children: [
+      <ToggleButton id="1">Button 1</ToggleButton>,
+      <ToggleButton id="2">Button 2</ToggleButton>,
+      <ToggleButton id="3" isDisabled>
+        Button 3 (disabled)
+      </ToggleButton>,
+    ],
+  },
+};
+
 export const DisabledToggleButtonGroup: Story = {
   ...ToggleButtonGroupTemplate,
   args: {

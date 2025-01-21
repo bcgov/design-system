@@ -17,7 +17,10 @@ import * as ToggleButtonStories from "./ToggleButton.stories";
 
 # Toggle buttons
 
-<Subtitle></Subtitle>
+<Subtitle>
+  A toggle button sets a setting on or off, and can be used to switch between
+  different modes or states.
+</Subtitle>
 
 <Source
   code={`import { ToggleButton, ToggleButtonGroup } from "@bcgov/design-system-react-components";`}
@@ -35,6 +38,8 @@ This component is based on React Aria [ToggleButton](https://react-spectrum.adob
 
 ## Controls
 
+A `ToggleButton` can be used standalone, or multiple can be rendered inside a `ToggleButtonGroup`. `ToggleButton` and `ToggleButtonGroup` each have their own set of props.
+
 ### Toggle button
 
 <Primary of={ToggleButtonStories} />
@@ -46,3 +51,53 @@ This component is based on React Aria [ToggleButton](https://react-spectrum.adob
 <Controls of={ToggleButtonGroupStories.ToggleButtonGroupTemplate} />
 
 ## Configuration
+
+### Button size
+
+Set the `size` prop to `small` on a toggle button will render a button with less vertical padding:
+
+<Canvas of={ToggleButtonStories.SmallToggleButton} />
+
+### Orientation
+
+The `orientation` prop (defaults to `horizontal`) sets the visual layout and keyboard navigation direction of a `ToggleButtonGroup`:
+
+#### Horizontal
+
+<Canvas of={ToggleButtonGroupStories.HorizontalToggleButtonGroup} />
+
+#### Vertical
+
+<Canvas of={ToggleButtonGroupStories.VerticalToggleButtonGroup} />
+
+### Selection mode
+
+The `selectionMode` prop controls how many items within a `ToggleButtonGroup` can be selected (or toggled 'on') simultaneously.
+
+Use `selectedKeys` (controlled) or `defaultSelectedKeys` (uncontrolled) to pre-set selected options.
+
+#### Single
+
+By default, `selectionMode` is set to `single`. The active `ToggleButton` will be deactivated if another is selected:
+
+<Canvas of={ToggleButtonGroupStories.SingleSelect} />
+
+Use the `disallowEmptySelection` prop to control whether a selection is required, or if all options can be de-selected:
+
+<Canvas of={ToggleButtonGroupStories.SingleSelectDisallowEmpty} />
+
+#### Multiple
+
+If `selectionMode` is set to `multiple`, the user can toggle each value on or off discretely:
+
+<Canvas of={ToggleButtonGroupStories.MultipleSelect} />
+
+### Disabling items
+
+Set `isDisabled` on a `ToggleButton` to disable an individual option in a group:
+
+<Canvas of={ToggleButtonGroupStories.GroupWithDisabledOption} />
+
+Setting `isDisabled` on a `ToggleButtonGroup` will disable all options:
+
+<Canvas of={ToggleButtonGroupStories.DisabledToggleButtonGroup} />
