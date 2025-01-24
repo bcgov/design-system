@@ -12,13 +12,33 @@
   cursor: pointer;
 }
 
+/* Icon button */
+.bcds-react-aria-ToggleButton.icon {
+  align-items: center;
+  justify-content: space-around;
+}
+
 /* Size */
 .bcds-react-aria-ToggleButton.small {
   padding: var(--layout-padding-none) var(--layout-padding-small);
 }
 
+.bcds-react-aria-ToggleButton.small.icon {
+  padding: unset;
+  height: var(--icons-size-large);
+  width: var(--icons-size-large);
+  min-width: var(--icons-size-large);
+}
+
 .bcds-react-aria-ToggleButton.medium {
   padding: var(--layout-padding-hair) var(--layout-padding-small);
+}
+
+.bcds-react-aria-ToggleButton.medium.icon {
+  padding: unset;
+  height: var(--icons-size-xlarge);
+  width: var(--icons-size-xlarge);
+  min-width: var(--icons-size-xlarge);
 }
 
 /* Pressed */

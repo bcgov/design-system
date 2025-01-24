@@ -13,11 +13,14 @@ export interface ToggleButtonProps extends ReactAriaToggleButtonProps {
 export default function ToggleButton({
   size = "medium",
   children,
+  isIconButton = false,
   ...props
 }: ToggleButtonProps) {
   return (
     <ReactAriaToggleButton
-      className={`bcds-react-aria-ToggleButton ${size}`}
+      className={`bcds-react-aria-ToggleButton ${size} ${
+        isIconButton ? "icon" : null
+      }`}
       {...props}
     >
       {children}
