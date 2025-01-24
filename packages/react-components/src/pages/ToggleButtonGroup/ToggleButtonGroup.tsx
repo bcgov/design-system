@@ -34,14 +34,26 @@ export default function ToggleButtonGroupPage() {
         <ToggleButton id="3">Button 3</ToggleButton>
       </ToggleButtonGroup>
       <h3>Icon buttons</h3>
-      <ToggleButtonGroup selectionMode="multiple" label="This is a text label">
-        <ToggleButton id="1">
+      <ToggleButtonGroup selectionMode="multiple">
+        <ToggleButton id="1" isIconButton aria-label="Yes">
           <SvgCheckCircleIcon />
         </ToggleButton>
-        <ToggleButton id="2">
+        <ToggleButton id="2" isIconButton aria-label="Maybe">
           <SvgExclamationCircleIcon />
         </ToggleButton>
-        <ToggleButton id="3">
+        <ToggleButton id="3" isIconButton aria-label="No">
+          <SvgCloseIcon />
+        </ToggleButton>
+      </ToggleButtonGroup>
+      <h4>Small icon buttons</h4>
+      <ToggleButtonGroup selectionMode="multiple">
+        <ToggleButton id="1" size="small" isIconButton aria-label="Yes">
+          <SvgCheckCircleIcon />
+        </ToggleButton>
+        <ToggleButton id="2" size="small" isIconButton aria-label="Maybe">
+          <SvgExclamationCircleIcon />
+        </ToggleButton>
+        <ToggleButton id="3" size="small" isIconButton aria-label="No">
           <SvgCloseIcon />
         </ToggleButton>
       </ToggleButtonGroup>
