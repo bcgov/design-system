@@ -18,6 +18,14 @@ const meta = {
       control: { type: "object" },
       description: "Populates button text",
     },
+    isIconButton: {
+      control: { type: "boolean" },
+      description: "Must be set if not using a text label",
+    },
+    "aria-label": {
+      control: { type: "text" },
+      description: "Must be set if not using a text label",
+    },
     type: {
       control: { type: "radio" },
       options: ["button", "submit", "reset"],
@@ -67,6 +75,15 @@ export const ToggleButtonWithIcon: Story = {
   ...ToggleButtonTemplate,
   args: {
     children: [<SvgCheckCircleIcon />, "Button with icon"],
+  },
+};
+
+export const IconOnlyToggleButton: Story = {
+  ...ToggleButtonTemplate,
+  args: {
+    isIconButton: true,
+    "aria-label": "Confirm",
+    children: [<SvgCheckCircleIcon />],
   },
 };
 

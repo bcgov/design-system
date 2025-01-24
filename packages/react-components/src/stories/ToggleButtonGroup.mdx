@@ -58,6 +58,14 @@ Set the `size` prop to `small` on a toggle button will render a button with less
 
 <Canvas of={ToggleButtonStories.SmallToggleButton} />
 
+### Icon buttons
+
+Use `isIconButton` and pass an icon to the `children` slot to render a button without a text label:
+
+<Canvas of={ToggleButtonStories.IconOnlyToggleButton} />
+
+When using icon-only buttons, you must also set a descriptive label using the `aria-label` prop.
+
 ### Orientation
 
 The `orientation` prop (defaults to `horizontal`) sets the visual layout and keyboard navigation direction of a `ToggleButtonGroup`:
