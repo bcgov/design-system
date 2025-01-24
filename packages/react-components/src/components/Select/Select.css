@@ -90,18 +90,6 @@
 }
 
 /* Dropdown menu panel */
-.bcds-react-aria-Select--Popover {
-  background-color: var(--surface-color-forms-default);
-  border: 1px solid var(--surface-color-border-default);
-  border-radius: var(--layout-border-radius-medium);
-  box-shadow: var(--surface-shadow-medium);
-  box-sizing: border-box;
-  overflow-y: auto;
-  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
-  width: var(
-    --trigger-width
-  ); /* Variable provided by Select component https://react-spectrum.adobe.com/react-aria/Select.html#popover-1 */
-}
 .bcds-react-aria-Select--ListBox[data-focused] {
   outline: none;
 }

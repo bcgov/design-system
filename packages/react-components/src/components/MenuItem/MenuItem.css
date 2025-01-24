@@ -1,0 +1,52 @@
+.bcds-react-aria-Menu-Item {
+  color: var(--typography-color-secondary);
+  display: inline-flex;
+  gap: var(--layout-margin-xsmall);
+  cursor: pointer;
+}
+
+/* Link styling */
+a.bcds-react-aria-Menu-Item {
+  color: var(--typography-color-link);
+  text-decoration: underline;
+  text-underline-offset: var(--layout-padding-hair);
+}
+
+a.bcds-react-aria-Menu-Item[data-hovered] {
+  color: var(--surface-color-border-active);
+}
+
+/* Sizing */
+.bcds-react-aria-Menu-Item.small {
+  font: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-Menu-Item.medium {
+  font: var(--typography-regular-body);
+}
+
+/* Icon displayed when an item has a submenu */
+.bcds-react-aria-Menu-Item > svg {
+  width: var(--icons-size-xsmall);
+  height: var(--icons-size-xsmall);
+  padding: var(--layout-padding-hair);
+  align-self: center;
+}
+
+/* States */
+
+.bcds-react-aria-Menu-Item[data-focus-visible] {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-xsmall);
+  border-radius: var(--layout-border-radius-small);
+}
+
+.bcds-react-aria-Menu-Item[data-hovered] {
+  color: var(--surface-color-border-active);
+}
+
+.bcds-react-aria-Menu-Item[data-disabled] {
+  color: var(--typography-color-disabled);
+  cursor: not-allowed;
+}
