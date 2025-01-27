@@ -4,7 +4,7 @@ import "./App.css";
 import * as tokens from "@bcgov/design-tokens/js";
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
-import { Button, Footer, FooterLinks, Header } from "@/components";
+import {Button, Footer, FooterLinks, Header, NumberField} from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
   AccordionGroupPage,
@@ -169,6 +169,7 @@ function App() {
         <TooltipPage />
         <TextAreaPage />
         <TextFieldPage />
+          <NumberField label={"dfd"}/>
       </main>
       <Footer />
       <Footer
