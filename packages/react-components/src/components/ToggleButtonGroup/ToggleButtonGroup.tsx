@@ -9,10 +9,12 @@ import "./ToggleButtonGroup.css";
 export interface ToggleButtonGroupProps
   extends ReactAriaToggleButtonGroupProps {
   label?: string;
+  size?: "small" | "medium";
 }
 
 export default function ToggleButtonGroup({
   label,
+  size = "medium",
   children,
   ...props
 }: ToggleButtonGroupProps) {
@@ -24,7 +26,9 @@ export default function ToggleButtonGroup({
         </Text>
       )}
       <ReactAriaToggleButtonGroup
-        className="bcds-react-aria-ToggleButtonGroup"
+        className={`bcds-react-aria-ToggleButtonGroup ${
+          size === "small" ? "small" : "medium"
+        }`}
         {...props}
       >
         {children}

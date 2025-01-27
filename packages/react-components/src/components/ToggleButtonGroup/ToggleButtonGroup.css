@@ -1,11 +1,20 @@
 .bcds-react-aria-ToggleButtonGroup {
   display: inline-flex;
-  gap: var(--layout-margin-xsmall);
+  gap: var(--layout-margin-small);
   align-items: center;
   background-color: var(--surface-color-secondary-button-disabled);
-  padding: var(--layout-padding-xsmall);
+
   border-radius: var(--layout-border-radius-medium);
   box-sizing: content-box;
+}
+
+/* Sizing */
+.bcds-react-aria-ToggleButtonGroup.small {
+  padding: var(--layout-padding-hair);
+}
+
+.bcds-react-aria-ToggleButtonGroup.medium {
+  padding: var(--layout-padding-xsmall);
 }
 
 /* Orientation */

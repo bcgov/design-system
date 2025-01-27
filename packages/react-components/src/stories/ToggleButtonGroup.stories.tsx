@@ -14,6 +14,11 @@ const meta = {
       control: { type: "text" },
       description: "Provides a text label for a button group",
     },
+    size: {
+      control: { type: "radio" },
+      options: ["small", "medium"],
+      description: "Sets size of toggle buttons",
+    },
     children: {
       control: { type: "object" },
       description: "Expects an array of `ToggleButton` components",
