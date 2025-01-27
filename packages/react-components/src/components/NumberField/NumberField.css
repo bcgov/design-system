@@ -1,0 +1,71 @@
+.bcds-react-aria-NumberField {
+    font: var(--typography-regular-small-body);
+    color: var(--typography-color-primary);
+}
+
+.bcds-react-aria-Group {
+    display: flex;
+    width: fit-content;
+    height: 40px;
+    border-radius: var(--layout-border-radius-medium);
+    border: 1px solid var(--surface-color-border-default, #D8D8D8);
+}
+
+.bcds-react-aria-Button {
+    display: flex;
+    min-width: 34px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: none;
+    border-radius: 0px;
+}
+
+.bcds-react-aria-Button:first-child {
+    border-right: 1px solid var(--surface-color-border-default, #D8D8D8);
+}
+.bcds-react-aria-Button:last-child {
+    border-left: 1px solid var(--surface-color-border-default, #D8D8D8);
+}
+
+.bcds-react-aria-Group .bcds-react-aria-Button:first-child {
+    border-top-left-radius: var(--layout-border-radius-medium);
+    border-bottom-left-radius: var(--layout-border-radius-medium);
+}
+.bcds-react-aria-Group .bcds-react-aria-Button:last-child {
+    border-top-right-radius: var(--layout-border-radius-medium);
+    border-bottom-right-radius: var(--layout-border-radius-medium);
+}
+
+.bcds-react-aria-NumberField--Input {
+    border: none;
+    width: 104px;
+    padding: 7px 8px 7px 8px;
+    outline: none;
+}
+
+
+/*hovering effect*/
+.bcds-react-aria-Group:hover {
+    border: 1px solid var(--surface-color-border-dark);
+}
+.bcds-react-aria-Group:hover .bcds-react-aria-Button:first-child {
+    border-right: 1px solid var(--surface-color-border-dark);
+}
+.bcds-react-aria-Group:hover .bcds-react-aria-Button:last-child {
+    border-left: 1px solid var(--surface-color-border-dark);
+}
+
+/*is disabled*/
+/*.bcds-react-aria-Group .bcds-react-aria-Button[data-disabled] {*/
+/*    border: 1px solid var(--theme-gray-10);*/
+/*    border-left: 1px solid var(--theme-gray-10, #D8D8D8);*/
+/*}*/
+/*.bcds-react-aria-Group .bcds-react-aria-NumberField--Input[data-disabled] {*/
+/*    border-top: 1px solid var(--theme-gray-10);*/
+/*    border-bottom: 1px solid var(--theme-gray-10);*/
+/*    border-left: 0;*/
+/*    border-right: 0;*/
+/*}*/
+
+/*is focus*/
