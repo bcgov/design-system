@@ -3,14 +3,13 @@
   gap: var(--layout-margin-small);
   align-items: center;
   background-color: var(--surface-color-secondary-button-disabled);
-
   border-radius: var(--layout-border-radius-medium);
   box-sizing: content-box;
 }
 
 /* Sizing */
 .bcds-react-aria-ToggleButtonGroup.small {
-  padding: var(--layout-padding-hair);
+  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
 }
 
 .bcds-react-aria-ToggleButtonGroup.medium {

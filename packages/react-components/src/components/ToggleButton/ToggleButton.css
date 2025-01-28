@@ -1,16 +1,27 @@
 .bcds-react-aria-ToggleButton {
   display: flex;
   flex-direction: row;
-  box-sizing: content-box;
   gap: var(--layout-margin-xsmall);
   align-items: center;
   justify-content: center;
-  font: var(--typography-regular-body);
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
   color: var(--typography-color-secondary);
   background-color: var(--surface-color-secondary-button-disabled);
   border: none;
   border-radius: var(--layout-border-radius-medium);
+  box-sizing: content-box;
   cursor: pointer;
+}
+
+/* Size */
+.bcds-react-aria-ToggleButtonGroup.small > .bcds-react-aria-ToggleButton,
+.bcds-react-aria-ToggleButton.small {
+  font: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-ToggleButtonGroup.medium > .bcds-react-aria-ToggleButton,
+.bcds-react-aria-ToggleButton.medium {
+  font: var(--typography-regular-body);
 }
 
 /* Icon button */
@@ -19,22 +30,11 @@
   justify-content: space-around;
 }
 
-/* Size */
-.bcds-react-aria-ToggleButtonGroup.small > .bcds-react-aria-ToggleButton,
-.bcds-react-aria-ToggleButton.small {
-  padding: var(--layout-padding-none) var(--layout-padding-small);
-}
-
 .bcds-react-aria-ToggleButton.small.icon {
   padding: unset;
   height: var(--icons-size-large);
   width: var(--icons-size-large);
   min-width: var(--icons-size-large);
-}
-
-.bcds-react-aria-ToggleButtonGroup.medium > .bcds-react-aria-ToggleButton,
-.bcds-react-aria-ToggleButton.medium {
-  padding: var(--layout-padding-hair) var(--layout-padding-small);
 }
 
 .bcds-react-aria-ToggleButton.medium.icon {
@@ -47,6 +47,7 @@
 /* Pressed */
 .bcds-react-aria-ToggleButton[data-hovered][data-pressed] {
   background-color: var(--theme-blue-10);
+  border: var(--layout-border-width-small) solid var(--theme-blue-10);
 }
 
 /* Active */
@@ -54,7 +55,7 @@
   background-color: var(--surface-color-secondary-button-default);
   color: var(--typography-color-primary);
   border: var(--layout-border-width-small) solid
-    var(--surface-color-border-default);
+    var(--surface-color-secondary-button-default);
   box-shadow: var(--surface-shadow-small);
 }
 
@@ -63,7 +64,7 @@
   background-color: var(--surface-color-secondary-button-default);
   color: var(--typography-color-primary);
   border: var(--layout-border-width-small) solid
-    var(--surface-color-border-default);
+    var(--surface-color-secondary-button-default);
   border-radius: var(--layout-border-radius-medium);
 }
 
