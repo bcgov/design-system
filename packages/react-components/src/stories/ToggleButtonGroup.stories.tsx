@@ -64,6 +64,7 @@ export const ToggleButtonGroupTemplate: Story = {
       <ToggleButton id="3">Button 3</ToggleButton>,
     ],
     selectionMode: "single",
+    size: "medium",
     orientation: "horizontal",
     disallowEmptySelection: false,
     isDisabled: false,
@@ -89,6 +90,19 @@ export const VerticalToggleButtonGroup: Story = {
   ...ToggleButtonGroupTemplate,
   args: {
     orientation: "vertical",
+    children: [
+      <ToggleButton id="1">Button 1</ToggleButton>,
+      <ToggleButton id="2">Button 2</ToggleButton>,
+      <ToggleButton id="3">Button 3</ToggleButton>,
+    ],
+  },
+};
+
+export const SmallToggleButtonGroup: Story = {
+  ...ToggleButtonGroupTemplate,
+  args: {
+    size: "small",
+    defaultSelectedKeys: "1",
     children: [
       <ToggleButton id="1">Button 1</ToggleButton>,
       <ToggleButton id="2">Button 2</ToggleButton>,
