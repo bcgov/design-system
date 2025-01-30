@@ -1,0 +1,36 @@
+.bcds-react-aria-ToggleButtonGroup {
+  display: inline-flex;
+  gap: var(--layout-margin-small);
+  background-color: var(--surface-color-secondary-button-disabled);
+  border-radius: var(--layout-border-radius-medium);
+  box-sizing: content-box;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+/* Sizing */
+.bcds-react-aria-ToggleButtonGroup.small {
+  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
+}
+
+.bcds-react-aria-ToggleButtonGroup.medium {
+  padding: var(--layout-padding-xsmall);
+}
+
+/* Orientation */
+.bcds-react-aria-ToggleButtonGroup[data-orientation="horizontal"] {
+  flex-direction: row;
+  height: var(--layout-margin-xlarge);
+}
+
+.bcds-react-aria-ToggleButtonGroup[data-orientation="vertical"] {
+  flex-direction: column;
+}
+
+/* Label */
+.bcds-react-aria-ToggleButtonGroup--Label {
+  display: flex;
+  padding: var(--layout-padding-small) var(--layout-padding-none);
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+}
