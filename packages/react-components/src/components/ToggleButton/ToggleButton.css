@@ -1,6 +1,7 @@
 .bcds-react-aria-ToggleButton {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
+  flex: 0 1 auto;
   gap: var(--layout-margin-xsmall);
   align-items: center;
   justify-content: center;
@@ -32,6 +33,7 @@
 
 .bcds-react-aria-ToggleButton.small.icon {
   padding: unset;
+  align-self: center;
   height: var(--icons-size-large);
   width: var(--icons-size-large);
   min-width: var(--icons-size-large);

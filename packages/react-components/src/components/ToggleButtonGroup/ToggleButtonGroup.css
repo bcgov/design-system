@@ -1,10 +1,11 @@
 .bcds-react-aria-ToggleButtonGroup {
   display: inline-flex;
   gap: var(--layout-margin-small);
-  align-items: center;
   background-color: var(--surface-color-secondary-button-disabled);
   border-radius: var(--layout-border-radius-medium);
   box-sizing: content-box;
+  flex-wrap: wrap;
+  flex-grow: 1;
 }
 
 /* Sizing */
