@@ -62,7 +62,7 @@
     "identity-obj-proxy": "3.0.0",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
-    "rollup": "4.22.0",
+    "rollup": "4.32.1",
     "rollup-plugin-dts": "6.1.1",
     "rollup-plugin-peer-deps-external": "2.2.4",
     "rollup-plugin-postcss": "4.0.2",
@@ -71,7 +71,7 @@
     "ts-node": "10.9.2",
     "tslib": "2.7.0",
     "typescript": "5.6.2",
-    "vite": "5.4.6"
+    "vite": "5.4.14"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "*"
