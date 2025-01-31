@@ -21,6 +21,7 @@ export interface TextProps extends ReactAriaTextProps {
 }
 
 export default function Text({
+  elementType = "span",
   size = "medium",
   color = "primary",
   isUnstyled = false,
