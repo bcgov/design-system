@@ -29,6 +29,7 @@ export default function Text({
 }: TextProps) {
   return (
     <ReactAriaText
+      elementType={elementType}
       className={
         isUnstyled ? undefined : `bcds-react-aria-Text ${size} ${color}`
       }
