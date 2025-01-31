@@ -169,6 +169,8 @@ export const bcdsLayoutBorderRadiusNone : string;
 export const bcdsLayoutBorderRadiusSmall : string;
 export const bcdsLayoutBorderRadiusMedium : string;
 export const bcdsLayoutBorderRadiusLarge : string;
+/** Used for components with a circular radius */
+export const bcdsLayoutBorderRadiusCircular : string;
 /** BC Sans font. Requires BC Sans package */
 export const bcdsTypographyFontFamiliesBcSans : string;
 /** Smallest line height */
@@ -188,8 +190,6 @@ export const bcdsTypographyLineHeightsAuto : string;
 export const bcdsTypographyFontWeightsRegular : number;
 /** System token, used to generate text styles */
 export const bcdsTypographyFontWeightsBold : number;
-/** DEPRECATED - will be removed in next major version. */
-export const bcdsTypographyFontWeightsItalic : string;
 /** System token, used to generate text styles */
 export const bcdsTypographyFontWeightsItalicWeight : number;
 /** System token, used to generate text styles */
