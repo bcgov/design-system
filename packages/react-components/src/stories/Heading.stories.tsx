@@ -4,7 +4,7 @@ import { Heading } from "../components";
 import { HeadingProps } from "../components/Heading";
 
 const meta = {
-  title: "Utility/Headings and text/Headings",
+  title: "Utility/Text and links/Headings",
   component: Heading,
   parameters: { layout: "centered" },
   argTypes: {

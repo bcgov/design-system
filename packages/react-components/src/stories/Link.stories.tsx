@@ -5,7 +5,7 @@ import { Link } from "../components";
 import { LinkProps } from "@/components/Link";
 
 const meta = {
-  title: "Utility/Link",
+  title: "Utility/Text and links/Link",
   component: Link,
   parameters: { layout: "centered" },
   argTypes: {
