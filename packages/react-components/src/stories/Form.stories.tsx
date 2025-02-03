@@ -6,7 +6,7 @@ import { FormProps } from "@/components/Form";
 import "./Form.css";
 
 const meta = {
-  title: "Utility/Form wrapper",
+  title: "Utility/Forms/Form",
   component: Form,
   parameters: {
     layout: "centered",
