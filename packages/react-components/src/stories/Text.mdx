@@ -1,0 +1,66 @@
+{/* Text.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as TextStories from "./Text.stories";
+
+<Meta of={TextStories} />
+
+# Text
+
+<Subtitle>Utility component for populating text content</Subtitle>
+
+<Source
+  code={`import { Text } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Text is a utility component used to create sections of text content within an interface. It is also used internally by other components.
+
+It is styled to align with the [B.C. Design System typescale](https://www2.gov.bc.ca/gov/content?id=72C2CD6E05494C84B9A072DD9C6A5342).
+
+## Controls
+
+<Canvas of={TextStories.TextTemplate} />
+<Controls of={TextStories.TextTemplate} />
+
+## Configuration
+
+Text content is populated via the `children` slot.
+
+By default, Text renders a `<span>`. Use the `elementType` prop to render a different HTML element.
+
+### Text size
+
+Use the `size` prop to toggle between small, medium (default) and large text sizes:
+
+<Canvas of={TextStories.SmallText} />
+<Canvas of={TextStories.MediumText} />
+<Canvas of={TextStories.LargeText} />
+
+### Styling text
+
+By default, Text is styled to align with the [B.C. Design System typescale](https://www2.gov.bc.ca/gov/content?id=72C2CD6E05494C84B9A072DD9C6A5342). If needed, you can override the default styling by either:
+
+- Passing a `className` to apply your own CSS class
+- Setting the `isUnstyled` prop to render text without any additional CSS, allowing it to inherit its styles from its parent element
+
+<Canvas of={TextStories.UnstyledText} />
+
+Use the `color` prop to set the text colour, from the options defined in the design system colour palette:
+
+<Canvas of={TextStories.DangerText} />
+<Canvas of={TextStories.DisabledText} />
+<Canvas of={TextStories.PrimaryInvert} />
+
+You can also use the `style` prop to apply inline CSS to text.

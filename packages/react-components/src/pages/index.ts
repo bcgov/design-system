@@ -9,6 +9,7 @@ import ModalDialogPage from "./ModalDialog";
 import RadioGroupPage from "./RadioGroup";
 import SelectPage from "./Select";
 import TagGroupPage from "./TagGroup";
+import TextPage from "./TextPage";
 import TextAreaPage from "./TextArea";
 import TextFieldPage from "./TextField";
 import SwitchPage from "./Switch";
@@ -26,6 +27,7 @@ export {
   RadioGroupPage,
   SelectPage,
   TagGroupPage,
+  TextPage,
   TextAreaPage,
   TextFieldPage,
   SwitchPage,
