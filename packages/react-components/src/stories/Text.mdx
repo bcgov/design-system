@@ -16,7 +16,7 @@ import * as TextStories from "./Text.stories";
 
 # Text
 
-<Subtitle>Utility content for populating text content</Subtitle>
+<Subtitle>Utility component for populating text content</Subtitle>
 
 <Source
   code={`import { Text } from "@bcgov/design-system-react-components";`}
@@ -25,7 +25,9 @@ import * as TextStories from "./Text.stories";
 
 ## Usage and resources
 
-Text is a utility component used to create sections of text content within an interface. It is styled to align with the [B.C. Design System typescale](https://www2.gov.bc.ca/gov/content?id=72C2CD6E05494C84B9A072DD9C6A5342).
+Text is a utility component used to create sections of text content within an interface. It is also used internally by other components.
+
+It is styled to align with the [B.C. Design System typescale](https://www2.gov.bc.ca/gov/content?id=72C2CD6E05494C84B9A072DD9C6A5342).
 
 ## Controls
 
@@ -48,7 +50,7 @@ Use the `size` prop to toggle between small, medium (default) and large text siz
 
 ### Styling text
 
-You can override the default styling by either:
+By default, Text is styled to align with the [B.C. Design System typescale](https://www2.gov.bc.ca/gov/content?id=72C2CD6E05494C84B9A072DD9C6A5342). If needed, you can override the default styling by either:
 
 - Passing a `className` to apply your own CSS class
 - Setting the `isUnstyled` prop to render text without any additional CSS, allowing it to inherit its styles from its parent element
@@ -60,3 +62,5 @@ Use the `color` prop to set the text colour, from the options defined in the des
 <Canvas of={TextStories.DangerText} />
 <Canvas of={TextStories.DisabledText} />
 <Canvas of={TextStories.PrimaryInvert} />
+
+You can also use the `style` prop to apply inline CSS to text.
