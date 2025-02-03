@@ -7,6 +7,8 @@ import "./Link.css";
 import "../Button/Button.css";
 
 export interface LinkProps extends ReactAriaLinkProps {
+  /* Link content */
+  children?: React.ReactNode;
   /* Text size */
   size?: "small" | "medium" | "large";
   /* Toggles link to use Button styles */
@@ -50,15 +52,13 @@ export default function Link({
       aria-label={ariaLabel}
       {...props}
     >
-      <>
-        {iconLeft && (
-          <span className="bcds-react-aria-Link--Icon">{iconLeft}</span>
-        )}
-        {children}
-        {iconRight && (
-          <span className="bcds-react-aria-Link--Icon">{iconRight}</span>
-        )}
-      </>
+      {iconLeft && (
+        <span className="bcds-react-aria-Link--Icon">{iconLeft}</span>
+      )}
+      {children}
+      {iconRight && (
+        <span className="bcds-react-aria-Link--Icon">{iconRight}</span>
+      )}
     </ReactAriaLink>
   );
 }
