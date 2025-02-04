@@ -3,7 +3,7 @@
     color: var(--typography-color-primary);
 }
 
-.bcds-react-aria-Group {
+.bcds-react-aria-NumberField-Group {
     display: flex;
     width: fit-content;
     height: 40px;
@@ -21,51 +21,104 @@
     border-radius: 0px;
 }
 
-.bcds-react-aria-Button:first-child {
-    border-right: 1px solid var(--surface-color-border-default, #D8D8D8);
-}
-.bcds-react-aria-Button:last-child {
-    border-left: 1px solid var(--surface-color-border-default, #D8D8D8);
+.bcds-react-aria-NumberField-input-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 8px;
 }
 
-.bcds-react-aria-Group .bcds-react-aria-Button:first-child {
+.bcds-react-aria-NumberField-input-wrapper{
+    display: flex;
+}
+
+.bcds-react-aria-Button:first-child {
+    border-right: 1px solid var(--surface-color-border-default, #D8D8D8);
     border-top-left-radius: var(--layout-border-radius-medium);
     border-bottom-left-radius: var(--layout-border-radius-medium);
 }
-.bcds-react-aria-Group .bcds-react-aria-Button:last-child {
+.bcds-react-aria-Button:last-child {
+    border-left: 1px solid var(--surface-color-border-default, #D8D8D8);
     border-top-right-radius: var(--layout-border-radius-medium);
     border-bottom-right-radius: var(--layout-border-radius-medium);
 }
 
-.bcds-react-aria-NumberField--Input {
+.bcds-react-aria-NumberField-Input {
+    flex: 1;
     border: none;
     width: 104px;
-    padding: 7px 8px 7px 8px;
     outline: none;
 }
 
-
 /*hovering effect*/
-.bcds-react-aria-Group:hover {
+.bcds-react-aria-NumberField-Group:hover {
     border: 1px solid var(--surface-color-border-dark);
 }
-.bcds-react-aria-Group:hover .bcds-react-aria-Button:first-child {
+.bcds-react-aria-NumberField-Group:hover .bcds-react-aria-Button:first-child {
     border-right: 1px solid var(--surface-color-border-dark);
 }
-.bcds-react-aria-Group:hover .bcds-react-aria-Button:last-child {
+.bcds-react-aria-NumberField-Group:hover .bcds-react-aria-Button:last-child {
     border-left: 1px solid var(--surface-color-border-dark);
 }
 
 /*is disabled*/
-/*.bcds-react-aria-Group .bcds-react-aria-Button[data-disabled] {*/
-/*    border: 1px solid var(--theme-gray-10);*/
-/*    border-left: 1px solid var(--theme-gray-10, #D8D8D8);*/
-/*}*/
-/*.bcds-react-aria-Group .bcds-react-aria-NumberField--Input[data-disabled] {*/
-/*    border-top: 1px solid var(--theme-gray-10);*/
-/*    border-bottom: 1px solid var(--theme-gray-10);*/
-/*    border-left: 0;*/
-/*    border-right: 0;*/
-/*}*/
+.bcds-react-aria-NumberField[data-disabled] .bcds-react-aria-NumberField-Group,.bcds-react-aria-Button {
+    background: var(--theme-gray-10);
+}
+.bcds-react-aria-NumberField[data-disabled]:hover .bcds-react-aria-NumberField-Group {
+    border: 1px solid var(--surface-color-border-default);
+}
+.bcds-react-aria-NumberField[data-disabled]:hover .bcds-react-aria-Button:first-child {
+    border-right: 1px solid var(--surface-color-border-default);
+}
+.bcds-react-aria-NumberField[data-disabled]:hover .bcds-react-aria-Button:last-child {
+    border-left: 1px solid var(--surface-color-border-default);
+}
 
 /*is focus*/
+.bcds-react-aria-NumberField-Group:focus-within:not(.isReadOnly):not(.isError) {
+    border: 2px solid var(--surface-color-border-active);
+}
+.bcds-react-aria-NumberField-Group:focus-within:not(.isReadOnly):not(.isError) .bcds-react-aria-Button:first-child {
+    border-right: 1px solid var(--surface-color-border-active);
+}
+.bcds-react-aria-NumberField-Group:focus-within:not(.isReadOnly):not(.isError) .bcds-react-aria-Button:last-child {
+    border-left: 1px solid var(--surface-color-border-active);
+}
+
+/*is readOnly*/
+.bcds-react-aria-Button.isReadOnly {
+    background: var(--theme-gray-10);
+}
+.bcds-react-aria-NumberField-Group.isReadOnly:hover {
+    border: 1px solid var(--surface-color-border-default);
+}
+.bcds-react-aria-NumberField-input-wrapper.isReadOnly {
+    border: 1px solid black;
+    color: var(--typography-color-disabled);
+}
+.bcds-react-aria-NumberField-Group.isReadOnly:hover .bcds-react-aria-Button:first-child {
+    border-right: 1px solid var(--surface-color-border-default);
+}
+.bcds-react-aria-NumberField-Group.isReadOnly:hover .bcds-react-aria-Button:last-child {
+    border-left: 1px solid var(--surface-color-border-default);
+}
+
+/*is error mode*/
+.bcds-react-aria-NumberField-Group.isError {
+    border: 2px solid var(--support-border-color-danger);
+}
+.bcds-react-aria-Button.isError:first-child {
+    border-right: 1px solid var(--support-border-color-danger);
+}
+.bcds-react-aria-Button.isError:last-child {
+    border-left: 1px solid var(--support-border-color-danger);
+}
+.bcds-react-aria-NumberField-Group:hover .bcds-react-aria-Button.isError:first-child {
+    border-right: 1px solid var(--support-border-color-danger);
+}
+.bcds-react-aria-NumberField-Group:hover .bcds-react-aria-Button.isError:last-child {
+    border-left: 1px solid var(--support-border-color-danger);
+}
