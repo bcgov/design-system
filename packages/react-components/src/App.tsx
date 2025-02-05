@@ -4,7 +4,7 @@ import "./App.css";
 import * as tokens from "@bcgov/design-tokens/js";
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
-import {Button, Footer, FooterLinks, Header, NumberField} from "@/components";
+import {Button, Footer, FooterLinks, Header} from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
   AccordionGroupPage,
@@ -24,6 +24,7 @@ import {
   SwitchPage,
   TooltipPage,
 } from "@/pages";
+import NumberFieldPage from "@/pages/NumberField";
 
 // This icon is available as a plain SVG at src/assets/icon-menu.svg
 function SvgMenuIcon() {
@@ -171,7 +172,7 @@ function App() {
         <TextAreaPage />
         <TextFieldPage />
         <TextPage />
-          <NumberField label={"dfd"}/>
+        <NumberFieldPage />
       </main>
       <Footer />
       <Footer

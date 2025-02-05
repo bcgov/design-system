@@ -36,7 +36,7 @@ export default function NumberField(
             setCurrValue(value);
             setErrorMsg("");
         }
-    }, []);
+    }, [value, onChange]);
 
     function changeButtonClicked(num: number) {
         if (onChange) {
