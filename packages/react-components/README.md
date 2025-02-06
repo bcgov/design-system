@@ -83,12 +83,15 @@ export default function App() {
 | Footer                  | N/A                                                              |
 | Form                    | https://react-spectrum.adobe.com/react-aria/Form.html            |
 | Header                  | N/A                                                              |
+| Heading                 | https://react-spectrum.adobe.com/react-spectrum/Heading.html     |
 | InlineAlert             | N/A                                                              |
 | Modal                   | https://react-spectrum.adobe.com/react-aria/Modal.html           |
+| Link                    | https://react-spectrum.adobe.com/react-spectrum/Link.html        |
 | RadioGroup, Radio       | https://react-spectrum.adobe.com/react-aria/RadioGroup.html      |
 | Select                  | https://react-spectrum.adobe.com/react-aria/Select.html          |
 | Switch                  | https://react-spectrum.adobe.com/react-aria/Switch.html          |
 | TagGroup, TagList, Tag  | https://react-spectrum.adobe.com/react-aria/TagGroup.html        |
+| Text                    | https://react-spectrum.adobe.com/react-spectrum/Text.html        |
 | TextArea, TextField     | https://react-spectrum.adobe.com/react-aria/TextField.html       |
 | Tooltip, TooltipTrigger | https://react-spectrum.adobe.com/react-aria/Tooltip.html         |
 

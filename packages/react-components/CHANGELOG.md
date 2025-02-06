@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.5.1
+
+### Added
+
+- Added Heading, Text and Link components.
+
+This release uses:
+
+- `react-aria-components` v1.6.0
+
 ## 0.5.0
 
 This is a milestone release that contains the following new components:
