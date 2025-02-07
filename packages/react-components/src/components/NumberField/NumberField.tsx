@@ -1,4 +1,4 @@
-import type {NumberFieldProps, ValidationResult} from 'react-aria-components';
+import type {NumberFieldProps} from 'react-aria-components';
 import {Button, FieldError, Group, Input, Label, NumberField as MyNumberField, Text} from 'react-aria-components';
 
 import "./NumberField.css";
@@ -7,8 +7,6 @@ import {useEffect, useState} from "react";
 interface MyNumberFieldProps extends NumberFieldProps {
     label?: string;
     description?: string;
-    errorMessage?: string | ((validation: ValidationResult) => string);
-    value?: number;
 }
 
 export default function NumberField(
@@ -25,7 +23,7 @@ export default function NumberField(
     const [errorMsg, setErrorMsg] = useState("");
 
     useEffect(() => {
-        if (!Number.isInteger(value)) {
+        if (value && !Number.isInteger(value)) {
             setErrorMode(true);
             setErrorMsg("value is not a number");
         } else if (!onChange) {
@@ -33,7 +31,7 @@ export default function NumberField(
             setErrorMsg("function has not been set up properly");
         } else {
             setErrorMode(false);
-            setCurrValue(value);
+            setCurrValue(value || 0);
             setErrorMsg("");
         }
     }, [value, onChange]);
