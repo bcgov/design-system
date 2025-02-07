@@ -1,0 +1,38 @@
+{/* NumberField.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as NumberFieldStories from "./NumberField.stories";
+
+<Meta of={NumberFieldStories} />
+
+# NumberField
+
+<Subtitle>
+    A number field is an input component that enables the user to enter a numeric value into an interface.
+</Subtitle>
+
+<Source
+  code={`import { NumberField } from "@bcgov/design-system-react-components"; `}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Learn more about working with the NumberField component:
+
+This component is based on [React Aria NumberField](https://react-spectrum.adobe.com/react-aria/NumberField.html). Consult the React Aria documentation for additional technical information.
+
+## Controls
+<Primary of={NumberFieldStories} />
+<Controls of={NumberFieldStories.NumberFieldTemplate} />
+
+## Configuration
