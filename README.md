@@ -1,7 +1,7 @@
 # B.C. Design System [![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
 > [!NOTE]
-> Effective November 12, 2025, we are resuming development of the design system. If you have questions or ideas, email [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca) or open an issue here.
+> Effective November 12, 2025, we are resuming development of the design system. If you have questions or ideas, email [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca) or [open an issue](https://github.com/bcgov/design-system/issues).
 
 
 The B.C. Design System gives design and software development teams the building blocks to deliver intuitive, accessible digital services.
@@ -37,7 +37,7 @@ The component library is currently in active development. New components are add
 
 ## Contact
 
-The B.C. Design System is maintained by Service BC and Government Digital Experience (GDX), part of the Ministry of Citizens' Services. You can contact the design system team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca), or [open an issue](https://github.com/bcgov/design-system/issues/new/choose).
+The B.C. Design System is maintained by the Online Service Solutions team at Service BC, part of the Ministry of Citizens' Services. You can contact the design system team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca), or [open an issue](https://github.com/bcgov/design-system/issues/new/choose).
 
 ## Legacy documentation
 
