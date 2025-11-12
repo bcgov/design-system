@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Button, Form, Select, TextField } from "../components";
 import { FormProps } from "@/components/Form";

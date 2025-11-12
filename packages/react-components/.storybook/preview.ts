@@ -1,4 +1,4 @@
-import type { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/react-vite";
 import bcdsTheme from "./bcdsTheme";
 
 import "@bcgov/bc-sans/css/BC_Sans.css";
