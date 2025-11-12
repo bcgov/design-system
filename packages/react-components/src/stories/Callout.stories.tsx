@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Button, Callout, Form, TextField, Select } from "../components";
 import { CalloutProps } from "@/components/Callout";

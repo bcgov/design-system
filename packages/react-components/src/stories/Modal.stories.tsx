@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Button, Modal, DialogTrigger } from "../components";
 import type { ModalOverlayProps } from "react-aria-components";

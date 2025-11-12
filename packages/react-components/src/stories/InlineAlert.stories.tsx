@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { InlineAlert, Button } from "../components";
 import { InlineAlertProps } from "@/components/InlineAlert";

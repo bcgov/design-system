@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { TagGroup, TagList, Tag } from "../components";
 import { TagProps } from "../components/Tag";
