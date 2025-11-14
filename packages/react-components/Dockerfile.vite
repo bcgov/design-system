@@ -7,7 +7,7 @@ FROM node:lts-alpine AS build-stage
 
 # Copy package.json and package-lock.json
 WORKDIR /app
-COPY package.json .
+COPY package.json package-lock.json ./
 
 # Print npm config
 RUN npm config list

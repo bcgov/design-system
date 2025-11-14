@@ -9,7 +9,7 @@ ENV GITHUB_SHA=$GITHUB_SHA
 
 # Copy package.json and package-lock.json
 WORKDIR /app
-COPY package.json .
+COPY package.json package-lock.json ./
 COPY vite.config.ts .
 
 # Print npm config
