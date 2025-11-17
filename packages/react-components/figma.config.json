@@ -1,0 +1,7 @@
+{
+  "codeConnect": {
+    "include": ["/**/*.{tsx,jsx}"],
+    "label": "React",
+    "interactiveSetupFigmaFileUrl": "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System"
+  }
+}
