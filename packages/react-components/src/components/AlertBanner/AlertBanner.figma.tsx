@@ -1,4 +1,3 @@
-import React from "react"
 import AlertBanner from "./AlertBanner"
 import figma from "@figma/code-connect"
 
@@ -22,9 +21,9 @@ figma.connect(
         Danger: "danger",
         Black: "black",
       }),
+      isIconHidden: figma.boolean('Icon'),
+      isCloseable: figma.boolean('Close'),
       // No matching props could be found for these Figma properties:
-      // "icon": figma.boolean('Icon'),
-      // "close": figma.boolean('Close'),
       // "action": figma.boolean('Action')
     },
     example: (props) => <AlertBanner variant={props.variant} />,
