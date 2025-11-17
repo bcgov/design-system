@@ -21,8 +21,8 @@ figma.connect(
         Danger: "danger",
         Black: "black",
       }),
-      isIconHidden: figma.boolean('Icon'),
-      isCloseable: figma.boolean('Close'),
+      isIconHidden: figma.boolean("Icon"),
+      isCloseable: figma.boolean("Close"),
       // No matching props could be found for these Figma properties:
       // "action": figma.boolean('Action')
     },

@@ -1,4 +1,3 @@
-import React from "react"
 import AccordionGroup from "./AccordionGroup"
 import figma from "@figma/code-connect"
 
@@ -21,7 +20,6 @@ figma.connect(
       }),
       // No matching props could be found for these Figma properties:
       // "text": figma.string('Text'),
-      // "title": figma.boolean('Title'),
       // "numberOfAccordions": figma.enum('Number of accordions', {
       //   "2": "2",
       //   "3": "3",
