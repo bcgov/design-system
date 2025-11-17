@@ -1,4 +1,3 @@
-import React from "react"
 import Accordion from "./Accordion"
 import figma from "@figma/code-connect"
 
@@ -18,10 +17,8 @@ figma.connect(
       label: figma.string("Text"),
       isDisabled: figma.enum("State", {
         Disabled: true,
+      isExpanded: figma.boolean("Opened"),
       }),
-      // No matching props could be found for these Figma properties:
-      // "text": figma.string('Text'),
-      // "opened": figma.boolean('Opened')
     },
     example: (props) => (
       <Accordion label={props.label} isDisabled={props.isDisabled} />
