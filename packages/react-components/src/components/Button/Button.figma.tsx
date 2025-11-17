@@ -1,4 +1,3 @@
-import React from "react"
 import Button from "./Button"
 import figma from "@figma/code-connect"
 
@@ -23,21 +22,22 @@ figma.connect(
       isDisabled: figma.enum("State", {
         Disabled: true,
       }),
+      variant: figma.enum("Hierarchy", {
+        "Primary": "primary",
+        "Secondary": "secondary",
+        "Tertiary": "tertiary",
+        "Link": "link"
+      }),
       // No matching props could be found for these Figma properties:
       // "showLeftIcon": figma.boolean('Show left icon'),
       // "showRightIcon": figma.boolean('Show right icon'),
       // "swapLeftIcon": figma.instance('Swap left icon'),
       // "swapRightIcon": figma.instance('Swap right icon'),
-      // "hierarchy": figma.enum('Hierarchy', {
-      //   "Primary": "primary",
-      //   "Secondary": "secondary",
-      //   "Tertiary": "tertiary",
-      //   "Link": "link"
-      // })
     },
     example: (props) => (
       <Button
         size={props.size}
+        variant={props.variant}
         danger={props.danger}
         isDisabled={props.isDisabled}
       />
