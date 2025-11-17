@@ -1,4 +1,3 @@
-import React from "react"
 import AlertDialog from "./AlertDialog"
 import figma from "@figma/code-connect"
 
@@ -16,18 +15,17 @@ figma.connect(
     props: {
       // These props were automatically mapped based on your linked code:
       title: figma.string("Title"),
+      variant: figma.enum("Type", {
+        "Confirmation": "confirmation",
+        "Information": "information",
+        "Error": "error",
+        "Destructive": "destructive",
+        "Warning": "warning",
+      }),
       // No matching props could be found for these Figma properties:
       // "title": figma.string('Title'),
       // "swap": figma.instance('Swap'),
       // "text": figma.string('Text'),
-      // "type": figma.enum('Type', {
-      //   "Confirmation": "confirmation",
-      //   "Information": "information",
-      //   "Error": "error",
-      //   "Destructive": "destructive",
-      //   "Warning": "warning",
-      //   "Swap": "swap"
-      // })
     },
     example: (props) => <AlertDialog title={props.title} />,
   },
