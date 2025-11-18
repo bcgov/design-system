@@ -64,10 +64,8 @@ jobs:
         working-directory: ./packages/react-components
 
       - name: Set up .npmrc configuration
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+        run: echo "//registry.npmjs.org/" > ~/.npmrc
 
       - name: Publish to npm
         run: npm publish --tag next
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         working-directory: ./packages/react-components
