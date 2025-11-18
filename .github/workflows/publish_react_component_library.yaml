@@ -66,6 +66,16 @@ jobs:
       - name: Set up .npmrc configuration
         run: echo "//registry.npmjs.org/" > ~/.npmrc
 
-      - name: Publish to npm
+      - name: Publish to npm @next
         run: npm publish --tag next
         working-directory: ./packages/react-components
+      
+      - name: Publish to npm @latest
+      # If branch name matches "VERSION-release-build", publish to @latest
+        run: | 
+          PR_BRANCH="${{ github.event.pull_request.head.ref }}"
+          if [[ "$PR_BRANCH" == *"${CURRENT_VERSION}-release-build"*]]; then
+            npm publish
+          fi
+        working-directory: ./packages/react-components
+        
