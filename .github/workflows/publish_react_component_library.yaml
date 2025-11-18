@@ -7,6 +7,10 @@ on:
     branches: [main]
     types: [closed]
 
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
+
 jobs:
   publish-react-component-library:
     name: Publish @bcgov/design-system-react-components@next
