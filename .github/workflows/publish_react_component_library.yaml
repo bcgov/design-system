@@ -78,4 +78,3 @@ jobs:
             npm publish
           fi
         working-directory: ./packages/react-components
-        
