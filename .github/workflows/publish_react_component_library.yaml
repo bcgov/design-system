@@ -67,12 +67,5 @@ jobs:
         run: echo "//registry.npmjs.org/" > ~/.npmrc
 
       - name: Publish to npm
-        # If PR title contains "<current_version>-release-build", publish to @latest. Otherwise, publish to @next
-        run: |
-          PR_TITLE="${{ github.event.pull_request.title }}"
-          if [[ "$PR_TITLE" == *"${CURRENT_VERSION}-release-build"* ]]; then
-            npm publish
-          else
-            npm publish --tag next
-          fi
+        run: npm publish --tag next
         working-directory: ./packages/react-components
