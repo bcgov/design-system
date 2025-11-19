@@ -3,7 +3,6 @@
 > [!NOTE]
 > Effective November 12, 2025, we are resuming development of the design system. If you have questions or ideas, email [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca) or [open an issue](https://github.com/bcgov/design-system/issues).
 
-
 The B.C. Design System gives design and software development teams the building blocks to deliver intuitive, accessible digital services.
 
 The B.C. Design System comprises 4 core elements:
@@ -38,13 +37,3 @@ The component library is currently in active development. New components are add
 ## Contact
 
 The B.C. Design System is maintained by the Online Service Solutions team at Service BC, part of the Ministry of Citizens' Services. You can contact the design system team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca), or [open an issue](https://github.com/bcgov/design-system/issues/new/choose).
-
-## Legacy documentation
-
-> [!WARNING]
-> The previous B.C. government design system is no longer supported and has been archived. These resources are provided for reference only.
-
-Documentation and components for the legacy design system are accessible in this repo and on Classic DevHub:
-
-- [Developer documentation](https://classic.developer.gov.bc.ca/Design-System/About-the-Design-System)
-- [Source code](https://github.com/bcgov/design-system/tree/main/components)
