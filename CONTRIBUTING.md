@@ -23,7 +23,7 @@ We welcome pull requests to fix issues in the codebase. Proposed changes should 
 - The problem and its impact for the user
 - The rationale behind the proposed solution
 
-If you'd like to contribute a larger feature (for example, a new component), we suggest that you reach out to us first to discuss it and agree a path forward. You should also .
+If you'd like to contribute a larger feature (for example, a new component), we suggest that you reach out to us first to discuss it and agree a path forward.
 
 Before release, all components must have:
 
