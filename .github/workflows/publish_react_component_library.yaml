@@ -71,10 +71,15 @@ jobs:
         working-directory: ./packages/react-components
       
       - name: Publish to npm @latest
-      # If branch name matches "VERSION-release-build", publish to @latest
+      # Check for a label on the PR that matches the pattern @bcgov/design-system-react-components@v<major>.<minor>.<patch>
+      # If PR has a release label, publish to npm @latest
         run: | 
-          PR_BRANCH="${{ github.event.pull_request.head.ref }}"
-          if [[ "$PR_BRANCH" == *"${CURRENT_VERSION}-release-build"*]]; then
+          EVENT_FILE="${GITHUB_EVENT_PATH}"
+          MATCH=$(jq -r '.pull_request.labels[].name // empty' "$EVENT_FILE" | grep -E '^@bcgov/design-system-react-components@v[0-9]+\.[0-9]+\.[0-9]+$' || true)
+          if [[ -n "$MATCH" ]]; then
+            echo "Found release tag label: $MATCH — publishing to @latest"
             npm publish
+          else
+            echo "No matching release tag label found; skipping publish to @latest"
           fi
         working-directory: ./packages/react-components
