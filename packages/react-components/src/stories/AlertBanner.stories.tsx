@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { AlertBanner } from "../components";
 import { AlertBannerProps } from "@/components/AlertBanner";
