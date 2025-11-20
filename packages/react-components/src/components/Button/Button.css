@@ -25,6 +25,8 @@
 }
 
 /* Sizes */
+.bcds-react-aria-Button.xsmall {}
+
 .bcds-react-aria-Button.small {
   min-height: 32px;
 }
@@ -37,6 +39,9 @@
 .bcds-react-aria-Button.medium {
   min-height: 40px;
 }
+
+.bcds-react-aria-Button.large {}
+
 .bcds-react-aria-Button.medium.icon {
   padding: unset;
   height: 40px;

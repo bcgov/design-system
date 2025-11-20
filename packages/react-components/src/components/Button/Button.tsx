@@ -9,7 +9,7 @@ export interface ButtonProps extends ReactAriaButtonProps {
   /**
    * Defaults to `medium`. `small` is shorter vertically.
    */
-  size?: "small" | "medium";
+  size?: "xsmall" | "small" | "medium" | "large";
   /**
    * Defaults to `primary`.
    */
