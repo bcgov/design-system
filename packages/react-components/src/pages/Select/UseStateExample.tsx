@@ -24,16 +24,17 @@ const items: ListBoxItemProps[] = [
 ];
 
 export default function UseStateExample() {
-  const [selected, setSelected] = useState<Key>();
+  const [selected, setSelected] = useState<Key | null>(null);
 
   return (
     <>
       <Select
         aria-label="Select example"
         items={items}
-        onSelectionChange={(selected: Key) => setSelected(selected)}
+        value={selected}
+        onChange={(selected) => setSelected(selected)}
       />
-      <p>Selected Key: {selected}</p>
+      <p>Selected key: {selected}</p>
     </>
   );
 }
