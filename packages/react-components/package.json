@@ -3,7 +3,7 @@
   "version": "0.5.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bcgov/design-system.git",
+    "url": "git+https://github.com/bcgov/design-system.git",
     "directory": "packages/react-components"
   },
   "type": "module",
