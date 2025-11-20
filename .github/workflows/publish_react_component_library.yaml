@@ -7,8 +7,12 @@ on:
     branches: [main]
     types: [closed]
 
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
+
 jobs:
-  publish-react-component-library:
+  publish-react-component-library-next:
     name: Publish @bcgov/design-system-react-components@next
     # Only run on merge, not close without merge AND
     # only run in bcgov/design-system repo, not forks.
@@ -60,10 +64,45 @@ jobs:
         working-directory: ./packages/react-components
 
       - name: Set up .npmrc configuration
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+        run: echo "//registry.npmjs.org/" > ~/.npmrc
 
-      - name: Publish to npm
+      - name: Publish to npm @next
         run: npm publish --tag next
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        working-directory: ./packages/react-components
+  
+  publish-react-component-library-latest:
+    name: Publish @bcgov/design-system-react-components@latest
+    ## Only run on a published release
+    if: ${{ github.event_name == 'release' && github.event.action == 'published' && github.repository == 'bcgov/design-system' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Read .nvmrc
+        run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
+        working-directory: ./packages/react-components
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./packages/react-components
+
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Build with Rollup script
+        run: npm run rollup
+        working-directory: ./packages/react-components
+
+      - name: Set up .npmrc configuration
+        run: echo "//registry.npmjs.org/" > ~/.npmrc
+
+      - name: Publish to npm @latest
+        run: npm publish --tag latest
         working-directory: ./packages/react-components
