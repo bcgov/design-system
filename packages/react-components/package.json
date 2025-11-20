@@ -1,6 +1,11 @@
 {
   "name": "@bcgov/design-system-react-components",
   "version": "0.5.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcgov/design-system.git",
+    "directory": "packages/react-components"
+  },
   "type": "module",
   "scripts": {
     "rollup": "rm -rf dist && rollup -c --bundleConfigAsCjs",
