@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Button } from "../components";
 import { ButtonProps } from "@/components/Button";
@@ -11,7 +11,7 @@ const meta = {
   },
   argTypes: {
     size: {
-      options: ["medium", "small"],
+      options: ["large", "medium", "small", "xsmall"],
       control: { type: "radio" },
       description: "Defaults to 'medium', also supports 'small",
     },
@@ -164,6 +164,14 @@ export const Danger: Story = {
   },
 };
 
+export const Large: Story = {
+  ...ButtonTemplate,
+  args: {
+    children: "Large",
+    size: "large"
+  },
+};
+
 export const Medium: Story = {
   ...ButtonTemplate,
   args: {
@@ -177,5 +185,13 @@ export const Small: Story = {
   args: {
     children: "Small",
     size: "small",
+  },
+};
+
+export const ExtraSmall: Story = {
+  ...ButtonTemplate,
+  args: {
+    children: "Extra small",
+    size: "xsmall",
   },
 };
