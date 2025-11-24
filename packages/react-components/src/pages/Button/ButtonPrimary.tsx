@@ -26,6 +26,36 @@ const iconPlaceholder = (
   </svg>
 );
 
+function ButtonPrimaryLarge() {
+  return (
+    <Button size="large" variant="primary">
+      Primary Button Large
+    </Button >);
+}
+
+function ButtonPrimaryLargeDisabled() {
+  return (
+    <Button size="large" variant="primary" isDisabled>
+      Primary Button Large Disabled
+    </Button >);
+}
+
+function ButtonPrimaryLargeIcon() {
+  return (
+    <Button size="large" variant="primary" isIconButton>
+      {iconPlaceholder}
+    </Button>
+  );
+}
+
+function ButtonPrimaryLargeIconDisabled() {
+  return (
+    <Button size="large" variant="primary" isDisabled isIconButton>
+      {iconPlaceholder}
+    </Button>
+  );
+}
+
 function ButtonPrimaryMedium() {
   return (
     <Button size="medium" variant="primary">
@@ -91,6 +121,10 @@ function ButtonPrimarySmallIconDisabled() {
 }
 
 export {
+  ButtonPrimaryLarge,
+  ButtonPrimaryLargeDisabled,
+  ButtonPrimaryLargeIcon,
+  ButtonPrimaryLargeIconDisabled,
   ButtonPrimaryMedium,
   ButtonPrimaryMediumDisabled,
   ButtonPrimaryMediumIcon,
