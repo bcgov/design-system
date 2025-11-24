@@ -55,7 +55,11 @@
   width: 40px;
   min-width: 40px;
 }
-.bcds-react-aria-Button.large {
+.bcds-react-aria-Button.large, /* this doesn't work on its own */
+.bcds-react-aria-Button.large.primary, 
+.bcds-react-aria-Button.large.secondary, 
+.bcds-react-aria-Button.large.tertiary, 
+.bcds-react-aria-Button.large.link {
   min-height: 48px;
 }
 .bcds-react-aria-Button.large.icon {
