@@ -120,6 +120,36 @@ function ButtonPrimarySmallIconDisabled() {
   );
 }
 
+function ButtonPrimaryXSmall() {
+  return (
+    <Button size="xsmall" variant="primary">
+      Primary Button X-Small
+    </Button >);
+}
+
+function ButtonPrimaryXSmallDisabled() {
+  return (
+    <Button size="xsmall" variant="primary" isDisabled>
+      Primary Button X-Small Disabled
+    </Button >);
+}
+
+function ButtonPrimaryXSmallIcon() {
+  return (
+    <Button size="xsmall" variant="primary" isIconButton>
+      {iconPlaceholder}
+    </Button>
+  );
+}
+
+function ButtonPrimaryXSmallIconDisabled() {
+  return (
+    <Button size="xsmall" variant="primary" isDisabled isIconButton>
+      {iconPlaceholder}
+    </Button>
+  );
+}
+
 export {
   ButtonPrimaryLarge,
   ButtonPrimaryLargeDisabled,
@@ -133,4 +163,8 @@ export {
   ButtonPrimarySmallDisabled,
   ButtonPrimarySmallIcon,
   ButtonPrimarySmallIconDisabled,
+  ButtonPrimaryXSmall,
+  ButtonPrimaryXSmallDisabled,
+  ButtonPrimaryXSmallIcon,
+  ButtonPrimaryXSmallIconDisabled
 };
