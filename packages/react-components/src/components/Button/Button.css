@@ -6,7 +6,6 @@
   align-items: center;
   gap: var(--layout-padding-small);
   font: var(--typography-regular-body);
-  padding: var(--layout-padding-none) var(--layout-padding-medium);
 }
 .bcds-react-aria-Button[data-disabled] {
   cursor: not-allowed;
@@ -26,8 +25,8 @@
 /* Sizes */
 .bcds-react-aria-Button.xsmall {
   min-height: 24px;
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
   font: var(--typography-regular-label);
-  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
 }
 .bcds-react-aria-Button.xsmall.icon {
   padding: unset;
@@ -37,8 +36,7 @@
 }
 .bcds-react-aria-Button.small {
   min-height: 32px;
-  padding-left: var(--layout-padding-small);
-  padding-right: var(--layout-padding-small);
+  padding: var(--layout-padding-none) 0.75rem /* to be replaced with new token later */;
   font: var(--typography-regular-small-body);
 }
 .bcds-react-aria-Button.small.icon {
@@ -49,6 +47,7 @@
 }
 .bcds-react-aria-Button.medium {
   min-height: 40px;
+  padding: var(--layout-padding-none) var(--layout-padding-medium);
 }
 .bcds-react-aria-Button.medium.icon {
   padding: unset;
@@ -62,6 +61,7 @@
 .bcds-react-aria-Button.large.tertiary, 
 .bcds-react-aria-Button.large.link {
   min-height: 48px;
+  padding: var(--layout-padding-none) var(--layout-padding-large);
 }
 .bcds-react-aria-Button.large.icon {
   padding: unset;
