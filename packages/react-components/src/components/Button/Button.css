@@ -38,6 +38,8 @@
   min-width: 24px;
 }
 .bcds-react-aria-Button.small {
+  padding-left: var(--layout-padding-small);
+  padding-right: var(--layout-padding-small);
   min-height: 32px;
 }
 .bcds-react-aria-Button.small.icon {
