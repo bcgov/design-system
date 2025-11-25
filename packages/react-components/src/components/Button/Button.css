@@ -11,7 +11,7 @@
 .bcds-react-aria-Button[data-disabled] {
   cursor: not-allowed;
 }
-.bcds-react-aria-Button[data-focused] {
+.bcds-react-aria-Button[data-focus-visible] {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
