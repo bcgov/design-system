@@ -6,8 +6,7 @@
   align-items: center;
   gap: var(--layout-padding-small);
   font: var(--typography-regular-body);
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: var(--layout-padding-none) var(--layout-padding-medium);
 }
 .bcds-react-aria-Button[data-disabled] {
   cursor: not-allowed;
