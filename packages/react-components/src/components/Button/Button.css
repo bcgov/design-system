@@ -28,8 +28,7 @@
 .bcds-react-aria-Button.xsmall {
   min-height: 24px;
   font: var(--typography-regular-label);
-  padding-left: var(--layout-padding-xsmall);
-  padding-right: var(--layout-padding-xsmall);
+  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
 }
 .bcds-react-aria-Button.xsmall.icon {
   padding: unset;
