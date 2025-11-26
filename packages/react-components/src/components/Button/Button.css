@@ -6,13 +6,11 @@
   align-items: center;
   gap: var(--layout-padding-small);
   font: var(--typography-regular-body);
-  padding-left: 16px;
-  padding-right: 16px;
 }
 .bcds-react-aria-Button[data-disabled] {
   cursor: not-allowed;
 }
-.bcds-react-aria-Button[data-focused] {
+.bcds-react-aria-Button[data-focus-visible] {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
@@ -25,8 +23,21 @@
 }
 
 /* Sizes */
+.bcds-react-aria-Button.xsmall {
+  min-height: 24px;
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
+  font: var(--typography-regular-label);
+}
+.bcds-react-aria-Button.xsmall.icon {
+  padding: unset;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+}
 .bcds-react-aria-Button.small {
   min-height: 32px;
+  padding: var(--layout-padding-none) 0.75rem /* to be replaced with new token later */;
+  font: var(--typography-regular-small-body);
 }
 .bcds-react-aria-Button.small.icon {
   padding: unset;
@@ -36,12 +47,27 @@
 }
 .bcds-react-aria-Button.medium {
   min-height: 40px;
+  padding: var(--layout-padding-none) var(--layout-padding-medium);
 }
 .bcds-react-aria-Button.medium.icon {
   padding: unset;
   height: 40px;
   width: 40px;
   min-width: 40px;
+}
+.bcds-react-aria-Button.large, /* this doesn't work on its own */
+.bcds-react-aria-Button.large.primary, 
+.bcds-react-aria-Button.large.secondary, 
+.bcds-react-aria-Button.large.tertiary, 
+.bcds-react-aria-Button.large.link {
+  min-height: 48px;
+  padding: var(--layout-padding-none) var(--layout-padding-large);
+}
+.bcds-react-aria-Button.large.icon {
+  padding: unset;
+  height: 48px;
+  width: 48px;
+  min-width: 48px;
 }
 
 /* Variant - Primary */
