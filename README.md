@@ -11,7 +11,7 @@ The B.C. Design System comprises 4 core elements:
 - [Figma and React component libraries](#component-library)
 - [Documentation hub](https://gov.bc.ca/designsystem)
 
-The new design system replaces [the legacy design system](#legacy-documentation), which has now been archived.
+The new design system replaces [the legacy design system](/legacy), which has now been archived.
 
 ## B.C. Design Tokens
 
