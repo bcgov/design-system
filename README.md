@@ -1,4 +1,4 @@
-# B.C. Design System [![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+# B.C. Design System
 
 > [!NOTE]
 > Effective November 12, 2025, we are resuming development of the design system. If you have questions or ideas, email [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca) or [open an issue](https://github.com/bcgov/design-system/issues).
@@ -11,7 +11,7 @@ The B.C. Design System comprises 4 core elements:
 - [Figma and React component libraries](#component-library)
 - [Documentation hub](https://gov.bc.ca/designsystem)
 
-The new design system replaces [the legacy design system](#legacy-documentation), which has now been archived.
+The new design system replaces [the legacy design system](/legacy), which has now been archived.
 
 ## B.C. Design Tokens
 

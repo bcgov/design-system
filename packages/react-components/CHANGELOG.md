@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.5.2
+
+This is a patch release that brings new options and refinements to the Button component.
+
+### Changed
+
+#### Button component
+
+- Added new `large` and `xsmall` size variants
+- Adjusted padding on all size variants to scale more consistently
+- Focus ring is now displayed only on keyboard focus, using `data-focus-visible` attribute
+
+This release uses:
+
+- `react-aria-components` v1.13.0
+- `@bcgov/design-tokens` v3.2.0
+
 ## 0.5.1
 
 ### Added
@@ -9,6 +26,7 @@
 This release uses:
 
 - `react-aria-components` v1.6.0
+- `@bcgov/design-tokens` v3.2.0
 
 ## 0.5.0
 

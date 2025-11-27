@@ -1,7 +1,5 @@
 # @bcgov/design-system-react-components
 
-[![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
-
 This package contains a library of React components built using [React Aria Components](https://react-spectrum.adobe.com/react-aria/components.html) to implement the [B.C. Design System](https://gov.bc.ca/designsystem).
 
 Questions? Please email the <a href="mailto:DesignSystem@gov.bc.ca">GDX OSS Design Team</a>.
@@ -153,13 +151,14 @@ Run `npm run vite-dev` to access the Vite React demo app.
 
 #### npm package
 
-To generate an updated copy of the package for distribution, run the included Rollup script: `npm run rollup`.
+Publishing new versions of the package to npm is done via GitHub Actions.
 
-This will place artifacts in the `dist` folder, which is targeted for publishing in `package.json` with the [`files` field](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#files).
+GitHub Actions are located in `/.github/workflows` in the project root. Actions are included to:
 
-Update the package version in `package.json` and run `npm publish` to push a new version.
-
-To publish a beta/release candidate version, use `npm publish --tag next`.
+- Build the Storybook and Vite applications on merge to `main`
+- Test (Jest and Playwright) on pull request
+- Publish new versions of the library on npm (`next` tag) on merge to `main`
+- Publish new versions of the library on npm (`latest` tag) when a GitHub release is published
 
 #### GitHub release
 
@@ -177,12 +176,6 @@ From the [Releases page](https://github.com/bcgov/design-system/releases), click
 
 For "Choose a tag", select the tag you created. For the previous tag, use the previous version of the same package.
 
-Copy the Changelog notes for the new version and link to the npm page for the new version.
+Copy the changelog notes for the new version and link to the npm page for the new version. Ensure that `package.json` has been updated with the correct version number.
 
-### GitHub Actions
-
-GitHub Actions are located in `/.github/workflows` in the project root. Actions are included to:
-
-- Build the Storybook and Vite applications on merge to `main`
-- Test (Jest and Playwright) on pull request
-- Publish new versions of the library on npm (`next` tag) on merge to `main`
+Publish the release to publish the latest version of the library on npm. The release tag must start with `@bcgov/design-system-react-components` to trigger the publish workflow.
