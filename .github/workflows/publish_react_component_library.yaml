@@ -72,8 +72,10 @@ jobs:
 
   publish-react-component-library-latest:
     name: Publish @bcgov/design-system-react-components@latest
-    ## Publish a `latest` version when a new release is published.
-    if: ${{ github.event_name == 'release' }}
+    # Publish a `latest` version only when a release is published that targets
+    # the React components package via a tag like:
+    # @bcgov/design-system-react-components@v1.2.3
+    if: ${{ github.event_name == 'release' && startsWith(github.event.release.tag_name, '@bcgov/design-system-react-components') }}
     runs-on: ubuntu-latest
 
     steps:
