@@ -1,4 +1,4 @@
-name: Publish @bcgov/design-system-react-components to npm @next
+name: Publish @bcgov/design-system-react-components to npm
 
 on:
   push:
