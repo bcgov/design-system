@@ -15,8 +15,8 @@
     "test": "npx jest --config=./jest.config.ts",
     "test:ci": "npx jest --ci --config=./jest.config.ts",
     "test:watch": "npx jest --watch --config=./jest.config.ts",
-    "test-storybook": "test-storybook",
-    "test-storybook:ci": "test-storybook --maxWorkers=2",
+    "test-storybook": "npx vitest --project=storybook",
+    "test-storybook:ci": "npx vitest --project=storybook",
     "vite-dev": "vite",
     "vite-build": "tsc && vite build",
     "vite-preview": "vite preview"
