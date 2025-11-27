@@ -15,8 +15,8 @@
     "test": "npx jest --config=./jest.config.ts",
     "test:ci": "npx jest --ci --config=./jest.config.ts",
     "test:watch": "npx jest --watch --config=./jest.config.ts",
-    "test-storybook": "test-storybook",
-    "test-storybook:ci": "test-storybook --maxWorkers=2",
+    "test-storybook": "npx vitest --project=storybook",
+    "test-storybook:ci": "npx vitest --project=storybook",
     "vite-dev": "vite",
     "vite-build": "tsc && vite build",
     "vite-preview": "vite preview"
@@ -45,6 +45,7 @@
     "@storybook/addon-a11y": "^10.1.0",
     "@storybook/addon-docs": "^10.1.0",
     "@storybook/addon-links": "^10.1.0",
+    "@storybook/addon-vitest": "^10.1.0",
     "@storybook/react-vite": "^10.1.0",
     "@storybook/test-runner": "0.24.1",
     "@testing-library/jest-dom": "6.5.0",
@@ -72,7 +73,11 @@
     "ts-node": "10.9.2",
     "tslib": "2.7.0",
     "typescript": "5.6.2",
-    "vite": "7.2.4"
+    "vite": "7.2.4",
+    "vitest": "^4.0.14",
+    "playwright": "^1.57.0",
+    "@vitest/browser-playwright": "^4.0.14",
+    "@vitest/coverage-v8": "^4.0.14"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "*"
