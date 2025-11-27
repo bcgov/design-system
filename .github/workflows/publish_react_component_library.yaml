@@ -1,22 +1,22 @@
-name: Publish @bcgov/design-system-react-components to npm @next
+name: Publish @bcgov/design-system-react-components to npm
 
 on:
-  pull_request:
+  push:
     paths:
       - packages/react-components/**
     branches: [main]
-    types: [closed]
+  release:
+    types: [published]
 
 permissions:
-  id-token: write  # Required for OIDC
+  id-token: write # Required for OIDC
   contents: read
 
 jobs:
   publish-react-component-library-next:
     name: Publish @bcgov/design-system-react-components@next
-    # Only run on merge, not close without merge AND
-    # only run in bcgov/design-system repo, not forks.
-    if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
+    # Publish a `next` version on push to main branch.
+    if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -69,11 +69,13 @@ jobs:
       - name: Publish to npm @next
         run: npm publish --tag next
         working-directory: ./packages/react-components
-  
+
   publish-react-component-library-latest:
     name: Publish @bcgov/design-system-react-components@latest
-    ## Only run on a published release
-    if: ${{ github.event_name == 'release' && github.event.action == 'published' && github.repository == 'bcgov/design-system' }}
+    # Publish a `latest` version only when a release is published that targets
+    # the React components package via a tag like:
+    # @bcgov/design-system-react-components@v1.2.3
+    if: ${{ github.event_name == 'release' && startsWith(github.event.release.tag_name, '@bcgov/design-system-react-components') }}
     runs-on: ubuntu-latest
 
     steps:
@@ -92,9 +94,6 @@ jobs:
       - name: Install dependencies
         run: npm install
         working-directory: ./packages/react-components
-
-      - name: Install jq
-        run: sudo apt-get install -y jq
 
       - name: Build with Rollup script
         run: npm run rollup
