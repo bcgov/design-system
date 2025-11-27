@@ -178,4 +178,4 @@ For "Choose a tag", select the tag you created. For the previous tag, use the pr
 
 Copy the changelog notes for the new version and link to the npm page for the new version. Ensure that `package.json` has been updated with the correct version number.
 
-Publish the release to publish the latest version of the library on npm.
+Publish the release to publish the latest version of the library on npm. The release tag must start with `@bcgov/design-system-react-components` to trigger the publish workflow.
