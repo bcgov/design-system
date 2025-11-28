@@ -60,14 +60,14 @@ export default function NumberField({
     >
       <Label>{label}</Label>
       <Group
-        className={`bcds-react-aria-NumberField-Group ${
+        className={`bcds-react-aria-NumberField--Group ${
           errorMode ? " isError" : ""
         } ${isReadOnly ? " isReadOnly" : ""}`}
       >
         {/*minus sign*/}
         <Button
           slot="decrement"
-          className={`bcds-react-aria-Button ${
+          className={`bcds-react-aria-NumberField--Button ${
             isReadOnly ? " isReadOnly" : ""
           } ${errorMode ? " isError" : ""}`}
         >
@@ -189,13 +189,13 @@ export default function NumberField({
           </svg>
         </Button>
         <div
-          className={`bcds-react-aria-NumberField-input-wrapper ${
+          className={`bcds-react-aria-NumberField--InputWrapper ${
             isReadOnly ? " isReadOnly" : ""
           }`}
         >
-          <div className={"bcds-react-aria-NumberField-input-container"}>
+          <div className={"bcds-react-aria-NumberField--InputContainer"}>
             <Input
-              className={`bcds-react-aria-NumberField-Input ${
+              className={`bcds-react-aria-NumberField--Input ${
                 isReadOnly ? " isReadOnly" : ""
               } ${errorMode ? " isError" : ""}`}
             />
@@ -221,7 +221,7 @@ export default function NumberField({
         {/* plus sign */}
         <Button
           slot="increment"
-          className={`bcds-react-aria-Button ${
+          className={`bcds-react-aria-NumberField--Button ${
             isReadOnly ? " isReadOnly" : ""
           } ${errorMode ? " isError" : ""}`}
         >
