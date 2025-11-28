@@ -104,6 +104,10 @@ jobs:
         run: npm run build
         working-directory: ./packages/design-tokens
 
+      - name: Prepare npm package for publishing
+        run: npm run prepare-npm-package
+        working-directory: ./packages/design-tokens
+
       - name: Set up .npmrc configuration
         run: echo "//registry.npmjs.org/" > ~/.npmrc
 
