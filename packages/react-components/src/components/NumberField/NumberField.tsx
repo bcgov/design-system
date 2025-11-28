@@ -25,40 +25,48 @@ export default function NumberField({
   label,
   description,
   errorMessage,
-  isInvalid,
   ...props
 }: NumberFieldProps) {
   return (
-    <ReactAriaNumberField {...props} className={`bcds-react-aria-NumberField`}>
-      <Label className="bcds-react-aria-NumberField--Label">{label}</Label>
-      <Group className="bcds-react-aria-NumberField--Group">
-        <div className="bcds-react-aria-NumberField--Button">
-          <Button slot="decrement" variant="tertiary" isIconButton>
-            <SvgMinusIcon />
-          </Button>
-        </div>
-        <div className="bcds-react-aria-NumberField--InputContainer">
-          <Input className="bcds-react-aria-NumberField--Input" />
-          {isInvalid && <SvgExclamationIcon />}
-        </div>
-        <div className="bcds-react-aria-NumberField--Button">
-          <Button slot="increment" variant="tertiary" isIconButton>
-            <SvgPlusIcon />
-          </Button>
-        </div>
-      </Group>
-      {description && (
-        <Text
-          className="bcds-react-aria-NumberField--Description"
-          slot="description"
-        >
-          {description}
-        </Text>
-      )}
-      {isInvalid && (
-        <FieldError className="bcds-react-aria-NumberField--Error">
-          {errorMessage}
-        </FieldError>
+    <ReactAriaNumberField className="bcds-react-aria-NumberField" {...props}>
+      {({ isInvalid }) => (
+        <>
+          {label && (
+            <Label className="bcds-react-aria-NumberField--Label">
+              {label}
+            </Label>
+          )}
+
+          <Group className="bcds-react-aria-NumberField--Group">
+            <div className="bcds-react-aria-NumberField--Button">
+              <Button slot="decrement" variant="tertiary" isIconButton>
+                <SvgMinusIcon />
+              </Button>
+            </div>
+            <div className="bcds-react-aria-NumberField--InputContainer">
+              <Input className="bcds-react-aria-NumberField--Input" />
+              {isInvalid && <SvgExclamationIcon />}
+            </div>
+            <div className="bcds-react-aria-NumberField--Button">
+              <Button slot="increment" variant="tertiary" isIconButton>
+                <SvgPlusIcon />
+              </Button>
+            </div>
+          </Group>
+          {description && (
+            <Text
+              className="bcds-react-aria-NumberField--Description"
+              slot="description"
+            >
+              {description}
+            </Text>
+          )}
+          {isInvalid && (
+            <FieldError className="bcds-react-aria-NumberField--Error">
+              {errorMessage}
+            </FieldError>
+          )}
+        </>
       )}
     </ReactAriaNumberField>
   );
