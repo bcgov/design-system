@@ -1,4 +1,4 @@
-/* The component implements the X Mark icon from Font Awesome: https://fontawesome.com/icons/xmark */
+/* This component implements the X Mark icon from Font Awesome: https://fontawesome.com/icons/xmark */
 export default function SvgCloseIcon({ id = "close-icon" }) {
   return (
     <svg

@@ -21,6 +21,10 @@
   border-radius: 0px;
 }
 
+.bcds-react-aria-NumberField--Button > svg {
+  color: var(--icons-color-secondary);
+}
+
 .bcds-react-aria-NumberField--InputContainer {
   display: flex;
   flex: 1;
@@ -136,4 +140,17 @@
 .bcds-react-aria-NumberField--Group:hover
   .bcds-react-aria-NumberField--Button.isError:last-child {
   border-left: 1px solid var(--support-border-color-danger);
+}
+
+/* Styles for the text description below the input field */
+.bcds-react-aria-NumberField--Description {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
+}
+
+/* Styles for the error message slot */
+.bcds-react-aria-NumberField--Error {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-danger);
 }

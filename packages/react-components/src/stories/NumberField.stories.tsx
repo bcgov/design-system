@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import {NumberField} from "../components";
+import { NumberField } from "../components";
 
 const meta = {
   title: "Components/NumberField",
@@ -8,13 +8,13 @@ const meta = {
   parameters: {
     layout: "centered",
     parameters: {
-      layout: "centered"
+      layout: "centered",
     },
   },
   argTypes: {
     value: {
       control: "number",
-      description: "Desire default value to display"
+      description: "Desire default value to display",
     },
     description: {
       control: "text",
@@ -22,7 +22,8 @@ const meta = {
     },
     formatOptions: {
       control: "object",
-      description: "Option to format the sign displaying along with the number and All options supported by Intl.NumberFormat"
+      description:
+        "Option to format the sign displaying along with the number and All options supported by Intl.NumberFormat",
     },
     minValue: {
       control: "number",
@@ -34,7 +35,8 @@ const meta = {
     },
     step: {
       control: "number",
-      description: "value for the increment/decrement steps each click would take",
+      description:
+        "value for the increment/decrement steps each click would take",
     },
     isReadOnly: {
       control: "boolean",
@@ -52,7 +54,6 @@ const meta = {
       description: "Click/press handler",
     },
   },
-  args: {},
 } satisfies Meta<typeof NumberField>;
 
 export default meta;
@@ -60,8 +61,7 @@ type Story = StoryObj<typeof meta>;
 
 export const NumberFieldTemplate: Story = {
   args: {
-    onChange: () => {}
+    onChange: () => {},
   },
   render: ({ ...args }) => <NumberField {...args} />,
 };
-

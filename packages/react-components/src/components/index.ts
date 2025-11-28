@@ -32,6 +32,8 @@ export { default as SvgChevronUpIcon } from "./Icons/SvgChevronUpIcon";
 export { default as SvgChevronDownIcon } from "./Icons/SvgChevronDownIcon";
 export { default as SvgCloseIcon } from "./Icons/SvgCloseIcon";
 export { default as SvgInfoIcon } from "./Icons/SvgInfoIcon";
+export { default as SvgMinusIcon } from "./Icons/SvgMinusIcon";
+export { default as SvgPlusIcon } from "./Icons/SvgPlusIcon";
 export { default as SvgTooltipArrowUp } from "./Icons/SvgTooltipArrowUp";
 export { default as Tag } from "./Tag";
 export { default as TagGroup } from "./TagGroup";

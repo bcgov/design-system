@@ -1,4 +1,4 @@
-/* The component implements the Check icon from Font Awesome: https://fontawesome.com/icons/check */
+/* This component implements the Check icon from Font Awesome: https://fontawesome.com/icons/check */
 export default function SvgCheckIcon({ id = "check-icon" }) {
   return (
     <svg
