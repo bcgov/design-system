@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import {NumberField} from "../components";
 
@@ -7,7 +7,9 @@ const meta = {
   component: NumberField,
   parameters: {
     layout: "centered",
-    parameters: { controls: { sort: 'requiredFirst' } },
+    parameters: {
+      layout: "centered"
+    },
   },
   argTypes: {
     value: {
@@ -48,9 +50,6 @@ const meta = {
     },
     onChange: {
       description: "Click/press handler",
-      type: {
-        required: true
-      }
     },
   },
   args: {},
