@@ -1,10 +1,11 @@
 name: Publish @bcgov/design-system-react-components to npm
 
 on:
-  push:
+  pull_request:
     paths:
-      - packages/react-components/**
+      - packages/design-system-react-components/**
     branches: [main]
+    types: [closed]
   release:
     types: [published]
 
@@ -15,8 +16,8 @@ permissions:
 jobs:
   publish-react-component-library-next:
     name: Publish @bcgov/design-system-react-components@next
-    # Publish a `next` version on push to main branch.
-    if: ${{ github.event_name == 'push' }}
+    # Publish a `next` version on PR merge to main branch.
+    if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
     runs-on: ubuntu-latest
 
     steps:

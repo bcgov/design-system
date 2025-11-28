@@ -1,10 +1,11 @@
 name: Publish @bcgov/design-tokens to npm
 
 on:
-  push:
+  pull_request:
     paths:
       - packages/design-tokens/**
     branches: [main]
+    types: [closed]
   release:
     types: [published]
 
@@ -15,8 +16,8 @@ permissions:
 jobs:
   publish-design-tokens-next:
     name: Publish @bcgov/design-tokens@next
-    # Publish a `next` version on push to main branch.
-    if: ${{ github.event_name == 'push' }}
+    # Publish a `next` version on PR merge to main branch.
+    if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
     runs-on: ubuntu-latest
 
     steps:
