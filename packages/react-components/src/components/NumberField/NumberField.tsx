@@ -16,19 +16,24 @@ import SvgPlusIcon from "../Icons/SvgPlusIcon";
 import "./NumberField.css";
 
 interface NumberFieldProps extends ReactAriaNumberFieldProps {
+  size?: "small" | "medium";
   label?: string;
   description?: string;
   errorMessage?: string;
 }
 
 export default function NumberField({
+  size = "medium",
   label,
   description,
   errorMessage,
   ...props
 }: NumberFieldProps) {
   return (
-    <ReactAriaNumberField className="bcds-react-aria-NumberField" {...props}>
+    <ReactAriaNumberField
+      className={`bcds-react-aria-NumberField ${size}`}
+      {...props}
+    >
       {({ isInvalid }) => (
         <>
           {label && (

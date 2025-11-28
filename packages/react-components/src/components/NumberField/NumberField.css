@@ -35,23 +35,21 @@
 }
 
 .bcds-react-aria-NumberField--Group > button > svg {
-  color: var(--icons-color-secondary);
+  color: var(--icons-color-primary);
 }
 
 .bcds-react-aria-NumberField--InputContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: var(--layout-margin-small);
+  padding: var(--layout-padding-small) 0.75rem;
 }
 
 .bcds-react-aria-NumberField--Input {
-  display: inline-flex;
-  flex-direction: row;
   box-sizing: border-box;
   border: none;
-  height: 40px;
   font: var(--typography-regular-body);
-  padding: var(--layout-padding-small) 0.75rem;
 }
 
 /* Styles for the text label above the input field */
