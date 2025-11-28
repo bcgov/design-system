@@ -53,6 +53,9 @@ const meta = {
     onChange: {
       description: "Click/press handler",
     },
+    errorMessage: {
+      control: "text",
+    },
   },
 } satisfies Meta<typeof NumberField>;
 
@@ -61,7 +64,19 @@ type Story = StoryObj<typeof meta>;
 
 export const NumberFieldTemplate: Story = {
   args: {
+    label: "Label",
+    description: "Description",
     onChange: () => {},
   },
   render: ({ ...args }) => <NumberField {...args} />,
+};
+
+export const NumberFieldInvalid: Story = {
+  ...NumberFieldTemplate,
+  args: {
+    isInvalid: true,
+    label: "Label",
+    description: "Description",
+    errorMessage: "Error message",
+  },
 };
