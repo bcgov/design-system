@@ -16,11 +16,33 @@ See `dist/README.md` (the README shipped with [the published package](https://ww
 
 ## Steps to update and publish tokens
 
+Publishing new versions of the package to npm is done via GitHub Actions. GitHub Actions are located in `/.github/workflows` in the project root.
+
+To publish a new release:
+
 1. Update token data in the JSON file `input/tokens.json` and the `version` field in `./package.json`.
 2. Manually update composite tokens to include parent category. Ex: `{fontWeights.regular}` must become `{typography.fontWeights.regular}`.
-3. Run `npm run build` to run Style Dictionary, transforming the raw JSON data into usable token formats.
-4. [Ensure `jq` is installed](https://jqlang.github.io/jq/) on your system and then run `npm run prepare-npm-package` to copy the contents of `build` into `dist`.
-5. Run `npm run publish-npm-package` to publish the contents of `dist` to npm (defaults to using the `latest` tag). If publishing to the pre-release `next` tag, use `npm run publish-npm-package -- --tag next`.
+3. Create and publish a GitHub release to trigger the publishing workflow
+
+### GitHub release
+
+GitHub releases are based on git tags.
+
+```sh
+# From your `main` branch, cut a new tag locally based on a commit SHA
+git tag @bcgov/design-system-design-tokens@<version here> <commit SHA here>
+
+# Push the tag to GitHub
+git push --tags
+```
+
+From the [Releases page](https://github.com/bcgov/design-system/releases), click "Draft a new release".
+
+For "Choose a tag", select the tag you created. For the previous tag, use the previous version of the same package.
+
+Copy the changelog notes for the new version and link to the npm page for the new version. Ensure that `package.json` has been updated with the correct version number.
+
+Publish the release to publish the latest version of the library on npm. The release tag must start with `@bcgov/design-tokens` to trigger the publish workflow.
 
 ## Test the build script
 
