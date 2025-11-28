@@ -72,8 +72,8 @@ jobs:
         run: echo "//registry.npmjs.org/" > ~/.npmrc
 
       - name: Publish to npm @next
-        run: npm run publish-npm-package -- --access public --tag next
-        working-directory: ./packages/design-tokens
+        run: npm publish --tag next
+        working-directory: ./packages/design-tokens/dist
 
   publish-design-tokens-latest:
     name: Publish @bcgov/design-tokens@latest
@@ -113,4 +113,4 @@ jobs:
 
       - name: Publish to npm @latest
         run: npm publish --tag latest
-        working-directory: ./packages/design-tokens
+        working-directory: ./packages/design-tokens/dist
