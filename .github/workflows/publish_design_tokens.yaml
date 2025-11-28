@@ -1,22 +1,22 @@
-name: Publish @bcgov/design-tokens to npm @next
+name: Publish @bcgov/design-tokens to npm
 
 on:
-  pull_request:
+  push:
     paths:
       - packages/design-tokens/**
     branches: [main]
-    types: [closed]
+  release:
+    types: [published]
 
 permissions:
-  id-token: write  # Required for OIDC
+  id-token: write # Required for OIDC
   contents: read
 
 jobs:
-  publish-design-tokens:
+  publish-design-tokens-next:
     name: Publish @bcgov/design-tokens@next
-    # Only run on merge, not close without merge AND
-    # only run in bcgov/design-system repo, not forks.
-    if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
+    # Publish a `next` version on push to main branch.
+    if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -47,9 +47,6 @@ jobs:
         run: npm run prepare-npm-package
         working-directory: ./packages/design-tokens
 
-      - name: Set up .npmrc configuration
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-
       # Use `jq` to change the package.json version to look like:
       #
       #   <version in package.json>-pr<PR # that caused the workflow run>
@@ -70,8 +67,45 @@ jobs:
         shell: bash
         working-directory: ./packages/design-tokens/dist
 
-      - name: Publish to npm with @next tag
+      - name: Set up .npmrc configuration
+        run: echo "//registry.npmjs.org/" > ~/.npmrc
+
+      - name: Publish to npm @next
         run: npm run publish-npm-package -- --access public --tag next
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        working-directory: ./packages/design-tokens
+
+  publish-design-tokens-latest:
+    name: Publish @bcgov/design-tokens@latest
+    # Publish a `latest` version only when a release is published that targets
+    # the design tokens package via a tag like:
+    # @bcgov/design-tokens@v1.2.3
+    if: ${{ github.event_name == 'release' && contains(github.event.release.tag_name, 'bcgov/design-tokens') }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Read .nvmrc
+        run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
+        working-directory: ./packages/design-tokens
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./packages/design-tokens
+
+      - name: Run build script
+        run: npm run build
+        working-directory: ./packages/design-tokens
+
+      - name: Set up .npmrc configuration
+        run: echo "//registry.npmjs.org/" > ~/.npmrc
+
+      - name: Publish to npm @latest
+        run: npm publish --tag latest
         working-directory: ./packages/design-tokens
