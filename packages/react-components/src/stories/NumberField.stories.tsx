@@ -12,6 +12,7 @@ const meta = {
     },
   },
   argTypes: {
+    size: { control: "radio", options: ["small", "medium"] },
     value: {
       control: "number",
       description: "Desire default value to display",

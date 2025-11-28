@@ -14,7 +14,6 @@
   gap: var(--layout-margin-none);
   align-items: center;
   box-sizing: border-box;
-  height: 40px;
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
@@ -50,6 +49,15 @@
   box-sizing: border-box;
   border: none;
   font: var(--typography-regular-body);
+}
+
+/* Sizing */
+.bcds-react-aria-NumberField.medium > .bcds-react-aria-NumberField--Group {
+  height: 40px;
+}
+
+.bcds-react-aria-NumberField.small > .bcds-react-aria-NumberField--Group {
+  height: 32px;
 }
 
 /* Styles for the text label above the input field */

@@ -44,18 +44,40 @@ export default function NumberField({
 
           <Group className="bcds-react-aria-NumberField--Group">
             <div className="bcds-react-aria-NumberField--Button">
-              <Button slot="decrement" variant="tertiary" isIconButton>
-                <SvgMinusIcon />
-              </Button>
+              {size == "small" ? (
+                <Button
+                  size="small"
+                  slot="decrement"
+                  variant="tertiary"
+                  isIconButton
+                >
+                  <SvgMinusIcon />
+                </Button>
+              ) : (
+                <Button slot="decrement" variant="tertiary" isIconButton>
+                  <SvgMinusIcon />
+                </Button>
+              )}
             </div>
             <div className="bcds-react-aria-NumberField--InputContainer">
               <Input className="bcds-react-aria-NumberField--Input" />
               {isInvalid && <SvgExclamationIcon />}
             </div>
             <div className="bcds-react-aria-NumberField--Button">
-              <Button slot="increment" variant="tertiary" isIconButton>
-                <SvgPlusIcon />
-              </Button>
+              {size == "small" ? (
+                <Button
+                  size="small"
+                  slot="increment"
+                  variant="tertiary"
+                  isIconButton
+                >
+                  <SvgPlusIcon />
+                </Button>
+              ) : (
+                <Button slot="increment" variant="tertiary" isIconButton>
+                  <SvgPlusIcon />
+                </Button>
+              )}
             </div>
           </Group>
           {description && (
