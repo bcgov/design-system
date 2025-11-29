@@ -1,7 +1,7 @@
 .bcds-react-aria-NumberField {
   display: flex;
   flex-direction: column;
-  gap: var(--layout-margin-none);
+  gap: var(--layout-margin-hair);
   /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
   align-self: stretch;
   max-width: -moz-available;
@@ -11,7 +11,6 @@
 .bcds-react-aria-NumberField--Group {
   display: inline-flex;
   flex-direction: row;
-  gap: var(--layout-margin-none);
   align-items: center;
   box-sizing: border-box;
   border: var(--layout-border-width-small) solid
@@ -48,7 +47,6 @@
 .bcds-react-aria-NumberField--Input {
   box-sizing: border-box;
   border: none;
-  font: var(--typography-regular-body);
 }
 
 /* Sizing */
@@ -56,8 +54,16 @@
   height: 40px;
 }
 
+.bcds-react-aria-NumberField.medium .bcds-react-aria-NumberField--Input {
+  font: var(--typography-regular-body);
+}
+
 .bcds-react-aria-NumberField.small > .bcds-react-aria-NumberField--Group {
   height: 32px;
+}
+
+.bcds-react-aria-NumberField.small .bcds-react-aria-NumberField--Input {
+  font: var(--typography-regular-small-body);
 }
 
 /* Styles for the text label above the input field */
