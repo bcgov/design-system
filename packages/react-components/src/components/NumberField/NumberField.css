@@ -66,6 +66,18 @@
   font: var(--typography-regular-small-body);
 }
 
+/* Focus state */
+.bcds-react-aria-NumberField--Group[data-focus-visible] {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+}
+
+.bcds-react-aria-NumberField--Group[data-focus-visible]
+  .bcds-react-aria-NumberField--Input {
+  outline: none;
+}
+
 /* Styles for the text label above the input field */
 .bcds-react-aria-NumberField--Label {
   font: var(--typography-regular-small-body);
