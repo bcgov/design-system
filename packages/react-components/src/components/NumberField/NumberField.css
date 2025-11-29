@@ -7,7 +7,6 @@
   max-width: -moz-available;
   max-width: -webkit-fill-available;
 }
-
 .bcds-react-aria-NumberField--Group {
   display: inline-flex;
   flex-direction: row;
@@ -17,25 +16,21 @@
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
 }
-
 .bcds-react-aria-NumberField--Group
   > .bcds-react-aria-NumberField--Button:first-child {
   border-right: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-none);
 }
-
 .bcds-react-aria-NumberField--Group
   > .bcds-react-aria-NumberField--Button:last-child {
   border-left: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-none);
 }
-
 .bcds-react-aria-NumberField--Group > button > svg {
   color: var(--icons-color-primary);
 }
-
 .bcds-react-aria-NumberField--InputContainer {
   display: flex;
   flex-direction: row;
@@ -43,7 +38,6 @@
   gap: var(--layout-margin-small);
   padding: var(--layout-padding-small) 0.75rem;
 }
-
 .bcds-react-aria-NumberField--Input {
   box-sizing: border-box;
   border: none;
@@ -53,29 +47,14 @@
 .bcds-react-aria-NumberField.medium > .bcds-react-aria-NumberField--Group {
   height: 40px;
 }
-
 .bcds-react-aria-NumberField.medium .bcds-react-aria-NumberField--Input {
   font: var(--typography-regular-body);
 }
-
 .bcds-react-aria-NumberField.small > .bcds-react-aria-NumberField--Group {
   height: 32px;
 }
-
 .bcds-react-aria-NumberField.small .bcds-react-aria-NumberField--Input {
   font: var(--typography-regular-small-body);
-}
-
-/* Focus state */
-.bcds-react-aria-NumberField--Group[data-focus-visible] {
-  outline: solid var(--layout-border-width-medium)
-    var(--surface-color-border-active);
-  outline-offset: var(--layout-margin-hair);
-}
-
-.bcds-react-aria-NumberField--Group[data-focus-visible]
-  .bcds-react-aria-NumberField--Input {
-  outline: none;
 }
 
 /* Styles for the text label above the input field */
@@ -90,14 +69,33 @@
   color: var(--typography-color-secondary);
 }
 
-/* Styles for the error icon and message */
+/* Focus state */
+.bcds-react-aria-NumberField--Group[data-focus-visible] {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+}
+.bcds-react-aria-NumberField--Group[data-focus-visible]
+  .bcds-react-aria-NumberField--Input {
+  outline: none;
+}
+
+/* Error state */
 .bcds-react-aria-NumberField--Error {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-danger);
 }
-
 .bcds-react-aria-NumberField[data-invalid]
   .bcds-react-aria-NumberField--InputContainer
   > svg {
   color: var(--icons-color-danger);
+}
+.bcds-react-aria-NumberField[data-invalid]
+  > .bcds-react-aria-NumberField--Group {
+  border-color: var(--support-border-color-danger);
+}
+.bcds-react-aria-NumberField[data-invalid]
+  > .bcds-react-aria-NumberField--Group
+  > .bcds-react-aria-NumberField--Button {
+  border-color: var(--support-border-color-danger);
 }
