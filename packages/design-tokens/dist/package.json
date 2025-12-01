@@ -4,7 +4,8 @@
   "description": "Design tokens for B.C. Design System",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bcgov/design-system.git"
+    "url": "git+https://github.com/bcgov/design-system.git",
+    "directory": "packages/design-tokens"
   },
   "keywords": [
     "design system",
