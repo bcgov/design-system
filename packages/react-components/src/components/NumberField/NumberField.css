@@ -84,57 +84,12 @@
   border-color: var(--surface-color-border-dark);
 }
 .bcds-react-aria-NumberField--Group[data-hovered]
-  > .bcds-react-aria-NumberField--Button:first-child {
-  border-color: var(--surface-color-border-dark);
-}
-.bcds-react-aria-NumberField--Group[data-hovered]
-  > .bcds-react-aria-NumberField--Button:last-child {
+  > .bcds-react-aria-NumberField--Button {
   border-color: var(--surface-color-border-dark);
 }
 .bcds-react-aria-NumberField--Group[data-hovered][data-focus-within]
   > .bcds-react-aria-NumberField--Button {
   border-color: var(--surface-color-border-active);
-}
-/* BCDS Button style tweaks  */
-.bcds-react-aria-NumberField--Group[data-hovered]
-  > .bcds-react-aria-NumberField--Button:first-child
-  > .bcds-react-aria-Button {
-  border-top: var(--layout-border-width-small) solid
-    var(--surface-color-border-dark);
-  border-bottom: var(--layout-border-width-small) solid
-    var(--surface-color-border-dark);
-  border-top-right-radius: var(--layout-border-radius-none);
-  border-bottom-right-radius: var(--layout-border-radius-none);
-}
-.bcds-react-aria-NumberField--Group[data-hovered][data-focus-within]
-  > .bcds-react-aria-NumberField--Button:first-child
-  > .bcds-react-aria-Button {
-  border-top: var(--layout-border-width-small) solid
-    var(--surface-color-border-active);
-  border-bottom: var(--layout-border-width-small) solid
-    var(--surface-color-border-active);
-  border-top-right-radius: var(--layout-border-radius-none);
-  border-bottom-right-radius: var(--layout-border-radius-none);
-}
-.bcds-react-aria-NumberField--Group[data-hovered]
-  > .bcds-react-aria-NumberField--Button:last-child
-  > .bcds-react-aria-Button {
-  border-top: var(--layout-border-width-small) solid
-    var(--surface-color-border-dark);
-  border-bottom: var(--layout-border-width-small) solid
-    var(--surface-color-border-dark);
-  border-top-left-radius: var(--layout-border-radius-none);
-  border-bottom-left-radius: var(--layout-border-radius-none);
-}
-.bcds-react-aria-NumberField--Group[data-hovered][data-focus-within]
-  > .bcds-react-aria-NumberField--Button:last-child
-  > .bcds-react-aria-Button {
-  border-top: var(--layout-border-width-small) solid
-    var(--surface-color-border-active);
-  border-bottom: var(--layout-border-width-small) solid
-    var(--surface-color-border-active);
-  border-top-left-radius: var(--layout-border-radius-none);
-  border-bottom-left-radius: var(--layout-border-radius-none);
 }
 
 /* Focus state */
@@ -142,11 +97,7 @@
   border-color: var(--surface-color-border-active);
 }
 .bcds-react-aria-NumberField--Group[data-focus-within]
-  > .bcds-react-aria-NumberField--Button:first-child {
-  border-color: var(--surface-color-border-active);
-}
-.bcds-react-aria-NumberField--Group[data-focus-within]
-  > .bcds-react-aria-NumberField--Button:last-child {
+  > .bcds-react-aria-NumberField--Button {
   border-color: var(--surface-color-border-active);
 }
 .bcds-react-aria-NumberField--Group[data-focus-within]
@@ -183,7 +134,7 @@
   border-color: var(--support-border-color-danger);
 }
 
-/* Disabled state */
+/* Disabled and read-only states */
 .bcds-react-aria-NumberField[data-disabled]
   > .bcds-react-aria-NumberField--Group {
   background-color: var(--surface-color-forms-disabled);
@@ -198,4 +149,101 @@
   > .bcds-react-aria-NumberField--Button
   > .bcds-react-aria-Button[data-disabled] {
   background-color: var(--surface-color-forms-disabled);
+}
+/* BCDS Button style tweaks */
+/* Hover/focus states */
+.bcds-react-aria-NumberField--Group[data-hovered]
+  > .bcds-react-aria-NumberField--Button
+  > .bcds-react-aria-Button {
+  border-top: var(--layout-border-width-small) solid
+    var(--surface-color-border-dark);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-dark);
+}
+.bcds-react-aria-NumberField--Group[data-hovered]
+  > .bcds-react-aria-NumberField--Button:first-child
+  > .bcds-react-aria-Button {
+  border-top-right-radius: var(--layout-border-radius-none);
+  border-bottom-right-radius: var(--layout-border-radius-none);
+}
+.bcds-react-aria-NumberField--Group[data-hovered]
+  > .bcds-react-aria-NumberField--Button:last-child
+  > .bcds-react-aria-Button {
+  border-top-left-radius: var(--layout-border-radius-none);
+  border-bottom-left-radius: var(--layout-border-radius-none);
+}
+.bcds-react-aria-NumberField--Group[data-hovered][data-focus-within]
+  > .bcds-react-aria-NumberField--Button
+  > .bcds-react-aria-Button {
+  border-top: var(--layout-border-width-small) solid
+    var(--surface-color-border-active);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-active);
+}
+.bcds-react-aria-NumberField--Group[data-hovered][data-focus-within]
+  > .bcds-react-aria-NumberField--Button:first-child
+  > .bcds-react-aria-Button {
+  border-top-right-radius: var(--layout-border-radius-none);
+  border-bottom-right-radius: var(--layout-border-radius-none);
+}
+.bcds-react-aria-NumberField--Group[data-hovered][data-focus-within]
+  > .bcds-react-aria-NumberField--Button:last-child
+  > .bcds-react-aria-Button {
+  border-top-left-radius: var(--layout-border-radius-none);
+  border-bottom-left-radius: var(--layout-border-radius-none);
+}
+/* Disabled/read-only states */
+.bcds-react-aria-NumberField--Group[data-disabled] > .bcds-react-aria-Button {
+  border-top: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+}
+.bcds-react-aria-NumberField--Group[data-disabled]
+  > .bcds-react-aria-NumberField--Button:first-child
+  > .bcds-react-aria-Button {
+  border-top-right-radius: var(--layout-border-radius-none);
+  border-bottom-right-radius: var(--layout-border-radius-none);
+}
+.bcds-react-aria-NumberField--Group[data-disabled]
+  > .bcds-react-aria-NumberField--Button:last-child
+  > .bcds-react-aria-Button {
+  border-top-left-radius: var(--layout-border-radius-none);
+  border-bottom-left-radius: var(--layout-border-radius-none);
+}
+.bcds-react-aria-NumberField--Group
+  > .bcds-react-aria-NumberField--Button
+  > .bcds-react-aria-Button[data-disabled] {
+  border-top: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+}
+.bcds-react-aria-NumberField--Group[data-hovered]
+  > .bcds-react-aria-NumberField--Button
+  > .bcds-react-aria-Button[data-disabled] {
+  border-top: var(--layout-border-width-small) solid
+    var(--surface-color-border-dark);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-dark);
+}
+.bcds-react-aria-NumberField--Group[data-focus-within]
+  > .bcds-react-aria-NumberField--Button
+  .bcds-react-aria-Button[data-disabled] {
+  border-top: var(--layout-border-width-small) solid
+    var(--surface-color-border-active);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-active);
+}
+.bcds-react-aria-NumberField--Group[data-focus-within]
+  > .bcds-react-aria-NumberField--Button:first-child
+  > .bcds-react-aria-Button[data-disabled] {
+  border-top-right-radius: var(--layout-border-radius-none);
+  border-bottom-right-radius: var(--layout-border-radius-none);
+}
+.bcds-react-aria-NumberField--Group[data-focus-within]
+  > .bcds-react-aria-NumberField--Button:last-child
+  > .bcds-react-aria-Button[data-disabled] {
+  border-top-left-radius: var(--layout-border-radius-none);
+  border-bottom-left-radius: var(--layout-border-radius-none);
 }
