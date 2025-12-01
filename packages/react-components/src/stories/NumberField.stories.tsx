@@ -7,9 +7,6 @@ const meta = {
   component: NumberField,
   parameters: {
     layout: "centered",
-    parameters: {
-      layout: "centered",
-    },
   },
   argTypes: {
     size: { control: "radio", options: ["small", "medium"] },
@@ -67,17 +64,37 @@ export const NumberFieldTemplate: Story = {
   args: {
     label: "Label",
     description: "Description",
-    onChange: () => {},
   },
   render: ({ ...args }) => <NumberField {...args} />,
 };
 
-export const NumberFieldInvalid: Story = {
+export const Disabled: Story = {
   ...NumberFieldTemplate,
   args: {
-    isInvalid: true,
+    label: "Label",
+    description: "Description",
+    isDisabled: true,
+    value: 503,
+  },
+};
+
+export const ReadOnly: Story = {
+  ...NumberFieldTemplate,
+  args: {
+    label: "Label",
+    description: "Description",
+    isReadOnly: true,
+    value: 403,
+  },
+};
+
+export const Invalid: Story = {
+  ...NumberFieldTemplate,
+  args: {
     label: "Label",
     description: "Description",
     errorMessage: "Error message",
+    isInvalid: true,
+    value: 406,
   },
 };
