@@ -5,7 +5,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bcgov/design-system.git",
-    "directory": "packages/design-tokens"
+    "directory": "packages/design-tokens/dist"
   },
   "keywords": [
     "design system",
