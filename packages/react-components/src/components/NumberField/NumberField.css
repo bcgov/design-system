@@ -40,6 +40,8 @@
 .bcds-react-aria-NumberField--InputContainer {
   display: flex;
   flex-direction: row;
+  flex: 1 1 0;
+  min-width: 0;
   align-items: center;
   gap: var(--layout-margin-small);
   padding: var(--layout-padding-small) 0.75rem;
@@ -48,6 +50,7 @@
 .bcds-react-aria-NumberField--Input {
   box-sizing: border-box;
   border: none;
+  width: 100%;
 }
 
 /* Sizing */
