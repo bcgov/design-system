@@ -8,6 +8,7 @@
   max-width: -moz-available;
   max-width: -webkit-fill-available;
 }
+/* Input and controls */
 .bcds-react-aria-NumberField--Group {
   display: inline-flex;
   flex-direction: row;
@@ -17,21 +18,25 @@
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
 }
+/* Decrement button */
 .bcds-react-aria-NumberField--Group
   > .bcds-react-aria-NumberField--Button:first-child {
   border-right: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-none);
 }
+/* Increment button */
 .bcds-react-aria-NumberField--Group
   > .bcds-react-aria-NumberField--Button:last-child {
   border-left: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-none);
 }
+/* Button icons */
 .bcds-react-aria-NumberField--Group > button > svg {
   color: var(--icons-color-primary);
 }
+/* Input container */
 .bcds-react-aria-NumberField--InputContainer {
   display: flex;
   flex-direction: row;
@@ -39,6 +44,7 @@
   gap: var(--layout-margin-small);
   padding: var(--layout-padding-small) 0.75rem;
 }
+/* Input field */
 .bcds-react-aria-NumberField--Input {
   box-sizing: border-box;
   border: none;
@@ -81,6 +87,51 @@
 .bcds-react-aria-NumberField--Group[data-hovered]
   > .bcds-react-aria-NumberField--Button:last-child {
   border-color: var(--surface-color-border-dark);
+}
+.bcds-react-aria-NumberField--Group[data-hovered][data-focus-within]
+  > .bcds-react-aria-NumberField--Button {
+  border-color: var(--surface-color-border-active);
+}
+/* BCDS Button style tweaks  */
+.bcds-react-aria-NumberField--Group[data-hovered]
+  > .bcds-react-aria-NumberField--Button:first-child
+  > .bcds-react-aria-Button {
+  border-top: var(--layout-border-width-small) solid
+    var(--surface-color-border-dark);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-dark);
+  border-top-right-radius: var(--layout-border-radius-none);
+  border-bottom-right-radius: var(--layout-border-radius-none);
+}
+.bcds-react-aria-NumberField--Group[data-hovered][data-focus-within]
+  > .bcds-react-aria-NumberField--Button:first-child
+  > .bcds-react-aria-Button {
+  border-top: var(--layout-border-width-small) solid
+    var(--surface-color-border-active);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-active);
+  border-top-right-radius: var(--layout-border-radius-none);
+  border-bottom-right-radius: var(--layout-border-radius-none);
+}
+.bcds-react-aria-NumberField--Group[data-hovered]
+  > .bcds-react-aria-NumberField--Button:last-child
+  > .bcds-react-aria-Button {
+  border-top: var(--layout-border-width-small) solid
+    var(--surface-color-border-dark);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-dark);
+  border-top-left-radius: var(--layout-border-radius-none);
+  border-bottom-left-radius: var(--layout-border-radius-none);
+}
+.bcds-react-aria-NumberField--Group[data-hovered][data-focus-within]
+  > .bcds-react-aria-NumberField--Button:last-child
+  > .bcds-react-aria-Button {
+  border-top: var(--layout-border-width-small) solid
+    var(--surface-color-border-active);
+  border-bottom: var(--layout-border-width-small) solid
+    var(--surface-color-border-active);
+  border-top-left-radius: var(--layout-border-radius-none);
+  border-bottom-left-radius: var(--layout-border-radius-none);
 }
 
 /* Focus state */
@@ -139,4 +190,9 @@
   .bcds-react-aria-NumberField--Input {
   background-color: var(--surface-color-forms-disabled);
   cursor: not-allowed;
+}
+.bcds-react-aria-NumberField--Group
+  > .bcds-react-aria-NumberField--Button
+  > .bcds-react-aria-Button[data-disabled] {
+  background-color: var(--surface-color-forms-disabled);
 }
