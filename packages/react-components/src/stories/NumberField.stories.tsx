@@ -9,14 +9,48 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
-    size: { control: "radio", options: ["small", "medium"] },
     value: {
       control: "number",
-      description: "Desire default value to display",
+      description: "The current value of the input field (controlled)",
+    },
+    defaultValue: {
+      control: "number",
+      description: "The default value (uncontrolled)",
+    },
+    label: {
+      control: "text",
+      description: "Text label displayed above the input field",
     },
     description: {
       control: "text",
-      description: "Text to show below the component",
+      description: "Explanatory text displayed below the input field",
+    },
+    errorMessage: {
+      control: "text",
+      description:
+        "Message displayed when `isInvalid` prop is passed (usually populated dynamically)",
+    },
+    isRequired: {
+      control: "boolean",
+      description: "Whether an input is required",
+    },
+    isReadOnly: {
+      control: "boolean",
+      description: "Sets the field to read-only (focusable, non-interactable)",
+    },
+    isDisabled: {
+      control: "boolean",
+      description:
+        "Sets the field to disabled (non-focusable, non-interactable)",
+    },
+    isInvalid: {
+      control: "boolean",
+      description: "Whether the input is valid (usually set programmatically)",
+    },
+    size: {
+      control: "radio",
+      options: ["small", "medium"],
+      description: "Toggle size of input field and buttons",
     },
     formatOptions: {
       control: "object",
@@ -25,34 +59,19 @@ const meta = {
     },
     minValue: {
       control: "number",
-      description: "Set the minimum value",
+      description: "Smallest allowed value",
     },
     maxValue: {
       control: "number",
-      description: "Set the maximum value",
+      description: "Largest allowed value",
     },
     step: {
       control: "number",
       description:
         "value for the increment/decrement steps each click would take",
     },
-    isReadOnly: {
-      control: "boolean",
-      description: "Is the NumberField read-only",
-    },
-    isDisabled: {
-      control: "boolean",
-      description: "Is the NumberField disabled",
-    },
-    label: {
-      control: "text",
-      description: "Header of the component",
-    },
     onChange: {
       description: "Click/press handler",
-    },
-    errorMessage: {
-      control: "text",
     },
   },
 } satisfies Meta<typeof NumberField>;
