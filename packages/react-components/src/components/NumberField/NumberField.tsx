@@ -6,6 +6,7 @@ import {
   Input,
   Label,
   Text,
+  ValidationResult,
 } from "react-aria-components";
 
 import Button from "../Button";
@@ -19,7 +20,7 @@ interface NumberFieldProps extends ReactAriaNumberFieldProps {
   size?: "small" | "medium";
   label?: string;
   description?: string;
-  errorMessage?: string;
+  errorMessage?: string | ((validation: ValidationResult) => string);
 }
 
 export default function NumberField({
@@ -32,6 +33,7 @@ export default function NumberField({
   return (
     <ReactAriaNumberField
       className={`bcds-react-aria-NumberField ${size}`}
+      minValue={0}
       {...props}
     >
       {({ isRequired, isInvalid }) => (

@@ -33,15 +33,18 @@ const meta = {
     isRequired: {
       control: "boolean",
       description: "Whether an input is required",
+      table: { defaultValue: { summary: "false" } },
     },
     isReadOnly: {
       control: "boolean",
       description: "Sets the field to read-only (focusable, non-interactable)",
+      table: { defaultValue: { summary: "false" } },
     },
     isDisabled: {
       control: "boolean",
       description:
         "Sets the field to disabled (non-focusable, non-interactable)",
+      table: { defaultValue: { summary: "false" } },
     },
     isInvalid: {
       control: "boolean",
@@ -60,6 +63,7 @@ const meta = {
     minValue: {
       control: "number",
       description: "Smallest allowed value",
+      table: { defaultValue: { summary: "0" } },
     },
     maxValue: {
       control: "number",
@@ -69,14 +73,17 @@ const meta = {
       control: "number",
       description:
         "The amount that the input value changes with each increment or decrement",
+      table: { defaultValue: { summary: "1" } },
     },
     isWheelDisabled: {
       control: "boolean",
       description:
         "Whether the user can change the value using the scroll wheel",
+      table: { defaultValue: { summary: "false" } },
     },
     onChange: {
       description: "Click/press handler",
+      control: { type: "object" },
     },
   },
 } satisfies Meta<typeof NumberField>;
@@ -92,13 +99,21 @@ export const NumberFieldTemplate: Story = {
   render: ({ ...args }) => <NumberField {...args} />,
 };
 
+export const Small: Story = {
+  args: {
+    label: "This is a small NumberField",
+    description: "Description",
+    size: "small",
+  },
+};
+
 export const Required: Story = {
   ...NumberFieldTemplate,
   args: {
     label: "This input is mandatory",
     description: "Description",
     isRequired: true,
-    value: 401,
+    defaultValue: 401,
   },
 };
 
@@ -108,7 +123,7 @@ export const Disabled: Story = {
     label: "This input is disabled",
     description: "A disabled input cannot be focused or interacted with",
     isDisabled: true,
-    value: 503,
+    defaultValue: 503,
   },
 };
 
@@ -119,7 +134,7 @@ export const ReadOnly: Story = {
     description:
       "A read-only input can be focused, but cannot be interacted with",
     isReadOnly: true,
-    value: 403,
+    defaultValue: 403,
   },
 };
 
@@ -131,6 +146,17 @@ export const Invalid: Story = {
       "This component supports custom, real-time and server-side data validation",
     errorMessage: "Error message",
     isInvalid: true,
-    value: 406,
+    defaultValue: 406,
+    validationBehavior: "native",
+  },
+};
+
+export const MinimumValue: Story = {
+  ...NumberFieldTemplate,
+  args: {
+    label: "This input has a minimum value",
+    description: "Its value cannot be lower than 5",
+    minValue: 5,
+    defaultValue: 10,
   },
 };
