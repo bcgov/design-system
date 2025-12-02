@@ -68,7 +68,12 @@ const meta = {
     step: {
       control: "number",
       description:
-        "value for the increment/decrement steps each click would take",
+        "The amount that the input value changes with each increment or decrement",
+    },
+    isWheelDisabled: {
+      control: "boolean",
+      description:
+        "Whether the user can change the value using the scroll wheel",
     },
     onChange: {
       description: "Click/press handler",
