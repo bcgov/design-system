@@ -95,46 +95,24 @@ export default function NumberField({
             {variant == "stepper" && (
               <div className="bcds-react-aria-NumberField--Stepper">
                 <div className="bcds-react-aria-NumberField--StepperButton">
-                  {size == "small" ? (
-                    <Button
-                      size="xsmall"
-                      slot="increment"
-                      variant="tertiary"
-                      isIconButton
-                    >
-                      <SvgPlusIcon />
-                    </Button>
-                  ) : (
-                    <Button
-                      size="small"
-                      slot="increment"
-                      variant="tertiary"
-                      isIconButton
-                    >
-                      <SvgPlusIcon />
-                    </Button>
-                  )}
+                  <Button
+                    size="xsmall"
+                    slot="increment"
+                    variant="tertiary"
+                    isIconButton
+                  >
+                    <SvgPlusIcon />
+                  </Button>
                 </div>
                 <div className="bcds-react-aria-NumberField--StepperButton">
-                  {size == "small" ? (
-                    <Button
-                      size="xsmall"
-                      slot="decrement"
-                      variant="tertiary"
-                      isIconButton
-                    >
-                      <SvgMinusIcon />
-                    </Button>
-                  ) : (
-                    <Button
-                      size="small"
-                      slot="decrement"
-                      variant="tertiary"
-                      isIconButton
-                    >
-                      <SvgMinusIcon />
-                    </Button>
-                  )}
+                  <Button
+                    size="xsmall"
+                    slot="decrement"
+                    variant="tertiary"
+                    isIconButton
+                  >
+                    <SvgMinusIcon />
+                  </Button>
                 </div>
               </div>
             )}
