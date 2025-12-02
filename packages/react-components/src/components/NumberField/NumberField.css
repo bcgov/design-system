@@ -85,6 +85,12 @@
   color: var(--typography-color-primary);
 }
 
+/* Styles for the "required" label */
+.bcds-react-aria-NumberField--Label.required {
+  color: var(--typography-color-secondary);
+  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
+}
+
 /* Styles for the text description below the input field */
 .bcds-react-aria-NumberField--Description {
   font: var(--typography-regular-small-body);

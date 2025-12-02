@@ -34,11 +34,16 @@ export default function NumberField({
       className={`bcds-react-aria-NumberField ${size}`}
       {...props}
     >
-      {({ isInvalid }) => (
+      {({ isRequired, isInvalid }) => (
         <>
           {label && (
             <Label className="bcds-react-aria-NumberField--Label">
               {label}
+              {isRequired && (
+                <span className="bcds-react-aria-NumberField--Label required">
+                  (required)
+                </span>
+              )}
             </Label>
           )}
 
