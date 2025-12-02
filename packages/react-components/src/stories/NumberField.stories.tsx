@@ -87,11 +87,21 @@ export const NumberFieldTemplate: Story = {
   render: ({ ...args }) => <NumberField {...args} />,
 };
 
+export const Required: Story = {
+  ...NumberFieldTemplate,
+  args: {
+    label: "This input is mandatory",
+    description: "Description",
+    isRequired: true,
+    value: 401,
+  },
+};
+
 export const Disabled: Story = {
   ...NumberFieldTemplate,
   args: {
-    label: "Label",
-    description: "Description",
+    label: "This input is disabled",
+    description: "A disabled input cannot be focused or interacted with",
     isDisabled: true,
     value: 503,
   },
@@ -100,8 +110,9 @@ export const Disabled: Story = {
 export const ReadOnly: Story = {
   ...NumberFieldTemplate,
   args: {
-    label: "Label",
-    description: "Description",
+    label: "This input is read-only",
+    description:
+      "A read-only input can be focused, but cannot be interacted with",
     isReadOnly: true,
     value: 403,
   },
@@ -110,8 +121,9 @@ export const ReadOnly: Story = {
 export const Invalid: Story = {
   ...NumberFieldTemplate,
   args: {
-    label: "Label",
-    description: "Description",
+    label: "This input is invalid",
+    description:
+      "This component supports custom, real-time and server-side data validation",
     errorMessage: "Error message",
     isInvalid: true,
     value: 406,
