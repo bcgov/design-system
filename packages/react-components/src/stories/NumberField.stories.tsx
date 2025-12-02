@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { NumberField } from "../components";
+import { NumberField, Select } from "../components";
+
+import { useState, type Key } from "react";
 
 const meta = {
   title: "Components/NumberField",
@@ -58,7 +60,7 @@ const meta = {
     formatOptions: {
       control: "object",
       description:
-        "Option to format the sign displaying along with the number and All options supported by Intl.NumberFormat",
+        "Additional formatting for the value (eg. units). Supports `Intl.NumberFormat()` values",
     },
     minValue: {
       control: "number",
@@ -158,5 +160,67 @@ export const MinimumValue: Story = {
     description: "Its value cannot be lower than 5",
     minValue: 5,
     defaultValue: 10,
+  },
+};
+
+export const Currency: Story = {
+  ...NumberFieldTemplate,
+  args: {
+    label: "This is a currency input",
+    description: "The 'step' for each increment is set to 0.01 (1 cent)",
+    formatOptions: {
+      style: "currency",
+      currency: "CAD",
+      currencyDisplay: "symbol",
+    },
+    defaultValue: 10,
+    step: 0.01,
+  },
+};
+
+export const DistanceUnits: Story = {
+  args: {
+    label: "This input is formatted in kilometres",
+    description:
+      "The Select dropdown on the right changes the unit, but does not convert the value.",
+    defaultValue: 1,
+    step: 0.1,
+  },
+  render: ({ ...args }) => {
+    const [unit, setUnit] = useState<string | undefined>("kilometer");
+    return (
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          gap: "10px",
+          alignItems: "center",
+        }}
+      >
+        <NumberField
+          formatOptions={{
+            style: "unit",
+            unit: unit,
+            unitDisplay: "long",
+          }}
+          {...args}
+        />
+        <Select
+          items={[
+            { id: "mile", label: "Miles" },
+            { id: "kilometer", label: "Kilometres" },
+          ]}
+          defaultValue="kilometer"
+          value={unit}
+          onChange={(v: Key | null) => {
+            if (typeof v === "string") {
+              setUnit(v);
+            } else if (v === null) {
+              setUnit(undefined);
+            }
+          }}
+        />
+      </div>
+    );
   },
 };
