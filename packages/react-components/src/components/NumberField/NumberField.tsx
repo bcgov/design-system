@@ -17,6 +17,7 @@ import SvgPlusIcon from "../Icons/SvgPlusIcon";
 import "./NumberField.css";
 
 interface NumberFieldProps extends ReactAriaNumberFieldProps {
+  variant?: "inline" | "stepper";
   size?: "small" | "medium";
   label?: string;
   description?: string;
@@ -24,6 +25,7 @@ interface NumberFieldProps extends ReactAriaNumberFieldProps {
 }
 
 export default function NumberField({
+  variant = "inline",
   size = "medium",
   label,
   description,
@@ -32,7 +34,7 @@ export default function NumberField({
 }: NumberFieldProps) {
   return (
     <ReactAriaNumberField
-      className={`bcds-react-aria-NumberField ${size}`}
+      className={`bcds-react-aria-NumberField ${size} ${variant}`}
       minValue={0}
       {...props}
     >
@@ -50,42 +52,92 @@ export default function NumberField({
           )}
 
           <Group className="bcds-react-aria-NumberField--Group">
-            <div className="bcds-react-aria-NumberField--Button">
-              {size == "small" ? (
-                <Button
-                  size="small"
-                  slot="decrement"
-                  variant="tertiary"
-                  isIconButton
-                >
-                  <SvgMinusIcon />
-                </Button>
-              ) : (
-                <Button slot="decrement" variant="tertiary" isIconButton>
-                  <SvgMinusIcon />
-                </Button>
-              )}
-            </div>
+            {variant == "inline" && (
+              <div className="bcds-react-aria-NumberField--Button">
+                {size == "small" ? (
+                  <Button
+                    size="small"
+                    slot="decrement"
+                    variant="tertiary"
+                    isIconButton
+                  >
+                    <SvgMinusIcon />
+                  </Button>
+                ) : (
+                  <Button slot="decrement" variant="tertiary" isIconButton>
+                    <SvgMinusIcon />
+                  </Button>
+                )}
+              </div>
+            )}
             <div className="bcds-react-aria-NumberField--InputContainer">
               <Input className="bcds-react-aria-NumberField--Input" />
               {isInvalid && <SvgExclamationIcon />}
             </div>
-            <div className="bcds-react-aria-NumberField--Button">
-              {size == "small" ? (
-                <Button
-                  size="small"
-                  slot="increment"
-                  variant="tertiary"
-                  isIconButton
-                >
-                  <SvgPlusIcon />
-                </Button>
-              ) : (
-                <Button slot="increment" variant="tertiary" isIconButton>
-                  <SvgPlusIcon />
-                </Button>
-              )}
-            </div>
+            {variant == "inline" && (
+              <div className="bcds-react-aria-NumberField--Button">
+                {size == "small" ? (
+                  <Button
+                    size="small"
+                    slot="increment"
+                    variant="tertiary"
+                    isIconButton
+                  >
+                    <SvgPlusIcon />
+                  </Button>
+                ) : (
+                  <Button slot="increment" variant="tertiary" isIconButton>
+                    <SvgPlusIcon />
+                  </Button>
+                )}
+              </div>
+            )}
+            {variant == "stepper" && (
+              <div className="bcds-react-aria-NumberField--Stepper">
+                <div className="bcds-react-aria-NumberField--StepperButton">
+                  {size == "small" ? (
+                    <Button
+                      size="xsmall"
+                      slot="increment"
+                      variant="tertiary"
+                      isIconButton
+                    >
+                      <SvgPlusIcon />
+                    </Button>
+                  ) : (
+                    <Button
+                      size="small"
+                      slot="increment"
+                      variant="tertiary"
+                      isIconButton
+                    >
+                      <SvgPlusIcon />
+                    </Button>
+                  )}
+                </div>
+                <div className="bcds-react-aria-NumberField--StepperButton">
+                  {size == "small" ? (
+                    <Button
+                      size="xsmall"
+                      slot="decrement"
+                      variant="tertiary"
+                      isIconButton
+                    >
+                      <SvgMinusIcon />
+                    </Button>
+                  ) : (
+                    <Button
+                      size="small"
+                      slot="decrement"
+                      variant="tertiary"
+                      isIconButton
+                    >
+                      <SvgMinusIcon />
+                    </Button>
+                  )}
+                </div>
+              </div>
+            )}
           </Group>
           {description && (
             <Text

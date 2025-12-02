@@ -9,6 +9,10 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
+    variant: {
+      control: "radio",
+      options: ["inline", "stepper"],
+    },
     value: {
       control: "number",
       description: "The current value of the input field (controlled)",
