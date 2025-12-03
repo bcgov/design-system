@@ -226,6 +226,30 @@ const sd = new StyleDictionary({
         },
       ],
     },
+    scss: {
+      transformGroup: "tokens-studio",
+      transforms: [
+        "bcds/typography/italic",
+        "bcds/color/uppercase",
+        "bcds/css/size/zero",
+        "name/kebab",
+      ],
+      buildPath: "build/scss/",
+      files: [
+        {
+          destination: "variables.scss",
+          format: "scss/map-deep",
+          filter: (t) => (
+            /* strip metadata */
+            !(['$themes', '$metadata'].includes(t))
+          ),
+          options: {
+            "mapName": "bcds",
+            "themeable": false
+          }
+        },
+      ],
+    },
   },
 });
 
