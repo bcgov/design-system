@@ -5,7 +5,6 @@ import {
   Group,
   Input,
   Label,
-  Text,
   ValidationResult,
 } from "react-aria-components";
 
@@ -13,6 +12,7 @@ import Button from "../Button";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 import SvgMinusIcon from "../Icons/SvgMinusIcon";
 import SvgPlusIcon from "../Icons/SvgPlusIcon";
+import Text from "../Text";
 
 import "./NumberField.css";
 
@@ -20,6 +20,7 @@ interface NumberFieldProps extends ReactAriaNumberFieldProps {
   size?: "small" | "medium";
   label?: string;
   description?: string;
+  unitLabel?: string;
   errorMessage?: string | ((validation: ValidationResult) => string);
 }
 
@@ -27,6 +28,7 @@ export default function NumberField({
   size = "medium",
   label,
   description,
+  unitLabel,
   errorMessage,
   ...props
 }: NumberFieldProps) {
@@ -68,6 +70,14 @@ export default function NumberField({
             </div>
             <div className="bcds-react-aria-NumberField--InputContainer">
               <Input className="bcds-react-aria-NumberField--Input" />
+              {unitLabel && (
+                <span
+                  className="bcds-react-aria-NumberField--UnitLabel"
+                  slot="label"
+                >
+                  {unitLabel}
+                </span>
+              )}
               {isInvalid && <SvgExclamationIcon />}
             </div>
             <div className="bcds-react-aria-NumberField--Button">

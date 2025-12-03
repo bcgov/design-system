@@ -79,22 +79,30 @@
   font: var(--typography-regular-small-body);
 }
 
-/* Styles for the text label above the input field */
+/* Label above the input field */
 .bcds-react-aria-NumberField--Label {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-primary);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
+}
+
+/* "Required" label */
+.bcds-react-aria-NumberField--Label.required {
+  color: var(--typography-color-secondary);
+  padding: var(--layout-padding-small) var(--layout-padding-xsmall);
+}
+
+/* Custom unit label */
+.bcds-react-aria-NumberField--UnitLabel {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-primary);
 }
 
-/* Styles for the "required" label */
-.bcds-react-aria-NumberField--Label.required {
-  color: var(--typography-color-secondary);
-  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
-}
-
-/* Styles for the text description below the input field */
+/* Description below the input field */
 .bcds-react-aria-NumberField--Description {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-secondary);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
 
 /* Hover state */
