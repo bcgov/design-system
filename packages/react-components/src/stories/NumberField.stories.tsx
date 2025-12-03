@@ -101,6 +101,8 @@ export const NumberFieldTemplate: Story = {
   args: {
     label: "Label",
     description: "Description",
+    defaultValue: 10,
+    size: "medium",
   },
   render: ({ ...args }) => <NumberField {...args} />,
 };
@@ -157,6 +159,17 @@ export const Invalid: Story = {
   },
 };
 
+export const IncrementStep: Story = {
+  ...NumberFieldTemplate,
+  args: {
+    label: "This NumberField changes by 10 with each press",
+    description:
+      "If a value is manually entered, it will automatically round up or down.",
+    defaultValue: 10,
+    step: 10,
+  },
+};
+
 export const MinimumValue: Story = {
   ...NumberFieldTemplate,
   args: {
@@ -193,7 +206,7 @@ export const Currency: Story = {
 
 export const DistanceUnits: Story = {
   args: {
-    label: "This input is formatted in kilometres",
+    label: "This input's units can be modified by the user",
     description:
       "The Select dropdown on the right changes the unit, but does not convert the value.",
     defaultValue: 1,
