@@ -1,7 +1,6 @@
 import { Menu, MenuItem, MenuTrigger, Popover } from "react-aria-components";
 
 import "./App.css";
-import * as tokens from "@bcgov/design-tokens/js";
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
 import { Button, Footer, FooterLinks, Header } from "@/components";
@@ -63,17 +62,7 @@ function App() {
       <Header title="B.C. Design System Kitchen Sink" />
       <Header
         logoLinkElement={
-          <button
-            aria-label="Home"
-            onClick={() => alert("Clicked")}
-            style={{
-              background: "none",
-              border: "none",
-              margin: "0",
-              padding: "0",
-              cursor: "pointer",
-            }}
-          />
+          <button aria-label="Home" onClick={() => alert("Clicked")} />
         }
         title="Header with custom logo anchor element"
       />
@@ -85,38 +74,12 @@ function App() {
           <a href="/#accessibility">Accessibility Statement</a>,
         ]}
       >
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        <div className="row">
           {isMedium ? (
-            <ul
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                font: tokens.typographyRegularBody,
-                listStyle: "none",
-                paddingLeft: 0,
-              }}
-            >
-              <li
-                style={{
-                  padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                }}
-              >
-                Link
-              </li>
-              <li
-                style={{
-                  padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                }}
-              >
-                Link
-              </li>
-              <li
-                style={{
-                  padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                }}
-              >
-                Link
-              </li>
+            <ul>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
             </ul>
           ) : (
             <MenuTrigger>
@@ -125,27 +88,9 @@ function App() {
               </Button>
               <Popover>
                 <Menu>
-                  <MenuItem
-                    style={{
-                      padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                    }}
-                  >
-                    Link
-                  </MenuItem>
-                  <MenuItem
-                    style={{
-                      padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                    }}
-                  >
-                    Link
-                  </MenuItem>
-                  <MenuItem
-                    style={{
-                      padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                    }}
-                  >
-                    Link
-                  </MenuItem>
+                  <MenuItem className="menu-item">Link</MenuItem>
+                  <MenuItem className="menu-item">Link</MenuItem>
+                  <MenuItem className="menu-item">Link</MenuItem>
                 </Menu>
               </Popover>
             </MenuTrigger>
