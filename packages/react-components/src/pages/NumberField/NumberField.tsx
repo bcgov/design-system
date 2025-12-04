@@ -1,20 +1,25 @@
 import { NumberField } from "@/components";
-import {useState} from "react";
 
 export default function NumberFieldPage() {
-  const [value, setValue] = useState(1);
-
-  function handleChange(num: number) {
-      setValue(num);
-  }
-
   return (
     <>
       <h2>NumberField</h2>
-      <NumberField label={"Normal mode"} onChange={handleChange} value={value}/>
-      <NumberField value={value} label={"Error mode"}/>
-      <NumberField value={value} label={"Disable mode"} onChange={(num) => handleChange(num)} isDisabled/>
-      <NumberField value={value} label={"Read only mode"} onChange={(num) => handleChange(num)} isReadOnly/>
+      <div className="col">
+        <div className="row">
+          <NumberField label="Default number field" />
+          <NumberField label="Small number field" size="small" />
+        </div>
+        <div className="row">
+          <NumberField
+            label="Error"
+            isInvalid
+            errorMessage={"This input is invalid"}
+            defaultValue={404}
+          />
+          <NumberField label="Disabled" isDisabled />
+          <NumberField label="Read-only" isReadOnly defaultValue={10} />
+        </div>
+      </div>
     </>
   );
 }

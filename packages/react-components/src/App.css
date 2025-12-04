@@ -16,3 +16,15 @@ main {
   padding: 2rem;
   max-width: 1100px;
 }
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-medium);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--layout-margin-medium);
+}
