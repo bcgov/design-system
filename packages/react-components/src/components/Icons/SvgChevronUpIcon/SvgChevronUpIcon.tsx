@@ -1,4 +1,4 @@
-/* The component implements the Chevron Up icon from Font Awesome: https://fontawesome.com/icons/chevron-up */
+/* This component implements the Chevron Up icon from Font Awesome: https://fontawesome.com/icons/chevron-up */
 export default function SvgChevronUpIcon({ id = "chevron-up-icon" }) {
   return (
     <svg

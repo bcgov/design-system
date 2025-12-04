@@ -15,6 +15,7 @@ import {
   CheckboxGroupPage,
   InlineAlertPage,
   ModalDialogPage,
+  NumberFieldPage,
   RadioGroupPage,
   SelectPage,
   TagGroupPage,
@@ -170,6 +171,7 @@ function App() {
         <TooltipPage />
         <TextAreaPage />
         <TextFieldPage />
+        <NumberFieldPage />
         <TextPage />
       </main>
       <Footer />
