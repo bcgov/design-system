@@ -62,7 +62,11 @@ function App() {
       <Header title="B.C. Design System Kitchen Sink" />
       <Header
         logoLinkElement={
-          <button aria-label="Home" onClick={() => alert("Clicked")} />
+          <button
+            aria-label="Home"
+            className="demo-header-button"
+            onClick={() => alert("Clicked")}
+          />
         }
         title="Header with custom logo anchor element"
       />
