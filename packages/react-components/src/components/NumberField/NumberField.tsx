@@ -22,6 +22,9 @@ interface NumberFieldProps extends ReactAriaNumberFieldProps {
   description?: string;
   unitLabel?: string;
   errorMessage?: string | ((validation: ValidationResult) => string);
+  isRequired?: boolean;
+  isDisabled?: boolean;
+  isInvalid?: boolean;
 }
 
 export default function NumberField({
