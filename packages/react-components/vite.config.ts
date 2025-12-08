@@ -14,4 +14,9 @@ export default defineConfig({
   build: {
     outDir: "vite-dist",
   },
+  server: {
+    headers: {
+      "Content-Security-Policy": "style-src 'self';",
+    },
+  },
 });
