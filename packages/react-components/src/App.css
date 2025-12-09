@@ -16,3 +16,34 @@ main {
   padding: 2rem;
   max-width: 1100px;
 }
+
+/* Header with custom logo anchor element */
+.demo-header-button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Layout */
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row > ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-left: 0;
+  font: var(--typography-regular-body);
+}
+
+.row > ul > li {
+  padding: var(--layout-padding-none) var(--layout-padding-medium);
+}
+
+.menu-item {
+  padding: var(--layout-padding-none) var(--layout-padding-medium);
+}
