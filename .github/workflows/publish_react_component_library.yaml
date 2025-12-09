@@ -1,11 +1,10 @@
 name: Publish @bcgov/design-system-react-components to npm
 
 on:
-  pull_request:
+  push:
     paths:
-      - packages/design-system-react-components/**
+      - packages/react-components/**
     branches: [main]
-    types: [closed]
   release:
     types: [published]
   workflow_dispatch:
