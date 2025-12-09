@@ -42,20 +42,20 @@ jobs:
 
       # Use `jq` to change the package.json version to look like:
       #
-      #   <version in package.json>-pr<PR # that caused the workflow run>
+      #   <version in package.json>-<commit # that caused the workflow run>
       #
-      # So package.json version v1.2.3 with a run caused by merging PR #456 to
+      # So package.json version v1.2.3 with a run caused by pushing to
       # `main` causes the version of the package on npm to look like:
       #
-      #   1.2.3-pr456
+      #   1.2.3-SHA#
       #
-      # This is to ensure that it's easy to map an npm version to a particular PR.
+      # This is to ensure that it's easy to map an npm version to a particular commit.
       #
       - name: Update version in package.json
         run: |
-          PR_NUMBER=${{ github.event.pull_request.number }}
+          COMMIT=${GITHUB_SHA}
           CURRENT_VERSION=$(jq -r '.version' package.json)
-          NEW_VERSION="${CURRENT_VERSION}-pr${PR_NUMBER}"
+          NEW_VERSION="${CURRENT_VERSION}-commit${COMMIT}"
           jq --arg new_version "$NEW_VERSION" '.version = $new_version' package.json > tmp.json && mv tmp.json package.json
         shell: bash
         working-directory: ./packages/react-components
