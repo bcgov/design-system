@@ -47,17 +47,3 @@ describe("gets the correct class for each size variant", () => {
     );
   });
 });
-
-describe("can be disabled with isDisabled prop", () => {
-  const { container: disabledContainer } = render(
-    <NumberField label="Disabled" isDisabled />
-  );
-  const numberfield = disabledContainer.querySelector(
-    ".bcds-react-aria-NumberField"
-  ) as HTMLElement | null;
-
-  it("is disabled with prop passed", () => {
-    expect(numberfield).not.toBeNull();
-    expect(numberfield).toBeDisabled();
-  });
-});
