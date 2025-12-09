@@ -159,6 +159,7 @@
 .bcds-react-aria-NumberField[data-disabled]
   .bcds-react-aria-NumberField--Input {
   background-color: var(--surface-color-forms-disabled);
+  color: var(--typography-color-disabled);
   cursor: not-allowed;
 }
 .bcds-react-aria-NumberField--Group
