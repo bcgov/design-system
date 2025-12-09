@@ -1,6 +1,7 @@
 import {
   NumberField as ReactAriaNumberField,
   NumberFieldProps as ReactAriaNumberFieldProps,
+  NumberFieldRenderProps as ReactAriaNumberFieldRenderProps,
   FieldError,
   Group,
   Input,
@@ -38,7 +39,7 @@ export default function NumberField({
       minValue={0}
       {...props}
     >
-      {({ isRequired, isInvalid }) => (
+      {({ isRequired, isInvalid }: ReactAriaNumberFieldRenderProps) => (
         <>
           {label && (
             <Label className="bcds-react-aria-NumberField--Label">
