@@ -1,4 +1,4 @@
-/* The component implements the Triangle Exclamation icon from Font Awesome: https://fontawesome.com/icons/triangle-exclamation */
+/* This component implements the Triangle Exclamation icon from Font Awesome: https://fontawesome.com/icons/triangle-exclamation */
 export default function SvgExclamationIcon({ id = "exclamation-icon" }) {
   return (
     <svg
