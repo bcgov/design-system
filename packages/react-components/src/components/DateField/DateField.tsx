@@ -5,6 +5,7 @@ import {
   DateInput,
   DateSegment,
   FieldError,
+  Group,
   ValidationResult,
   Label,
   Text,
@@ -43,7 +44,12 @@ export default function DateField<T extends DateValue>({
           </span>
         )}
       </Label>
-      <DateInput>{(segment) => <DateSegment segment={segment} />}</DateInput>
+      <Group className="bcds-react-aria-DateField--Group">
+        <DateInput className="bcds-react-aria-DateField--Input">
+          {(segment) => <DateSegment segment={segment} />}
+        </DateInput>
+      </Group>
+
       {description && (
         <Text
           slot="description"

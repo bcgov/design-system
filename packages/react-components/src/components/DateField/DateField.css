@@ -1,10 +1,47 @@
 .bcds-react-aria-DateField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-hair);
+  background-color: var(--surface-color-forms-default);
+  /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
+  align-self: stretch;
+  max-width: -moz-available;
+  max-width: -webkit-fill-available;
 }
+.bcds-react-aria-DateField--Group {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+}
+.bcds-react-aria-DateField--Input {
+  box-sizing: border-box;
+  border: none;
+  width: 100%;
+}
+
+/* Label */
 .bcds-react-aria-DateField--Label {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-primary);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
+/* Required indicator */
 .bcds-react-aria-DateField--Label.required {
+  color: var(--typography-color-secondary);
+  padding: var(--layout-padding-small) var(--layout-padding-xsmall);
 }
+/* Description */
 .bcds-react-aria-DateField--Description {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
+/* Error message */
 .bcds-react-aria-DateField--Error {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-danger);
 }
