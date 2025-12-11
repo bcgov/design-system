@@ -20,6 +20,8 @@ export interface DateFieldProps<T extends DateValue>
   errorMessage?: string | ((validation: ValidationResult) => string);
 }
 
+export type { DateValue };
+
 export default function DateField<T extends DateValue>({
   size = "medium",
   label,
