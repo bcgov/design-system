@@ -62,7 +62,7 @@ export default function DateField<T extends DateValue>({
         </DateInput>
         {!isPickerDisabled && (
           <>
-            <Button size={size} isIconButton>
+            <Button size="xsmall" variant="tertiary" isIconButton>
               <SvgCalendarIcon />
             </Button>
             <Popover>

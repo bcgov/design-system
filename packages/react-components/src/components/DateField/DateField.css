@@ -16,11 +16,19 @@
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
+  gap: var(--layout-margin-small);
+  padding: var(--layout-padding-xsmall) 0.75rem;
 }
 .bcds-react-aria-DateField--Input {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 0;
   box-sizing: border-box;
-  border: none;
   width: 100%;
+  min-width: 0;
+  align-items: center;
+  border: none;
+  font: var(--typography-regular-body);
 }
 .bcds-react-aria-DateField--Calendar {
 }
