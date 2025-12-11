@@ -1,6 +1,6 @@
 import {
-  DateField as ReactAriaDateField,
-  DateFieldProps as ReactAriaDateFieldProps,
+  DatePicker as ReactAriaDatePicker,
+  DatePickerProps as ReactAriaDatePickerProps,
   DateValue,
   DateInput,
   DateSegment,
@@ -12,10 +12,12 @@ import {
 } from "react-aria-components";
 
 import "./DateField.css";
+import Button from "../Button";
 
 export interface DateFieldProps<T extends DateValue>
-  extends ReactAriaDateFieldProps<T> {
+  extends ReactAriaDatePickerProps<T> {
   size?: "medium" | "small";
+  isPickerDisabled?: boolean;
   label?: string;
   description?: string;
   errorMessage?: string | ((validation: ValidationResult) => string);
@@ -29,10 +31,11 @@ export default function DateField<T extends DateValue>({
   description,
   isRequired,
   errorMessage,
+  isPickerDisabled = false,
   ...props
 }: DateFieldProps<T>) {
   return (
-    <ReactAriaDateField
+    <ReactAriaDatePicker
       className={`bcds-react-aria-DateField ${size}`}
       {...props}
     >
@@ -48,6 +51,7 @@ export default function DateField<T extends DateValue>({
         <DateInput className="bcds-react-aria-DateField--Input">
           {(segment) => <DateSegment segment={segment} />}
         </DateInput>
+        {!isPickerDisabled && <Button size={size} isIconButton />}
       </Group>
 
       {description && (
@@ -61,6 +65,6 @@ export default function DateField<T extends DateValue>({
       <FieldError className="bcds-react-aria-DateField--Error">
         {errorMessage}
       </FieldError>
-    </ReactAriaDateField>
+    </ReactAriaDatePicker>
   );
 }
