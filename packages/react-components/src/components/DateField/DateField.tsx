@@ -20,8 +20,8 @@ import Button from "../Button";
 import Dialog from "../Dialog";
 import Heading from "../Heading";
 import SvgCalendarIcon from "../Icons/SvgCalendarIcon";
-import SvgChevronUpIcon from "../Icons/SvgChevronUpIcon";
-import SvgChevronDownIcon from "../Icons/SvgChevronDownIcon";
+import SvgChevronLeftIcon from "../Icons/SvgChevronLeftIcon";
+import SvgChevronRightIcon from "../Icons/SvgChevronRightIcon";
 
 export interface DateFieldProps<T extends DateValue>
   extends ReactAriaDatePickerProps<T> {
@@ -75,7 +75,7 @@ export default function DateField<T extends DateValue>({
                       variant="tertiary"
                       isIconButton
                     >
-                      <SvgChevronUpIcon />
+                      <SvgChevronLeftIcon />
                     </Button>
                     <Heading level={6} />
                     <Button
@@ -84,7 +84,7 @@ export default function DateField<T extends DateValue>({
                       variant="tertiary"
                       isIconButton
                     >
-                      <SvgChevronDownIcon />
+                      <SvgChevronRightIcon />
                     </Button>
                   </header>
                   <CalendarGrid>
