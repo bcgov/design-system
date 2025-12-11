@@ -22,6 +22,14 @@
   border: none;
   width: 100%;
 }
+.bcds-react-aria-DateField--Calendar {
+}
+.bcds-react-aria-DateField--Calendar > header {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--layout-margin-small);
+}
 
 /* Label */
 .bcds-react-aria-DateField--Label {

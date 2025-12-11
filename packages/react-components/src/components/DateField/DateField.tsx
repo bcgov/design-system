@@ -1,4 +1,7 @@
 import {
+  Calendar,
+  CalendarCell,
+  CalendarGrid,
   DatePicker as ReactAriaDatePicker,
   DatePickerProps as ReactAriaDatePickerProps,
   DateValue,
@@ -6,13 +9,19 @@ import {
   DateSegment,
   FieldError,
   Group,
-  ValidationResult,
   Label,
+  Popover,
   Text,
+  ValidationResult,
 } from "react-aria-components";
 
 import "./DateField.css";
 import Button from "../Button";
+import Dialog from "../Dialog";
+import Heading from "../Heading";
+import SvgCalendarIcon from "../Icons/SvgCalendarIcon";
+import SvgChevronUpIcon from "../Icons/SvgChevronUpIcon";
+import SvgChevronDownIcon from "../Icons/SvgChevronDownIcon";
 
 export interface DateFieldProps<T extends DateValue>
   extends ReactAriaDatePickerProps<T> {
@@ -51,7 +60,41 @@ export default function DateField<T extends DateValue>({
         <DateInput className="bcds-react-aria-DateField--Input">
           {(segment) => <DateSegment segment={segment} />}
         </DateInput>
-        {!isPickerDisabled && <Button size={size} isIconButton />}
+        {!isPickerDisabled && (
+          <>
+            <Button size={size} isIconButton>
+              <SvgCalendarIcon />
+            </Button>
+            <Popover>
+              <Dialog isCloseable={false}>
+                <Calendar className="bcds-react-aria-DateField--Calendar">
+                  <header>
+                    <Button
+                      slot="previous"
+                      size="small"
+                      variant="tertiary"
+                      isIconButton
+                    >
+                      <SvgChevronUpIcon />
+                    </Button>
+                    <Heading level={6} />
+                    <Button
+                      slot="next"
+                      size="small"
+                      variant="tertiary"
+                      isIconButton
+                    >
+                      <SvgChevronDownIcon />
+                    </Button>
+                  </header>
+                  <CalendarGrid>
+                    {(date) => <CalendarCell date={date} />}
+                  </CalendarGrid>
+                </Calendar>
+              </Dialog>
+            </Popover>
+          </>
+        )}
       </Group>
 
       {description && (
