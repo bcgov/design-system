@@ -9,7 +9,6 @@ import {
   DateSegment,
   FieldError,
   Group,
-  Heading,
   Label,
   Popover,
   Text,
@@ -19,6 +18,7 @@ import {
 import "./DateField.css";
 import Button from "../Button";
 import Dialog from "../Dialog";
+import Heading from "../Heading";
 import SvgCalendarIcon from "../Icons/SvgCalendarIcon";
 import SvgChevronLeftIcon from "../Icons/SvgChevronLeftIcon";
 import SvgChevronRightIcon from "../Icons/SvgChevronRightIcon";
@@ -79,7 +79,7 @@ export default function DateField<T extends DateValue>({
                 <Popover>
                   <Dialog isCloseable={false}>
                     <Calendar className="bcds-react-aria-DateField--Calendar">
-                      <header>
+                      <header className="bcds-react-aria-DateField--CalendarHeader">
                         <Button
                           slot="previous"
                           size="small"
@@ -98,8 +98,13 @@ export default function DateField<T extends DateValue>({
                           <SvgChevronRightIcon />
                         </Button>
                       </header>
-                      <CalendarGrid>
-                        {(date) => <CalendarCell date={date} />}
+                      <CalendarGrid className="bcds-react-aria-DateField--CalendarGrid">
+                        {(date) => (
+                          <CalendarCell
+                            className="bcds-react-aria-DateField--CalendarCell"
+                            date={date}
+                          />
+                        )}
                       </CalendarGrid>
                     </Calendar>
                   </Dialog>
