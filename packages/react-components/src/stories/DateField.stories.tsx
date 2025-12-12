@@ -8,10 +8,40 @@ const meta = {
   component: DateField,
   parameters: { layout: "centered" },
   argTypes: {
-    label: { control: { type: "text" }, description: "TKTK" },
-    description: { control: { type: "text", description: "TKTK" } },
-    isRequired: { control: { type: "boolean" }, description: "TKTK" },
-    isInvalid: { control: { type: "boolean" }, description: "TKTK" },
+    size: {
+      control: { type: "radio" },
+      options: ["medium", "small"],
+      description: "Sets the size of the input field",
+    },
+    label: {
+      control: { type: "text" },
+      description: "Text that appears above the input field",
+    },
+    description: {
+      control: {
+        type: "text",
+      },
+      description: "Additional helper text below the input field",
+    },
+    granularity: {
+      control: {
+        type: "radio",
+      },
+      options: ["day", "minute"],
+      description: "Sets smallest selectable unit of time",
+    },
+    isRequired: {
+      control: { type: "boolean" },
+      description: "Whether an input is required",
+    },
+    isDisabled: {
+      control: { type: "boolean" },
+      description: "Whether the input is active or disabled",
+    },
+    isInvalid: {
+      control: { type: "boolean" },
+      description: "Whether the current input is valid",
+    },
   },
 } satisfies Meta<typeof DateField>;
 
@@ -26,6 +56,11 @@ export const DateFieldTemplate: Story = {
 export const NoPicker: Story = {
   ...DateFieldTemplate,
   args: { label: "Label", description: "Description", isPickerDisabled: true },
+};
+
+export const DateAndTime: Story = {
+  ...DateFieldTemplate,
+  args: { label: "Label", description: "Description", granularity: "minute" },
 };
 
 export const Invalid: Story = {
