@@ -19,6 +19,8 @@
   gap: var(--layout-margin-small);
   padding: var(--layout-padding-xsmall) 0.75rem;
 }
+
+/* Input field */
 .bcds-react-aria-DateField--Input {
   display: flex;
   flex-direction: row;
@@ -28,15 +30,37 @@
   min-width: 0;
   align-items: center;
   border: none;
-  font: var(--typography-regular-body);
+}
+
+/* Calendar */
+.bcds-react-aria-DateField button {
+  position: relative;
+  right: 0;
+  padding: var(--layout-padding-small);
 }
 .bcds-react-aria-DateField--Calendar {
+  font: var(--typography-regular-body);
 }
-.bcds-react-aria-DateField--Calendar > header {
+.bcds-react-aria-DateField--Calendar header {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
   gap: var(--layout-margin-small);
+}
+
+/* Sizing */
+.bcds-react-aria-DateField.small > .bcds-react-aria-DateField--Group {
+  height: 32px;
+}
+.bcds-react-aria-DateField.small .bcds-react-aria-DateField--Input {
+  font: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-DateField.medium > .bcds-react-aria-DateField--Group {
+  height: 40px;
+}
+.bcds-react-aria-DateField.medium .bcds-react-aria-DateField--Input {
+  font: var(--typography-regular-body);
 }
 
 /* Label */
@@ -60,4 +84,55 @@
 .bcds-react-aria-DateField--Error {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-danger);
+}
+.bcds-react-aria-DateField[data-invalid] > .bcds-react-aria-DateField--Group {
+  border-color: var(--support-border-color-danger);
+}
+.bcds-react-aria-DateField[data-invalid]
+  > .bcds-react-aria-DateField--Group
+  > svg {
+  color: var(--icons-color-danger);
+}
+
+/* Hover and focus */
+.bcds-react-aria-DateField--Group[data-hovered] {
+  border-color: var(--surface-color-border-dark);
+}
+.bcds-react-aria-DateField[data-focus-visible]
+  > .bcds-react-aria-DateField--Group {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+}
+.bcds-react-aria-DateField[data-focus-visible]
+  > .bcds-react-aria-DateField--Group:has(
+    .bcds-react-aria-Button[data-focus-visible]
+  ) {
+  outline: none; /* Hide focus ring when button is focused */
+}
+.bcds-react-aria-DateField[data-focus-visible]
+  .bcds-react-aria-DateField--Segment {
+  outline: none;
+}
+.bcds-react-aria-DateField--Segment[data-focused] {
+  outline: none;
+  border-radius: var(--layout-border-radius-medium);
+  background-color: var(--surface-color-border-active);
+  color: var(--typography-color-primary-invert);
+  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
+  margin: var(--layout-margin-none) var(--layout-margin-hair);
+}
+
+/* Disabled and read-only */
+.bcds-react-aria-DateField[data-readonly] > .bcds-react-aria-DateField--Group {
+  cursor: not-allowed;
+}
+.bcds-react-aria-DateField--Segment[data-readonly][data-focused] {
+  background-color: var(--surface-color-forms-disabled);
+  color: var(--typography-color-primary);
+}
+.bcds-react-aria-DateField[data-disabled] > .bcds-react-aria-DateField--Group {
+  background-color: var(--surface-color-forms-disabled);
+  color: var(--typography-color-disabled);
+  cursor: not-allowed;
 }
