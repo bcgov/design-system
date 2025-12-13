@@ -11,18 +11,17 @@
 .bcds-react-aria-DateField--Group {
   display: inline-flex;
   flex-direction: row;
+  flex: 1 1 0;
+  gap: var(--layout-margin-hair);
   align-items: center;
   box-sizing: border-box;
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
   gap: var(--layout-margin-small);
-  padding: var(--layout-padding-xsmall) 0.75rem;
 }
 .bcds-react-aria-DateField--Input {
-  display: flex;
-  flex-direction: row;
-  flex: 1 1 0;
+  display: inline;
   box-sizing: border-box;
   width: 100%;
   min-width: 0;
@@ -32,6 +31,7 @@
 
 /* Sizing */
 .bcds-react-aria-DateField.small > .bcds-react-aria-DateField--Group {
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
   height: 32px;
 }
 .bcds-react-aria-DateField.small .bcds-react-aria-DateField--Input {
@@ -39,6 +39,7 @@
 }
 
 .bcds-react-aria-DateField.medium > .bcds-react-aria-DateField--Group {
+  padding: var(--layout-padding-xsmall) 0.75rem;
   height: 40px;
 }
 .bcds-react-aria-DateField.medium .bcds-react-aria-DateField--Input {
