@@ -1,7 +1,7 @@
 .bcds-react-aria-ToggleButton {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
-  flex: 1 1 0;
+  box-sizing: border-box;
   gap: var(--layout-margin-xsmall);
   align-items: center;
   justify-content: center;
@@ -10,7 +10,6 @@
   background-color: var(--surface-color-secondary-button-disabled);
   border: var(--layout-border-width-small) solid transparent;
   border-radius: var(--layout-border-radius-medium);
-  box-sizing: border-box;
   cursor: pointer;
 }
 
@@ -28,12 +27,13 @@
 /* Icon button */
 .bcds-react-aria-ToggleButton.icon {
   align-items: center;
+  align-self: center;
   justify-content: space-around;
+  flex: 0 0 auto;
 }
 
 .bcds-react-aria-ToggleButton.small.icon {
   padding: unset;
-  align-self: center;
   height: var(--icons-size-large);
   width: var(--icons-size-large);
   min-width: var(--icons-size-large);

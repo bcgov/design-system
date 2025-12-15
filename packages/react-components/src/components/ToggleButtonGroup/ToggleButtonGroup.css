@@ -2,9 +2,11 @@
   display: flex;
   flex: 1 1 0;
   flex-wrap: wrap;
-  box-sizing: content-box;
-  align-items: center;
+  box-sizing: border-box;
   gap: var(--layout-margin-small);
+  align-items: center;
+  align-content: flex-start;
+  justify-content: space-around;
   background-color: var(--surface-color-secondary-button-disabled);
   border-radius: var(--layout-border-radius-medium);
 }
@@ -21,7 +23,7 @@
 /* Orientation */
 .bcds-react-aria-ToggleButtonGroup[data-orientation="horizontal"] {
   flex-direction: row;
-  height: var(--layout-margin-xlarge);
+  min-height: var(--layout-margin-xlarge);
 }
 
 .bcds-react-aria-ToggleButtonGroup[data-orientation="vertical"] {
