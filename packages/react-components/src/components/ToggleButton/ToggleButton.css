@@ -1,16 +1,16 @@
 .bcds-react-aria-ToggleButton {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
-  flex: 0 1 auto;
+  flex: 1 1 0;
   gap: var(--layout-margin-xsmall);
   align-items: center;
   justify-content: center;
   padding: var(--layout-padding-hair) var(--layout-padding-small);
   color: var(--typography-color-secondary);
   background-color: var(--surface-color-secondary-button-disabled);
-  border: none;
+  border: var(--layout-border-width-small) solid transparent;
   border-radius: var(--layout-border-radius-medium);
-  box-sizing: content-box;
+  box-sizing: border-box;
   cursor: pointer;
 }
 
