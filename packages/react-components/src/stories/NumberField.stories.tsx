@@ -5,7 +5,7 @@ import { NumberField, Select } from "../components";
 import { useState, type Key } from "react";
 
 const meta = {
-  title: "Components/NumberField/NumberField",
+  title: "Inputs and controls/NumberField",
   component: NumberField,
   parameters: {
     layout: "centered",
