@@ -4,7 +4,7 @@ import { TagGroup, TagList, Tag } from "../components";
 import { TagProps } from "../components/Tag";
 
 const meta = {
-  title: "Components/TagGroup/Tag",
+  title: "Inputs and controls/TagGroup/Tag",
   component: Tag,
   parameters: {
     layout: "centered",

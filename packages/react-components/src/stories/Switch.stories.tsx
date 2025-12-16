@@ -4,7 +4,7 @@ import { Switch } from "../components";
 import { SwitchProps } from "@/components/Switch";
 
 const meta = {
-  title: "Components/Switch/Switch",
+  title: "Inputs and controls/Switch/Switch",
   component: Switch,
   parameters: {
     layout: "centered",

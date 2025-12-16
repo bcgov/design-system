@@ -4,7 +4,7 @@ import { InlineAlert, Button } from "../components";
 import { InlineAlertProps } from "@/components/InlineAlert";
 
 const meta = {
-  title: "Components/Inline Alert/Inline Alert",
+  title: "Notifications and feedback/Inline Alert/Inline Alert",
   component: InlineAlert,
   parameters: {
     layout: "centered",

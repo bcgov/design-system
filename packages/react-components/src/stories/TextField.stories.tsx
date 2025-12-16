@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { TextField } from "../components";
 
 const meta = {
-  title: "Components/Text Inputs/Text Field (single line)",
+  title: "Inputs and controls/Text Inputs/Text Field (single line)",
   component: TextField,
   parameters: {
     layout: "centered",

@@ -14,7 +14,7 @@ import {
 import { DialogProps } from "../components/Dialog";
 
 const meta = {
-  title: "Components/Dialogs/Dialog",
+  title: "Notifications and feedback/Dialogs/Dialog",
   component: Dialog,
   parameters: {
     layout: "centered",

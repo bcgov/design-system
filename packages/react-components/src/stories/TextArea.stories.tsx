@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { TextArea } from "../components";
 
 const meta = {
-  title: "Components/Text Inputs/Text Area (multi-line)",
+  title: "Inputs and controls/Text Inputs/Text Area (multi-line)",
   component: TextArea,
   parameters: {
     layout: "centered",
