@@ -4,7 +4,7 @@ import { ToggleButton, ToggleButtonGroup } from "../components";
 import { ToggleButtonGroupProps } from "../components/ToggleButtonGroup";
 
 const meta = {
-  title: "Components/Toggle buttons/Toggle button group",
+  title: "Inputs and controls/Toggle buttons/Toggle button group",
   component: ToggleButtonGroup,
   parameters: {
     layout: "centered",
