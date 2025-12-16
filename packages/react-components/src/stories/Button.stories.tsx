@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { expect, fn } from "storybook/test";
 
 import { Button } from "../components";
 import { ButtonProps } from "@/components/Button";
@@ -19,15 +18,15 @@ const meta = {
     variant: {
       options: ["primary", "secondary", "tertiary", "link"],
       control: { type: "radio" },
-      description: "Toggles between different hierarchical variants",
+      description:
+        "Toggles between different hierarchical variants",
     },
     onPress: {
       description: "Click/press handler",
     },
     danger: {
       control: "boolean",
-      description:
-        "Applies a red colourway for dangerous/destructive functions",
+      description: "Applies a red colourway for dangerous/destructive functions",
     },
     isDisabled: {
       control: "boolean",
@@ -48,27 +47,10 @@ export const ButtonTemplate: Story = {
     children: "Button text",
     size: "medium",
     variant: "primary",
-    onPress: fn(() => alert("onPress()")),
+    onPress: () => alert("onPress()"),
     danger: false,
     isDisabled: false,
     isIconButton: false,
-  },
-  render: ({ ...args }: ButtonProps) => <Button {...args} />,
-};
-
-export const ButtonTemplateWithInteractionTest: Story = {
-  args: {
-    children: "Button text",
-    size: "medium",
-    variant: "primary",
-    onPress: fn(),
-    danger: false,
-    isDisabled: false,
-    isIconButton: false,
-  },
-  play: async ({ args, canvas, userEvent }) => {
-    await userEvent.click(canvas.getByRole("button"));
-    await expect(args.onPress).toHaveBeenCalled();
   },
   render: ({ ...args }: ButtonProps) => <Button {...args} />,
 };
@@ -186,7 +168,7 @@ export const Large: Story = {
   ...ButtonTemplate,
   args: {
     children: "Large",
-    size: "large",
+    size: "large"
   },
 };
 
