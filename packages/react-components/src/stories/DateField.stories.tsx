@@ -4,7 +4,7 @@ import { DateField } from "../components";
 import { DateFieldProps, DateValue } from "../components/DateField";
 
 const meta = {
-  title: "Components/DateField",
+  title: "Inputs and controls/DateField",
   component: DateField,
   parameters: { layout: "centered" },
   argTypes: {
