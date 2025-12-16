@@ -4,7 +4,7 @@ import { Button } from "../components";
 import { ButtonProps } from "@/components/Button";
 
 const meta = {
-  title: "Inputs and controls/Button/Button",
+  title: "Inputs and controls/Button",
   component: Button,
   parameters: {
     layout: "centered",

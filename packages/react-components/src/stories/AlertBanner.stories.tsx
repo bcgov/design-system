@@ -6,7 +6,7 @@ import { Button } from "@/components";
 import { SvgBcOutlineIcon } from "@/components";
 
 const meta = {
-  title: "Notifications and feedback/AlertBanner/AlertBanner",
+  title: "Notifications and feedback/AlertBanner",
   component: AlertBanner,
   argTypes: {
     variant: {

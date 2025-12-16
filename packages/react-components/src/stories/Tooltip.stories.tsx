@@ -4,7 +4,7 @@ import { Button, Tooltip, TooltipTrigger } from "../components";
 import { TooltipProps } from "../components/Tooltip";
 
 const meta = {
-  title: "Notifications and feedback/Tooltip/Tooltip",
+  title: "Notifications and feedback/Tooltip",
   component: Tooltip,
   parameters: {
     layout: "centered",

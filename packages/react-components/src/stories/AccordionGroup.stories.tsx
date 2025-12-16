@@ -4,7 +4,7 @@ import { Accordion, AccordionGroup } from "../components";
 import { AccordionGroupProps } from "@/components/AccordionGroup";
 
 const meta = {
-  title: "Content/AccordionGroup/AccordionGroup",
+  title: "Content/AccordionGroup",
   component: AccordionGroup,
   parameters: { layout: "centered" },
   argTypes: {
