@@ -22,6 +22,10 @@ COPY tsconfig.vite.json ./
 COPY vite.config.ts ./
 COPY src ./src
 
+# Storybook files are included because they are referenced in `vite.config.ts`
+# and required for the build to succeed.
+COPY .storybook ./.storybook
+
 # Run Vite build script, which places built files in /app/vite-dist
 RUN npm run vite-build
 
