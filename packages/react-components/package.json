@@ -12,7 +12,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "storybook-dev": "storybook dev -p 6006",
     "storybook-build": "storybook build",
-    "test": "npx jest --config=./jest.config.ts",
+    "test": "npx vitest --project=unit",
     "test:ci": "npx jest --ci --config=./jest.config.ts",
     "test:watch": "npx jest --watch --config=./jest.config.ts",
     "test-storybook": "npx vitest --project=storybook",
