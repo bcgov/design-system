@@ -27,6 +27,7 @@ export default defineConfig({
   test: {
     projects: [
       {
+        // Runs unit tests defined in *.test.tsx files alongside components only.
         extends: true,
         test: {
           name: "unit",
