@@ -46,7 +46,6 @@
     "@storybook/addon-links": "^10.1.9",
     "@storybook/addon-vitest": "^10.1.9",
     "@storybook/react-vite": "^10.1.9",
-    "@storybook/test-runner": "0.24.2",
     "@testing-library/jest-dom": "6.5.0",
     "@testing-library/react": "16.0.1",
     "@types/react": "18.3.8",
