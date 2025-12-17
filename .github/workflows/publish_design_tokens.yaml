@@ -32,6 +32,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          registry-url: "https://registry.npmjs.org/"
 
       - name: Install dependencies
         run: npm install
@@ -68,9 +69,6 @@ jobs:
         shell: bash
         working-directory: ./packages/design-tokens/dist
 
-      - name: Set up .npmrc configuration
-        run: echo "//registry.npmjs.org/" > ~/.npmrc
-
       - name: Publish to npm @next
         run: npm publish --tag next
         working-directory: ./packages/design-tokens/dist
@@ -95,6 +93,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          registry-url: "https://registry.npmjs.org/"
 
       - name: Install dependencies
         run: npm install
@@ -107,9 +106,6 @@ jobs:
       - name: Prepare npm package for publishing
         run: npm run prepare-npm-package
         working-directory: ./packages/design-tokens
-
-      - name: Set up .npmrc configuration
-        run: echo "//registry.npmjs.org/" > ~/.npmrc
 
       - name: Publish to npm @latest
         run: npm publish --tag latest
