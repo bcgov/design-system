@@ -16,7 +16,6 @@
     "test:watch": "npx vitest --project=unit",
     "test-storybook": "npx vitest --project=storybook --watch=false",
     "test-storybook:watch": "npx vitest --project=storybook",
-    "test-storybook:ci": "npx vitest --project=storybook",
     "vite-dev": "vite",
     "vite-build": "tsc && vite build",
     "vite-preview": "vite preview"
