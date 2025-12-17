@@ -156,7 +156,7 @@ Publishing new versions of the package to npm is done via GitHub Actions.
 GitHub Actions are located in `/.github/workflows` in the project root. Actions are included to:
 
 - Build the Storybook and Vite applications on merge to `main`
-- Test (Jest and Playwright) on pull request
+- Test (Vitest and Playwright) on pull request
 - Publish new versions of the library on npm (`next` tag) on merge to `main`
 - Publish new versions of the library on npm (`latest` tag) when a GitHub release is published
 
