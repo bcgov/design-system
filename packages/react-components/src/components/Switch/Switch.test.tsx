@@ -1,3 +1,4 @@
+import { afterEach, describe, expect, it, vi } from "vitest";
 import "@testing-library/jest-dom";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 
@@ -19,7 +20,7 @@ describe("Switch", () => {
   });
 
   it("onChange handler fires on click", () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
     render(<Switch onChange={handleChange}>Power</Switch>);
 
     const switchElement = screen.getByLabelText(/power/i);

@@ -115,9 +115,9 @@ This project follows semantic versioning. See [CHANGELOG.md](./CHANGELOG.md) for
 
 Components live in `./src/components` and are targeted by the build process with an export in `./src/index.ts`.
 
-#### Testing components with Jest
+#### Testing components with Vitest
 
-Unit tests can be run with Jest using `npm run test`.
+Unit tests can be run with Vitest using `npm run test`. Use `npm run test:watch` to run Vitest in watch mode.
 
 ### Storybook
 
@@ -137,9 +137,9 @@ oc tag ed91fb-tools/design-system-react-components-storybook:develop ed91fb-tool
 oc tag ed91fb-tools/design-system-react-components-storybook:develop ed91fb-tools/design-system-react-components-storybook:production
 ```
 
-#### Testing with Storybook Test Runner
+#### Testing Storybook with Vitest
 
-With Storybook running locally, use the `npm run test-storybook` script to run `@storybook/test-runner` using the configuration defined in `./.storybook/test-runner.ts`. [Learn more about Storybook Test Runner](https://storybook.js.org/docs/writing-tests/test-runner).
+With Storybook running locally, use the `npm run test-storybook` script to test Storybook with Vitest's browser mode. This script uses the configuration defined in `./vite.config.ts`. [Learn more about Storybook's Vitest addon.](https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon).
 
 ### Vite kitchen sink application
 
@@ -156,7 +156,7 @@ Publishing new versions of the package to npm is done via GitHub Actions.
 GitHub Actions are located in `/.github/workflows` in the project root. Actions are included to:
 
 - Build the Storybook and Vite applications on merge to `main`
-- Test (Jest and Playwright) on pull request
+- Test (Vitest and Playwright) on pull request
 - Publish new versions of the library on npm (`next` tag) on merge to `main`
 - Publish new versions of the library on npm (`latest` tag) when a GitHub release is published
 
