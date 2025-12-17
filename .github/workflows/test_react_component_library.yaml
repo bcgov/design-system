@@ -1,4 +1,6 @@
 name: Test React components library
+permissions:
+  contents: read
 
 on:
   pull_request:

@@ -1,4 +1,6 @@
 name: Test design tokens build script
+permissions:
+  contents: read
 
 on:
   pull_request:
