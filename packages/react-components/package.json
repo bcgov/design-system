@@ -12,7 +12,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "storybook-dev": "storybook dev -p 6006",
     "storybook-build": "storybook build",
-    "test": "npx vitest --project=unit",
+    "test": "npx vitest --project=unit --watch=false",
     "test:watch": "npx vitest --project=unit",
     "test-storybook": "npx vitest --project=storybook",
     "test-storybook:ci": "npx vitest --project=storybook",
