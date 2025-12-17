@@ -72,7 +72,15 @@
   outline: none;
 }
 
-.bcds-react-aria-TextField--container:focus-within {
+.bcds-react-aria-TextField--container:has(
+    > .bcds-react-aria-TextField--Input[data-focused]
+  ) {
+  border-color: var(--surface-color-border-active);
+}
+
+.bcds-react-aria-TextField--container:has(
+    > .bcds-react-aria-TextField--Input[data-focus-visible]
+  ) {
   border-radius: var(--layout-border-radius-large);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-active);
