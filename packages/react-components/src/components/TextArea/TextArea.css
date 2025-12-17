@@ -71,6 +71,9 @@
 
 .bcds-react-aria-TextArea--Container:has(
     > .bcds-react-aria-TextArea--Input[data-focused]
+  ),
+.bcds-react-aria-TextArea--Container:has(
+    > .bcds-react-aria-TextArea--Input[data-focused][data-hovered]
   ) {
   border-color: var(--surface-color-border-active);
 }
