@@ -39,5 +39,7 @@ export { default as TagList } from "./TagList";
 export { default as Text } from "./Text";
 export { default as TextArea } from "./TextArea";
 export { default as TextField } from "./TextField";
+export { default as ToggleButton } from "./ToggleButton";
+export { default as ToggleButtonGroup } from "./ToggleButtonGroup";
 export { default as Switch } from "./Switch";
 export { default as Tooltip, TooltipTrigger } from "./Tooltip";
