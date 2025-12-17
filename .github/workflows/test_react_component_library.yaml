@@ -39,7 +39,7 @@ jobs:
         working-directory: ./packages/react-components
 
       - name: Run test suite
-        run: npm run test:ci
+        run: npm run test
         working-directory: ./packages/react-components
 
       # Treat failures in the Vite build as test failures.
