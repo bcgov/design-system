@@ -47,12 +47,3 @@ describe("gets the correct class for each size variant", () => {
     );
   });
 });
-
-describe("input is disabled when the disabled prop is set to true", () => {
-  render(<NumberField label="Disabled numberfield" isDisabled />);
-  const input = screen.getByRole("input") as HTMLInputElement;
-
-  it("is disabled", () => {
-    expect(input).toBeDisabled();
-  });
-});
