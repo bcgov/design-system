@@ -72,6 +72,7 @@ describe("Render disabled accordion component", () => {
       />
     );
     const button = screen.getByRole("button", { name: /disabled accordion/i });
+    expect(button).toBeInTheDocument();
     expect(button).toHaveAttribute("data-disabled", "true");
   });
 });

@@ -12,6 +12,7 @@ describe("Render accordion group with two accordions", () => {
         id="group"
         data-testid="accordion-group"
         title="Accordion group"
+        titleElement="h4"
       >
         <Accordion id="1" data-testid="accordion-1" label="Accordion 1">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -22,6 +23,7 @@ describe("Render accordion group with two accordions", () => {
       </AccordionGroup>
     );
     const root = screen.getByTestId("accordion-group");
+    const title = screen.getByRole("heading", { name: /accordion group/i });
     const button1 = screen.getByRole("button", { name: /accordion 1/i });
     const button2 = screen.getByRole("button", { name: /accordion 2/i });
     const panel1 = container.querySelector(
@@ -32,6 +34,7 @@ describe("Render accordion group with two accordions", () => {
     );
 
     expect(root).toBeInTheDocument();
+    expect(title.tagName).toBe("H4");
     expect(button1).toBeInTheDocument();
     expect(button1).toHaveAttribute("aria-expanded", "false");
     expect(button2).toBeInTheDocument();
@@ -101,7 +104,9 @@ describe("Disable all accordions when group is disabled", () => {
     );
     const button1 = screen.getByRole("button", { name: /accordion 1/i });
     const button2 = screen.getByRole("button", { name: /accordion 2/i });
+    expect(button1).toBeInTheDocument();
     expect(button1).toHaveAttribute("data-disabled", "true");
+    expect(button2).toBeInTheDocument();
     expect(button2).toHaveAttribute("data-disabled", "true");
   });
 });
