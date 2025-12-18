@@ -47,3 +47,29 @@ describe("gets the correct class for each size variant", () => {
     );
   });
 });
+
+describe("pressing the increment and decrement buttons changes the value correctly", () => {
+  render(<NumberField label="Counter" defaultValue={3} step={2} />);
+  const input = screen.getByRole("spinbutton") as HTMLInputElement;
+  const incrementButton = screen.getByLabelText("Increment");
+  const decrementButton = screen.getByLabelText("Decrement");
+
+  it("pressing the increment button increases the value by step", () => {
+    incrementButton.click();
+    expect(input.value).toBe("5");
+  });
+
+  it("pressing the decrement button decreases the value by step", () => {
+    decrementButton.click();
+    expect(input.value).toBe("1");
+  });
+});
+
+describe("input is disabled when the disabled prop is set to true", () => {
+  render(<NumberField label="Disabled numberfield" isDisabled />);
+  const input = screen.getByRole("input") as HTMLInputElement;
+
+  it("is disabled", () => {
+    expect(input).toBeDisabled();
+  });
+});
