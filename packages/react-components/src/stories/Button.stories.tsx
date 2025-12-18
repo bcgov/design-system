@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { expect, fn } from "storybook/test";
 
 import { Button } from "../components";
 import { ButtonProps } from "@/components/Button";
@@ -18,15 +19,15 @@ const meta = {
     variant: {
       options: ["primary", "secondary", "tertiary", "link"],
       control: { type: "radio" },
-      description:
-        "Toggles between different hierarchical variants",
+      description: "Toggles between different hierarchical variants",
     },
     onPress: {
       description: "Click/press handler",
     },
     danger: {
       control: "boolean",
-      description: "Applies a red colourway for dangerous/destructive functions",
+      description:
+        "Applies a red colourway for dangerous/destructive functions",
     },
     isDisabled: {
       control: "boolean",
@@ -47,10 +48,14 @@ export const ButtonTemplate: Story = {
     children: "Button text",
     size: "medium",
     variant: "primary",
-    onPress: () => alert("onPress()"),
+    onPress: fn(),
     danger: false,
     isDisabled: false,
     isIconButton: false,
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).toHaveBeenCalled();
   },
   render: ({ ...args }: ButtonProps) => <Button {...args} />,
 };
@@ -88,6 +93,11 @@ export const Icon: Story = {
       "Icon-only buttons need discernible text labels for accessibility",
     children: iconPlaceholder,
     isIconButton: true,
+    onPress: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).toHaveBeenCalled();
   },
 };
 
@@ -95,6 +105,11 @@ export const LeftIcon: Story = {
   ...ButtonTemplate,
   args: {
     children: <>{iconPlaceholder} Left icon</>,
+    onPress: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).toHaveBeenCalled();
   },
 };
 
@@ -102,6 +117,11 @@ export const RightIcon: Story = {
   ...ButtonTemplate,
   args: {
     children: <>Right icon {iconPlaceholder}</>,
+    onPress: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).toHaveBeenCalled();
   },
 };
 
@@ -113,6 +133,11 @@ export const BothIcons: Story = {
         {iconPlaceholder} Both icons {iconPlaceholder}
       </>
     ),
+    onPress: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).toHaveBeenCalled();
   },
 };
 
@@ -121,6 +146,11 @@ export const Primary: Story = {
   args: {
     children: "Primary",
     variant: "primary",
+    onPress: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).toHaveBeenCalled();
   },
 };
 
@@ -129,6 +159,11 @@ export const Secondary: Story = {
   args: {
     children: "Secondary",
     variant: "secondary",
+    onPress: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).toHaveBeenCalled();
   },
 };
 
@@ -137,6 +172,11 @@ export const Tertiary: Story = {
   args: {
     children: "Tertiary",
     variant: "tertiary",
+    onPress: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).toHaveBeenCalled();
   },
 };
 
@@ -145,6 +185,11 @@ export const Link: Story = {
   args: {
     children: "Link",
     variant: "link",
+    onPress: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).toHaveBeenCalled();
   },
 };
 
@@ -153,6 +198,11 @@ export const Disabled: Story = {
   args: {
     children: "Disabled",
     isDisabled: true,
+    onPress: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).not.toHaveBeenCalled();
   },
 };
 
@@ -161,6 +211,11 @@ export const Danger: Story = {
   args: {
     children: "Danger",
     danger: true,
+    onPress: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).toHaveBeenCalled();
   },
 };
 
@@ -168,7 +223,12 @@ export const Large: Story = {
   ...ButtonTemplate,
   args: {
     children: "Large",
-    size: "large"
+    size: "large",
+    onPress: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).toHaveBeenCalled();
   },
 };
 
@@ -177,6 +237,11 @@ export const Medium: Story = {
   args: {
     children: "Medium",
     size: "medium",
+    onPress: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).toHaveBeenCalled();
   },
 };
 
@@ -185,6 +250,11 @@ export const Small: Story = {
   args: {
     children: "Small",
     size: "small",
+    onPress: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).toHaveBeenCalled();
   },
 };
 
@@ -193,5 +263,10 @@ export const ExtraSmall: Story = {
   args: {
     children: "Extra small",
     size: "xsmall",
+    onPress: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button"));
+    await expect(args.onPress).toHaveBeenCalled();
   },
 };
