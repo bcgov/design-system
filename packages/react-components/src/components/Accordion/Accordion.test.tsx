@@ -20,7 +20,6 @@ describe("Render accordion component", () => {
     expect(button).toHaveAttribute("aria-expanded", "false");
     expect(panel).toBeInTheDocument();
     expect(panel).toHaveAttribute("aria-hidden", "true");
-    // Panel content should not be visible when collapsed
     expect(screen.queryByText(/lorem ipsum dolor sit amet/i)).not.toBeVisible();
   });
 
@@ -33,19 +32,37 @@ describe("Render accordion component", () => {
 
     const button = screen.getByRole("button", { name: /accordion 1/i });
 
-    // Expand
     fireEvent.click(button);
     expect(button).toHaveAttribute("aria-expanded", "true");
     expect(screen.getByText(/lorem ipsum dolor sit amet/i)).toBeVisible();
 
-    // Collapse again
     fireEvent.click(button);
     expect(button).toHaveAttribute("aria-expanded", "false");
   });
 });
 
-describe("Disable accordion component", () => {
-  it("accordion is disabled when isDisabled prop is present", () => {
+describe("Render accordion component expanded by default", () => {
+  it("renders the accordion expanded when defaultExpanded is true", () => {
+    render(
+      <Accordion
+        id="1"
+        data-testid="expanded-accordion"
+        label="Expanded Accordion"
+        defaultExpanded
+      >
+        Lorem ipsum dolor sit amet
+      </Accordion>
+    );
+
+    const button = screen.getByRole("button", { name: /expanded accordion/i });
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveAttribute("aria-expanded", "true");
+    expect(screen.getByText(/lorem ipsum dolor sit amet/i)).toBeVisible();
+  });
+});
+
+describe("Render disabled accordion component", () => {
+  it("accordion is disabled when isDisabled prop is true", () => {
     render(
       <Accordion
         id="disabled"
