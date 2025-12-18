@@ -54,6 +54,7 @@ export const ButtonTemplate: Story = {
     isIconButton: false,
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).toHaveBeenCalled();
   },
@@ -96,6 +97,7 @@ export const Icon: Story = {
     onPress: fn(),
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).toHaveBeenCalled();
   },
@@ -108,6 +110,7 @@ export const LeftIcon: Story = {
     onPress: fn(),
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).toHaveBeenCalled();
   },
@@ -120,6 +123,7 @@ export const RightIcon: Story = {
     onPress: fn(),
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).toHaveBeenCalled();
   },
@@ -136,6 +140,7 @@ export const BothIcons: Story = {
     onPress: fn(),
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).toHaveBeenCalled();
   },
@@ -149,6 +154,7 @@ export const Primary: Story = {
     onPress: fn(),
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).toHaveBeenCalled();
   },
@@ -162,6 +168,7 @@ export const Secondary: Story = {
     onPress: fn(),
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).toHaveBeenCalled();
   },
@@ -175,6 +182,7 @@ export const Tertiary: Story = {
     onPress: fn(),
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).toHaveBeenCalled();
   },
@@ -188,6 +196,7 @@ export const Link: Story = {
     onPress: fn(),
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).toHaveBeenCalled();
   },
@@ -201,6 +210,8 @@ export const Disabled: Story = {
     onPress: fn(),
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
+    await expect(canvas.getByRole("button")).toBeDisabled();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).not.toHaveBeenCalled();
   },
@@ -214,6 +225,7 @@ export const Danger: Story = {
     onPress: fn(),
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).toHaveBeenCalled();
   },
@@ -227,6 +239,7 @@ export const Large: Story = {
     onPress: fn(),
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).toHaveBeenCalled();
   },
@@ -240,6 +253,7 @@ export const Medium: Story = {
     onPress: fn(),
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).toHaveBeenCalled();
   },
@@ -253,6 +267,7 @@ export const Small: Story = {
     onPress: fn(),
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).toHaveBeenCalled();
   },
@@ -266,6 +281,7 @@ export const ExtraSmall: Story = {
     onPress: fn(),
   },
   play: async ({ args, canvas, userEvent }) => {
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
     await userEvent.click(canvas.getByRole("button"));
     await expect(args.onPress).toHaveBeenCalled();
   },
