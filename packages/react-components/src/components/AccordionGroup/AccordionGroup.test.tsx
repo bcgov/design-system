@@ -47,3 +47,22 @@ describe("Render accordion group with two accordions", () => {
     ).not.toBeVisible();
   });
 });
+
+describe("Disable all accordions when group is disabled", () => {
+  it("accordions are all disabled when isDisabled prop is present on parent group", () => {
+    render(
+      <AccordionGroup
+        id="disabled-group"
+        data-testid="disabled-group"
+        isDisabled
+      >
+        <Accordion id="1" data-testid="accordion-1" label="Accordion 1" />
+        <Accordion id="2" data-testid="accordion-2" label="Accordion 2" />
+      </AccordionGroup>
+    );
+    const button1 = screen.getByRole("button", { name: /accordion 1/i });
+    const button2 = screen.getByRole("button", { name: /accordion 2/i });
+    expect(button1).toHaveAttribute("data-disabled", "true");
+    expect(button2).toHaveAttribute("data-disabled", "true");
+  });
+});

@@ -15,7 +15,6 @@ describe("Render accordion component", () => {
     const root = screen.getByTestId("accordion");
     const button = screen.getByRole("button", { name: /accordion 1/i });
     const panel = container.querySelector(".bcds-react-aria-Disclosure--Panel");
-
     expect(root).toBeInTheDocument();
     expect(button).toBeInTheDocument();
     expect(button).toHaveAttribute("aria-expanded", "false");
@@ -42,5 +41,20 @@ describe("Render accordion component", () => {
     // Collapse again
     fireEvent.click(button);
     expect(button).toHaveAttribute("aria-expanded", "false");
+  });
+});
+
+describe("Disable accordion component", () => {
+  it("accordion is disabled when isDisabled prop is present", () => {
+    render(
+      <Accordion
+        id="disabled"
+        data-testid="disabled-accordion"
+        label="Disabled accordion"
+        isDisabled
+      />
+    );
+    const button = screen.getByRole("button", { name: /disabled accordion/i });
+    expect(button).toHaveAttribute("data-disabled", "true");
   });
 });
