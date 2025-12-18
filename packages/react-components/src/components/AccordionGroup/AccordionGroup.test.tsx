@@ -51,6 +51,28 @@ describe("Render accordion group with two accordions", () => {
   });
 });
 
+describe("Render accordion group with correct heading level", () => {
+  it("renders the titleElement with the correct heading level", () => {
+    render(
+      <AccordionGroup
+        id="group"
+        data-testid="accordion-group"
+        title="Accordion group"
+        titleElement="h4"
+      >
+        <Accordion id="1" data-testid="accordion-1" label="Accordion 1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Accordion>
+      </AccordionGroup>
+    );
+    const root = screen.getByTestId("accordion-group");
+    const title = screen.getByRole("heading", { name: /accordion group/i });
+    expect(root).toBeInTheDocument();
+    expect(title).toBeInTheDocument();
+    expect(title.tagName).toBe("H4");
+  });
+});
+
 describe("Render group with one accordion open by default", () => {
   it("accordion 2 is open by default on render", () => {
     const { container } = render(
