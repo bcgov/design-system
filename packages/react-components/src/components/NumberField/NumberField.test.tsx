@@ -50,9 +50,9 @@ describe("gets the correct class for each size variant", () => {
 
 describe("pressing the increment and decrement buttons changes the value correctly", () => {
   render(<NumberField label="Counter" defaultValue={3} step={2} />);
-  const input = screen.getByRole("spinbutton") as HTMLInputElement;
-  const incrementButton = screen.getByLabelText("Increment");
-  const decrementButton = screen.getByLabelText("Decrement");
+  const input = screen.getByRole("button") as HTMLInputElement;
+  const incrementButton = screen.getByLabelText("Increase");
+  const decrementButton = screen.getByLabelText("Decrease");
 
   it("pressing the increment button increases the value by step", () => {
     incrementButton.click();
