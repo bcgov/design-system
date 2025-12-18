@@ -1,4 +1,4 @@
-/* The component implements the Flask icon from Font Awesome: https://fontawesome.com/icons/flask */
+/* This component implements the Flask icon from Font Awesome: https://fontawesome.com/icons/flask */
 export default function SvgBetaIcon({ id = "beta-icon" }) {
   return (
     <svg
