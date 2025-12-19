@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { expect, fn } from "storybook/test";
 
 import { AlertBanner } from "../components";
 import { AlertBannerProps } from "@/components/AlertBanner";
@@ -35,7 +36,7 @@ const meta = {
       description: "Sets ARIA role for the alert",
     },
     onClose: {
-      control: { type: "object" },
+      type: "function",
       description: "Function for the close button",
     },
   },
@@ -51,7 +52,11 @@ export const AlertBannerTemplate: Story = {
     isCloseable: true,
     role: "status",
     children: ["This is an alert banner in its default configuration"],
-    onClose: () => alert("onClose()"),
+    onClose: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    await userEvent.click(canvas.getByRole("button", { name: /close/i }));
+    expect(args.onClose).toHaveBeenCalled();
   },
   render: ({ ...args }: AlertBannerProps) => <AlertBanner {...args} />,
 };
@@ -61,6 +66,7 @@ export const SuccessBanner: Story = {
   args: {
     variant: "success",
     children: ["This banner uses the 'success' theme"],
+    onClose: fn(),
   },
 };
 
@@ -69,6 +75,7 @@ export const WarningBanner: Story = {
   args: {
     variant: "warning",
     children: ["This banner uses the 'warning' theme"],
+    onClose: fn(),
   },
 };
 
@@ -77,6 +84,7 @@ export const DangerBanner: Story = {
   args: {
     variant: "danger",
     children: ["This banner uses the 'danger' theme"],
+    onClose: fn(),
   },
 };
 
@@ -85,6 +93,7 @@ export const DarkBanner: Story = {
   args: {
     variant: "black",
     children: ["This banner uses the 'black' theme"],
+    onClose: fn(),
   },
 };
 
@@ -93,6 +102,7 @@ export const BannerWithCustomIcon: Story = {
   args: {
     customIcon: [<SvgBcOutlineIcon />],
     children: ["This alert banner has a custom icon"],
+    onClose: fn(),
   },
 };
 
@@ -101,6 +111,7 @@ export const BannerWithoutIcon: Story = {
   args: {
     isIconHidden: true,
     children: ["This banner has its theme icon disabled"],
+    onClose: fn(),
   },
 };
 
@@ -113,6 +124,14 @@ export const BannerWithButton: Story = {
         Take an action
       </Button>,
     ],
+    onClose: fn(),
+  },
+  play: async ({ args, canvas, userEvent }) => {
+    expect(
+      canvas.getByRole("button", { name: "Take an action" })
+    ).toBeInTheDocument();
+    await userEvent.click(canvas.getByRole("button", { name: /close/i }));
+    expect(args.onClose).toHaveBeenCalled();
   },
 };
 
@@ -121,5 +140,8 @@ export const UncloseableBanner: Story = {
   args: {
     isCloseable: false,
     children: ["The close button is disabled on this alert banner"],
+  },
+  play: async ({ canvas }) => {
+    expect(canvas.queryByRole("button")).not.toBeInTheDocument();
   },
 };
