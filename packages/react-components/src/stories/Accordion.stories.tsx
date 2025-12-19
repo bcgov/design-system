@@ -34,7 +34,7 @@ const meta = {
     },
     onExpandedChange: {
       description:
-        "Handler that is called when the disclosure's expanded state changes.",
+        "Handler that is called when the accordion's expanded state changes",
       type: "function",
     },
     children: {
