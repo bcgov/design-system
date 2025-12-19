@@ -58,7 +58,9 @@ export const AlertBannerTemplate: Story = {
     await userEvent.click(canvas.getByRole("button", { name: /close/i }));
     expect(args.onClose).toHaveBeenCalled();
   },
-  render: ({ ...args }: AlertBannerProps) => <AlertBanner {...args} />,
+  render: ({ ...args }: AlertBannerProps) => (
+    <AlertBanner {...args} data-testid="alert-banner" />
+  ),
 };
 
 export const SuccessBanner: Story = {
@@ -67,6 +69,14 @@ export const SuccessBanner: Story = {
     variant: "success",
     children: ["This banner uses the 'success' theme"],
     onClose: fn(),
+  },
+  play: async ({ canvas }) => {
+    expect(
+      canvas.getByText("This banner uses the 'success' theme")
+    ).toBeInTheDocument();
+    expect(canvas.getByTestId("alert-banner")).toHaveStyle(
+      "background-color: rgb(66, 129, 74)"
+    );
   },
 };
 
@@ -77,6 +87,14 @@ export const WarningBanner: Story = {
     children: ["This banner uses the 'warning' theme"],
     onClose: fn(),
   },
+  play: async ({ canvas }) => {
+    expect(
+      canvas.getByText("This banner uses the 'warning' theme")
+    ).toBeInTheDocument();
+    expect(canvas.getByTestId("alert-banner")).toHaveStyle(
+      "background-color: rgb(248, 187, 71)"
+    );
+  },
 };
 
 export const DangerBanner: Story = {
@@ -85,6 +103,14 @@ export const DangerBanner: Story = {
     variant: "danger",
     children: ["This banner uses the 'danger' theme"],
     onClose: fn(),
+  },
+  play: async ({ canvas }) => {
+    expect(
+      canvas.getByText("This banner uses the 'danger' theme")
+    ).toBeInTheDocument();
+    expect(canvas.getByTestId("alert-banner")).toHaveStyle(
+      "background-color: rgb(206, 62, 57)"
+    );
   },
 };
 
@@ -95,6 +121,14 @@ export const DarkBanner: Story = {
     children: ["This banner uses the 'black' theme"],
     onClose: fn(),
   },
+  play: async ({ canvas }) => {
+    expect(
+      canvas.getByText("This banner uses the 'black' theme")
+    ).toBeInTheDocument();
+    expect(canvas.getByTestId("alert-banner")).toHaveStyle(
+      "background-color: rgb(37, 36, 35)"
+    );
+  },
 };
 
 export const BannerWithCustomIcon: Story = {
@@ -104,6 +138,13 @@ export const BannerWithCustomIcon: Story = {
     children: ["This alert banner has a custom icon"],
     onClose: fn(),
   },
+  play: async ({ canvas }) => {
+    expect(
+      canvas
+        .getByTestId("alert-banner")
+        .querySelector('svg[id="bc-outline-icon"]')
+    ).toBeInTheDocument();
+  },
 };
 
 export const BannerWithoutIcon: Story = {
@@ -112,6 +153,13 @@ export const BannerWithoutIcon: Story = {
     isIconHidden: true,
     children: ["This banner has its theme icon disabled"],
     onClose: fn(),
+  },
+  play: async ({ canvas }) => {
+    expect(
+      canvas
+        .getByTestId("alert-banner")
+        .querySelector(".bcds-Alert-Banner--Icon")
+    ).not.toBeInTheDocument();
   },
 };
 
