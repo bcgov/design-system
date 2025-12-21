@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { expect, within } from "storybook/test";
 
 import { AlertDialog, Button, DialogTrigger, Modal } from "../components";
 import { AlertDialogProps } from "@/components/AlertDialog";
@@ -59,11 +60,20 @@ export const AlertDialogTemplate: Story = {
       </Button>,
     ],
   },
+  play: async ({ canvas, userEvent }) => {
+    const body = within(document.body);
+
+    expect(body.queryByRole("dialog")).not.toBeInTheDocument();
+    await userEvent.click(
+      canvas.getByRole("button", { name: /open the alert dialog/i })
+    );
+    expect(body.getByRole("dialog")).toBeInTheDocument();
+  },
   render: ({ ...args }: AlertDialogProps) => (
     <DialogTrigger>
       <Button>Open the alert dialog</Button>
       <Modal>
-        <AlertDialog {...args} />
+        <AlertDialog {...args} data-testid="alert-dialog" />
       </Modal>
     </DialogTrigger>
   ),
@@ -84,6 +94,20 @@ export const AlertDialogWithoutIcon: Story = {
       </Button>,
     ],
   },
+  play: async ({ canvas, userEvent }) => {
+    const body = within(document.body);
+
+    expect(body.queryByRole("dialog")).not.toBeInTheDocument();
+    await userEvent.click(
+      canvas.getByRole("button", { name: /open the alert dialog/i })
+    );
+    expect(body.getByRole("dialog")).toBeInTheDocument();
+    expect(
+      body
+        .getByTestId("alert-dialog")
+        .querySelector(".bcds-react-aria-AlertDialog--Icon")
+    ).not.toBeInTheDocument();
+  },
 };
 
 export const AlertDialogWithoutCloseButton: Story = {
@@ -94,11 +118,23 @@ export const AlertDialogWithoutCloseButton: Story = {
     children:
       "It does not render a close button. Click outside the dialog to dismiss this example.",
   },
+  play: async ({ canvas, userEvent }) => {
+    const body = within(document.body);
+
+    expect(body.queryByRole("dialog")).not.toBeInTheDocument();
+    await userEvent.click(
+      canvas.getByRole("button", { name: /open the alert dialog/i })
+    );
+    expect(body.getByRole("dialog")).toBeInTheDocument();
+    expect(
+      body.queryByRole("button", { name: /close/i })
+    ).not.toBeInTheDocument();
+  },
   render: ({ ...args }: AlertDialogProps) => (
     <DialogTrigger>
       <Button>Open the alert dialog</Button>
       <Modal isDismissable>
-        <AlertDialog {...args} />
+        <AlertDialog {...args} data-testid="alert-dialog" />
       </Modal>
     </DialogTrigger>
   ),
@@ -119,6 +155,18 @@ export const ConfirmationAlert: Story = {
       </Button>,
     ],
   },
+  play: async ({ canvas, userEvent }) => {
+    const body = within(document.body);
+
+    expect(body.queryByRole("dialog")).not.toBeInTheDocument();
+    await userEvent.click(
+      canvas.getByRole("button", { name: /open the alert dialog/i })
+    );
+    expect(body.getByRole("dialog")).toBeInTheDocument();
+    expect(
+      body.getByTestId("alert-dialog").querySelector('svg[id="check-icon"]')
+    ).toBeInTheDocument();
+  },
 };
 
 export const WarningAlert: Story = {
@@ -136,6 +184,20 @@ export const WarningAlert: Story = {
       </Button>,
     ],
   },
+  play: async ({ canvas, userEvent }) => {
+    const body = within(document.body);
+
+    expect(body.queryByRole("dialog")).not.toBeInTheDocument();
+    await userEvent.click(
+      canvas.getByRole("button", { name: /open the alert dialog/i })
+    );
+    expect(body.getByRole("dialog")).toBeInTheDocument();
+    expect(
+      body
+        .getByTestId("alert-dialog")
+        .querySelector('svg[id="exclamation-icon"]')
+    ).toBeInTheDocument();
+  },
 };
 
 export const ErrorAlert: Story = {
@@ -149,6 +211,20 @@ export const ErrorAlert: Story = {
         Button
       </Button>,
     ],
+  },
+  play: async ({ canvas, userEvent }) => {
+    const body = within(document.body);
+
+    expect(body.queryByRole("dialog")).not.toBeInTheDocument();
+    await userEvent.click(
+      canvas.getByRole("button", { name: /open the alert dialog/i })
+    );
+    expect(body.getByRole("dialog")).toBeInTheDocument();
+    expect(
+      body
+        .getByTestId("alert-dialog")
+        .querySelector('svg[id="exclamation-icon-circle"]')
+    ).toBeInTheDocument();
   },
 };
 
@@ -166,5 +242,19 @@ export const DestructiveAlert: Story = {
         Button 2
       </Button>,
     ],
+  },
+  play: async ({ canvas, userEvent }) => {
+    const body = within(document.body);
+
+    expect(body.queryByRole("dialog")).not.toBeInTheDocument();
+    await userEvent.click(
+      canvas.getByRole("button", { name: /open the alert dialog/i })
+    );
+    expect(body.getByRole("dialog")).toBeInTheDocument();
+    expect(
+      body
+        .getByTestId("alert-dialog")
+        .querySelector('svg[id="exclamation-icon-circle"]')
+    ).toBeInTheDocument();
   },
 };
