@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import * as tokens from "@bcgov/design-tokens/js";
+import { expect, within } from "storybook/test";
 
 import {
   Button,
@@ -61,6 +62,15 @@ export const DialogTemplate: Story = {
       </Modal>
     </DialogTrigger>
   ),
+  play: async ({ canvas, userEvent }) => {
+    const body = within(document.body);
+
+    expect(body.queryByRole("dialog")).not.toBeInTheDocument();
+    await userEvent.click(
+      canvas.getByRole("button", { name: /open the dialog/i })
+    );
+    expect(body.getByRole("dialog")).toBeInTheDocument();
+  },
 };
 
 export const DialogWithForm: Story = {
@@ -107,6 +117,15 @@ export const DialogWithForm: Story = {
         </Form>
       </div>,
     ],
+  },
+  play: async ({ canvas, userEvent }) => {
+    const body = within(document.body);
+
+    expect(body.queryByRole("dialog")).not.toBeInTheDocument();
+    await userEvent.click(
+      canvas.getByRole("button", { name: /open the form/i })
+    );
+    expect(body.getByRole("dialog")).toBeInTheDocument();
   },
   render: ({ ...args }: DialogProps) => (
     <DialogTrigger>
