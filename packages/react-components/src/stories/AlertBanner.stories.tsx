@@ -74,9 +74,9 @@ export const SuccessBanner: Story = {
     expect(
       canvas.getByText("This banner uses the 'success' theme")
     ).toBeInTheDocument();
-    expect(canvas.getByTestId("alert-banner")).toHaveStyle(
-      "background-color: rgb(66, 129, 74)"
-    );
+    expect(canvas.getByTestId("alert-banner")).toHaveStyle({
+      backgroundColor: "rgb(66,129,74)",
+    });
   },
 };
 
@@ -91,9 +91,9 @@ export const WarningBanner: Story = {
     expect(
       canvas.getByText("This banner uses the 'warning' theme")
     ).toBeInTheDocument();
-    expect(canvas.getByTestId("alert-banner")).toHaveStyle(
-      "background-color: rgb(248, 187, 71)"
-    );
+    expect(canvas.getByTestId("alert-banner")).toHaveStyle({
+      backgroundColor: "rgb(248, 187, 71)",
+    });
   },
 };
 
@@ -108,9 +108,9 @@ export const DangerBanner: Story = {
     expect(
       canvas.getByText("This banner uses the 'danger' theme")
     ).toBeInTheDocument();
-    expect(canvas.getByTestId("alert-banner")).toHaveStyle(
-      "background-color: rgb(206, 62, 57)"
-    );
+    expect(canvas.getByTestId("alert-banner")).toHaveStyle({
+      backgroundColor: "rgb(206, 62, 57)",
+    });
   },
 };
 
@@ -125,9 +125,9 @@ export const DarkBanner: Story = {
     expect(
       canvas.getByText("This banner uses the 'black' theme")
     ).toBeInTheDocument();
-    expect(canvas.getByTestId("alert-banner")).toHaveStyle(
-      "background-color: rgb(37, 36, 35)"
-    );
+    expect(canvas.getByTestId("alert-banner")).toHaveStyle({
+      backgroundColor: "rgb(37, 36, 35)",
+    });
   },
 };
 

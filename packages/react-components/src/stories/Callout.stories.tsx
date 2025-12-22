@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { expect } from "storybook/test";
 
 import { Button, Callout, Form, TextField, Select } from "../components";
 import { CalloutProps } from "@/components/Callout";
@@ -60,7 +61,15 @@ export const CalloutTemplate: Story = {
       </Button>,
     ],
   },
-  render: ({ ...args }: CalloutProps) => <Callout {...args} />,
+  play: async ({ args, canvas }) => {
+    expect(canvas.getByTestId("callout")).toBeInTheDocument();
+    expect(canvas.getByTestId("callout")).toHaveClass(
+      `bcds-Callout ${args.variant}`
+    );
+  },
+  render: ({ ...args }: CalloutProps) => (
+    <Callout {...args} data-testid="callout" />
+  ),
 };
 
 export const LightBlueTheme: Story = {
@@ -78,6 +87,15 @@ export const LightBlueTheme: Story = {
         Button 2
       </Button>,
     ],
+  },
+  play: async ({ args, canvas }) => {
+    expect(canvas.getByTestId("callout")).toBeInTheDocument();
+    expect(canvas.getByTestId("callout")).toHaveClass(
+      `bcds-Callout ${args.variant}`
+    );
+    expect(canvas.getByTestId("callout")).toHaveStyle({
+      backgroundColor: "rgb(241, 248, 254)",
+    });
   },
 };
 
@@ -97,6 +115,15 @@ export const LightGoldTheme: Story = {
       </Button>,
     ],
   },
+  play: async ({ args, canvas }) => {
+    expect(canvas.getByTestId("callout")).toBeInTheDocument();
+    expect(canvas.getByTestId("callout")).toHaveClass(
+      `bcds-Callout ${args.variant}`
+    );
+    expect(canvas.getByTestId("callout")).toHaveStyle({
+      backgroundColor: "rgb(254, 248, 232)",
+    });
+  },
 };
 
 export const BlueTheme: Story = {
@@ -114,6 +141,15 @@ export const BlueTheme: Story = {
         Button 2
       </Button>,
     ],
+  },
+  play: async ({ args, canvas }) => {
+    expect(canvas.getByTestId("callout")).toBeInTheDocument();
+    expect(canvas.getByTestId("callout")).toHaveClass(
+      `bcds-Callout ${args.variant}`
+    );
+    expect(canvas.getByTestId("callout")).toHaveStyle({
+      backgroundColor: "rgb(5, 54, 98)",
+    });
   },
 };
 
@@ -133,6 +169,15 @@ export const GreyTheme: Story = {
       </Button>,
     ],
   },
+  play: async ({ args, canvas }) => {
+    expect(canvas.getByTestId("callout")).toBeInTheDocument();
+    expect(canvas.getByTestId("callout")).toHaveClass(
+      `bcds-Callout ${args.variant}`
+    );
+    expect(canvas.getByTestId("callout")).toHaveStyle({
+      backgroundColor: "rgb(96, 94, 92)",
+    });
+  },
 };
 
 export const BlackTheme: Story = {
@@ -151,17 +196,34 @@ export const BlackTheme: Story = {
       </Button>,
     ],
   },
+  play: async ({ args, canvas }) => {
+    expect(canvas.getByTestId("callout")).toBeInTheDocument();
+    expect(canvas.getByTestId("callout")).toHaveClass(
+      `bcds-Callout ${args.variant}`
+    );
+    expect(canvas.getByTestId("callout")).toHaveStyle({
+      backgroundColor: "rgb(53, 52, 51)",
+    });
+  },
 };
 
 export const TextOnlyCallout: Story = {
+  ...CalloutTemplate,
   args: {
     variant: "lightGrey",
     description:
       "All of the default content slots are optional. If you don't provide a value, nothing is rendered.",
   },
+  play: async ({ args, canvas }) => {
+    expect(canvas.getByTestId("callout")).toBeInTheDocument();
+    expect(canvas.getByTestId("callout")).toHaveClass(
+      `bcds-Callout ${args.variant}`
+    );
+  },
 };
 
 export const CustomCallout: Story = {
+  ...CalloutTemplate,
   args: {
     variant: "lightGrey",
     children: [
@@ -177,6 +239,7 @@ export const CustomCallout: Story = {
           layout.
         </div>
         <Form
+          aria-label="Form"
           style={{
             display: "inline-flex",
             flexDirection: "row",
@@ -202,5 +265,12 @@ export const CustomCallout: Story = {
         </Form>
       </div>,
     ],
+  },
+  play: async ({ args, canvas }) => {
+    expect(canvas.getByTestId("callout")).toBeInTheDocument();
+    expect(canvas.getByTestId("callout")).toHaveClass(
+      `bcds-Callout ${args.variant}`
+    );
+    expect(canvas.getByRole("form")).toBeInTheDocument();
   },
 };
