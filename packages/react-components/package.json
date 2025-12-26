@@ -28,7 +28,7 @@
   "types": "dist/index.d.ts",
   "dependencies": {
     "@bcgov/design-tokens": "3.2.0",
-    "react-aria-components": "1.13.0"
+    "react-aria-components": "1.14.0"
   },
   "peerDependencies": {
     "@bcgov/bc-sans": "^2.1.0",
