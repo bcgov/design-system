@@ -14,7 +14,7 @@ export interface HeaderProps {
   /**
    * Image used for the logo. Defaults to an SVG of the Government of B.C. logo.
    */
-  logoImage?: JSX.Element;
+  logoImage?: React.ReactNode;
   /**
    * Array of link elements that are not visible until they are focused. Used
    * for accessibility for keyboard users, to let them easily skip to main
