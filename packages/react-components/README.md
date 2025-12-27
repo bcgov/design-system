@@ -173,6 +173,10 @@ In your `./packages/react-components` folder, run `npm link`.
 
 Then in a local React project folder, use `npm link @bcgov/design-system-react-components` to link the test build into your test project.
 
+### Linting
+
+ESLint is used for linting. See configuration file `eslint.config.js`.
+
 ### Publish new versions
 
 #### npm package
