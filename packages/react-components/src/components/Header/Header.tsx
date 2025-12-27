@@ -47,6 +47,9 @@ export default function Header({
         </a>
       );
 
+    // The `<any>` type below is necessary to allow users to specify their own
+    // link elements from any router library.
+    // eslint-disable-next-line
     return cloneElement(logoLinkElement as React.ReactElement<any>, {
       children: logoImage,
     });
