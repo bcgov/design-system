@@ -60,8 +60,8 @@ jobs:
         shell: bash
         working-directory: ./packages/react-components
 
-      - name: Build with Rollup script
-        run: npm run rollup
+      - name: Build components for publishing
+        run: npm run build
         working-directory: ./packages/react-components
 
       - name: Set up .npmrc configuration
@@ -96,8 +96,8 @@ jobs:
         run: npm install
         working-directory: ./packages/react-components
 
-      - name: Build with Rollup script
-        run: npm run rollup
+      - name: Build components for publishing
+        run: npm run build
         working-directory: ./packages/react-components
 
       - name: Set up .npmrc configuration
