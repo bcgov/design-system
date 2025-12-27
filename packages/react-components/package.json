@@ -74,7 +74,6 @@
     "eslint-plugin-react-refresh": "0.4.26",
     "eslint-plugin-storybook": "10.1.10",
     "globals": "16.5.0",
-    "identity-obj-proxy": "3.0.0",
     "jsdom": "27.4.0",
     "playwright": "1.57.0",
     "rollup": "4.54.0",
