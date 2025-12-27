@@ -47,7 +47,9 @@ export default function Header({
         </a>
       );
 
-    return cloneElement(logoLinkElement, { children: logoImage });
+    return cloneElement(logoLinkElement as React.ReactElement<any>, {
+      children: logoImage,
+    });
   }
 
   function getTitle() {
