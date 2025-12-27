@@ -18,7 +18,12 @@ export default defineConfig([
       parser: parser,
     },
   },
-  globalIgnores(["dist", "!.storybook"]),
+  globalIgnores([
+    "!.storybook", // Un-ignore the `.storybook` directory to lint it.
+    "dist", // Ignore the `build` script's output directory.
+    "storybook-static", // Ignore the `storybook-build` script's output directory.
+    "vite-dist", // Ignore the `vite-build` script's output directory.
+  ]),
   eslint.configs.recommended,
   reactHooks.configs.flat.recommended,
   reactRefresh.configs.recommended,
