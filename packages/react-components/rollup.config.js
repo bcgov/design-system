@@ -4,7 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
+// eslint-disable-next-line @typescript-eslint/no-require-imports, no-undef
 const packageJson = require("./package.json");
 
 export default [
