@@ -73,6 +73,7 @@
     "eslint-plugin-react-hooks": "7.0.1",
     "eslint-plugin-react-refresh": "0.4.26",
     "eslint-plugin-storybook": "10.1.10",
+    "globals": "16.5.0",
     "identity-obj-proxy": "3.0.0",
     "jsdom": "27.4.0",
     "playwright": "1.57.0",
@@ -84,6 +85,7 @@
     "ts-node": "10.9.2",
     "tslib": "2.8.1",
     "typescript": "5.9.3",
+    "typescript-eslint": "8.50.1",
     "vite": "7.3.0",
     "vitest": "4.0.14"
   },
