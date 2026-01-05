@@ -32,6 +32,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          registry-url: "https://registry.npmjs.org/"
 
       - name: Install dependencies
         run: npm install
@@ -63,9 +64,6 @@ jobs:
       - name: Build components for publishing
         run: npm run build
         working-directory: ./packages/react-components
-
-      - name: Set up .npmrc configuration
-        run: echo "//registry.npmjs.org/" > ~/.npmrc
 
       - name: Publish to npm @next
         run: npm publish --tag next
