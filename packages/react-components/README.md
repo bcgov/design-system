@@ -95,7 +95,7 @@ export default function App() {
 
 ## Supported React versions
 
-This package has a peer dependency on `react` and `react-dom` at these versions: `"^16.14.0 || ^17.0.0-rc.1 || ^18.0.0"`
+This package has a peer dependency on `react` and `react-dom` at these versions: `"^16.14.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0"`
 
 By targeting v16.14.0 as a minimum, we get to use [React's modern JSX transformation](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) in `tsconfig.json`:
 
@@ -146,6 +146,36 @@ With Storybook running locally, use the `npm run test-storybook` script to test 
 Vite uses the components code directly from `./src/components` in groups of content in `./src/pages`.
 
 Run `npm run vite-dev` to access the Vite React demo app.
+
+### Build library code for publishing
+
+#### Build scripts
+
+Scripts are included in `package.json` for building the component library for publishing:
+
+- `clean` removes any existing local `dist` directory
+- `build:js` uses Rollup to create ESM and CJS versions of the components in `dist/esm` and `dist/cjs`
+- `build:types` uses the TypeScript compiler `tsc` to generate type declarations in `dist/types`
+- `build:dts` uses Rollup to bundle the `.d.ts` files from `dist/types` into a single `dist/index.d.ts` file
+- `build` runs all of the scripts above in sequence
+
+The files that get published are specified in the `files` section of `package.json`. The `dist/types` folder isn't included in this bundle in favor of publishing just the single aggregated `dist/index.d.ts` file.
+
+#### Check files to be published
+
+Use `npm pack --dry-run` to see the files that will be published in the package tarball. See [npm-pack documentation](https://docs.npmjs.com/cli/v11/commands/npm-pack).
+
+#### Testing a local build
+
+Use `npm link` to test a build of the component library locally. See [npm-link documentation](https://docs.npmjs.com/cli/v11/commands/npm-link).
+
+In your `./packages/react-components` folder, run `npm link`.
+
+Then in a local React project folder, use `npm link @bcgov/design-system-react-components` to link the test build into your test project.
+
+### Linting
+
+ESLint is used for linting. See configuration file `eslint.config.js`.
 
 ### Publish new versions
 

@@ -22,6 +22,7 @@ export default function AccordionGroupPage() {
             }}
           >
             <iframe
+              title="iframe example"
               src="https://giphy.com/embed/8gjHXLJumLNv1BtJxX"
               width="100%"
               height="100%"
