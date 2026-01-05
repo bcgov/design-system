@@ -4,20 +4,12 @@
   flex-wrap: wrap;
   box-sizing: border-box;
   gap: var(--layout-margin-small);
+  padding: var(--layout-padding-xsmall);
   align-items: center;
   align-content: flex-start;
   justify-content: space-around;
   background-color: var(--surface-color-secondary-button-disabled);
   border-radius: var(--layout-border-radius-medium);
-}
-
-/* Sizing */
-.bcds-react-aria-ToggleButtonGroup.small {
-  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
-}
-
-.bcds-react-aria-ToggleButtonGroup.medium {
-  padding: var(--layout-padding-xsmall);
 }
 
 /* Orientation */
