@@ -17,7 +17,7 @@ If you need a component that is not yet available in the design system, you can 
 
 ### BC Sans
 
-Both packages use the BC Sans typeface, and install [@bcgov/bc-sans](https://www.npmjs.com/package/@bcgov/bc-sans) as a peer dependency. as a peer dependency. You must import the font-face declarations from @bcgov/bc-sans and ensure the font is reachable for your end user.
+Both packages use the BC Sans typeface, and install [@bcgov/bc-sans](https://www.npmjs.com/package/@bcgov/bc-sans) as a peer dependency. You must import the font-face declarations from @bcgov/bc-sans and ensure the font is reachable for your end user.
 
 ## Installation
 
