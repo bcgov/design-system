@@ -8,6 +8,7 @@ const config: StorybookConfig = {
     "@storybook/addon-a11y",
     "@storybook/addon-docs",
     "@storybook/addon-vitest",
+    "@etchteam/storybook-addon-design-token-tables",
   ],
   framework: {
     name: "@storybook/react-vite",
