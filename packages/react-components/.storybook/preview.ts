@@ -28,7 +28,6 @@ const preview: Preview = {
         order: [
           "Introduction",
           "Changelog",
-          "Foundations",
           "Navigation and structure",
           "Inputs and controls",
           "Notifications and feedback",
