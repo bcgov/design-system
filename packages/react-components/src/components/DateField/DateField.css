@@ -75,6 +75,8 @@
   > .bcds-react-aria-DateField--Group
   > svg {
   color: var(--icons-color-danger);
+  min-width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
 }
 
 /* Hover and focus */
