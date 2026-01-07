@@ -4,7 +4,7 @@ import { Button, Header } from "../components";
 import { HeaderProps } from "../components/Header";
 
 const meta = {
-  title: "Components/Header/Header",
+  title: "Navigation and structure/Header",
   component: Header,
   parameters: {
     layout: "fullscreen",

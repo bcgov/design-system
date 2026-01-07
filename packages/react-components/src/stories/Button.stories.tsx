@@ -4,7 +4,7 @@ import { Button } from "../components";
 import { ButtonProps } from "@/components/Button";
 
 const meta = {
-  title: "Components/Button/Button",
+  title: "Inputs and controls/Button",
   component: Button,
   parameters: {
     layout: "centered",
@@ -18,15 +18,15 @@ const meta = {
     variant: {
       options: ["primary", "secondary", "tertiary", "link"],
       control: { type: "radio" },
-      description:
-        "Toggles between different hierarchical variants",
+      description: "Toggles between different hierarchical variants",
     },
     onPress: {
       description: "Click/press handler",
     },
     danger: {
       control: "boolean",
-      description: "Applies a red colourway for dangerous/destructive functions",
+      description:
+        "Applies a red colourway for dangerous/destructive functions",
     },
     isDisabled: {
       control: "boolean",
@@ -168,7 +168,7 @@ export const Large: Story = {
   ...ButtonTemplate,
   args: {
     children: "Large",
-    size: "large"
+    size: "large",
   },
 };
 

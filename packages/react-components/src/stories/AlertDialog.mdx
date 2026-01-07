@@ -12,7 +12,7 @@ import {
 
 import * as AlertDialogStories from "./AlertDialog.stories";
 
-<Meta title="Components/Dialogs/AlertDialog" />
+<Meta title="Notifications and feedback/Dialogs/AlertDialog" />
 
 # Alert Dialog
 
@@ -34,7 +34,7 @@ import * as AlertDialogStories from "./AlertDialog.stories";
 
 ### Anatomy
 
-Alert Dialogs are implemented by using `DialogTrigger` and `Modal` as wrappers, much like the generic [Dialog](/?path=/docs/components-dialogs--docs):
+Alert Dialogs are implemented by using `DialogTrigger` and `Modal` as wrappers, much like the generic [Dialog](/docs/notifications-and-feedback-dialogs--docs):
 
 ```javascript
 <DialogTrigger>
@@ -51,7 +51,7 @@ Alert Dialog has 3 content slots, populated via prop:
 
 - `title`: the bold heading at the top
 - `children`: the slot in the middle
-- `buttons`: renders a [ButtonGroup](?path=/docs/components-button-buttongroup--docs) at the bottom, and expects an array of one or more [Buttons](?path=/docs/components-button-button--docs)
+- `buttons`: renders a [ButtonGroup](/docs/inputs-and-controls-button-buttongroup--docs) at the bottom, and expects an array of one or more [Buttons](/docs/inputs-and-controls-button--docs)
 
 If no content is passed to a slot, it will not be rendered.
 
@@ -81,7 +81,7 @@ Alert Dialog ships with a set of themes, set via the `variant` prop (defaults to
 
 ## Additional customisation
 
-Set `isCloseable` to `false` to hide the close button in the top right corner of an alert. Use this in conjunction with [Modal's](?path=/docs/components-dialogs--docs#modal) `isDismissable` and `isKeyboardDismissDisabled` props to control whether the user can close a dialog without taking action:
+Set `isCloseable` to `false` to hide the close button in the top right corner of an alert. Use this in conjunction with [Modal's](/docs/notifications-and-feedback-dialogs--docs#modal) `isDismissable` and `isKeyboardDismissDisabled` props to control whether the user can close a dialog without taking action:
 
 <Canvas of={AlertDialogStories.AlertDialogWithoutCloseButton} />
 

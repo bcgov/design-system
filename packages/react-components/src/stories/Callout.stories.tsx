@@ -4,7 +4,7 @@ import { Button, Callout, Form, TextField, Select } from "../components";
 import { CalloutProps } from "@/components/Callout";
 
 const meta = {
-  title: "Components/Callout/Callout",
+  title: "Content/Callout",
   component: Callout,
   parameters: { layout: "centered" },
   argTypes: {
