@@ -55,7 +55,7 @@
 /* Required indicator */
 .bcds-react-aria-DateField--Label.required {
   color: var(--typography-color-secondary);
-  padding: var(--layout-padding-small) var(--layout-padding-xsmall);
+  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
 }
 /* Description */
 .bcds-react-aria-DateField--Description {
