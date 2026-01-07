@@ -99,7 +99,7 @@ export const AlertWithCustomIcon: Story = {
   args: {
     title: "This alert uses a custom icon",
     description: "You can override the default icon set by the alert theme.",
-    customIcon: <SvgBcOutlineIcon />,
+    customIcon: [<SvgBcOutlineIcon />],
   },
 };
 
