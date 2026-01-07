@@ -12,7 +12,6 @@
   display: inline-flex;
   flex-direction: row;
   flex: 1 1 0;
-  gap: var(--layout-margin-hair);
   align-items: center;
   box-sizing: border-box;
   border: var(--layout-border-width-small) solid
@@ -126,7 +125,6 @@
 .bcds-react-aria-DateField button {
   position: relative;
   right: 0;
-  padding: var(--layout-padding-small);
 }
 .bcds-react-aria-DateField--Calendar {
   display: inline-flex;
@@ -166,7 +164,7 @@
 }
 .bcds-react-aria-DateField--CalendarCell[data-today] {
   border: var(--layout-border-width-small) solid
-    var(--surface-color-border-active);
+    var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
 }
 .bcds-react-aria-DateField--CalendarCell[data-hovered] {

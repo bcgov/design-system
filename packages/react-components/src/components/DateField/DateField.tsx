@@ -73,7 +73,7 @@ export default function DateField<T extends DateValue>({
             {isInvalid && <SvgExclamationIcon />}
             {!isPickerDisabled && (
               <>
-                <Button size="xsmall" variant="primary" isIconButton>
+                <Button size="xsmall" variant="tertiary" isIconButton>
                   <SvgCalendarIcon />
                 </Button>
                 <Popover>
@@ -82,7 +82,7 @@ export default function DateField<T extends DateValue>({
                       <header className="bcds-react-aria-DateField--CalendarHeader">
                         <Button
                           slot="previous"
-                          size="small"
+                          size="xsmall"
                           variant="tertiary"
                           isIconButton
                         >
@@ -91,7 +91,7 @@ export default function DateField<T extends DateValue>({
                         <Heading />
                         <Button
                           slot="next"
-                          size="small"
+                          size="xsmall"
                           variant="tertiary"
                           isIconButton
                         >
