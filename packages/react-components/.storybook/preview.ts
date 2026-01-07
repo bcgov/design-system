@@ -29,6 +29,7 @@ const preview: Preview = {
           "Introduction",
           "Changelog",
           "Navigation and structure",
+          ["Header", "Footer"],
           "Inputs and controls",
           "Notifications and feedback",
           "Content",
