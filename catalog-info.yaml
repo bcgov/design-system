@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: b.c.-design-system
+  name: bc-design-system
   title: B.C. Design System
   description: The B.C. Design System helps public sector design and development
     teams build consistent, accessible products.
