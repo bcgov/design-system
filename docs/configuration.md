@@ -9,7 +9,7 @@ The design tokens library includes the full [design tokens schema](https://www2.
 
 Import your preferred format in order to use tokens to style your UI elements.
 
-The library also includes a prefixed implementation, which prepends each variable with a `bcds` namespace. This can help prevent naming collisions, especially if you're already using variables.
+The library also includes an alternative `prefixed` implementation, which prefixes each variable with a `bcds` namespace. This can help prevent naming collisions, especially if you're already using variables.
 
 ## Components
 
@@ -48,3 +48,5 @@ import {
 Each component has an extensive set of props that you can use to configure their appearance, behaviour and interactions with other components.
 
 Consult the [component documentation in Storybook](https://designsystem.gov.bc.ca/react-components/) to learn more about a component's structure and supported props.
+
+If you need a specific component not included in the design system, [React Aria Components](https://react-aria.adobe.com) provides an extensive library of unstyled components. You can mix-and-match components from both libraries as needed, to leverage common APIs and ensure consistent interactions and behaviours.

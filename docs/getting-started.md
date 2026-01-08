@@ -23,9 +23,7 @@ Both packages use the BC Sans typeface, and install [@bcgov/bc-sans](https://www
 
 To install the packages, run:
 
-```
-npm i @bcgov/design-tokens
-npm i @bcgov/design-system-react-components
-```
+`npm i @bcgov/design-tokens`
+`npm i @bcgov/design-system-react-components`
 
-Both packages follow semantic versioning. Minor and patch versions will not include breaking changes. At this time, we nonetheless recommend pinning to a specific version in your `package.json` and installing updates manually (after reviewing the release notes carefully.)
+Both packages follow semantic versioning. Minor and patch versions will not include breaking changes. At this time, we nonetheless recommend pinning to a specific version in your `package.json` and installing updates manually, after carefully reviewing the release notes.
