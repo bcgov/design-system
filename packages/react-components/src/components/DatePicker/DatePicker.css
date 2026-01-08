@@ -1,4 +1,4 @@
-.bcds-react-aria-DateField {
+.bcds-react-aria-DatePicker {
   display: flex;
   flex-direction: column;
   gap: var(--layout-margin-hair);
@@ -8,7 +8,7 @@
   max-width: -moz-available;
   max-width: -webkit-fill-available;
 }
-.bcds-react-aria-DateField--Group {
+.bcds-react-aria-DatePicker--Group {
   display: inline-flex;
   flex-direction: row;
   flex: 1 1 0;
@@ -19,7 +19,7 @@
   border-radius: var(--layout-border-radius-medium);
   gap: var(--layout-margin-small);
 }
-.bcds-react-aria-DateField--Input {
+.bcds-react-aria-DatePicker--Input {
   display: inline;
   box-sizing: border-box;
   width: 100%;
@@ -29,49 +29,49 @@
 }
 
 /* Sizing */
-.bcds-react-aria-DateField.small > .bcds-react-aria-DateField--Group {
+.bcds-react-aria-DatePicker.small > .bcds-react-aria-DatePicker--Group {
   padding: var(--layout-padding-hair) var(--layout-padding-small);
   height: 32px;
 }
-.bcds-react-aria-DateField.small .bcds-react-aria-DateField--Input {
+.bcds-react-aria-DatePicker.small .bcds-react-aria-DatePicker--Input {
   font: var(--typography-regular-small-body);
 }
 
-.bcds-react-aria-DateField.medium > .bcds-react-aria-DateField--Group {
+.bcds-react-aria-DatePicker.medium > .bcds-react-aria-DatePicker--Group {
   padding: var(--layout-padding-xsmall) 0.75rem;
   height: 40px;
 }
-.bcds-react-aria-DateField.medium .bcds-react-aria-DateField--Input {
+.bcds-react-aria-DatePicker.medium .bcds-react-aria-DatePicker--Input {
   font: var(--typography-regular-body);
 }
 
 /* Label */
-.bcds-react-aria-DateField--Label {
+.bcds-react-aria-DatePicker--Label {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-primary);
   padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
 /* Required indicator */
-.bcds-react-aria-DateField--Label.required {
+.bcds-react-aria-DatePicker--Label.required {
   color: var(--typography-color-secondary);
   padding: var(--layout-padding-none) var(--layout-padding-xsmall);
 }
 /* Description */
-.bcds-react-aria-DateField--Description {
+.bcds-react-aria-DatePicker--Description {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-secondary);
   padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
 /* Error message */
-.bcds-react-aria-DateField--Error {
+.bcds-react-aria-DatePicker--Error {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-danger);
 }
-.bcds-react-aria-DateField[data-invalid] > .bcds-react-aria-DateField--Group {
+.bcds-react-aria-DatePicker[data-invalid] > .bcds-react-aria-DatePicker--Group {
   border-color: var(--support-border-color-danger);
 }
-.bcds-react-aria-DateField[data-invalid]
-  > .bcds-react-aria-DateField--Group
+.bcds-react-aria-DatePicker[data-invalid]
+  > .bcds-react-aria-DatePicker--Group
   > svg {
   color: var(--icons-color-danger);
   min-width: var(--icons-size-medium);
@@ -79,26 +79,26 @@
 }
 
 /* Hover and focus */
-.bcds-react-aria-DateField--Group[data-hovered] {
+.bcds-react-aria-DatePicker--Group[data-hovered] {
   border-color: var(--surface-color-border-dark);
 }
-.bcds-react-aria-DateField[data-focus-visible]
-  > .bcds-react-aria-DateField--Group {
+.bcds-react-aria-DatePicker[data-focus-visible]
+  > .bcds-react-aria-DatePicker--Group {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
 }
-.bcds-react-aria-DateField[data-focus-visible]
-  > .bcds-react-aria-DateField--Group:has(
+.bcds-react-aria-DatePicker[data-focus-visible]
+  > .bcds-react-aria-DatePicker--Group:has(
     .bcds-react-aria-Button[data-focus-visible]
   ) {
   outline: none; /* Hide focus ring when button is focused */
 }
-.bcds-react-aria-DateField[data-focus-visible]
-  .bcds-react-aria-DateField--Segment {
+.bcds-react-aria-DatePicker[data-focus-visible]
+  .bcds-react-aria-DatePicker--Segment {
   outline: none;
 }
-.bcds-react-aria-DateField--Segment[data-focused] {
+.bcds-react-aria-DatePicker--Segment[data-focused] {
   outline: none;
   border-radius: var(--layout-border-radius-medium);
   background-color: var(--surface-color-border-active);
@@ -108,25 +108,27 @@
 }
 
 /* Disabled and read-only */
-.bcds-react-aria-DateField[data-readonly] > .bcds-react-aria-DateField--Group {
+.bcds-react-aria-DatePicker[data-readonly]
+  > .bcds-react-aria-DatePicker--Group {
   cursor: not-allowed;
 }
-.bcds-react-aria-DateField--Segment[data-readonly][data-focused] {
+.bcds-react-aria-DatePicker--Segment[data-readonly][data-focused] {
   background-color: var(--surface-color-forms-disabled);
   color: var(--typography-color-primary);
 }
-.bcds-react-aria-DateField[data-disabled] > .bcds-react-aria-DateField--Group {
+.bcds-react-aria-DatePicker[data-disabled]
+  > .bcds-react-aria-DatePicker--Group {
   background-color: var(--surface-color-forms-disabled);
   color: var(--typography-color-disabled);
   cursor: not-allowed;
 }
 
 /* Calendar */
-.bcds-react-aria-DateField button {
+.bcds-react-aria-DatePicker button {
   position: relative;
   right: 0;
 }
-.bcds-react-aria-DateField--Calendar {
+.bcds-react-aria-DatePicker--Calendar {
   display: inline-flex;
   flex-direction: column;
   flex: 1 1 0;
@@ -139,46 +141,46 @@
   border-radius: var(--layout-border-radius-medium);
   font: var(--typography-regular-body);
 }
-.bcds-react-aria-DateField--CalendarHeader {
+.bcds-react-aria-DatePicker--CalendarHeader {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
   gap: var(--layout-margin-small);
   margin: var(--layout-margin-small);
 }
-.bcds-react-aria-DateField--CalendarHeader > h2.bcds-react-aria-Heading {
+.bcds-react-aria-DatePicker--CalendarHeader > h2.bcds-react-aria-Heading {
   font: var(--typography-bold-large-body);
   margin: var(--layout-margin-none);
 }
-.bcds-react-aria-DateField--CalendarGrid {
+.bcds-react-aria-DatePicker--CalendarGrid {
   text-align: center;
 }
-.bcds-react-aria-DateField--CalendarCell {
+.bcds-react-aria-DatePicker--CalendarCell {
   cursor: pointer;
 }
-.bcds-react-aria-DateField--CalendarCell[data-focus-visible] {
+.bcds-react-aria-DatePicker--CalendarCell[data-focus-visible] {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
   border-radius: var(--layout-border-radius-medium);
 }
-.bcds-react-aria-DateField--CalendarCell[data-today] {
+.bcds-react-aria-DatePicker--CalendarCell[data-today] {
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
 }
-.bcds-react-aria-DateField--CalendarCell[data-hovered] {
+.bcds-react-aria-DatePicker--CalendarCell[data-hovered] {
   background-color: var(--surface-color-secondary-button-hover);
   border-radius: var(--layout-border-radius-medium);
 }
-.bcds-react-aria-DateField--CalendarCell[data-selected] {
+.bcds-react-aria-DatePicker--CalendarCell[data-selected] {
   background-color: var(--surface-color-border-active);
   color: var(--typography-color-primary-invert);
   border-radius: var(--layout-border-radius-medium);
 }
-.bcds-react-aria-DateField--CalendarCell[data-selected][data-hovered] {
+.bcds-react-aria-DatePicker--CalendarCell[data-selected][data-hovered] {
   background-color: var(--surface-color-primary-button-hover);
 }
-.bcds-react-aria-DateField--CalendarCell[data-outside-visible-range] {
+.bcds-react-aria-DatePicker--CalendarCell[data-outside-visible-range] {
   display: none;
 }

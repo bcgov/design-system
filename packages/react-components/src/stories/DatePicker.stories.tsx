@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { DateField } from "../components";
-import { DateFieldProps, DateValue } from "../components/DateField";
+import { DatePicker } from "../components";
+import { DatePickerProps, DateValue } from "../components/DatePicker";
 
 const meta = {
-  title: "Inputs and controls/DateField",
-  component: DateField,
+  title: "Inputs and controls/DatePicker",
+  component: DatePicker,
   parameters: { layout: "centered" },
   argTypes: {
     size: {
@@ -43,28 +43,28 @@ const meta = {
       description: "Whether the current input is valid",
     },
   },
-} satisfies Meta<typeof DateField>;
+} satisfies Meta<typeof DatePicker>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const DateFieldTemplate: Story = {
+export const DatePickerTemplate: Story = {
   args: { label: "Label", description: "Description" },
-  render: ({ ...args }: DateFieldProps<DateValue>) => <DateField {...args} />,
+  render: ({ ...args }: DatePickerProps<DateValue>) => <DatePicker {...args} />,
 };
 
 export const NoPicker: Story = {
-  ...DateFieldTemplate,
+  ...DatePickerTemplate,
   args: { label: "Label", description: "Description", isPickerDisabled: true },
 };
 
 export const DateAndTime: Story = {
-  ...DateFieldTemplate,
+  ...DatePickerTemplate,
   args: { label: "Label", description: "Description", granularity: "minute" },
 };
 
 export const Invalid: Story = {
-  ...DateFieldTemplate,
+  ...DatePickerTemplate,
   args: {
     label: "Label",
     description: "Description",
@@ -74,11 +74,11 @@ export const Invalid: Story = {
 };
 
 export const Disabled: Story = {
-  ...DateFieldTemplate,
+  ...DatePickerTemplate,
   args: { label: "Label", description: "Description", isDisabled: true },
 };
 
 export const ReadOnly: Story = {
-  ...DateFieldTemplate,
+  ...DatePickerTemplate,
   args: { label: "Label", description: "Description", isReadOnly: true },
 };

@@ -15,7 +15,7 @@ import {
   ValidationResult,
 } from "react-aria-components";
 
-import "./DateField.css";
+import "./DatePicker.css";
 import Button from "../Button";
 import Dialog from "../Dialog";
 import Heading from "../Heading";
@@ -24,7 +24,7 @@ import SvgChevronLeftIcon from "../Icons/SvgChevronLeftIcon";
 import SvgChevronRightIcon from "../Icons/SvgChevronRightIcon";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 
-export interface DateFieldProps<T extends DateValue>
+export interface DatePickerProps<T extends DateValue>
   extends ReactAriaDatePickerProps<T> {
   size?: "medium" | "small";
   isPickerDisabled?: boolean;
@@ -35,7 +35,7 @@ export interface DateFieldProps<T extends DateValue>
 
 export type { DateValue };
 
-export default function DateField<T extends DateValue>({
+export default function DatePicker<T extends DateValue>({
   size = "medium",
   label,
   description,
@@ -43,29 +43,29 @@ export default function DateField<T extends DateValue>({
   isRequired = false,
   isPickerDisabled = false,
   ...props
-}: DateFieldProps<T>) {
+}: DatePickerProps<T>) {
   return (
     <ReactAriaDatePicker
-      className={`bcds-react-aria-DateField ${size}`}
+      className={`bcds-react-aria-DatePicker ${size}`}
       {...props}
     >
       {({ isInvalid }) => (
         <>
           {label && (
-            <Label className="bcds-react-aria-DateField--Label">
+            <Label className="bcds-react-aria-DatePicker--Label">
               {label}
               {isRequired && (
-                <span className="bcds-react-aria-DateField--Label required">
+                <span className="bcds-react-aria-DatePicker--Label required">
                   (required)
                 </span>
               )}
             </Label>
           )}
-          <Group className="bcds-react-aria-DateField--Group">
-            <DateInput className="bcds-react-aria-DateField--Input">
+          <Group className="bcds-react-aria-DatePicker--Group">
+            <DateInput className="bcds-react-aria-DatePicker--Input">
               {(segment) => (
                 <DateSegment
-                  className="bcds-react-aria-DateField--Segment"
+                  className="bcds-react-aria-DatePicker--Segment"
                   segment={segment}
                 />
               )}
@@ -78,8 +78,8 @@ export default function DateField<T extends DateValue>({
                 </Button>
                 <Popover>
                   <Dialog isCloseable={false}>
-                    <Calendar className="bcds-react-aria-DateField--Calendar">
-                      <header className="bcds-react-aria-DateField--CalendarHeader">
+                    <Calendar className="bcds-react-aria-DatePicker--Calendar">
+                      <header className="bcds-react-aria-DatePicker--CalendarHeader">
                         <Button
                           slot="previous"
                           size="xsmall"
@@ -98,10 +98,10 @@ export default function DateField<T extends DateValue>({
                           <SvgChevronRightIcon />
                         </Button>
                       </header>
-                      <CalendarGrid className="bcds-react-aria-DateField--CalendarGrid">
+                      <CalendarGrid className="bcds-react-aria-DatePicker--CalendarGrid">
                         {(date) => (
                           <CalendarCell
-                            className="bcds-react-aria-DateField--CalendarCell"
+                            className="bcds-react-aria-DatePicker--CalendarCell"
                             date={date}
                           />
                         )}
@@ -116,12 +116,12 @@ export default function DateField<T extends DateValue>({
           {description && (
             <Text
               slot="description"
-              className={`bcds-react-aria-DateField--Description`}
+              className={`bcds-react-aria-DatePicker--Description`}
             >
               {description}
             </Text>
           )}
-          <FieldError className="bcds-react-aria-DateField--Error">
+          <FieldError className="bcds-react-aria-DatePicker--Error">
             {errorMessage}
           </FieldError>
         </>
