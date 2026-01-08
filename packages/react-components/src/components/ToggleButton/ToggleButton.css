@@ -72,11 +72,10 @@
 
 /* Focused */
 .bcds-react-aria-ToggleButton[data-focus-visible] {
-  outline: solid var(--layout-border-width-medium)
+  border: var(--layout-border-width-medium) solid
     var(--surface-color-border-active);
-}
-.bcds-react-aria-ToggleButton[data-focus-visible][data-selected] {
   background-color: var(--theme-blue-10);
+  outline: none;
 }
 
 /* Disabled */
