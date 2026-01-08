@@ -52,7 +52,7 @@ If you need help, you can:
 
 All components are fully documented. Go to [gov.bc.ca/designsystem](https://gov.bc.ca/designsystem) to browse foundational and component-level documentation.
 
-Rendered examples and detailed technical documentation for each component are also [published in a Storybook](https://designsystem.gov.bc.ca/react-components/).
+Interactive examples and detailed technical documentation for each component are also [published in a Storybook](https://designsystem.gov.bc.ca/react-components/).
 
 ## Cost
 
