@@ -9,6 +9,7 @@ export { default as ButtonGroup } from "./ButtonGroup";
 export { default as Callout } from "./Callout";
 export { default as Checkbox } from "./Checkbox";
 export { default as CheckboxGroup } from "./CheckboxGroup";
+export { default as DateField } from "./DateField";
 export { default as DatePicker } from "./DatePicker";
 export { default as Dialog, DialogTrigger } from "./Dialog";
 export { default as Footer, FooterLinks } from "./Footer";
