@@ -73,7 +73,7 @@ export default function DatePicker<T extends DateValue>({
             {isInvalid && <SvgExclamationIcon />}
             {!isPickerDisabled && (
               <>
-                <Button size="xsmall" variant="tertiary" isIconButton>
+                <Button size="xsmall" variant="primary" isIconButton>
                   <SvgCalendarIcon />
                 </Button>
                 <Popover>
