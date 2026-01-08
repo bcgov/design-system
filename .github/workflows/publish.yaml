@@ -30,12 +30,11 @@ jobs:
                 uses: bcgov/devhub-techdocs-publish@stable
                 id: build_and_publish
                 with:
-                    publish: 'false' # publishing disabled initially - content will be built, but not published. repositories need to be granted access to TechDocs secrets explicitly by the DevEx team before publishing would work, so we disable to prevent the workflow from failing.
-# the parameters below can be uncommented when publishing is enabled and secrets have been exposed to the repo
-#                    production:  ${{ github.ref == 'refs/heads/main' && 'true' || 'false' }} # example of only pushing to prod DevHub when changes that triggered the job are in main branch
-#                    bucket_name: ${{ secrets.TECHDOCS_S3_BUCKET_NAME }}
-#                    s3_access_key_id: ${{ secrets.TECHDOCS_AWS_ACCESS_KEY_ID }}
-#                    s3_secret_access_key: ${{ secrets.TECHDOCS_AWS_SECRET_ACCESS_KEY }}
-#                    s3_region: ${{ secrets.TECHDOCS_AWS_REGION }}
-#                    s3_endpoint: ${{ secrets.TECHDOCS_AWS_ENDPOINT }}
+                    publish: 'true' # publishing disabled initially - content will be built, but not published. repositories need to be granted access to TechDocs secrets explicitly by the DevEx team before publishing would work, so we disable to prevent the workflow from failing.
+# the parameters below can be uncommented when publishing is enabled and secrets have been exposed to the repo                    production:  ${{ github.ref == 'refs/heads/main' && 'true' || 'false' }} # example of only pushing to prod DevHub when changes that triggered the job are in main branch
+                    bucket_name: ${{ secrets.TECHDOCS_S3_BUCKET_NAME }}
+                    s3_access_key_id: ${{ secrets.TECHDOCS_AWS_ACCESS_KEY_ID }}
+                    s3_secret_access_key: ${{ secrets.TECHDOCS_AWS_SECRET_ACCESS_KEY }}
+                    s3_region: ${{ secrets.TECHDOCS_AWS_REGION }}
+                    s3_endpoint: ${{ secrets.TECHDOCS_AWS_ENDPOINT }}
 
