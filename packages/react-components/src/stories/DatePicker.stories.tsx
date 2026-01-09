@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { getLocalTimeZone, today } from "@internationalized/date";
 
 import { DatePicker } from "../components";
 import { DatePickerProps, DateValue } from "../components/DatePicker";
@@ -30,6 +31,14 @@ const meta = {
       options: ["day", "minute"],
       description: "Sets smallest selectable unit of time",
     },
+    minValue: {
+      control: { type: "object" },
+      description: "Sets the minimum selectable date",
+    },
+    maxValue: {
+      control: { type: "object" },
+      description: "Sets the maximum selectable date",
+    },
     isCalendarDisabled: {
       control: { type: "boolean" },
       description: "Disables the calendar button and popover",
@@ -55,6 +64,15 @@ type Story = StoryObj<typeof meta>;
 export const DatePickerTemplate: Story = {
   args: { label: "Label", description: "Description" },
   render: ({ ...args }: DatePickerProps<DateValue>) => <DatePicker {...args} />,
+};
+
+export const ConstrainedRange: Story = {
+  args: {
+    label: "Date picker with limits",
+    description: "This field only allows a future selection within one month.",
+    minValue: today(getLocalTimeZone()),
+    maxValue: today(getLocalTimeZone()).add({ months: 1 }),
+  },
 };
 
 export const NoPicker: Story = {
