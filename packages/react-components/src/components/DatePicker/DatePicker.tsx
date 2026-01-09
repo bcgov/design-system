@@ -98,7 +98,10 @@ export default function DatePicker<T extends DateValue>({
                           <SvgChevronRightIcon />
                         </Button>
                       </header>
-                      <CalendarGrid className="bcds-react-aria-DatePicker--CalendarGrid">
+                      <CalendarGrid
+                        className="bcds-react-aria-DatePicker--CalendarGrid"
+                        weekdayStyle="short"
+                      >
                         {(date) => (
                           <CalendarCell
                             className="bcds-react-aria-DatePicker--CalendarCell"
