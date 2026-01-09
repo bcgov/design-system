@@ -1,0 +1,68 @@
+.bcds-react-aria-ToggleButtonGroup {
+  display: flex;
+  flex: 1 1 0;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  gap: var(--layout-margin-small);
+  padding: var(--layout-padding-xsmall);
+  align-items: center;
+  align-content: flex-start;
+  justify-content: space-around;
+  background-color: var(--surface-color-secondary-button-disabled);
+  border-radius: var(--layout-border-radius-medium);
+}
+
+/* Orientation */
+.bcds-react-aria-ToggleButtonGroup[data-orientation="horizontal"] {
+  flex-direction: row;
+  min-height: var(--layout-margin-xlarge);
+}
+
+.bcds-react-aria-ToggleButtonGroup[data-orientation="vertical"] {
+  flex-direction: column;
+}
+
+/* Label */
+.bcds-react-aria-ToggleButtonGroup--Label {
+  display: flex;
+  padding: var(--layout-padding-small) var(--layout-padding-none);
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+}
+
+/* Selection indicator */
+.bcds-react-aria-ToggleButton:has(
+    .bcds-react-aria-ToggleButton--SelectionIndicator
+  ) {
+  position: relative;
+  transition: color 200ms;
+}
+
+.bcds-react-aria-ToggleButtonGroup > .bcds-react-aria-ToggleButton > span {
+  position: relative;
+  z-index: 1;
+}
+
+.bcds-react-aria-ToggleButtonGroup
+  > .bcds-react-aria-ToggleButton
+  > .bcds-react-aria-ToggleButton--SelectionIndicator[data-selected] {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--surface-color-secondary-button-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-secondary-button-default);
+  border-radius: var(--layout-border-radius-medium);
+  box-shadow: var(--surface-shadow-small);
+  pointer-events: none;
+  transition-property: translate, width;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
