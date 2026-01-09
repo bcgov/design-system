@@ -43,6 +43,11 @@ const meta = {
       control: { type: "boolean" },
       description: "Disables the calendar button and popover",
     },
+    showDropdowns: {
+      control: { type: "boolean" },
+      description:
+        "Whether to show the month and year dropdowns for quicker navigation",
+    },
     isRequired: {
       control: { type: "boolean" },
       description: "Whether an input is required",
