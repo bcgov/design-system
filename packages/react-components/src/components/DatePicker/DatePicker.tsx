@@ -1,7 +1,4 @@
 import {
-  Calendar,
-  CalendarCell,
-  CalendarGrid,
   DatePicker as ReactAriaDatePicker,
   DatePickerProps as ReactAriaDatePickerProps,
   DateValue,
@@ -17,11 +14,9 @@ import {
 
 import "./DatePicker.css";
 import Button from "../Button";
+import Calendar from "../Calendar";
 import Dialog from "../Dialog";
-import Heading from "../Heading";
 import SvgCalendarIcon from "../Icons/SvgCalendarIcon";
-import SvgChevronLeftIcon from "../Icons/SvgChevronLeftIcon";
-import SvgChevronRightIcon from "../Icons/SvgChevronRightIcon";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 
 export interface DatePickerProps<T extends DateValue>
@@ -78,38 +73,7 @@ export default function DatePicker<T extends DateValue>({
                 </Button>
                 <Popover>
                   <Dialog isCloseable={false}>
-                    <Calendar className="bcds-react-aria-DatePicker--Calendar">
-                      <header className="bcds-react-aria-DatePicker--CalendarHeader">
-                        <Button
-                          slot="previous"
-                          size="xsmall"
-                          variant="tertiary"
-                          isIconButton
-                        >
-                          <SvgChevronLeftIcon />
-                        </Button>
-                        <Heading />
-                        <Button
-                          slot="next"
-                          size="xsmall"
-                          variant="tertiary"
-                          isIconButton
-                        >
-                          <SvgChevronRightIcon />
-                        </Button>
-                      </header>
-                      <CalendarGrid
-                        className="bcds-react-aria-DatePicker--CalendarGrid"
-                        weekdayStyle="short"
-                      >
-                        {(date) => (
-                          <CalendarCell
-                            className="bcds-react-aria-DatePicker--CalendarCell"
-                            date={date}
-                          />
-                        )}
-                      </CalendarGrid>
-                    </Calendar>
+                    <Calendar />
                   </Dialog>
                 </Popover>
               </>

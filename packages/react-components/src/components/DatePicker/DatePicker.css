@@ -128,7 +128,7 @@
   right: 0;
 }
 .bcds-react-aria-DatePicker--Calendar {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   flex: 1 1 0;
   gap: var(--layout-margin-small);
@@ -175,9 +175,7 @@
   border-radius: var(--layout-border-radius-medium);
 }
 .bcds-react-aria-DatePicker--CalendarCell[data-today] {
-  border: var(--layout-border-width-small) solid
-    var(--surface-color-border-default);
-  border-radius: var(--layout-border-radius-medium);
+  font: var(--typography-bold-small-body);
 }
 .bcds-react-aria-DatePicker--CalendarCell[data-hovered] {
   background-color: var(--surface-color-secondary-button-hover);

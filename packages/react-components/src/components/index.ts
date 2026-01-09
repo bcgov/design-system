@@ -6,6 +6,7 @@ export { default as AlertBanner } from "./AlertBanner";
 export { default as AlertDialog } from "./AlertDialog";
 export { default as Button } from "./Button";
 export { default as ButtonGroup } from "./ButtonGroup";
+export { default as Calendar } from "./Calendar";
 export { default as Callout } from "./Callout";
 export { default as Checkbox } from "./Checkbox";
 export { default as CheckboxGroup } from "./CheckboxGroup";
