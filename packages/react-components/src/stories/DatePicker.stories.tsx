@@ -30,6 +30,10 @@ const meta = {
       options: ["day", "minute"],
       description: "Sets smallest selectable unit of time",
     },
+    isCalendarDisabled: {
+      control: { type: "boolean" },
+      description: "Disables the calendar button and popover",
+    },
     isRequired: {
       control: { type: "boolean" },
       description: "Whether an input is required",
@@ -55,7 +59,11 @@ export const DatePickerTemplate: Story = {
 
 export const NoPicker: Story = {
   ...DatePickerTemplate,
-  args: { label: "Label", description: "Description", isPickerDisabled: true },
+  args: {
+    label: "Label",
+    description: "Description",
+    isCalendarDisabled: true,
+  },
 };
 
 export const DateAndTime: Story = {

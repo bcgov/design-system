@@ -1,7 +1,6 @@
 .bcds-react-aria-DatePicker {
   display: flex;
   flex-direction: column;
-  gap: var(--layout-margin-hair);
   background-color: var(--surface-color-forms-default);
   /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
   align-self: stretch;
@@ -103,7 +102,7 @@
   border-radius: var(--layout-border-radius-medium);
   background-color: var(--surface-color-border-active);
   color: var(--typography-color-primary-invert);
-  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
+  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
   margin: var(--layout-margin-none) var(--layout-margin-hair);
 }
 

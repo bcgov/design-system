@@ -27,7 +27,7 @@ import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 export interface DatePickerProps<T extends DateValue>
   extends ReactAriaDatePickerProps<T> {
   size?: "medium" | "small";
-  isPickerDisabled?: boolean;
+  isCalendarDisabled?: boolean;
   label?: string;
   description?: string;
   errorMessage?: string | ((validation: ValidationResult) => string);
@@ -41,7 +41,7 @@ export default function DatePicker<T extends DateValue>({
   description,
   errorMessage,
   isRequired = false,
-  isPickerDisabled = false,
+  isCalendarDisabled = false,
   ...props
 }: DatePickerProps<T>) {
   return (
@@ -71,7 +71,7 @@ export default function DatePicker<T extends DateValue>({
               )}
             </DateInput>
             {isInvalid && <SvgExclamationIcon />}
-            {!isPickerDisabled && (
+            {!isCalendarDisabled && (
               <>
                 <Button size="xsmall" variant="primary" isIconButton>
                   <SvgCalendarIcon />
