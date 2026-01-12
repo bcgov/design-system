@@ -18,11 +18,15 @@ import Text from "../Text";
 import "./NumberField.css";
 
 interface NumberFieldProps extends ReactAriaNumberFieldProps {
+  /* Set the size of the input field and typography */
   size?: "small" | "medium";
+  /* Label text above the input field */
   label?: string;
+  /* Helper text below the input field */
   description?: string;
-  unitLabel?: string;
+  /* Used for data validation and error handling */
   errorMessage?: string | ((validation: ValidationResult) => string);
+  unitLabel?: string;
 }
 
 export default function NumberField({
