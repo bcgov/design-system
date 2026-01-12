@@ -58,7 +58,7 @@ export default function ToggleButtonGroup({
         }`}
         {...props}
       >
-        {ToggleButtonChildren as React.ReactNode}
+        {ToggleButtonChildren}
       </ReactAriaToggleButtonGroup>
     </>
   );
