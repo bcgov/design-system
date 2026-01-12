@@ -74,64 +74,26 @@ export const ToggleButtonGroupTemplate: Story = {
     orientation: "horizontal",
     disallowEmptySelection: false,
     isDisabled: false,
+    defaultSelectedKeys: "1",
   },
   render: ({ ...args }: ToggleButtonGroupProps) => (
     <ToggleButtonGroup {...args} />
   ),
 };
 
-export const HorizontalToggleButtonGroup: Story = {
-  ...ToggleButtonGroupTemplate,
-  args: {
-    orientation: "horizontal",
-    children: [
-      <ToggleButton key="1" id="1">
-        Button 1
-      </ToggleButton>,
-      <ToggleButton key="2" id="2">
-        Button 2
-      </ToggleButton>,
-      <ToggleButton key="3" id="3">
-        Button 3
-      </ToggleButton>,
-    ],
-  },
-};
-
 export const VerticalToggleButtonGroup: Story = {
   ...ToggleButtonGroupTemplate,
   args: {
+    ...ToggleButtonGroupTemplate.args,
     orientation: "vertical",
-    children: [
-      <ToggleButton key="1" id="1">
-        Button 1
-      </ToggleButton>,
-      <ToggleButton key="2" id="2">
-        Button 2
-      </ToggleButton>,
-      <ToggleButton key="3" id="3">
-        Button 3
-      </ToggleButton>,
-    ],
   },
 };
 
 export const SmallToggleButtonGroup: Story = {
   ...ToggleButtonGroupTemplate,
   args: {
+    ...ToggleButtonGroupTemplate.args,
     size: "small",
-    defaultSelectedKeys: "1",
-    children: [
-      <ToggleButton key="1" id="1">
-        Button 1
-      </ToggleButton>,
-      <ToggleButton key="2" id="2">
-        Button 2
-      </ToggleButton>,
-      <ToggleButton key="3" id="3">
-        Button 3
-      </ToggleButton>,
-    ],
   },
 };
 
@@ -155,15 +117,17 @@ export const SingleSelectDisallowEmpty: Story = {
   ...ToggleButtonGroupTemplate,
   args: {
     children: [
-      <ToggleButton key="light" id="light">
-        Light mode
+      <ToggleButton key="1" id="1">
+        Option 1
       </ToggleButton>,
-      <ToggleButton key="dark" id="dark">
-        Dark mode
+      <ToggleButton key="2" id="2">
+        Option 2
+      </ToggleButton>,
+      <ToggleButton key="3" id="3">
+        Option 3
       </ToggleButton>,
     ],
     selectionMode: "single",
-    defaultSelectedKeys: ["dark"],
     disallowEmptySelection: true,
   },
 };
@@ -207,18 +171,8 @@ export const GroupWithDisabledOption: Story = {
 export const DisabledToggleButtonGroup: Story = {
   ...ToggleButtonGroupTemplate,
   args: {
+    ...ToggleButtonGroupTemplate.args,
     label: "This button group is disabled",
-    children: [
-      <ToggleButton key="1" id="1">
-        Button 1
-      </ToggleButton>,
-      <ToggleButton key="2" id="2">
-        Button 2
-      </ToggleButton>,
-      <ToggleButton key="3" id="3">
-        Button 3
-      </ToggleButton>,
-    ],
     isDisabled: true,
   },
 };
