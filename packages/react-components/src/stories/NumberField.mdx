@@ -118,11 +118,3 @@ This example combines NumberField and Select components to enable the user to ch
 The NumberField component is designed to use the [`Intl.NumberFormat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#examples) API.
 
 [Consult the React Aria documentation](https://react-spectrum.adobe.com/react-aria/NumberField.html#number-formatting) for more information about the options that `formatOptions` accepts.
-
-#### `unitLabel`
-
-In addition to `formatOptions`, NumberField also supports a custom unit label via the `unitLabel` prop:
-
-<Canvas of={NumberFieldStories.CustomUnitLabel} />
-
-This can be useful if you are using units other than those supported by [`Intl.supportedValuesOf()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types).

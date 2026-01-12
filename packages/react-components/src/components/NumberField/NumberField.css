@@ -92,12 +92,6 @@
   padding: var(--layout-padding-small) var(--layout-padding-xsmall);
 }
 
-/* Custom unit label */
-.bcds-react-aria-NumberField--UnitLabel {
-  font: var(--typography-regular-small-body);
-  color: var(--typography-color-primary);
-}
-
 /* Description below the input field */
 .bcds-react-aria-NumberField--Description {
   font: var(--typography-regular-small-body);

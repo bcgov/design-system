@@ -57,10 +57,6 @@ const meta = {
       options: ["small", "medium"],
       description: "Toggle size of input field and buttons",
     },
-    unitLabel: {
-      control: "text",
-      description: "Custom unit label displayed on the right side of the input",
-    },
     formatOptions: {
       control: "object",
       description:
@@ -177,15 +173,6 @@ export const MinimumValue: Story = {
     description: "Its value cannot be lower than 5",
     minValue: 5,
     defaultValue: 10,
-  },
-};
-
-export const CustomUnitLabel: Story = {
-  ...NumberFieldTemplate,
-  args: {
-    label: "This NumberField has a custom unit label",
-    unitLabel: "px",
-    description: "This is an alternative to the formatOptions prop",
   },
 };
 

@@ -26,14 +26,12 @@ interface NumberFieldProps extends ReactAriaNumberFieldProps {
   description?: string;
   /* Used for data validation and error handling */
   errorMessage?: string | ((validation: ValidationResult) => string);
-  unitLabel?: string;
 }
 
 export default function NumberField({
   size = "medium",
   label,
   description,
-  unitLabel,
   errorMessage,
   ...props
 }: NumberFieldProps) {
@@ -75,14 +73,6 @@ export default function NumberField({
             </div>
             <div className="bcds-react-aria-NumberField--InputContainer">
               <Input className="bcds-react-aria-NumberField--Input" />
-              {unitLabel && (
-                <span
-                  className="bcds-react-aria-NumberField--UnitLabel"
-                  slot="label"
-                >
-                  {unitLabel}
-                </span>
-              )}
               {isInvalid && <SvgExclamationIcon />}
             </div>
             <div className="bcds-react-aria-NumberField--Button">
