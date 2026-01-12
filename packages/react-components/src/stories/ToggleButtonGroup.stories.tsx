@@ -59,9 +59,15 @@ type Story = StoryObj<typeof meta>;
 export const ToggleButtonGroupTemplate: Story = {
   args: {
     children: [
-      <ToggleButton id="1">Button 1</ToggleButton>,
-      <ToggleButton id="2">Button 2</ToggleButton>,
-      <ToggleButton id="3">Button 3</ToggleButton>,
+      <ToggleButton key="1" id="1">
+        Button 1
+      </ToggleButton>,
+      <ToggleButton key="2" id="2">
+        Button 2
+      </ToggleButton>,
+      <ToggleButton key="3" id="3">
+        Button 3
+      </ToggleButton>,
     ],
     selectionMode: "single",
     size: "medium",
@@ -79,9 +85,15 @@ export const HorizontalToggleButtonGroup: Story = {
   args: {
     orientation: "horizontal",
     children: [
-      <ToggleButton id="1">Button 1</ToggleButton>,
-      <ToggleButton id="2">Button 2</ToggleButton>,
-      <ToggleButton id="3">Button 3</ToggleButton>,
+      <ToggleButton key="1" id="1">
+        Button 1
+      </ToggleButton>,
+      <ToggleButton key="2" id="2">
+        Button 2
+      </ToggleButton>,
+      <ToggleButton key="3" id="3">
+        Button 3
+      </ToggleButton>,
     ],
   },
 };
@@ -91,9 +103,15 @@ export const VerticalToggleButtonGroup: Story = {
   args: {
     orientation: "vertical",
     children: [
-      <ToggleButton id="1">Button 1</ToggleButton>,
-      <ToggleButton id="2">Button 2</ToggleButton>,
-      <ToggleButton id="3">Button 3</ToggleButton>,
+      <ToggleButton key="1" id="1">
+        Button 1
+      </ToggleButton>,
+      <ToggleButton key="2" id="2">
+        Button 2
+      </ToggleButton>,
+      <ToggleButton key="3" id="3">
+        Button 3
+      </ToggleButton>,
     ],
   },
 };
@@ -104,9 +122,15 @@ export const SmallToggleButtonGroup: Story = {
     size: "small",
     defaultSelectedKeys: "1",
     children: [
-      <ToggleButton id="1">Button 1</ToggleButton>,
-      <ToggleButton id="2">Button 2</ToggleButton>,
-      <ToggleButton id="3">Button 3</ToggleButton>,
+      <ToggleButton key="1" id="1">
+        Button 1
+      </ToggleButton>,
+      <ToggleButton key="2" id="2">
+        Button 2
+      </ToggleButton>,
+      <ToggleButton key="3" id="3">
+        Button 3
+      </ToggleButton>,
     ],
   },
 };
@@ -115,8 +139,12 @@ export const SingleSelect: Story = {
   ...ToggleButtonGroupTemplate,
   args: {
     children: [
-      <ToggleButton id="light">Light mode</ToggleButton>,
-      <ToggleButton id="dark">Dark mode</ToggleButton>,
+      <ToggleButton key="light" id="light">
+        Light mode
+      </ToggleButton>,
+      <ToggleButton key="dark" id="dark">
+        Dark mode
+      </ToggleButton>,
     ],
     selectionMode: "single",
     defaultSelectedKeys: ["dark"],
@@ -127,8 +155,12 @@ export const SingleSelectDisallowEmpty: Story = {
   ...ToggleButtonGroupTemplate,
   args: {
     children: [
-      <ToggleButton id="light">Light mode</ToggleButton>,
-      <ToggleButton id="dark">Dark mode</ToggleButton>,
+      <ToggleButton key="light" id="light">
+        Light mode
+      </ToggleButton>,
+      <ToggleButton key="dark" id="dark">
+        Dark mode
+      </ToggleButton>,
     ],
     selectionMode: "single",
     defaultSelectedKeys: ["dark"],
@@ -140,13 +172,13 @@ export const MultipleSelect: Story = {
   ...ToggleButtonGroupTemplate,
   args: {
     children: [
-      <ToggleButton id="bold">
+      <ToggleButton key="bold" id="bold">
         <b>Bold</b>
       </ToggleButton>,
-      <ToggleButton id="italic">
+      <ToggleButton key="italic" id="italic">
         <i>Italic</i>
       </ToggleButton>,
-      <ToggleButton id="underline">
+      <ToggleButton key="underline" id="underline">
         <u>Underline</u>
       </ToggleButton>,
     ],
@@ -159,9 +191,13 @@ export const GroupWithDisabledOption: Story = {
   ...ToggleButtonGroupTemplate,
   args: {
     children: [
-      <ToggleButton id="1">Button 1</ToggleButton>,
-      <ToggleButton id="2">Button 2</ToggleButton>,
-      <ToggleButton id="3" isDisabled>
+      <ToggleButton key="1" id="1">
+        Button 1
+      </ToggleButton>,
+      <ToggleButton key="2" id="2">
+        Button 2
+      </ToggleButton>,
+      <ToggleButton key="3" id="3" isDisabled>
         Button 3 (disabled)
       </ToggleButton>,
     ],
@@ -173,9 +209,15 @@ export const DisabledToggleButtonGroup: Story = {
   args: {
     label: "This button group is disabled",
     children: [
-      <ToggleButton id="1">Button 1</ToggleButton>,
-      <ToggleButton id="2">Button 2</ToggleButton>,
-      <ToggleButton id="3">Button 3</ToggleButton>,
+      <ToggleButton key="1" id="1">
+        Button 1
+      </ToggleButton>,
+      <ToggleButton key="2" id="2">
+        Button 2
+      </ToggleButton>,
+      <ToggleButton key="3" id="3">
+        Button 3
+      </ToggleButton>,
     ],
     isDisabled: true,
   },
