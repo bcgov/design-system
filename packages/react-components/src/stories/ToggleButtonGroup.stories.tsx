@@ -176,3 +176,39 @@ export const DisabledToggleButtonGroup: Story = {
     isDisabled: true,
   },
 };
+
+export const WrappedToggleButtonGroup: Story = {
+  args: {},
+  render: () => (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        width: "400px",
+      }}
+    >
+      <ToggleButtonGroup
+        label="This button group is inside a div with a fixed width"
+        selectionMode="multiple"
+        defaultSelectedKeys={["1", "3"]}
+        orientation="horizontal"
+      >
+        <ToggleButton key="1" id="1">
+          Button 1
+        </ToggleButton>
+        <ToggleButton key="2" id="2">
+          Button 2
+        </ToggleButton>
+        <ToggleButton key="3" id="3">
+          Button 3
+        </ToggleButton>
+        <ToggleButton key="4" id="4">
+          Button 4
+        </ToggleButton>
+        <ToggleButton key="5" id="5">
+          Button 5
+        </ToggleButton>
+      </ToggleButtonGroup>
+    </div>
+  ),
+};
