@@ -10,6 +10,13 @@ import {
   Subtitle,
 } from "@storybook/addon-docs/blocks";
 
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
 import * as AlertDialogStories from "./AlertDialog.stories";
 
 <Meta title="Notifications and feedback/Dialogs/AlertDialog" />
@@ -21,6 +28,25 @@ import * as AlertDialogStories from "./AlertDialog.stories";
   messages or notifications that require the user to provide confirmation or
   take an action before proceeding.
 </Subtitle>
+
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RAC Dialog, DialogTrigger and Modal components. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/Modal"
+      target="blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      Dialog docs
+    </Link>,
+  ]}
+/>
 
 <Source
   code={`import { AlertDialog, DialogTrigger, Modal } from "@bcgov/design-system-react-components";`}

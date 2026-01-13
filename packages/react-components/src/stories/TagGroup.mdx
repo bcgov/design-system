@@ -12,6 +12,13 @@ import {
 
 import * as TagGroupStories from "./TagGroup.stories";
 
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
 <Meta of={TagGroupStories} />
 
 # TagGroup
@@ -22,19 +29,36 @@ import * as TagGroupStories from "./TagGroup.stories";
   removal.
 </Subtitle>
 
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RAC Tag, TagList and TagGroup components. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/TagGroup"
+      target="blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      TagGroup docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
 <Source
   code={`import { TagGroup, TagList } from "@bcgov/design-system-react-components"; `}
   language="typescript"
 />
 
-## Usage and resources
-
 Learn more about working with the TagGroup component:
 
 - [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=6AE4A072CEF9498995E10B2A391AE8D1)
 - [View the tag group component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
-
-This component is based on [React Aria TagGroup](https://react-spectrum.adobe.com/react-aria/TagGroup.html), including the [TagList](https://react-spectrum.adobe.com/react-aria/TagGroup.html#taglist) and [Tag](https://react-spectrum.adobe.com/react-aria/TagGroup.html#tag) subcomponents. Consult the React Aria documentation for additional technical information.
 
 ## Controls
 
