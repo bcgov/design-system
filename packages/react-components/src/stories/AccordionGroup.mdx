@@ -14,11 +14,9 @@ import * as AccordionStories from "./Accordion.stories";
 import * as AccordionGroupStories from "./AccordionGroup.stories";
 import {
   AccordionGroup,
-  Button,
   InlineAlert,
   Link,
   SvgReactAriaIcon,
-  Text,
 } from "@/components";
 
 <Meta title="Content/AccordionGroup" />
@@ -34,13 +32,14 @@ import {
   variant="info"
   customIcon={[<SvgReactAriaIcon />]}
   title="This is a React Aria component"
-  description="It is built on the Disclosure and DisclosureGroup components. Consult the RAC documentation to understand its full API."
+  description="It is based on the RAC Disclosure and DisclosureGroup components. Consult the React Aria docs to understand its full API."
   buttons={[
     <Link
       isButton
       size="small"
       buttonVariant="secondary"
       href="https://react-aria.adobe.com/Disclosure"
+      target="blank"
     >
       Disclosure docs
     </Link>,
@@ -49,6 +48,7 @@ import {
       size="small"
       buttonVariant="secondary"
       href="https://react-aria.adobe.com/DisclosureGroup"
+      target="blank"
     >
       DisclosureGroup docs
     </Link>,
