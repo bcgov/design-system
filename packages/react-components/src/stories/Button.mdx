@@ -11,7 +11,12 @@ import {
 } from "@storybook/addon-docs/blocks";
 
 import * as ButtonStories from "./Button.stories";
-import { InlineAlert, Link, SvgReactAriaIcon } from "@/components";
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
 
 <Meta of={ButtonStories} />
 
@@ -34,6 +39,7 @@ import { InlineAlert, Link, SvgReactAriaIcon } from "@/components";
       buttonVariant="secondary"
       href="https://react-aria.adobe.com/Button"
       target="blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
     >
       Button docs
     </Link>,

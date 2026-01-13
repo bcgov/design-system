@@ -12,7 +12,12 @@ import {
 
 import * as CheckboxGroupStories from "./CheckboxGroup.stories";
 import * as CheckboxStories from "./Checkbox.stories";
-import { InlineAlert, Link, SvgReactAriaIcon } from "@/components";
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
 
 <Meta of={CheckboxGroupStories} />
 
@@ -34,6 +39,7 @@ import { InlineAlert, Link, SvgReactAriaIcon } from "@/components";
       buttonVariant="secondary"
       href="https://react-aria.adobe.com/Checkbox"
       target="blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
     >
       Checkbox docs
     </Link>,
@@ -43,6 +49,7 @@ import { InlineAlert, Link, SvgReactAriaIcon } from "@/components";
       buttonVariant="secondary"
       href="https://react-aria.adobe.com/CheckboxGroup"
       target="blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
     >
       CheckboxGroup docs
     </Link>,
