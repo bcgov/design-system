@@ -1,13 +1,13 @@
 /* The component implements the Up Right From Square icon from Font Awesome: https://fontawesome.com/icons/up-right-from-square */
 
 export interface SvgUpRightFromSquareIconProps {
-  id?: string;
   size?: 16 | 20;
+  id?: string;
 }
 
 export default function SvgUpRightFromSquareIcon({
-  id = "up-right-from-square-icon",
   size = 20,
+  id,
 }: SvgUpRightFromSquareIconProps) {
   return (
     <svg
