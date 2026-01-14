@@ -1,4 +1,4 @@
-/* The component implements the Circle Exclamation icon from Font Awesome: https://fontawesome.com/icons/circle-exclamation */
+/* This component implements the Circle Exclamation icon from Font Awesome: https://fontawesome.com/icons/circle-exclamation */
 export default function SvgExclamationCircleIcon({
   id = "exclamation-icon-circle",
 }) {

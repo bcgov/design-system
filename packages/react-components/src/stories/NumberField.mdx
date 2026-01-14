@@ -1,0 +1,120 @@
+{/* NumberField.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import * as NumberFieldStories from "./NumberField.stories";
+
+<Meta of={NumberFieldStories} />
+
+# NumberField
+
+<Subtitle>
+  A NumberField is an input component that enables the user to enter a numerical
+  value into an interface.
+</Subtitle>
+
+<Source
+  code={`import { NumberField } from "@bcgov/design-system-react-components"; `}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Learn more about working with the NumberField component:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=0A08E141321C4E11B0983D1E7A8056F9)
+- [View the NumberField component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+This component is based on [React Aria NumberField](https://react-spectrum.adobe.com/react-aria/NumberField.html). Consult the React Aria documentation for additional technical information.
+
+## Controls
+
+<Primary of={NumberFieldStories} />
+<Controls of={NumberFieldStories.NumberFieldTemplate} />
+
+## Configuration
+
+### Size
+
+The `size` prop enables you to choose between `medium` (default) and `small` (reduced height) variants:
+
+<Canvas of={NumberFieldStories.NumberFieldTemplate} />
+<Canvas of={NumberFieldStories.Small} />
+
+### Required
+
+By default, input fields are marked as optional. Use the `isRequired` prop to mark an input as required, and display a text label:
+
+<Canvas of={NumberFieldStories.Required} />
+
+### Controlling the value
+
+By default, a NumberField's value is uncontrolled.
+
+You can set its initial using the `defaultValue`. You can also control the NumberField using your preferred state management library, or set its value via the `value` prop.
+
+### Validation and errors
+
+NumberField supports various methods of validation and form submission.
+
+You can pass a function via the `validate` prop, or semantically associate a NumberField with a form via the `form` prop.
+
+You can toggle between native HTML form validation or ARIA validation using the `validationBehavior` prop.
+
+[Consult the React Aria documentation](https://react-spectrum.adobe.com/react-aria/NumberField.html#validation) for more information.
+
+#### Error handling
+
+When the `isInvalid` prop is present, an error message and additional visual indicators are shown:
+
+<Canvas of={NumberFieldStories.Invalid} />
+
+You can customise the error message via the `errorMessage` prop.
+
+#### Minimum and maximum values
+
+Use the `maxValue` and/or `minValue` props to set the range of acceptable values. The NumberField will not allow the user to set a value outside this range.
+
+<Canvas of={NumberFieldStories.MinimumValue} />
+
+By default, `minValue` is set to `0`.
+
+#### Steps
+
+Use the `step` prop to control how much the value changes with each press of the increment or decrement buttons. By default, this is set to `1.00`.
+
+<Canvas of={NumberFieldStories.IncrementStep} />
+
+When `step` is set, a value entered manually via the keyboard will automatically round up or down to the nearest step.
+
+### Formatting
+
+You can customise how values are formatted depending on the type of unit you're using.
+
+#### `formatOptions` (recommended)
+
+Use the `formatOptions` prop to configure:
+
+- Units and formatting (eg. currency) via the `style` option
+- Decimal handling and formatting via the `minimumFractionDigits` and `maximumFractionDigits` options
+- Formatting of positive/negative values via the `signDisplay` option
+
+This example formats input as a currency value:
+
+<Canvas of={NumberFieldStories.Currency} />
+
+This example combines NumberField and Select components to enable the user to change the selected unit type:
+
+<Canvas of={NumberFieldStories.DistanceUnits} />
+
+The NumberField component is designed to use the [`Intl.NumberFormat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#examples) API.
+
+[Consult the React Aria documentation](https://react-spectrum.adobe.com/react-aria/NumberField.html#number-formatting) for more information about the options that `formatOptions` accepts.
