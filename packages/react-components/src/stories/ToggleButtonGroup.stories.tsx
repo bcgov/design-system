@@ -182,74 +182,37 @@ export const DisabledToggleButtonGroup: Story = {
   },
 };
 
-export const WrappedToggleButtonGroup: Story = {
+export const LongToggleButtonGroup: Story = {
+  globals: {
+    viewport: { value: "mobile2", isRotated: false },
+  },
   args: {
     orientation: "horizontal",
     selectionMode: "multiple",
-    defaultSelectedKeys: ["1", "3"],
-    label: "This button group is inside a div with a fixed width",
+    defaultSelectedKeys: ["1", "3", "4", "5", "7"],
+    label: "Show wrapping behaviour at smaller viewport sizes",
+    children: [
+      <ToggleButton key="1" id="1">
+        Button 1
+      </ToggleButton>,
+      <ToggleButton key="2" id="2">
+        Button 2 medium
+      </ToggleButton>,
+      <ToggleButton key="3" id="3" isIconButton>
+        <SvgCheckCircleIcon />
+      </ToggleButton>,
+      <ToggleButton key="4" id="4" isIconButton>
+        <SvgBcOutlineIcon />
+      </ToggleButton>,
+      <ToggleButton key="5" id="5">
+        Button 5 quite long
+      </ToggleButton>,
+      <ToggleButton key="6" id="6">
+        Button 5 is extremely long
+      </ToggleButton>,
+      <ToggleButton key="7" id="7">
+        Button 7 is just outlandishly long
+      </ToggleButton>,
+    ],
   },
-  render: ({ ...args }: ToggleButtonGroupProps) => (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        width: "400px",
-      }}
-    >
-      <ToggleButtonGroup {...args}>
-        <ToggleButton key="1" id="1">
-          Button 1
-        </ToggleButton>
-        <ToggleButton key="2" id="2">
-          Button 2 medium
-        </ToggleButton>
-        <ToggleButton key="3" id="3" isIconButton>
-          <SvgCheckCircleIcon />
-        </ToggleButton>
-        <ToggleButton key="4" id="4" isIconButton>
-          <SvgBcOutlineIcon />
-        </ToggleButton>
-        <ToggleButton key="5" id="5">
-          Button 5 quite long
-        </ToggleButton>
-        <ToggleButton key="6" id="6">
-          Button 5 is extremely long
-        </ToggleButton>
-        <ToggleButton key="7" id="7 ">
-          Button 7 is just outlandishly long
-        </ToggleButton>
-      </ToggleButtonGroup>
-    </div>
-  ),
-};
-
-export const WideToggleButtonGroup: Story = {
-  args: {
-    orientation: "horizontal",
-    selectionMode: "multiple",
-    defaultSelectedKeys: ["1", "3"],
-    label: "This button group is inside a div with a fixed width",
-  },
-  render: ({ ...args }: ToggleButtonGroupProps) => (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        width: "800px",
-      }}
-    >
-      <ToggleButtonGroup {...args}>
-        <ToggleButton key="1" id="1">
-          Button 1
-        </ToggleButton>
-        <ToggleButton key="2" id="2">
-          Button 2 is medium
-        </ToggleButton>
-        <ToggleButton key="3" id="3">
-          Button 3 is quite long
-        </ToggleButton>
-      </ToggleButtonGroup>
-    </div>
-  ),
 };
