@@ -198,10 +198,10 @@ export const LongToggleButtonGroup: Story = {
       <ToggleButton key="2" id="2">
         Button 2 medium
       </ToggleButton>,
-      <ToggleButton key="3" id="3" isIconButton>
+      <ToggleButton key="3" id="3" isIconButton aria-label="Icon button 1">
         <SvgCheckCircleIcon />
       </ToggleButton>,
-      <ToggleButton key="4" id="4" isIconButton>
+      <ToggleButton key="4" id="4" isIconButton aria-label="Icon button 2">
         <SvgBcOutlineIcon />
       </ToggleButton>,
       <ToggleButton key="5" id="5">
