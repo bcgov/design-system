@@ -5,9 +5,9 @@
   box-sizing: border-box;
   gap: var(--layout-margin-small);
   padding: var(--layout-padding-xsmall);
-  align-items: center;
+  align-items: stretch;
   align-content: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: var(--surface-color-secondary-button-disabled);
   border-radius: var(--layout-border-radius-medium);
 }
@@ -17,7 +17,6 @@
   flex-direction: row;
   min-height: var(--layout-margin-xlarge);
 }
-
 .bcds-react-aria-ToggleButtonGroup[data-orientation="vertical"] {
   flex-direction: column;
 }
