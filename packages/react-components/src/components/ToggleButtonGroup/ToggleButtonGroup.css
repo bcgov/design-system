@@ -5,8 +5,7 @@
   box-sizing: border-box;
   gap: var(--layout-margin-small);
   padding: var(--layout-padding-xsmall);
-  align-items: stretch;
-  align-content: flex-start;
+  align-items: flex-start;
   justify-content: flex-start;
   background-color: var(--surface-color-secondary-button-disabled);
   border-radius: var(--layout-border-radius-medium);
