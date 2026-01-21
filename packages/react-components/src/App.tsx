@@ -22,6 +22,7 @@ import {
   TextPage,
   TextAreaPage,
   TextFieldPage,
+  TimeFieldPage,
   SwitchPage,
   TooltipPage,
 } from "@/pages";
@@ -124,6 +125,7 @@ function App() {
         <DatePickerPage />
         <NumberFieldPage />
         <TextPage />
+        <TimeFieldPage />
       </main>
       <Footer />
       <Footer
