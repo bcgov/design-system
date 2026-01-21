@@ -15,6 +15,7 @@ import TextAreaPage from "./TextArea";
 import TextFieldPage from "./TextField";
 import SwitchPage from "./Switch";
 import TooltipPage from "./Tooltip";
+import ToastPage from "./Toast";
 
 export {
   AccordionGroupPage,
@@ -34,4 +35,5 @@ export {
   TextFieldPage,
   SwitchPage,
   TooltipPage,
+  ToastPage,
 };
