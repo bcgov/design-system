@@ -1,0 +1,72 @@
+
+{/* Toast.mdx */}
+
+import {
+  Canvas,
+  Meta,
+  Source,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import * as ToastStories from "./Toast.stories";
+
+export const parameters = {
+  tags: ["!autodocs"],
+};
+
+<Meta of={ToastStories} />
+
+# Toast
+
+<Subtitle>
+  A toast is a temporary alert that displays a context-specific message to the user.
+  Toasts are non-blocking and disappear automatically after a short period of time.
+</Subtitle>
+
+<Source
+  code={`import { useToastQueue } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Behaviour
+
+A toast:
+
+- Appears in the bottom-right of the screen
+- Expires automatically after a short period of time
+- Can be dismissed manually by the user
+- Is dismissed automatically if it becomes irrelevant
+
+Multiple toast messages are stacked vertically and dismissed independently.
+
+---
+
+## Examples
+
+### Playground
+
+<Canvas of={ToastStories.ToastTemplate} />
+
+---
+
+### Success toast
+
+Use success toasts to confirm the completion of an action.
+
+<Canvas of={ToastStories.SuccessToast} />
+
+---
+
+### Error toast
+
+Use error toasts for temporary issues that the user may recover from.
+
+<Canvas of={ToastStories.ErrorToast} />
+
+---
+
+### Progress toast
+
+Use progress toasts to communicate that a background process is underway.
+
+<Canvas of={ToastStories.ProgressToast} />

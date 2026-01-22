@@ -44,4 +44,5 @@ export { default as TextField } from "./TextField";
 export { default as Switch } from "./Switch";
 export { default as Tooltip, TooltipTrigger } from "./Tooltip";
 export { default as NumberField } from "./NumberField";
+export { default as Toast } from "./Toast";
 // TODO: Add Toast stuff here
