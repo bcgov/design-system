@@ -68,9 +68,3 @@
 .bcds-react-aria-Calendar--Cell[data-selected][data-hovered] {
   background-color: var(--surface-color-primary-button-hover);
 }
-
-.bcds-react-aria-Calendar--Selectors {
-  display: inline-flex;
-  flex-direction: row;
-  gap: var(--layout-margin-xsmall);
-}

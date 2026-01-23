@@ -26,7 +26,6 @@ export interface DatePickerProps<T extends DateValue>
   label?: string;
   description?: string;
   errorMessage?: string | ((validation: ValidationResult) => string);
-  showDropdowns?: boolean;
 }
 
 export type { DateValue };
@@ -38,7 +37,6 @@ export default function DatePicker<T extends DateValue>({
   errorMessage,
   isRequired = false,
   isCalendarDisabled = false,
-  showDropdowns = true,
   ...props
 }: DatePickerProps<T>) {
   return (
@@ -75,7 +73,7 @@ export default function DatePicker<T extends DateValue>({
                 </Button>
                 <Popover>
                   <Dialog isCloseable={false}>
-                    <Calendar showDropdowns={showDropdowns} />
+                    <Calendar />
                   </Dialog>
                 </Popover>
               </>
