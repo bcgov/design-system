@@ -33,12 +33,11 @@
   .bcds-react-aria-ToggleButton--SelectionIndicator
 ) {
   position: relative;
-  transition: color 200ms;
-}
+  transition: 200ms ease;
 
-.bcds-react-aria-ToggleButtonGroup > .bcds-react-aria-ToggleButton > span {
-  position: relative;
-  z-index: 1;
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
 .bcds-react-aria-ToggleButtonGroup
@@ -58,11 +57,9 @@
   border-radius: var(--layout-border-radius-medium);
   box-shadow: var(--surface-shadow-small);
   pointer-events: none;
-  transition-property: translate, width;
-  transition-duration: 200ms;
-  transition-timing-function: ease;
+}
 
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
+.bcds-react-aria-ToggleButtonGroup > .bcds-react-aria-ToggleButton > span {
+  position: relative;
+  z-index: 1;
 }
