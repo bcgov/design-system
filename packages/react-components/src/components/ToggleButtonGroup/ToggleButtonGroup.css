@@ -30,8 +30,8 @@
 
 /* Selection indicator */
 .bcds-react-aria-ToggleButton:has(
-    .bcds-react-aria-ToggleButton--SelectionIndicator
-  ) {
+  .bcds-react-aria-ToggleButton--SelectionIndicator
+) {
   position: relative;
   transition: color 200ms;
 }
@@ -51,8 +51,10 @@
   right: 0;
   bottom: 0;
   background-color: var(--surface-color-secondary-button-default);
+  color: var(--typography-color-primary);
   border: var(--layout-border-width-small) solid
     var(--surface-color-secondary-button-default);
+  box-shadow: var(--surface-shadow-small);
   border-radius: var(--layout-border-radius-medium);
   box-shadow: var(--surface-shadow-small);
   pointer-events: none;

@@ -53,12 +53,6 @@
   min-width: var(--icons-size-xlarge);
 }
 
-/* Pressed */
-.bcds-react-aria-ToggleButton[data-hovered][data-pressed] {
-  background-color: var(--theme-blue-10);
-  border: var(--layout-border-width-small) solid var(--theme-blue-10);
-}
-
 /* Active */
 .bcds-react-aria-ToggleButton[data-selected] {
   background-color: var(--surface-color-secondary-button-default);
@@ -70,19 +64,24 @@
 
 /* Hover */
 .bcds-react-aria-ToggleButton[data-hovered] {
-  background-color: var(--surface-color-secondary-button-default);
+  background-color: var(--surface-color-secondary-pressed);
   color: var(--typography-color-primary);
   border: var(--layout-border-width-small) solid
-    var(--surface-color-secondary-button-default);
+    var(--surface-color-border-medium);
   border-radius: var(--layout-border-radius-medium);
 }
-
 /* Focused */
 .bcds-react-aria-ToggleButton[data-focus-visible] {
   border: var(--layout-border-width-medium) solid
     var(--surface-color-border-active);
   background-color: var(--theme-blue-10);
   outline: none;
+}
+
+/* Pressed */
+.bcds-react-aria-ToggleButton[data-hovered][data-pressed] {
+  background-color: var(--theme-gray-20);
+  border: var(--layout-border-width-small) solid var(--theme-gray-20);
 }
 
 /* Disabled */
