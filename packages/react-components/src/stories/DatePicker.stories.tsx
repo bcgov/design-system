@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { getLocalTimeZone, today } from "@internationalized/date";
+import { getLocalTimeZone, today, isWeekend } from "@internationalized/date";
+import { useLocale } from "react-aria-components";
 
 import { DatePicker } from "../components";
 import { DatePickerProps, DateValue } from "../components/DatePicker";
@@ -72,6 +73,15 @@ export const ConstrainedRange: Story = {
     description: "This field only allows a future selection within one month.",
     minValue: today(getLocalTimeZone()),
     maxValue: today(getLocalTimeZone()).add({ months: 1 }),
+  },
+};
+
+export const WeekdayOnly: Story = {
+  args: {
+    label: "This date picker does not allow weekends to be selected",
+    isDateUnavailable: (date) => isWeekend(date, useLocale().locale),
+    description:
+      "The isDateUnavailable prop can be used to programmatically disable dates.",
   },
 };
 
