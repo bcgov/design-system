@@ -56,6 +56,11 @@ const meta = {
       control: { type: "boolean" },
       description: "Whether the current input is valid",
     },
+    isDateUnavailable: {
+      control: { type: "object" },
+      description:
+        "Function that determines whether a date is a permissible selection",
+    },
   },
 } satisfies Meta<typeof DatePicker>;
 
@@ -67,8 +72,29 @@ export const DatePickerTemplate: Story = {
   render: ({ ...args }: DatePickerProps<DateValue>) => <DatePicker {...args} />,
 };
 
+export const SmallDatePicker: Story = {
+  ...DatePickerTemplate,
+  args: {
+    ...DatePickerTemplate.args,
+    label: "Label",
+    description: "Description",
+    size: "small",
+  },
+};
+
+export const RequiredDatePicker: Story = {
+  ...DatePickerTemplate,
+  args: {
+    ...DatePickerTemplate.args,
+    label: "Label",
+    description: "Description",
+    isRequired: true,
+  },
+};
+
 export const ConstrainedRange: Story = {
   args: {
+    ...DatePickerTemplate.args,
     label: "Date picker with limits",
     description: "This field only allows a future selection within one month.",
     minValue: today(getLocalTimeZone()),
@@ -78,6 +104,7 @@ export const ConstrainedRange: Story = {
 
 export const WeekdayOnly: Story = {
   args: {
+    ...DatePickerTemplate.args,
     label: "This date picker does not allow weekends to be selected",
     isDateUnavailable: (date) => isWeekend(date, useLocale().locale),
     description:
@@ -88,6 +115,7 @@ export const WeekdayOnly: Story = {
 export const NoPicker: Story = {
   ...DatePickerTemplate,
   args: {
+    ...DatePickerTemplate.args,
     label: "Label",
     description: "Description",
     isCalendarDisabled: true,
@@ -96,12 +124,18 @@ export const NoPicker: Story = {
 
 export const DateAndTime: Story = {
   ...DatePickerTemplate,
-  args: { label: "Label", description: "Description", granularity: "minute" },
+  args: {
+    ...DatePickerTemplate.args,
+    label: "Label",
+    description: "Description",
+    granularity: "minute",
+  },
 };
 
 export const Invalid: Story = {
   ...DatePickerTemplate,
   args: {
+    ...DatePickerTemplate.args,
     label: "Label",
     description: "Description",
     isInvalid: true,
@@ -111,10 +145,20 @@ export const Invalid: Story = {
 
 export const Disabled: Story = {
   ...DatePickerTemplate,
-  args: { label: "Label", description: "Description", isDisabled: true },
+  args: {
+    ...DatePickerTemplate.args,
+    label: "Label",
+    description: "Description",
+    isDisabled: true,
+  },
 };
 
 export const ReadOnly: Story = {
   ...DatePickerTemplate,
-  args: { label: "Label", description: "Description", isReadOnly: true },
+  args: {
+    ...DatePickerTemplate.args,
+    label: "Label",
+    description: "Description",
+    isReadOnly: true,
+  },
 };

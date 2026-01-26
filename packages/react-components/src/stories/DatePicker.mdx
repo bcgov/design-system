@@ -1,0 +1,74 @@
+{/* DatePicker.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import * as DatePickerStories from "./DatePicker.stories";
+
+<Meta of={DatePickerStories} />
+
+# Date picker
+
+<Subtitle>
+  A date picker enables the user to enter a date by typing or selecting from a
+  calendar.
+</Subtitle>
+
+## Usage and resources
+
+<Source
+  code={`import { DatePicker } from "@bcgov/design-system-react-components"; `}
+  language="typescript"
+/>
+
+A date picker combines an input field, a button and a calendar. The user can enter a value by keyboard (by typing or incrementing each date segment's value individually), or by selecting a date on the calendar.
+
+Learn more about working with the text area component:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=F100A665C5CC4DCAB1617E82AD36E090)
+- [View the text area component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+## Controls
+
+<Primary of={DatePickerStories} />
+<Controls of={DatePickerStories.DatePickerTemplate} />
+
+## Configuration
+
+### Formatting
+
+The date format is set automatically based on the user's browser locale.
+
+### Size
+
+The `size` prop enables you to choose between medium (default) and small (reduced height) versions:
+
+<Canvas of={DatePickerStories.DatePickerTemplate} />
+<Canvas of={DatePickerStories.SmallDatePicker} />
+
+### Required
+
+By default, input fields are marked as optional. Use the `isRequired` prop to mark an input as required, and display a text label:
+
+<Canvas of={DatePickerStories.RequiredDatePicker} />
+
+### States
+
+Use `isDisabled` to disable a date picker. A disabled input cannot be focused or interacted with:
+
+<Canvas of={DatePickerStories.Disabled} />
+
+Use `isReadOnly` to lock a field to its current value. A read-only input can be focused and copied, but cannot be edited:
+
+<Canvas of={DatePickerStories.ReadOnly} />
+
+The `isInvalid` prop should be set programmatically when an input is invalid. It renders an error icon in the input field, changes the border colour and displays an `errorMessage` (using the [FieldError subcomponent](https://react-spectrum.adobe.com/react-aria/TextField.html#validation)):
+
+<Canvas of={DatePickerStories.Invalid} />
