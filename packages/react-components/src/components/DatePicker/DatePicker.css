@@ -99,10 +99,10 @@
 }
 .bcds-react-aria-DatePicker--Segment[data-focused] {
   outline: none;
-  border-radius: var(--layout-border-radius-medium);
-  background-color: var(--surface-color-border-active);
+  border-radius: var(--layout-border-radius-small);
+  background-color: var(--surface-color-primary-default);
   color: var(--typography-color-primary-invert);
-  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
+  padding: var(--layout-padding-hair);
   margin: var(--layout-margin-none) var(--layout-margin-hair);
 }
 
