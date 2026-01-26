@@ -28,12 +28,21 @@ import * as DatePickerStories from "./DatePicker.stories";
   language="typescript"
 />
 
-A date picker combines an input field, a button and a calendar. The user can enter a value by keyboard (by typing or incrementing each date segment's value individually), or by selecting a date on the calendar.
+A date picker combines an input field, a button and a calendar. The user can enter a date or datetime value via:
+
+- Keyboard (typing or incrementing each date segment's value)
+- Selecting a date from a calendar inside a popover
 
 Learn more about working with the text area component:
 
 - [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=F100A665C5CC4DCAB1617E82AD36E090)
 - [View the text area component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+### Values and validation
+
+You can read or set a date picker's value using the `value` (controlled) or `defaultValue` (uncontrolled) props. This component uses objects from [the @internationalized/date package](https://react-aria.adobe.com/internationalized/date/).
+
+Default and custom data validation support is built in. Consult the React Aria documentation to learn [how to handle and validate a date picker's value](https://react-aria.adobe.com/DatePicker#forms). You can also use a date picker within a [Form](/docs/utility-forms-form--docs).
 
 ## Controls
 
@@ -44,7 +53,34 @@ Learn more about working with the text area component:
 
 ### Formatting
 
-The date format is set automatically based on the user's browser locale.
+The date format is set automatically based on the user's browser locale. You can adjust formatting using the `granularity`, `hourCycle`, `hideTimeZone` and `shouldForceLeadingZeros` props:
+
+<Canvas of={DatePickerStories.CustomFormatting} />
+<Controls
+  of={DatePickerStories.CustomFormatting}
+  include={[
+    "granularity",
+    "hourCycle",
+    "hideTimeZone",
+    "shouldForceLeadingZeros",
+  ]}
+/>
+
+### Constraining values
+
+Set a `minValue` and/or `maxValue` to limit the range of accepted selections:
+
+<Canvas of={DatePickerStories.ConstrainedRange} />
+
+Pass a callback function via `isDateUnavailable` to programmatically disable certain dates. For example, you can accept only weekday values:
+
+<Canvas of={DatePickerStories.WeekdayOnly} />
+
+#### Granularity
+
+Use the `granularity` prop to let the user enter either a date or a date/time:
+
+<Canvas of={DatePickerStories.DateAndTime} />
 
 ### Size
 
@@ -53,13 +89,17 @@ The `size` prop enables you to choose between medium (default) and small (reduce
 <Canvas of={DatePickerStories.DatePickerTemplate} />
 <Canvas of={DatePickerStories.SmallDatePicker} />
 
-### Required
+### Calendar picker
+
+Pass `isCalendarDisabled` to disable the calendar button and popover:
+
+<Canvas of={DatePickerStories.NoPicker} />
+
+### States
 
 By default, input fields are marked as optional. Use the `isRequired` prop to mark an input as required, and display a text label:
 
 <Canvas of={DatePickerStories.RequiredDatePicker} />
-
-### States
 
 Use `isDisabled` to disable a date picker. A disabled input cannot be focused or interacted with:
 

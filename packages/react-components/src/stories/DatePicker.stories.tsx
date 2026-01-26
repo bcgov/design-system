@@ -29,8 +29,22 @@ const meta = {
       control: {
         type: "radio",
       },
-      options: ["day", "minute"],
+      options: ["day", "hour", "minute", "second"],
       description: "Sets smallest selectable unit of time",
+    },
+    hourCycle: {
+      control: { type: "radio" },
+      options: [12, 24],
+      description: "Whether to display the time in 12 or 24 hour format",
+    },
+    hideTimeZone: {
+      control: { type: "boolean" },
+      description: "Whether to hide the time zone abbreviation",
+    },
+    shouldForceLeadingZeros: {
+      control: { type: "boolean" },
+      description:
+        "Whether to always show leading zeros in the month, day, and hour fields",
     },
     minValue: {
       control: { type: "object" },
@@ -39,6 +53,11 @@ const meta = {
     maxValue: {
       control: { type: "object" },
       description: "Sets the maximum selectable date",
+    },
+    isDateUnavailable: {
+      control: { type: "object" },
+      description:
+        "Function that determines whether a date is a permissible selection",
     },
     isCalendarDisabled: {
       control: { type: "boolean" },
@@ -56,10 +75,9 @@ const meta = {
       control: { type: "boolean" },
       description: "Whether the current input is valid",
     },
-    isDateUnavailable: {
+    errorMessage: {
       control: { type: "object" },
-      description:
-        "Function that determines whether a date is a permissible selection",
+      description: "Text displayed when the input is invalid",
     },
   },
 } satisfies Meta<typeof DatePicker>;
@@ -68,7 +86,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const DatePickerTemplate: Story = {
-  args: { label: "Label", description: "Description" },
+  args: {
+    label: "Label",
+    description: "Description",
+    size: "medium",
+    isCalendarDisabled: false,
+    isRequired: false,
+    granularity: "day",
+    isDisabled: false,
+  },
   render: ({ ...args }: DatePickerProps<DateValue>) => <DatePicker {...args} />,
 };
 
@@ -160,5 +186,18 @@ export const ReadOnly: Story = {
     label: "Label",
     description: "Description",
     isReadOnly: true,
+  },
+};
+
+export const CustomFormatting: Story = {
+  ...DatePickerTemplate,
+  args: {
+    ...DatePickerTemplate.args,
+    label: "Label",
+    description: "Description",
+    granularity: "minute",
+    hourCycle: 12,
+    hideTimeZone: false,
+    shouldForceLeadingZeros: false,
   },
 };
