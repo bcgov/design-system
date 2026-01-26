@@ -37,6 +37,11 @@ const meta = {
       options: [12, 24],
       description: "Whether to display the time in 12 or 24 hour format",
     },
+    firstDayOfWeek: {
+      control: { type: "radio" },
+      options: ["sun", "mon", "tue", "wed", "thu", "fri", "sat"],
+      description: "Sets the first day of the week in the calendar view",
+    },
     hideTimeZone: {
       control: { type: "boolean" },
       description: "Whether to hide the time zone abbreviation",
@@ -93,6 +98,7 @@ export const DatePickerTemplate: Story = {
     isCalendarDisabled: false,
     isRequired: false,
     granularity: "day",
+    firstDayOfWeek: "sun",
     isDisabled: false,
   },
   render: ({ ...args }: DatePickerProps<DateValue>) => <DatePicker {...args} />,
