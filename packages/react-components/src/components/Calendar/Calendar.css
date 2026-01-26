@@ -52,6 +52,14 @@
   color: var(--typography-color-primary-invert);
   border-radius: var(--layout-border-radius-small);
 }
+.bcds-react-aria-Calendar--Cell[data-selected][data-focus-visible] {
+  background-color: var(--surface-color-primary-button-default);
+  color: var(--typography-color-primary-invert);
+  outline: solid var(--layout-border-width-small)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+  border-radius: var(--layout-border-radius-small);
+}
 .bcds-react-aria-Calendar--Cell[data-selected][data-hovered] {
   background-color: var(--surface-color-primary-button-hover);
 }
