@@ -19,6 +19,8 @@ export interface CalendarProps<
   isHeaderHidden?: boolean;
 }
 
+export type { DateValue };
+
 export default function Calendar({
   isHeaderHidden = false,
   ...props
