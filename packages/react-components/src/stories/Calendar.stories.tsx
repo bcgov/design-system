@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { CalendarDate } from "@internationalized/date";
 
 import { Calendar } from "../components";
 import { CalendarProps, DateValue } from "../components/Calendar";
@@ -56,6 +57,32 @@ export const MultipleMonths: Story = {
   args: {
     ...CalendarTemplate.args,
     visibleDuration: { months: 3 },
+    firstDayOfWeek: "mon",
+    isDisabled: false,
+    pageBehavior: "visible",
+  },
+};
+
+export const HalfYear: Story = {
+  ...CalendarTemplate,
+  args: {
+    ...CalendarTemplate.args,
+    visibleDuration: { months: 6 },
+    minValue: new CalendarDate(2026, 1, 1),
+    maxValue: new CalendarDate(2026, 12, 31),
+    firstDayOfWeek: "mon",
+    isDisabled: false,
+    pageBehavior: "visible",
+  },
+};
+
+export const FullYear: Story = {
+  ...CalendarTemplate,
+  args: {
+    ...CalendarTemplate.args,
+    visibleDuration: { months: 12 },
+    minValue: new CalendarDate(2026, 1, 1),
+    maxValue: new CalendarDate(2026, 12, 31),
     firstDayOfWeek: "mon",
     isDisabled: false,
     pageBehavior: "visible",
