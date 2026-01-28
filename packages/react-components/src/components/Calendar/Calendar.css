@@ -1,15 +1,23 @@
 .bcds-react-aria-Calendar {
   display: inline-flex;
-  flex-direction: column;
-  flex: 1 1 0;
-  gap: var(--layout-margin-small);
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--layout-margin-large);
   padding: var(--layout-padding-medium);
   box-sizing: border-box;
+  justify-content: center;
   background-color: var(--surface-color-forms-default);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
   font: var(--typography-regular-small-body);
+}
+.bcds-react-aria-Calendar--GridContainer {
+  display: inline-flex;
+  flex: 0 1 0;
+  flex-direction: column;
+  gap: var(--layout-margin-small);
+  box-sizing: border-box;
 }
 .bcds-react-aria-Calendar--Header {
   display: inline-flex;
@@ -17,6 +25,9 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--layout-padding-none) var(--layout-padding-xsmall);
+}
+.bcds-react-aria-Calendar--HeaderButton {
+  height: var(--icons-size-large);
 }
 .bcds-react-aria-Calendar--Header > h2.bcds-react-aria-Heading {
   font: var(--typography-bold-small-body);
@@ -38,11 +49,13 @@
   padding: var(--layout-padding-xsmall);
   border: solid var(--layout-border-width-small) transparent;
 }
+/* Hide days outside current month or visible range */
+.bcds-react-aria-Calendar--Cell[data-outside-visible-range],
+.bcds-react-aria-Calendar--Cell[data-outside-month] {
+  visibility: hidden;
+}
 
 /* Calendar item states */
-.bcds-react-aria-Calendar--Cell[data-outside-visible-range] {
-  display: none;
-}
 .bcds-react-aria-Calendar--Cell[data-hovered] {
   background-color: var(--surface-color-secondary-button-hover);
   border-radius: var(--layout-border-radius-small);

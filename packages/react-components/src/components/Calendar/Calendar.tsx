@@ -39,16 +39,18 @@ export default function Calendar({
           <div key={i} className="bcds-react-aria-Calendar--GridContainer">
             {!isHeaderHidden && (
               <header className="bcds-react-aria-Calendar--Header">
-                {i === 0 && (
-                  <Button
-                    slot="previous"
-                    size="xsmall"
-                    variant="tertiary"
-                    isIconButton
-                  >
-                    <SvgChevronLeftIcon />
-                  </Button>
-                )}
+                <div className="bcds-react-aria-Calendar--HeaderButton">
+                  {i === 0 && (
+                    <Button
+                      slot="previous"
+                      size="xsmall"
+                      variant="tertiary"
+                      isIconButton
+                    >
+                      <SvgChevronLeftIcon />
+                    </Button>
+                  )}
+                </div>
                 <Heading>
                   {monthFormatter.format(
                     state.visibleRange.start
@@ -56,16 +58,18 @@ export default function Calendar({
                       .toDate(state.timeZone),
                   )}
                 </Heading>
-                {i === (visibleDuration.months ?? 1) - 1 && (
-                  <Button
-                    slot="next"
-                    size="xsmall"
-                    variant="tertiary"
-                    isIconButton
-                  >
-                    <SvgChevronRightIcon />
-                  </Button>
-                )}
+                <div className="bcds-react-aria-Calendar--HeaderButton">
+                  {i === (visibleDuration.months ?? 1) - 1 && (
+                    <Button
+                      slot="next"
+                      size="xsmall"
+                      variant="tertiary"
+                      isIconButton
+                    >
+                      <SvgChevronRightIcon />
+                    </Button>
+                  )}
+                </div>
               </header>
             )}
             <ReactAriaCalendarGrid
