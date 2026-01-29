@@ -1,6 +1,6 @@
 # @bcgov/design-system-react-components
 
-This package contains a library of React components built using [React Aria Components](https://react-spectrum.adobe.com/react-aria/components.html) to implement the [B.C. Design System](https://gov.bc.ca/designsystem).
+This package contains a library of React components built using [React Aria](https://react-aria.adobe.com) to implement the [B.C. Design System](https://gov.bc.ca/designsystem).
 
 Questions? Please email the <a href="mailto:DesignSystem@gov.bc.ca">GDX OSS Design Team</a>.
 
@@ -66,32 +66,36 @@ export default function App() {
 
 ## Component list
 
-| Component               | React Aria Components docs link                                  |
-| ----------------------- | ---------------------------------------------------------------- |
-| AlertBanner             | N/A                                                              |
-| AlertDialog             | N/A                                                              |
-| Accordion               | https://react-spectrum.adobe.com/react-aria/Disclosure.html      |
-| AccordionGroup          | https://react-spectrum.adobe.com/react-aria/DisclosureGroup.html |
-| Button                  | https://react-spectrum.adobe.com/react-aria/Button.html          |
-| ButtonGroup             | N/A                                                              |
-| Callout                 | N/A                                                              |
-| Checkbox                | https://react-spectrum.adobe.com/react-aria/Checkbox.html        |
-| CheckboxGroup           | https://react-spectrum.adobe.com/react-aria/CheckboxGroup.html   |
-| Dialog                  | https://react-spectrum.adobe.com/react-aria/Dialog.html          |
-| Footer                  | N/A                                                              |
-| Form                    | https://react-spectrum.adobe.com/react-aria/Form.html            |
-| Header                  | N/A                                                              |
-| Heading                 | https://react-spectrum.adobe.com/react-spectrum/Heading.html     |
-| InlineAlert             | N/A                                                              |
-| Modal                   | https://react-spectrum.adobe.com/react-aria/Modal.html           |
-| Link                    | https://react-spectrum.adobe.com/react-spectrum/Link.html        |
-| RadioGroup, Radio       | https://react-spectrum.adobe.com/react-aria/RadioGroup.html      |
-| Select                  | https://react-spectrum.adobe.com/react-aria/Select.html          |
-| Switch                  | https://react-spectrum.adobe.com/react-aria/Switch.html          |
-| TagGroup, TagList, Tag  | https://react-spectrum.adobe.com/react-aria/TagGroup.html        |
-| Text                    | https://react-spectrum.adobe.com/react-spectrum/Text.html        |
-| TextArea, TextField     | https://react-spectrum.adobe.com/react-aria/TextField.html       |
-| Tooltip, TooltipTrigger | https://react-spectrum.adobe.com/react-aria/Tooltip.html         |
+| Component               | React Aria docs link                           |
+| ----------------------- | ---------------------------------------------- |
+| AlertBanner             | N/A                                            |
+| AlertDialog             | N/A                                            |
+| Accordion               | https://react-aria.adobe.com/Disclosure        |
+| AccordionGroup          | https://react-aria.adobe.com/DisclosureGroup   |
+| Button                  | https://react-aria.adobe.com/Button            |
+| ButtonGroup             | N/A                                            |
+| Calendar                | https://react-aria.adobe.com/Calendar          |
+| Callout                 | N/A                                            |
+| Checkbox                | https://react-aria.adobe.com/Checkbox          |
+| CheckboxGroup           | https://react-aria.adobe.com/CheckboxGroup     |
+| DatePicker              | https://react-aria.adobe.com/DatePicker        |
+| Dialog                  | https://react-aria.adobe.com/Dialog            |
+| Footer                  | N/A                                            |
+| Form                    | https://react-aria.adobe.com/Form              |
+| Header                  | N/A                                            |
+| Heading                 | https://react-spectrum.adobe.com/v3/Heading    |
+| InlineAlert             | N/A                                            |
+| Modal                   | https://react-aria.adobe.com/Modal             |
+| Link                    | https://react-spectrum.adobe.com/v3/Link       |
+| RadioGroup, Radio       | https://react-aria.adobe.com/RadioGroup        |
+| Select                  | https://react-aria.adobe.com/Select            |
+| Switch                  | https://react-aria.adobe.com/Switch            |
+| TagGroup, TagList, Tag  | https://react-aria.adobe.com/TagGroup          |
+| Text                    | https://react-spectrum.adobe.com/v3/Text       |
+| TextArea, TextField     | https://react-aria.adobe.com/TextField         |
+| ToggleButton            | https://react-aria.adobe.com/ToggleButton      |
+| ToggleButtonGroup       | https://react-aria.adobe.com/ToggleButtonGroup |
+| Tooltip, TooltipTrigger | https://react-aria.adobe.com/Tooltip           |
 
 ## Supported React versions
 
