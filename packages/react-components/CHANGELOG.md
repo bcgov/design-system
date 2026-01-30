@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.6.0
+
+This is a milestone release that adds four new components, and includes enhancements to existing components.
+
+### Added
+
+- ToggleButton and ToggleButtonGroup
+- DatePicker
+- NumberField
+
+### Changed
+
+- InlineAlert: added support for a custom icon, overriding the default set by each variant
+- TextField/TextArea: apply correct styling in disabled state
+- Storybook: reorganised components and made it easier to find full API documentation for React Aria-based components
+
+This release uses:
+
+- `react-aria-components` v1.14.0
+- `@bcgov/design-tokens` v3.2.0
+
 ## 0.5.2
 
 This is a patch release that brings new options and refinements to the Button component.
