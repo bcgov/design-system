@@ -105,6 +105,9 @@
   padding: var(--layout-padding-hair);
   margin: var(--layout-margin-none) var(--layout-margin-hair);
 }
+.bcds-react-aria-DatePicker > .bcds-react-aria-Button[data-focused] {
+  outline: none;
+}
 
 /* Disabled and read-only */
 .bcds-react-aria-DatePicker[data-readonly]

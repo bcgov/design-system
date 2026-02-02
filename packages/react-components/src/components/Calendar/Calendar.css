@@ -52,6 +52,7 @@
   color: var(--typography-color-primary-invert);
   border-radius: var(--layout-border-radius-small);
 }
+.bcds-react-aria-Calendar--Cell[data-selected][data-focused],
 .bcds-react-aria-Calendar--Cell[data-selected][data-focus-visible] {
   background-color: var(--surface-color-primary-button-default);
   color: var(--typography-color-primary-invert);
@@ -63,11 +64,15 @@
 .bcds-react-aria-Calendar--Cell[data-selected][data-hovered] {
   background-color: var(--surface-color-primary-button-hover);
 }
+.bcds-react-aria-Calendar--Cell[data-focused] {
+  outline: none;
+}
 .bcds-react-aria-Calendar--Cell[data-focus-visible] {
   background-color: var(--surface-color-secondary-button-hover);
   border: solid var(--layout-border-width-small)
     var(--surface-color-border-active);
   border-radius: var(--layout-border-radius-small);
+  outline: none;
 }
 .bcds-react-aria-Calendar--Cell[data-today] {
   font: var(--typography-bold-small-body);
