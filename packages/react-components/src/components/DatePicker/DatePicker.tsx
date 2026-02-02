@@ -137,6 +137,6 @@ export default function DatePicker<T extends DateValue>({
   return isBrowserLocaleUsed ? (
     datePicker
   ) : (
-    <I18nProvider locale={"en-CA-u-ca-gregory"}>{datePicker}</I18nProvider>
+    <I18nProvider locale={"en-CA"}>{datePicker}</I18nProvider>
   );
 }
