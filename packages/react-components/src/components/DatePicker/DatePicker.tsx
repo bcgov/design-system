@@ -22,10 +22,15 @@ import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 export interface DatePickerProps<
   T extends DateValue,
 > extends ReactAriaDatePickerProps<T> {
+  /* Set input and typography size. Defaults to `medium` */
   size?: "small" | "medium";
+  /* Disable calendar button and popover */
   isCalendarDisabled?: boolean;
+  /* Sets text label above input */
   label?: string;
+  /* Sets optional description text below input */
   description?: string;
+  /* Used for data validation and error handling */
   errorMessage?: string | ((validation: ValidationResult) => string);
 }
 
