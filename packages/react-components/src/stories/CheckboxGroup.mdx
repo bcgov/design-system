@@ -10,6 +10,13 @@ import {
   Subtitle,
 } from "@storybook/addon-docs/blocks";
 
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
 import * as CheckboxGroupStories from "./CheckboxGroup.stories";
 import * as CheckboxStories from "./Checkbox.stories";
 
@@ -21,19 +28,46 @@ import * as CheckboxStories from "./Checkbox.stories";
   Checkboxes enable the user to select one or more options from a list.
 </Subtitle>
 
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RAC Checkbox and CheckboxGroup components. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/Checkbox"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      Checkbox docs
+    </Link>,
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/CheckboxGroup"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      CheckboxGroup docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
 <Source
   code={`import { CheckboxGroup, Checkbox } from "@bcgov/design-system-react-components";`}
   language="typescript"
 />
 
-## Usage and resources
-
 Learn more about working with the CheckboxGroup and Checkbox components:
 
 - [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=074FAD78863442AEAF2453BC18B28D2A)
 - [View the select component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
-
-This component is based on the React Aria [Checkbox](https://react-spectrum.adobe.com/react-aria/Checkbox.html) and [CheckboxGroup](https://react-spectrum.adobe.com/react-aria/CheckboxGroup.html) components. Consult the React Aria documentation for additional technical information.
 
 ### Validation
 

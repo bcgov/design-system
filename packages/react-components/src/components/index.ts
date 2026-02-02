@@ -35,6 +35,8 @@ export { default as SvgInfoIcon } from "./Icons/SvgInfoIcon";
 export { default as SvgMinusIcon } from "./Icons/SvgMinusIcon";
 export { default as SvgPlusIcon } from "./Icons/SvgPlusIcon";
 export { default as SvgTooltipArrowUp } from "./Icons/SvgTooltipArrowUp";
+export { default as SvgUpRightFromSquareIcon } from "./Icons/SvgUpRightFromSquareIcon";
+export { default as SvgReactAriaIcon } from "./Icons/SvgReactAriaIcon";
 export { default as Tag } from "./Tag";
 export { default as TagGroup } from "./TagGroup";
 export { default as TagList } from "./TagList";

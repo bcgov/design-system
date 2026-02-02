@@ -10,6 +10,13 @@ import {
   Subtitle,
 } from "@storybook/addon-docs/blocks";
 
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
 import * as TextAreaStories from "./TextArea.stories";
 
 <Meta of={TextAreaStories} />
@@ -21,18 +28,36 @@ import * as TextAreaStories from "./TextArea.stories";
   into an interface or form.
 </Subtitle>
 
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RAC TextField component. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/TextField"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      TextField docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
 <Source
   code={`import { TextArea } from "@bcgov/design-system-react-components"; `}
   language="typescript"
 />
-## Usage and resources
 
 Learn more about working with the text area component:
 
 - [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=27E37725D33F45DE86F78BC84435BB66)
 - [View the text area component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
-
-This component is based on [React Aria TextField](https://react-spectrum.adobe.com/react-aria/TextField.html#multi-line).
 
 ### Validation
 

@@ -10,6 +10,13 @@ import {
   Subtitle,
 } from "@storybook/addon-docs/blocks";
 
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
 import * as SwitchStories from "./Switch.stories";
 
 <Meta of={SwitchStories} />
@@ -18,19 +25,36 @@ import * as SwitchStories from "./Switch.stories";
 
 <Subtitle>A switch enables the user to toggle a setting on or off.</Subtitle>
 
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RAC Switch component. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/Switch"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      Switch docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
 <Source
   code={`import { Switch } from "@bcgov/design-system-react-components"; `}
   language="typescript"
 />
 
-## Usage and resources
-
 Learn more about working with the switch component:
 
 - [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=A2B9EFCADAC940AA8E7A0A7E91D49097)
 - [View the switch component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
-
-This component is based on [React Aria Switch](https://react-spectrum.adobe.com/react-aria/Switch.html). It renders an `<input>` with the [ARIA switch role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role).
 
 ## Controls
 

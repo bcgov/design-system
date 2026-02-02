@@ -1,3 +1,8 @@
 #storybook-root {
   overflow-x: hidden;
 }
+
+/* Fix for Storybook adding styling to Link button components */
+.sbdocs .sbdocs-content a.bcds-react-aria-Button {
+  text-decoration: none;
+}

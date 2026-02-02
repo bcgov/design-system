@@ -10,6 +10,13 @@ import {
   Subtitle,
 } from "@storybook/addon-docs/blocks";
 
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
 import * as ButtonStories from "./Button.stories";
 
 <Meta of={ButtonStories} />
@@ -18,22 +25,39 @@ import * as ButtonStories from "./Button.stories";
 
 <Subtitle>
   A button allows a user to perform an action, with mouse, touch, and keyboard
-  interactions.{" "}
+  interactions.
 </Subtitle>
+
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RAC Button component. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/Button"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      Button docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
 
 <Source
   code={`import { Button } from "@bcgov/design-system-react-components"; `}
   language="typescript"
 />
 
-## Usage and resources
-
 Learn more about working with the button component:
 
 - [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=4C51732F99054326A3E2DB0B82576DD4)
 - [View the button component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
-
-This component is based on [React Aria Button](https://react-spectrum.adobe.com/react-aria/Button.html). Consult the React Aria documentation for additional technical information.
 
 ### Link buttons
 
