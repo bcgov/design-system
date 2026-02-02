@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import {
   DatePicker as ReactAriaDatePicker,
   DatePickerProps as ReactAriaDatePickerProps,
@@ -30,6 +31,8 @@ export interface DatePickerProps<
   label?: string;
   /* Sets optional description text below input */
   description?: string;
+  /* Show date format in the description */
+  formatLabel?: boolean;
   /* Used for data validation and error handling */
   errorMessage?: string | ((validation: ValidationResult) => string);
 }
@@ -41,10 +44,31 @@ export default function DatePicker<T extends DateValue>({
   label,
   description,
   errorMessage,
+  formatLabel = true,
   isRequired = false,
   isCalendarDisabled = false,
   ...props
 }: DatePickerProps<T>) {
+  // Get the date format (based on user's browser locale) as a string
+  const dateFormatPattern = useMemo(() => {
+    const formatter = new Intl.DateTimeFormat(undefined, {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
+    const parts = formatter.formatToParts(new Date());
+    const pattern = parts
+      .map((part) => {
+        if (part.type === "year") return "yyyy";
+        if (part.type === "month") return "mm";
+        if (part.type === "day") return "dd";
+        return part.value;
+      })
+      .join("");
+
+    return pattern;
+  }, []);
+
   return (
     <ReactAriaDatePicker
       className={`bcds-react-aria-DatePicker ${size}`}
@@ -85,13 +109,13 @@ export default function DatePicker<T extends DateValue>({
               </>
             )}
           </Group>
-
-          {description && (
+          {(description || formatLabel) && (
             <Text
               slot="description"
               className={`bcds-react-aria-DatePicker--Description`}
             >
-              {description}
+              <div>{formatLabel && `Format: ${dateFormatPattern}`}</div>
+              <div>{description && description}</div>
             </Text>
           )}
           <FieldError className="bcds-react-aria-DatePicker--Error">
