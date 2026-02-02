@@ -36,7 +36,7 @@ export interface DatePickerProps<
   formatLabel?: boolean;
   /* Used for data validation and error handling */
   errorMessage?: string | ((validation: ValidationResult) => string);
-  /* Locale */
+  /* When true, uses the browser locale for date formatting and internationalization */
   isBrowserLocaleUsed?: boolean;
 }
 

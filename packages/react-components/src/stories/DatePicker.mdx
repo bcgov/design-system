@@ -53,7 +53,11 @@ Default and custom data validation support is built in. Consult the React Aria d
 
 ### Formatting
 
-The date format is set automatically based on the user's browser locale. You can adjust formatting using the `granularity`, `hourCycle`, `hideTimeZone` and `shouldForceLeadingZeros` props:
+By default, a date picker renders inside an `<I18nProvider>` element that sets its locale to `en-CA`. Use the `isBrowserLocaleUsed` prop to override this behaviour, and allow the date picker to set its date format automatically, based on the user's browser locale.
+
+The `formatLabel` prop toggles the display of automatically-generated helper text that tells the user what date format is expected.
+
+You can further adjust formatting using the `granularity`, `hourCycle`, `hideTimeZone` and `shouldForceLeadingZeros` props:
 
 <Canvas of={DatePickerStories.CustomFormatting} />
 <Controls

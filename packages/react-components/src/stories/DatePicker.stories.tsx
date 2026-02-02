@@ -25,6 +25,11 @@ const meta = {
       },
       description: "Additional helper text below the input field",
     },
+    formatLabel: {
+      control: { type: "boolean" },
+      description:
+        "Shows additional helper text explaining the expected date format",
+    },
     granularity: {
       control: {
         type: "radio",
@@ -83,6 +88,11 @@ const meta = {
     errorMessage: {
       control: { type: "object" },
       description: "Text displayed when the input is invalid",
+    },
+    isBrowserLocaleUsed: {
+      control: { type: "boolean" },
+      description:
+        "Use browser locale for date formatting and internationalization",
     },
   },
 } satisfies Meta<typeof DatePicker>;
