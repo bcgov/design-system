@@ -2,7 +2,7 @@ import {
   Calendar as ReactAriaCalendar,
   CalendarCell as ReactAriaCalendarCell,
   CalendarGrid as ReactAriaCalendarGrid,
-  CalendarProps,
+  CalendarProps as ReactAriaCalendarProps,
   DateValue,
 } from "react-aria-components";
 
@@ -13,20 +13,31 @@ import Heading from "../Heading";
 import SvgChevronLeftIcon from "../Icons/SvgChevronLeftIcon";
 import SvgChevronRightIcon from "../Icons/SvgChevronRightIcon";
 
+export interface CalendarProps<
+  T extends DateValue,
+> extends ReactAriaCalendarProps<T> {
+  isHeaderHidden?: boolean;
+}
+
 export type { DateValue };
 
-export default function Calendar({ ...props }: CalendarProps<DateValue>) {
+export default function Calendar({
+  isHeaderHidden = false,
+  ...props
+}: CalendarProps<DateValue>) {
   return (
     <ReactAriaCalendar className="bcds-react-aria-Calendar" {...props}>
-      <header className="bcds-react-aria-Calendar--Header">
-        <Button slot="previous" size="xsmall" variant="tertiary" isIconButton>
-          <SvgChevronLeftIcon />
-        </Button>
-        <Heading />
-        <Button slot="next" size="xsmall" variant="tertiary" isIconButton>
-          <SvgChevronRightIcon />
-        </Button>
-      </header>
+      {!isHeaderHidden && (
+        <header className="bcds-react-aria-Calendar--Header">
+          <Button slot="previous" size="xsmall" variant="tertiary" isIconButton>
+            <SvgChevronLeftIcon />
+          </Button>
+          <Heading />
+          <Button slot="next" size="xsmall" variant="tertiary" isIconButton>
+            <SvgChevronRightIcon />
+          </Button>
+        </header>
+      )}
       <ReactAriaCalendarGrid
         className={`bcds-react-aria-Calendar--Grid`}
         weekdayStyle="short"
