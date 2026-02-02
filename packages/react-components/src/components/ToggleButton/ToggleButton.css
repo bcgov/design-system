@@ -72,10 +72,9 @@
 }
 /* Focused */
 .bcds-react-aria-ToggleButton[data-focus-visible] {
-  border: var(--layout-border-width-medium) solid
-    var(--surface-color-border-active);
   background-color: var(--theme-blue-10);
-  outline: none;
+  outline: var(--layout-border-width-medium) solid
+    var(--surface-color-border-active);
 }
 
 /* Pressed */
