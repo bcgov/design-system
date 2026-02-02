@@ -118,7 +118,11 @@ export default function DatePicker<T extends DateValue>({
               slot="description"
               className={`bcds-react-aria-DatePicker--Description`}
             >
-              <div>{formatLabel && `Format: ${dateFormatPattern}`}</div>
+              {isBrowserLocaleUsed ? (
+                <div>{formatLabel && `Format: ${dateFormatPattern}`}</div>
+              ) : (
+                <div>{formatLabel && `Format: yyyy-mm-dd`}</div>
+              )}
               <div>{description && description}</div>
             </Text>
           )}
@@ -133,6 +137,6 @@ export default function DatePicker<T extends DateValue>({
   return isBrowserLocaleUsed ? (
     datePicker
   ) : (
-    <I18nProvider locale={"en-CA"}>{datePicker}</I18nProvider>
+    <I18nProvider locale={"en-CA-u-ca-gregory"}>{datePicker}</I18nProvider>
   );
 }
