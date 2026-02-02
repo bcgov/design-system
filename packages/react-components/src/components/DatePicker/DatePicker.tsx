@@ -11,6 +11,7 @@ import {
   Popover,
   Text,
   ValidationResult,
+  I18nProvider,
 } from "react-aria-components";
 
 import "./DatePicker.css";
@@ -35,6 +36,8 @@ export interface DatePickerProps<
   formatLabel?: boolean;
   /* Used for data validation and error handling */
   errorMessage?: string | ((validation: ValidationResult) => string);
+  /* Locale */
+  isBrowserLocaleUsed?: boolean;
 }
 
 export type { DateValue };
@@ -47,6 +50,7 @@ export default function DatePicker<T extends DateValue>({
   formatLabel = true,
   isRequired = false,
   isCalendarDisabled = false,
+  isBrowserLocaleUsed = false,
   ...props
 }: DatePickerProps<T>) {
   // Get the date format (based on user's browser locale) as a string
@@ -69,7 +73,7 @@ export default function DatePicker<T extends DateValue>({
     return pattern;
   }, []);
 
-  return (
+  const datePicker = (
     <ReactAriaDatePicker
       className={`bcds-react-aria-DatePicker ${size}`}
       {...props}
@@ -124,5 +128,11 @@ export default function DatePicker<T extends DateValue>({
         </>
       )}
     </ReactAriaDatePicker>
+  );
+
+  return isBrowserLocaleUsed ? (
+    datePicker
+  ) : (
+    <I18nProvider locale={"en-CA"}>{datePicker}</I18nProvider>
   );
 }
