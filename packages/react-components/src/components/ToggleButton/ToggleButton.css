@@ -60,6 +60,12 @@
   border: var(--layout-border-width-small) solid
     var(--surface-color-secondary-button-default);
   box-shadow: var(--surface-shadow-small);
+  /* Animate transition on select or deselect */
+  transition: 200ms ease;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
 /* Hover */
@@ -87,4 +93,10 @@
 .bcds-react-aria-ToggleButton[data-disabled] {
   color: var(--typography-color-disabled);
   cursor: not-allowed;
+  /* Animate transition on disable or enable */
+  transition: 200ms ease;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }

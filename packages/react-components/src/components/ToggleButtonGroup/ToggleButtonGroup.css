@@ -27,39 +27,3 @@
   font: var(--typography-regular-small-body);
   color: var(--typography-color-secondary);
 }
-
-/* Selection indicator */
-.bcds-react-aria-ToggleButton:has(
-  .bcds-react-aria-ToggleButton--SelectionIndicator
-) {
-  position: relative;
-  transition: 200ms ease;
-
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
-}
-
-.bcds-react-aria-ToggleButtonGroup
-  > .bcds-react-aria-ToggleButton
-  > .bcds-react-aria-ToggleButton--SelectionIndicator[data-selected] {
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--surface-color-secondary-button-default);
-  color: var(--typography-color-primary);
-  border: var(--layout-border-width-small) solid
-    var(--surface-color-secondary-button-default);
-  box-shadow: var(--surface-shadow-small);
-  border-radius: var(--layout-border-radius-medium);
-  box-shadow: var(--surface-shadow-small);
-  pointer-events: none;
-}
-
-.bcds-react-aria-ToggleButtonGroup > .bcds-react-aria-ToggleButton > span {
-  position: relative;
-  z-index: 1;
-}
