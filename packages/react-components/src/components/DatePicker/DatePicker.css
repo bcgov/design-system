@@ -76,6 +76,11 @@
   min-width: var(--icons-size-medium);
   height: var(--icons-size-medium);
 }
+/* Format helper text */
+.bcds-react-aria-DatePicker--FormatHelpText {
+  unicode-bidi: embed;
+  direction: ltr;
+}
 /* Separator */
 .bcds-react-aria-DatePicker--Separator {
   margin: var(--layout-margin-small) var(--layout-margin-none);

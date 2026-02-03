@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import {
   DatePicker as ReactAriaDatePicker,
   DatePickerProps as ReactAriaDatePickerProps,
@@ -14,6 +13,10 @@ import {
   ValidationResult,
   I18nProvider,
 } from "react-aria-components";
+
+import { useMemo } from "react";
+import { useDisplayNames } from "@react-aria/datepicker";
+import { useDateFormatter } from "@react-aria/i18n";
 
 import "./DatePicker.css";
 import Button from "../Button";
@@ -34,7 +37,7 @@ export interface DatePickerProps<
   /* Sets optional description text below input */
   description?: string;
   /* Show date format in the description */
-  formatLabel?: boolean;
+  showFormatHelpText?: boolean;
   /* Used for data validation and error handling */
   errorMessage?: string | ((validation: ValidationResult) => string);
   /* When true, uses the browser locale for date formatting and internationalization */
@@ -43,37 +46,55 @@ export interface DatePickerProps<
 
 export type { DateValue };
 
+/* Generate format helper text, adapted from React Spectrum */
+export function useFormatHelpText(
+  props: Pick<DatePickerProps<DateValue>, "showFormatHelpText">,
+): React.ReactNode {
+  let formatter = useDateFormatter({ dateStyle: "short" });
+  let displayNames = useDisplayNames();
+  return useMemo(() => {
+    if (props.showFormatHelpText) {
+      return (
+        <>
+          <span>Format: </span>
+          {formatter.formatToParts(new Date()).map((s, i) => {
+            if (
+              s.type === "literal" ||
+              s.type === "unknown" ||
+              (s.type as string) === "yearName"
+            ) {
+              return <span key={i}>{` ${s.value} `}</span>;
+            }
+
+            let type = (s.type as string) === "relatedYear" ? "year" : s.type;
+            return (
+              <span
+                key={i}
+                className="bcds-react-aria-DatePicker--FormatHelpText"
+              >
+                {displayNames.of(type)}
+              </span>
+            );
+          })}
+        </>
+      );
+    }
+
+    return "";
+  }, [props.showFormatHelpText, formatter, displayNames]);
+}
+
 export default function DatePicker<T extends DateValue>({
   size = "medium",
   label,
   description,
   errorMessage,
-  formatLabel = true,
+  showFormatHelpText = true,
   isRequired = false,
   isCalendarDisabled = false,
   isBrowserLocaleUsed = false,
   ...props
 }: DatePickerProps<T>) {
-  // Get the date format (based on user's browser locale) as a string
-  const dateFormatPattern = useMemo(() => {
-    const formatter = new Intl.DateTimeFormat(undefined, {
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-    });
-    const parts = formatter.formatToParts(new Date());
-    const pattern = parts
-      .map((part) => {
-        if (part.type === "year") return "yyyy";
-        if (part.type === "month") return "mm";
-        if (part.type === "day") return "dd";
-        return part.value;
-      })
-      .join("");
-
-    return pattern;
-  }, []);
-
   const datePicker = (
     <ReactAriaDatePicker
       className={`bcds-react-aria-DatePicker ${size}`}
@@ -114,24 +135,17 @@ export default function DatePicker<T extends DateValue>({
               </>
             )}
           </Group>
-          {(description || formatLabel) && (
+          {(description || showFormatHelpText) && (
             <Text
               slot="description"
               className={`bcds-react-aria-DatePicker--Description`}
             >
-              {isBrowserLocaleUsed
-                ? formatLabel && (
-                    <>
-                      <div>{`Format: ${dateFormatPattern}`}</div>
-                      <Separator className="bcds-react-aria-DatePicker--Separator" />
-                    </>
-                  )
-                : formatLabel && (
-                    <>
-                      <div>{`Format: yyyy-mm-dd`}</div>
-                      <Separator className="bcds-react-aria-DatePicker--Separator" />
-                    </>
-                  )}
+              {showFormatHelpText && (
+                <>
+                  {useFormatHelpText({ showFormatHelpText })}
+                  <Separator className="bcds-react-aria-DatePicker--Separator" />
+                </>
+              )}
               <div>{description && description}</div>
             </Text>
           )}

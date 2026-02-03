@@ -25,7 +25,7 @@ const meta = {
       },
       description: "Additional helper text below the input field",
     },
-    formatLabel: {
+    showFormatHelpText: {
       control: { type: "boolean" },
       description:
         "Shows additional helper text explaining the expected date format",
