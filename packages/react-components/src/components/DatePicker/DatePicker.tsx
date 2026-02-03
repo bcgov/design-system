@@ -120,9 +120,18 @@ export default function DatePicker<T extends DateValue>({
               className={`bcds-react-aria-DatePicker--Description`}
             >
               {isBrowserLocaleUsed
-                ? formatLabel && <div>{`Format: ${dateFormatPattern}`}</div>
-                : formatLabel && <div>{`Format: yyyy-mm-dd`}</div>}
-              <Separator className="bcds-react-aria-DatePicker--Separator" />
+                ? formatLabel && (
+                    <>
+                      <div>{`Format: ${dateFormatPattern}`}</div>
+                      <Separator className="bcds-react-aria-DatePicker--Separator" />
+                    </>
+                  )
+                : formatLabel && (
+                    <>
+                      <div>{`Format: yyyy-mm-dd`}</div>
+                      <Separator className="bcds-react-aria-DatePicker--Separator" />
+                    </>
+                  )}
               <div>{description && description}</div>
             </Text>
           )}
