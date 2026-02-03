@@ -47,11 +47,11 @@ export interface DatePickerProps<
 export type { DateValue };
 
 /* Generate format helper text, adapted from React Spectrum */
-export function useFormatHelpText(
+function useFormatHelpText(
   props: Pick<DatePickerProps<DateValue>, "showFormatHelpText">,
 ): React.ReactNode {
-  let formatter = useDateFormatter({ dateStyle: "short" });
-  let displayNames = useDisplayNames();
+  const formatter = useDateFormatter({ dateStyle: "short" });
+  const displayNames = useDisplayNames();
   return useMemo(() => {
     if (props.showFormatHelpText) {
       return (
@@ -66,7 +66,7 @@ export function useFormatHelpText(
               return <span key={i}>{` ${s.value} `}</span>;
             }
 
-            let type = (s.type as string) === "relatedYear" ? "year" : s.type;
+            const type = (s.type as string) === "relatedYear" ? "year" : s.type;
             return (
               <span
                 key={i}
@@ -95,6 +95,7 @@ export default function DatePicker<T extends DateValue>({
   isBrowserLocaleUsed = false,
   ...props
 }: DatePickerProps<T>) {
+  const formatHelpText = useFormatHelpText({ showFormatHelpText });
   const datePicker = (
     <ReactAriaDatePicker
       className={`bcds-react-aria-DatePicker ${size}`}
@@ -142,7 +143,7 @@ export default function DatePicker<T extends DateValue>({
             >
               {showFormatHelpText && (
                 <>
-                  {useFormatHelpText({ showFormatHelpText })}
+                  {formatHelpText}
                   <Separator className="bcds-react-aria-DatePicker--Separator" />
                 </>
               )}
