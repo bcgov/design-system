@@ -10,6 +10,13 @@ import {
   Subtitle,
 } from "@storybook/addon-docs/blocks";
 
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
 import * as NumberFieldStories from "./NumberField.stories";
 
 <Meta of={NumberFieldStories} />
@@ -20,6 +27,25 @@ import * as NumberFieldStories from "./NumberField.stories";
   A NumberField is an input component that enables the user to enter a numerical
   value into an interface.
 </Subtitle>
+
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA NumberField component. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/NumberField"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      NumberField docs
+    </Link>,
+  ]}
+/>
 
 <Source
   code={`import { NumberField } from "@bcgov/design-system-react-components"; `}
