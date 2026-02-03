@@ -8,9 +8,15 @@ import {
   Group,
   Label,
   Popover,
+  Separator,
   Text,
   ValidationResult,
+  I18nProvider,
 } from "react-aria-components";
+
+import { useMemo } from "react";
+import { useDisplayNames } from "@react-aria/datepicker";
+import { useDateFormatter } from "@react-aria/i18n";
 
 import "./DatePicker.css";
 import Button from "../Button";
@@ -30,22 +36,67 @@ export interface DatePickerProps<
   label?: string;
   /* Sets optional description text below input */
   description?: string;
+  /* Show date format in the description */
+  showFormatHelpText?: boolean;
   /* Used for data validation and error handling */
   errorMessage?: string | ((validation: ValidationResult) => string);
+  /* When true, uses the browser locale for date formatting and internationalization */
+  isBrowserLocaleUsed?: boolean;
 }
 
 export type { DateValue };
+
+/* Generate format helper text, adapted from React Spectrum */
+function useFormatHelpText(
+  props: Pick<DatePickerProps<DateValue>, "showFormatHelpText">,
+): React.ReactNode {
+  const formatter = useDateFormatter({ dateStyle: "short" });
+  const displayNames = useDisplayNames();
+  return useMemo(() => {
+    if (props.showFormatHelpText) {
+      return (
+        <>
+          <span>Format: </span>
+          {formatter.formatToParts(new Date()).map((s, i) => {
+            if (
+              s.type === "literal" ||
+              s.type === "unknown" ||
+              (s.type as string) === "yearName"
+            ) {
+              return <span key={i}>{` ${s.value} `}</span>;
+            }
+
+            const type = (s.type as string) === "relatedYear" ? "year" : s.type;
+            return (
+              <span
+                key={i}
+                className="bcds-react-aria-DatePicker--FormatHelpText"
+              >
+                {displayNames.of(type)}
+              </span>
+            );
+          })}
+        </>
+      );
+    }
+
+    return "";
+  }, [props.showFormatHelpText, formatter, displayNames]);
+}
 
 export default function DatePicker<T extends DateValue>({
   size = "medium",
   label,
   description,
   errorMessage,
+  showFormatHelpText = true,
   isRequired = false,
   isCalendarDisabled = false,
+  isBrowserLocaleUsed = false,
   ...props
 }: DatePickerProps<T>) {
-  return (
+  const formatHelpText = useFormatHelpText({ showFormatHelpText });
+  const datePicker = (
     <ReactAriaDatePicker
       className={`bcds-react-aria-DatePicker ${size}`}
       {...props}
@@ -85,13 +136,18 @@ export default function DatePicker<T extends DateValue>({
               </>
             )}
           </Group>
-
-          {description && (
+          {(description || showFormatHelpText) && (
             <Text
               slot="description"
               className={`bcds-react-aria-DatePicker--Description`}
             >
-              {description}
+              {showFormatHelpText && (
+                <>
+                  {formatHelpText}
+                  <Separator className="bcds-react-aria-DatePicker--Separator" />
+                </>
+              )}
+              <div>{description && description}</div>
             </Text>
           )}
           <FieldError className="bcds-react-aria-DatePicker--Error">
@@ -100,5 +156,11 @@ export default function DatePicker<T extends DateValue>({
         </>
       )}
     </ReactAriaDatePicker>
+  );
+
+  return isBrowserLocaleUsed ? (
+    datePicker
+  ) : (
+    <I18nProvider locale={"en-CA"}>{datePicker}</I18nProvider>
   );
 }
