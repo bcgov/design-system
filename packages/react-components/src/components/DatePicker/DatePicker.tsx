@@ -9,6 +9,7 @@ import {
   Group,
   Label,
   Popover,
+  Separator,
   Text,
   ValidationResult,
   I18nProvider,
@@ -121,6 +122,7 @@ export default function DatePicker<T extends DateValue>({
               {isBrowserLocaleUsed
                 ? formatLabel && <div>{`Format: ${dateFormatPattern}`}</div>
                 : formatLabel && <div>{`Format: yyyy-mm-dd`}</div>}
+              <Separator className="bcds-react-aria-DatePicker--Separator" />
               <div>{description && description}</div>
             </Text>
           )}

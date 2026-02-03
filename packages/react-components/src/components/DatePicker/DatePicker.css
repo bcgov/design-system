@@ -76,6 +76,13 @@
   min-width: var(--icons-size-medium);
   height: var(--icons-size-medium);
 }
+/* Separator */
+.bcds-react-aria-DatePicker--Separator {
+  margin: var(--layout-margin-small) var(--layout-margin-none);
+  height: var(--layout-border-width-small);
+  border: none;
+  background-color: var(--surface-color-border-default);
+}
 
 /* Hover and focus */
 .bcds-react-aria-DatePicker--Group[data-hovered] {
