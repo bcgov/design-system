@@ -1,0 +1,51 @@
+.bcds-react-aria-Loader--container {
+  position: relative;
+  margin: auto;
+}
+
+.bcds-react-aria-Loader {
+  position: relative;
+  margin: auto;
+}
+
+/* Theme */
+.bcds-react-aria-Loader--container.light {
+  .bcds-ProgressCircle-bottom-circle {
+    stroke: var(--theme-gray-30);
+  }
+
+  .bcds-ProgressCircle-top-circle {
+    stroke: var(--theme-primary-blue);
+  }
+
+  .bcds-react-aria-Loader--Label {
+    color: var(--typography-color-secondary);
+  }
+}
+
+.bcds-react-aria-Loader--container.dark {
+  .bcds-ProgressCircle-bottom-circle {
+    stroke:#FFFFFF40;
+  }
+
+  .bcds-ProgressCircle-top-circle {
+    stroke: var(--surface-color-background-white);
+  }
+
+  .bcds-react-aria-Loader--Label {
+    color: var(--typography-color-secondary-invert);
+  }
+}
+
+/* Size */
+.bcds-react-aria-Loader--container.small .bcds-react-aria-Loader--Label {
+  font: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-Loader--container.medium .bcds-react-aria-Loader--Label {
+  font: var(--typography-regular-body);
+}
+
+.bcds-react-aria-Loader--container.large .bcds-react-aria-Loader--Label {
+  font: var(--typography-regular-large-body);
+}

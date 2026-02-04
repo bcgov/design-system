@@ -5,6 +5,7 @@ import ButtonGroupPage from "./ButtonGroup";
 import CalloutPage from "./Callout";
 import CheckboxGroupPage from "./CheckboxGroup";
 import InlineAlertPage from "./InlineAlert";
+import LoaderPage from "./Loader";
 import ModalDialogPage from "./ModalDialog";
 import NumberFieldPage from "./NumberField";
 import RadioGroupPage from "./RadioGroup";
@@ -24,6 +25,7 @@ export {
   CalloutPage,
   CheckboxGroupPage,
   InlineAlertPage,
+  LoaderPage,
   ModalDialogPage,
   NumberFieldPage,
   RadioGroupPage,
