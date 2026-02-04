@@ -60,4 +60,4 @@ There is no cost to use the design system.
 
 ## Support
 
-The design system is maintained by the Online Service Solutions team at Service BC, part of the Ministry of Citizens' Services.
+The design system is maintained by the Corporate Online Services branch at Connected Services BC, part of the Ministry of Citizens' Services.
