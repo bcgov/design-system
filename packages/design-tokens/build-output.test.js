@@ -61,12 +61,20 @@ test("theme.blue.100 should be present in all output files", async () => {
       token: "--bcds-theme-blue-100: #013366;",
     },
     {
+      file: "build/scss/variables.scss",
+      token: "$theme-blue-100: #013366",
+    },
+    {
+      file: "build/scss-prefixed/variables.scss",
+      token: "$bcds-theme-blue-100: #013366",
+    },
+    {
       file: "build/js/index.js",
       token: 'export const themeBlue100 = "#013366";',
     },
     {
       file: "build/js/index.d.ts",
-      token: "export const themeBlue100 : string;",
+      token: "export const themeBlue100: string;",
     },
     {
       file: "build/js-prefixed/index.js",
@@ -74,23 +82,23 @@ test("theme.blue.100 should be present in all output files", async () => {
     },
     {
       file: "build/js-prefixed/index.d.ts",
-      token: "export const bcdsThemeBlue100 : string;",
+      token: "export const bcdsThemeBlue100: string;",
     },
     {
       file: "build/cjs/index.js",
-      token: '"themeBlue100": "#013366"',
+      token: 'themeBlue100: "#013366"',
     },
     {
       file: "build/cjs/index.d.ts",
-      token: "export const themeBlue100 : string;",
+      token: "export const themeBlue100: string;",
     },
     {
       file: "build/cjs-prefixed/index.js",
-      token: '"bcdsThemeBlue100": "#013366"',
+      token: 'bcdsThemeBlue100: "#013366"',
     },
     {
       file: "build/cjs-prefixed/index.d.ts",
-      token: "export const bcdsThemeBlue100 : string;",
+      token: "export const bcdsThemeBlue100: string;",
     },
   ];
 
