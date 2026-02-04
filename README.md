@@ -36,4 +36,4 @@ The component library is currently in active development. New components are add
 
 ## Contact
 
-The B.C. Design System is maintained by the Online Service Solutions team at Service BC, part of the Ministry of Citizens' Services. You can contact the design system team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca), or [open an issue](https://github.com/bcgov/design-system/issues/new/choose).
+The B.C. Design System is maintained by the Corporate Online Services branch at Connected Services BC, part of the Ministry of Citizens' Services. You can contact the design system team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca), or [open an issue](https://github.com/bcgov/design-system/issues/new/choose).
