@@ -1,0 +1,138 @@
+.bcds-react-aria-DatePicker {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface-color-forms-default);
+  /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
+  align-self: stretch;
+  max-width: -moz-available;
+  max-width: -webkit-fill-available;
+}
+.bcds-react-aria-DatePicker--Group {
+  display: inline-flex;
+  flex-direction: row;
+  flex: 1 1 0;
+  align-items: center;
+  box-sizing: border-box;
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  gap: var(--layout-margin-small);
+}
+.bcds-react-aria-DatePicker--Input {
+  display: inline;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  align-items: center;
+  border: none;
+}
+
+/* Sizing */
+.bcds-react-aria-DatePicker.small > .bcds-react-aria-DatePicker--Group {
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
+  height: 32px;
+}
+.bcds-react-aria-DatePicker.small .bcds-react-aria-DatePicker--Input {
+  font: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-DatePicker.medium > .bcds-react-aria-DatePicker--Group {
+  padding: var(--layout-padding-xsmall) 0.75rem;
+  height: 40px;
+}
+.bcds-react-aria-DatePicker.medium .bcds-react-aria-DatePicker--Input {
+  font: var(--typography-regular-body);
+}
+
+/* Label */
+.bcds-react-aria-DatePicker--Label {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-primary);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
+}
+/* Required indicator */
+.bcds-react-aria-DatePicker--Label.required {
+  color: var(--typography-color-secondary);
+  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
+}
+/* Description */
+.bcds-react-aria-DatePicker--Description {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
+}
+/* Error message */
+.bcds-react-aria-DatePicker--Error {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-danger);
+}
+.bcds-react-aria-DatePicker[data-invalid] > .bcds-react-aria-DatePicker--Group {
+  border-color: var(--support-border-color-danger);
+}
+.bcds-react-aria-DatePicker[data-invalid]
+  > .bcds-react-aria-DatePicker--Group
+  > svg {
+  color: var(--icons-color-danger);
+  min-width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
+}
+/* Format helper text */
+.bcds-react-aria-DatePicker--FormatHelpText {
+  unicode-bidi: embed;
+  direction: ltr;
+}
+/* Separator */
+.bcds-react-aria-DatePicker--Separator {
+  margin: var(--layout-margin-small) var(--layout-margin-none);
+  height: var(--layout-border-width-small);
+  border: none;
+  background-color: var(--surface-color-border-default);
+}
+
+/* Hover and focus */
+.bcds-react-aria-DatePicker--Group[data-hovered] {
+  border-color: var(--surface-color-border-dark);
+}
+.bcds-react-aria-DatePicker[data-focus-visible]
+  > .bcds-react-aria-DatePicker--Group {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+}
+.bcds-react-aria-DatePicker[data-focus-visible]
+  > .bcds-react-aria-DatePicker--Group:has(
+    .bcds-react-aria-Button[data-focus-visible]
+  ) {
+  outline: none; /* Hide focus ring when button is focused */
+}
+.bcds-react-aria-DatePicker[data-focus-visible]
+  .bcds-react-aria-DatePicker--Segment {
+  outline: none;
+}
+.bcds-react-aria-DatePicker--Segment[data-focused] {
+  outline: none;
+  border-radius: var(--layout-border-radius-small);
+  background-color: var(--surface-color-primary-default);
+  color: var(--typography-color-primary-invert);
+  padding: var(--layout-padding-hair);
+  margin: var(--layout-margin-none) var(--layout-margin-hair);
+}
+.bcds-react-aria-DatePicker > .bcds-react-aria-Button[data-focused] {
+  outline: none;
+}
+
+/* Disabled and read-only */
+.bcds-react-aria-DatePicker[data-readonly]
+  > .bcds-react-aria-DatePicker--Group {
+  cursor: not-allowed;
+}
+.bcds-react-aria-DatePicker--Segment[data-readonly][data-focused] {
+  background-color: var(--surface-color-forms-disabled);
+  color: var(--typography-color-primary);
+}
+.bcds-react-aria-DatePicker[data-disabled]
+  > .bcds-react-aria-DatePicker--Group {
+  background-color: var(--surface-color-forms-disabled);
+  color: var(--typography-color-disabled);
+  cursor: not-allowed;
+}

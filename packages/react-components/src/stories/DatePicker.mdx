@@ -1,0 +1,118 @@
+{/* DatePicker.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import * as DatePickerStories from "./DatePicker.stories";
+
+<Meta of={DatePickerStories} />
+
+# Date picker
+
+<Subtitle>
+  A date picker enables the user to enter a date by typing or selecting from a
+  calendar.
+</Subtitle>
+
+## Usage and resources
+
+<Source
+  code={`import { DatePicker } from "@bcgov/design-system-react-components"; `}
+  language="typescript"
+/>
+
+A date picker combines an input field, a button and a calendar. The user can enter a date or datetime value via:
+
+- Keyboard (typing or incrementing each date segment's value)
+- Selecting a date from a calendar inside a popover
+
+Learn more about working with the date picker component:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=F100A665C5CC4DCAB1617E82AD36E090)
+- [View the date picker component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+### Values and validation
+
+You can read or set a date picker's value using the `value` (controlled) or `defaultValue` (uncontrolled) props. This component uses objects from [the @internationalized/date package](https://react-aria.adobe.com/internationalized/date/).
+
+Default and custom data validation support is built in. Consult the React Aria documentation to learn [how to handle and validate a date picker's value](https://react-aria.adobe.com/DatePicker#forms). You can also use a date picker within a [Form](/docs/utility-forms-form--docs).
+
+## Controls
+
+<Primary of={DatePickerStories} />
+<Controls of={DatePickerStories.DatePickerTemplate} />
+
+## Configuration
+
+### Formatting
+
+By default, a date picker renders inside an `<I18nProvider>` element that sets its locale to `en-CA`. Use the `isBrowserLocaleUsed` prop to override this behaviour, and allow the date picker to set its date format automatically, based on the user's browser locale.
+
+The `formatLabel` prop toggles the display of automatically-generated helper text that tells the user what date format is expected.
+
+You can further adjust formatting using the `granularity`, `hourCycle`, `hideTimeZone` and `shouldForceLeadingZeros` props:
+
+<Canvas of={DatePickerStories.CustomFormatting} />
+<Controls
+  of={DatePickerStories.CustomFormatting}
+  include={[
+    "granularity",
+    "hourCycle",
+    "hideTimeZone",
+    "shouldForceLeadingZeros",
+  ]}
+/>
+
+### Constraining values
+
+Set a `minValue` and/or `maxValue` to limit the range of accepted selections:
+
+<Canvas of={DatePickerStories.ConstrainedRange} />
+
+Pass a callback function via `isDateUnavailable` to programmatically disable certain dates. For example, you can accept only weekday values:
+
+<Canvas of={DatePickerStories.WeekdayOnly} />
+
+#### Granularity
+
+Use the `granularity` prop to let the user enter either a date or a date/time:
+
+<Canvas of={DatePickerStories.DateAndTime} />
+
+### Size
+
+The `size` prop enables you to choose between medium (default) and small (reduced height) versions:
+
+<Canvas of={DatePickerStories.DatePickerTemplate} />
+<Canvas of={DatePickerStories.SmallDatePicker} />
+
+### Calendar picker
+
+Pass `isCalendarDisabled` to disable the calendar button and popover:
+
+<Canvas of={DatePickerStories.NoPicker} />
+
+### States
+
+By default, input fields are marked as optional. Use the `isRequired` prop to mark an input as required, and display a text label:
+
+<Canvas of={DatePickerStories.RequiredDatePicker} />
+
+Use `isDisabled` to disable a date picker. A disabled input cannot be focused or interacted with:
+
+<Canvas of={DatePickerStories.Disabled} />
+
+Use `isReadOnly` to lock a field to its current value. A read-only input can be focused and copied, but cannot be edited:
+
+<Canvas of={DatePickerStories.ReadOnly} />
+
+The `isInvalid` prop should be set programmatically when an input is invalid. It renders an error icon in the input field, changes the border colour and displays an `errorMessage` (using the [FieldError subcomponent](https://react-spectrum.adobe.com/react-aria/TextField.html#validation)):
+
+<Canvas of={DatePickerStories.Invalid} />
