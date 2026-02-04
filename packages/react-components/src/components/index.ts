@@ -53,3 +53,4 @@ export { default as ToggleButtonGroup } from "./ToggleButtonGroup";
 export { default as Switch } from "./Switch";
 export { default as Tooltip, TooltipTrigger } from "./Tooltip";
 export { default as NumberField } from "./NumberField";
+export { default as TimeField} from "./TimeField";
