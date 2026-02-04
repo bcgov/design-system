@@ -10,6 +10,13 @@ import {
   Subtitle,
 } from "@storybook/addon-docs/blocks";
 
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
 import * as DatePickerStories from "./DatePicker.stories";
 
 <Meta of={DatePickerStories} />
@@ -20,6 +27,35 @@ import * as DatePickerStories from "./DatePicker.stories";
   A date picker enables the user to enter a date by typing or selecting from a
   calendar.
 </Subtitle>
+
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA DatePicker and Calendar components. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/Calendar"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      Calendar docs
+    </Link>,
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/DatePicker"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      DatePicker docs
+    </Link>,
+  ]}
+/>
 
 ## Usage and resources
 
