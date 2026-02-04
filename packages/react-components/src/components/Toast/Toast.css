@@ -1,0 +1,63 @@
+
+/* Fixed overlay (already correct) */
+.bcds-toaster-viewport {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+/* Toast card */
+.bcds-Toast {
+  pointer-events: auto;
+
+  min-width: 280px;
+  max-width: 420px;
+
+  background-color: #ffffff;
+  color: #242424;
+
+  border-radius: 8px;
+  padding: 12px 16px;
+
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 8px 24px rgba(0, 0, 0, 0.18);
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.bcds-Toast__content {
+  flex: 1;
+}
+
+.bcds-Toast__title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.bcds-Toast__message {
+  display: block;
+}
+
+/* Variants */
+.bcds-Toast--success {
+  border-left: 4px solid #1a7f37;
+}
+
+.bcds-Toast--error {
+  border-left: 4px solid #b00020;
+}
+
+.bcds-Toast--progress,
+.bcds-Toast--info {
+  border-left: 4px solid #1473e6;
+}
