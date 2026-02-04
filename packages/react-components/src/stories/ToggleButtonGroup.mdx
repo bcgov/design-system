@@ -10,6 +10,13 @@ import {
   Subtitle,
 } from "@storybook/addon-docs/blocks";
 
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
 import * as ToggleButtonGroupStories from "./ToggleButtonGroup.stories";
 import * as ToggleButtonStories from "./ToggleButton.stories";
 
@@ -21,6 +28,35 @@ import * as ToggleButtonStories from "./ToggleButton.stories";
   A toggle button sets a setting on or off, and can be used to switch between
   different modes or states.
 </Subtitle>
+
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA ToggleButton and ToggleButtonGroup components. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/ToggleButton"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      ToggleButton docs
+    </Link>,
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/ToggleButtonGroup"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      ToggleButtonGroup docs
+    </Link>,
+  ]}
+/>
 
 <Source
   code={`import { ToggleButton, ToggleButtonGroup } from "@bcgov/design-system-react-components";`}
