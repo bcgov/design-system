@@ -12,6 +12,11 @@ This is a patch release that fixes a bug in the DatePicker component.
 
 - DatePicker: format helper text now properly shows the default (`en-CA`) format, unless the component is explicitly configured to use the browser locale
 
+This release uses:
+
+- `react-aria-components` v1.14.0
+- `@bcgov/design-tokens` v3.2.0
+
 ## 0.6.0
 
 This is a milestone release that adds four new components, and includes enhancements to existing components.
