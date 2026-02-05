@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.6.1
+
+This is a patch release that fixes a bug in the DatePicker component.
+
+### Added
+
+- DatePicker: added test suite
+
+### Changed
+
+- DatePicker: format helper text now properly shows the default (`en-CA`) format, unless the component is explicitly configured to use the browser locale
+
 ## 0.6.0
 
 This is a milestone release that adds four new components, and includes enhancements to existing components.
