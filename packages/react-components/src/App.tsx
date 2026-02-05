@@ -12,6 +12,7 @@ import {
   ButtonGroupPage,
   CalloutPage,
   CheckboxGroupPage,
+  DatePickerPage,
   InlineAlertPage,
   ModalDialogPage,
   NumberFieldPage,
@@ -79,7 +80,7 @@ function App() {
           <a href="/#accessibility">Accessibility Statement</a>,
         ]}
       >
-        <div className="row">
+        <div className="menu">
           {isMedium ? (
             <ul>
               <li>Link</li>
@@ -120,6 +121,7 @@ function App() {
         <TooltipPage />
         <TextAreaPage />
         <TextFieldPage />
+        <DatePickerPage />
         <NumberFieldPage />
         <TextPage />
       </main>
