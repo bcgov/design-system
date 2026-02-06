@@ -28,6 +28,16 @@ const meta = {
       control: "number",
       description: "Set the current value of the progress bar (0-100)",
     },
+    minValue: {
+      control: "number",
+      description: "Set the minimum value of the progress bar",
+      table: { defaultValue: { summary: "0" } },
+    },
+    maxValue: {
+      control: "number",
+      description: "Set the maximum value of the progress bar",
+      table: { defaultValue: { summary: "100" } },
+    },
   },
 } satisfies Meta<typeof ProgressBar>;
 
@@ -40,6 +50,8 @@ export const ProgressBarTemplate: Story = {
     size: "medium",
     isIndeterminate: false,
     value: 50,
+    minValue: 0,
+    maxValue: 100,
   },
   render: ({ ...args }) => <ProgressBar {...args} />,
 };

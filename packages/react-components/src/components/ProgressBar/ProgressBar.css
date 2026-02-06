@@ -24,15 +24,27 @@
 /* Progress bar */
 .bcds-react-aria-ProgressBar--Track {
   grid-area: bar;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 0;
   background-color: var(--surface-color-border-default);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
 }
 
 .bcds-react-aria-ProgressBar--Fill {
-  grid-area: bar;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
   background: var(--surface-color-primary-default);
   border-radius: inherit;
+  width: 100%;
+  transform-origin: left;
+  transform: scaleX(var(--percentage));
+  transition: transform 200ms linear;
 
   @media (prefers-reduced-motion: reduce) {
     animation: none;
@@ -47,14 +59,14 @@
 
 /* Sizing */
 .bcds-react-aria-ProgressBar--Track.small {
-  padding: var(--layout-padding-none);
+  height: var(--layout-padding-hair);
   border-radius: var(--layout-border-radius-small);
 }
 .bcds-react-aria-ProgressBar--Track.medium {
-  padding: var(--layout-padding-hair) var(--layout-padding-none);
+  height: var(--layout-padding-xsmall);
   border-radius: var(--layout-border-radius-small);
 }
 .bcds-react-aria-ProgressBar--Track.large {
-  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
+  height: var(--layout-padding-small);
   border-radius: var(--layout-border-radius-medium);
 }
