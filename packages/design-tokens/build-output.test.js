@@ -19,7 +19,7 @@ test("build-output.js should complete without errors", async () => {
           }
           console.log("build-output.js executed successfully:", stdout);
           resolve();
-        }
+        },
       );
     });
     assert.ok(true);
@@ -64,7 +64,7 @@ test("theme.blue.100 should be present in all output files", async () => {
     },
     {
       file: "build/js/index.d.ts",
-      token: "export const themeBlue100 : string;",
+      token: "export const themeBlue100: string;",
     },
     {
       file: "build/js-prefixed/index.js",
@@ -72,23 +72,23 @@ test("theme.blue.100 should be present in all output files", async () => {
     },
     {
       file: "build/js-prefixed/index.d.ts",
-      token: "export const bcdsThemeBlue100 : string;",
+      token: "export const bcdsThemeBlue100: string;",
     },
     {
       file: "build/cjs/index.js",
-      token: '"themeBlue100": "#013366"',
+      token: 'themeBlue100: "#013366"',
     },
     {
       file: "build/cjs/index.d.ts",
-      token: "export const themeBlue100 : string;",
+      token: "export const themeBlue100: string;",
     },
     {
       file: "build/cjs-prefixed/index.js",
-      token: '"bcdsThemeBlue100": "#013366"',
+      token: 'bcdsThemeBlue100: "#013366"',
     },
     {
       file: "build/cjs-prefixed/index.d.ts",
-      token: "export const bcdsThemeBlue100 : string;",
+      token: "export const bcdsThemeBlue100: string;",
     },
   ];
 
@@ -97,7 +97,7 @@ test("theme.blue.100 should be present in all output files", async () => {
     const fileContent = readFileSync(filePath, "utf-8");
     assert.ok(
       fileContent.includes(token),
-      `Expected token "${token}" to be present in file ${file}`
+      `Expected token "${token}" to be present in file ${file}`,
     );
   }
 });
