@@ -1,29 +1,25 @@
 .bcds-react-aria-ProgressBar {
-  display: grid;
-  grid-template-areas:
-    "label value"
-    "bar bar";
-  grid-template-columns: 1fr auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-padding-xsmall);
+  min-width: 200px;
 }
 
 /* Label */
 .bcds-react-aria-ProgressBar--Label {
-  grid-area: label;
-  justify-self: start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   font: var(--typography-regular-small-body);
   color: var(--typography-color-primary);
-  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
 
 .bcds-react-aria-ProgressBar--Value {
-  grid-area: value;
-  justify-self: end;
   color: var(--typography-color-secondary);
 }
 
 /* Progress bar */
 .bcds-react-aria-ProgressBar--Track {
-  grid-area: bar;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;

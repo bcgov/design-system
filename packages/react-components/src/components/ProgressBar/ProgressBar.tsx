@@ -22,18 +22,21 @@ export default function ProgressBar({
     <ReactAriaProgressBar className={`bcds-react-aria-ProgressBar`} {...props}>
       {({ percentage, valueText, isIndeterminate }) => (
         <>
-          <div className="bcds-react-aria-ProgressBar--Label">
-            <Label>{label}</Label>
-            {!isIndeterminate && (
-              <span className="bcds-react-aria-ProgressBar--Value">
-                {valueText}
-              </span>
-            )}
-          </div>
+          {label && (
+            <>
+              <div className="bcds-react-aria-ProgressBar--Label">
+                <Label>{label}</Label>
+                {!isIndeterminate && (
+                  <span className="bcds-react-aria-ProgressBar--Value">
+                    {valueText}
+                  </span>
+                )}
+              </div>
+            </>
+          )}
           <div className={`bcds-react-aria-ProgressBar--Track ${size}`}>
             <div
               className="bcds-react-aria-ProgressBar--Fill"
-              /* Write percentage to CSS variable */
               style={
                 {
                   "--percentage": (isIndeterminate ? 100 : percentage) + "%",
