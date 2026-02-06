@@ -20,6 +20,7 @@ export { default as InlineAlert } from "./InlineAlert";
 export { default as Loader } from "./Loader";
 export { default as Link } from "./Link";
 export { default as Modal } from "./Modal";
+export { default as ProgressBar } from "./ProgressBar";
 export { default as Radio } from "./Radio";
 export { default as RadioGroup } from "./RadioGroup";
 export { default as Select } from "./Select";
