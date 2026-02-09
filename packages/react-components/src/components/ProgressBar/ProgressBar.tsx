@@ -70,7 +70,7 @@ export default function ProgressBar({
                 className="bcds-react-aria-ProgressBar--Fill"
                 style={
                   {
-                    "--percentage": (isIndeterminate ? 100 : percentage) + "%",
+                    "--percentage": percentage + "%",
                   } as React.CSSProperties
                 }
               />

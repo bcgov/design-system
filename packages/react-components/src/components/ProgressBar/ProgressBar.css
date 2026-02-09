@@ -60,6 +60,23 @@
 .bcds-react-aria-ProgressBar:not([aria-valuenow])
   .bcds-react-aria-ProgressBar--Fill {
   background-color: var(--surface-color-primary-default);
+  transform: scaleX(1);
+  animation: indeterminate-bar 1s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+@keyframes indeterminate-bar {
+  0% {
+    transform: translateX(-100%) scaleX(0.4);
+  }
+  50% {
+    transform: translateX(0%) scaleX(0.4);
+  }
+  100% {
+    transform: translateX(100%) scaleX(0.4);
+  }
 }
 
 /* Progress circle */
@@ -113,4 +130,5 @@ svg.bcds-react-aria-ProgressCircle.large {
   stroke-linecap: round;
   rotate: -90deg;
   transform-origin: center center;
+  transition: 200ms linear;
 }
