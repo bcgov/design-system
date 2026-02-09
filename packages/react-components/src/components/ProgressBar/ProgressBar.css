@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   gap: var(--layout-padding-xsmall);
-  min-width: 200px;
 }
 
 /* Label */
 .bcds-react-aria-ProgressBar--Label {
   display: flex;
   flex-direction: row;
+  gap: var(--layout-margin-medium);
   justify-content: space-between;
   font: var(--typography-regular-small-body);
   color: var(--typography-color-primary);
@@ -19,6 +19,18 @@
 }
 
 /* Progress bar */
+.bcds-react-aria-ProgressBar--Track.small {
+  height: var(--layout-padding-hair);
+  border-radius: var(--layout-border-radius-small);
+}
+.bcds-react-aria-ProgressBar--Track.medium {
+  height: var(--layout-padding-xsmall);
+  border-radius: var(--layout-border-radius-small);
+}
+.bcds-react-aria-ProgressBar--Track.large {
+  height: var(--layout-padding-small);
+  border-radius: var(--layout-border-radius-medium);
+}
 .bcds-react-aria-ProgressBar--Track {
   position: relative;
   overflow: hidden;
@@ -28,7 +40,6 @@
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
 }
-
 .bcds-react-aria-ProgressBar--Fill {
   position: absolute;
   top: 0;
@@ -46,23 +57,60 @@
     animation: none;
   }
 }
-
-/* Indeterminate */
 .bcds-react-aria-ProgressBar:not([aria-valuenow])
   .bcds-react-aria-ProgressBar--Fill {
   background-color: var(--surface-color-primary-default);
 }
 
-/* Sizing */
-.bcds-react-aria-ProgressBar--Track.small {
-  height: var(--layout-padding-hair);
-  border-radius: var(--layout-border-radius-small);
+/* Progress circle */
+.bcds-react-aria-ProgressCircle {
+  display: flex;
+  align-self: center;
+  fill: none;
+  width: 100%;
+  height: 100%;
 }
-.bcds-react-aria-ProgressBar--Track.medium {
-  height: var(--layout-padding-xsmall);
-  border-radius: var(--layout-border-radius-small);
+svg.bcds-react-aria-ProgressCircle.small {
+  width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
+  stroke-width: var(--layout-border-width-small);
+
+  .bcds-react-aria-ProgressCircle--Bottom,
+  .bcds-react-aria-ProgressCircle--Top {
+    r: calc(50% - var(--layout-border-width-small) / 2);
+  }
 }
-.bcds-react-aria-ProgressBar--Track.large {
-  height: var(--layout-padding-small);
-  border-radius: var(--layout-border-radius-medium);
+svg.bcds-react-aria-ProgressCircle.medium {
+  width: var(--icons-size-large);
+  height: var(--icons-size-large);
+  stroke-width: var(--layout-border-width-medium);
+
+  .bcds-react-aria-ProgressCircle--Bottom,
+  .bcds-react-aria-ProgressCircle--Top {
+    r: calc(50% - var(--layout-border-width-medium) / 2);
+  }
+}
+svg.bcds-react-aria-ProgressCircle.large {
+  width: var(--icons-size-xlarge);
+  height: var(--icons-size-xlarge);
+  stroke-width: var(--layout-border-width-large);
+
+  .bcds-react-aria-ProgressCircle--Bottom,
+  .bcds-react-aria-ProgressCircle--Top {
+    r: calc(50% - var(--layout-border-width-large) / 2);
+  }
+}
+.bcds-react-aria-ProgressCircle--Bottom {
+  cx: 50%;
+  cy: 50%;
+  stroke: var(--theme-gray-30);
+}
+.bcds-react-aria-ProgressCircle--Top {
+  cx: 50%;
+  cy: 50%;
+  stroke: var(--theme-primary-blue);
+  stroke-dasharray: 100 200;
+  stroke-linecap: round;
+  rotate: -90deg;
+  transform-origin: center center;
 }

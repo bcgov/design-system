@@ -9,6 +9,12 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
+    format: {
+      control: "radio",
+      options: ["bar", "circle"],
+      description: "Progress bar format",
+      table: { defaultValue: { summary: "bar" } },
+    },
     label: {
       control: "text",
       description: "Label text displayed above the progress bar",
@@ -46,6 +52,7 @@ type Story = StoryObj<typeof meta>;
 
 export const ProgressBarTemplate: Story = {
   args: {
+    format: "bar",
     label: "Loading...",
     size: "medium",
     isIndeterminate: false,
