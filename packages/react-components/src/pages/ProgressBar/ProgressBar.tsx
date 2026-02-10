@@ -7,19 +7,34 @@ export default function ProgressBarPage() {
       <h3>Bar</h3>
       <div className="row">
         <div className="col">
-          <ProgressBar format="bar" size="small" label="Small" value={25} />
+          <ProgressBar
+            format="bar"
+            size="small"
+            valueLabel="Small"
+            value={25}
+          />
         </div>
         <div className="col">
-          <ProgressBar format="bar" size="medium" label="Medium" value={50} />
-        </div>
-        <div className="col">
-          <ProgressBar format="bar" size="large" label="Large" value={75} />
+          <ProgressBar
+            format="bar"
+            size="medium"
+            valueLabel="Medium"
+            value={50}
+          />
         </div>
         <div className="col">
           <ProgressBar
             format="bar"
             size="large"
-            label="Indeterminate"
+            valueLabel="Large"
+            value={75}
+          />
+        </div>
+        <div className="col">
+          <ProgressBar
+            format="bar"
+            size="large"
+            valueLabel="Indeterminate"
             isIndeterminate
           />
         </div>
@@ -27,24 +42,34 @@ export default function ProgressBarPage() {
       <h3>Circle</h3>
       <div className="row">
         <div className="col">
-          <ProgressBar format="circle" size="small" label="Small" value={25} />
+          <ProgressBar
+            format="circle"
+            size="small"
+            valueLabel="Small"
+            value={25}
+          />
         </div>
         <div className="col">
           <ProgressBar
             format="circle"
             size="medium"
-            label="Medium"
+            valueLabel="Medium"
             value={50}
           />
-        </div>
-        <div className="col">
-          <ProgressBar format="circle" size="large" label="Large" value={75} />
         </div>
         <div className="col">
           <ProgressBar
             format="circle"
             size="large"
-            label="Indeterminate"
+            valueLabel="Large"
+            value={75}
+          />
+        </div>
+        <div className="col">
+          <ProgressBar
+            format="circle"
+            size="large"
+            valueLabel="Indeterminate"
             isIndeterminate
           />
         </div>

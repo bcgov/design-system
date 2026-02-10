@@ -1,0 +1,66 @@
+{/* ProgressBar.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
+import * as ProgressBarStories from "./ProgressBar.stories";
+
+<Meta of={ProgressBarStories} />
+
+# ProgressBar
+
+<Subtitle>TKTK</Subtitle>
+
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA ProgressBar component. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/ProgressBar"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      ProgressBar docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
+<Source
+  code={`import { ProgressBar } from "@bcgov/design-system-react-components"; `}
+  language="typescript"
+/>
+
+Learn more about working with the ProgressBar component:
+
+- [Usage and best practice guidance](#)
+- [View the radio group component in Figma](#)
+
+## Controls
+
+<Primary of={ProgressBarStories} />
+<Controls of={ProgressBarStories.ProgressBarTemplate} />
+
+## Configuration
+
+TKTK

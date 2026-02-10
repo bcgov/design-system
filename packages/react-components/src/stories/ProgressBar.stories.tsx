@@ -15,24 +15,19 @@ const meta = {
       description: "Progress bar format",
       table: { defaultValue: { summary: "bar" } },
     },
-    label: {
-      control: "text",
-      description: "Label text displayed above the progress bar",
-    },
     size: {
       control: "radio",
       options: ["small", "medium", "large"],
       description: "Set the size of the progress bar",
       table: { defaultValue: { summary: "medium" } },
     },
-    isIndeterminate: {
-      control: "boolean",
-      description: "Set the progress bar to indeterminate mode",
-      table: { defaultValue: { summary: "false" } },
+    valueLabel: {
+      control: "text",
+      description: "Label text displayed above the progress bar",
     },
     value: {
       control: "number",
-      description: "Set the current value of the progress bar (0-100)",
+      description: "The current value (controlled)",
     },
     minValue: {
       control: "number",
@@ -44,6 +39,15 @@ const meta = {
       description: "Set the maximum value of the progress bar",
       table: { defaultValue: { summary: "100" } },
     },
+    formatOptions: {
+      control: "object",
+      description: "Custom format (`Intl.NumberFormatOptions`)",
+    },
+    isIndeterminate: {
+      control: "boolean",
+      description: "Set the progress bar to indeterminate mode",
+      table: { defaultValue: { summary: "false" } },
+    },
   },
 } satisfies Meta<typeof ProgressBar>;
 
@@ -53,7 +57,7 @@ type Story = StoryObj<typeof meta>;
 export const ProgressBarTemplate: Story = {
   args: {
     format: "bar",
-    label: "Loading...",
+    valueLabel: "Loading...",
     size: "medium",
     isIndeterminate: false,
     value: 50,
@@ -61,4 +65,43 @@ export const ProgressBarTemplate: Story = {
     maxValue: 100,
   },
   render: ({ ...args }) => <ProgressBar {...args} />,
+};
+
+export const SmallProgressBar: Story = {
+  args: {
+    ...ProgressBarTemplate.args,
+    size: "small",
+  },
+};
+
+export const LargeProgressBar: Story = {
+  args: {
+    ...ProgressBarTemplate.args,
+    size: "large",
+  },
+};
+
+export const ProgressCircle: Story = {
+  args: {
+    ...ProgressBarTemplate.args,
+    format: "circle",
+    valueLabel: "Loading...",
+  },
+};
+
+export const IndeterminateProgressBar: Story = {
+  args: {
+    ...ProgressBarTemplate.args,
+    isIndeterminate: true,
+    valueLabel: "Loading...",
+  },
+};
+
+export const IndeterminateProgressCircle: Story = {
+  args: {
+    ...ProgressBarTemplate.args,
+    format: "circle",
+    isIndeterminate: true,
+    valueLabel: "Loading...",
+  },
 };

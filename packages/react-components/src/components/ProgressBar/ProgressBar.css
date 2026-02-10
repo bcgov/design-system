@@ -14,7 +14,8 @@
   justify-content: space-between;
 }
 
-.bcds-react-aria-ProgressBar--Value {
+.bcds-react-aria-ProgressBar--Value,
+.bcds-react-aria-ProgressCircle--Value {
   color: var(--typography-color-secondary);
 }
 
@@ -100,8 +101,8 @@ svg.bcds-react-aria-ProgressCircle.small {
   height: var(--icons-size-medium);
   stroke-width: var(--layout-border-width-medium);
 
-  .bcds-react-aria-ProgressCircle--Bottom,
-  .bcds-react-aria-ProgressCircle--Top {
+  circle.bcds-react-aria-ProgressCircle--Bottom,
+  circle.bcds-react-aria-ProgressCircle--Top {
     r: calc(50% - var(--layout-border-width-medium) / 2);
   }
 }
@@ -110,8 +111,8 @@ svg.bcds-react-aria-ProgressCircle.medium {
   height: var(--icons-size-large);
   stroke-width: var(--layout-border-width-medium);
 
-  .bcds-react-aria-ProgressCircle--Bottom,
-  .bcds-react-aria-ProgressCircle--Top {
+  circle.bcds-react-aria-ProgressCircle--Bottom,
+  circle.bcds-react-aria-ProgressCircle--Top {
     r: calc(50% - var(--layout-border-width-medium) / 2);
   }
 }
@@ -120,8 +121,8 @@ svg.bcds-react-aria-ProgressCircle.large {
   height: var(--icons-size-xlarge);
   stroke-width: var(--layout-border-width-large);
 
-  .bcds-react-aria-ProgressCircle--Bottom,
-  .bcds-react-aria-ProgressCircle--Top {
+  circle.bcds-react-aria-ProgressCircle--Bottom,
+  circle.bcds-react-aria-ProgressCircle--Top {
     r: calc(50% - var(--layout-border-width-large) / 2);
   }
 }

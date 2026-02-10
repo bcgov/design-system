@@ -11,14 +11,12 @@ export interface ProgressBarProps extends ReactAriaProgressBarProps {
   format?: "bar" | "circle";
   /* Set the size of the progress bar */
   size?: "small" | "medium" | "large";
-  /* Label text */
-  label?: string;
 }
 
 export default function ProgressBar({
   size = "medium",
   format = "bar",
-  label,
+  valueLabel,
   ...props
 }: ProgressBarProps) {
   const viewBoxSize = { small: 20, medium: 24, large: 32 }[size];
@@ -52,11 +50,11 @@ export default function ProgressBar({
                   )}
                 </circle>
               </svg>
-              {label && (
+              {valueLabel && (
                 <div className="bcds-react-aria-ProgressCircle--Label">
-                  <Label>{label}</Label>
+                  <Label>{valueLabel}</Label>
                   {!isIndeterminate && (
-                    <span className="bcds-react-aria-ProgressBar--Value">
+                    <span className="bcds-react-aria-ProgressCircle--Value">
                       {valueText}
                     </span>
                   )}
@@ -66,9 +64,9 @@ export default function ProgressBar({
           )}
           {format === "bar" && (
             <>
-              {label && (
+              {valueLabel && (
                 <div className="bcds-react-aria-ProgressBar--Label">
-                  <Label>{label}</Label>
+                  <Label>{valueLabel}</Label>
                   {!isIndeterminate && (
                     <span className="bcds-react-aria-ProgressBar--Value">
                       {valueText}
