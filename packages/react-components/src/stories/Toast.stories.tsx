@@ -1,4 +1,3 @@
-
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Button } from "../components";
@@ -9,7 +8,7 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  
+
   decorators: [
     (Story) => (
       <ToasterProvider>
@@ -23,7 +22,6 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-
 
 // Playground / Primary
 function ToastPlayground() {
@@ -47,7 +45,7 @@ function ToastPlayground() {
         onPress={() =>
           toast.add({
             message: "Unable to upload document",
-            variant: "error",
+            variant: "danger",
           })
         }
       >
@@ -118,7 +116,7 @@ function ErrorToastDemo() {
       onPress={() =>
         toast.add({
           message: "Something went wrong. Please try again.",
-          variant: "error",
+          variant: "danger",
         })
       }
     >

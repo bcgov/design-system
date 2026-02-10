@@ -1,4 +1,3 @@
-
 /* Fixed overlay (already correct) */
 .bcds-toaster-viewport {
   position: fixed;
@@ -8,56 +7,120 @@
 
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--layout-margin-small);
   pointer-events: none;
 }
 
 /* Toast card */
-.bcds-Toast {
+.bcds-react-aria-Toast {
+  display: flex;
+  flex: 1 0 0;
+  align-items: flex-start;
+  gap: var(--layout-margin-small);
+  padding: var(--layout-padding-medium);
+  box-shadow: var(--surface-shadow-small);
+  border: none;
+  border-radius: var(--layout-border-radius-medium)
+    var(--layout-border-radius-none) var(--layout-border-radius-none)
+    var(--layout-border-radius-medium);
   pointer-events: auto;
-
   min-width: 280px;
   max-width: 420px;
-
-  background-color: #ffffff;
-  color: #242424;
-
-  border-radius: 8px;
-  padding: 12px 16px;
-
-  box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.12),
-    0 8px 24px rgba(0, 0, 0, 0.18);
-
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
+  background-color: var(--surface-color-background-white);
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-primary);
 }
 
-.bcds-Toast__content {
+.bcds-react-aria-Toast--Container {
   flex: 1;
+  gap: var(--layout-margin-small);
 }
 
-.bcds-Toast__title {
+.bcds-react-aria-Toast--Title {
   display: block;
-  font-weight: 600;
-  margin-bottom: 2px;
+  font: var(--typography-bold-small-body);
 }
 
-.bcds-Toast__message {
+.bcds-react-aria-Toast--Message {
   display: block;
 }
 
 /* Variants */
-.bcds-Toast--success {
-  border-left: 4px solid #1a7f37;
+.bcds-react-aria-Toast.progress,
+.bcds-react-aria-Toast.info {
+  border-left: var(--layout-border-width-large) solid
+    var(--support-border-color-info);
+
+  .bcds-react-aria-Toast--Icon {
+    color: var(--support-border-color-info);
+  }
 }
 
-.bcds-Toast--error {
-  border-left: 4px solid #b00020;
+.bcds-react-aria-Toast.success {
+  border-left: var(--layout-border-width-large) solid
+    var(--support-border-color-success);
+
+  .bcds-react-aria-Toast--Icon {
+    color: var(--icons-color-success);
+  }
 }
 
-.bcds-Toast--progress,
-.bcds-Toast--info {
-  border-left: 4px solid #1473e6;
+.bcds-react-aria-Toast.warning {
+  border-left: var(--layout-border-width-large) solid
+    var(--support-border-color-warning);
+
+  .bcds-react-aria-Toast--Icon {
+    color: var(--icons-color-warning);
+  }
+}
+
+.bcds-react-aria-Toast.danger {
+  border-left: var(--layout-border-width-large) solid
+    var(--support-border-color-danger);
+
+  .bcds-react-aria-Toast--Icon {
+    color: var(--icons-color-danger);
+  }
+}
+
+/* Icons */
+.bcds-react-aria-Toast--Icon {
+  display: inline-flex;
+  align-self: flex-start;
+}
+
+.bcds-react-aria-Toast--Icon > svg {
+  min-width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
+}
+
+/* Close button */
+.bcds-react-aria-Toast.closeable {
+  /*
+    Because the close icon button is removed from the document flow, we
+    manually adjust the padding to push the `--container` element off the right
+    edge of the InlineAlert.
+  */
+  padding: var(--layout-padding-medium) 52px var(--layout-padding-medium)
+    var(--layout-padding-large);
+}
+
+.bcds-react-aria-Toast--closeIcon {
+  align-self: first baseline;
+  color: var(--icons-color-primary);
+  position: relative;
+}
+
+.bcds-react-aria-Toast--closeIcon > button {
+  position: absolute;
+  /*
+    Centers the button vertically.
+    Button height (32px) minus line-height of text (27px) divided by 2.
+  */
+  top: -2.5px;
+}
+
+.bcds-react-aria-Toast--closeIcon > svg {
+  min-width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
 }

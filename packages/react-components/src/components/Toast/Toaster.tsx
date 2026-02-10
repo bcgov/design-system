@@ -8,7 +8,7 @@ type ToastContent = {
   title?: string;
   message: string;
   variant?: ToastVariant;
-  dismissible?: boolean;
+  isDismissable?: boolean;
 };
 
 interface ToastContextValue {
@@ -20,7 +20,8 @@ const ToastContext = createContext<ToastContextValue | null>(null);
 
 export function useToastQueue() {
   const ctx = useContext(ToastContext);
-  if (!ctx) throw new Error("useToastQueue must be used inside <ToasterProvider />");
+  if (!ctx)
+    throw new Error("useToastQueue must be used inside <ToasterProvider />");
   return ctx;
 }
 
@@ -33,7 +34,7 @@ type TimerEntry = {
 
 export function ToasterProvider({ children }: { children: React.ReactNode }) {
   const state = useToastState<ToastContent>({
-    maxVisibleToasts: 3
+    maxVisibleToasts: 3,
   });
 
   const regionRef = useRef<HTMLDivElement | null>(null);
@@ -63,7 +64,7 @@ export function ToasterProvider({ children }: { children: React.ReactNode }) {
       timerId,
       dueAt,
       remaining: ms,
-      paused: false
+      paused: false,
     });
   };
 
@@ -78,7 +79,7 @@ export function ToasterProvider({ children }: { children: React.ReactNode }) {
       ...entry,
       remaining,
       paused: true,
-      dueAt: Date.now() + remaining
+      dueAt: Date.now() + remaining,
     });
   };
 
@@ -92,23 +93,24 @@ export function ToasterProvider({ children }: { children: React.ReactNode }) {
   const add = (toast: ToastContent, opts?: { timeout?: number }) => {
     const {
       variant = "info",
-      dismissible = variant !== "progress",
+      isDismissable = variant !== "progress",
       ...content
     } = toast;
 
     const DEFAULT_TIMEOUTS: Record<ToastVariant, number> = {
       success: 5000,
       info: 5000,
-      error: 6000,
-      progress: 0
+      warning: 6000,
+      danger: 6000,
+      progress: 0,
     };
 
     const timeout =
       variant === "progress"
         ? Infinity
-        : opts?.timeout ?? DEFAULT_TIMEOUTS[variant];
+        : (opts?.timeout ?? DEFAULT_TIMEOUTS[variant]);
 
-    const key = state.add({ ...content, variant, dismissible });
+    const key = state.add({ ...content, variant, isDismissable });
 
     scheduleClose(key, timeout);
     return key;
@@ -120,7 +122,7 @@ export function ToasterProvider({ children }: { children: React.ReactNode }) {
   };
 
   useEffect(() => {
-    const visible = new Set(state.visibleToasts.map(t => t.key));
+    const visible = new Set(state.visibleToasts.map((t) => t.key));
     for (const key of timersRef.current.keys()) {
       if (!visible.has(key)) {
         clearTimer(key);
@@ -140,13 +142,13 @@ export function ToasterProvider({ children }: { children: React.ReactNode }) {
     <ToastContext.Provider value={{ add, close }}>
       {children}
       <div className="bcds-toaster-viewport" {...regionProps} ref={regionRef}>
-        {state.visibleToasts.map(t => (
+        {state.visibleToasts.map((t) => (
           <Toast
             key={t.key}
             title={t.content.title}
             message={t.content.message}
             variant={t.content.variant}
-            dismissible={t.content.dismissible}
+            isDismissable={t.content.isDismissable}
             onClose={() => close(t.key)}
             onPause={() => pause(t.key)}
             onResume={() => resume(t.key)}
