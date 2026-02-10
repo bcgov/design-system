@@ -8,7 +8,7 @@ import "./ProgressBar.css";
 
 export interface ProgressBarProps extends ReactAriaProgressBarProps {
   /* Progress bar format */
-  format: "bar" | "circle";
+  format?: "bar" | "circle";
   /* Set the size of the progress bar */
   size?: "small" | "medium" | "large";
   /* Label text */
@@ -27,54 +27,66 @@ export default function ProgressBar({
       {({ percentage, valueText, isIndeterminate }) => (
         <>
           {format === "circle" && (
-            <svg
-              className={`bcds-react-aria-ProgressCircle ${size}`}
-              viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`}
-            >
-              <circle className="bcds-react-aria-ProgressCircle--Bottom" />
-              <circle
-                className="bcds-react-aria-ProgressCircle--Top"
-                pathLength="100"
-                strokeDashoffset={
-                  100 -
-                  (isIndeterminate || percentage == null ? 25 : percentage)
-                }
-              >
-                {isIndeterminate && (
-                  <animateTransform
-                    attributeName="transform"
-                    type="rotate"
-                    dur="1.25s"
-                    values="0;360"
-                    repeatCount="indefinite"
-                  />
-                )}
-              </circle>
-            </svg>
-          )}
-          {label && (
             <>
-              <div className="bcds-react-aria-ProgressBar--Label">
-                <Label>{label}</Label>
-                {!isIndeterminate && (
-                  <span className="bcds-react-aria-ProgressBar--Value">
-                    {valueText}
-                  </span>
-                )}
-              </div>
+              <svg
+                className={`bcds-react-aria-ProgressCircle ${size}`}
+                viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`}
+              >
+                <circle className="bcds-react-aria-ProgressCircle--Bottom" />
+                <circle
+                  className="bcds-react-aria-ProgressCircle--Top"
+                  pathLength="100"
+                  strokeDashoffset={
+                    100 -
+                    (isIndeterminate || percentage == null ? 25 : percentage)
+                  }
+                >
+                  {isIndeterminate && (
+                    <animateTransform
+                      attributeName="transform"
+                      type="rotate"
+                      dur="1.25s"
+                      values="0;360"
+                      repeatCount="indefinite"
+                    />
+                  )}
+                </circle>
+              </svg>
+              {label && (
+                <div className="bcds-react-aria-ProgressCircle--Label">
+                  <Label>{label}</Label>
+                  {!isIndeterminate && (
+                    <span className="bcds-react-aria-ProgressBar--Value">
+                      {valueText}
+                    </span>
+                  )}
+                </div>
+              )}
             </>
           )}
           {format === "bar" && (
-            <div className={`bcds-react-aria-ProgressBar--Track ${size}`}>
-              <div
-                className="bcds-react-aria-ProgressBar--Fill"
-                style={
-                  {
-                    "--percentage": percentage + "%",
-                  } as React.CSSProperties
-                }
-              />
-            </div>
+            <>
+              {label && (
+                <div className="bcds-react-aria-ProgressBar--Label">
+                  <Label>{label}</Label>
+                  {!isIndeterminate && (
+                    <span className="bcds-react-aria-ProgressBar--Value">
+                      {valueText}
+                    </span>
+                  )}
+                </div>
+              )}
+              <div className={`bcds-react-aria-ProgressBar--Track ${size}`}>
+                <div
+                  className="bcds-react-aria-ProgressBar--Fill"
+                  style={
+                    {
+                      "--percentage": percentage + "%",
+                    } as React.CSSProperties
+                  }
+                />
+              </div>
+            </>
           )}
         </>
       )}

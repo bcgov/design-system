@@ -8,6 +8,7 @@ import InlineAlertPage from "./InlineAlert";
 import LoaderPage from "./Loader";
 import ModalDialogPage from "./ModalDialog";
 import NumberFieldPage from "./NumberField";
+import ProgressBarPage from "./ProgressBar";
 import RadioGroupPage from "./RadioGroup";
 import SelectPage from "./Select";
 import TagGroupPage from "./TagGroup";
@@ -28,6 +29,7 @@ export {
   LoaderPage,
   ModalDialogPage,
   NumberFieldPage,
+  ProgressBarPage,
   RadioGroupPage,
   SelectPage,
   TagGroupPage,

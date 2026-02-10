@@ -30,9 +30,20 @@ main {
 .row {
   display: flex;
   flex-direction: row;
+  flex: 1 1 0;
+  gap: var(--layout-margin-medium);
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
 }
 
-.row > ul {
+.menu > ul {
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -40,7 +51,7 @@ main {
   font: var(--typography-regular-body);
 }
 
-.row > ul > li {
+.menu > ul > li {
   padding: var(--layout-padding-none) var(--layout-padding-medium);
 }
 

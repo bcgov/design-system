@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--layout-padding-xsmall);
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-primary);
 }
 
 /* Label */
@@ -10,12 +12,18 @@
   flex-direction: row;
   gap: var(--layout-margin-medium);
   justify-content: space-between;
-  font: var(--typography-regular-small-body);
-  color: var(--typography-color-primary);
 }
 
 .bcds-react-aria-ProgressBar--Value {
   color: var(--typography-color-secondary);
+}
+
+.bcds-react-aria-ProgressCircle--Label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-hair);
+  align-items: center;
+  justify-content: center;
 }
 
 /* Progress bar */
@@ -34,7 +42,7 @@
 .bcds-react-aria-ProgressBar--Track {
   position: relative;
   overflow: hidden;
-  box-sizing: border-box;
+  box-sizing: content-box;
   z-index: 0;
   background-color: var(--surface-color-border-default);
   border: var(--layout-border-width-small) solid
@@ -90,11 +98,11 @@
 svg.bcds-react-aria-ProgressCircle.small {
   width: var(--icons-size-medium);
   height: var(--icons-size-medium);
-  stroke-width: var(--layout-border-width-small);
+  stroke-width: var(--layout-border-width-medium);
 
   .bcds-react-aria-ProgressCircle--Bottom,
   .bcds-react-aria-ProgressCircle--Top {
-    r: calc(50% - var(--layout-border-width-small) / 2);
+    r: calc(50% - var(--layout-border-width-medium) / 2);
   }
 }
 svg.bcds-react-aria-ProgressCircle.medium {
