@@ -1,12 +1,9 @@
 import { Label } from "react-aria-components";
-import ProgressCircle, { ProgressCircleProps } from "../ProgressCircle";
+import ProgressBar, { ProgressBarProps } from "../ProgressBar";
 
 import "./Loader.css";
 
-export interface LoaderProps extends Omit<
-  ProgressCircleProps,
-  "valueLabel" | "formatOptions" | "minValue" | "maxValue" | "size"
-> {
+export interface LoaderProps extends ProgressBarProps {
   /* Set the size of the spinner and typography */
   size?: "small" | "medium" | "large";
   /* Label text below the spinner */
@@ -29,7 +26,7 @@ export default function Loader({
       className={`bcds-react-aria-Loader--container ${theme} ${size}`}
       style={{ zIndex }}
     >
-      <ProgressCircle size={size} {...props} />
+      <ProgressBar format="circle" size={size} {...props} />
       {label && (
         <Label className="bcds-react-aria-Loader--Label">{label}</Label>
       )}
