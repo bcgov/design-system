@@ -70,7 +70,7 @@
   .bcds-react-aria-ProgressBar--Fill {
   background-color: var(--surface-color-primary-default);
   transform: scaleX(1);
-  animation: indeterminate-bar 1s linear infinite;
+  animation: indeterminate-bar 1.5s linear infinite;
 
   @media (prefers-reduced-motion: reduce) {
     animation: none;
