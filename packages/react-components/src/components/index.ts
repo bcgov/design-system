@@ -48,10 +48,9 @@ export { default as TagList } from "./TagList";
 export { default as Text } from "./Text";
 export { default as TextArea } from "./TextArea";
 export { default as TextField } from "./TextField";
+export { default as Toast, ToastRegion } from "./Toast";
 export { default as ToggleButton } from "./ToggleButton";
 export { default as ToggleButtonGroup } from "./ToggleButtonGroup";
 export { default as Switch } from "./Switch";
 export { default as Tooltip, TooltipTrigger } from "./Tooltip";
 export { default as NumberField } from "./NumberField";
-export { default as Toast } from "./Toast";
-// TODO: Add Toast stuff here

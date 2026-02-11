@@ -1,12 +1,19 @@
-import "./Toast.css";
+import {
+  UNSTABLE_Toast as ReactAriaToast,
+  UNSTABLE_ToastContent as ReactAriaToastContent,
+  ToastProps as ReactAriaToastProps,
+} from "react-aria-components";
+
 import Button from "../Button";
-import React from "react";
+import Text from "../Text";
 
 import SvgCheckCircleIcon from "../Icons/SvgCheckCircleIcon";
 import SvgCloseIcon from "../Icons/SvgCloseIcon";
 import SvgExclamationCircleIcon from "../Icons/SvgExclamationCircleIcon";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 import SvgInfoIcon from "../Icons/SvgInfoIcon";
+
+import "./Toast.css";
 
 function getIcon(variant: string) {
   switch (variant) {
@@ -25,71 +32,42 @@ function getIcon(variant: string) {
   }
 }
 
-export type ToastVariant =
-  | "info"
-  | "progress"
-  | "success"
-  | "warning"
-  | "danger";
-
-export interface ToastProps {
-  variant?: ToastVariant;
-  title?: React.ReactNode;
-  message: React.ReactNode;
-  onClose: () => void;
-  isDismissable?: boolean;
-  onPause?: () => void;
-  onResume?: () => void;
+export interface ToastContent {
+  variant?: "info" | "progress" | "success" | "warning" | "danger";
+  title?: string;
+  message?: string;
 }
 
-export default function Toast({
-  variant = "info",
-  title,
-  message,
-  isDismissable = true,
-  onClose,
-  onPause,
-  onResume,
-  ...props
-}: ToastProps) {
-  const handleBlurCapture = (e: React.FocusEvent<HTMLDivElement>) => {
-    const next = e.relatedTarget as Node | null;
-    if (!next || !e.currentTarget.contains(next)) {
-      onResume?.();
-    }
-  };
+export interface ToastProps extends ReactAriaToastProps<ToastContent> {
+  toast: ReactAriaToastProps<ToastContent>["toast"];
+}
 
+export default function Toast({ toast, ...props }: ToastProps) {
+  const { variant = "info", title, message } = toast.content;
   return (
-    <div
-      className={`bcds-react-aria-Toast ${variant} ${
-        isDismissable && "closeable"
-      }`}
-      role="status"
-      aria-live="polite"
-      onMouseEnter={onPause}
-      onMouseLeave={onResume}
-      onFocusCapture={onPause}
-      onBlurCapture={handleBlurCapture}
-      {...props}
-    >
-      <span className="bcds-react-aria-Toast--Icon">{getIcon(variant)}</span>
-      <div className="bcds-react-aria-Toast--Container">
-        {title && <div className="bcds-react-aria-Toast--Title">{title}</div>}
-        <div className="bcds-react-aria-Toast--Message">{message}</div>
-      </div>
-      {isDismissable && (
-        <span className="bcds-react-aria-Toast--closeIcon">
-          <Button
-            variant="tertiary"
-            size="xsmall"
-            aria-label="Dismiss notification"
-            onPress={onClose}
-            isIconButton
-          >
-            <SvgCloseIcon />
-          </Button>
-        </span>
-      )}
-    </div>
+    <>
+      <ReactAriaToast
+        toast={toast}
+        className={`bcds-react-aria-Toast ${variant}`}
+        {...props}
+      >
+        <ReactAriaToastContent className="bcds-react-aria-Toast--Content">
+          <div className="bcds-react-aria-Toast--Icon">{getIcon(variant)}</div>
+          {title && (
+            <Text className="bcds-react-aria-Toast--Title" slot="title">
+              {title}
+            </Text>
+          )}
+          {message && (
+            <Text className="bcds-react-aria-Toast--Message" slot="description">
+              {message}
+            </Text>
+          )}
+        </ReactAriaToastContent>
+        <Button size="xsmall" variant="tertiary" slot="close">
+          <SvgCloseIcon />
+        </Button>
+      </ReactAriaToast>
+    </>
   );
 }

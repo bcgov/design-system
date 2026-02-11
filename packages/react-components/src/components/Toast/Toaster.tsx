@@ -1,13 +1,13 @@
 import React, { createContext, useContext, useEffect, useRef } from "react";
-import { useToastRegion } from "react-aria";
+import { UNSTABLE_ToastRegion as ReactAriaToastRegion } from "react-aria-components";
 import { useToastState } from "react-stately";
-import Toast, { ToastVariant } from "./Toast";
+import Toast from "./Toast";
 import "./Toast.css";
 
 type ToastContent = {
   title?: string;
   message: string;
-  variant?: ToastVariant;
+  variant?: "info" | "progress" | "success" | "warning" | "danger";
   isDismissable?: boolean;
 };
 
@@ -36,9 +36,6 @@ export function ToasterProvider({ children }: { children: React.ReactNode }) {
   const state = useToastState<ToastContent>({
     maxVisibleToasts: 3,
   });
-
-  const regionRef = useRef<HTMLDivElement | null>(null);
-  const { regionProps } = useToastRegion({}, state, regionRef);
 
   const timersRef = useRef<Map<string, TimerEntry>>(new Map());
 
@@ -97,13 +94,14 @@ export function ToasterProvider({ children }: { children: React.ReactNode }) {
       ...content
     } = toast;
 
-    const DEFAULT_TIMEOUTS: Record<ToastVariant, number> = {
-      success: 5000,
-      info: 5000,
-      warning: 6000,
-      danger: 6000,
-      progress: 0,
-    };
+    const DEFAULT_TIMEOUTS: Record<Required<ToastContent>["variant"], number> =
+      {
+        success: 5000,
+        info: 5000,
+        warning: 6000,
+        danger: 6000,
+        progress: 0,
+      };
 
     const timeout =
       variant === "progress"
@@ -141,20 +139,17 @@ export function ToasterProvider({ children }: { children: React.ReactNode }) {
   return (
     <ToastContext.Provider value={{ add, close }}>
       {children}
-      <div className="bcds-toaster-viewport" {...regionProps} ref={regionRef}>
+      <ReactAriaToastRegion className="bcds-toaster-viewport" queue={queue}>
         {state.visibleToasts.map((t) => (
           <Toast
             key={t.key}
-            title={t.content.title}
-            message={t.content.message}
-            variant={t.content.variant}
-            isDismissable={t.content.isDismissable}
+            toast={t}
             onClose={() => close(t.key)}
             onPause={() => pause(t.key)}
             onResume={() => resume(t.key)}
           />
         ))}
-      </div>
+      </ReactAriaToastRegion>
     </ToastContext.Provider>
   );
 }
