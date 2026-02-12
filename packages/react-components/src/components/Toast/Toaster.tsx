@@ -1,16 +1,26 @@
-import { UNSTABLE_ToastRegion as ReactAriaToastRegion } from "react-aria-components";
-import type { ToastRegionProps } from "react-aria-components";
+import {
+  UNSTABLE_ToastRegion as ReactAriaToastRegion,
+  ToastRegionProps,
+} from "react-aria-components";
 
 import Toast from "./Toast";
 import { ToastQueue } from "./ToastQueue";
 
 import "./Toaster.css";
 
-export default function Toaster() {
+export interface ToasterProps {
+  position?: "bottom-right" | "bottom-left" | "top-right" | "top-left";
+}
+
+export default function Toaster({
+  position = "bottom-right",
+  ...props
+}: ToasterProps) {
   return (
     <ReactAriaToastRegion
-      className="bcds-react-aria-Toaster"
+      className={`bcds-react-aria-Toaster ${position}`}
       queue={ToastQueue}
+      {...props}
     >
       {({ toast }) => <Toast toast={toast} />}
     </ReactAriaToastRegion>

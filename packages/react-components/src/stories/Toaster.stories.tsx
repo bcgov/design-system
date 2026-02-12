@@ -8,7 +8,14 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  argTypes: {},
+  argTypes: {
+    position: {
+      control: "select",
+      options: ["bottom-right", "bottom-left", "top-right", "top-left"],
+      description: "Defines where toasts will appear on the screen",
+      table: { defaultValue: { summary: "bottom-right" } },
+    },
+  },
 } satisfies Meta<typeof Toaster>;
 
 export default meta;
@@ -72,6 +79,72 @@ export const ToasterTemplate: Story = {
         </Button>
       </ButtonGroup>
       <Toaster />
+    </>
+  ),
+};
+
+export const TopRightToaster: Story = {
+  render: () => (
+    <>
+      <ButtonGroup>
+        <Button
+          variant="primary"
+          onPress={() =>
+            ToastQueue.add({
+              title: "Success message",
+              message: "Additional information goes here",
+              variant: "success",
+            })
+          }
+        >
+          Show success toast
+        </Button>
+      </ButtonGroup>
+      <Toaster position="top-right" />
+    </>
+  ),
+};
+
+export const TopLeftToaster: Story = {
+  render: () => (
+    <>
+      <ButtonGroup>
+        <Button
+          variant="primary"
+          onPress={() =>
+            ToastQueue.add({
+              title: "Success message",
+              message: "Additional information goes here",
+              variant: "success",
+            })
+          }
+        >
+          Show success toast
+        </Button>
+      </ButtonGroup>
+      <Toaster position="top-left" />
+    </>
+  ),
+};
+
+export const BottomLeftToaster: Story = {
+  render: () => (
+    <>
+      <ButtonGroup>
+        <Button
+          variant="primary"
+          onPress={() =>
+            ToastQueue.add({
+              title: "Success message",
+              message: "Additional information goes here",
+              variant: "success",
+            })
+          }
+        >
+          Show success toast
+        </Button>
+      </ButtonGroup>
+      <Toaster position="bottom-left" />
     </>
   ),
 };
