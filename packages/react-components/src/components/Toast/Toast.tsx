@@ -1,7 +1,7 @@
 import {
   UNSTABLE_Toast as ReactAriaToast,
   UNSTABLE_ToastContent as ReactAriaToastContent,
-  ToastProps as ReactAriaToastProps,
+  ToastProps,
 } from "react-aria-components";
 
 import Button from "../Button";
@@ -38,11 +38,7 @@ export interface ToastContent {
   message?: string;
 }
 
-export interface ToastProps extends ReactAriaToastProps<ToastContent> {
-  toast: ReactAriaToastProps<ToastContent>["toast"];
-}
-
-export default function Toast({ toast, ...props }: ToastProps) {
+export default function Toast({ toast, ...props }: ToastProps<ToastContent>) {
   const { variant = "info", title, message } = toast.content;
   return (
     <>
@@ -73,3 +69,5 @@ export default function Toast({ toast, ...props }: ToastProps) {
     </>
   );
 }
+
+export type { ToastProps };

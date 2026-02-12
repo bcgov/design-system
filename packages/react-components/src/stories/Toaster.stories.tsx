@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Button, ButtonGroup, Toaster, ToastQueue } from "../components";
 
 const meta = {
-  title: "Notifications and feedback/Toaster",
+  title: "Notifications and feedback/Toast/Toaster",
   component: Toaster,
   parameters: {
     layout: "centered",
