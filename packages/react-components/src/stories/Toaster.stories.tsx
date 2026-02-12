@@ -1,20 +1,20 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Button, ButtonGroup, ToastRegion, ToastQueue } from "../components";
+import { Button, ButtonGroup, Toaster, ToastQueue } from "../components";
 
 const meta = {
-  title: "Notifications and feedback/ToastRegion",
-  component: ToastRegion,
+  title: "Notifications and feedback/Toaster",
+  component: Toaster,
   parameters: {
     layout: "centered",
   },
   argTypes: {},
-} satisfies Meta<typeof ToastRegion>;
+} satisfies Meta<typeof Toaster>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const ToastRegionTemplate: Story = {
+export const ToasterTemplate: Story = {
   render: () => (
     <>
       <ButtonGroup>
@@ -71,7 +71,7 @@ export const ToastRegionTemplate: Story = {
           Show error toast
         </Button>
       </ButtonGroup>
-      <ToastRegion></ToastRegion>
+      <Toaster />
     </>
   ),
 };
