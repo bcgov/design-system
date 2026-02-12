@@ -51,8 +51,8 @@ export default function Toast({ toast, ...props }: ToastProps) {
         className={`bcds-react-aria-Toast ${variant}`}
         {...props}
       >
+        <span className="bcds-react-aria-Toast--Icon">{getIcon(variant)}</span>
         <ReactAriaToastContent className="bcds-react-aria-Toast--Content">
-          <div className="bcds-react-aria-Toast--Icon">{getIcon(variant)}</div>
           {title && (
             <Text className="bcds-react-aria-Toast--Title" slot="title">
               {title}
@@ -64,9 +64,11 @@ export default function Toast({ toast, ...props }: ToastProps) {
             </Text>
           )}
         </ReactAriaToastContent>
-        <Button size="xsmall" variant="tertiary" slot="close">
-          <SvgCloseIcon />
-        </Button>
+        <span className="bcds-react-aria-Toast--closeIcon">
+          <Button size="xsmall" variant="tertiary" isIconButton slot="close">
+            <SvgCloseIcon />
+          </Button>
+        </span>
       </ReactAriaToast>
     </>
   );

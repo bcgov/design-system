@@ -1,17 +1,3 @@
-/* Fixed overlay (already correct) */
-.bcds-toaster-viewport {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  z-index: 1000;
-
-  display: flex;
-  flex-direction: column;
-  gap: var(--layout-margin-small);
-  pointer-events: none;
-}
-
-/* Toast card */
 .bcds-react-aria-Toast {
   display: flex;
   flex: 1 0 0;
@@ -27,22 +13,23 @@
   min-width: 280px;
   max-width: 420px;
   background-color: var(--surface-color-background-white);
-  font: var(--typography-regular-small-body);
   color: var(--typography-color-primary);
 }
 
-.bcds-react-aria-Toast--Container {
-  flex: 1;
-  gap: var(--layout-margin-small);
+.bcds-react-aria-Toast--Content {
+  display: inline-flex;
+  flex: 1 1 0;
+  align-self: flex-start;
+  flex-direction: column;
+  gap: var(--layout-margin-hair);
 }
 
 .bcds-react-aria-Toast--Title {
-  display: block;
   font: var(--typography-bold-small-body);
 }
 
 .bcds-react-aria-Toast--Message {
-  display: block;
+  font: var(--typography-regular-small-body);
 }
 
 /* Variants */
@@ -85,26 +72,16 @@
 
 /* Icons */
 .bcds-react-aria-Toast--Icon {
-  display: inline-flex;
   align-self: flex-start;
+  margin-top: 1px;
+  flex: 0 1 0;
 }
-
 .bcds-react-aria-Toast--Icon > svg {
   min-width: var(--icons-size-medium);
   height: var(--icons-size-medium);
 }
 
 /* Close button */
-.bcds-react-aria-Toast.closeable {
-  /*
-    Because the close icon button is removed from the document flow, we
-    manually adjust the padding to push the `--container` element off the right
-    edge of the InlineAlert.
-  */
-  padding: var(--layout-padding-medium) 52px var(--layout-padding-medium)
-    var(--layout-padding-large);
-}
-
 .bcds-react-aria-Toast--closeIcon {
   align-self: first baseline;
   color: var(--icons-color-primary);
@@ -113,11 +90,8 @@
 
 .bcds-react-aria-Toast--closeIcon > button {
   position: absolute;
-  /*
-    Centers the button vertically.
-    Button height (32px) minus line-height of text (27px) divided by 2.
-  */
   top: -2.5px;
+  right: -2.5px;
 }
 
 .bcds-react-aria-Toast--closeIcon > svg {

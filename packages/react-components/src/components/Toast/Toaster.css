@@ -1,0 +1,12 @@
+.bcds-react-aria-Toaster {
+  position: fixed;
+  bottom: var(--layout-margin-large);
+  right: var(--layout-margin-large);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--layout-margin-small);
+  justify-content: space-around;
+  align-items: flex-end;
+  pointer-events: none;
+}
