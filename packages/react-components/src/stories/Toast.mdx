@@ -59,6 +59,16 @@ Learn more about working with the toast and toaster components:
 - [Usage and best practice guidance](#)
 - [View the date picker component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
 
+### Anatomy
+
+#### Toaster
+
+The `<Toaster>` element is the container in which messages are displayed. It should be placed at the root of your application. It has no visible styling of its own.
+
+#### Toast
+
+A `<Toast>` is an individual message item, displayed as a card inside the `<Toaster>`. Toasts are generated dynamically, by sending their content and configuration to the `<ToastQueue>` from a trigger element or event.
+
 ## Controls
 
 ### Toaster
@@ -70,3 +80,5 @@ Learn more about working with the toast and toaster components:
 
 <Primary of={ToastStories} />
 <Controls of={ToastStories.ToastTemplate} />
+
+## Configuration
