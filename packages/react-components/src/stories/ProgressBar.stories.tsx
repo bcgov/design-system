@@ -74,10 +74,26 @@ export const SmallProgressBar: Story = {
   },
 };
 
+export const SmallProgressCircle: Story = {
+  args: {
+    ...ProgressBarTemplate.args,
+    format: "circle",
+    size: "small",
+  },
+};
+
 export const LargeProgressBar: Story = {
   args: {
     ...ProgressBarTemplate.args,
     size: "large",
+  },
+};
+
+export const LargeProgressCircle: Story = {
+  args: {
+    ...ProgressBarTemplate.args,
+    size: "large",
+    format: "circle",
   },
 };
 
@@ -103,5 +119,24 @@ export const IndeterminateProgressCircle: Story = {
     format: "circle",
     isIndeterminate: true,
     valueLabel: "Loading...",
+  },
+};
+
+export const CustomLabel: Story = {
+  args: {
+    ...ProgressBarTemplate.args,
+    valueLabel: "Custom label",
+  },
+};
+
+export const CustomFormat: Story = {
+  args: {
+    ...ProgressBarTemplate.args,
+    value: 75.25,
+    valueLabel: "Custom label",
+    formatOptions: {
+      style: "decimal",
+      minimumSignificantDigits: 4,
+    },
   },
 };

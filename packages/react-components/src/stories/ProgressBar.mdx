@@ -23,7 +23,10 @@ import * as ProgressBarStories from "./ProgressBar.stories";
 
 # ProgressBar
 
-<Subtitle>TKTK</Subtitle>
+<Subtitle>
+  A progress bar visualises the progress of an operation or process in either a
+  horizontal bar or a circular spinner.
+</Subtitle>
 
 <InlineAlert
   variant="info"
@@ -63,4 +66,44 @@ Learn more about working with the ProgressBar component:
 
 ## Configuration
 
-TKTK
+### Format
+
+A progress bar can be toggled between horizontal and circular styles using the `format` prop:
+
+<Canvas of={ProgressBarStories.ProgressBarTemplate} />
+<Canvas of={ProgressBarStories.ProgressCircle} />
+
+### Sizing
+
+Use the `size` prop to choose between `small`, `medium` (default) and `large` styles:
+
+#### Small
+
+<Canvas of={ProgressBarStories.SmallProgressBar} />
+<Canvas of={ProgressBarStories.SmallProgressCircle} />
+
+#### Large
+
+<Canvas of={ProgressBarStories.LargeProgressBar} />
+<Canvas of={ProgressBarStories.LargeProgressCircle} />
+
+### Value
+
+By default, `value` represents a percentage between 0 and 100. Use `minValue` and `maxValue` props to set a custom range.
+
+Pass the `isIndeterminate` prop to render an animated loading indicator without a numerical value:
+
+<Canvas of={ProgressBarStories.IndeterminateProgressBar} />
+<Canvas of={ProgressBarStories.IndeterminateProgressCircle} />
+
+#### Labels
+
+Set the text label using `formatLabel`:
+
+<Canvas of={ProgressBarStories.CustomLabel} />
+
+If you don't provide a `formatLabel`, you must instead pass an `aria-label` to label the progress bar for assistive technologies.
+
+Use `formatOptions` to change the format of the value text. `formatOptions` expects an [`Intl.NumberFormatOptions`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) value:
+
+<Canvas of={ProgressBarStories.CustomFormat} />
