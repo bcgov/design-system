@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { useEffect, useState } from "react";
 
 import { ProgressBar } from "../components";
 
@@ -138,5 +139,30 @@ export const CustomFormat: Story = {
       style: "decimal",
       minimumSignificantDigits: 4,
     },
+  },
+};
+
+export const AnimatedFill: Story = {
+  args: {
+    ...ProgressBarTemplate.args,
+    format: "bar",
+    valueLabel: "Uploading...",
+    minValue: 0,
+    maxValue: 100,
+  },
+  render: (args) => {
+    const [value, setValue] = useState(args.minValue ?? 0);
+
+    useEffect(() => {
+      const min = args.minValue ?? 0;
+      const max = args.maxValue ?? 100;
+      const step = Math.max((max - min) / 40, 1);
+      const id = setInterval(() => {
+        setValue((v) => (v >= max ? min : Math.min(v + step, max)));
+      }, 120);
+      return () => clearInterval(id);
+    }, [args.minValue, args.maxValue]);
+
+    return <ProgressBar {...args} value={value} />;
   },
 };

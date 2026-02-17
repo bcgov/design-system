@@ -91,6 +91,10 @@ Use the `size` prop to choose between `small`, `medium` (default) and `large` st
 
 By default, `value` represents a percentage between 0 and 100. Use `minValue` and `maxValue` props to set a custom range.
 
+You can set `value` programmatically:
+
+<Canvas of={ProgressBarStories.AnimatedFill} />
+
 Pass the `isIndeterminate` prop to render an animated loading indicator without a numerical value:
 
 <Canvas of={ProgressBarStories.IndeterminateProgressBar} />
