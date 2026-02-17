@@ -17,7 +17,6 @@ export { default as Form } from "./Form";
 export { default as Header } from "./Header";
 export { default as Heading } from "./Heading";
 export { default as InlineAlert } from "./InlineAlert";
-export { default as Loader } from "./Loader";
 export { default as Link } from "./Link";
 export { default as Modal } from "./Modal";
 export { default as ProgressBar } from "./ProgressBar";
