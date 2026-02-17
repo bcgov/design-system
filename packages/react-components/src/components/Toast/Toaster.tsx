@@ -22,7 +22,9 @@ export default function Toaster({
       queue={ToastQueue}
       {...props}
     >
-      {({ toast }) => <Toast toast={toast} />}
+      {({ toast }) => (
+        <Toast toast={toast} style={{ viewTransitionName: toast.key }} />
+      )}
     </ReactAriaToastRegion>
   );
 }

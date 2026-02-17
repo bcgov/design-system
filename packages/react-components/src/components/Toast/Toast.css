@@ -14,6 +14,7 @@
   max-width: 420px;
   background-color: var(--surface-color-background-white);
   color: var(--typography-color-primary);
+  view-transition-class: toast;
 }
 
 .bcds-react-aria-Toast--Content {
@@ -97,4 +98,30 @@
 .bcds-react-aria-Toast--closeIcon > svg {
   min-width: var(--icons-size-medium);
   height: var(--icons-size-medium);
+}
+
+/* Animation */
+
+::view-transition-old(.toast):only-child {
+  animation: slide-out 400ms;
+  animation-fill-mode: forwards;
+}
+
+::view-transition-new(.toast):only-child {
+  animation: slide-in 400ms;
+}
+
+@keyframes slide-out {
+  to {
+    translate: 100% 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    translate: 100% 0;
+    opacity: 0;
+  }
 }
