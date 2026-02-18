@@ -111,6 +111,13 @@
   animation: slide-in 400ms;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(.toast):only-child,
+  ::view-transition-new(.toast):only-child {
+    animation: none;
+  }
+}
+
 @keyframes slide-out {
   to {
     translate: 100% 0;
