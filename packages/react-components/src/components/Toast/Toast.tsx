@@ -19,8 +19,6 @@ function getIcon(variant: string) {
   switch (variant) {
     case "info":
       return <SvgInfoIcon />;
-    case "progress":
-      return <SvgInfoIcon />;
     case "success":
       return <SvgCheckCircleIcon />;
     case "warning":
@@ -33,7 +31,7 @@ function getIcon(variant: string) {
 }
 
 export interface ToastContent {
-  variant?: "info" | "progress" | "success" | "warning" | "danger";
+  variant?: "info" | "success" | "warning" | "danger";
   title?: string;
   message?: string;
 }

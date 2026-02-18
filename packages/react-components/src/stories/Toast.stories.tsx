@@ -23,7 +23,7 @@ const meta = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["info", "progress", "success", "warning", "danger"],
+      options: ["info", "success", "warning", "danger"],
       description: "Message theme and icon",
       table: { defaultValue: { summary: "info" } },
     },
