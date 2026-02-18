@@ -3,7 +3,7 @@ import { Menu, MenuItem, MenuTrigger, Popover } from "react-aria-components";
 import "./App.css";
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
-import { Button, Footer, FooterLinks, Header } from "@/components";
+import { Button, Footer, FooterLinks, Header, Toaster } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
   AccordionGroupPage,
@@ -118,6 +118,7 @@ function App() {
         <RadioGroupPage />
         <SelectPage />
         <TagGroupPage />
+        <ToastPage />
         <TooltipPage />
         <TextAreaPage />
         <TextFieldPage />
@@ -201,6 +202,7 @@ function App() {
           ]}
         />
       </Footer>
+      <Toaster position="bottom-right" />
     </>
   );
 }
