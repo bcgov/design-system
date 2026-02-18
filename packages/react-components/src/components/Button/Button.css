@@ -24,27 +24,27 @@
 
 /* Sizes */
 .bcds-react-aria-Button.xsmall {
-  min-height: 24px;
+  min-height: var(--icons-size-large);
   padding: var(--layout-padding-hair) var(--layout-padding-small);
   font: var(--typography-regular-label);
 }
 .bcds-react-aria-Button.xsmall.icon {
   padding: unset;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
+  height: var(--icons-size-large);
+  width: var(--icons-size-large);
+  min-width: var(--icons-size-large);
 }
 .bcds-react-aria-Button.small {
-  min-height: 32px;
+  min-height: var(--icons-size-xlarge);
   padding: var(--layout-padding-none) 0.75rem
     /* to be replaced with new token later */;
   font: var(--typography-regular-small-body);
 }
 .bcds-react-aria-Button.small.icon {
   padding: unset;
-  height: 32px;
-  width: 32px;
-  min-width: 32px;
+  height: var(--icons-size-xlarge);
+  width: var(--icons-size-xlarge);
+  min-width: var(--icons-size-xlarge);
 }
 .bcds-react-aria-Button.medium {
   min-height: 40px;
@@ -74,7 +74,7 @@
 /* Variant - Primary */
 .bcds-react-aria-Button.primary {
   background: var(--surface-color-primary-button-default);
-  color: var(--icons-color-primary-invert);
+  color: var(--typography-color-primary-invert);
 }
 .bcds-react-aria-Button.primary.danger {
   background-color: var(--surface-color-primary-danger-button-default);
@@ -101,7 +101,8 @@
 /* Variant - Secondary */
 .bcds-react-aria-Button.secondary {
   background-color: var(--surface-color-secondary-button-default);
-  border: 1px solid var(--surface-color-border-dark);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-dark);
   color: var(--typography-color-primary);
 }
 .bcds-react-aria-Button.secondary.danger {
