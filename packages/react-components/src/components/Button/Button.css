@@ -91,7 +91,8 @@
 }
 .bcds-react-aria-Button.primary.danger[data-pressed],
 .bcds-react-aria-Button.primary.danger[data-hovered][data-pressed] {
-  background-color: var(--surface-color-primary-danger-button-default);
+  background-color: var(--support-surface-color-danger);
+  color: var(--surface-color-primary-danger-button-default);
 }
 .bcds-react-aria-Button.primary[data-pressed],
 .bcds-react-aria-Button.primary[data-hovered][data-pressed] {
