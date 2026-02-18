@@ -1,6 +1,10 @@
+import { useState } from "react";
 import {
   Button,
   ButtonGroup,
+  Radio,
+  RadioGroup,
+  Toaster,
   ToastQueue,
   SvgCheckIcon,
   SvgExclamationCircleIcon,
@@ -8,10 +12,30 @@ import {
   SvgInfoIcon,
 } from "@/components";
 
+type ToasterPosition =
+  | "top-left"
+  | "top-right"
+  | "bottom-left"
+  | "bottom-right";
+
 export default function ToastPage() {
+  const [position, setPosition] = useState<ToasterPosition>("bottom-right");
+
   return (
     <>
       <h2>Toast</h2>
+      <RadioGroup
+        label="Toaster position"
+        defaultValue="bottom-right"
+        value={position}
+        onChange={(key) => setPosition(key as ToasterPosition)}
+      >
+        <Radio value="top-left">Top left</Radio>
+        <Radio value="top-right">Top right</Radio>
+        <Radio value="bottom-left">Bottom left</Radio>
+        <Radio value="bottom-right">Bottom right (default)</Radio>
+      </RadioGroup>
+      <h3>Press buttons to fire toasts</h3>
       <ButtonGroup orientation="horizontal">
         <Button
           variant="primary"
@@ -73,6 +97,7 @@ export default function ToastPage() {
           Danger toast
         </Button>
       </ButtonGroup>
+      <Toaster position={position} />
     </>
   );
 }
