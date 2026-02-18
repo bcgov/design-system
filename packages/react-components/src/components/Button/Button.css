@@ -36,7 +36,8 @@
 }
 .bcds-react-aria-Button.small {
   min-height: 32px;
-  padding: var(--layout-padding-none) 0.75rem /* to be replaced with new token later */;
+  padding: var(--layout-padding-none) 0.75rem
+    /* to be replaced with new token later */;
   font: var(--typography-regular-small-body);
 }
 .bcds-react-aria-Button.small.icon {
@@ -88,6 +89,14 @@
 .bcds-react-aria-Button.primary.danger[data-hovered] {
   background-color: var(--surface-color-primary-danger-button-hover);
 }
+.bcds-react-aria-Button.primary.danger[data-pressed],
+.bcds-react-aria-Button.primary.danger[data-hovered][data-pressed] {
+  background-color: var(--surface-color-primary-danger-button-default);
+}
+.bcds-react-aria-Button.primary[data-pressed],
+.bcds-react-aria-Button.primary[data-hovered][data-pressed] {
+  background-color: var(--surface-color-primary-pressed);
+}
 
 /* Variant - Secondary */
 .bcds-react-aria-Button.secondary {
@@ -110,6 +119,15 @@
 .bcds-react-aria-Button.secondary.danger[data-hovered] {
   background-color: var(--support-surface-color-danger);
 }
+.bcds-react-aria-Button.secondary.danger[data-pressed],
+.bcds-react-aria-Button.secondary.danger[data-hovered][data-pressed] {
+  background-color: var(--surface-color-primary-danger-button-default);
+  color: var(--typography-color-primary-invert);
+}
+.bcds-react-aria-Button.secondary[data-pressed],
+.bcds-react-aria-Button.secondary[data-hovered][data-pressed] {
+  background-color: var(--surface-color-secondary-pressed);
+}
 
 /* Variant - Tertiary */
 .bcds-react-aria-Button.tertiary {
@@ -128,6 +146,14 @@
 }
 .bcds-react-aria-Button.tertiary.danger[data-hovered] {
   background-color: var(--support-surface-color-danger);
+}
+.bcds-react-aria-Button.tertiary[data-pressed],
+.bcds-react-aria-Button.tertiary[data-hovered][data-pressed] {
+  background-color: var(--surface-color-tertiary-pressed);
+}
+.bcds-react-aria-Button.tertiary.danger[data-pressed],
+.bcds-react-aria-Button.tertiary.danger[data-hovered][data-pressed] {
+  background-color: var(--surface-color-tertiary-pressed);
 }
 
 /* Variant - Link */
