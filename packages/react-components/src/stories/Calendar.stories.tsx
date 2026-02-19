@@ -19,6 +19,10 @@ const meta = {
       control: { type: "radio" },
       options: ["sun", "mon", "tue", "wed", "thu", "fri", "sat"],
       description: "Sets the first day of the week in the calendar view",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "sun" },
+      },
     },
     visibleDuration: {
       control: { type: "object" },
@@ -28,6 +32,9 @@ const meta = {
       control: { type: "radio" },
       options: ["single", "visible"],
       description: "Controls the behavior of pagination",
+      table: {
+        defaultValue: { summary: "visible" },
+      },
     },
     value: {
       control: { type: "object" },
@@ -52,10 +59,12 @@ const meta = {
     isReadOnly: {
       control: { type: "boolean" },
       description: "Whether the calendar is read-only",
+      table: { defaultValue: { summary: "false" } },
     },
     isDisabled: {
       control: { type: "boolean" },
       description: "Whether the calendar is active or disabled",
+      table: { defaultValue: { summary: "false" } },
     },
     isDateUnavailable: {
       control: { type: "object" },
