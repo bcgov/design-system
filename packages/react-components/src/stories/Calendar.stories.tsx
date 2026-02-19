@@ -75,16 +75,3 @@ export const HalfYear: Story = {
     pageBehavior: "visible",
   },
 };
-
-export const FullYear: Story = {
-  ...CalendarTemplate,
-  args: {
-    ...CalendarTemplate.args,
-    visibleDuration: { months: 12 },
-    minValue: new CalendarDate(2026, 1, 1),
-    maxValue: new CalendarDate(2026, 12, 31),
-    firstDayOfWeek: "mon",
-    isDisabled: false,
-    pageBehavior: "visible",
-  },
-};

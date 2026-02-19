@@ -1,0 +1,41 @@
+{/* Calendar.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import * as CalendarStories from "./Calendar.stories";
+import { Calendar, Link, InlineAlert, SvgReactAriaIcon } from "@/components";
+
+<Meta title="Inputs and controls/Calendar" />
+
+# Calendar
+
+<Subtitle>
+  A calendar displays a list of dates in a grid and enables the user to select a
+  single date.
+</Subtitle>
+
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA Calendar component. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/Calendar"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      Calendar docs
+    </Link>,
+  ]}
+/>
