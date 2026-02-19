@@ -36,7 +36,7 @@ export default function Calendar({
       {({ state }) =>
         [...Array(visibleDuration.months).keys()].map((i) => (
           <div key={i} className="bcds-react-aria-Calendar--GridContainer">
-            <header className="bcds-react-aria-Calendar--Header">
+            <div className="bcds-react-aria-Calendar--Header">
               <div className="bcds-react-aria-Calendar--HeaderButton">
                 {i === 0 && (
                   <Button
@@ -68,7 +68,7 @@ export default function Calendar({
                   </Button>
                 )}
               </div>
-            </header>
+            </div>
             <ReactAriaCalendarGrid
               offset={{ months: i }}
               className={`bcds-react-aria-Calendar--Grid`}
