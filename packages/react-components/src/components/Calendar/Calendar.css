@@ -27,9 +27,15 @@
   padding: var(--layout-padding-none) var(--layout-padding-xsmall);
 }
 .bcds-react-aria-Calendar--HeaderButton {
+  width: var(--icons-size-large);
   height: var(--icons-size-large);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 .bcds-react-aria-Calendar--Header > h2.bcds-react-aria-Heading {
+  flex: 1;
+  text-align: center;
   font: var(--typography-bold-small-body);
   margin: var(--layout-margin-none);
 }

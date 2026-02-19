@@ -18,7 +18,6 @@ import SvgChevronRightIcon from "../Icons/SvgChevronRightIcon";
 export type { DateValue };
 
 export default function Calendar({
-  isHeaderHidden = false,
   visibleDuration = { months: 1 },
   ...props
 }: CalendarProps<DateValue>) {
@@ -37,41 +36,39 @@ export default function Calendar({
       {({ state }) =>
         [...Array(visibleDuration.months).keys()].map((i) => (
           <div key={i} className="bcds-react-aria-Calendar--GridContainer">
-            {!isHeaderHidden && (
-              <header className="bcds-react-aria-Calendar--Header">
-                <div className="bcds-react-aria-Calendar--HeaderButton">
-                  {i === 0 && (
-                    <Button
-                      slot="previous"
-                      size="xsmall"
-                      variant="tertiary"
-                      isIconButton
-                    >
-                      <SvgChevronLeftIcon />
-                    </Button>
-                  )}
-                </div>
-                <Heading>
-                  {monthFormatter.format(
-                    state.visibleRange.start
-                      .add({ months: i })
-                      .toDate(state.timeZone),
-                  )}
-                </Heading>
-                <div className="bcds-react-aria-Calendar--HeaderButton">
-                  {i === (visibleDuration.months ?? 1) - 1 && (
-                    <Button
-                      slot="next"
-                      size="xsmall"
-                      variant="tertiary"
-                      isIconButton
-                    >
-                      <SvgChevronRightIcon />
-                    </Button>
-                  )}
-                </div>
-              </header>
-            )}
+            <header className="bcds-react-aria-Calendar--Header">
+              <div className="bcds-react-aria-Calendar--HeaderButton">
+                {i === 0 && (
+                  <Button
+                    slot="previous"
+                    size="xsmall"
+                    variant="tertiary"
+                    isIconButton
+                  >
+                    <SvgChevronLeftIcon />
+                  </Button>
+                )}
+              </div>
+              <Heading>
+                {monthFormatter.format(
+                  state.visibleRange.start
+                    .add({ months: i })
+                    .toDate(state.timeZone),
+                )}
+              </Heading>
+              <div className="bcds-react-aria-Calendar--HeaderButton">
+                {i === (visibleDuration.months ?? 1) - 1 && (
+                  <Button
+                    slot="next"
+                    size="xsmall"
+                    variant="tertiary"
+                    isIconButton
+                  >
+                    <SvgChevronRightIcon />
+                  </Button>
+                )}
+              </div>
+            </header>
             <ReactAriaCalendarGrid
               offset={{ months: i }}
               className={`bcds-react-aria-Calendar--Grid`}

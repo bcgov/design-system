@@ -1,5 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { CalendarDate } from "@internationalized/date";
+import {
+  CalendarDate,
+  isWeekend,
+  today,
+  getLocalTimeZone,
+} from "@internationalized/date";
+import { useLocale } from "react-aria-components";
 
 import { Calendar } from "../components";
 import { CalendarProps, DateValue } from "../components/Calendar";
@@ -14,11 +20,6 @@ const meta = {
       options: ["sun", "mon", "tue", "wed", "thu", "fri", "sat"],
       description: "Sets the first day of the week in the calendar view",
     },
-    isDateUnavailable: {
-      control: { type: "object" },
-      description:
-        "Function that determines whether a date is a permissible selection",
-    },
     visibleDuration: {
       control: { type: "object" },
       description: "Sets the number of months visible in the calendar view",
@@ -28,14 +29,48 @@ const meta = {
       options: ["single", "visible"],
       description: "Controls the behavior of pagination",
     },
+    value: {
+      control: { type: "object" },
+      description:
+        "The currently-selected date within the calendar (controlled)",
+    },
+    defaultValue: {
+      control: { type: "object" },
+      description:
+        "The initially-selected date within the calendar (uncontrolled)",
+    },
+    focusedValue: {
+      control: { type: "object" },
+      description:
+        "The currently-focused date within the calendar (controlled)",
+    },
+    defaultFocusedValue: {
+      control: { type: "object" },
+      description:
+        "The initially-focused date within the calendar (uncontrolled)",
+    },
+    isReadOnly: {
+      control: { type: "boolean" },
+      description: "Whether the calendar is read-only",
+    },
+    isDisabled: {
+      control: { type: "boolean" },
+      description: "Whether the calendar is active or disabled",
+    },
+    isDateUnavailable: {
+      control: { type: "object" },
+      description:
+        "Callback function that determines whether a date is a permissible selection",
+    },
     selectionAlignment: {
       control: { type: "radio" },
       options: ["start", "center", "end"],
       description: "Sets the alignment of the selected date in the view",
     },
-    isDisabled: {
-      control: { type: "boolean" },
-      description: "Whether the calendar is active or disabled",
+    createCalendar: {
+      control: { type: "object" },
+      description:
+        "A function to create a new Calendar object for a given calendar identifier. If not provided, the `createCalendar` function from @internationalized/date will be used.",
     },
   },
 } satisfies Meta<typeof Calendar>;
@@ -52,6 +87,60 @@ export const CalendarTemplate: Story = {
   render: ({ ...args }: CalendarProps<DateValue>) => <Calendar {...args} />,
 };
 
+export const ConstrainedRange: Story = {
+  ...CalendarTemplate,
+  args: {
+    ...CalendarTemplate.args,
+    minValue: new CalendarDate(2026, 2, 1),
+    maxValue: new CalendarDate(2026, 3, 1),
+    visibleDuration: { months: 3 },
+  },
+};
+
+export const DefaultValue: Story = {
+  ...CalendarTemplate,
+  args: {
+    ...CalendarTemplate.args,
+    defaultValue: today(getLocalTimeZone()),
+  },
+};
+
+export const FirstDayOfWeek: Story = {
+  ...CalendarTemplate,
+  args: {
+    ...CalendarTemplate.args,
+    firstDayOfWeek: "mon",
+  },
+};
+
+export const DisabledCalendar: Story = {
+  ...CalendarTemplate,
+  args: {
+    ...CalendarTemplate.args,
+    isDisabled: true,
+  },
+};
+
+export const WeekdayOnly: Story = {
+  ...CalendarTemplate,
+  args: {
+    ...CalendarTemplate.args,
+    minValue: new CalendarDate(2026, 2, 1),
+    maxValue: new CalendarDate(2026, 3, 1),
+    visibleDuration: { months: 3 },
+    isDateUnavailable: (date) => isWeekend(date, useLocale().locale),
+  },
+};
+
+export const PageBehavior: Story = {
+  ...CalendarTemplate,
+  args: {
+    ...CalendarTemplate.args,
+    visibleDuration: { months: 3 },
+    pageBehavior: "single",
+  },
+};
+
 export const MultipleMonths: Story = {
   ...CalendarTemplate,
   args: {
@@ -63,15 +152,13 @@ export const MultipleMonths: Story = {
   },
 };
 
-export const HalfYear: Story = {
+export const MinMax: Story = {
   ...CalendarTemplate,
   args: {
     ...CalendarTemplate.args,
-    visibleDuration: { months: 6 },
+    visibleDuration: { months: 3 },
     minValue: new CalendarDate(2026, 1, 1),
-    maxValue: new CalendarDate(2026, 12, 31),
-    firstDayOfWeek: "mon",
-    isDisabled: false,
+    maxValue: new CalendarDate(2026, 3, 31),
     pageBehavior: "visible",
   },
 };
