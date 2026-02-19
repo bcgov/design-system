@@ -4,6 +4,8 @@ import { isWeekend, today, getLocalTimeZone } from "@internationalized/date";
 import { useLocale } from "react-aria-components";
 
 export default function CalendarPage() {
+  const { locale } = useLocale();
+
   return (
     <>
       <h2>Calendar</h2>
@@ -31,7 +33,7 @@ export default function CalendarPage() {
               minValue={today(getLocalTimeZone()).subtract({ months: 1 })}
               maxValue={today(getLocalTimeZone()).add({ months: 1 })}
               visibleDuration={{ months: 3 }}
-              isDateUnavailable={(date) => isWeekend(date, useLocale().locale)}
+              isDateUnavailable={(date) => isWeekend(date, locale)}
             />
           </div>
         </div>
