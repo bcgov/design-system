@@ -1,10 +1,14 @@
 .bcds-react-aria-Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--layout-padding-small);
+  min-height: 24px;
+  min-width: 24px;
+  box-sizing: border-box;
   border: none;
   border-radius: var(--layout-border-radius-medium);
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: var(--layout-padding-small);
   font: var(--typography-regular-body);
 }
 .bcds-react-aria-Button[data-disabled] {
@@ -16,15 +20,8 @@
   outline-offset: var(--layout-margin-hair);
 }
 
-/* Icon button */
-.bcds-react-aria-Button.icon {
-  align-items: center;
-  justify-content: space-around;
-}
-
 /* Sizes */
 .bcds-react-aria-Button.xsmall {
-  min-height: 24px;
   padding: var(--layout-padding-hair) var(--layout-padding-small);
   font: var(--typography-regular-label);
 }
@@ -32,7 +29,6 @@
   padding: unset;
   height: 24px;
   width: 24px;
-  min-width: 24px;
 }
 .bcds-react-aria-Button.small {
   min-height: 32px;
