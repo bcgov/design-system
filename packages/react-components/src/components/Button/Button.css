@@ -36,7 +36,8 @@
 }
 .bcds-react-aria-Button.small {
   min-height: 32px;
-  padding: var(--layout-padding-none) 0.75rem /* to be replaced with new token later */;
+  padding: var(--layout-padding-none) 0.75rem
+    /* to be replaced with new token later */;
   font: var(--typography-regular-small-body);
 }
 .bcds-react-aria-Button.small.icon {
@@ -73,7 +74,7 @@
 /* Variant - Primary */
 .bcds-react-aria-Button.primary {
   background: var(--surface-color-primary-button-default);
-  color: var(--icons-color-primary-invert);
+  color: var(--typography-color-primary-invert);
 }
 .bcds-react-aria-Button.primary.danger {
   background-color: var(--surface-color-primary-danger-button-default);
@@ -88,11 +89,21 @@
 .bcds-react-aria-Button.primary.danger[data-hovered] {
   background-color: var(--surface-color-primary-danger-button-hover);
 }
+.bcds-react-aria-Button.primary.danger[data-pressed],
+.bcds-react-aria-Button.primary.danger[data-hovered][data-pressed] {
+  background-color: var(--support-surface-color-danger);
+  color: var(--surface-color-primary-danger-button-default);
+}
+.bcds-react-aria-Button.primary[data-pressed],
+.bcds-react-aria-Button.primary[data-hovered][data-pressed] {
+  background-color: var(--surface-color-primary-pressed);
+}
 
 /* Variant - Secondary */
 .bcds-react-aria-Button.secondary {
   background-color: var(--surface-color-secondary-button-default);
-  border: 1px solid var(--surface-color-border-dark);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-dark);
   color: var(--typography-color-primary);
 }
 .bcds-react-aria-Button.secondary.danger {
@@ -109,6 +120,15 @@
 }
 .bcds-react-aria-Button.secondary.danger[data-hovered] {
   background-color: var(--support-surface-color-danger);
+}
+.bcds-react-aria-Button.secondary.danger[data-pressed],
+.bcds-react-aria-Button.secondary.danger[data-hovered][data-pressed] {
+  background-color: var(--surface-color-primary-danger-button-default);
+  color: var(--typography-color-primary-invert);
+}
+.bcds-react-aria-Button.secondary[data-pressed],
+.bcds-react-aria-Button.secondary[data-hovered][data-pressed] {
+  background-color: var(--surface-color-secondary-pressed);
 }
 
 /* Variant - Tertiary */
@@ -128,6 +148,14 @@
 }
 .bcds-react-aria-Button.tertiary.danger[data-hovered] {
   background-color: var(--support-surface-color-danger);
+}
+.bcds-react-aria-Button.tertiary[data-pressed],
+.bcds-react-aria-Button.tertiary[data-hovered][data-pressed] {
+  background-color: var(--surface-color-tertiary-pressed);
+}
+.bcds-react-aria-Button.tertiary.danger[data-pressed],
+.bcds-react-aria-Button.tertiary.danger[data-hovered][data-pressed] {
+  background-color: var(--surface-color-tertiary-pressed);
 }
 
 /* Variant - Link */
