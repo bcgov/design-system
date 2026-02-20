@@ -27,6 +27,11 @@ main {
 }
 
 /* Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-medium);
+}
 .row {
   display: flex;
   flex-direction: row;
