@@ -96,8 +96,10 @@
 .bcds-react-aria-Calendar--Cell[data-today] {
   font: var(--typography-bold-small-body);
 }
-.bcds-react-aria-Calendar--Cell[data-disabled] {
+.bcds-react-aria-Calendar--Cell[data-disabled],
+.bcds-react-aria-Calendar--Cell[data-unavailable][data-disabled] {
   color: var(--typography-color-disabled);
+  text-decoration: none;
   cursor: not-allowed;
 }
 .bcds-react-aria-Calendar--Cell[data-unavailable] {
