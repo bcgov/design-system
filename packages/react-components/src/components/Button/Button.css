@@ -59,7 +59,6 @@
 .bcds-react-aria-Button.large.link {
   min-height: 48px;
   padding: var(--layout-padding-none) var(--layout-padding-large);
-  font: var(--typography-regular-large-body);
 }
 .bcds-react-aria-Button.large.icon {
   padding: unset;
