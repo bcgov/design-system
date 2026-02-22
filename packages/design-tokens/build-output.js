@@ -250,6 +250,31 @@ const sd = new StyleDictionary({
         },
       ],
     },
+    scssPrefixed: {
+      transformGroup: "tokens-studio",
+      transforms: [
+        "bcds/typography/italic",
+        "bcds/color/uppercase",
+        "bcds/css/size/zero",
+        "name/kebab",
+      ],
+      buildPath: "build/scss-prefixed/",
+      prefix: "bcds",
+      files: [
+        {
+          destination: "variables.scss",
+          format: "scss/map-deep",
+          filter: (t) => (
+            /* strip metadata */
+            !(['$themes', '$metadata'].includes(t))
+          ),
+          options: {
+            "mapName": "bcds",
+            "themeable": false
+          }
+        },
+      ],
+    },
   },
 });
 

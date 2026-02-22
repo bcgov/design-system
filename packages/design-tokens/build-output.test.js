@@ -41,6 +41,7 @@ test("output files should exist after running build-output.js", async () => {
     "build/cjs-prefixed/index.js",
     "build/cjs-prefixed/index.d.ts",
     "build/scss/variables.scss",
+    "build/scss-prefixed/variables.scss",
   ];
 
   for (const file of outputFiles) {
