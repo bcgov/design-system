@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { TagGroup, TagList } from "../components";
 
 const meta = {
-  title: "Components/TagGroup",
+  title: "Inputs and controls/TagGroup",
   component: TagGroup,
   parameters: {
     layout: "centered",

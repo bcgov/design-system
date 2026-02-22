@@ -14,7 +14,7 @@ export interface HeaderProps {
   /**
    * Image used for the logo. Defaults to an SVG of the Government of B.C. logo.
    */
-  logoImage?: JSX.Element;
+  logoImage?: React.ReactNode;
   /**
    * Array of link elements that are not visible until they are focused. Used
    * for accessibility for keyboard users, to let them easily skip to main
@@ -47,7 +47,12 @@ export default function Header({
         </a>
       );
 
-    return cloneElement(logoLinkElement, { children: logoImage });
+    // The `<any>` type below is necessary to allow users to specify their own
+    // link elements from any router library.
+    // eslint-disable-next-line
+    return cloneElement(logoLinkElement as React.ReactElement<any>, {
+      children: logoImage,
+    });
   }
 
   function getTitle() {

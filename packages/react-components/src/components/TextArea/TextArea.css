@@ -83,13 +83,10 @@
 }
 
 /* Disabled and invalid states */
-.bcds-react-aria-TextArea[data-disabled]
-  > .bcds-react-aria-TextArea--Container {
+.bcds-react-aria-TextArea[data-disabled] > .bcds-react-aria-TextArea--Container,
+.bcds-react-aria-TextArea[data-disabled] .bcds-react-aria-TextArea--Input {
   background: var(--surface-color-forms-disabled);
-  cursor: not-allowed;
-}
-
-.bcds-react-aria-TextArea--Input[data-disabled] {
+  color: var(--typography-color-placeholder);
   cursor: not-allowed;
 }
 
@@ -100,14 +97,8 @@
   background: var(--surface-color-forms-default);
 }
 
-.bcds-react-aria-TextArea[data-readonly]
-  > .bcds-react-aria-TextArea--Container {
-  background: var(--surface-color-forms-disabled);
-}
-
-.bcds-react-aria-TextArea[data-readonly]
-  > .bcds-react-aria-TextArea--Container
-  > .bcds-react-aria-TextArea--Input {
+.bcds-react-aria-TextArea[data-readonly] > .bcds-react-aria-TextArea--Container,
+.bcds-react-aria-TextArea[data-readonly] .bcds-react-aria-TextArea--Input {
   background: var(--surface-color-forms-disabled);
 }
 

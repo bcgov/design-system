@@ -1,3 +1,4 @@
+import { describe, expect, it, vi } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
@@ -85,8 +86,8 @@ describe("AlertDialog", () => {
   });
 
   it("can be passed Button components that can be pressed when open", () => {
-    const handleCancel = jest.fn();
-    const handleSubmit = jest.fn();
+    const handleCancel = vi.fn();
+    const handleSubmit = vi.fn();
     render(
       <DialogTrigger>
         <Button>Open</Button>

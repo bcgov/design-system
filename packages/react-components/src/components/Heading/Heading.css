@@ -1,0 +1,44 @@
+/* Headings */
+h1.bcds-react-aria-Heading {
+  font: var(--typography-bold-h1);
+}
+
+h2.bcds-react-aria-Heading {
+  font: var(--typography-bold-h2);
+}
+
+h3.bcds-react-aria-Heading {
+  font: var(--typography-bold-h3);
+}
+
+h4.bcds-react-aria-Heading {
+  font: var(--typography-bold-h4);
+}
+
+h5.bcds-react-aria-Heading {
+  font: var(--typography-bold-h5);
+}
+
+h6.bcds-react-aria-Heading {
+  font: var(--typography-bold-h6);
+}
+
+/* Text colour */
+.bcds-react-aria-Heading.primary {
+  color: var(--typography-color-primary);
+}
+.bcds-react-aria-Heading.primaryInvert {
+  color: var(--typography-color-primary-invert);
+}
+.bcds-react-aria-Heading.secondary {
+  color: var(--typography-color-secondary);
+}
+.bcds-react-aria-Heading.secondaryInvert {
+  color: var(--typography-color-secondary-invert);
+}
+.bcds-react-aria-Heading.disabled {
+  color: var(--typography-color-disabled);
+}
+.bcds-react-aria-Heading.danger {
+  color: var(--typography-color-danger);
+}

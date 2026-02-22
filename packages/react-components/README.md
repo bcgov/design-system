@@ -1,8 +1,6 @@
 # @bcgov/design-system-react-components
 
-[![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
-
-This package contains a library of React components built using [React Aria Components](https://react-spectrum.adobe.com/react-aria/components.html) to implement the [B.C. Design System](https://gov.bc.ca/designsystem).
+This package contains a library of React components built using [React Aria](https://react-aria.adobe.com) to implement the [B.C. Design System](https://gov.bc.ca/designsystem).
 
 Questions? Please email the <a href="mailto:DesignSystem@gov.bc.ca">GDX OSS Design Team</a>.
 
@@ -68,33 +66,40 @@ export default function App() {
 
 ## Component list
 
-| Component               | React Aria Components docs link                                  |
-| ----------------------- | ---------------------------------------------------------------- |
-| AlertBanner             | N/A                                                              |
-| AlertDialog             | N/A                                                              |
-| Accordion               | https://react-spectrum.adobe.com/react-aria/Disclosure.html      |
-| AccordionGroup          | https://react-spectrum.adobe.com/react-aria/DisclosureGroup.html |
-| Button                  | https://react-spectrum.adobe.com/react-aria/Button.html          |
-| ButtonGroup             | N/A                                                              |
-| Callout                 | N/A                                                              |
-| Checkbox                | https://react-spectrum.adobe.com/react-aria/Checkbox.html        |
-| CheckboxGroup           | https://react-spectrum.adobe.com/react-aria/CheckboxGroup.html   |
-| Dialog                  | https://react-spectrum.adobe.com/react-aria/Dialog.html          |
-| Footer                  | N/A                                                              |
-| Form                    | https://react-spectrum.adobe.com/react-aria/Form.html            |
-| Header                  | N/A                                                              |
-| InlineAlert             | N/A                                                              |
-| Modal                   | https://react-spectrum.adobe.com/react-aria/Modal.html           |
-| RadioGroup, Radio       | https://react-spectrum.adobe.com/react-aria/RadioGroup.html      |
-| Select                  | https://react-spectrum.adobe.com/react-aria/Select.html          |
-| Switch                  | https://react-spectrum.adobe.com/react-aria/Switch.html          |
-| TagGroup, TagList, Tag  | https://react-spectrum.adobe.com/react-aria/TagGroup.html        |
-| TextArea, TextField     | https://react-spectrum.adobe.com/react-aria/TextField.html       |
-| Tooltip, TooltipTrigger | https://react-spectrum.adobe.com/react-aria/Tooltip.html         |
+| Component               | React Aria docs link                           |
+| ----------------------- | ---------------------------------------------- |
+| AlertBanner             | N/A                                            |
+| AlertDialog             | N/A                                            |
+| Accordion               | https://react-aria.adobe.com/Disclosure        |
+| AccordionGroup          | https://react-aria.adobe.com/DisclosureGroup   |
+| Button                  | https://react-aria.adobe.com/Button            |
+| ButtonGroup             | N/A                                            |
+| Calendar                | https://react-aria.adobe.com/Calendar          |
+| Callout                 | N/A                                            |
+| Checkbox                | https://react-aria.adobe.com/Checkbox          |
+| CheckboxGroup           | https://react-aria.adobe.com/CheckboxGroup     |
+| DatePicker              | https://react-aria.adobe.com/DatePicker        |
+| Dialog                  | https://react-aria.adobe.com/Dialog            |
+| Footer                  | N/A                                            |
+| Form                    | https://react-aria.adobe.com/Form              |
+| Header                  | N/A                                            |
+| Heading                 | https://react-spectrum.adobe.com/v3/Heading    |
+| InlineAlert             | N/A                                            |
+| Modal                   | https://react-aria.adobe.com/Modal             |
+| Link                    | https://react-spectrum.adobe.com/v3/Link       |
+| RadioGroup, Radio       | https://react-aria.adobe.com/RadioGroup        |
+| Select                  | https://react-aria.adobe.com/Select            |
+| Switch                  | https://react-aria.adobe.com/Switch            |
+| TagGroup, TagList, Tag  | https://react-aria.adobe.com/TagGroup          |
+| Text                    | https://react-spectrum.adobe.com/v3/Text       |
+| TextArea, TextField     | https://react-aria.adobe.com/TextField         |
+| ToggleButton            | https://react-aria.adobe.com/ToggleButton      |
+| ToggleButtonGroup       | https://react-aria.adobe.com/ToggleButtonGroup |
+| Tooltip, TooltipTrigger | https://react-aria.adobe.com/Tooltip           |
 
 ## Supported React versions
 
-This package has a peer dependency on `react` and `react-dom` at these versions: `"^16.14.0 || ^17.0.0-rc.1 || ^18.0.0"`
+This package has a peer dependency on `react` and `react-dom` at these versions: `"^16.14.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0"`
 
 By targeting v16.14.0 as a minimum, we get to use [React's modern JSX transformation](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) in `tsconfig.json`:
 
@@ -114,9 +119,9 @@ This project follows semantic versioning. See [CHANGELOG.md](./CHANGELOG.md) for
 
 Components live in `./src/components` and are targeted by the build process with an export in `./src/index.ts`.
 
-#### Testing components with Jest
+#### Testing components with Vitest
 
-Unit tests can be run with Jest using `npm run test`.
+Unit tests can be run with Vitest using `npm run test`. Use `npm run test:watch` to run Vitest in watch mode.
 
 ### Storybook
 
@@ -136,9 +141,9 @@ oc tag ed91fb-tools/design-system-react-components-storybook:develop ed91fb-tool
 oc tag ed91fb-tools/design-system-react-components-storybook:develop ed91fb-tools/design-system-react-components-storybook:production
 ```
 
-#### Testing with Storybook Test Runner
+#### Testing Storybook with Vitest
 
-With Storybook running locally, use the `npm run test-storybook` script to run `@storybook/test-runner` using the configuration defined in `./.storybook/test-runner.ts`. [Learn more about Storybook Test Runner](https://storybook.js.org/docs/writing-tests/test-runner).
+With Storybook running locally, use the `npm run test-storybook` script to test Storybook with Vitest's browser mode. This script uses the configuration defined in `./vite.config.ts`. [Learn more about Storybook's Vitest addon.](https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon).
 
 ### Vite kitchen sink application
 
@@ -146,17 +151,48 @@ Vite uses the components code directly from `./src/components` in groups of cont
 
 Run `npm run vite-dev` to access the Vite React demo app.
 
+### Build library code for publishing
+
+#### Build scripts
+
+Scripts are included in `package.json` for building the component library for publishing:
+
+- `clean` removes any existing local `dist` directory
+- `build:js` uses Rollup to create ESM and CJS versions of the components in `dist/esm` and `dist/cjs`
+- `build:types` uses the TypeScript compiler `tsc` to generate type declarations in `dist/types`
+- `build:dts` uses Rollup to bundle the `.d.ts` files from `dist/types` into a single `dist/index.d.ts` file
+- `build` runs all of the scripts above in sequence
+
+The files that get published are specified in the `files` section of `package.json`. The `dist/types` folder isn't included in this bundle in favor of publishing just the single aggregated `dist/index.d.ts` file.
+
+#### Check files to be published
+
+Use `npm pack --dry-run` to see the files that will be published in the package tarball. See [npm-pack documentation](https://docs.npmjs.com/cli/v11/commands/npm-pack).
+
+#### Testing a local build
+
+Use `npm link` to test a build of the component library locally. See [npm-link documentation](https://docs.npmjs.com/cli/v11/commands/npm-link).
+
+In your `./packages/react-components` folder, run `npm link`.
+
+Then in a local React project folder, use `npm link @bcgov/design-system-react-components` to link the test build into your test project.
+
+### Linting
+
+ESLint is used for linting. See configuration file `eslint.config.js`.
+
 ### Publish new versions
 
 #### npm package
 
-To generate an updated copy of the package for distribution, run the included Rollup script: `npm run rollup`.
+Publishing new versions of the package to npm is done via GitHub Actions.
 
-This will place artifacts in the `dist` folder, which is targeted for publishing in `package.json` with the [`files` field](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#files).
+GitHub Actions are located in `/.github/workflows` in the project root. Actions are included to:
 
-Update the package version in `package.json` and run `npm publish` to push a new version.
-
-To publish a beta/release candidate version, use `npm publish --tag next`.
+- Build the Storybook and Vite applications on merge to `main`
+- Test (Vitest and Playwright) on pull request
+- Publish new versions of the library on npm (`next` tag) on merge to `main`
+- Publish new versions of the library on npm (`latest` tag) when a GitHub release is published
 
 #### GitHub release
 
@@ -174,12 +210,6 @@ From the [Releases page](https://github.com/bcgov/design-system/releases), click
 
 For "Choose a tag", select the tag you created. For the previous tag, use the previous version of the same package.
 
-Copy the Changelog notes for the new version and link to the npm page for the new version.
+Copy the changelog notes for the new version and link to the npm page for the new version. Ensure that `package.json` has been updated with the correct version number.
 
-### GitHub Actions
-
-GitHub Actions are located in `/.github/workflows` in the project root. Actions are included to:
-
-- Build the Storybook and Vite applications on merge to `main`
-- Test (Jest and Playwright) on pull request
-- Publish new versions of the library on npm (`next` tag) on merge to `main`
+Publish the release to publish the latest version of the library on npm. The release tag must start with `@bcgov/design-system-react-components` to trigger the publish workflow.

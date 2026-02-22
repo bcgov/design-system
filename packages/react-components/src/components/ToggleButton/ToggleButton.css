@@ -1,0 +1,102 @@
+.bcds-react-aria-ToggleButton {
+  display: inline-flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  white-space: normal;
+  box-sizing: border-box;
+  gap: var(--layout-margin-xsmall);
+  align-items: center;
+  justify-content: center;
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
+  color: var(--typography-color-secondary);
+  background-color: var(--surface-color-secondary-button-disabled);
+  border: var(--layout-border-width-small) solid transparent;
+  border-radius: var(--layout-border-radius-medium);
+  cursor: pointer;
+}
+
+/* Size */
+.bcds-react-aria-ToggleButtonGroup.small > .bcds-react-aria-ToggleButton,
+.bcds-react-aria-ToggleButton.small {
+  font: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-ToggleButtonGroup.medium > .bcds-react-aria-ToggleButton,
+.bcds-react-aria-ToggleButton.medium {
+  font: var(--typography-regular-body);
+}
+
+/* Icon button */
+.bcds-react-aria-ToggleButton.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.bcds-react-aria-ToggleButton.icon > * {
+  line-height: 0;
+}
+
+.bcds-react-aria-ToggleButton.small.icon {
+  padding: unset;
+  height: var(--icons-size-large);
+  width: var(--icons-size-large);
+  min-width: var(--icons-size-large);
+}
+
+.bcds-react-aria-ToggleButton.medium.icon {
+  padding: unset;
+  height: var(--icons-size-xlarge);
+  width: var(--icons-size-xlarge);
+  min-width: var(--icons-size-xlarge);
+}
+
+/* Active */
+.bcds-react-aria-ToggleButton[data-selected] {
+  background-color: var(--surface-color-secondary-button-default);
+  color: var(--typography-color-primary);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-secondary-button-default);
+  box-shadow: var(--surface-shadow-small);
+  /* Animate transition on select or deselect */
+  transition: 200ms ease;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+/* Hover */
+.bcds-react-aria-ToggleButton[data-hovered] {
+  background-color: var(--surface-color-secondary-pressed);
+  color: var(--typography-color-primary);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-medium);
+  border-radius: var(--layout-border-radius-medium);
+}
+/* Focused */
+.bcds-react-aria-ToggleButton[data-focus-visible] {
+  background-color: var(--theme-blue-10);
+  outline: var(--layout-border-width-medium) solid
+    var(--surface-color-border-active);
+}
+
+/* Pressed */
+.bcds-react-aria-ToggleButton[data-hovered][data-pressed] {
+  background-color: var(--theme-gray-20);
+  border: var(--layout-border-width-small) solid var(--theme-gray-20);
+}
+
+/* Disabled */
+.bcds-react-aria-ToggleButton[data-disabled] {
+  color: var(--typography-color-disabled);
+  cursor: not-allowed;
+  /* Animate transition on disable or enable */
+  transition: 200ms ease;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}

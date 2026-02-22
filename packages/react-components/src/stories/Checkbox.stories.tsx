@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Checkbox } from "../components";
 import { CheckboxProps } from "../components/Checkbox";
 
 const meta = {
-  title: "Components/CheckboxGroup/Checkbox",
+  title: "Inputs and controls/CheckboxGroup/Checkbox",
   component: Checkbox,
   parameters: {
     layout: "centered",

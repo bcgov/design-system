@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Accordion, AccordionGroup } from "../components";
 import { AccordionGroupProps } from "@/components/AccordionGroup";
 
 const meta = {
-  title: "Components/AccordionGroup/AccordionGroup",
+  title: "Content/AccordionGroup",
   component: AccordionGroup,
   parameters: { layout: "centered" },
   argTypes: {

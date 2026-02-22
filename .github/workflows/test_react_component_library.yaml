@@ -1,4 +1,6 @@
 name: Test React components library
+permissions:
+  contents: read
 
 on:
   pull_request:
@@ -12,20 +14,20 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  jest-unit-tests:
-    name: Jest unit tests
+  vitest-unit-tests:
+    name: Vitest unit tests
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Read .nvmrc
         run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
         working-directory: ./packages/react-components
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
 
@@ -39,7 +41,7 @@ jobs:
         working-directory: ./packages/react-components
 
       - name: Run test suite
-        run: npm run test:ci
+        run: npm run test
         working-directory: ./packages/react-components
 
       # Treat failures in the Vite build as test failures.
@@ -55,14 +57,14 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Read .nvmrc
         run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
         working-directory: ./packages/react-components
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
 
@@ -82,5 +84,5 @@ jobs:
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
             "npx http-server storybook-static --port 6006 --silent" \
-            "npx wait-on tcp:6006 && npm run test-storybook:ci"
+            "npx wait-on tcp:6006 && npm run test-storybook"
         working-directory: ./packages/react-components

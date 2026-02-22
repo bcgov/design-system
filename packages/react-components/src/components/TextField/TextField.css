@@ -88,12 +88,9 @@
 /* Disabled and invalid states */
 
 .bcds-react-aria-TextField[data-disabled]
-  > .bcds-react-aria-TextField--container {
+  > .bcds-react-aria-TextField--container,
+.bcds-react-aria-TextField[data-disabled] .bcds-react-aria-TextField--Input {
   background: var(--surface-color-forms-disabled);
-  cursor: not-allowed;
-}
-
-.bcds-react-aria-TextField--Input[data-disabled] {
   color: var(--typography-color-placeholder);
   cursor: not-allowed;
 }
@@ -107,7 +104,8 @@
 }
 
 .bcds-react-aria-TextField[data-readonly]
-  > .bcds-react-aria-TextField--container {
+  > .bcds-react-aria-TextField--container,
+.bcds-react-aria-TextField[data-readonly] .bcds-react-aria-TextField--Input {
   background: var(--surface-color-forms-disabled);
 }
 

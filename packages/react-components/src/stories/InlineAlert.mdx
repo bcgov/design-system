@@ -4,11 +4,10 @@ import {
   Canvas,
   Controls,
   Meta,
-  Primary,
   Source,
   Story,
   Subtitle,
-} from "@storybook/blocks";
+} from "@storybook/addon-docs/blocks";
 
 import * as InlineAlertStories from "./InlineAlert.stories";
 
@@ -27,12 +26,12 @@ import * as InlineAlertStories from "./InlineAlert.stories";
 
 Learn more about working with the inline alert component:
 
-- [Usage and best practice guidance]()
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=B2B838CAA1EE4552941925894286258F)
 - [View the inline alert component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
 
 ## Controls
 
-<Primary of={InlineAlertStories} />
+<Canvas of={InlineAlertStories.InlineAlertTemplate} />
 <Controls of={InlineAlertStories.InlineAlertTemplate} />
 
 ## Configuration
@@ -72,13 +71,19 @@ Use the `title` and optional `description` props to populate an alert's content.
 
 <Canvas of={InlineAlertStories.InlineAlertTemplate} />
 
-Use the `buttons` prop to pass an array of button components, which are rendered inside a [ButtonGroup](?path=/docs/components-button-buttongroup--docs):
+Use the `buttons` prop to pass an array of button components, which are rendered inside a [ButtonGroup](/docs/inputs-and-controls-button-buttongroup--docs):
 
 <Canvas of={InlineAlertStories.AlertWithButtons} />
 
-Pass `isIconHidden` to hide the theme icon on the left:
+#### Icons
 
-<Canvas of={InlineAlertStories.InlineAlertWithoutIcon} />
+Use the `customIcon` prop to override the default icon set by `variant` (expects an SVG element, and renders it with a fixed height and minimum width):
+
+<Canvas of={InlineAlertStories.AlertWithCustomIcon} />
+
+Pass `isIconHidden` to hide the theme icon altogether:
+
+<Canvas of={InlineAlertStories.AlertWithoutIcon} />
 
 #### Overriding alert layout
 

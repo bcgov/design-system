@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Button, Tooltip, TooltipTrigger } from "../components";
 import { TooltipProps } from "../components/Tooltip";
 
 const meta = {
-  title: "Components/Tooltip/Tooltip",
+  title: "Notifications and feedback/Tooltip",
   component: Tooltip,
   parameters: {
     layout: "centered",

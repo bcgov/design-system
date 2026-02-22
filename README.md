@@ -1,7 +1,7 @@
-# B.C. Design System [![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+# B.C. Design System
 
 > [!NOTE]
-> **July 2024**: The B.C. Design System is currently in active development. If you have questions, [contact the design system team](#contact) or [open an issue](https://github.com/bcgov/design-system/issues).
+> Effective November 12, 2025, we are resuming development of the design system. If you have questions or ideas, email [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca) or [open an issue](https://github.com/bcgov/design-system/issues).
 
 The B.C. Design System gives design and software development teams the building blocks to deliver intuitive, accessible digital services.
 
@@ -11,7 +11,7 @@ The B.C. Design System comprises 4 core elements:
 - [Figma and React component libraries](#component-library)
 - [Documentation hub](https://gov.bc.ca/designsystem)
 
-The new design system replaces [the legacy design system](#legacy-documentation), which has now been archived.
+The new design system replaces [the legacy design system](/legacy), which has now been archived.
 
 ## B.C. Design Tokens
 
@@ -36,14 +36,4 @@ The component library is currently in active development. New components are add
 
 ## Contact
 
-The B.C. Design System is maintained by Service BC and Government Digital Experience (GDX), part of the Ministry of Citizens' Services. You can contact the design system team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca), or [open an issue](https://github.com/bcgov/design-system/issues/new/choose).
-
-## Legacy documentation
-
-> [!WARNING]
-> The previous B.C. government design system is no longer supported and has been archived. These resources are provided for reference only.
-
-Documentation and components for the legacy design system are accessible in this repo and on Classic DevHub:
-
-- [Developer documentation](https://classic.developer.gov.bc.ca/Design-System/About-the-Design-System)
-- [Source code](https://github.com/bcgov/design-system/tree/main/components)
+The B.C. Design System is maintained by the Corporate Online Services branch at Connected Services BC, part of the Ministry of Citizens' Services. You can contact the design system team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca), or [open an issue](https://github.com/bcgov/design-system/issues/new/choose).

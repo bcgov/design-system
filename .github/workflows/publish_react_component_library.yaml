@@ -1,4 +1,4 @@
-name: Publish @bcgov/design-system-react-components to npm @next
+name: Publish @bcgov/design-system-react-components to npm
 
 on:
   pull_request:
@@ -6,27 +6,33 @@ on:
       - packages/react-components/**
     branches: [main]
     types: [closed]
+  release:
+    types: [published]
+
+permissions:
+  id-token: write # Required for OIDC
+  contents: read
 
 jobs:
-  publish-react-component-library:
+  publish-react-component-library-next:
     name: Publish @bcgov/design-system-react-components@next
-    # Only run on merge, not close without merge AND
-    # only run in bcgov/design-system repo, not forks.
+    # Publish a `next` version on PR merge to main branch.
     if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Read .nvmrc
         run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
         working-directory: ./packages/react-components
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          registry-url: "https://registry.npmjs.org/"
 
       - name: Install dependencies
         run: npm install
@@ -55,15 +61,46 @@ jobs:
         shell: bash
         working-directory: ./packages/react-components
 
-      - name: Build with Rollup script
-        run: npm run rollup
+      - name: Build components for publishing
+        run: npm run build
+        working-directory: ./packages/react-components
+
+      - name: Publish to npm @next
+        run: npm publish --tag next
+        working-directory: ./packages/react-components
+
+  publish-react-component-library-latest:
+    name: Publish @bcgov/design-system-react-components@latest
+    # Publish a `latest` version only when a release is published that targets
+    # the React components package via a tag like:
+    # @bcgov/design-system-react-components@v1.2.3
+    if: ${{ github.event_name == 'release' && contains(github.event.release.tag_name, 'bcgov/design-system-react-components') }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Read .nvmrc
+        run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
+        working-directory: ./packages/react-components
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./packages/react-components
+
+      - name: Build components for publishing
+        run: npm run build
         working-directory: ./packages/react-components
 
       - name: Set up .npmrc configuration
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+        run: echo "//registry.npmjs.org/" > ~/.npmrc
 
-      - name: Publish to npm
-        run: npm publish --tag next
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish to npm @latest
+        run: npm publish --tag latest
         working-directory: ./packages/react-components

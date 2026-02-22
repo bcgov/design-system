@@ -4,11 +4,17 @@ import {
   Canvas,
   Controls,
   Meta,
-  Primary,
   Source,
   Story,
   Subtitle,
-} from "@storybook/blocks";
+} from "@storybook/addon-docs/blocks";
+
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
 
 import * as TextFieldStories from "./TextField.stories";
 
@@ -21,19 +27,36 @@ import * as TextFieldStories from "./TextField.stories";
   form.
 </Subtitle>
 
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA TextField component. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/TextField"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      TextField docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
 <Source
   code={`import { TextField } from "@bcgov/design-system-react-components"; `}
   language="typescript"
 />
 
-## Usage and resources
-
 Learn more about working with the text field component:
 
 - [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=4414329E9A214CED9B2E424B87C63391)
 - [View the text field component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
-
-This component is based on [React Aria TextField](https://react-spectrum.adobe.com/react-aria/TextField.html). Consult the React Aria documentation for additional technical information and a full list of supported props.
 
 ### Validation
 
@@ -45,7 +68,7 @@ As a general rule, the `placeholder` attribute should not be used on text fields
 
 ## Controls
 
-<Primary of={TextFieldStories} />
+<Canvas of={TextFieldStories.TextFieldTemplate} />
 <Controls of={TextFieldStories.TextFieldTemplate} />
 
 ## Configuration

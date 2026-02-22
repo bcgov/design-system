@@ -1,0 +1,64 @@
+/* Medium size (default) */
+.bcds-react-aria-Text.medium {
+  font: var(--typography-regular-body);
+}
+
+.bcds-react-aria-Text.medium b,
+.bcds-react-aria-Text.medium strong {
+  font: var(--typography-bold-body);
+}
+
+.bcds-react-aria-Text.medium i,
+.bcds-react-aria-Text.medium em {
+  font: var(--typography-italic-body);
+}
+
+/* Small size */
+.bcds-react-aria-Text.small {
+  font: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-Text.small b,
+.bcds-react-aria-Text.small strong {
+  font: var(--typography-bold-small-body);
+}
+
+.bcds-react-aria-Text.small i,
+.bcds-react-aria-Text.small em {
+  font: var(--typography-italic-small-body);
+}
+
+/* Large size */
+.bcds-react-aria-Text.large {
+  font: var(--typography-regular-large-body);
+}
+
+.bcds-react-aria-Text.large b,
+.bcds-react-aria-Text.large strong {
+  font: var(--typography-bold-large-body);
+}
+
+.bcds-react-aria-Text.large i,
+.bcds-react-aria-Text.large em {
+  font: var(--typography-italic-large-body);
+}
+
+/* Text color */
+.bcds-react-aria-Text.primary {
+  color: var(--typography-color-primary);
+}
+.bcds-react-aria-Text.primaryInvert {
+  color: var(--typography-color-primary-invert);
+}
+.bcds-react-aria-Text.secondary {
+  color: var(--typography-color-secondary);
+}
+.bcds-react-aria-Text.secondaryInvert {
+  color: var(--typography-color-secondary-invert);
+}
+.bcds-react-aria-Text.disabled {
+  color: var(--typography-color-disabled);
+}
+.bcds-react-aria-Text.danger {
+  color: var(--typography-color-danger);
+}

@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { AlertDialog, Button, DialogTrigger, Modal } from "../components";
 import { AlertDialogProps } from "@/components/AlertDialog";
 
 const meta = {
-  title: "Components/Dialogs/AlertDialog",
+  title: "Notifications and feedback/Dialogs/AlertDialog",
   component: AlertDialog,
   parameters: { layout: "centered" },
   argTypes: {

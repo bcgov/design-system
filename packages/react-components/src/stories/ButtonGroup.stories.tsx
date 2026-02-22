@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Button, ButtonGroup } from "../components";
 import { ButtonGroupProps } from "@/components/ButtonGroup";
 
 const meta = {
-  title: "Components/Button/ButtonGroup",
+  title: "Inputs and controls/Button/ButtonGroup",
   component: ButtonGroup,
   parameters: {
     layout: "centered",

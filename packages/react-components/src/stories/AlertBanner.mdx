@@ -4,16 +4,15 @@ import {
   Canvas,
   Controls,
   Meta,
-  Primary,
   Source,
   Story,
   Subtitle,
-} from "@storybook/blocks";
+} from "@storybook/addon-docs/blocks";
 
 import * as AlertBannerStories from "./AlertBanner.stories";
 import { AlertBanner } from "../components";
 
-<Meta title="Components/AlertBanner/AlertBanner" />
+<Meta title="Notifications and feedback/AlertBanner" />
 
 # Alert Banner
 
@@ -37,7 +36,7 @@ Learn more about working with the alert banner component:
 
 ## Controls
 
-<Primary of={AlertBannerStories} />
+<Canvas of={AlertBannerStories.AlertBannerTemplate} />
 <Controls of={AlertBannerStories.AlertBannerTemplate} />
 
 ## Configuration

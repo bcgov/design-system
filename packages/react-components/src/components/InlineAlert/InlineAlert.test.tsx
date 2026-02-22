@@ -1,3 +1,4 @@
+import { afterEach, describe, expect, it, vi } from "vitest";
 import "@testing-library/jest-dom";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 
@@ -21,7 +22,7 @@ describe("InlineAlert", () => {
   });
 
   it("isCloseable prop causes a close button to be rendered", () => {
-    const handleClose = jest.fn();
+    const handleClose = vi.fn();
     render(
       <InlineAlert isCloseable onClose={handleClose} data-test-id="closeable" />
     );

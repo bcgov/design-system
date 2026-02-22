@@ -27,7 +27,6 @@ export default function useWindowDimensions() {
 
   useEffect(() => {
     if (hasWindow) {
-      // eslint-disable-next-line no-inner-declarations
       function handleResize() {
         setWindowDimensions(getWindowDimensions());
       }

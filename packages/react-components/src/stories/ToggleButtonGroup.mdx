@@ -1,0 +1,150 @@
+{/* ToggleButtonGroup.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
+import * as ToggleButtonGroupStories from "./ToggleButtonGroup.stories";
+import * as ToggleButtonStories from "./ToggleButton.stories";
+
+<Meta title="Inputs and controls/Toggle buttons" />
+
+# Toggle buttons
+
+<Subtitle>
+  A toggle button sets a setting on or off, and can be used to switch between
+  different modes or states.
+</Subtitle>
+
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA ToggleButton and ToggleButtonGroup components. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/ToggleButton"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      ToggleButton docs
+    </Link>,
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/ToggleButtonGroup"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      ToggleButtonGroup docs
+    </Link>,
+  ]}
+/>
+
+<Source
+  code={`import { ToggleButton, ToggleButtonGroup } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Learn more about working with the toggle button and toggle button group components:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=FAE017578EED4A4980E2C1B8BE3415F9)
+- [View the text field component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+This component is based on React Aria [ToggleButton](https://react-spectrum.adobe.com/react-aria/ToggleButton.html) and [ToggleButtonGroup](https://react-spectrum.adobe.com/react-aria/ToggleButtonGroup.html). Consult the React Aria documentation for additional technical information and a full list of supported props.
+
+## Controls
+
+A `ToggleButton` can be used standalone, or multiple can be rendered inside a `ToggleButtonGroup`. `ToggleButton` and `ToggleButtonGroup` each have their own set of props.
+
+### Toggle button
+
+<Canvas of={ToggleButtonStories.ToggleButtonTemplate} />
+<Controls of={ToggleButtonStories.ToggleButtonTemplate} />
+
+### Toggle button group
+
+<Canvas of={ToggleButtonGroupStories.ToggleButtonGroupTemplate} />
+<Controls of={ToggleButtonGroupStories.ToggleButtonGroupTemplate} />
+
+## Configuration
+
+### Button size
+
+Set the `size` prop to `small` on a button group to render child buttons with less vertical padding:
+
+<Canvas of={ToggleButtonGroupStories.SmallToggleButtonGroup} />
+
+The `size` prop can also be used directly on an individual toggle button:
+
+<Canvas of={ToggleButtonStories.SmallToggleButton} />
+
+### Icon buttons
+
+Use `isIconButton` and pass an icon to the `children` slot to render a button without a text label:
+
+<Canvas of={ToggleButtonStories.IconOnlyToggleButton} />
+
+When using icon-only buttons, you must also set a descriptive label using the `aria-label` prop.
+
+### Orientation
+
+The `orientation` prop (defaults to `horizontal`) sets the visual layout and keyboard navigation direction of a `ToggleButtonGroup`:
+
+#### Horizontal
+
+<Canvas of={ToggleButtonGroupStories.ToggleButtonGroupTemplate} />
+
+#### Vertical
+
+<Canvas of={ToggleButtonGroupStories.VerticalToggleButtonGroup} />
+
+### Selection mode
+
+The `selectionMode` prop controls how many items within a `ToggleButtonGroup` can be selected (or toggled 'on') simultaneously.
+
+Use `selectedKeys` (controlled) or `defaultSelectedKeys` (uncontrolled) to pre-set selected options.
+
+#### Single
+
+By default, `selectionMode` is set to `single`. The active `ToggleButton` will be deactivated if another is selected:
+
+<Canvas of={ToggleButtonGroupStories.SingleSelect} />
+
+Use the `disallowEmptySelection` prop to control whether a selection is required, or if all options can be de-selected:
+
+<Canvas of={ToggleButtonGroupStories.SingleSelectDisallowEmpty} />
+
+#### Multiple
+
+If `selectionMode` is set to `multiple`, the user can toggle each value on or off discretely:
+
+<Canvas of={ToggleButtonGroupStories.MultipleSelect} />
+
+### Disabling items
+
+Set `isDisabled` on a `ToggleButton` to disable an individual option in a group:
+
+<Canvas of={ToggleButtonGroupStories.GroupWithDisabledOption} />
+
+Setting `isDisabled` on a `ToggleButtonGroup` will disable all options:
+
+<Canvas of={ToggleButtonGroupStories.DisabledToggleButtonGroup} />

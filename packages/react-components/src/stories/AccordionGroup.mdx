@@ -4,17 +4,22 @@ import {
   Canvas,
   Controls,
   Meta,
-  Primary,
   Source,
   Story,
   Subtitle,
-} from "@storybook/blocks";
+} from "@storybook/addon-docs/blocks";
 
 import * as AccordionStories from "./Accordion.stories";
 import * as AccordionGroupStories from "./AccordionGroup.stories";
-import { AccordionGroup } from "@/components";
+import {
+  AccordionGroup,
+  InlineAlert,
+  Link,
+  SvgReactAriaIcon,
+  SvgUpRightFromSquareIcon,
+} from "@/components";
 
-<Meta title="Components/AccordionGroup" />
+<Meta title="Content/AccordionGroup" />
 
 # Accordions
 
@@ -23,19 +28,46 @@ import { AccordionGroup } from "@/components";
   wraps multiple accordion items into a group.
 </Subtitle>
 
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA Disclosure and DisclosureGroup components. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/Disclosure"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      Disclosure docs
+    </Link>,
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/DisclosureGroup"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      DisclosureGroup docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
 <Source
   code={`import { Accordion, AccordionGroup } from "@bcgov/design-system-react-components";`}
   language="typescript"
 />
 
-## Usage and resources
-
 Learn more about working with the Accordion and AccordionGroup components:
 
 - [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=4E7662C2E0B245AA961329B0C9BA4DAC)
 - [View the select component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
-
-This component is based on the React Aria [Disclosure](https://react-spectrum.adobe.com/react-aria/Disclosure.html) and [DisclosureGroup](https://react-spectrum.adobe.com/react-aria/DisclosureGroup.html) components. Consult the React Aria documentation for additional technical information.
 
 ### Anatomy
 

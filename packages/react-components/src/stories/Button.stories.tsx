@@ -1,40 +1,40 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Button } from "../components";
 import { ButtonProps } from "@/components/Button";
 
 const meta = {
-  title: "Components/Button/Button",
+  title: "Inputs and controls/Button",
   component: Button,
   parameters: {
     layout: "centered",
   },
   argTypes: {
     size: {
-      options: ["medium", "small"],
+      options: ["large", "medium", "small", "xsmall"],
       control: { type: "radio" },
-      description: "Defaults to 'medium', also supports 'small",
+      description: "Sets the button's size",
     },
     variant: {
       options: ["primary", "secondary", "tertiary", "link"],
       control: { type: "radio" },
-      description:
-        "Defaults to 'primary', also 'secondary', 'tertiary', 'link'",
+      description: "Toggles between different hierarchical variants",
     },
     onPress: {
       description: "Click/press handler",
     },
     danger: {
       control: "boolean",
-      description: "Is the button's function dangerous/destructive",
+      description:
+        "Applies a red colourway for dangerous/destructive functions",
     },
     isDisabled: {
       control: "boolean",
-      description: "Is the button disabled",
+      description: "Sets the button to its disabled state",
     },
     isIconButton: {
       control: "boolean",
-      description: "Is the button a square button with only an icon inside",
+      description: "Sets the button to a square format for icon-only usages",
     },
   },
 } satisfies Meta<typeof Button>;
@@ -164,6 +164,14 @@ export const Danger: Story = {
   },
 };
 
+export const Large: Story = {
+  ...ButtonTemplate,
+  args: {
+    children: "Large",
+    size: "large",
+  },
+};
+
 export const Medium: Story = {
   ...ButtonTemplate,
   args: {
@@ -177,5 +185,13 @@ export const Small: Story = {
   args: {
     children: "Small",
     size: "small",
+  },
+};
+
+export const ExtraSmall: Story = {
+  ...ButtonTemplate,
+  args: {
+    children: "Extra small",
+    size: "xsmall",
   },
 };

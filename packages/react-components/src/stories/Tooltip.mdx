@@ -4,11 +4,17 @@ import {
   Canvas,
   Controls,
   Meta,
-  Primary,
   Source,
   Story,
   Subtitle,
-} from "@storybook/blocks";
+} from "@storybook/addon-docs/blocks";
+
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
 
 import * as TooltipStories from "./Tooltip.stories";
 
@@ -20,19 +26,36 @@ import * as TooltipStories from "./Tooltip.stories";
   A tooltip displays a description of an element on hover or focus.
 </Subtitle>
 
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA Tooltip and TooltipTrigger components. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/Tooltip"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      Tooltip docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
 <Source
   code={`import { Tooltip } from "@bcgov/design-system-react-components"; `}
   language="typescript"
 />
 
-## Usage and resources
-
 Learn more about working with the tooltip component:
 
 - [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=EC342F905ABF47FD8B131AB67D4EDD7B)
 - [View the tooltip component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
-
-This component is based on [React Aria Tooltip](https://react-spectrum.adobe.com/react-aria/Tooltip.html). Consult the React Aria documentation for additional technical information.
 
 ### Accessibility
 
@@ -67,8 +90,6 @@ Use the `children` prop for the descriptive text within the tooltip.
 ### Placement
 
 The optional `placement` prop determines where the tooltip displays in relation to the trigger element within `TooltipTrigger`.
-
-See the React Aria Components [Tooltip props documentation](https://react-spectrum.adobe.com/react-aria/Tooltip.html#tooltip-1) for all options.
 
 #### Top
 

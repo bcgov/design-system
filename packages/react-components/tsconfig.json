@@ -20,10 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    /* Rollup types */
-    "declaration": true,
-    "declarationDir": "types",
-
     /* Path alias for Vite app */
     "baseUrl": ".",
     "paths": {

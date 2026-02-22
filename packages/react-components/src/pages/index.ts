@@ -4,11 +4,14 @@ import ButtonPage from "./Button";
 import ButtonGroupPage from "./ButtonGroup";
 import CalloutPage from "./Callout";
 import CheckboxGroupPage from "./CheckboxGroup";
+import DatePickerPage from "./DatePicker";
 import InlineAlertPage from "./InlineAlert";
 import ModalDialogPage from "./ModalDialog";
+import NumberFieldPage from "./NumberField";
 import RadioGroupPage from "./RadioGroup";
 import SelectPage from "./Select";
 import TagGroupPage from "./TagGroup";
+import TextPage from "./TextPage";
 import TextAreaPage from "./TextArea";
 import TextFieldPage from "./TextField";
 import SwitchPage from "./Switch";
@@ -21,11 +24,14 @@ export {
   ButtonGroupPage,
   CalloutPage,
   CheckboxGroupPage,
+  DatePickerPage,
   InlineAlertPage,
   ModalDialogPage,
+  NumberFieldPage,
   RadioGroupPage,
   SelectPage,
   TagGroupPage,
+  TextPage,
   TextAreaPage,
   TextFieldPage,
   SwitchPage,

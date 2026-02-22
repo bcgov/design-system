@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { InlineAlert, Button } from "../components";
+import { InlineAlert, Button, SvgBcOutlineIcon } from "../components";
 import { InlineAlertProps } from "@/components/InlineAlert";
 
 const meta = {
-  title: "Components/Inline Alert/Inline Alert",
+  title: "Notifications and feedback/Inline Alert",
   component: InlineAlert,
   parameters: {
     layout: "centered",
@@ -22,6 +22,10 @@ const meta = {
     description: {
       control: { type: "text" },
       description: "Sets the alert text",
+    },
+    customIcon: {
+      control: { type: "object" },
+      description: "Overrides default icon",
     },
     buttons: {
       control: { type: "object" },
@@ -91,7 +95,15 @@ export const DangerAlert: Story = {
   },
 };
 
-export const InlineAlertWithoutIcon: Story = {
+export const AlertWithCustomIcon: Story = {
+  args: {
+    title: "This alert uses a custom icon",
+    description: "You can override the default icon set by the alert theme.",
+    customIcon: [<SvgBcOutlineIcon />],
+  },
+};
+
+export const AlertWithoutIcon: Story = {
   args: {
     title: "This alert has no visible icon",
     isIconHidden: true,

@@ -22,6 +22,7 @@ export default function AccordionGroupPage() {
             }}
           >
             <iframe
+              title="iframe example"
               src="https://giphy.com/embed/8gjHXLJumLNv1BtJxX"
               width="100%"
               height="100%"
@@ -86,7 +87,7 @@ export default function AccordionGroupPage() {
                 flexDirection: "row",
                 alignItems: "flex-start",
                 gap: "var(--layout-margin-none) var(--layout-margin-small)",
-                margin: "var(--layout-margin-small) var(--layout-margin-none);",
+                margin: "var(--layout-margin-small) var(--layout-margin-none)",
               }}
             >
               <Button variant="primary" size="small" type="submit">

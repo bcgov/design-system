@@ -1,44 +1,41 @@
-> [!WARNING]
-> **February 2024:** The contribution criteria and process are currently being redeveloped. An updated backlog will be published soon. If you have questions about how you can contribute to the design system, email <designsystem@gov.bc.ca>.
+# Contribute to the B.C. Design System
 
-# How you can contribute
-The B.C. Design System needs a strong community behind it to make it successful. You can contribute by reporting bugs, editing documentation, participating in discussions, or even creating new components. Your contribution to it will ensure it helps meets user needs from across the BC government. 
+The B.C. Design System is a resource for all designers and developers in the B.C. Public Service. Your ideas, feedback and support are essential to making it successful.
 
-## Discussing styles and components
-You can discuss the existing styles and components in the Design System, or ones being developed, by commenting on issues in the [component and design pattern backlog](https://github.com/bcgov/design-system/projects/1). Alternatively, you can email <designsystem@gov.bc.ca>.
+The design system is maintained by the Online Service Solutions team at Service BC, part of the Ministry of Citizens' Services. You can contact the team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca).
 
-For example, you can:
-- ask questions about a style or component
-- answer questions from other contributors
-- share examples or demos of a component
-- share research relating to a style or component
+## Suggest a new component or pattern
 
-## Propose a new component or pattern
-Anyone can propose a new component or pattern for the BC Design System.
-To be successful, proposals need to show that the component or pattern being suggested would be useful and unique.
+To propose a new component or pattern for inclusion in the design system, [open an issue](https://github.com/bcgov/design-system/issues) using the 'New component' template.
 
-Follow these 2 steps to propose a component or pattern for the Design System.
+We evaluate prospective new components based on:
 
-**1. Check the backlog**
+- Demonstrable impact in terms of functionality or usability of government digital service
+- Evidence that the functional need can't be met using existing components
+- Demand from the user community
 
-Check if the team has already included the idea in the [backlog](https://github.com/bcgov/design-system/projects/1
-), or if someone else has already suggested the same idea or something similar.
+Before suggesting a new component, first [check the roadmap](https://www2.gov.bc.ca/gov/content/digital/design-system/roadmap). It may already be in our backlog.
 
-**2. Raise an issue**
+## Contribute code or design
 
-If your idea is not on the backlog, raise an issue using the [Propose a New Component template](https://github.com/bcgov/design-system/issues/new/choose). 
+We welcome pull requests to fix issues in the codebase. Proposed changes should be fully documented, explaining:
 
-## Editing content
-If you believe the content on the design system could be written more clearly, raise an issue using the [Content Edit Request template](https://github.com/bcgov/design-system/issues/new/choose).
+- The problem and its impact for the user
+- The rationale behind the proposed solution
 
-## Reporting Bugs
-If you find a bug on the design system, raise an issue using the [Component Bug Report template](https://github.com/bcgov/design-system/issues/new/choose)
+If you'd like to contribute a larger feature (for example, a new component), we suggest that you reach out to us first to discuss it and agree a path forward.
 
-All contributors retain the original copyright to their stuff, but by contributing to this project, you grant a world-wide, royalty-free, perpetual, irrevocable, non-exclusive, transferable license to all users **under the terms of the license under which this project is distributed.**
+Before release, all components must have:
 
----
-Content has been modified from the GOV.UK Design System [“How you can contribute” page](https://github.com/alphagov/govuk-design-system-backlog/blob/master/docs/CONTRIBUTING.md)
+- A Figma component and design specification
+- A React component, using [React Aria Components](https://react-spectrum.adobe.com/react-aria/index.html) as a base (where applicable)
+- Technical documentation and examples in [Storybook](https://designsystem.gov.bc.ca/react-components/)
 
+All components must also undergo both human and automated accessibility testing, to ensure they conform to [WCAG 2.2 Level AA](https://www.w3.org/TR/WCAG22/) at a minimum.
 
+## Report a bug or ask a question
 
+If you encounter bugs or other issues using the design system, please let us know. You can:
 
+- [Open an issue](https://github.com/bcgov/design-system/issues) using the 'Bug' template (recommended)
+- [Email designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca)

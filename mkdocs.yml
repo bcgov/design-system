@@ -1,0 +1,15 @@
+site_name: "B.C. Design System"
+site_description: "The B.C. Design System helps public sector design and development teams build consistent, accessible products."
+docs_dir: "docs"
+repo_url: "https://github.com/bcgov/design-system"
+edit_uri: edit/main/docs
+nav:
+  - Introduction: index.md
+  - Getting started: getting-started.md
+  - Configuration: configuration.md
+  - About us: about-us.md
+plugins:
+  - techdocs-core
+  - git-revision-date-localized
+markdown_extensions:
+  - md_in_html

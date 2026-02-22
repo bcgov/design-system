@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bc-design-system
+  title: B.C. Design System
+  description: The B.C. Design System helps public sector design and development
+    teams build consistent, accessible products.
+  annotations:
+    github.com/project-slug: bcgov/design-system
+    backstage.io/techdocs-ref: dir:.
+    bcgovpubcode.gov.bc.ca/ministry: CITZ
+    bcgovpubcode.gov.bc.ca/product_name: B.C. Design System
+    bcgovpubcode.gov.bc.ca/product_description: The B.C. Design System helps public
+      sector design and development teams build consistent, accessible products.
+    bcgovpubcode.gov.bc.ca/product_owner: Marcus Kernohan
+    bcgovpubcode.gov.bc.ca/hosting_platform: Other
+    backstage.io/source-template: template:default/docs-template-pr
+spec:
+  type: documentation
+  lifecycle: production
+  owner: group:default/design-system-team

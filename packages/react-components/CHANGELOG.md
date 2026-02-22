@@ -1,5 +1,71 @@
 # Changelog
 
+## 0.6.1
+
+This is a patch release that fixes a bug in the DatePicker component.
+
+### Added
+
+- DatePicker: added test suite
+
+### Changed
+
+- DatePicker: format helper text now properly shows the default (`en-CA`) format, unless the component is explicitly configured to use the browser locale
+
+This release uses:
+
+- `react-aria-components` v1.14.0
+- `@bcgov/design-tokens` v3.2.0
+
+## 0.6.0
+
+This is a milestone release that adds four new components, and includes enhancements to existing components.
+
+### Added
+
+- ToggleButton and ToggleButtonGroup
+- DatePicker
+- NumberField
+
+### Changed
+
+- InlineAlert: added support for a custom icon, overriding the default set by each variant
+- TextField/TextArea: apply correct styling in disabled state
+- Storybook: reorganised components and made it easier to find full API documentation for React Aria-based components
+
+This release uses:
+
+- `react-aria-components` v1.14.0
+- `@bcgov/design-tokens` v3.2.0
+
+## 0.5.2
+
+This is a patch release that brings new options and refinements to the Button component.
+
+### Changed
+
+#### Button component
+
+- Added new `large` and `xsmall` size variants
+- Adjusted padding on all size variants to scale more consistently
+- Focus ring is now displayed only on keyboard focus, using `data-focus-visible` attribute
+
+This release uses:
+
+- `react-aria-components` v1.13.0
+- `@bcgov/design-tokens` v3.2.0
+
+## 0.5.1
+
+### Added
+
+- Added Heading, Text and Link components.
+
+This release uses:
+
+- `react-aria-components` v1.6.0
+- `@bcgov/design-tokens` v3.2.0
+
 ## 0.5.0
 
 This is a milestone release that contains the following new components:

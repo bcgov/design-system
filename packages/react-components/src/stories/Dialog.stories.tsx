@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import * as tokens from "@bcgov/design-tokens/js";
 
 import {
@@ -14,7 +14,7 @@ import {
 import { DialogProps } from "../components/Dialog";
 
 const meta = {
-  title: "Components/Dialogs/Dialog",
+  title: "Notifications and feedback/Dialogs/Dialog",
   component: Dialog,
   parameters: {
     layout: "centered",

@@ -1,6 +1,10 @@
 import React from "react";
 
 import {
+  ButtonPrimaryLarge,
+  ButtonPrimaryLargeDisabled,
+  ButtonPrimaryLargeIcon,
+  ButtonPrimaryLargeIconDisabled,
   ButtonPrimaryMedium,
   ButtonPrimaryMediumDisabled,
   ButtonPrimaryMediumIcon,
@@ -9,6 +13,10 @@ import {
   ButtonPrimarySmallDisabled,
   ButtonPrimarySmallIcon,
   ButtonPrimarySmallIconDisabled,
+  ButtonPrimaryXSmall,
+  ButtonPrimaryXSmallDisabled,
+  ButtonPrimaryXSmallIcon,
+  ButtonPrimaryXSmallIconDisabled
 } from "./ButtonPrimary";
 import {
   ButtonSecondaryMedium,
@@ -80,7 +88,15 @@ export default function ButtonPage() {
     <>
       <h2>Button</h2>
 
-      <hr />
+      <h3>Primary Button Large</h3>
+      <FlexRow>
+        <ButtonPrimaryLargeIcon />
+        <ButtonPrimaryLarge />
+        <ButtonPrimaryLargeIconDisabled />
+        <ButtonPrimaryLargeDisabled />
+      </FlexRow>
+
+       <hr />
 
       <h3>Primary Button Medium</h3>
       <FlexRow>
@@ -98,6 +114,16 @@ export default function ButtonPage() {
         <ButtonPrimarySmall />
         <ButtonPrimarySmallIconDisabled />
         <ButtonPrimarySmallDisabled />
+      </FlexRow>
+
+      <hr />
+
+      <h3>Primary Button X-Small</h3>
+      <FlexRow>
+        <ButtonPrimaryXSmallIcon />
+        <ButtonPrimaryXSmall />
+        <ButtonPrimaryXSmallIconDisabled />
+        <ButtonPrimaryXSmallDisabled />
       </FlexRow>
 
       <hr />

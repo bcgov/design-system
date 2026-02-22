@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { AlertBanner } from "../components";
 import { AlertBannerProps } from "@/components/AlertBanner";
@@ -6,7 +6,7 @@ import { Button } from "@/components";
 import { SvgBcOutlineIcon } from "@/components";
 
 const meta = {
-  title: "Components/AlertBanner/AlertBanner",
+  title: "Notifications and feedback/AlertBanner",
   component: AlertBanner,
   argTypes: {
     variant: {

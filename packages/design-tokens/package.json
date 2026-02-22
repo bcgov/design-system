@@ -1,6 +1,11 @@
 {
   "name": "design-tokens",
   "version": "3.2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcgov/design-system.git",
+    "directory": "packages/design-tokens"
+  },
   "description": "Transformation pipeline for design tokens for B.C. Design System",
   "scripts": {
     "build": "./run-build.sh",
@@ -9,10 +14,6 @@
     "test": "node --test build-output.test.js"
   },
   "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bcgov/design-system.git"
-  },
   "keywords": [
     "design system",
     "design tokens",
@@ -27,7 +28,7 @@
   },
   "homepage": "https://github.com/bcgov/design-system#readme",
   "dependencies": {
-    "@tokens-studio/sd-transforms": "1.2.3",
-    "style-dictionary": "4.0.1"
+    "@tokens-studio/sd-transforms": "2.0.3",
+    "style-dictionary": "5.2.0"
   }
 }

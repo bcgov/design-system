@@ -4,11 +4,10 @@ import {
   Canvas,
   Controls,
   Meta,
-  Primary,
   Source,
   Story,
   Subtitle,
-} from "@storybook/blocks";
+} from "@storybook/addon-docs/blocks";
 
 import * as CalloutStories from "./Callout.stories";
 
@@ -32,7 +31,7 @@ Learn more about working with the callout component:
 
 ## Controls
 
-<Primary of={CalloutStories} />
+<Canvas of={CalloutStories.CalloutTemplate} />
 <Controls of={CalloutStories.CalloutTemplate} />
 
 ## Configuration
@@ -54,7 +53,7 @@ The default callout layout has three content slots, populated via prop:
 
 - `title`: a bolded title field
 - `description`: the central content area
-- `buttons`: a [ButtonGroup](/docs/components-button-buttongroup--docs), that expects an array of [button](/docs/components-button-button--docs) components
+- `buttons`: a [ButtonGroup](/docs/inputs-and-controls-button-buttongroup--docs), that expects an array of [button](/docs/inputs-and-controls-button--docs) components
 
 All of these slots are optional, and are only rendered when passed:
 

@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Footer, FooterLinks } from "../components";
 import { FooterProps } from "../components/Footer";
 
 const meta = {
-  title: "Components/Footer/Footer",
+  title: "Navigation and structure/Footer",
   component: Footer,
   parameters: {
     layout: "fullscreen",

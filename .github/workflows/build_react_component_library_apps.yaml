@@ -1,4 +1,6 @@
 name: Build and push React component library app images
+permissions:
+  contents: read
 
 on:
   push:

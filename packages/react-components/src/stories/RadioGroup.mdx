@@ -4,11 +4,17 @@ import {
   Canvas,
   Controls,
   Meta,
-  Primary,
   Source,
   Story,
   Subtitle,
-} from "@storybook/blocks";
+} from "@storybook/addon-docs/blocks";
+
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
 
 import * as RadioGroupStories from "./RadioGroup.stories";
 
@@ -21,19 +27,36 @@ import * as RadioGroupStories from "./RadioGroup.stories";
   list.
 </Subtitle>
 
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA Radio and RadioGroup components. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/RadioGroup"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      RadioGroup docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
 <Source
   code={`import { RadioGroup, Radio } from "@bcgov/design-system-react-components"; `}
   language="typescript"
 />
 
-## Usage and resources
-
 Learn more about working with the RadioGroup component:
 
 - [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=B6BFDA56A56148F9AE33E48064548F3D)
 - [View the radio group component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
-
-This component is based on [React Aria RadioGroup](https://react-spectrum.adobe.com/react-aria/RadioGroup.html) and the [Radio](https://react-spectrum.adobe.com/react-aria/RadioGroup.html#radio) subcomponent.
 
 ### Validation
 
@@ -41,7 +64,7 @@ Default and custom data validation support is built in, using the [React Aria Fi
 
 ## Controls
 
-<Primary of={RadioGroupStories} />
+<Canvas of={RadioGroupStories.RadioGroupTemplate} />
 <Controls of={RadioGroupStories.RadioGroupTemplate} />
 
 ## Configuration

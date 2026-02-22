@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Button, Modal, DialogTrigger } from "../components";
 import type { ModalOverlayProps } from "react-aria-components";
 
 const meta = {
-  title: "Components/Dialogs/Modal",
+  title: "Notifications and feedback/Dialogs/Modal",
   component: Modal,
   parameters: {
     layout: "centered",
