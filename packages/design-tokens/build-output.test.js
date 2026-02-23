@@ -40,6 +40,8 @@ test("output files should exist after running build-output.js", async () => {
     "build/cjs/index.d.ts",
     "build/cjs-prefixed/index.js",
     "build/cjs-prefixed/index.d.ts",
+    "build/scss/variables.scss",
+    "build/scss-prefixed/variables.scss",
   ];
 
   for (const file of outputFiles) {
@@ -57,6 +59,14 @@ test("theme.blue.100 should be present in all output files", async () => {
     {
       file: "build/css-prefixed/variables.css",
       token: "--bcds-theme-blue-100: #013366;",
+    },
+    {
+      file: "build/scss/variables.scss",
+      token: "$theme-blue-100: #013366;",
+    },
+    {
+      file: "build/scss-prefixed/variables.scss",
+      token: "$bcds-theme-blue-100: #013366;",
     },
     {
       file: "build/js/index.js",
