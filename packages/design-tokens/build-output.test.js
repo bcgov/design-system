@@ -61,6 +61,14 @@ test("theme.blue.100 should be present in all output files", async () => {
       token: "--bcds-theme-blue-100: #013366;",
     },
     {
+      file: "build/scss/variables.scss",
+      token: "$theme-blue-100: #013366;",
+    },
+    {
+      file: "build/scss-prefixed/variables.scss",
+      token: "$bcds-theme-blue-100: #013366;",
+    },
+    {
       file: "build/js/index.js",
       token: 'export const themeBlue100 = "#013366";',
     },
