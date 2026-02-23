@@ -1,0 +1,61 @@
+{/* TimeField.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
+import * as TimeFieldStories from "./TimeField.stories";
+
+<Meta of={TimeFieldStories} />
+
+# Time field
+
+<Subtitle>TKTK</Subtitle>
+
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA TimeField component. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/TimeField"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      TimeField docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
+<Source
+  code={`import { TimeField } from "@bcgov/design-system-react-components"; `}
+  language="typescript"
+/>
+
+Learn more about working with the ti,me field component:
+
+- [Usage and best practice guidance](#)
+- [View the time field component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+## Controls
+
+<Canvas of={TimeFieldStories.TimeFieldTemplate} />
+<Controls of={TimeFieldStories.TimeFieldTemplate} />
