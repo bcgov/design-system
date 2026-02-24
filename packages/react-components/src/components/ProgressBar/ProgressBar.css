@@ -19,25 +19,22 @@
 }
 
 /* Progress bar */
-.bcds-react-aria-ProgressBar--Track.small {
-  height: var(--layout-padding-hair);
-  border-radius: var(--layout-border-radius-small);
-}
-.bcds-react-aria-ProgressBar--Track.medium {
-  height: var(--layout-padding-xsmall);
-  border-radius: var(--layout-border-radius-small);
-}
-.bcds-react-aria-ProgressBar--Track.large {
-  height: var(--layout-padding-small);
-  border-radius: var(--layout-border-radius-medium);
-}
 .bcds-react-aria-ProgressBar--Track {
   position: relative;
   overflow: hidden;
-  box-sizing: content-box;
   background-color: var(--surface-color-border-default);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-circular);
+}
+.bcds-react-aria-ProgressBar--Track.small {
+  height: var(--layout-padding-hair);
+}
+.bcds-react-aria-ProgressBar--Track.medium {
+  height: var(--layout-padding-xsmall);
+}
+.bcds-react-aria-ProgressBar--Track.large {
+  height: var(--layout-padding-small);
 }
 .bcds-react-aria-ProgressBar--Fill {
   position: absolute;
@@ -45,7 +42,7 @@
   left: 0;
   bottom: 0;
   background: var(--surface-color-primary-default);
-  border-radius: inherit;
+  border-radius: var(--layout-border-radius-circular);
   width: 100%;
   transform-origin: left;
   transform: scaleX(var(--percentage));
