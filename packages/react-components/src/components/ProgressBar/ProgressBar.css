@@ -35,7 +35,6 @@
   position: relative;
   overflow: hidden;
   box-sizing: content-box;
-  z-index: 0;
   background-color: var(--surface-color-border-default);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
@@ -45,7 +44,6 @@
   top: 0;
   left: 0;
   bottom: 0;
-  z-index: 100;
   background: var(--surface-color-primary-default);
   border-radius: inherit;
   width: 100%;
