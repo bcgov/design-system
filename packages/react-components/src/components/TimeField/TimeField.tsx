@@ -13,7 +13,9 @@ import "./TimeField.css";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 import Text from "../Text";
 
-export interface TimeFieldProps<T extends TimeValue> extends ReactAriaTimeFieldProps<T> {
+export interface TimeFieldProps<
+  T extends TimeValue,
+> extends ReactAriaTimeFieldProps<T> {
   /* Sets size of text input field */
   size?: "medium" | "small";
   /* Sets text label above text input field */
@@ -24,9 +26,19 @@ export interface TimeFieldProps<T extends TimeValue> extends ReactAriaTimeFieldP
   errorMessage?: string | ((validation: ValidationResult) => string);
 }
 
-export default function TimeField<T extends TimeValue>({size, label, description, errorMessage, isRequired, ...props}: TimeFieldProps<T>) {
+export default function TimeField<T extends TimeValue>({
+  size = "medium",
+  label,
+  description,
+  errorMessage,
+  isRequired,
+  ...props
+}: TimeFieldProps<T>) {
   return (
-    <ReactAriaTimeField className="bcds-react-aria-TimeField" {...props}>
+    <ReactAriaTimeField
+      className={`bcds-react-aria-TimeField ${size}`}
+      {...props}
+    >
       {({ isInvalid }) => (
         <>
           {label && (
@@ -34,14 +46,12 @@ export default function TimeField<T extends TimeValue>({size, label, description
               {label}
               {isRequired && (
                 <span className="bcds-react-aria-TimeField--Label required">
-                    (required)
+                  (required)
                 </span>
               )}
             </Label>
           )}
-          <div
-            className={`bcds-react-aria-TimeField--container ${size === "small" ? "small" : "medium"}`}
-          >
+          <div className="bcds-react-aria-TimeField--InputContainer">
             <DateInput className="bcds-react-aria-TimeField--Input">
               {(segment) => (
                 <DateSegment
@@ -54,10 +64,10 @@ export default function TimeField<T extends TimeValue>({size, label, description
           </div>
           {description && (
             <Text
-                slot="description"
-                className={`bcds-react-aria-TimeField--Description`}
+              slot="description"
+              className="bcds-react-aria-TimeField--Description"
             >
-                {description}
+              {description}
             </Text>
           )}
           <FieldError className="bcds-react-aria-TimeField--Error">

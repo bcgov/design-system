@@ -1,5 +1,5 @@
 .bcds-react-aria-TimeField {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
   align-self: stretch;
@@ -7,136 +7,133 @@
   max-width: -webkit-fill-available;
 }
 
-/* Styles for the text label above the input field */
+/* Input field */
+.bcds-react-aria-TimeField--InputContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  gap: var(--layout-margin-small);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-small);
+  background: var(--surface-color-forms-default);
+}
+
+.bcds-react-aria-TimeField--Input {
+  color: var(--typography-color-primary);
+  border: none;
+  flex: 1 1 0;
+}
+
+.bcds-react-aria-TimeField--Segment {
+  padding: var(--layout-padding-none);
+}
+
+.bcds-react-aria-TimeField--Input[data-placeholder] {
+  color: var(--typography-color-placeholder);
+}
+
+/* Label */
 .bcds-react-aria-TimeField--Label {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-primary);
   padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
 
-.bcds-react-aria-TimeField--Label .required {
+/* Required indicator */
+.bcds-react-aria-TimeField--Label.required {
   color: var(--typography-color-secondary);
   padding: var(--layout-padding-none) var(--layout-padding-xsmall);
 }
 
-/* Styles for the text description below the input field */
+/* Description */
 .bcds-react-aria-TimeField--Description {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-secondary);
   padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
 
-/* Styles for the input field container */
-.bcds-react-aria-TimeField--container {
-  color: var(--typography-color-primary);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--layout-margin-small);
-  background: var(--surface-color-forms-default);
-  box-sizing: border-box;
-  border: var(--layout-border-width-small) solid
-    var(--surface-color-border-default);
-  border-radius: var(--layout-border-radius-medium);
-  padding: var(--layout-padding-small) 12px;
+/* Error message */
+.bcds-react-aria-TimeField--Error {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-danger);
 }
 
-.bcds-react-aria-TimeField--Segment {
-  padding: 2px 1px;
+/* Sizing */
+.bcds-react-aria-TimeField.small .bcds-react-aria-TimeField--InputContainer {
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
+  height: 32px;
 }
-
-/* Text input field */
-.bcds-react-aria-TimeField--Input {
-  font: var(--typography-regular-body);
-  padding: var(--layout-padding-none);
-  color: var(--typography-color-primary);
-  border: none;
-  flex-grow: 1;
-}
-
-.bcds-react-aria-TimeField--Input::placeholder {
-  color: var(--typography-color-placeholder);
-}
-
-/* Sizes */
-.bcds-react-aria-TimeField--container.small {
-  height: var(--layout-margin-xlarge);
-  min-height: var(--layout-margin-xlarge);
-}
-
-.bcds-react-aria-TimeField--container.small .bcds-react-aria-TimeField--Input {
+.bcds-react-aria-TimeField.small .bcds-react-aria-TimeField--Segment {
   font: var(--typography-regular-small-body);
 }
 
-.bcds-react-aria-TimeField--container.medium {
-  height: var(--layout-margin-xxlarge);
-  min-height: var(--layout-margin-xxlarge);
+.bcds-react-aria-TimeField.medium .bcds-react-aria-TimeField--InputContainer {
+  padding: var(--layout-padding-xsmall) 0.75rem;
+  height: 40px;
 }
-
-.bcds-react-aria-TimeField--container.medium .bcds-react-aria-TimeField--Input {
+.bcds-react-aria-TimeField.medium .bcds-react-aria-TimeField--Segment {
   font: var(--typography-regular-body);
 }
 
 /* Hover and focus states */
-
-.bcds-react-aria-TimeField--container:focus-within {
-  border-radius: var(--layout-border-radius-large);
-  border: var(--layout-border-width-small) solid
-    var(--surface-color-border-active);
+.bcds-react-aria-TimeField--InputContainer:has(
+  .bcds-react-aria-TimeField--Input[data-hovered]
+) {
+  border-color: var(--surface-color-border-dark);
+}
+.bcds-react-aria-TimeField--InputContainer:has(
+  .bcds-react-aria-TimeField--Segment[data-focus-visible]
+) {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
 }
 
-.bcds-react-aria-TimeField--container:hover {
-  border-color: var(--surface-color-border-dark);
-}
-
-.bcds-react-aria-TimeField:not([data-readonly]) .bcds-react-aria-TimeField--Segment[data-focused] {
+.bcds-react-aria-TimeField:not([data-readonly])
+  .bcds-react-aria-TimeField--Segment[data-focused] {
   color: var(--typography-color-primary-invert);
   background: var(--surface-color-primary-button-hover);
   outline: none;
   border-radius: var(--layout-border-radius-medium);
 }
 
-/* Disabled and invalid states */
+.bcds-react-aria-TimeField--Segment[data-focused] {
+  outline: none;
+  border-radius: var(--layout-border-radius-small);
+  background-color: var(--surface-color-primary-default);
+  color: var(--typography-color-primary-invert);
+  padding: var(--layout-padding-hair);
+  margin: var(--layout-margin-none) var(--layout-margin-hair);
+}
 
+/* Disabled and read-only states */
 .bcds-react-aria-TimeField[data-disabled]
-  > .bcds-react-aria-TimeField--container,
+  > .bcds-react-aria-TimeField--InputContainer,
 .bcds-react-aria-TimeField[data-disabled] .bcds-react-aria-TimeField--Input {
   background: var(--surface-color-forms-disabled);
   color: var(--typography-color-placeholder);
   cursor: not-allowed;
 }
 
+.bcds-react-aria-TimeField[data-readonly]
+  > .bcds-react-aria-TimeField--InputContainer,
+.bcds-react-aria-TimeField[data-readonly] .bcds-react-aria-TimeField--Input {
+  background: var(--surface-color-forms-disabled);
+}
+
+/* Invalid state */
 .bcds-react-aria-TimeField[data-invalid]
-  > .bcds-react-aria-TimeField--container {
+  > .bcds-react-aria-TimeField--InputContainer {
   border-radius: var(--layout-border-radius-medium);
   border: var(--layout-border-width-small) solid
     var(--support-border-color-danger);
   background: var(--surface-color-forms-default);
 }
-
-.bcds-react-aria-TimeField[data-readonly]
-  > .bcds-react-aria-TimeField--container,
-.bcds-react-aria-TimeField[data-readonly] .bcds-react-aria-TimeField--Input {
-  background: var(--surface-color-forms-disabled);
-}
-
-.bcds-react-aria-TimeField[data-readonly]
-  > .bcds-react-aria-TimeField--container
-  > .bcds-react-aria-TimeField--Input {
-  background: var(--surface-color-forms-disabled);
-}
-
-/* Styles for the error message slot */
-.bcds-react-aria-TimeField--Error {
-  font: var(--typography-regular-small-body);
-  color: var(--typography-color-danger);
-}
-
 .bcds-react-aria-TimeField[data-invalid]
-  > .bcds-react-aria-TimeField--container
+  > .bcds-react-aria-TimeField--InputContainer
   > svg#exclamation-icon {
   color: var(--icons-color-danger);
   min-width: var(--icons-size-medium);
