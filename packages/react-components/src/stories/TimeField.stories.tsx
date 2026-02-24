@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { now, getLocalTimeZone } from "@internationalized/date";
+import { now, getLocalTimeZone, Time } from "@internationalized/date";
 
 import { TimeField } from "@/components";
 
@@ -96,7 +96,7 @@ export const TimeFieldTemplate: Story = {
     size: "medium",
     granularity: "minute",
     hourCycle: 12,
-    value: now(getLocalTimeZone()),
+    defaultValue: now(getLocalTimeZone()),
   },
   render: ({ ...args }) => <TimeField {...args} />,
 };
@@ -106,6 +106,23 @@ export const SmallTimeField: Story = {
   args: {
     ...TimeFieldTemplate.args,
     size: "small",
+  },
+};
+
+export const Hour24TimeField: Story = {
+  ...TimeFieldTemplate,
+  args: {
+    ...TimeFieldTemplate.args,
+    hourCycle: 24,
+    defaultValue: new Time(20, 26),
+  },
+};
+
+export const SecondGranularityTimeField: Story = {
+  ...TimeFieldTemplate,
+  args: {
+    ...TimeFieldTemplate.args,
+    granularity: "second",
   },
 };
 
