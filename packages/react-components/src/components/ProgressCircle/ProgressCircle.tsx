@@ -16,7 +16,6 @@ export default function ProgressCircle({
   valueLabel,
   ...props
 }: ProgressCircleProps) {
-  const viewBoxSize = { small: 20, medium: 24, large: 32 }[size];
   return (
     <ReactAriaProgressBar
       className={`bcds-react-aria-ProgressCircle`}
@@ -24,10 +23,7 @@ export default function ProgressCircle({
     >
       {({ percentage, valueText, isIndeterminate }) => (
         <>
-          <svg
-            className={`bcds-react-aria-ProgressCircle ${size}`}
-            viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`}
-          >
+          <svg className={`bcds-react-aria-ProgressCircle ${size}`}>
             <circle className="bcds-react-aria-ProgressCircle--Track" />
             <circle
               className="bcds-react-aria-ProgressCircle--Fill"
