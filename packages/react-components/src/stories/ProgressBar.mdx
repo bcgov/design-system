@@ -4,7 +4,6 @@ import {
   Canvas,
   Controls,
   Meta,
-  Primary,
   Source,
   Story,
   Subtitle,
@@ -18,21 +17,22 @@ import {
 } from "@/components";
 
 import * as ProgressBarStories from "./ProgressBar.stories";
+import * as ProgressCircleStories from "./ProgressCircle.stories";
 
-<Meta of={ProgressBarStories} />
+<Meta title="Notifications and feedback/Progress indicators" />
 
-# ProgressBar
+# Progress indicators
 
 <Subtitle>
-  A progress bar visualises the progress of an operation or process in either a
-  horizontal bar or a circular spinner.
+  A progress bar or progress circle visualises the progress of an operation or
+  process.
 </Subtitle>
 
 <InlineAlert
   variant="info"
   customIcon={[<SvgReactAriaIcon />]}
-  title="This is a React Aria component"
-  description="It is based on the RA ProgressBar component. Consult the React Aria docs to understand its full API."
+  title="These are React Aria components"
+  description="They are based on the RA ProgressBar component. Consult the React Aria docs to understand their full API."
   buttons={[
     <Link
       isButton
@@ -50,28 +50,23 @@ import * as ProgressBarStories from "./ProgressBar.stories";
 ## Usage and resources
 
 <Source
-  code={`import { ProgressBar } from "@bcgov/design-system-react-components"; `}
+  code={`import { ProgressBar, ProgressCircle } from "@bcgov/design-system-react-components"; `}
   language="typescript"
 />
 
-Learn more about working with the ProgressBar component:
+Learn more about working with the ProgressBar and ProgressCircle components:
 
 - [Usage and best practice guidance](#)
 - [View the radio group component in Figma](#)
 
 ## Controls
 
-<Primary of={ProgressBarStories} />
+<Canvas of={ProgressBarStories.ProgressBarTemplate} />
 <Controls of={ProgressBarStories.ProgressBarTemplate} />
 
 ## Configuration
 
-### Format
-
-A progress bar can be toggled between horizontal and circular styles using the `format` prop:
-
-<Canvas of={ProgressBarStories.ProgressBarTemplate} />
-<Canvas of={ProgressBarStories.ProgressCircle} />
+The ProgressBar and ProgressCircle components both use the same API.
 
 ### Sizing
 
@@ -80,12 +75,12 @@ Use the `size` prop to choose between `small`, `medium` (default) and `large` st
 #### Small
 
 <Canvas of={ProgressBarStories.SmallProgressBar} />
-<Canvas of={ProgressBarStories.SmallProgressCircle} />
+<Canvas of={ProgressCircleStories.SmallProgressCircle} />
 
 #### Large
 
 <Canvas of={ProgressBarStories.LargeProgressBar} />
-<Canvas of={ProgressBarStories.LargeProgressCircle} />
+<Canvas of={ProgressCircleStories.LargeProgressCircle} />
 
 ### Value
 
@@ -94,20 +89,23 @@ By default, `value` represents a percentage between 0 and 100. Use `minValue` an
 You can set `value` programmatically:
 
 <Canvas of={ProgressBarStories.AnimatedFill} />
+<Canvas of={ProgressCircleStories.AnimatedFill} />
 
 Pass the `isIndeterminate` prop to render an animated loading indicator without a numerical value:
 
 <Canvas of={ProgressBarStories.IndeterminateProgressBar} />
-<Canvas of={ProgressBarStories.IndeterminateProgressCircle} />
+<Canvas of={ProgressCircleStories.IndeterminateProgressCircle} />
 
 #### Labels
 
 Set the text label using `formatLabel`:
 
 <Canvas of={ProgressBarStories.CustomLabel} />
+<Canvas of={ProgressCircleStories.CustomLabel} />
 
 If you don't provide a `formatLabel`, you must instead pass an `aria-label` to label the progress bar for assistive technologies.
 
 Use `formatOptions` to change the format of the value text. `formatOptions` expects an [`Intl.NumberFormatOptions`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) value:
 
 <Canvas of={ProgressBarStories.CustomFormat} />
+<Canvas of={ProgressCircleStories.CustomFormat} />

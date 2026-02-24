@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useEffect, useState } from "react";
 
-import { ProgressBar } from "../components";
+import { ProgressCircle } from "../components";
 
 const meta = {
-  title: "Notifications and feedback/Progress indicators/ProgressBar",
-  component: ProgressBar,
+  title: "Notifications and feedback/Progress indicators/ProgressCircle",
+  component: ProgressCircle,
   parameters: {
     layout: "centered",
   },
@@ -13,12 +13,12 @@ const meta = {
     size: {
       control: "radio",
       options: ["small", "medium", "large"],
-      description: "Set the size of the progress bar",
+      description: "Set the size of the progress circle",
       table: { defaultValue: { summary: "medium" } },
     },
     valueLabel: {
       control: "text",
-      description: "Label text displayed above the progress bar",
+      description: "Label text displayed above the progress circle",
     },
     value: {
       control: "number",
@@ -26,12 +26,12 @@ const meta = {
     },
     minValue: {
       control: "number",
-      description: "Set the minimum value of the progress bar",
+      description: "Set the minimum value of the progress circle",
       table: { defaultValue: { summary: "0" } },
     },
     maxValue: {
       control: "number",
-      description: "Set the maximum value of the progress bar",
+      description: "Set the maximum value of the progress circle",
       table: { defaultValue: { summary: "100" } },
     },
     formatOptions: {
@@ -40,16 +40,16 @@ const meta = {
     },
     isIndeterminate: {
       control: "boolean",
-      description: "Set the progress bar to indeterminate mode",
+      description: "Set the progress circle to indeterminate mode",
       table: { defaultValue: { summary: "false" } },
     },
   },
-} satisfies Meta<typeof ProgressBar>;
+} satisfies Meta<typeof ProgressCircle>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const ProgressBarTemplate: Story = {
+export const ProgressCircleTemplate: Story = {
   args: {
     valueLabel: "Loading...",
     size: "medium",
@@ -58,26 +58,26 @@ export const ProgressBarTemplate: Story = {
     minValue: 0,
     maxValue: 100,
   },
-  render: ({ ...args }) => <ProgressBar {...args} />,
+  render: ({ ...args }) => <ProgressCircle {...args} />,
 };
 
-export const SmallProgressBar: Story = {
+export const SmallProgressCircle: Story = {
   args: {
-    ...ProgressBarTemplate.args,
+    ...ProgressCircleTemplate.args,
     size: "small",
   },
 };
 
-export const LargeProgressBar: Story = {
+export const LargeProgressCircle: Story = {
   args: {
-    ...ProgressBarTemplate.args,
+    ...ProgressCircleTemplate.args,
     size: "large",
   },
 };
 
-export const IndeterminateProgressBar: Story = {
+export const IndeterminateProgressCircle: Story = {
   args: {
-    ...ProgressBarTemplate.args,
+    ...ProgressCircleTemplate.args,
     isIndeterminate: true,
     valueLabel: "Loading...",
   },
@@ -85,14 +85,14 @@ export const IndeterminateProgressBar: Story = {
 
 export const CustomLabel: Story = {
   args: {
-    ...ProgressBarTemplate.args,
+    ...ProgressCircleTemplate.args,
     valueLabel: "Custom label",
   },
 };
 
 export const CustomFormat: Story = {
   args: {
-    ...ProgressBarTemplate.args,
+    ...ProgressCircleTemplate.args,
     value: 75.25,
     valueLabel: "Custom label",
     formatOptions: {
@@ -104,7 +104,7 @@ export const CustomFormat: Story = {
 
 export const AnimatedFill: Story = {
   args: {
-    ...ProgressBarTemplate.args,
+    ...ProgressCircleTemplate.args,
     valueLabel: "Uploading...",
     minValue: 0,
     maxValue: 100,
@@ -122,6 +122,6 @@ export const AnimatedFill: Story = {
       return () => clearInterval(id);
     }, [args.minValue, args.maxValue]);
 
-    return <ProgressBar {...args} value={value} />;
+    return <ProgressCircle {...args} value={value} />;
   },
 };

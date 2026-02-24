@@ -14,17 +14,8 @@
   justify-content: space-between;
 }
 
-.bcds-react-aria-ProgressBar--Value,
-.bcds-react-aria-ProgressCircle--Value {
+.bcds-react-aria-ProgressBar--Value {
   color: var(--typography-color-secondary);
-}
-
-.bcds-react-aria-ProgressCircle--Label {
-  display: flex;
-  flex-direction: column;
-  gap: var(--layout-margin-hair);
-  align-items: center;
-  justify-content: center;
 }
 
 /* Progress bar */
@@ -86,58 +77,4 @@
   100% {
     transform: translateX(100%) scaleX(0.4);
   }
-}
-
-/* Progress circle */
-.bcds-react-aria-ProgressCircle {
-  display: flex;
-  align-self: center;
-  fill: none;
-  width: 100%;
-  height: 100%;
-}
-svg.bcds-react-aria-ProgressCircle.small {
-  width: var(--icons-size-medium);
-  height: var(--icons-size-medium);
-  stroke-width: var(--layout-border-width-medium);
-
-  circle.bcds-react-aria-ProgressCircle--Bottom,
-  circle.bcds-react-aria-ProgressCircle--Top {
-    r: calc(50% - var(--layout-border-width-medium) / 2);
-  }
-}
-svg.bcds-react-aria-ProgressCircle.medium {
-  width: var(--icons-size-large);
-  height: var(--icons-size-large);
-  stroke-width: var(--layout-border-width-medium);
-
-  circle.bcds-react-aria-ProgressCircle--Bottom,
-  circle.bcds-react-aria-ProgressCircle--Top {
-    r: calc(50% - var(--layout-border-width-medium) / 2);
-  }
-}
-svg.bcds-react-aria-ProgressCircle.large {
-  width: var(--icons-size-xlarge);
-  height: var(--icons-size-xlarge);
-  stroke-width: var(--layout-border-width-large);
-
-  circle.bcds-react-aria-ProgressCircle--Bottom,
-  circle.bcds-react-aria-ProgressCircle--Top {
-    r: calc(50% - var(--layout-border-width-large) / 2);
-  }
-}
-.bcds-react-aria-ProgressCircle--Bottom {
-  cx: 50%;
-  cy: 50%;
-  stroke: var(--theme-gray-30);
-}
-.bcds-react-aria-ProgressCircle--Top {
-  cx: 50%;
-  cy: 50%;
-  stroke: var(--theme-primary-blue);
-  stroke-dasharray: 100 200;
-  stroke-linecap: round;
-  rotate: -90deg;
-  transform-origin: center center;
-  transition: 200ms linear;
 }
