@@ -17,13 +17,10 @@ export default function ProgressCircle({
   ...props
 }: ProgressCircleProps) {
   return (
-    <ReactAriaProgressBar
-      className={`bcds-react-aria-ProgressCircle`}
-      {...props}
-    >
+    <ReactAriaProgressBar className="bcds-react-aria-ProgressCircle" {...props}>
       {({ percentage, valueText, isIndeterminate }) => (
         <>
-          <svg className={`bcds-react-aria-ProgressCircle ${size}`}>
+          <svg className={`bcds-react-aria-ProgressCircle--Container ${size}`}>
             <circle className="bcds-react-aria-ProgressCircle--Track" />
             <circle
               className="bcds-react-aria-ProgressCircle--Fill"
@@ -31,17 +28,7 @@ export default function ProgressCircle({
               strokeDashoffset={
                 100 - (isIndeterminate || percentage == null ? 25 : percentage)
               }
-            >
-              {isIndeterminate && (
-                <animateTransform
-                  attributeName="transform"
-                  type="rotate"
-                  dur="1.25s"
-                  values="0;360"
-                  repeatCount="indefinite"
-                />
-              )}
-            </circle>
+            />
           </svg>
           {valueLabel && (
             <div className="bcds-react-aria-ProgressCircle--Label">

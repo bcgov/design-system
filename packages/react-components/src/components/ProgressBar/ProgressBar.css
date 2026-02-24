@@ -18,7 +18,7 @@
   color: var(--typography-color-secondary);
 }
 
-/* Progress bar */
+/* Structure */
 .bcds-react-aria-ProgressBar--Track {
   position: relative;
   overflow: hidden;
@@ -26,15 +26,6 @@
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-circular);
-}
-.bcds-react-aria-ProgressBar--Track.small {
-  height: var(--layout-padding-hair);
-}
-.bcds-react-aria-ProgressBar--Track.medium {
-  height: var(--layout-padding-xsmall);
-}
-.bcds-react-aria-ProgressBar--Track.large {
-  height: var(--layout-padding-small);
 }
 .bcds-react-aria-ProgressBar--Fill {
   position: absolute;
@@ -52,6 +43,19 @@
     animation: none;
   }
 }
+
+/* Sizing */
+.bcds-react-aria-ProgressBar--Track.small {
+  height: var(--layout-padding-hair);
+}
+.bcds-react-aria-ProgressBar--Track.medium {
+  height: var(--layout-padding-xsmall);
+}
+.bcds-react-aria-ProgressBar--Track.large {
+  height: var(--layout-padding-small);
+}
+
+/* Indeterminate animation */
 .bcds-react-aria-ProgressBar:not([aria-valuenow])
   .bcds-react-aria-ProgressBar--Fill {
   background-color: var(--surface-color-primary-default);
