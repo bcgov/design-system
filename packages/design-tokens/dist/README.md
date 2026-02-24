@@ -2,7 +2,7 @@
 
 This package contains design tokens from the B.C. Design System.
 
-Questions? Please email the <a href="mailto:DesignSystem@gov.bc.ca">GDX OSS Design Team</a>.
+Questions? [Open a GitHub issue](https://github.com/bcgov/design-system/issues) or <a href="mailto:DesignSystem@gov.bc.ca">email the design system team/a>.
 
 See main repository: https://github.com/bcgov/design-system
 
@@ -10,7 +10,7 @@ To use, install this package (`npm i @bcgov/design-tokens`) and import the desig
 
 ## Included file formats
 
-This package includes tokens in JavaScript (ECMAScript Module and CommonJS) and CSS formats.
+This package includes tokens in JavaScript (ECMAScript Module and CommonJS), CSS and SCSS formats.
 
 ### JavaScript (ECMAScript Module)
 
@@ -45,6 +45,12 @@ To help avoid name collisions, prefixed versions of the CJS variables with `bcds
 CSS variables are included at: `css/variables.css`
 
 To help avoid name collisions, prefixed versions of the CSS variables with `bcds` added are available: `css-prefixed/variables.css`
+
+### SCSS
+
+SCSS variables are included at: `scss/variables.scss`
+
+To help avoid name collisions, prefixed versions of the SCSS variables with `bcds` added are available: `scss-prefixed/variables.css`
 
 ## Examples
 
