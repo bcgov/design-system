@@ -1,0 +1,128 @@
+{/* Calendar.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import * as CalendarStories from "./Calendar.stories";
+import {
+  Calendar,
+  Link,
+  InlineAlert,
+  SvgReactAriaIcon,
+  SvgUpRightFromSquareIcon,
+} from "@/components";
+
+<Meta title="Inputs and controls/Calendar" />
+
+# Calendar
+
+<Subtitle>
+  A calendar displays a list of dates in a grid and enables the user to select a
+  single date.
+</Subtitle>
+
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA Calendar component, and uses date objects from the Internationalized Date library. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/internationalized/date/"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      @internationalized/date docs
+    </Link>,
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/Calendar"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      Calendar docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
+<Source
+  code={`import { Calendar } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+The calendar component is primarily intended to be consumed internally by other components (for example, the [date picker](/docs/inputs-and-controls-datepicker--docs)), but it can also be used standalone.
+
+Learn more about working with the calendar component:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=ECEC88490393482AA7BB97D98CECFED6)
+- [View the inline alert component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+## Controls
+
+<Canvas of={CalendarStories.CalendarTemplate} />
+<Controls of={CalendarStories.CalendarTemplate} />
+
+## Configuration
+
+Use `value` to set or get the currently-selected date. Use `defaultValue` to set a default selection:
+
+<Canvas of={CalendarStories.DefaultValue} />
+
+Use `firstDayOfWeek` (defaults to `sun`) to control which day is displayed first:
+
+<Canvas of={CalendarStories.FirstDayOfWeek} />
+
+Disable a calendar with `isDisabled`:
+
+<Canvas of={CalendarStories.DisabledCalendar} />
+
+### Multiple months and pagination
+
+Pass a `DateDuration` object (eg. `{ months: 3 }`) with the `visibleDuration` prop to render multiple grids inside a single calendar:
+
+<Canvas of={CalendarStories.MultipleMonths} />
+
+The `pageBehavior` prop controls how pagination works. By default, it is set to `visible`, which paginates based on `visibleDuration` (e.g. 3 months).
+
+Set `pageBehavior` to `single` to paginate by one unit of `visibleDuration` (e.g. 1 month) instead:
+
+<Canvas of={CalendarStories.PageBehavior} />
+
+### Constraining values
+
+Use `minValue` and `maxValue` to limit the range of displayed dates:
+
+<Canvas of={CalendarStories.MinMax} />
+
+These props expect a `CalendarDate` object from the [@internationalized/date library](https://react-aria.adobe.com/internationalized/date/CalendarDate).
+
+Pass a callback function to `isDateUnavailable` to further limit acceptable selections. For example, you could limit selections to weekdays:
+
+<Canvas of={CalendarStories.WeekdayOnly} />
+
+The above example uses React Aria's [useLocale](https://react-aria.adobe.com/useLocale) and [@internationalized/date](https://react-aria.adobe.com/internationalized/date/CalendarDate) APIs:
+
+```typescript
+import { CalendarDate, isWeekend } from "@internationalized/date";
+import { useLocale } from "react-aria-components";
+
+<Calendar
+  minValue={new CalendarDate(2026, 2, 1)}
+  maxValue={new CalendarDate(2026, 3, 1)}
+  isDateUnavailable={(date) => isWeekend(date, useLocale().locale)}
+/>
+
+```
