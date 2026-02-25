@@ -3,8 +3,8 @@ import { ProgressBar, ProgressCircle } from "@/components";
 export default function ProgressBarPage() {
   return (
     <>
-      <h2>ProgressBar</h2>
-      <h3>Bar</h3>
+      <h2>Progress indicators</h2>
+      <h3>ProgressBar</h3>
       <div className="row">
         <div className="col">
           <ProgressBar size="small" valueLabel="Small" value={25} />
@@ -23,7 +23,7 @@ export default function ProgressBarPage() {
           />
         </div>
       </div>
-      <h3>Circle</h3>
+      <h3>ProgressCircle</h3>
       <div className="row">
         <div className="col">
           <ProgressCircle size="small" valueLabel="Small" value={25} />
