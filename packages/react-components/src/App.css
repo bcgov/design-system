@@ -30,11 +30,13 @@ main {
 .row {
   display: flex;
   flex-direction: row;
+  flex: 1 1 0;
   gap: var(--layout-margin-medium);
 }
 .col {
   display: flex;
   flex-direction: column;
+  flex: 1 1 0;
 }
 .menu {
   display: flex;

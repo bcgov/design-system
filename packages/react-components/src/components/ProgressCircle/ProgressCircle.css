@@ -1,0 +1,94 @@
+.bcds-react-aria-ProgressCircle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-padding-xsmall);
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-primary);
+}
+
+/* Label */
+.bcds-react-aria-ProgressCircle--Label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-hair);
+  align-items: center;
+  justify-content: center;
+}
+.bcds-react-aria-ProgressCircle--Value {
+  color: var(--typography-color-secondary);
+}
+
+/* Structure */
+svg.bcds-react-aria-ProgressCircle--Container {
+  display: flex;
+  align-self: center;
+  fill: none;
+  width: 100%;
+  height: 100%;
+}
+.bcds-react-aria-ProgressCircle--Track {
+  cx: 50%;
+  cy: 50%;
+  stroke: var(--theme-gray-30);
+}
+.bcds-react-aria-ProgressCircle--Fill {
+  cx: 50%;
+  cy: 50%;
+  stroke: var(--theme-primary-blue);
+  stroke-dasharray: 100 200;
+  stroke-linecap: round;
+  rotate: -90deg;
+  transform-origin: center center;
+  transition: 200ms linear;
+}
+
+/* Sizing */
+svg.bcds-react-aria-ProgressCircle--Container.small {
+  width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
+  stroke-width: var(--layout-border-width-medium);
+
+  circle.bcds-react-aria-ProgressCircle--Track,
+  circle.bcds-react-aria-ProgressCircle--Fill {
+    r: calc(50% - var(--layout-border-width-medium) / 2);
+  }
+}
+svg.bcds-react-aria-ProgressCircle--Container.medium {
+  width: var(--icons-size-large);
+  height: var(--icons-size-large);
+  stroke-width: var(--layout-border-width-medium);
+
+  circle.bcds-react-aria-ProgressCircle--Track,
+  circle.bcds-react-aria-ProgressCircle--Fill {
+    r: calc(50% - var(--layout-border-width-medium) / 2);
+  }
+}
+svg.bcds-react-aria-ProgressCircle--Container.large {
+  width: var(--icons-size-xlarge);
+  height: var(--icons-size-xlarge);
+  stroke-width: var(--layout-border-width-large);
+
+  circle.bcds-react-aria-ProgressCircle--Track,
+  circle.bcds-react-aria-ProgressCircle--Fill {
+    r: calc(50% - var(--layout-border-width-large) / 2);
+  }
+}
+
+/* Indeterminate animation */
+.bcds-react-aria-ProgressCircle:not([aria-valuenow])
+  .bcds-react-aria-ProgressCircle--Fill {
+  animation: indeterminate 1.5s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes indeterminate {
+  from {
+    rotate: -90deg;
+  }
+  to {
+    rotate: 270deg;
+  }
+}
