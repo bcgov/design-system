@@ -1,6 +1,8 @@
 .bcds-react-aria-TimeField {
   display: flex;
+  flex: 1 1 0;
   flex-direction: column;
+  gap: var(--layout-margin-hair);
   /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
   align-self: stretch;
   max-width: -moz-available;
@@ -11,6 +13,7 @@
 .bcds-react-aria-TimeField--InputContainer {
   display: flex;
   flex-direction: row;
+  min-width: 0;
   align-items: center;
   box-sizing: border-box;
   gap: var(--layout-margin-small);
@@ -22,13 +25,17 @@
 }
 
 .bcds-react-aria-TimeField--Input {
-  color: var(--typography-color-primary);
+  box-sizing: border-box;
+  width: 100%;
   border: none;
-  flex: 1 1 0;
+  color: var(--typography-color-primary);
 }
 
 .bcds-react-aria-TimeField--Segment {
   padding: var(--layout-padding-none);
+}
+.bcds-react-aria-TimeField--Segment[data-type="timeZoneName"] {
+  color: var(--typography-color-secondary);
 }
 
 .bcds-react-aria-TimeField--Input[data-placeholder] {
@@ -90,14 +97,6 @@
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
-}
-
-.bcds-react-aria-TimeField:not([data-readonly])
-  .bcds-react-aria-TimeField--Segment[data-focused] {
-  color: var(--typography-color-primary-invert);
-  background: var(--surface-color-primary-button-hover);
-  outline: none;
-  border-radius: var(--layout-border-radius-medium);
 }
 
 .bcds-react-aria-TimeField--Segment[data-focused] {

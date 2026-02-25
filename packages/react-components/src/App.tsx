@@ -123,9 +123,9 @@ function App() {
         <TextAreaPage />
         <TextFieldPage />
         <DatePickerPage />
+        <TimeFieldPage />
         <NumberFieldPage />
         <TextPage />
-        <TimeFieldPage />
       </main>
       <Footer />
       <Footer
