@@ -24,6 +24,30 @@
   padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
 
+/* Sizing */
+.bcds-react-aria-Select.small .bcds-react-aria-Select--Button {
+  height: 32px;
+}
+.bcds-react-aria-Select--ListBox.small .bcds-react-aria-Select--ListBoxItem {
+  padding: var(--layout-padding-xsmall);
+}
+.bcds-react-aria-Select.small .bcds-react-aria-SelectValue,
+.bcds-react-aria-Select--ListBox.small
+  .bcds-react-aria-Select--ListBoxItem-Text-label {
+  font: var(--typography-regular-small-body);
+}
+.bcds-react-aria-Select.medium .bcds-react-aria-Select--Button {
+  height: 40px;
+}
+.bcds-react-aria-Select--ListBox.medium .bcds-react-aria-Select--ListBoxItem {
+  padding: var(--layout-padding-small);
+}
+.bcds-react-aria-Select.medium .bcds-react-aria-SelectValue,
+.bcds-react-aria-Select--ListBox.medium
+  .bcds-react-aria-Select--ListBoxItem-Text-label {
+  font: var(--typography-regular-body);
+}
+
 /* Error message */
 .bcds-react-aria-Select--Error {
   font: var(--typography-regular-small-body);
@@ -72,14 +96,7 @@
 .bcds-react-aria-Select--Button[data-pressed] {
   border-color: var(--surface-color-border-active);
 }
-.bcds-react-aria-Select--Button.medium {
-  height: 40px;
-}
-.bcds-react-aria-Select--Button.small {
-  height: 32px;
-}
 .bcds-react-aria-Select--Button > .bcds-react-aria-SelectValue {
-  font: var(--typography-regular-body);
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -126,7 +143,6 @@
   flex-direction: row;
   align-items: center;
   gap: var(--layout-margin-small);
-  padding: var(--layout-padding-small);
 }
 .bcds-react-aria-Select--ListBoxItem[data-focused],
 .bcds-react-aria-Select--ListBoxItem[data-hovered] {
@@ -146,9 +162,6 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-}
-.bcds-react-aria-Select--ListBoxItem-Text-label {
-  font: var(--typography-regular-body);
 }
 .bcds-react-aria-Select--ListBoxItem.destructive {
   color: var(--surface-color-primary-danger-button-default);

@@ -73,7 +73,7 @@ export default function Select<T extends object>({
   ...props
 }: SelectProps<T>) {
   return (
-    <ReactAriaSelect {...props} className="bcds-react-aria-Select">
+    <ReactAriaSelect {...props} className={`bcds-react-aria-Select ${size}`}>
       {({ isOpen, isRequired, isInvalid }) => (
         <>
           {label && (
@@ -110,7 +110,7 @@ export default function Select<T extends object>({
           </FieldError>
           <Popover className="bcds-react-aria-Select--Popover" offset={4}>
             <ListBox
-              className="bcds-react-aria-Select--ListBox"
+              className={`bcds-react-aria-Select--ListBox ${size}`}
               // This ternary statement is used to mock the data for `sections`
               // if a flat list of `items` was passed instead. This allows us to
               // use one component to support both flat and sectioned lists of
