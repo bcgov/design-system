@@ -33,8 +33,8 @@ export default function UseStateExample() {
         items={items}
         value={selected}
         onChange={(selected) => setSelected(selected)}
+        description={`Selected key: ${selected}`}
       />
-      <p>Selected key: {selected}</p>
     </>
   );
 }
