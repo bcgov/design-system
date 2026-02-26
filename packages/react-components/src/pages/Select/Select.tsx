@@ -1,5 +1,6 @@
 import { Select } from "@/components";
 import UseStateExample from "./UseStateExample";
+import MultiSelectExample from "./MultiSelect";
 
 export default function SelectPage() {
   const items = [
@@ -26,36 +27,42 @@ export default function SelectPage() {
   return (
     <>
       <h2>Select</h2>
-      <h3>Default</h3>
+      <h3>Default size</h3>
       <div className="row">
-        <Select label="Default" description="Description" items={items} />
+        <Select label="Label" description="Description" items={items} />
         <Select
-          label="Default"
+          label="Disabled"
           description="Description"
           items={items}
           isDisabled
         />
       </div>
-      <h3>Small</h3>
+      <h3>Small size</h3>
       <div className="row">
         <Select
           size="small"
-          label="Default"
+          label="Label"
           description="Description"
           items={items}
         />
         <Select
           size="small"
-          label="Default"
+          label="Disabled"
           description="Description"
           items={items}
           isDisabled
         />
       </div>
-      <h3>Select with useState</h3>
+
       <div className="row">
-        <UseStateExample />
-        <div className="col"></div>
+        <div className="col">
+          <h3>Multi-select</h3>
+          <MultiSelectExample />
+        </div>
+        <div className="col">
+          <h3>Select with useState</h3>
+          <UseStateExample />
+        </div>
       </div>
     </>
   );

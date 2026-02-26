@@ -29,7 +29,7 @@ export default function UseStateExample() {
   return (
     <>
       <Select
-        aria-label="Select example"
+        label="Pick an option"
         items={items}
         value={selected}
         onChange={(selected) => setSelected(selected)}

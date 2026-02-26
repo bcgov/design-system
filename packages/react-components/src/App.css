@@ -31,10 +31,14 @@ main {
   display: flex;
   flex-direction: row;
   gap: var(--layout-margin-medium);
+  min-width: 0;
+  max-width: 100%;
 }
 .col {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
+  width: 100%;
 }
 .menu {
   display: flex;
