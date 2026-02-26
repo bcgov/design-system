@@ -28,43 +28,33 @@ export default function SelectPage() {
       <h2>Select</h2>
       <h3>Default</h3>
       <div className="row">
-        <div className="col">
-          <Select label="Default" description="Description" items={items} />
-        </div>
-        <div className="col">
-          <Select
-            label="Default"
-            description="Description"
-            items={items}
-            isDisabled
-          />
-        </div>
+        <Select label="Default" description="Description" items={items} />
+        <Select
+          label="Default"
+          description="Description"
+          items={items}
+          isDisabled
+        />
       </div>
       <h3>Small</h3>
       <div className="row">
-        <div className="col">
-          <Select
-            size="small"
-            label="Default"
-            description="Description"
-            items={items}
-          />
-        </div>
-        <div className="col">
-          <Select
-            size="small"
-            label="Default"
-            description="Description"
-            items={items}
-            isDisabled
-          />
-        </div>
+        <Select
+          size="small"
+          label="Default"
+          description="Description"
+          items={items}
+        />
+        <Select
+          size="small"
+          label="Default"
+          description="Description"
+          items={items}
+          isDisabled
+        />
       </div>
+      <h3>Select with useState</h3>
       <div className="row">
-        <div className="col">
-          <h3>Select with useState</h3>
-          <UseStateExample />
-        </div>
+        <UseStateExample />
         <div className="col"></div>
       </div>
     </>

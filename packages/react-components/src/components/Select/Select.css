@@ -1,7 +1,9 @@
 .bcds-react-aria-Select {
   display: flex;
+  flex: 1 1 0;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
+  min-width: 0;
   /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
   max-width: -moz-available;
   max-width: -webkit-fill-available;
@@ -64,14 +66,17 @@
 /* Select input equivalent */
 .bcds-react-aria-Select--Button {
   background-color: var(--surface-color-forms-default);
-  border: 1px solid var(--surface-color-border-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   gap: var(--layout-margin-small);
   align-items: center;
-  padding: 0 12px;
+  padding: var(--layout-padding-none) 0.75rem;
+  width: 100%;
+  min-width: 0;
   max-width: 100%;
 }
 .bcds-react-aria-Select--Button.invalid {
@@ -103,7 +108,7 @@
   min-width: 0;
 }
 .bcds-react-aria-Select--Button > svg {
-  flex-shrink: 0;
+  flex: 0 0 auto;
 }
 
 /* Dropdown menu panel */
@@ -115,6 +120,8 @@
   box-sizing: border-box;
   overflow-y: auto;
   padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
+  max-width: calc(100vw - (2 * var(--layout-padding-small)));
+  max-height: 50vh;
   width: var(
     --trigger-width
   ); /* Variable provided by Select component https://react-spectrum.adobe.com/react-aria/Select.html#popover-1 */
@@ -161,7 +168,8 @@
   color: var(--typography-color-primary);
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 .bcds-react-aria-Select--ListBoxItem.destructive {
   color: var(--surface-color-primary-danger-button-default);
