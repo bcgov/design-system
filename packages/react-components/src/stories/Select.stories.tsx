@@ -35,6 +35,11 @@ const meta = {
       description:
         "Text label that appears inside the select input before an option has been selected",
     },
+    selectionMode: {
+      options: ["single", "multiple"],
+      control: { type: "radio" },
+      description: "Whether the user can select one or multiple options",
+    },
     errorMessage: {
       control: { type: "text" },
       description: "Text displayed when the input is invalid",
@@ -65,10 +70,20 @@ export const SelectTemplate: Story = {
     label: "Label",
     size: "medium",
     description: "Optional description or helper text",
+    selectionMode: "single",
     isRequired: false,
     isDisabled: false,
     isInvalid: false,
     items: items,
+  },
+};
+
+export const MultiSelect: Story = {
+  ...SelectTemplate,
+  args: {
+    ...SelectTemplate.args,
+    label: "Multi-select example",
+    selectionMode: "multiple",
   },
 };
 

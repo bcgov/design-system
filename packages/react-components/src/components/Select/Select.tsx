@@ -18,6 +18,7 @@ import {
 } from "react-aria-components";
 
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
+import SvgCheckIcon from "../Icons/SvgCheckIcon";
 import SvgChevronUpIcon from "../Icons/SvgChevronUpIcon";
 import SvgChevronDownIcon from "../Icons/SvgChevronDownIcon";
 
@@ -44,7 +45,10 @@ export interface SelectionSectionProps {
   items: ListBoxItemProps[];
 }
 
-export interface SelectProps<T extends object> extends ReactAriaSelectProps<T> {
+export interface SelectProps<
+  T extends object,
+  M extends "single" | "multiple" = "single",
+> extends ReactAriaSelectProps<T, M> {
   /** Use `items` for a flat list of options */
   items?: ListBoxItemProps[];
   /** Use `sections` for a sectioned list with `items` options in each section */
@@ -62,7 +66,10 @@ export interface SelectProps<T extends object> extends ReactAriaSelectProps<T> {
 }
 
 /** Select displays a collapsible list of options and allows a user to select one of them. */
-export default function Select<T extends object>({
+export default function Select<
+  T extends object,
+  M extends "single" | "multiple" = "single",
+>({
   items,
   sections,
   label,
@@ -71,7 +78,7 @@ export default function Select<T extends object>({
   size = "medium",
   errorMessage,
   ...props
-}: SelectProps<T>) {
+}: SelectProps<T, M>) {
   return (
     <ReactAriaSelect {...props} className={`bcds-react-aria-Select ${size}`}>
       {({ isOpen, isRequired, isInvalid }) => (
@@ -142,31 +149,41 @@ export default function Select<T extends object>({
                         }`}
                         textValue={item.label}
                       >
-                        {item?.iconLeft && (
-                          <div className="bcds-react-aria-Select--ListBoxItem-icon">
-                            {item.iconLeft}
-                          </div>
-                        )}
-                        <div className="bcds-react-aria-Select--ListBoxItem-Text-container">
-                          <Text
-                            slot="label"
-                            className="bcds-react-aria-Select--ListBoxItem-Text-label"
-                          >
-                            {item.label}
-                          </Text>
-                          {item.description && (
-                            <Text
-                              slot="description"
-                              className="bcds-react-aria-Select--ListBoxItem-Text-description"
-                            >
-                              {item.description}
-                            </Text>
-                          )}
-                        </div>
-                        {item?.iconRight && (
-                          <div className="bcds-react-aria-Select--ListBoxItem-icon">
-                            {item.iconRight}
-                          </div>
+                        {({ isSelected }) => (
+                          <>
+                            {item?.iconLeft && (
+                              <div className="bcds-react-aria-Select--ListBoxItem-icon">
+                                {item.iconLeft}
+                              </div>
+                            )}
+                            <div className="bcds-react-aria-Select--ListBoxItem-Text-container">
+                              <Text
+                                slot="label"
+                                className="bcds-react-aria-Select--ListBoxItem-Text-label"
+                              >
+                                {item.label}
+                              </Text>
+                              {item.description && (
+                                <Text
+                                  slot="description"
+                                  className="bcds-react-aria-Select--ListBoxItem-Text-description"
+                                >
+                                  {item.description}
+                                </Text>
+                              )}
+                            </div>
+                            {isSelected ? (
+                              <div className="bcds-react-aria-Select--ListBoxItem-icon">
+                                <SvgCheckIcon />
+                              </div>
+                            ) : (
+                              item?.iconRight && (
+                                <div className="bcds-react-aria-Select--ListBoxItem-icon">
+                                  {item.iconRight}
+                                </div>
+                              )
+                            )}
+                          </>
                         )}
                       </ListBoxItem>
                     )}
