@@ -22,6 +22,7 @@ export { default as Modal } from "./Modal";
 export { default as Radio } from "./Radio";
 export { default as RadioGroup } from "./RadioGroup";
 export { default as Select } from "./Select";
+export { default as Separator } from "./Separator";
 export { default as SvgBcLogo } from "./Icons/SvgBcLogo";
 export { default as SvgBcOutlineIcon } from "./Icons/SvgBcOutlineIcon";
 export { default as SvgBetaIcon } from "./Icons/SvgBetaIcon";
