@@ -8,7 +8,6 @@ import {
   Group,
   Label,
   Popover,
-  Separator,
   Text,
   ValidationResult,
   I18nProvider,
@@ -22,6 +21,7 @@ import "./DatePicker.css";
 import Button from "../Button";
 import Calendar from "../Calendar";
 import Dialog from "../Dialog";
+import Separator from "../Separator";
 import SvgCalendarIcon from "../Icons/SvgCalendarIcon";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 
@@ -146,9 +146,9 @@ export default function DatePicker<T extends DateValue>({
                   {isBrowserLocaleUsed
                     ? formatHelpText
                     : "Format: year - month - day"}
-                  <Separator className="bcds-react-aria-DatePicker--Separator" />
                 </>
               )}
+              {showFormatHelpText && description && <Separator size="small" />}
               {description && <div>{description}</div>}
             </Text>
           )}
