@@ -146,8 +146,10 @@ export default function DatePicker<T extends DateValue>({
                   {isBrowserLocaleUsed
                     ? formatHelpText
                     : "Format: year - month - day"}
-                  <Separator className="bcds-react-aria-DatePicker--Separator" />
                 </>
+              )}
+              {showFormatHelpText && description && (
+                <Separator className="bcds-react-aria-DatePicker--Separator" />
               )}
               {description && <div>{description}</div>}
             </Text>
