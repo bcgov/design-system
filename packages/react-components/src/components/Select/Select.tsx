@@ -96,6 +96,17 @@ export default function Select<
             <SelectValue
               className="bcds-react-aria-SelectValue"
               children={(value) => {
+                if (value.selectedItems.length > 1) {
+                  const firstSelectedItem = value
+                    .selectedItems[0] as ListBoxItemProps | null;
+                  const firstSelectedText = firstSelectedItem?.label;
+                  const remainingCount = value.selectedItems.length - 1;
+
+                  if (firstSelectedText) {
+                    return `${firstSelectedText} + ${remainingCount} more`;
+                  }
+                }
+
                 if (value.selectedText) return value.selectedText;
                 if (placeholder) return placeholder;
                 return "Select an item";
