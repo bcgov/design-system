@@ -29,7 +29,12 @@ export default function SelectPage() {
       <h2>Select</h2>
       <h3>Default size</h3>
       <div className="row">
-        <Select label="Label" description="Description" items={items} />
+        <Select
+          label="Label"
+          description="Description"
+          items={items}
+          placeholder="Pick something"
+        />
         <Select
           label="Disabled"
           description="Description"

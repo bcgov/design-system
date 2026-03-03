@@ -32,7 +32,7 @@ export interface TagProps extends ReactAriaTagProps {
   /**
    * size
    */
-  size?: "small" | "medium";
+  size?: "xsmall" | "small" | "medium";
 }
 
 export default function Tag({
@@ -52,7 +52,7 @@ export default function Tag({
       {({ allowsRemoving, isDisabled }: TagRenderProps) => (
         <>
           {icon}
-          {textValue}
+          <span className="bcds-react-aria-Tag--Label">{textValue}</span>
           {!isDisabled && allowsRemoving && (
             <ReactAriaButton aria-label={`Remove ${textValue}`} slot="remove">
               <svg

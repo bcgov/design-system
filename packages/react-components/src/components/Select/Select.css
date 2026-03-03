@@ -9,58 +9,28 @@
   max-width: -webkit-fill-available;
 }
 
-/* Label above select input */
-.bcds-react-aria-Select--Label {
-  color: var(--typography-color-secondary);
-  font: var(--typography-regular-small-body);
-  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
-}
-.bcds-react-aria-Select[data-disabled] > .bcds-react-aria-Select--Label {
-  color: var(--typography-color-disabled);
-}
-
-/* Text description below select input */
-.bcds-react-aria-Select--Description {
-  font: var(--typography-regular-small-body);
-  color: var(--typography-color-secondary);
-  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
-}
-
 /* Sizing */
 .bcds-react-aria-Select.small .bcds-react-aria-Select--Button {
-  height: 32px;
+  min-height: 32px;
 }
 .bcds-react-aria-Select--ListBox.small .bcds-react-aria-Select--ListBoxItem {
   padding: var(--layout-padding-xsmall);
 }
-.bcds-react-aria-Select.small .bcds-react-aria-SelectValue,
+.bcds-react-aria-Select.small .bcds-react-aria-SelectValue--Placeholder,
 .bcds-react-aria-Select--ListBox.small
   .bcds-react-aria-Select--ListBoxItem-Text-label {
   font: var(--typography-regular-small-body);
 }
 .bcds-react-aria-Select.medium .bcds-react-aria-Select--Button {
-  height: 40px;
+  min-height: 40px;
 }
 .bcds-react-aria-Select--ListBox.medium .bcds-react-aria-Select--ListBoxItem {
   padding: var(--layout-padding-small);
 }
-.bcds-react-aria-Select.medium .bcds-react-aria-SelectValue,
+.bcds-react-aria-Select.medium .bcds-react-aria-SelectValue--Placeholder,
 .bcds-react-aria-Select--ListBox.medium
   .bcds-react-aria-Select--ListBoxItem-Text-label {
   font: var(--typography-regular-body);
-}
-
-/* Error message */
-.bcds-react-aria-Select--Error {
-  font: var(--typography-regular-small-body);
-  color: var(--typography-color-danger);
-}
-
-/* Error icon */
-.bcds-react-aria-Select[data-invalid]
-  > .bcds-react-aria-Select--Button
-  > svg:not(:last-child) {
-  color: var(--icons-color-danger);
 }
 
 /* Select input equivalent */
@@ -71,10 +41,9 @@
   border-radius: var(--layout-border-radius-medium);
   cursor: pointer;
   display: flex;
-  justify-content: space-between;
   gap: var(--layout-margin-small);
   align-items: center;
-  padding: var(--layout-padding-none) 0.75rem;
+  padding: var(--layout-padding-small);
   width: 100%;
   min-width: 0;
   max-width: 100%;
@@ -102,13 +71,44 @@
   border-color: var(--surface-color-border-active);
 }
 .bcds-react-aria-Select--Button > .bcds-react-aria-SelectValue {
-  overflow: hidden;
+  flex: 1 1 auto;
+  overflow: visible;
   white-space: nowrap;
   text-overflow: ellipsis;
   min-width: 0;
 }
 .bcds-react-aria-Select--Button > svg {
   flex: 0 0 auto;
+}
+
+/* Label above select input */
+.bcds-react-aria-Select--Label {
+  color: var(--typography-color-secondary);
+  font: var(--typography-regular-small-body);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
+}
+.bcds-react-aria-Select[data-disabled] > .bcds-react-aria-Select--Label {
+  color: var(--typography-color-disabled);
+}
+
+/* Text description below select input */
+.bcds-react-aria-Select--Description {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
+}
+
+/* Error message */
+.bcds-react-aria-Select--Error {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-danger);
+}
+
+/* Error icon */
+.bcds-react-aria-Select[data-invalid]
+  > .bcds-react-aria-Select--Button
+  > svg:not(:last-child) {
+  color: var(--icons-color-danger);
 }
 
 /* Dropdown menu panel */

@@ -23,6 +23,7 @@ import SvgChevronUpIcon from "../Icons/SvgChevronUpIcon";
 import SvgChevronDownIcon from "../Icons/SvgChevronDownIcon";
 import TagGroup from "../TagGroup/TagGroup";
 import TagList from "../TagList/TagList";
+import { TagProps } from "../Tag";
 
 import "./Select.css";
 
@@ -37,6 +38,10 @@ export interface ListBoxItemProps extends ReactAriaListBoxItemProps {
   iconLeft?: React.ReactElement;
   /** Right icon slot */
   iconRight?: React.ReactElement;
+  /** Optional color token forwarded to selected tags */
+  color?: TagProps["color"];
+  /** Optional style token forwarded to selected tags */
+  tagStyle?: TagProps["tagStyle"];
 }
 
 export interface SelectionSectionProps {
@@ -101,6 +106,7 @@ export default function Select<
                   aria-label={
                     label ? `${label} selections` : "Selected options"
                   }
+                  /* Handle deselection of items via tag button */
                   onRemove={(keys) => {
                     const selectedKeys = state.selectionManager.selectedKeys;
 
@@ -116,13 +122,17 @@ export default function Select<
                   <TagList
                     items={(selectedItems as Array<ListBoxItemProps | null>)
                       .filter((item): item is ListBoxItemProps => item !== null)
+                      /* Map ListBoxItem props to Tag props */
                       .map((item) => ({
                         id: item?.id ? item.id : item.label,
                         textValue: item.label,
-                        size: "small",
+                        size: size === "small" ? "xsmall" : "small",
+                        color: item.color,
+                        tagStyle: item.tagStyle,
+                        ...(item.iconLeft && { icon: item.iconLeft }),
                       }))}
                     renderEmptyState={() => (
-                      <span>
+                      <span className="bcds-react-aria-SelectValue--Placeholder">
                         {placeholder ? placeholder : "Select an item"}
                       </span>
                     )}
