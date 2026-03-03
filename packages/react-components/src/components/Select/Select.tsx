@@ -21,6 +21,8 @@ import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 import SvgCheckIcon from "../Icons/SvgCheckIcon";
 import SvgChevronUpIcon from "../Icons/SvgChevronUpIcon";
 import SvgChevronDownIcon from "../Icons/SvgChevronDownIcon";
+import TagGroup from "../TagGroup/TagGroup";
+import TagList from "../TagList/TagList";
 
 import "./Select.css";
 
@@ -93,25 +95,41 @@ export default function Select<
               size === "medium" ? "medium" : "small"
             } ${isInvalid && "invalid"}`}
           >
-            <SelectValue
-              className="bcds-react-aria-SelectValue"
-              children={(value) => {
-                if (value.selectedItems.length > 1) {
-                  const firstSelectedItem = value
-                    .selectedItems[0] as ListBoxItemProps | null;
-                  const firstSelectedText = firstSelectedItem?.label;
-                  const remainingCount = value.selectedItems.length - 1;
-
-                  if (firstSelectedText) {
-                    return `${firstSelectedText} + ${remainingCount} more`;
+            <SelectValue className="bcds-react-aria-SelectValue">
+              {({ selectedItems, state }) => (
+                <TagGroup
+                  aria-label={
+                    label ? `${label} selections` : "Selected options"
                   }
-                }
+                  onRemove={(keys) => {
+                    const selectedKeys = state.selectionManager.selectedKeys;
 
-                if (value.selectedText) return value.selectedText;
-                if (placeholder) return placeholder;
-                return "Select an item";
-              }}
-            />
+                    const updatedSelectedKeys = new Set(selectedKeys);
+
+                    for (const key of keys) {
+                      updatedSelectedKeys.delete(key);
+                    }
+
+                    state.selectionManager.setSelectedKeys(updatedSelectedKeys);
+                  }}
+                >
+                  <TagList
+                    items={(selectedItems as Array<ListBoxItemProps | null>)
+                      .filter((item): item is ListBoxItemProps => item !== null)
+                      .map((item) => ({
+                        id: item?.id ? item.id : item.label,
+                        textValue: item.label,
+                        size: "small",
+                      }))}
+                    renderEmptyState={() => (
+                      <span>
+                        {placeholder ? placeholder : "Select an item"}
+                      </span>
+                    )}
+                  />
+                </TagGroup>
+              )}
+            </SelectValue>
             {isInvalid && <SvgExclamationIcon />}
             {isOpen ? <SvgChevronUpIcon /> : <SvgChevronDownIcon />}
           </Button>
