@@ -42,12 +42,14 @@ export default function Tag({
   icon,
   id,
   textValue,
+  ...props
 }: TagProps) {
   return (
     <ReactAriaTag
       className={`bcds-react-aria-Tag ${color} ${tagStyle} ${size}`}
       id={id}
       textValue={textValue}
+      {...props}
     >
       {({ allowsRemoving, isDisabled }: TagRenderProps) => (
         <>

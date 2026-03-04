@@ -97,7 +97,7 @@ export default function Select<
       className={`bcds-react-aria-Select ${size}`}
       {...props}
     >
-      {({ isOpen, isRequired, isInvalid }) => (
+      {({ isOpen, isRequired, isInvalid, isDisabled }) => (
         <>
           {label && (
             <Label className="bcds-react-aria-Select--Label">
@@ -146,6 +146,7 @@ export default function Select<
                           color: item.color,
                           tagStyle: item.tagStyle,
                           ...(item.iconLeft && { icon: item.iconLeft }),
+                          ...(isDisabled && { isDisabled: true }),
                         }))}
                       renderEmptyState={() => (
                         <span className="bcds-react-aria-SelectValue--Text">

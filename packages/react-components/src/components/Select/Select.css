@@ -40,7 +40,6 @@
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
   box-sizing: border-box;
-  cursor: pointer;
   display: flex;
   gap: var(--layout-margin-small);
   align-items: center;
@@ -48,6 +47,10 @@
   width: auto;
   min-width: 0;
   max-width: 100%;
+}
+button.bcds-react-aria-Select--Button[data-hovered] {
+  border-color: var(--surface-color-border-dark);
+  cursor: pointer;
 }
 .bcds-react-aria-Select--Button.invalid {
   border-color: var(--support-border-color-danger);
@@ -58,9 +61,6 @@
 .bcds-react-aria-Select--Button[data-disabled] {
   background-color: var(--surface-color-forms-disabled);
   cursor: not-allowed;
-}
-.bcds-react-aria-Select--Button[data-hovered] {
-  border-color: var(--surface-color-border-dark);
 }
 .bcds-react-aria-Select--Button[data-focused] {
   border-color: var(--surface-color-border-active);
