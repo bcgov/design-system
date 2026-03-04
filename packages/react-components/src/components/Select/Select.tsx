@@ -1,5 +1,4 @@
 import {
-  Button,
   Collection,
   FieldError,
   Header,
@@ -16,10 +15,17 @@ import {
   Text,
   ValidationResult,
 } from "react-aria-components";
+import { useState } from "react";
+import { createPortal } from "react-dom";
 
+import Button from "../Button";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
+import SvgCheckIcon from "../Icons/SvgCheckIcon";
 import SvgChevronUpIcon from "../Icons/SvgChevronUpIcon";
 import SvgChevronDownIcon from "../Icons/SvgChevronDownIcon";
+import TagGroup from "../TagGroup/TagGroup";
+import TagList from "../TagList/TagList";
+import { TagProps } from "../Tag";
 
 import "./Select.css";
 
@@ -34,6 +40,10 @@ export interface ListBoxItemProps extends ReactAriaListBoxItemProps {
   iconLeft?: React.ReactElement;
   /** Right icon slot */
   iconRight?: React.ReactElement;
+  /** Optional color token forwarded to selected tags */
+  color?: TagProps["color"];
+  /** Optional style token forwarded to selected tags */
+  tagStyle?: TagProps["tagStyle"];
 }
 
 export interface SelectionSectionProps {
@@ -44,7 +54,10 @@ export interface SelectionSectionProps {
   items: ListBoxItemProps[];
 }
 
-export interface SelectProps<T extends object> extends ReactAriaSelectProps<T> {
+export interface SelectProps<
+  T extends object,
+  M extends "single" | "multiple" = "single",
+> extends ReactAriaSelectProps<T, M> {
   /** Use `items` for a flat list of options */
   items?: ListBoxItemProps[];
   /** Use `sections` for a sectioned list with `items` options in each section */
@@ -62,7 +75,10 @@ export interface SelectProps<T extends object> extends ReactAriaSelectProps<T> {
 }
 
 /** Select displays a collapsible list of options and allows a user to select one of them. */
-export default function Select<T extends object>({
+export default function Select<
+  T extends object,
+  M extends "single" | "multiple" = "single",
+>({
   items,
   sections,
   label,
@@ -70,33 +86,152 @@ export default function Select<T extends object>({
   placeholder,
   size = "medium",
   errorMessage,
+  selectionMode,
   ...props
-}: SelectProps<T>) {
+}: SelectProps<T, M>) {
+  const [tagOverlayHost, setTagOverlayHost] = useState<HTMLDivElement | null>(
+    null,
+  );
+
   return (
-    <ReactAriaSelect {...props} className="bcds-react-aria-Select">
-      {({ isOpen, isRequired, isInvalid }) => (
+    <ReactAriaSelect
+      selectionMode={selectionMode}
+      className={`bcds-react-aria-Select ${size}`}
+      {...props}
+    >
+      {({ isOpen, isRequired, isInvalid, isDisabled }) => (
         <>
           {label && (
             <Label className="bcds-react-aria-Select--Label">
               {isRequired ? `${label} (required)` : label}
             </Label>
           )}
-          <Button
-            className={`bcds-react-aria-Select--Button ${
-              size === "medium" ? "medium" : "small"
-            } ${isInvalid && "invalid"}`}
-          >
-            <SelectValue
-              className="bcds-react-aria-SelectValue"
-              children={(value) => {
-                if (value.selectedText) return value.selectedText;
-                if (placeholder) return placeholder;
-                return "Select an item";
-              }}
-            />
-            {isInvalid && <SvgExclamationIcon />}
-            {isOpen ? <SvgChevronUpIcon /> : <SvgChevronDownIcon />}
-          </Button>
+          {selectionMode === "multiple" ? (
+            <div className="bcds-react-aria-Select--TriggerShell">
+              <Button
+                className={`bcds-react-aria-Select--Button ${
+                  size === "medium" ? "medium" : "small"
+                } ${isInvalid && "invalid"}`}
+              >
+                <SelectValue className="bcds-react-aria-SelectValue">
+                  {({ selectedItems, state }) => {
+                    return (
+                      /* Portal interactive tags out of button as accessibility safeguard */
+                      <>
+                        {selectedItems.length === 0 && (
+                          <span className="bcds-react-aria-SelectValue--Text">
+                            {placeholder ? placeholder : "Select an item"}
+                          </span>
+                        )}
+                        {selectedItems.length > 0 &&
+                          tagOverlayHost &&
+                          createPortal(
+                            <div
+                              className="bcds-react-aria-Select--TagOverlay"
+                              onPointerDown={(event) => event.stopPropagation()}
+                              onClick={(event) => event.stopPropagation()}
+                            >
+                              <TagGroup
+                                aria-label={
+                                  label
+                                    ? `${label} selections`
+                                    : "Selected options"
+                                }
+                                /* Handle deselection of items via Tag button */
+                                onRemove={(keys) => {
+                                  const selectedKeys =
+                                    state.selectionManager.selectedKeys;
+
+                                  const updatedSelectedKeys = new Set(
+                                    selectedKeys,
+                                  );
+
+                                  for (const key of keys) {
+                                    updatedSelectedKeys.delete(key);
+                                  }
+
+                                  state.selectionManager.setSelectedKeys(
+                                    updatedSelectedKeys,
+                                  );
+                                }}
+                              >
+                                <TagList
+                                  items={(
+                                    selectedItems as Array<ListBoxItemProps | null>
+                                  )
+                                    .filter(
+                                      (item): item is ListBoxItemProps =>
+                                        item !== null,
+                                    )
+                                    /* Map ListBoxItem props to Tag props */
+                                    .map((item) => ({
+                                      id: item?.id ? item.id : item.label,
+                                      textValue: item.label,
+                                      size:
+                                        size === "small" ? "xsmall" : "small",
+                                      color: item.color,
+                                      tagStyle: item.tagStyle,
+                                      ...(item.iconLeft && {
+                                        icon: item.iconLeft,
+                                      }),
+                                      ...(isDisabled && { isDisabled: true }),
+                                    }))}
+                                  renderEmptyState={() => (
+                                    <span className="bcds-react-aria-SelectValue--Text">
+                                      {placeholder
+                                        ? placeholder
+                                        : "Select an item"}
+                                    </span>
+                                  )}
+                                />
+                              </TagGroup>
+                            </div>,
+                            tagOverlayHost,
+                          )}
+                      </>
+                    );
+                  }}
+                </SelectValue>
+                {isInvalid && <SvgExclamationIcon />}
+                {isOpen ? <SvgChevronUpIcon /> : <SvgChevronDownIcon />}
+              </Button>
+              <div
+                className="bcds-react-aria-Select--TagOverlayHost"
+                ref={setTagOverlayHost}
+              />
+            </div>
+          ) : (
+            <Button
+              className={`bcds-react-aria-Select--Button ${
+                size === "medium" ? "medium" : "small"
+              } ${isInvalid && "invalid"}`}
+            >
+              <SelectValue
+                className="bcds-react-aria-SelectValue"
+                children={(value) => {
+                  if (value.selectedText)
+                    return (
+                      <span className="bcds-react-aria-SelectValue--Text">
+                        {value.selectedText}
+                      </span>
+                    );
+                  if (placeholder)
+                    return (
+                      <span className="bcds-react-aria-SelectValue--Text">
+                        {placeholder}
+                      </span>
+                    );
+                  return (
+                    <span className="bcds-react-aria-SelectValue--Text">
+                      Select an item
+                    </span>
+                  );
+                }}
+              />
+              {isInvalid && <SvgExclamationIcon />}
+              {isOpen ? <SvgChevronUpIcon /> : <SvgChevronDownIcon />}
+            </Button>
+          )}
           {description && (
             <Text
               slot="description"
@@ -110,7 +245,7 @@ export default function Select<T extends object>({
           </FieldError>
           <Popover className="bcds-react-aria-Select--Popover" offset={4}>
             <ListBox
-              className="bcds-react-aria-Select--ListBox"
+              className={`bcds-react-aria-Select--ListBox ${size}`}
               // This ternary statement is used to mock the data for `sections`
               // if a flat list of `items` was passed instead. This allows us to
               // use one component to support both flat and sectioned lists of
@@ -142,31 +277,41 @@ export default function Select<T extends object>({
                         }`}
                         textValue={item.label}
                       >
-                        {item?.iconLeft && (
-                          <div className="bcds-react-aria-Select--ListBoxItem-icon">
-                            {item.iconLeft}
-                          </div>
-                        )}
-                        <div className="bcds-react-aria-Select--ListBoxItem-Text-container">
-                          <Text
-                            slot="label"
-                            className="bcds-react-aria-Select--ListBoxItem-Text-label"
-                          >
-                            {item.label}
-                          </Text>
-                          {item.description && (
-                            <Text
-                              slot="description"
-                              className="bcds-react-aria-Select--ListBoxItem-Text-description"
-                            >
-                              {item.description}
-                            </Text>
-                          )}
-                        </div>
-                        {item?.iconRight && (
-                          <div className="bcds-react-aria-Select--ListBoxItem-icon">
-                            {item.iconRight}
-                          </div>
+                        {({ isSelected }) => (
+                          <>
+                            {item?.iconLeft && (
+                              <div className="bcds-react-aria-Select--ListBoxItem-icon">
+                                {item.iconLeft}
+                              </div>
+                            )}
+                            <div className="bcds-react-aria-Select--ListBoxItem-Text-container">
+                              <Text
+                                slot="label"
+                                className="bcds-react-aria-Select--ListBoxItem-Text-label"
+                              >
+                                {item.label}
+                              </Text>
+                              {item.description && (
+                                <Text
+                                  slot="description"
+                                  className="bcds-react-aria-Select--ListBoxItem-Text-description"
+                                >
+                                  {item.description}
+                                </Text>
+                              )}
+                            </div>
+                            {isSelected ? (
+                              <div className="bcds-react-aria-Select--ListBoxItem-icon">
+                                <SvgCheckIcon />
+                              </div>
+                            ) : (
+                              item?.iconRight && (
+                                <div className="bcds-react-aria-Select--ListBoxItem-icon">
+                                  {item.iconRight}
+                                </div>
+                              )
+                            )}
+                          </>
                         )}
                       </ListBoxItem>
                     )}

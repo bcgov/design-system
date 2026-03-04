@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Select } from "../components";
+import { TagProps } from "../components/Tag";
 
 const meta = {
   title: "Inputs and controls/Select",
@@ -20,6 +21,22 @@ const meta = {
       options: ["medium", "small"],
       control: { type: "radio" },
       description: "Defaults to 'medium', also supports 'small'",
+      table: { defaultValue: { summary: "medium" } },
+    },
+    selectionMode: {
+      options: ["single", "multiple"],
+      control: { type: "radio" },
+      description: "Whether the user can select one or multiple options",
+      table: { defaultValue: { summary: "single" } },
+    },
+    items: {
+      control: { type: "object" },
+      description: "Array of options to display in the dropdown",
+    },
+    sections: {
+      control: { type: "object" },
+      description:
+        "Array of sections to display in the dropdown. Each should have its own array of `items`",
     },
     label: {
       control: { type: "text" },
@@ -35,9 +52,36 @@ const meta = {
       description:
         "Text label that appears inside the select input before an option has been selected",
     },
+    value: {
+      control: { type: "object" },
+      description: "The current value (controlled)",
+    },
+    defaultValue: {
+      control: { type: "object" },
+      description: "The initial value (uncontrolled)",
+    },
+    disabledKeys: {
+      control: { type: "object" },
+      description:
+        "Items that cannot be selected, focused or otherwise interacted with",
+    },
     errorMessage: {
       control: { type: "text" },
       description: "Text displayed when the input is invalid",
+    },
+    isRequired: {
+      control: { type: "boolean" },
+      description: "Whether a select is required or optional",
+      table: { defaultValue: { summary: "false" } },
+    },
+    isDisabled: {
+      control: { type: "boolean" },
+      description: "Whether the select is disabled",
+      table: { defaultValue: { summary: "false" } },
+    },
+    isInvalid: {
+      control: "boolean",
+      description: "Whether the input is valid (usually set programmatically)",
     },
   },
 } satisfies Meta<typeof Select>;
@@ -65,10 +109,44 @@ export const SelectTemplate: Story = {
     label: "Label",
     size: "medium",
     description: "Optional description or helper text",
+    selectionMode: "single",
     isRequired: false,
     isDisabled: false,
     isInvalid: false,
     items: items,
+  },
+};
+
+export const MultiSelect: Story = {
+  ...SelectTemplate,
+  args: {
+    ...SelectTemplate.args,
+    label: "Multi-select example",
+    selectionMode: "multiple",
+  },
+};
+
+export const StyledTags: Story = {
+  ...SelectTemplate,
+  args: {
+    ...SelectTemplate.args,
+    label: "Multi-select with styled tags",
+    selectionMode: "multiple",
+    defaultValue: ["1", "2"],
+    items: [
+      {
+        id: "1",
+        label: "Option 1",
+        color: "bc-blue" as TagProps["color"],
+        tagStyle: "circular" as TagProps["tagStyle"],
+      },
+      {
+        id: "2",
+        label: "Option 2",
+        color: "bc-gold" as TagProps["color"],
+        tagStyle: "circular" as TagProps["tagStyle"],
+      },
+    ],
   },
 };
 
