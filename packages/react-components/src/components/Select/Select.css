@@ -16,7 +16,7 @@
 .bcds-react-aria-Select--ListBox.small .bcds-react-aria-Select--ListBoxItem {
   padding: var(--layout-padding-xsmall);
 }
-.bcds-react-aria-Select.small .bcds-react-aria-SelectValue--Placeholder,
+.bcds-react-aria-Select.small .bcds-react-aria-SelectValue--Text,
 .bcds-react-aria-Select--ListBox.small
   .bcds-react-aria-Select--ListBoxItem-Text-label {
   font: var(--typography-regular-small-body);
@@ -27,7 +27,7 @@
 .bcds-react-aria-Select--ListBox.medium .bcds-react-aria-Select--ListBoxItem {
   padding: var(--layout-padding-small);
 }
-.bcds-react-aria-Select.medium .bcds-react-aria-SelectValue--Placeholder,
+.bcds-react-aria-Select.medium .bcds-react-aria-SelectValue--Text,
 .bcds-react-aria-Select--ListBox.medium
   .bcds-react-aria-Select--ListBoxItem-Text-label {
   font: var(--typography-regular-body);
@@ -39,12 +39,13 @@
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
+  box-sizing: border-box;
   cursor: pointer;
   display: flex;
   gap: var(--layout-margin-small);
   align-items: center;
   padding: var(--layout-padding-small);
-  width: 100%;
+  width: auto;
   min-width: 0;
   max-width: 100%;
 }
@@ -73,8 +74,9 @@
 .bcds-react-aria-Select--Button > .bcds-react-aria-SelectValue {
   flex: 1 1 auto;
   overflow: visible;
-  white-space: nowrap;
+  white-space: normal;
   text-overflow: ellipsis;
+  text-align: left;
   min-width: 0;
 }
 .bcds-react-aria-Select--Button > svg {
@@ -114,7 +116,8 @@
 /* Dropdown menu panel */
 .bcds-react-aria-Select--Popover {
   background-color: var(--surface-color-forms-default);
-  border: 1px solid var(--surface-color-border-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
   box-shadow: var(--surface-shadow-medium);
   box-sizing: border-box;
@@ -122,17 +125,24 @@
   padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
   max-width: calc(100vw - (2 * var(--layout-padding-small)));
   max-height: 50vh;
+}
+/* Set width separately for single and multiple selection modes */
+.bcds-react-aria-Select--Popover.single {
   width: var(
     --trigger-width
   ); /* Variable provided by Select component https://react-spectrum.adobe.com/react-aria/Select.html#popover-1 */
+}
+.bcds-react-aria-Select--Popover.multiple {
+  width: 300px;
 }
 .bcds-react-aria-Select--ListBox[data-focused] {
   outline: none;
 }
 .bcds-react-aria-Select--ListBox > .bcds-react-aria-Section:not(:first-child) {
-  border-top: 1px solid var(--surface-color-border-default);
+  border-top: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
   margin-top: 1px;
-  padding-top: 2px;
+  padding-top: var(--layout-padding-hair);
 }
 
 /* Header label within Section of multi-section Select */
