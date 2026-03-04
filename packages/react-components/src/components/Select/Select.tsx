@@ -1,7 +1,6 @@
 import {
   Collection,
   FieldError,
-  Group,
   Header,
   Key,
   Label,
@@ -16,7 +15,8 @@ import {
   Text,
   ValidationResult,
 } from "react-aria-components";
-import { useRef } from "react";
+import { useState } from "react";
+import { createPortal } from "react-dom";
 
 import Button from "../Button";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
@@ -89,7 +89,9 @@ export default function Select<
   selectionMode,
   ...props
 }: SelectProps<T, M>) {
-  const triggerRef = useRef<HTMLDivElement | null>(null);
+  const [tagOverlayHost, setTagOverlayHost] = useState<HTMLDivElement | null>(
+    null,
+  );
 
   return (
     <ReactAriaSelect
@@ -105,65 +107,100 @@ export default function Select<
             </Label>
           )}
           {selectionMode === "multiple" ? (
-            /* Render group instead of button in multiple selection mode */
-            <Group
-              className={`bcds-react-aria-Select--Button ${
-                size === "medium" ? "medium" : "small"
-              } ${isInvalid && "invalid"}`}
-              ref={triggerRef}
-            >
-              <SelectValue className="bcds-react-aria-SelectValue">
-                {({ selectedItems, state }) => (
-                  <TagGroup
-                    aria-label={
-                      label ? `${label} selections` : "Selected options"
-                    }
-                    /* Handle deselection of items via Tag button */
-                    onRemove={(keys) => {
-                      const selectedKeys = state.selectionManager.selectedKeys;
+            <div className="bcds-react-aria-Select--TriggerShell">
+              <Button
+                className={`bcds-react-aria-Select--Button ${
+                  size === "medium" ? "medium" : "small"
+                } ${isInvalid && "invalid"}`}
+              >
+                <SelectValue className="bcds-react-aria-SelectValue">
+                  {({ selectedItems, state }) => {
+                    return (
+                      /* Portal interactive tags out of button as accessibility safeguard */
+                      <>
+                        {selectedItems.length === 0 && (
+                          <span className="bcds-react-aria-SelectValue--Text">
+                            {placeholder ? placeholder : "Select an item"}
+                          </span>
+                        )}
+                        {selectedItems.length > 0 &&
+                          tagOverlayHost &&
+                          createPortal(
+                            <div
+                              className="bcds-react-aria-Select--TagOverlay"
+                              onPointerDown={(event) => event.stopPropagation()}
+                              onClick={(event) => event.stopPropagation()}
+                            >
+                              <TagGroup
+                                aria-label={
+                                  label
+                                    ? `${label} selections`
+                                    : "Selected options"
+                                }
+                                /* Handle deselection of items via Tag button */
+                                onRemove={(keys) => {
+                                  const selectedKeys =
+                                    state.selectionManager.selectedKeys;
 
-                      const updatedSelectedKeys = new Set(selectedKeys);
+                                  const updatedSelectedKeys = new Set(
+                                    selectedKeys,
+                                  );
 
-                      for (const key of keys) {
-                        updatedSelectedKeys.delete(key);
-                      }
+                                  for (const key of keys) {
+                                    updatedSelectedKeys.delete(key);
+                                  }
 
-                      state.selectionManager.setSelectedKeys(
-                        updatedSelectedKeys,
-                      );
-                    }}
-                  >
-                    <TagList
-                      items={(selectedItems as Array<ListBoxItemProps | null>)
-                        .filter(
-                          (item): item is ListBoxItemProps => item !== null,
-                        )
-                        /* Map ListBoxItem props to Tag props */
-                        .map((item) => ({
-                          id: item?.id ? item.id : item.label,
-                          textValue: item.label,
-                          size: size === "small" ? "xsmall" : "small",
-                          color: item.color,
-                          tagStyle: item.tagStyle,
-                          ...(item.iconLeft && { icon: item.iconLeft }),
-                          ...(isDisabled && { isDisabled: true }),
-                        }))}
-                      renderEmptyState={() => (
-                        <span className="bcds-react-aria-SelectValue--Text">
-                          {placeholder ? placeholder : "Select an item"}
-                        </span>
-                      )}
-                    />
-                  </TagGroup>
-                )}
-              </SelectValue>
-              {isInvalid && <SvgExclamationIcon />}
-              <Button variant="tertiary" size="xsmall" isIconButton>
+                                  state.selectionManager.setSelectedKeys(
+                                    updatedSelectedKeys,
+                                  );
+                                }}
+                              >
+                                <TagList
+                                  items={(
+                                    selectedItems as Array<ListBoxItemProps | null>
+                                  )
+                                    .filter(
+                                      (item): item is ListBoxItemProps =>
+                                        item !== null,
+                                    )
+                                    /* Map ListBoxItem props to Tag props */
+                                    .map((item) => ({
+                                      id: item?.id ? item.id : item.label,
+                                      textValue: item.label,
+                                      size:
+                                        size === "small" ? "xsmall" : "small",
+                                      color: item.color,
+                                      tagStyle: item.tagStyle,
+                                      ...(item.iconLeft && {
+                                        icon: item.iconLeft,
+                                      }),
+                                      ...(isDisabled && { isDisabled: true }),
+                                    }))}
+                                  renderEmptyState={() => (
+                                    <span className="bcds-react-aria-SelectValue--Text">
+                                      {placeholder
+                                        ? placeholder
+                                        : "Select an item"}
+                                    </span>
+                                  )}
+                                />
+                              </TagGroup>
+                            </div>,
+                            tagOverlayHost,
+                          )}
+                      </>
+                    );
+                  }}
+                </SelectValue>
+                {isInvalid && <SvgExclamationIcon />}
                 {isOpen ? <SvgChevronUpIcon /> : <SvgChevronDownIcon />}
               </Button>
-            </Group>
+              <div
+                className="bcds-react-aria-Select--TagOverlayHost"
+                ref={setTagOverlayHost}
+              />
+            </div>
           ) : (
-            /* Render button in single selection mode */
             <Button
               className={`bcds-react-aria-Select--Button ${
                 size === "medium" ? "medium" : "small"
@@ -206,12 +243,7 @@ export default function Select<
           <FieldError className="bcds-react-aria-Select--Error">
             {errorMessage}
           </FieldError>
-          <Popover
-            className={`bcds-react-aria-Select--Popover ${selectionMode === "multiple" ? "multiple" : "single "}`}
-            offset={4}
-            /* Move trigger to button when in multiple selection mode */
-            {...(selectionMode === "multiple" && { triggerRef })}
-          >
+          <Popover className="bcds-react-aria-Select--Popover" offset={4}>
             <ListBox
               className={`bcds-react-aria-Select--ListBox ${size}`}
               // This ternary statement is used to mock the data for `sections`

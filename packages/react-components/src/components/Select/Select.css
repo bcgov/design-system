@@ -44,11 +44,11 @@
   gap: var(--layout-margin-small);
   align-items: center;
   padding: var(--layout-padding-small);
-  width: auto;
+  width: 100%;
   min-width: 0;
   max-width: 100%;
 }
-button.bcds-react-aria-Select--Button[data-hovered] {
+.bcds-react-aria-Select--Button[data-hovered] {
   border-color: var(--surface-color-border-dark);
   cursor: pointer;
 }
@@ -83,6 +83,37 @@ button.bcds-react-aria-Select--Button[data-hovered] {
   flex: 0 0 auto;
 }
 
+/* Overlay for tags in multi-select mode */
+.bcds-react-aria-Select--TriggerShell {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+}
+.bcds-react-aria-Select--TriggerShell > .bcds-react-aria-Select--Button {
+  grid-area: 1 / 1;
+  align-self: stretch;
+}
+.bcds-react-aria-Select--TagOverlayHost {
+  grid-area: 1 / 1;
+  z-index: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  padding: var(--layout-padding-small);
+  padding-right: 2.5rem;
+  pointer-events: none;
+}
+.bcds-react-aria-Select--TagOverlay {
+  width: 100%;
+  min-width: 0;
+  pointer-events: none;
+}
+.bcds-react-aria-Select--TagOverlay .bcds-react-aria-Tag,
+.bcds-react-aria-Select--TagOverlay .bcds-react-aria-Tag [slot="remove"],
+.bcds-react-aria-Select--TagOverlay .bcds-react-aria-Tag button {
+  pointer-events: auto;
+}
+
 /* Label above select input */
 .bcds-react-aria-Select--Label {
   color: var(--typography-color-secondary);
@@ -108,8 +139,8 @@ button.bcds-react-aria-Select--Button[data-hovered] {
 
 /* Error icon */
 .bcds-react-aria-Select[data-invalid]
-  > .bcds-react-aria-Select--Button
-  > svg:not(:last-child) {
+  .bcds-react-aria-Select--Button
+  svg:not(:last-child) {
   color: var(--icons-color-danger);
 }
 
@@ -125,15 +156,9 @@ button.bcds-react-aria-Select--Button[data-hovered] {
   padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
   max-width: calc(100vw - (2 * var(--layout-padding-small)));
   max-height: 50vh;
-}
-/* Set width separately for single and multiple selection modes */
-.bcds-react-aria-Select--Popover.single {
   width: var(
     --trigger-width
   ); /* Variable provided by Select component https://react-spectrum.adobe.com/react-aria/Select.html#popover-1 */
-}
-.bcds-react-aria-Select--Popover.multiple {
-  width: 300px;
 }
 .bcds-react-aria-Select--ListBox[data-focused] {
   outline: none;
