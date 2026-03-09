@@ -34,6 +34,7 @@ export default function SelectPage() {
           description="Description"
           items={items}
           placeholder="Pick something"
+          overflow="wrap"
         />
         <Select
           label="Disabled"
@@ -49,6 +50,7 @@ export default function SelectPage() {
           label="Label"
           description="Description"
           items={items}
+          overflow="scroll"
         />
         <Select
           size="small"

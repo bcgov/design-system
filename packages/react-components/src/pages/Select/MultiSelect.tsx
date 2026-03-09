@@ -41,13 +41,20 @@ export default function MultiSelectExample() {
     },
   ];
   return (
-    <>
+    <div className="col" style={{ gap: "var(--layout-margin-medium)" }}>
       <Select
         label="Pick some options"
         description="Allows multiple options to be selected"
         selectionMode="multiple"
         items={items}
       />
-    </>
+      <Select
+        label="Pick some options"
+        description="Allows multiple options to be selected"
+        selectionMode="multiple"
+        items={items}
+        overflow="scroll"
+      />
+    </div>
   );
 }

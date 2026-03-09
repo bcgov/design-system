@@ -72,6 +72,8 @@ export interface SelectProps<
   description?: string;
   /** Used for data validation and error handling */
   errorMessage?: string | ((validation: ValidationResult) => string);
+  /** Overflow behaviour */
+  overflow?: "wrap" | "scroll";
 }
 
 /** Select displays a collapsible list of options and allows a user to select one of them. */
@@ -87,16 +89,15 @@ export default function Select<
   size = "medium",
   errorMessage,
   selectionMode,
+  overflow = "wrap",
   ...props
 }: SelectProps<T, M>) {
-  const [tagOverlayHost, setTagOverlayHost] = useState<HTMLDivElement | null>(
-    null,
-  );
+  const [tagOverlay, setTagOverlay] = useState<HTMLDivElement | null>(null);
 
   return (
     <ReactAriaSelect
       selectionMode={selectionMode}
-      className={`bcds-react-aria-Select ${size}`}
+      className={`bcds-react-aria-Select ${size} ${overflow}`}
       {...props}
     >
       {({ isOpen, isRequired, isInvalid, isDisabled }) => (
@@ -107,7 +108,7 @@ export default function Select<
             </Label>
           )}
           {selectionMode === "multiple" ? (
-            <div className="bcds-react-aria-Select--TriggerShell">
+            <div className="bcds-react-aria-Select--InputContainer">
               <Button
                 className={`bcds-react-aria-Select--Button ${
                   size === "medium" ? "medium" : "small"
@@ -124,7 +125,7 @@ export default function Select<
                           </span>
                         )}
                         {selectedItems.length > 0 &&
-                          tagOverlayHost &&
+                          tagOverlay &&
                           createPortal(
                             <div
                               className="bcds-react-aria-Select--TagOverlay"
@@ -186,7 +187,7 @@ export default function Select<
                                 />
                               </TagGroup>
                             </div>,
-                            tagOverlayHost,
+                            tagOverlay,
                           )}
                       </>
                     );
@@ -196,8 +197,8 @@ export default function Select<
                 {isOpen ? <SvgChevronUpIcon /> : <SvgChevronDownIcon />}
               </Button>
               <div
-                className="bcds-react-aria-Select--TagOverlayHost"
-                ref={setTagOverlayHost}
+                className="bcds-react-aria-Select--TagOverlayContainer"
+                ref={setTagOverlay}
               />
             </div>
           ) : (
