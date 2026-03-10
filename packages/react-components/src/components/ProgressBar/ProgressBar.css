@@ -63,7 +63,7 @@
   animation: indeterminate-bar 1.5s linear infinite;
 
   @media (prefers-reduced-motion: reduce) {
-    animation: none;
+    animation: indeterminate-bar-pulse 2s ease-in-out infinite;
   }
 }
 @keyframes indeterminate-bar {
@@ -75,5 +75,14 @@
   }
   100% {
     transform: translateX(100%) scaleX(0.4);
+  }
+}
+@keyframes indeterminate-bar-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
   }
 }

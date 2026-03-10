@@ -80,7 +80,8 @@ svg.bcds-react-aria-ProgressCircle--Container.large {
   animation: indeterminate 1.5s linear infinite;
 
   @media (prefers-reduced-motion: reduce) {
-    animation: none;
+    animation: indeterminate-circle-pulse 2s ease-in-out infinite;
+    stroke-dashoffset: 0;
   }
 }
 
@@ -90,5 +91,14 @@ svg.bcds-react-aria-ProgressCircle--Container.large {
   }
   to {
     rotate: 270deg;
+  }
+}
+@keyframes indeterminate-circle-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
   }
 }
