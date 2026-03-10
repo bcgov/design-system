@@ -1,11 +1,10 @@
 .bcds-react-aria-Button {
   display: inline-flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   gap: var(--layout-padding-small);
   min-height: 24px;
   min-width: 24px;
-  box-sizing: border-box;
   border: none;
   border-radius: var(--layout-border-radius-medium);
   cursor: pointer;
