@@ -101,7 +101,7 @@ export const TimeFieldTemplate: Story = {
   render: ({ ...args }) => <TimeField {...args} />,
 };
 
-export const SmallTimeField: Story = {
+export const Small: Story = {
   ...TimeFieldTemplate,
   args: {
     ...TimeFieldTemplate.args,
@@ -109,7 +109,7 @@ export const SmallTimeField: Story = {
   },
 };
 
-export const Hour24TimeField: Story = {
+export const Hour24: Story = {
   ...TimeFieldTemplate,
   args: {
     ...TimeFieldTemplate.args,
@@ -118,7 +118,15 @@ export const Hour24TimeField: Story = {
   },
 };
 
-export const SecondGranularityTimeField: Story = {
+export const HideTimeZone: Story = {
+  ...TimeFieldTemplate,
+  args: {
+    ...TimeFieldTemplate.args,
+    hideTimeZone: true,
+  },
+};
+
+export const SecondGranularity: Story = {
   ...TimeFieldTemplate,
   args: {
     ...TimeFieldTemplate.args,
@@ -126,7 +134,27 @@ export const SecondGranularityTimeField: Story = {
   },
 };
 
-export const RequiredTimeField: Story = {
+export const LeadingZeros: Story = {
+  ...TimeFieldTemplate,
+  args: {
+    ...TimeFieldTemplate.args,
+    shouldForceLeadingZeros: true,
+    hourCycle: 24,
+    defaultValue: new Time(8, 5),
+  },
+};
+
+export const ConstrainedValue: Story = {
+  ...TimeFieldTemplate,
+  args: {
+    ...TimeFieldTemplate.args,
+    minValue: new Time(9, 0),
+    maxValue: new Time(17, 0),
+    description: "This time field is constrained to between 09:00 and 17:00",
+  },
+};
+
+export const Required: Story = {
   ...TimeFieldTemplate,
   args: {
     ...TimeFieldTemplate.args,
@@ -134,7 +162,7 @@ export const RequiredTimeField: Story = {
   },
 };
 
-export const ReadOnlyTimeField: Story = {
+export const ReadOnly: Story = {
   ...TimeFieldTemplate,
   args: {
     ...TimeFieldTemplate.args,
@@ -142,7 +170,7 @@ export const ReadOnlyTimeField: Story = {
   },
 };
 
-export const DisabledTimeField: Story = {
+export const Disabled: Story = {
   ...TimeFieldTemplate,
   args: {
     ...TimeFieldTemplate.args,
@@ -150,7 +178,7 @@ export const DisabledTimeField: Story = {
   },
 };
 
-export const InvalidTimeField: Story = {
+export const Invalid: Story = {
   ...TimeFieldTemplate,
   args: {
     ...TimeFieldTemplate.args,
