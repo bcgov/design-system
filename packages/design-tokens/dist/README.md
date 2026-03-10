@@ -50,7 +50,7 @@ To help avoid name collisions, prefixed versions of the CSS variables with `bcds
 
 SCSS variables are included at: `scss/variables.scss`
 
-To help avoid name collisions, prefixed versions of the SCSS variables with `bcds` added are available: `scss-prefixed/variables.css`
+To help avoid name collisions, prefixed versions of the SCSS variables with `bcds` added are available: `scss-prefixed/variables.scss`
 
 ## Examples
 
