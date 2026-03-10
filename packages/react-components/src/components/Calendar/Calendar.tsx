@@ -24,7 +24,6 @@ export default function Calendar({
   const monthFormatter = useDateFormatter({
     month: "long",
     year: "numeric",
-    timeZone: "UTC",
   });
 
   return (
