@@ -10,6 +10,7 @@ import {
   AlertBannerPage,
   ButtonPage,
   ButtonGroupPage,
+  CalendarPage,
   CalloutPage,
   CheckboxGroupPage,
   DatePickerPage,
@@ -110,6 +111,7 @@ function App() {
         <ButtonPage />
         <ButtonGroupPage />
         <AccordionGroupPage />
+        <CalendarPage />
         <CalloutPage />
         <CheckboxGroupPage />
         <SwitchPage />

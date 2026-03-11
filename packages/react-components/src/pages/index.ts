@@ -2,6 +2,7 @@ import AccordionGroupPage from "./AccordionGroup";
 import AlertBannerPage from "./AlertBanner";
 import ButtonPage from "./Button";
 import ButtonGroupPage from "./ButtonGroup";
+import CalendarPage from "./Calendar";
 import CalloutPage from "./Callout";
 import CheckboxGroupPage from "./CheckboxGroup";
 import DatePickerPage from "./DatePicker";
@@ -22,6 +23,7 @@ export {
   AlertBannerPage,
   ButtonPage,
   ButtonGroupPage,
+  CalendarPage,
   CalloutPage,
   CheckboxGroupPage,
   DatePickerPage,
