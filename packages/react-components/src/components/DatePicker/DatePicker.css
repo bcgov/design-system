@@ -24,6 +24,7 @@
   width: 100%;
   min-width: 0;
   align-items: center;
+  white-space: nowrap;
   border: none;
 }
 

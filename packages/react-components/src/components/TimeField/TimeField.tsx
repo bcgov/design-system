@@ -60,7 +60,11 @@ export default function TimeField<T extends TimeValue>({
                 />
               )}
             </DateInput>
-            {isInvalid && <SvgExclamationIcon />}
+            {isInvalid && (
+              <span className="bcds-react-aria-TimeField--ErrorIcon">
+                <SvgExclamationIcon />
+              </span>
+            )}
           </div>
           {description && (
             <Text

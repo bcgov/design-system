@@ -27,6 +27,7 @@
 .bcds-react-aria-TimeField--Input {
   box-sizing: border-box;
   width: 100%;
+  white-space: nowrap;
   border: none;
   color: var(--typography-color-primary);
 }
@@ -111,7 +112,9 @@
 /* Disabled and read-only states */
 .bcds-react-aria-TimeField[data-disabled]
   > .bcds-react-aria-TimeField--InputContainer,
-.bcds-react-aria-TimeField[data-disabled] .bcds-react-aria-TimeField--Input {
+.bcds-react-aria-TimeField[data-disabled] .bcds-react-aria-TimeField--Input,
+.bcds-react-aria-TimeField[data-disabled]
+  .bcds-react-aria-TimeField--Segment[data-type="timeZoneName"] {
   background: var(--surface-color-forms-disabled);
   color: var(--typography-color-placeholder);
   cursor: not-allowed;
@@ -133,7 +136,8 @@
 }
 .bcds-react-aria-TimeField[data-invalid]
   > .bcds-react-aria-TimeField--InputContainer
-  > svg#exclamation-icon {
+  > .bcds-react-aria-TimeField--ErrorIcon
+  > svg {
   color: var(--icons-color-danger);
   min-width: var(--icons-size-medium);
   height: var(--icons-size-medium);
