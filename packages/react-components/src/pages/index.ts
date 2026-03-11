@@ -9,6 +9,7 @@ import DatePickerPage from "./DatePicker";
 import InlineAlertPage from "./InlineAlert";
 import ModalDialogPage from "./ModalDialog";
 import NumberFieldPage from "./NumberField";
+import ProgressBarPage from "./ProgressBar";
 import RadioGroupPage from "./RadioGroup";
 import SelectPage from "./Select";
 import TagGroupPage from "./TagGroup";
@@ -30,6 +31,7 @@ export {
   InlineAlertPage,
   ModalDialogPage,
   NumberFieldPage,
+  ProgressBarPage,
   RadioGroupPage,
   SelectPage,
   TagGroupPage,
