@@ -108,6 +108,10 @@
   padding: var(--layout-padding-hair);
   margin: var(--layout-margin-none) var(--layout-margin-hair);
 }
+.bcds-react-aria-TimeField--Segment[data-focused][data-type="timeZoneName"] {
+  background-color: var(--surface-color-forms-disabled);
+  color: var(--typography-color-secondary);
+}
 
 /* Disabled and read-only states */
 .bcds-react-aria-TimeField[data-disabled]
