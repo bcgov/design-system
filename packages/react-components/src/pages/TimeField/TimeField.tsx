@@ -53,21 +53,17 @@ export default function TimeFieldPage() {
             <h3>DateTime example</h3>
           </div>
           <div className="row">
-            <div className="col">
-              <DatePicker
-                label="Date"
-                showFormatHelpText={false}
-                onChange={(value) => setDate(value as CalendarDate)}
-              />
-            </div>
-            <div className="col">
-              <TimeField
-                label="Time"
-                granularity="minute"
-                hourCycle={12}
-                onChange={(value) => setTime(value as Time)}
-              />
-            </div>
+            <DatePicker
+              label="Date"
+              showFormatHelpText={false}
+              onChange={(value) => setDate(value as CalendarDate)}
+            />
+            <TimeField
+              label="Time"
+              granularity="minute"
+              hourCycle={12}
+              onChange={(value) => setTime(value as Time)}
+            />
           </div>
           <div className="row">
             <Text>
