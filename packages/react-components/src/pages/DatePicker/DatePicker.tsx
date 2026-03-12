@@ -7,15 +7,9 @@ export default function DatePickerPage() {
         <h2>Date picker</h2>
       </div>
       <div className="row">
-        <div className="col">
-          <DatePicker label="Default" />
-        </div>
-        <div className="col">
-          <DatePicker isBrowserLocaleUsed label="Uses browser locale" />
-        </div>
-        <div className="col">
-          <DatePicker showFormatHelpText={false} label="Format label hidden" />
-        </div>
+        <DatePicker label="Default" />
+        <DatePicker isBrowserLocaleUsed label="Uses browser locale" />
+        <DatePicker showFormatHelpText={false} label="Format label hidden" />
       </div>
     </>
   );

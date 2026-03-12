@@ -1,0 +1,143 @@
+.bcds-react-aria-TimeField {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 100%;
+  max-width: -moz-available;
+  max-width: -webkit-fill-available;
+}
+
+/* Input field */
+.bcds-react-aria-TimeField--InputContainer {
+  display: inline-flex;
+  flex-direction: row;
+  min-width: 0;
+  align-items: center;
+  box-sizing: border-box;
+  gap: var(--layout-margin-small);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  background: var(--surface-color-forms-default);
+}
+
+.bcds-react-aria-TimeField--Input {
+  box-sizing: border-box;
+  width: 100%;
+  white-space: nowrap;
+  border: none;
+  color: var(--typography-color-primary);
+}
+
+.bcds-react-aria-TimeField--Segment[data-type="timeZoneName"] {
+  color: var(--typography-color-secondary);
+}
+
+.bcds-react-aria-TimeField--Input[data-placeholder] {
+  color: var(--typography-color-placeholder);
+}
+
+/* Label */
+.bcds-react-aria-TimeField--Label {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-primary);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
+}
+
+/* Required indicator */
+.bcds-react-aria-TimeField--Label.required {
+  color: var(--typography-color-secondary);
+  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
+}
+
+/* Description */
+.bcds-react-aria-TimeField--Description {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
+}
+
+/* Error message */
+.bcds-react-aria-TimeField--Error {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-danger);
+}
+
+/* Sizing */
+.bcds-react-aria-TimeField.small .bcds-react-aria-TimeField--InputContainer {
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
+  height: 32px;
+}
+.bcds-react-aria-TimeField.small .bcds-react-aria-TimeField--Segment {
+  font: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-TimeField.medium .bcds-react-aria-TimeField--InputContainer {
+  padding: var(--layout-padding-xsmall) 0.75rem;
+  height: 40px;
+}
+.bcds-react-aria-TimeField.medium .bcds-react-aria-TimeField--Segment {
+  font: var(--typography-regular-body);
+}
+
+/* Hover and focus states */
+.bcds-react-aria-TimeField--InputContainer:has(
+  .bcds-react-aria-TimeField--Input[data-hovered]
+) {
+  border-color: var(--surface-color-border-dark);
+}
+.bcds-react-aria-TimeField--InputContainer:has(
+  .bcds-react-aria-TimeField--Segment[data-focus-visible]
+) {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+}
+
+.bcds-react-aria-TimeField--Segment[data-focused] {
+  outline: none;
+  border-radius: var(--layout-border-radius-small);
+  background-color: var(--surface-color-primary-default);
+  color: var(--typography-color-primary-invert);
+  padding: var(--layout-padding-hair);
+  margin: var(--layout-margin-none) var(--layout-margin-hair);
+}
+.bcds-react-aria-TimeField--Segment[data-focused][data-type="timeZoneName"] {
+  background-color: var(--surface-color-forms-disabled);
+  color: var(--typography-color-secondary);
+}
+
+/* Disabled and read-only states */
+.bcds-react-aria-TimeField[data-disabled]
+  > .bcds-react-aria-TimeField--InputContainer,
+.bcds-react-aria-TimeField[data-disabled] .bcds-react-aria-TimeField--Input,
+.bcds-react-aria-TimeField[data-disabled]
+  .bcds-react-aria-TimeField--Segment[data-type="timeZoneName"] {
+  background: var(--surface-color-forms-disabled);
+  color: var(--typography-color-placeholder);
+  cursor: not-allowed;
+}
+
+.bcds-react-aria-TimeField[data-readonly]
+  > .bcds-react-aria-TimeField--InputContainer,
+.bcds-react-aria-TimeField[data-readonly] .bcds-react-aria-TimeField--Input {
+  background: var(--surface-color-forms-disabled);
+}
+
+/* Invalid state */
+.bcds-react-aria-TimeField[data-invalid]
+  > .bcds-react-aria-TimeField--InputContainer {
+  border-radius: var(--layout-border-radius-medium);
+  border: var(--layout-border-width-small) solid
+    var(--support-border-color-danger);
+  background: var(--surface-color-forms-default);
+}
+.bcds-react-aria-TimeField[data-invalid]
+  > .bcds-react-aria-TimeField--InputContainer
+  > .bcds-react-aria-TimeField--ErrorIcon
+  > svg {
+  color: var(--icons-color-danger);
+  min-width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
+}
