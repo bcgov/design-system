@@ -2,16 +2,15 @@
   display: flex;
   flex: 1 1 0;
   flex-direction: column;
-  gap: var(--layout-margin-hair);
-  /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
-  align-self: stretch;
+  align-self: flex-start;
+  width: 100%;
   max-width: -moz-available;
   max-width: -webkit-fill-available;
 }
 
 /* Input field */
 .bcds-react-aria-TimeField--InputContainer {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   min-width: 0;
   align-items: center;
@@ -20,7 +19,6 @@
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
-  padding: var(--layout-padding-xsmall) var(--layout-padding-small);
   background: var(--surface-color-forms-default);
 }
 
@@ -32,9 +30,6 @@
   color: var(--typography-color-primary);
 }
 
-.bcds-react-aria-TimeField--Segment {
-  padding: var(--layout-padding-none);
-}
 .bcds-react-aria-TimeField--Segment[data-type="timeZoneName"] {
   color: var(--typography-color-secondary);
 }
