@@ -6,9 +6,11 @@ import {
   Footer,
   FooterLinks,
   Header,
+  Link,
   Menu,
   MenuItem,
   MenuTrigger,
+  Navbar,
 } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
@@ -119,6 +121,22 @@ function App() {
           )}
         </div>
       </Header>
+      <Navbar>
+        <Link href="#">Link 1</Link>
+        <Link href="#">Link 2 is medium</Link>
+        <Link href="#">Link 3 has a long label</Link>
+        <Link href="#">Link 4 has a long label</Link>
+        <MenuTrigger>
+          <Button variant="secondary" size="small">
+            Menu <SvgMenuIcon />
+          </Button>
+          <Menu>
+            <MenuItem href="#">Link</MenuItem>
+            <MenuItem href="#">Link</MenuItem>
+            <MenuItem href="#">Link</MenuItem>
+          </Menu>
+        </MenuTrigger>
+      </Navbar>
       <Header />
       <AlertBannerPage />
       <main>

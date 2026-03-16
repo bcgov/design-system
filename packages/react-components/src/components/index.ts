@@ -27,6 +27,7 @@ export {
 } from "./Menu";
 export { default as MenuItem } from "./MenuItem";
 export { default as Modal } from "./Modal";
+export { default as Navbar } from "./Navbar";
 export { default as Popover } from "./Popover";
 export { default as Radio } from "./Radio";
 export { default as RadioGroup } from "./RadioGroup";
