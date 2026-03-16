@@ -1,0 +1,16 @@
+.bcds-react-aria-Menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-small);
+}
+
+/* Sections */
+.bcds-react-aria-Menu .react-aria-Header {
+  font: var(--typography-bold-small-body);
+}
+
+.bcds-react-aria-Menu .react-aria-MenuSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-small);
+}
