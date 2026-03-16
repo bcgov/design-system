@@ -6,17 +6,22 @@ import {
   Header as MenuSectionHeader,
   SubmenuTrigger,
 } from "react-aria-components";
-
 import Popover from "../Popover";
+
 import "./Menu.css";
 
+export interface MenuProps<T extends object> extends ReactAriaMenuProps<T> {
+  size?: "small" | "medium";
+}
+
 export default function Menu<T extends object>({
+  size = "medium",
   children,
   ...props
-}: ReactAriaMenuProps<T>) {
+}: MenuProps<T>) {
   return (
     <Popover>
-      <ReactAriaMenu className="bcds-react-aria-Menu" {...props}>
+      <ReactAriaMenu className={`bcds-react-aria-Menu ${size}`} {...props}>
         {children}
       </ReactAriaMenu>
     </Popover>

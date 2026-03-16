@@ -4,6 +4,15 @@
   gap: var(--layout-margin-small);
 }
 
+/* Sizing */
+.bcds-react-aria-Menu.small {
+  font-size: var(--typography-small-body);
+}
+
+.bcds-react-aria-Menu.medium {
+  font-size: var(--typography-medium-body);
+}
+
 /* Sections */
 .bcds-react-aria-Menu .react-aria-Header {
   font: var(--typography-bold-small-body);

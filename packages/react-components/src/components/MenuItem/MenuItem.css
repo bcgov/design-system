@@ -12,17 +12,15 @@ a.bcds-react-aria-Menu-Item {
   text-underline-offset: var(--layout-padding-hair);
 }
 
-a.bcds-react-aria-Menu-Item[data-hovered] {
-  color: var(--surface-color-border-active);
-}
-
 /* Sizing */
 .bcds-react-aria-Menu-Item.small {
   font: var(--typography-regular-small-body);
+  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
 }
 
 .bcds-react-aria-Menu-Item.medium {
   font: var(--typography-regular-body);
+  padding: var(--layout-padding-hair) var(--layout-padding-small);
 }
 
 /* Icon displayed when an item has a submenu */
@@ -38,12 +36,13 @@ a.bcds-react-aria-Menu-Item[data-hovered] {
 .bcds-react-aria-Menu-Item[data-focus-visible] {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
-  outline-offset: var(--layout-margin-xsmall);
+  outline-offset: var(--layout-margin-hair);
   border-radius: var(--layout-border-radius-small);
 }
 
 .bcds-react-aria-Menu-Item[data-hovered] {
-  color: var(--surface-color-border-active);
+  border-radius: var(--layout-border-radius-small);
+  background-color: var(--surface-color-menus-hover);
 }
 
 .bcds-react-aria-Menu-Item[data-disabled] {

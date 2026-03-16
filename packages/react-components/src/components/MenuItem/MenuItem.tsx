@@ -3,19 +3,25 @@ import {
   MenuItemProps as ReactAriaMenuItemProps,
   MenuItemRenderProps,
 } from "react-aria-components";
-import { ReactNode } from "react";
 import SvgChevronRightIcon from "../Icons/SvgChevronRightIcon";
+
+import "./MenuItem.css";
 
 export interface MenuItemProps extends ReactAriaMenuItemProps {
   size?: "small" | "medium";
+  iconLeft?: React.ReactElement;
   children?:
-    | ReactNode
+    | React.ReactNode
     | ((
-        props: MenuItemRenderProps & { defaultChildren: ReactNode },
-      ) => ReactNode);
+        props: MenuItemRenderProps & { defaultChildren: React.ReactNode },
+      ) => React.ReactNode);
 }
 
-export default function MenuItem({ size = "small", ...props }: MenuItemProps) {
+export default function MenuItem({
+  size = "medium",
+  iconLeft,
+  ...props
+}: MenuItemProps) {
   const textValue =
     props.textValue ||
     (typeof props.children === "string" ? props.children : undefined);
@@ -26,12 +32,15 @@ export default function MenuItem({ size = "small", ...props }: MenuItemProps) {
       textValue={textValue}
       className={`bcds-react-aria-Menu-Item ${size}`}
     >
-      {(renderProps: MenuItemRenderProps & { defaultChildren: ReactNode }) => {
+      {(
+        renderProps: MenuItemRenderProps & { defaultChildren: React.ReactNode },
+      ) => {
         if (typeof props.children === "function") {
           return props.children(renderProps);
         }
         return (
           <>
+            {iconLeft && iconLeft}
             {props.children}
             {renderProps.hasSubmenu && <SvgChevronRightIcon />}
           </>
