@@ -55,3 +55,25 @@ export const NavbarTemplate: Story = {
   },
   render: ({ ...args }: NavbarProps) => <Navbar {...args} />,
 };
+
+export const VerticalNavbarTemplate: Story = {
+  args: {
+    orientation: "vertical",
+    children: [
+      <Link href="#">Link 1</Link>,
+      <Link href="#">Link 2</Link>,
+      <Link href="#">Link 3</Link>,
+      <MenuTrigger>
+        <Button variant="secondary">
+          Menu <SvgChevronDownIcon />
+        </Button>
+        <Menu>
+          <MenuItem href="#">Link</MenuItem>
+          <MenuItem href="#">Link</MenuItem>
+          <MenuItem href="#">Link</MenuItem>
+        </Menu>
+      </MenuTrigger>,
+    ],
+  },
+  render: ({ ...args }: NavbarProps) => <Navbar {...args} />,
+};
