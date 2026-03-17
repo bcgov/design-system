@@ -1,5 +1,5 @@
 import { cloneElement, PropsWithChildren } from "react";
-
+import Navbar from "../Navbar";
 import SvgBcLogo from "../Icons/SvgBcLogo";
 
 import "./Header.css";
@@ -29,6 +29,10 @@ export interface HeaderProps {
    * Desired element that renders the `title` string. Defaults to `<span>`.
    */
   titleElement?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "span" | "p";
+  /**
+   * Items to be rendered inside the secondary navigation bar
+   */
+  subMenuItems?: React.ReactNode;
 }
 
 export default function Header({
@@ -38,6 +42,7 @@ export default function Header({
   skipLinks,
   title = "",
   titleElement = "span",
+  subMenuItems,
 }: PropsWithChildren<HeaderProps>) {
   function getLogo() {
     if (!logoLinkElement)
@@ -77,24 +82,27 @@ export default function Header({
   }
 
   return (
-    <header className="bcds-header">
-      <div className="bcds-header--container">
-        {getLogo()}
-        {skipLinks && (
-          <ul className="bcds-header--skiplinks">
-            {skipLinks.map((link, index) => {
-              return <li key={`skiplink-${index}`}>{link}</li>;
-            })}
-          </ul>
-        )}
-        {title && (
-          <>
-            <div className="bcds-header--line" />
-            {getTitle()}
-          </>
-        )}
-        {children}
-      </div>
-    </header>
+    <>
+      <header className="bcds-header">
+        <div className="bcds-header--container">
+          {getLogo()}
+          {skipLinks && (
+            <ul className="bcds-header--skiplinks">
+              {skipLinks.map((link, index) => {
+                return <li key={`skiplink-${index}`}>{link}</li>;
+              })}
+            </ul>
+          )}
+          {title && (
+            <>
+              <div className="bcds-header--line" />
+              {getTitle()}
+            </>
+          )}
+          {children}
+        </div>
+      </header>
+      {subMenuItems && <Navbar>{subMenuItems}</Navbar>}
+    </>
   );
 }

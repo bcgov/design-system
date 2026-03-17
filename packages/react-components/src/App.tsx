@@ -70,7 +70,14 @@ function App() {
 
   return (
     <>
-      <Header title="B.C. Design System Kitchen Sink">
+      <Header
+        title="B.C. Design System Kitchen Sink"
+        subMenuItems={[
+          <Link href="#">Link 1</Link>,
+          <Link href="#">Link 2</Link>,
+          <Link href="#">Link 3</Link>,
+        ]}
+      >
         <MenuTrigger>
           <Button variant="secondary">
             Menu <SvgMenuIcon />
