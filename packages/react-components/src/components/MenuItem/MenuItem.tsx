@@ -2,6 +2,7 @@ import {
   MenuItem as ReactAriaMenuItem,
   MenuItemProps as ReactAriaMenuItemProps,
   MenuItemRenderProps,
+  Text,
 } from "react-aria-components";
 
 import SvgCheckIcon from "../Icons/SvgCheckIcon";
@@ -10,6 +11,8 @@ import SvgChevronRightIcon from "../Icons/SvgChevronRightIcon";
 import "./MenuItem.css";
 
 export interface MenuItemProps extends ReactAriaMenuItemProps {
+  label?: string;
+  description?: string;
   size?: "small" | "medium";
   iconLeft?: React.ReactElement;
   children?:
@@ -21,6 +24,8 @@ export interface MenuItemProps extends ReactAriaMenuItemProps {
 
 export default function MenuItem({
   size = "medium",
+  label,
+  description,
   iconLeft,
   ...props
 }: MenuItemProps) {
@@ -44,6 +49,8 @@ export default function MenuItem({
           <>
             {iconLeft && iconLeft}
             {props.children}
+            {label && <Text slot="label">{label}</Text>}
+            {description && <Text slot="description">{description}</Text>}
             {renderProps.hasSubmenu && <SvgChevronRightIcon />}
             {renderProps.isSelected && <SvgCheckIcon />}
           </>

@@ -14,11 +14,11 @@
 }
 
 /* Sections */
-.bcds-react-aria-Menu--SectionHeader {
+.bcds-react-aria-Menu .react-aria-Header {
   padding: var(--layout-padding-xsmall);
   font: var(--typography-bold-small-body);
 }
-.bcds-react-aria-Menu--Section {
+.bcds-react-aria-Menu .react-aria-MenuSection {
   display: flex;
   flex-direction: column;
   gap: var(--layout-margin-small);

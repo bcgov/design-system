@@ -75,9 +75,7 @@ export const SmallMenu: Story = {
 };
 
 export const SectionedMenu: Story = {
-  ...MenuTemplate,
   args: {
-    ...MenuTemplate.args,
     sections: [
       {
         id: "section1",
@@ -97,4 +95,12 @@ export const SectionedMenu: Story = {
       },
     ],
   },
+  render: ({ ...args }) => (
+    <MenuTrigger>
+      <Button variant="secondary" size="small">
+        Menu with sections <SvgChevronDownIcon />
+      </Button>
+      <Menu {...args} />
+    </MenuTrigger>
+  ),
 };

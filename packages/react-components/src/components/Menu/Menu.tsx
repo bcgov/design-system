@@ -35,10 +35,22 @@ export interface MenuProps<
 
 export default function Menu<T extends MenuItemProps>({
   size = "medium",
+  children,
   items,
   sections,
   ...props
 }: MenuProps<T>) {
+  /* Manual composition via children */
+  if (children) {
+    return (
+      <Popover>
+        <ReactAriaMenu className={`bcds-react-aria-Menu ${size}`} {...props}>
+          {children}
+        </ReactAriaMenu>
+      </Popover>
+    );
+  }
+  /* Dynamic collection via items/sections props */
   return (
     <Popover>
       <ReactAriaMenu
@@ -51,14 +63,9 @@ export default function Menu<T extends MenuItemProps>({
         }
       >
         {(section: MenuSectionProps) => (
-          <MenuSection
-            className="bcds-react-aria-Menu--Section"
-            key={section.id}
-          >
+          <MenuSection key={section.id}>
             {section.header && (
-              <MenuSectionHeader className="bcds-react-aria-Menu--SectionHeader">
-                {section.header}
-              </MenuSectionHeader>
+              <MenuSectionHeader>{section.header}</MenuSectionHeader>
             )}
             <Collection items={section.items}>
               {(item: MenuItemProps) => <MenuItem {...item} size={size} />}
