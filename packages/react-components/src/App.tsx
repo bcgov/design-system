@@ -24,6 +24,7 @@ import {
   DatePickerPage,
   InlineAlertPage,
   ModalDialogPage,
+  NavbarPage,
   NumberFieldPage,
   RadioGroupPage,
   SelectPage,
@@ -157,6 +158,7 @@ function App() {
         <SwitchPage />
         <InlineAlertPage />
         <ModalDialogPage />
+        <NavbarPage />
         <RadioGroupPage />
         <SelectPage />
         <TagGroupPage />

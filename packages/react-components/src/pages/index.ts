@@ -8,6 +8,7 @@ import CheckboxGroupPage from "./CheckboxGroup";
 import DatePickerPage from "./DatePicker";
 import InlineAlertPage from "./InlineAlert";
 import ModalDialogPage from "./ModalDialog";
+import NavbarPage from "./Navbar";
 import NumberFieldPage from "./NumberField";
 import RadioGroupPage from "./RadioGroup";
 import SelectPage from "./Select";
@@ -29,6 +30,7 @@ export {
   DatePickerPage,
   InlineAlertPage,
   ModalDialogPage,
+  NavbarPage,
   NumberFieldPage,
   RadioGroupPage,
   SelectPage,
