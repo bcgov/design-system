@@ -6,19 +6,19 @@
 
 /* Sizing */
 .bcds-react-aria-Menu.small {
-  font-size: var(--typography-small-body);
+  font-size: var(--typography-regular-small-body);
 }
 
 .bcds-react-aria-Menu.medium {
-  font-size: var(--typography-medium-body);
+  font-size: var(--typography-regular-body);
 }
 
 /* Sections */
-.bcds-react-aria-Menu .react-aria-Header {
+.bcds-react-aria-Menu--SectionHeader {
+  padding: var(--layout-padding-xsmall);
   font: var(--typography-bold-small-body);
 }
-
-.bcds-react-aria-Menu .react-aria-MenuSection {
+.bcds-react-aria-Menu--Section {
   display: flex;
   flex-direction: column;
   gap: var(--layout-margin-small);

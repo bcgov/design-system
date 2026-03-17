@@ -6,6 +6,7 @@ import {
   MenuItem,
   MenuTrigger,
   SvgChevronDownIcon,
+  SvgCheckCircleIcon,
 } from "../components";
 
 const meta = {
@@ -55,7 +56,12 @@ export const SmallMenu: Story = {
     items: [
       { id: 1, href: "#", children: "Link 1" },
       { id: 2, href: "#", children: "Link 2" },
-      { id: 3, href: "#", children: "Link 3" },
+      {
+        id: 3,
+        href: "#",
+        children: "Link 3",
+        iconLeft: <SvgCheckCircleIcon />,
+      },
     ],
   },
   render: ({ ...args }) => (
@@ -66,4 +72,29 @@ export const SmallMenu: Story = {
       <Menu {...args} />
     </MenuTrigger>
   ),
+};
+
+export const SectionedMenu: Story = {
+  ...MenuTemplate,
+  args: {
+    ...MenuTemplate.args,
+    sections: [
+      {
+        id: "section1",
+        header: "Section 1",
+        items: [
+          { id: 1, href: "#", children: "Link 1" },
+          { id: 2, href: "#", children: "Link 2" },
+        ],
+      },
+      {
+        id: "section2",
+        header: "Section 2",
+        items: [
+          { id: 3, href: "#", children: "Link 3" },
+          { id: 4, href: "#", children: "Link 4" },
+        ],
+      },
+    ],
+  },
 };
