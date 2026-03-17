@@ -3,6 +3,8 @@ import {
   MenuItemProps as ReactAriaMenuItemProps,
   MenuItemRenderProps,
 } from "react-aria-components";
+
+import SvgCheckIcon from "../Icons/SvgCheckIcon";
 import SvgChevronRightIcon from "../Icons/SvgChevronRightIcon";
 
 import "./MenuItem.css";
@@ -43,6 +45,7 @@ export default function MenuItem({
             {iconLeft && iconLeft}
             {props.children}
             {renderProps.hasSubmenu && <SvgChevronRightIcon />}
+            {renderProps.isSelected && <SvgCheckIcon />}
           </>
         );
       }}

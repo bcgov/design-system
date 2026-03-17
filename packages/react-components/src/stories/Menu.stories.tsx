@@ -52,10 +52,10 @@ export const MenuTemplate: Story = {
 export const SmallMenu: Story = {
   args: {
     size: "small",
-    children: [
-      <MenuItem href="#">Link</MenuItem>,
-      <MenuItem href="#">Link</MenuItem>,
-      <MenuItem href="#">Link</MenuItem>,
+    items: [
+      { id: 1, href: "#", children: "Link 1" },
+      { id: 2, href: "#", children: "Link 2" },
+      { id: 3, href: "#", children: "Link 3" },
     ],
   },
   render: ({ ...args }) => (
