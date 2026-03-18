@@ -6,7 +6,8 @@
   box-shadow: var(--surface-shadow-medium);
   box-sizing: border-box;
   padding: var(--layout-padding-xsmall) var(--layout-padding-xsmall);
-  width: var(
+  min-width: var(
     --trigger-width
   ); /* Variable provided by Menu component: https://react-spectrum.adobe.com/react-aria/Menu.html#popover-1 */
+  width: calc(var(--trigger-width) * 2);
 }
