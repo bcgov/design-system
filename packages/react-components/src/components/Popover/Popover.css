@@ -9,5 +9,5 @@
   min-width: var(
     --trigger-width
   ); /* Variable provided by Menu component: https://react-spectrum.adobe.com/react-aria/Menu.html#popover-1 */
-  width: calc(var(--trigger-width) * 2);
+  max-width: calc(var(--trigger-width) * 2);
 }

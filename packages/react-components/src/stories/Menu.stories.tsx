@@ -5,11 +5,12 @@ import {
   Menu,
   MenuItem,
   MenuTrigger,
+  MenuSection,
+  MenuSectionHeader,
+  Separator,
   SubmenuTrigger,
   SvgChevronDownIcon,
   SvgCheckCircleIcon,
-  MenuSection,
-  MenuSectionHeader,
 } from "../components";
 
 const meta = {
@@ -124,6 +125,7 @@ export const SubMenu: Story = {
           </Menu>
         </SubmenuTrigger>
       </MenuSection>,
+      <Separator size="small" />,
       <MenuSection key="section2">
         <MenuSectionHeader>Section 2</MenuSectionHeader>
         <MenuItem href="#">Link 1</MenuItem>

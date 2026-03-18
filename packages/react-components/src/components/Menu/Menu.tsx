@@ -9,9 +9,9 @@ import {
   Collection,
 } from "react-aria-components";
 
-import MenuItem from "../MenuItem/MenuItem";
-import { MenuItemProps } from "../MenuItem/MenuItem";
-import Popover from "../Popover";
+import MenuItem, { MenuItemProps } from "../MenuItem/MenuItem";
+import Popover, { PopoverProps } from "../Popover";
+import Separator from "../Separator";
 
 import "./Menu.css";
 
@@ -31,6 +31,8 @@ export interface MenuProps<
   size?: "small" | "medium";
   /* Use for a section list with `items` in each section */
   sections?: MenuSectionProps[];
+  /* Popover position */
+  placement?: PopoverProps["placement"];
 }
 
 export default function Menu<T extends MenuItemProps>({
@@ -38,12 +40,13 @@ export default function Menu<T extends MenuItemProps>({
   children,
   items,
   sections,
+  placement,
   ...props
 }: MenuProps<T>) {
   /* Manual composition via children */
   if (children) {
     return (
-      <Popover>
+      <Popover placement={placement}>
         <ReactAriaMenu className={`bcds-react-aria-Menu ${size}`} {...props}>
           {children}
         </ReactAriaMenu>
@@ -51,16 +54,18 @@ export default function Menu<T extends MenuItemProps>({
     );
   }
   /* Dynamic collection via items/sections props */
+  const sectionsArray = sections
+    ? sections
+    : [{ id: "section", header: "", items: items ? [...items] : [] }];
+
+  const lastSectionId = sectionsArray[sectionsArray.length - 1].id;
+
   return (
-    <Popover>
+    <Popover placement={placement}>
       <ReactAriaMenu
         className={`bcds-react-aria-Menu ${size}`}
         {...props}
-        items={
-          sections
-            ? sections
-            : [{ id: "section", header: "", items: items ? [...items] : [] }]
-        }
+        items={sectionsArray}
       >
         {(section: MenuSectionProps) => (
           <MenuSection key={section.id}>
@@ -70,6 +75,7 @@ export default function Menu<T extends MenuItemProps>({
             <Collection items={section.items}>
               {(item: MenuItemProps) => <MenuItem {...item} size={size} />}
             </Collection>
+            {section.id !== lastSectionId && <Separator size="small" />}
           </MenuSection>
         )}
       </ReactAriaMenu>
