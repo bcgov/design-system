@@ -2,7 +2,7 @@
   color: var(--typography-color-secondary);
   display: flex;
   gap: var(--layout-margin-xsmall);
-  padding: var(--layout-padding-hair) var(--layout-padding-small);
+  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
   cursor: pointer;
 }
 

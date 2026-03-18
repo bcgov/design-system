@@ -5,8 +5,11 @@ import {
   Menu,
   MenuItem,
   MenuTrigger,
+  SubmenuTrigger,
   SvgChevronDownIcon,
   SvgCheckCircleIcon,
+  MenuSection,
+  MenuSectionHeader,
 } from "../components";
 
 const meta = {
@@ -99,6 +102,46 @@ export const SectionedMenu: Story = {
     <MenuTrigger>
       <Button variant="secondary" size="small">
         Menu with sections <SvgChevronDownIcon />
+      </Button>
+      <Menu {...args} />
+    </MenuTrigger>
+  ),
+};
+
+export const SubMenu: Story = {
+  args: {
+    size: "medium",
+    children: [
+      <MenuSection key="section1">
+        <MenuSectionHeader>Section 1</MenuSectionHeader>
+        <MenuItem href="#">Link 1</MenuItem>
+        <MenuItem href="#">Link 2</MenuItem>
+        <SubmenuTrigger>
+          <MenuItem href="#">Submenu</MenuItem>
+          <Menu>
+            <MenuItem href="#">Sublink 1</MenuItem>
+            <MenuItem href="#">Sublink 2</MenuItem>
+          </Menu>
+        </SubmenuTrigger>
+      </MenuSection>,
+      <MenuSection key="section2">
+        <MenuSectionHeader>Section 2</MenuSectionHeader>
+        <MenuItem href="#">Link 1</MenuItem>
+        <MenuItem href="#">Link 2</MenuItem>
+        <SubmenuTrigger>
+          <MenuItem href="#">Submenu</MenuItem>
+          <Menu>
+            <MenuItem href="#">Sublink 1</MenuItem>
+            <MenuItem href="#">Sublink 2</MenuItem>
+          </Menu>
+        </SubmenuTrigger>
+      </MenuSection>,
+    ],
+  },
+  render: ({ ...args }) => (
+    <MenuTrigger>
+      <Button variant="secondary">
+        Menu <SvgChevronDownIcon />
       </Button>
       <Menu {...args} />
     </MenuTrigger>
