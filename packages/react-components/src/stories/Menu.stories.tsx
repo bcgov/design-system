@@ -23,11 +23,23 @@ const meta = {
     size: {
       options: ["small", "medium"],
       control: { type: "radio" },
-      description: "Sets the size of the menu items",
+      description:
+        "Sets the size of the menu items. Does not affect the `MenuTrigger` element",
+    },
+    items: {
+      control: { type: "object" },
+      description:
+        "Use for a simple list of menu items. Expects an array of objects with `MenuItem` props",
+    },
+    sections: {
+      control: { type: "object" },
+      description:
+        "Use for a sectioned menu. Expects an array of objects with `MenuSection` props, each containing an `items` array",
     },
     children: {
       control: { type: "object" },
-      description: "Array of menu items",
+      description:
+        "Use instead of `items` or `sections` to manually compose a menu",
     },
   },
 } satisfies Meta<typeof Menu>;

@@ -29,7 +29,9 @@ export interface MenuProps<
 > extends ReactAriaMenuProps<T> {
   /* Set size of menu button and items */
   size?: "small" | "medium";
-  /* Use for a section list with `items` in each section */
+  /* Use for a simple list menu */
+  items?: T[];
+  /* Use for a sectioned list with `items` in each section */
   sections?: MenuSectionProps[];
   /* Popover position */
   placement?: PopoverProps["placement"];

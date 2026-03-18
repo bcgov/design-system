@@ -37,7 +37,7 @@ export default function MenuItem({
     <ReactAriaMenuItem
       {...props}
       textValue={textValue}
-      className={`bcds-react-aria-Menu-Item ${size}`}
+      className={`bcds-react-aria-MenuItem ${size}`}
     >
       {(
         renderProps: MenuItemRenderProps & { defaultChildren: React.ReactNode },
@@ -47,10 +47,14 @@ export default function MenuItem({
         }
         return (
           <>
-            {iconLeft && iconLeft}
-            {props.children}
-            {label && <Text slot="label">{label}</Text>}
-            {description && <Text slot="description">{description}</Text>}
+            {iconLeft && (
+              <span className="bcds-react-aria-MenuItem--Icon">{iconLeft}</span>
+            )}
+            <div className="bcds-react-aria-MenuItem--Content">
+              {props.children}
+              {label && <Text slot="label">{label}</Text>}
+              {description && <Text slot="description">{description}</Text>}
+            </div>
             {renderProps.hasSubmenu && <SvgChevronRightIcon />}
             {renderProps.isSelected && <SvgCheckIcon />}
           </>

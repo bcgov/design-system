@@ -1,0 +1,148 @@
+{/* Menu.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
+import * as MenuStories from "./Menu.stories";
+
+<Meta of={MenuStories} />
+
+# Menu
+
+<Subtitle>
+  A menu enables the user to select from a list of actions, options or links in
+  a dropdown.
+</Subtitle>
+
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA Menu component, its subcomponents and the Collections API. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/Menu"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      Collections API docs
+    </Link>,
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/collections?component=Menu"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      Menu docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
+<Source
+  code={`import { Menu, MenuTrigger } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+Learn more about working with the CheckboxGroup and Checkbox components:
+
+- [Usage and best practice guidance](#)
+- [View the select component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+## Controls
+
+<Canvas of={MenuStories.MenuTemplate} />
+<Controls of={MenuStories.MenuTemplate} />
+
+## Composition
+
+A menu comprises several parts:
+
+- A `<MenuTrigger>` wrapper
+- A trigger element (commonly a button)
+- A `<Menu>`, that opens inside a `<Popover>`
+
+Structurally, these components are assembled like this:
+
+```typescript
+import { Button, Menu, MenuTrigger } from "@bcgov/design-system-react-components";
+
+function App() {
+  return (
+    <MenuTrigger>
+        <Button>This button activates the menu</Button>
+        <Menu>
+    </MenuTrigger>
+    );
+}
+```
+
+There are three ways to compose a menu:
+
+- Manual composition via the `children` slot
+- A flat list of `items`
+- A sectioned list using `sections` to provide an array of sections, each containing their own `items`
+
+### Manual composition
+
+To manually compose a menu, import the subcomponents you need and assemble them as needed. This provides fine-grained control over menu structure and content:
+
+```javascript
+import {
+  Button,
+  Menu,
+  MenuSection,
+  MenuSectionHeader,
+  MenuTrigger,
+  SubmenuTrigger,
+  Separator,
+} from "@bcgov/design-system-react-components";
+
+function App() {
+  return (
+    <MenuTrigger>
+      <Button>This button activates the menu</Button>
+      <Menu>
+        <MenuSection>
+          <MenuSectionHeader />
+          <MenuItem />
+        </MenuSection>
+        <Separator />
+        <MenuSection>
+          <MenuSectionHeader />
+          <MenuItem />
+        </MenuSection>
+      </Menu>
+    </MenuTrigger>
+  );
+}
+```
+
+### `items`
+
+TKTK
+
+### `sections`
+
+TKTK
+
+## Configuration

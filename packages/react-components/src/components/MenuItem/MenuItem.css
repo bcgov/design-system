@@ -1,29 +1,48 @@
-.bcds-react-aria-Menu-Item {
-  color: var(--typography-color-secondary);
+.bcds-react-aria-MenuItem {
   display: flex;
   gap: var(--layout-margin-xsmall);
   padding: var(--layout-padding-none) var(--layout-padding-small);
   cursor: pointer;
+  color: var(--typography-color-secondary);
+}
+.bcds-react-aria-MenuItem--Icon {
+  display: flex;
+  align-self: flex-start;
+  padding-top: var(--layout-padding-xsmall);
+}
+.bcds-react-aria-MenuItem--Content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-padding-hair);
 }
 
 /* Link styling */
-a.bcds-react-aria-Menu-Item {
+a.bcds-react-aria-MenuItem {
   color: var(--typography-color-link);
   text-decoration: underline;
   text-underline-offset: var(--layout-padding-hair);
 }
 
 /* Sizing */
-.bcds-react-aria-Menu-Item.small {
+.bcds-react-aria-MenuItem.small {
+  font: var(--typography-regular-small-body);
+}
+.bcds-react-aria-MenuItem.small
+  > .bcds-react-aria-MenuItem--Content
+  > *[slot="description"] {
+  font: var(--typography-regular-label);
+}
+.bcds-react-aria-MenuItem.medium {
+  font: var(--typography-regular-body);
+}
+.bcds-react-aria-MenuItem.medium
+  > .bcds-react-aria-MenuItem--Content
+  > *[slot="description"] {
   font: var(--typography-regular-small-body);
 }
 
-.bcds-react-aria-Menu-Item.medium {
-  font: var(--typography-regular-body);
-}
-
 /* Icon displayed when an item has a submenu */
-.bcds-react-aria-Menu-Item > svg {
+.bcds-react-aria-MenuItem > svg {
   width: var(--icons-size-xsmall);
   height: var(--icons-size-xsmall);
   padding: var(--layout-padding-hair);
@@ -32,19 +51,19 @@ a.bcds-react-aria-Menu-Item {
 
 /* States */
 
-.bcds-react-aria-Menu-Item[data-focus-visible] {
+.bcds-react-aria-MenuItem[data-focus-visible] {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-none);
   border-radius: var(--layout-border-radius-small);
 }
 
-.bcds-react-aria-Menu-Item[data-hovered] {
+.bcds-react-aria-MenuItem[data-hovered] {
   border-radius: var(--layout-border-radius-small);
   background-color: var(--surface-color-menus-hover);
 }
 
-.bcds-react-aria-Menu-Item[data-disabled] {
+.bcds-react-aria-MenuItem[data-disabled] {
   color: var(--typography-color-disabled);
   cursor: not-allowed;
 }
