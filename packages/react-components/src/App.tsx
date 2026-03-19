@@ -24,6 +24,7 @@ import {
   CheckboxGroupPage,
   DatePickerPage,
   InlineAlertPage,
+  MenuPage,
   ModalDialogPage,
   NavbarPage,
   NumberFieldPage,
@@ -128,6 +129,7 @@ function App() {
         <CheckboxGroupPage />
         <SwitchPage />
         <InlineAlertPage />
+        <MenuPage />
         <ModalDialogPage />
         <NavbarPage />
         <RadioGroupPage />

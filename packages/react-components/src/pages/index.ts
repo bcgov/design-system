@@ -7,6 +7,7 @@ import CalloutPage from "./Callout";
 import CheckboxGroupPage from "./CheckboxGroup";
 import DatePickerPage from "./DatePicker";
 import InlineAlertPage from "./InlineAlert";
+import MenuPage from "./Menu";
 import ModalDialogPage from "./ModalDialog";
 import NavbarPage from "./Navbar";
 import NumberFieldPage from "./NumberField";
@@ -29,6 +30,7 @@ export {
   CheckboxGroupPage,
   DatePickerPage,
   InlineAlertPage,
+  MenuPage,
   ModalDialogPage,
   NavbarPage,
   NumberFieldPage,

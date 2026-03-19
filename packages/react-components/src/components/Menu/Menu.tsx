@@ -49,7 +49,11 @@ export default function Menu<T extends MenuItemProps>({
   if (children) {
     return (
       <Popover placement={placement}>
-        <ReactAriaMenu className={`bcds-react-aria-Menu ${size}`} {...props}>
+        <ReactAriaMenu
+          className={`bcds-react-aria-Menu ${size}`}
+          items={items}
+          {...props}
+        >
           {children}
         </ReactAriaMenu>
       </Popover>
@@ -75,7 +79,11 @@ export default function Menu<T extends MenuItemProps>({
               <MenuSectionHeader>{section.header}</MenuSectionHeader>
             )}
             <Collection items={section.items}>
-              {(item: MenuItemProps) => <MenuItem {...item} size={size} />}
+              {(item: MenuItemProps) => (
+                <MenuItem {...item} size={size}>
+                  {item.children}
+                </MenuItem>
+              )}
             </Collection>
             {section.id !== lastSectionId && <Separator size="small" />}
           </MenuSection>

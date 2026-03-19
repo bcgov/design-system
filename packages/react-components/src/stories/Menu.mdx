@@ -37,7 +37,7 @@ import * as MenuStories from "./Menu.stories";
       isButton
       size="small"
       buttonVariant="secondary"
-      href="https://react-aria.adobe.com/Menu"
+      href="https://react-aria.adobe.com/collections?component=Menu"
       target="_blank"
       iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
     >
@@ -47,7 +47,7 @@ import * as MenuStories from "./Menu.stories";
       isButton
       size="small"
       buttonVariant="secondary"
-      href="https://react-aria.adobe.com/collections?component=Menu"
+      href="https://react-aria.adobe.com/Menu"
       target="_blank"
       iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
     >
@@ -63,7 +63,7 @@ import * as MenuStories from "./Menu.stories";
   language="typescript"
 />
 
-Learn more about working with the CheckboxGroup and Checkbox components:
+Learn more about working with the Menu component:
 
 - [Usage and best practice guidance](#)
 - [View the select component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
@@ -79,9 +79,9 @@ A menu comprises several parts:
 
 - A `<MenuTrigger>` wrapper
 - A trigger element (commonly a button)
-- A `<Menu>`, that renders a `<Popover>` and some number of `<MenuItem>` elements
+- A `<Menu>`, that renders a `<Popover>` containing some number of `<MenuItem>` elements
 
-Structurally, these components are assembled like this:
+Each element has its own API. Structurally, these components are assembled like this:
 
 ```typescript
 import { Button, Menu, MenuTrigger } from "@bcgov/design-system-react-components";
@@ -98,9 +98,48 @@ function App() {
 
 There are three ways to compose a menu:
 
-- Manual composition via the `children` slot
 - A flat list of `items`
 - A sectioned list using `sections` to provide an array of sections, each containing their own `items`
+- Manual composition via the `children` slot
+
+### `items`
+
+You can dynamically compose a menu using the `items` prop. `items` expects an array of objects, that will each be rendered as a [MenuItem](/story/navigation-and-structure-menu-menuitem):
+
+<Canvas of={MenuStories.Items} />
+
+Each item must have a unique `id` or `key`. If your `items` array doesn't match the shape of the MenuItem API, use a render function to map your properties or pass them as `children`:
+
+```typescript
+export default function App() {
+  const menuItems = [
+    { id: 1, icon: <SvgCheckCircleIcon />, name: "Link 1" },
+    { id: 2, icon: <SvgCheckCircleIcon />, name: "Link 2" },
+    { id: 3, icon: <SvgCheckCircleIcon />, name: "Link 3" },
+  ];
+
+  return (
+    <>
+      <MenuTrigger>
+        <Button variant="secondary">
+          Open the menu <SvgChevronDownIcon />
+        </Button>
+        <Menu items={menuItems}>
+          {(item) => <MenuItem iconLeft={item.icon} label={item.name} />}
+        </Menu>
+      </MenuTrigger>
+    </>
+  );
+}
+```
+
+### `sections`
+
+Breaking up a list into sections works similarly to populating a list via `items`. Pass an array of `sections`, each containing their own `items`:
+
+<Canvas of={MenuStories.SectionedMenu} />
+
+Each section should have its own `header` (label) and `id`.
 
 ### Manual composition
 
@@ -110,6 +149,7 @@ To manually compose a menu, import the subcomponents you need and assemble them 
 import {
   Button,
   Menu,
+  MenuItem,
   MenuSection,
   MenuSectionHeader,
   MenuTrigger,
@@ -137,14 +177,32 @@ function App() {
 }
 ```
 
-### `items`
-
-You can dynamically compose a menu using the `items` prop. `items` expects an array of objects that match the shape of [the MenuItem API](/story/navigation-and-structure-menu-menuitem):
-
-<Canvas of={MenuStories.Items} />
-
-### `sections`
-
-TKTK
-
 ## Configuration
+
+### Sizing
+
+The `size` prop lets you toggle a menu's items between `medium` (default) and `small` sizes:
+
+<Canvas of={MenuStories.SmallMenu} />
+
+**Note:** `size` is set on the `<Menu>` element, and does not affect the trigger element (e.g. the button.)
+
+### Popover placement
+
+Set `placement` on a `<Menu>` element to change where the popover appears:
+
+<Canvas of={MenuStories.PopoverPlacement} />
+
+### Submenus
+
+You can wrap a `<MenuItem>` in a `<SubmenuTrigger>`, and then nest another `<Menu>` underneath it. This will render inside a secondary popover:
+
+<Canvas of={MenuStories.Submenu} />
+
+**Note**: implementing submenus requires you to [manually compose the menu](#manual-composition).
+
+### Disabled items
+
+Set `isDisabled` on a single item to disable it, or disable multiple items by passing their IDs to `disabledKeys`:
+
+<Canvas of={MenuStories.DisabledItems} />

@@ -61,3 +61,11 @@ export const MenuTriggerTemplate: Story = {
   },
   render: ({ ...args }) => <MenuTrigger {...args} />,
 };
+
+export const LongPress: Story = {
+  ...MenuTriggerTemplate,
+  args: {
+    ...MenuTriggerTemplate.args,
+    trigger: "longPress",
+  },
+};

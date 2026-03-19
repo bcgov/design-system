@@ -29,9 +29,11 @@ export default function MenuItem({
   iconLeft,
   ...props
 }: MenuItemProps) {
+  /* Ensure textValue is set */
   const textValue =
     props.textValue ||
-    (typeof props.children === "string" ? props.children : undefined);
+    (typeof props.children === "string" ? props.children : undefined) ||
+    label;
 
   return (
     <ReactAriaMenuItem
@@ -50,11 +52,13 @@ export default function MenuItem({
             {iconLeft && (
               <span className="bcds-react-aria-MenuItem--Icon">{iconLeft}</span>
             )}
-            <div className="bcds-react-aria-MenuItem--Content">
-              {props.children}
-              {label && <Text slot="label">{label}</Text>}
-              {description && <Text slot="description">{description}</Text>}
-            </div>
+            {props.children}
+            {(label || description) && (
+              <div className="bcds-react-aria-MenuItem--Content">
+                {label && <Text slot="label">{label}</Text>}
+                {description && <Text slot="description">{description}</Text>}
+              </div>
+            )}
             {renderProps.hasSubmenu && <SvgChevronRightIcon />}
             {renderProps.isSelected && <SvgCheckIcon />}
           </>

@@ -6,7 +6,7 @@ import {
   MenuItem,
   MenuTrigger,
   SvgChevronDownIcon,
-  SvgBcOutlineIcon,
+  SvgCheckCircleIcon,
 } from "../components";
 
 const meta = {
@@ -75,21 +75,37 @@ export const MenuItemTemplate: Story = {
     size: "medium",
     label: "Menu item 1",
     description: "Menu item description",
-    iconLeft: <SvgBcOutlineIcon />,
+    iconLeft: <SvgCheckCircleIcon />,
   },
   render: ({ ...args }) => (
-    <MenuTrigger defaultOpen>
+    <MenuTrigger>
       <Button variant="secondary">
         Menu <SvgChevronDownIcon />
       </Button>
       <Menu>
         <MenuItem {...args} />
-        <MenuItem
-          iconLeft={<SvgBcOutlineIcon />}
-          label="Menu item 2"
-          isDisabled
-        />
       </Menu>
     </MenuTrigger>
   ),
+};
+
+export const SmallMenuItem: Story = {
+  ...MenuItemTemplate,
+  args: { ...MenuItemTemplate.args, size: "small" },
+};
+
+export const LinkedMenuItem: Story = {
+  ...MenuItemTemplate,
+  args: {
+    ...MenuItemTemplate.args,
+    label: "Linked menu item",
+    href: "https://www.example.org",
+    hrefLang: "en-US",
+    target: "_blank",
+  },
+};
+
+export const DisabledMenuItem: Story = {
+  ...MenuItemTemplate,
+  args: { ...MenuItemTemplate.args, isDisabled: true },
 };
