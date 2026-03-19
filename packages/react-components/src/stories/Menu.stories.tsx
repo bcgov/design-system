@@ -41,6 +41,27 @@ const meta = {
       description:
         "Use instead of `items` or `sections` to manually compose a menu",
     },
+    selectionMode: {
+      options: ["none", "single", "multiple"],
+      control: { type: "radio" },
+      description: "The type of selection that is allowed",
+    },
+    disallowEmptySelection: {
+      control: { type: "boolean" },
+      description: "Whether the menu allows empty selection",
+    },
+    selectedKeys: {
+      control: { type: "object" },
+      description: "The currently-selected keys in the menu (controlled)",
+    },
+    defaultSelectedKeys: {
+      control: { type: "object" },
+      description: "The initial selected keys in the menu (uncontrolled)",
+    },
+    disabledKeys: {
+      control: { type: "object" },
+      description: "The keys of the items that are disabled",
+    },
   },
 } satisfies Meta<typeof Menu>;
 
@@ -66,18 +87,36 @@ export const MenuTemplate: Story = {
   ),
 };
 
+export const Items: Story = {
+  args: {
+    items: [
+      { id: 1, href: "#", label: "Link 1", description: "Link 1 description" },
+      { id: 2, href: "#", label: "Link 2", description: "Link 2 description" },
+      {
+        id: 3,
+        href: "#",
+        label: "Link 3",
+        description: "Link 3 description",
+        iconLeft: <SvgCheckCircleIcon />,
+      },
+    ],
+  },
+  render: ({ ...args }) => (
+    <MenuTrigger>
+      <Button variant="secondary">
+        Menu <SvgChevronDownIcon />
+      </Button>
+      <Menu {...args} />
+    </MenuTrigger>
+  ),
+};
+
 export const SmallMenu: Story = {
   args: {
     size: "small",
     items: [
       { id: 1, href: "#", children: "Link 1" },
       { id: 2, href: "#", children: "Link 2" },
-      {
-        id: 3,
-        href: "#",
-        children: "Link 3",
-        iconLeft: <SvgCheckCircleIcon />,
-      },
     ],
   },
   render: ({ ...args }) => (
@@ -131,7 +170,7 @@ export const SubMenu: Story = {
         <MenuItem href="#">Link 2</MenuItem>
         <SubmenuTrigger>
           <MenuItem href="#">Submenu</MenuItem>
-          <Menu>
+          <Menu placement="right">
             <MenuItem href="#">Sublink 1</MenuItem>
             <MenuItem href="#">Sublink 2</MenuItem>
           </Menu>

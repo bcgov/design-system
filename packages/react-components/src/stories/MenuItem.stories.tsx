@@ -21,6 +21,49 @@ const meta = {
       control: { type: "radio" },
       description: "Sets the size of the menu item",
     },
+    label: {
+      control: { type: "text" },
+      description: "Primary text label for the menu item",
+    },
+    description: {
+      control: { type: "text" },
+      description: "Secondary text description for the menu item",
+    },
+    iconLeft: {
+      control: { type: "object" },
+      description: "Adds an icon to the left of the menu item",
+    },
+    children: {
+      control: { type: "object" },
+      description:
+        "Content of the menu item, for use in place of `label` and `description`",
+    },
+    id: {
+      control: { type: "text" },
+      description: "Unique identifier for the menu item",
+    },
+    textValue: {
+      control: { type: "text" },
+      description:
+        "Used for typeahead and accessibility. Defaults to `children` if not set",
+    },
+    isDisabled: {
+      control: { type: "boolean" },
+      description: "Disables the menu item",
+    },
+    href: {
+      control: { type: "text" },
+      description: "A URL to link to",
+    },
+    target: {
+      control: { type: "text" },
+      description: "Target window for `href`",
+    },
+    download: {
+      control: { type: "text" },
+      description:
+        "Causes browser to download the linked URL instead of opening it",
+    },
   },
 } satisfies Meta<typeof MenuItem>;
 
@@ -41,7 +84,11 @@ export const MenuItemTemplate: Story = {
       </Button>
       <Menu>
         <MenuItem {...args} />
-        <MenuItem iconLeft={<SvgBcOutlineIcon />} label="Menu item 2" />
+        <MenuItem
+          iconLeft={<SvgBcOutlineIcon />}
+          label="Menu item 2"
+          isDisabled
+        />
       </Menu>
     </MenuTrigger>
   ),

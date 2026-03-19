@@ -79,7 +79,7 @@ A menu comprises several parts:
 
 - A `<MenuTrigger>` wrapper
 - A trigger element (commonly a button)
-- A `<Menu>`, that opens inside a `<Popover>`
+- A `<Menu>`, that renders a `<Popover>` and some number of `<MenuItem>` elements
 
 Structurally, these components are assembled like this:
 
@@ -139,7 +139,9 @@ function App() {
 
 ### `items`
 
-TKTK
+You can dynamically compose a menu using the `items` prop. `items` expects an array of objects that match the shape of [the MenuItem API](/story/navigation-and-structure-menu-menuitem):
+
+<Canvas of={MenuStories.Items} />
 
 ### `sections`
 

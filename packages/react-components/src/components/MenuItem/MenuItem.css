@@ -17,7 +17,9 @@
 }
 
 /* Link styling */
-a.bcds-react-aria-MenuItem {
+a.bcds-react-aria-MenuItem
+  > .bcds-react-aria-MenuItem--Content
+  > *[slot="label"] {
   color: var(--typography-color-link);
   text-decoration: underline;
   text-underline-offset: var(--layout-padding-hair);
