@@ -18,7 +18,17 @@ export { default as Header } from "./Header";
 export { default as Heading } from "./Heading";
 export { default as InlineAlert } from "./InlineAlert";
 export { default as Link } from "./Link";
+export {
+  default as Menu,
+  MenuTrigger,
+  SubmenuTrigger,
+  MenuSection,
+  MenuSectionHeader,
+} from "./Menu";
+export { default as MenuItem } from "./MenuItem";
 export { default as Modal } from "./Modal";
+export { default as Navbar } from "./Navbar";
+export { default as Popover } from "./Popover";
 export { default as Radio } from "./Radio";
 export { default as RadioGroup } from "./RadioGroup";
 export { default as Select } from "./Select";
@@ -33,11 +43,12 @@ export { default as SvgChevronUpIcon } from "./Icons/SvgChevronUpIcon";
 export { default as SvgChevronDownIcon } from "./Icons/SvgChevronDownIcon";
 export { default as SvgChevronLeftIcon } from "./Icons/SvgChevronLeftIcon";
 export { default as SvgChevronRightIcon } from "./Icons/SvgChevronRightIcon";
+export { default as SvgCloseIcon } from "./Icons/SvgCloseIcon";
 export { default as SvgDashIcon } from "./Icons/SvgDashIcon";
 export { default as SvgExclamationIcon } from "./Icons/SvgExclamationIcon";
 export { default as SvgExclamationCircleIcon } from "./Icons/SvgExclamationCircleIcon";
-export { default as SvgCloseIcon } from "./Icons/SvgCloseIcon";
 export { default as SvgInfoIcon } from "./Icons/SvgInfoIcon";
+export { default as SvgMenuIcon } from "./Icons/SvgMenuIcon";
 export { default as SvgMinusIcon } from "./Icons/SvgMinusIcon";
 export { default as SvgPlusIcon } from "./Icons/SvgPlusIcon";
 export { default as SvgTooltipArrowUp } from "./Icons/SvgTooltipArrowUp";

@@ -1,0 +1,25 @@
+.bcds-react-aria-Menu {
+  display: flex;
+  flex-direction: column;
+  padding: var(--layout-padding-hair) var(--layout-padding-none);
+}
+
+/* Sizing */
+.bcds-react-aria-Menu.small {
+  font-size: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-Menu.medium {
+  font-size: var(--typography-regular-body);
+}
+
+/* Sections */
+.bcds-react-aria-Menu .react-aria-Header {
+  padding: var(--layout-padding-none) var(--layout-padding-small);
+  font: var(--typography-bold-small-body);
+}
+.bcds-react-aria-Menu .react-aria-MenuSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-small);
+}

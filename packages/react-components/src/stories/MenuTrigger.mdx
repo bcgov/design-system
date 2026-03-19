@@ -1,0 +1,94 @@
+{/* MenuTrigger.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
+import * as MenuTriggerStories from "./MenuTrigger.stories";
+
+<Meta of={MenuTriggerStories} />
+
+# Menu Trigger
+
+<Subtitle>
+  A MenuTrigger is a wrapper that connects a
+  [Menu](/docs/navigation-and-structure-menu--docs) and its trigger element.
+</Subtitle>
+
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA MenuTrigger component, its subcomponents and the Collections API. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/Menu#menutrigger"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      MenuTrigger docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
+<Source
+  code={`import { Menu, MenuItem, MenuTrigger } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+MenuItem is a wrapper used as the parent of a trigger element (like a [button](/docs/inputs-and-controls-button--docs)) and the [Menu](/docs/navigation-and-structure-menu--docs) it activates:
+
+```javascript
+import {
+  Button,
+  Menu,
+  MenuItem,
+  MenuTrigger,
+} from "@bcgov/design-system-react-components";
+
+function App() {
+  return (
+    <MenuTrigger>
+      <Button>This button activates the menu</Button>
+      <Menu>
+        <MenuItem />
+        <MenuItem />
+      </Menu>
+    </MenuTrigger>
+  );
+}
+```
+
+## Controls
+
+<Canvas of={MenuTriggerStories.MenuTriggerTemplate} />
+<Controls of={MenuTriggerStories.MenuTriggerTemplate} />
+
+## Configuration
+
+MenuTrigger's API lets you configure how the menu opens.
+
+Use the `defaultOpen` (uncontrolled) or `isOpen` (controlled) props to open a menu on render or based on another event.
+
+Use `onOpenChange` to provide an additional handler that is called when a Menu is opened or closed.
+
+Use `trigger` to change the action that opens a menu. By default this is `press`, but can also be set to `longPress`:
+
+<Canvas of={MenuTriggerStories.LongPress} />
