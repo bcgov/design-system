@@ -5,7 +5,7 @@
   justify-content: space-around;
   width: 100%;
   padding: var(--layout-padding-none) var(--layout-padding-medium);
-  background-color: var(--surface-color-background-light-gray);
+  background-color: var(--surface-color-background-white);
 }
 
 .bcds-react-aria-Navbar--Container {
