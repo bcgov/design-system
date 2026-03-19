@@ -15,9 +15,17 @@
   flex-wrap: wrap;
   white-space: normal;
   align-items: center;
-  gap: var(--layout-margin-small);
-  padding: var(--layout-padding-small) var(--layout-padding-none);
   max-width: 1100px;
+}
+
+/* Sizing */
+.bcds-react-aria-Navbar--Container.small {
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
+  gap: var(--layout-margin-xsmall);
+}
+.bcds-react-aria-Navbar--Container.medium {
+  padding: var(--layout-padding-small) var(--layout-padding-none);
+  gap: var(--layout-margin-small);
 }
 
 /* Orientation */
