@@ -1,6 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Button, Header } from "../components";
+import {
+  Button,
+  Header,
+  Link,
+  Menu,
+  MenuItem,
+  MenuTrigger,
+  SvgChevronDownIcon,
+} from "../components";
 import { HeaderProps } from "../components/Header";
 
 const meta = {
@@ -9,7 +17,41 @@ const meta = {
   parameters: {
     layout: "fullscreen",
   },
-  argTypes: {},
+  argTypes: {
+    logoLinkElement: {
+      control: { type: "object" },
+      description:
+        "Link element that wraps the logo. Use a router link element as needed.",
+    },
+    logoImage: {
+      control: { type: "object" },
+      description:
+        "Image or node used for the logo. Defaults to the Government of B.C. SVG logo.",
+    },
+    skipLinks: {
+      control: { type: "object" },
+      description:
+        "Array of focusable skip-link elements for keyboard navigation.",
+    },
+    title: {
+      control: { type: "text" },
+      description: "Header title text displayed to the right of the logo.",
+    },
+    titleElement: {
+      control: { type: "select" },
+      options: ["h1", "h2", "h3", "h4", "h5", "h6", "span", "p"],
+      description: "HTML element used to render the `title` text.",
+    },
+    subMenuItems: {
+      control: { type: "object" },
+      description:
+        "Items rendered inside the secondary navigation bar below the header.",
+    },
+    children: {
+      control: { type: "object" },
+      description: "Content rendered inside the header container.",
+    },
+  },
 } satisfies Meta<typeof Header>;
 
 export default meta;
@@ -95,5 +137,35 @@ export const HeaderWithTheWorks: Story = {
     logoLinkElement: <a href="/home" title="Home" />,
     skipLinks: skipLinks,
     children: <LoginButton />,
+  },
+};
+
+export const HeaderWithNavbar: Story = {
+  args: {
+    title: "Government of B.C.",
+    logoLinkElement: <a href="/home" title="Home" />,
+    skipLinks: skipLinks,
+    children: <LoginButton />,
+    subMenuItems: [
+      <MenuTrigger>
+        <Button size="small" variant="secondary">
+          Menu <SvgChevronDownIcon />
+        </Button>
+        <Menu size="small">
+          <MenuItem>Submenu Link 1</MenuItem>
+          <MenuItem>Submenu Link 2</MenuItem>
+          <MenuItem>Submenu Link 3</MenuItem>
+        </Menu>
+      </MenuTrigger>,
+      <Link href="#" size="small">
+        Link 1
+      </Link>,
+      <Link href="#" size="small">
+        Link 2
+      </Link>,
+      <Link href="#" size="small">
+        Link 3
+      </Link>,
+    ],
   },
 };
