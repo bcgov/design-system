@@ -1,7 +1,7 @@
 .bcds-react-aria-MenuItem {
   display: flex;
   gap: var(--layout-margin-xsmall);
-  padding: var(--layout-padding-none) var(--layout-padding-small);
+  padding: var(--layout-padding-small);
   cursor: pointer;
   color: var(--typography-color-secondary);
 }
@@ -14,15 +14,6 @@
   display: flex;
   flex-direction: column;
   gap: var(--layout-padding-hair);
-}
-
-/* Link styling */
-a.bcds-react-aria-MenuItem
-  > .bcds-react-aria-MenuItem--Content
-  > *[slot="label"] {
-  color: var(--typography-color-link);
-  text-decoration: underline;
-  text-underline-offset: var(--layout-padding-hair);
 }
 
 /* Sizing */
@@ -43,6 +34,24 @@ a.bcds-react-aria-MenuItem
   font: var(--typography-regular-small-body);
 }
 
+/* Link styling */
+a.bcds-react-aria-MenuItem {
+  text-decoration: none;
+}
+a.bcds-react-aria-MenuItem
+  > .bcds-react-aria-MenuItem--Content
+  > *[slot="label"] {
+  color: var(--typography-color-link);
+  text-decoration: underline var(--typography-color-link);
+  text-underline-offset: var(--layout-margin-hair);
+}
+a.bcds-react-aria-MenuItem
+  > .bcds-react-aria-MenuItem--Content
+  > *[slot="description"] {
+  color: var(--typography-color-secondary);
+  text-decoration: none;
+}
+
 /* Icon displayed when an item has a submenu */
 .bcds-react-aria-MenuItem > svg {
   width: var(--icons-size-xsmall);
@@ -52,7 +61,6 @@ a.bcds-react-aria-MenuItem
 }
 
 /* States */
-
 .bcds-react-aria-MenuItem[data-focus-visible] {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);

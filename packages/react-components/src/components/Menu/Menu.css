@@ -1,7 +1,6 @@
 .bcds-react-aria-Menu {
   display: flex;
   flex-direction: column;
-  gap: var(--layout-margin-small);
   padding: var(--layout-padding-hair) var(--layout-padding-none);
 }
 

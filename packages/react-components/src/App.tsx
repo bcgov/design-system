@@ -111,9 +111,21 @@ function App() {
             Menu <SvgMenuIcon />
           </Button>
           <Menu>
-            <MenuItem href="#">Link</MenuItem>
-            <MenuItem href="#">Link</MenuItem>
-            <MenuItem href="#">Link</MenuItem>
+            <MenuItem
+              href="#"
+              label="Link 1"
+              description="Description for Link 1"
+            />
+            <MenuItem
+              href="#"
+              label="Link 2"
+              description="Description for Link 2"
+            />
+            <MenuItem
+              href="#"
+              label="Link 3"
+              description="Description for Link 3"
+            />
           </Menu>
         </MenuTrigger>
       </Navbar>
