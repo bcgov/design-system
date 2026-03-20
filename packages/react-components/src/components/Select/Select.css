@@ -1,10 +1,165 @@
 .bcds-react-aria-Select {
   display: flex;
+  flex: 1 1 0;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
+  min-width: 0;
   /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
   max-width: -moz-available;
   max-width: -webkit-fill-available;
+}
+
+/* Scroll mode: single-select text truncation */
+.bcds-react-aria-Select.scroll .bcds-react-aria-SelectValue {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Scroll mode: horizontally scrollable tag overlay.
+   overflow-x: auto forces overflow-y to also clip (per CSS spec), which
+   would clip tag focus rings. padding-block creates room for the outline
+   inside the scroll container's padding box, and matching negative
+   margin-block cancels it out so the overlay's outer box stays the same
+   size, preserving alignment with wrap mode. */
+.bcds-react-aria-Select.scroll .bcds-react-aria-Select--TagOverlay {
+  overflow-x: auto;
+  pointer-events: auto;
+  scrollbar-width: none;
+  padding-block: calc(
+    var(--layout-border-width-medium) + var(--layout-margin-hair) + 1px
+  );
+  margin-block: calc(
+    -1 * (var(--layout-border-width-medium) + var(--layout-margin-hair) + 1px)
+  );
+  padding-inline: calc(
+    var(--layout-border-width-medium) + var(--layout-margin-hair) + 1px
+  );
+  margin-inline: calc(
+    -1 * (var(--layout-border-width-medium) + var(--layout-margin-hair) + 1px)
+  );
+}
+.bcds-react-aria-Select.scroll
+  .bcds-react-aria-Select--TagOverlay::-webkit-scrollbar {
+  display: none;
+}
+
+/* Scroll mode: prevent tag list from wrapping */
+.bcds-react-aria-Select.scroll .bcds-react-aria-TagList {
+  flex-wrap: nowrap;
+  width: max-content;
+}
+
+/* Scroll mode: prevent tags from shrinking or wrapping */
+.bcds-react-aria-Select.scroll .bcds-react-aria-Tag {
+  flex-shrink: 0;
+}
+.bcds-react-aria-Select.scroll .bcds-react-aria-Tag--Label {
+  white-space: nowrap;
+}
+
+/* Sizing */
+.bcds-react-aria-Select.small .bcds-react-aria-Select--Button {
+  min-height: 32px;
+}
+.bcds-react-aria-Select--ListBox.small .bcds-react-aria-Select--ListBoxItem {
+  padding: var(--layout-padding-xsmall);
+}
+.bcds-react-aria-Select.small .bcds-react-aria-SelectValue--Text,
+.bcds-react-aria-Select--ListBox.small
+  .bcds-react-aria-Select--ListBoxItem-Text-label {
+  font: var(--typography-regular-small-body);
+}
+.bcds-react-aria-Select.medium .bcds-react-aria-Select--Button {
+  min-height: 40px;
+}
+.bcds-react-aria-Select--ListBox.medium .bcds-react-aria-Select--ListBoxItem {
+  padding: var(--layout-padding-small);
+}
+.bcds-react-aria-Select.medium .bcds-react-aria-SelectValue--Text,
+.bcds-react-aria-Select--ListBox.medium
+  .bcds-react-aria-Select--ListBoxItem-Text-label {
+  font: var(--typography-regular-body);
+}
+
+/* Select input equivalent */
+.bcds-react-aria-Select--Button {
+  background-color: var(--surface-color-forms-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  box-sizing: border-box;
+  display: flex;
+  gap: var(--layout-margin-small);
+  align-items: center;
+  padding: var(--layout-padding-small);
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+.bcds-react-aria-Select--Button[data-hovered] {
+  border-color: var(--surface-color-border-dark);
+  cursor: pointer;
+}
+.bcds-react-aria-Select--Button.invalid {
+  border-color: var(--support-border-color-danger);
+}
+.bcds-react-aria-Select[data-invalid] > .bcds-react-aria-Select--Button {
+  border-color: var(--support-border-color-danger);
+}
+.bcds-react-aria-Select--Button[data-disabled] {
+  background-color: var(--surface-color-forms-disabled);
+  cursor: not-allowed;
+}
+.bcds-react-aria-Select--Button[data-focused] {
+  border-color: var(--surface-color-border-active);
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+}
+.bcds-react-aria-Select--Button[data-pressed] {
+  border-color: var(--surface-color-border-active);
+}
+.bcds-react-aria-Select--Button > .bcds-react-aria-SelectValue {
+  flex: 1 1 auto;
+  overflow: visible;
+  white-space: normal;
+  text-align: left;
+  min-width: 0;
+}
+.bcds-react-aria-Select--Button > svg {
+  flex: 0 0 auto;
+}
+
+/* Overlay for tags in multi-select mode */
+.bcds-react-aria-Select--InputContainer {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+}
+.bcds-react-aria-Select--InputContainer > .bcds-react-aria-Select--Button {
+  grid-area: 1 / 1;
+  align-self: stretch;
+}
+.bcds-react-aria-Select--TagOverlayContainer {
+  grid-area: 1 / 1;
+  z-index: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  padding: var(--layout-padding-small);
+  padding-right: 2.5rem;
+  pointer-events: none;
+}
+.bcds-react-aria-Select--TagOverlay {
+  width: 100%;
+  min-width: 0;
+  pointer-events: none;
+}
+.bcds-react-aria-Select--TagOverlay .bcds-react-aria-Tag,
+.bcds-react-aria-Select--TagOverlay .bcds-react-aria-Tag [slot="remove"],
+.bcds-react-aria-Select--TagOverlay .bcds-react-aria-Tag button {
+  pointer-events: auto;
 }
 
 /* Label above select input */
@@ -32,72 +187,23 @@
 
 /* Error icon */
 .bcds-react-aria-Select[data-invalid]
-  > .bcds-react-aria-Select--Button
-  > svg:not(:last-child) {
+  .bcds-react-aria-Select--Button
+  svg:not(:last-child) {
   color: var(--icons-color-danger);
-}
-
-/* Select input equivalent */
-.bcds-react-aria-Select--Button {
-  background-color: var(--surface-color-forms-default);
-  border: 1px solid var(--surface-color-border-default);
-  border-radius: var(--layout-border-radius-medium);
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  gap: var(--layout-margin-small);
-  align-items: center;
-  padding: 0 12px;
-  max-width: 100%;
-}
-.bcds-react-aria-Select--Button.invalid {
-  border-color: var(--support-border-color-danger);
-}
-.bcds-react-aria-Select[data-invalid] > .bcds-react-aria-Select--Button {
-  border-color: var(--support-border-color-danger);
-}
-.bcds-react-aria-Select--Button[data-disabled] {
-  background-color: var(--surface-color-forms-disabled);
-  cursor: not-allowed;
-}
-.bcds-react-aria-Select--Button[data-hovered] {
-  border-color: var(--surface-color-border-dark);
-}
-.bcds-react-aria-Select--Button[data-focused] {
-  border-color: var(--surface-color-border-active);
-  outline: solid var(--layout-border-width-medium)
-    var(--surface-color-border-active);
-  outline-offset: var(--layout-margin-hair);
-}
-.bcds-react-aria-Select--Button[data-pressed] {
-  border-color: var(--surface-color-border-active);
-}
-.bcds-react-aria-Select--Button.medium {
-  height: 40px;
-}
-.bcds-react-aria-Select--Button.small {
-  height: 32px;
-}
-.bcds-react-aria-Select--Button > .bcds-react-aria-SelectValue {
-  font: var(--typography-regular-body);
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  min-width: 0;
-}
-.bcds-react-aria-Select--Button > svg {
-  flex-shrink: 0;
 }
 
 /* Dropdown menu panel */
 .bcds-react-aria-Select--Popover {
   background-color: var(--surface-color-forms-default);
-  border: 1px solid var(--surface-color-border-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
   box-shadow: var(--surface-shadow-medium);
   box-sizing: border-box;
   overflow-y: auto;
   padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
+  max-width: calc(100vw - (2 * var(--layout-padding-small)));
+  max-height: 50vh;
   width: var(
     --trigger-width
   ); /* Variable provided by Select component https://react-spectrum.adobe.com/react-aria/Select.html#popover-1 */
@@ -106,9 +212,10 @@
   outline: none;
 }
 .bcds-react-aria-Select--ListBox > .bcds-react-aria-Section:not(:first-child) {
-  border-top: 1px solid var(--surface-color-border-default);
+  border-top: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
   margin-top: 1px;
-  padding-top: 2px;
+  padding-top: var(--layout-padding-hair);
 }
 
 /* Header label within Section of multi-section Select */
@@ -126,7 +233,6 @@
   flex-direction: row;
   align-items: center;
   gap: var(--layout-margin-small);
-  padding: var(--layout-padding-small);
 }
 .bcds-react-aria-Select--ListBoxItem[data-focused],
 .bcds-react-aria-Select--ListBoxItem[data-hovered] {
@@ -145,10 +251,8 @@
   color: var(--typography-color-primary);
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-}
-.bcds-react-aria-Select--ListBoxItem-Text-label {
-  font: var(--typography-regular-body);
+  flex: 1 1 auto;
+  min-width: 0;
 }
 .bcds-react-aria-Select--ListBoxItem.destructive {
   color: var(--surface-color-primary-danger-button-default);

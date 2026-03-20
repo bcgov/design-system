@@ -24,7 +24,7 @@ import * as SelectStories from "./Select.stories";
 
 <Subtitle>
   The select component displays a collapsible list of options and enables a user
-  to select one of them.
+  to select one or more values.
 </Subtitle>
 
 <InlineAlert
@@ -69,6 +69,43 @@ This component may trigger [a known false positive](https://react-spectrum.adobe
 
 ## Configuration
 
+### Values and selection mode
+
+Use `value` to set or get the currently-selected value. Use `defaultValue` to set an uncontrolled initial value.
+
+Selected items are indicated with a checkmark icon in the dropdown list.
+
+By default, Select permits the user to select a single option from the list. Set `selectionMode` to `multiple` to permit multiple selections:
+
+<Canvas of={SelectStories.MultiSelect} />
+
+In multi-select mode, selected values are rendered inside a [TagGroup](/docs/inputs-and-controls-taggroup--docs). This provides visual separation between selected values, and enables the user to de-select items without re-opening the dropdown.
+
+#### Styling tags
+
+Tags' labels, IDs and icons are populated automatically from Select's `items` array. You can further access and customise how individual tags are styled using [Tag](/story/inputs-and-controls-taggroup-tag--single-tag) props:
+
+```typescript
+import { TagProps } from "@bcgov/design-system-react-components";
+
+const items = [
+  {
+    id: "1",
+    label: "Option 1",
+    color: "bc-blue" as TagProps["color"],
+    tagStyle: "circular" as TagProps["tagStyle"],
+  },
+  {
+    id: "2",
+    label: "Option 2",
+    color: "bc-gold" as TagProps["color"],
+    tagStyle: "circular" as TagProps["tagStyle"],
+  },
+];
+```
+
+<Canvas of={SelectStories.StyledTags} />
+
 ### Flat list of items
 
 Options in the select component are implemented using React Aria's [Collection Components API](https://react-spectrum.adobe.com/react-aria/collections.html) via the `items` and `sections` props.
@@ -87,7 +124,7 @@ Each section object can be labelled with an optional `header`.
 
 ### Size
 
-Choose from medium (default) and small select sizes:
+Choose from `medium` (default) and `small` select sizes:
 
 <Canvas of={SelectStories.Small} />
 <Canvas of={SelectStories.Medium} />
