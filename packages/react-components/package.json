@@ -13,6 +13,8 @@
     "build:types": "tsc -p tsconfig.types.json",
     "build:dts": "rollup -c rollup.dts.config.js",
     "build": "npm run clean && npm run build:js && npm run build:types && npm run build:dts",
+    "format:check": "npx prettier . --check",
+    "format": "npx prettier . --write",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "storybook-dev": "storybook dev -p 6006",
     "storybook-build": "storybook build",
