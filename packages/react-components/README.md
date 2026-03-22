@@ -179,7 +179,11 @@ Then in a local React project folder, use `npm link @bcgov/design-system-react-c
 
 ### Linting
 
-ESLint is used for linting. See configuration file `eslint.config.js`.
+ESLint is used for linting. See configuration file `eslint.config.js` and `lint` script in `package.json`.
+
+### Formatting
+
+Prettier is used for formatting. See configuration file `prettier.config.js` and `format` scripts in `package.json`.
 
 ### Publish new versions
 
