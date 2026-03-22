@@ -7,8 +7,10 @@ import Tag, { TagProps } from "../Tag";
 
 import "./TagList.css";
 
-export interface TagListProps<T>
-  extends Pick<ReactAriaTagListProps<T>, "children" | "renderEmptyState"> {
+export interface TagListProps<T> extends Pick<
+  ReactAriaTagListProps<T>,
+  "children" | "renderEmptyState"
+> {
   items: TagProps[];
   /**
    * Used to set the `flex-direction` on the TagList.
