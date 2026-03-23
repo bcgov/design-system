@@ -73,7 +73,6 @@ a.bcds-react-aria-MenuItem
   background-color: var(--surface-color-menus-hover);
   outline: none;
 }
-
 .bcds-react-aria-MenuItem[data-disabled] {
   color: var(--typography-color-disabled);
   cursor: not-allowed;

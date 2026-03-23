@@ -76,6 +76,14 @@ const meta = {
       },
       description: "The placement of the menu popover relative to the trigger",
     },
+    autoFocus: {
+      options: [true, false, "first", "last"],
+      control: { type: "select" },
+      description: "Where the focus should be set",
+      table: {
+        defaultValue: { summary: "false" },
+      },
+    },
     selectionMode: {
       options: ["none", "single", "multiple"],
       control: { type: "radio" },

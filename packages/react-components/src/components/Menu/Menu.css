@@ -23,3 +23,8 @@
   flex-direction: column;
   gap: var(--layout-margin-small);
 }
+
+/* States */
+.bcds-react-aria-Menu[data-focused] {
+  outline: none;
+}
