@@ -11,3 +11,10 @@
   ); /* Variable provided by Menu component: https://react-spectrum.adobe.com/react-aria/Menu.html#popover-1 */
   max-width: calc(var(--trigger-width) * 2);
 }
+
+.bcds-react-aria-Popover[data-focused],
+.bcds-react-aria-Popover[data-hovered] {
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-dark);
+  outline: none;
+}

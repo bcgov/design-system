@@ -67,10 +67,11 @@ a.bcds-react-aria-MenuItem
   outline-offset: var(--layout-margin-none);
   border-radius: var(--layout-border-radius-small);
 }
-
-.bcds-react-aria-MenuItem[data-hovered] {
+.bcds-react-aria-MenuItem[data-hovered],
+.bcds-react-aria-MenuItem[data-hovered][data-focused] {
   border-radius: var(--layout-border-radius-small);
   background-color: var(--surface-color-menus-hover);
+  outline: none;
 }
 
 .bcds-react-aria-MenuItem[data-disabled] {
