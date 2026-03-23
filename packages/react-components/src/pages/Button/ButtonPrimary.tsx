@@ -1,56 +1,9 @@
 import Button from "@/components/Button";
+import SvgPlaceholderIcon from "@/components/Icons/SvgPlaceholderIcon";
 
-const iconPlaceholder = (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <g id="20px/Icon placeholder" clipPath="url(#clip0_717_6325)">
-      <path
-        id="Icon"
-        d="M9.99996 18.3333C14.6023 18.3333 18.3333 14.6023 18.3333 9.99996C18.3333 5.39759 14.6023 1.66663 9.99996 1.66663C5.39759 1.66663 1.66663 5.39759 1.66663 9.99996C1.66663 14.6023 5.39759 18.3333 9.99996 18.3333Z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_717_6325">
-        <rect width="20" height="20" fill="white" />
-      </clipPath>
-    </defs>
-  </svg>
-);
-
-const iconPlaceholderSmall = (
-  <svg
-    width="16"
-    height="16"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <g id="16px/Icon placeholder" clipPath="url(#clip0_717_6325)">
-      <path
-        id="Icon"
-        d="M9.99996 18.3333C14.6023 18.3333 18.3333 14.6023 18.3333 9.99996C18.3333 5.39759 14.6023 1.66663 9.99996 1.66663C5.39759 1.66663 1.66663 5.39759 1.66663 9.99996C1.66663 14.6023 5.39759 18.3333 9.99996 18.3333Z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_717_6325">
-        <rect width="20" height="20" fill="white" />
-      </clipPath>
-    </defs>
-  </svg>
-);
+function SvgPlaceholderIconSmall() {
+  return <SvgPlaceholderIcon size={16} />;
+}
 
 function ButtonPrimaryLarge() {
   return (
@@ -71,7 +24,7 @@ function ButtonPrimaryLargeDisabled() {
 function ButtonPrimaryLargeIcon() {
   return (
     <Button size="large" variant="primary" isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -79,7 +32,7 @@ function ButtonPrimaryLargeIcon() {
 function ButtonPrimaryLargeIconDisabled() {
   return (
     <Button size="large" variant="primary" isDisabled isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -103,7 +56,7 @@ function ButtonPrimaryMediumDisabled() {
 function ButtonPrimaryMediumIcon() {
   return (
     <Button size="medium" variant="primary" isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -111,7 +64,7 @@ function ButtonPrimaryMediumIcon() {
 function ButtonPrimaryMediumIconDisabled() {
   return (
     <Button size="medium" variant="primary" isDisabled isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -135,7 +88,7 @@ function ButtonPrimarySmallDisabled() {
 function ButtonPrimarySmallIcon() {
   return (
     <Button size="small" variant="primary" isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -143,7 +96,7 @@ function ButtonPrimarySmallIcon() {
 function ButtonPrimarySmallIconDisabled() {
   return (
     <Button size="small" variant="primary" isDisabled isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -167,7 +120,7 @@ function ButtonPrimaryXSmallDisabled() {
 function ButtonPrimaryXSmallIcon() {
   return (
     <Button size="xsmall" variant="primary" isIconButton>
-      {iconPlaceholderSmall}
+      <SvgPlaceholderIconSmall />
     </Button>
   );
 }
@@ -175,7 +128,7 @@ function ButtonPrimaryXSmallIcon() {
 function ButtonPrimaryXSmallIconDisabled() {
   return (
     <Button size="xsmall" variant="primary" isDisabled isIconButton>
-      {iconPlaceholderSmall}
+      <SvgPlaceholderIconSmall />
     </Button>
   );
 }
