@@ -130,6 +130,11 @@ export const PasswordField: Story = {
     value: "s&mU9ZHu5d5^uP",
     description: "Input is automatically obscured",
   },
+  render: () => (
+    <form>
+      <TextField {...PasswordField.args} />
+    </form>
+  ),
 };
 
 export const DisabledTextField: Story = {
