@@ -48,7 +48,7 @@ export type { DateValue };
 
 /* Generate format helper text, adapted from React Spectrum */
 function useFormatHelpText(
-  props: Pick<DatePickerProps<DateValue>, "showFormatHelpText">,
+  props: Pick<DatePickerProps<DateValue>, "showFormatHelpText">
 ): React.ReactNode {
   const formatter = useDateFormatter({ dateStyle: "short" });
   const displayNames = useDisplayNames();

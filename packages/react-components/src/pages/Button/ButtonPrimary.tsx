@@ -56,14 +56,16 @@ function ButtonPrimaryLarge() {
   return (
     <Button size="large" variant="primary">
       Primary Button Large
-    </Button >);
+    </Button>
+  );
 }
 
 function ButtonPrimaryLargeDisabled() {
   return (
     <Button size="large" variant="primary" isDisabled>
       Primary Button Large Disabled
-    </Button >);
+    </Button>
+  );
 }
 
 function ButtonPrimaryLargeIcon() {
@@ -150,14 +152,16 @@ function ButtonPrimaryXSmall() {
   return (
     <Button size="xsmall" variant="primary">
       Primary Button X-Small
-    </Button >);
+    </Button>
+  );
 }
 
 function ButtonPrimaryXSmallDisabled() {
   return (
     <Button size="xsmall" variant="primary" isDisabled>
       Primary Button X-Small Disabled
-    </Button >);
+    </Button>
+  );
 }
 
 function ButtonPrimaryXSmallIcon() {
@@ -192,5 +196,5 @@ export {
   ButtonPrimaryXSmall,
   ButtonPrimaryXSmallDisabled,
   ButtonPrimaryXSmallIcon,
-  ButtonPrimaryXSmallIconDisabled
+  ButtonPrimaryXSmallIconDisabled,
 };

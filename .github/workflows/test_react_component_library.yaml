@@ -40,6 +40,11 @@ jobs:
         run: npm run lint
         working-directory: ./packages/react-components
 
+      # Errors in Prettier format check will cause this job to fail
+      - name: Prettier format check
+        run: npm run format:check
+        working-directory: ./packages/react-components
+
       - name: Run test suite
         run: npm run test
         working-directory: ./packages/react-components

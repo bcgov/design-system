@@ -52,7 +52,7 @@ export default function Calendar({
                 {monthFormatter.format(
                   state.visibleRange.start
                     .add({ months: i })
-                    .toDate(state.timeZone),
+                    .toDate(state.timeZone)
                 )}
               </Heading>
               <div className="bcds-react-aria-Calendar--HeaderButton">

@@ -16,7 +16,7 @@ import {
   ButtonPrimaryXSmall,
   ButtonPrimaryXSmallDisabled,
   ButtonPrimaryXSmallIcon,
-  ButtonPrimaryXSmallIconDisabled
+  ButtonPrimaryXSmallIconDisabled,
 } from "./ButtonPrimary";
 import {
   ButtonSecondaryMedium,
@@ -96,7 +96,7 @@ export default function ButtonPage() {
         <ButtonPrimaryLargeDisabled />
       </FlexRow>
 
-       <hr />
+      <hr />
 
       <h3>Primary Button Medium</h3>
       <FlexRow>
