@@ -17,6 +17,7 @@ import {
   InlineAlertPage,
   ModalDialogPage,
   NumberFieldPage,
+  ProgressBarPage,
   RadioGroupPage,
   SelectPage,
   TagGroupPage,
@@ -117,6 +118,7 @@ function App() {
         <SwitchPage />
         <InlineAlertPage />
         <ModalDialogPage />
+        <ProgressBarPage />
         <RadioGroupPage />
         <SelectPage />
         <TagGroupPage />
