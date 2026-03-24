@@ -1,30 +1,5 @@
 import Button from "@/components/Button";
-
-const iconPlaceholder = (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <g id="20px/Icon placeholder" clipPath="url(#clip0_717_6325)">
-      <path
-        id="Icon"
-        d="M9.99996 18.3333C14.6023 18.3333 18.3333 14.6023 18.3333 9.99996C18.3333 5.39759 14.6023 1.66663 9.99996 1.66663C5.39759 1.66663 1.66663 5.39759 1.66663 9.99996C1.66663 14.6023 5.39759 18.3333 9.99996 18.3333Z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_717_6325">
-        <rect width="20" height="20" fill="white" />
-      </clipPath>
-    </defs>
-  </svg>
-);
+import SvgPlaceholderIcon from "@/components/Icons/SvgPlaceholderIcon";
 
 function ButtonPrimaryMediumDanger() {
   return (
@@ -45,7 +20,7 @@ function ButtonPrimaryMediumDisabledDanger() {
 function ButtonPrimaryMediumDangerIcon() {
   return (
     <Button size="medium" variant="primary" danger isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -53,7 +28,7 @@ function ButtonPrimaryMediumDangerIcon() {
 function ButtonPrimaryMediumDisabledDangerIcon() {
   return (
     <Button size="medium" variant="primary" isDisabled danger isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -69,7 +44,7 @@ function ButtonPrimarySmallDanger() {
 function ButtonPrimarySmallDangerIcon() {
   return (
     <Button size="small" variant="primary" danger isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -85,7 +60,7 @@ function ButtonPrimarySmallDisabledDanger() {
 function ButtonPrimarySmallDisabledDangerIcon() {
   return (
     <Button size="small" variant="primary" isDisabled danger isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -101,7 +76,7 @@ function ButtonSecondaryMediumDanger() {
 function ButtonSecondaryMediumDangerIcon() {
   return (
     <Button size="medium" variant="secondary" danger isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -117,7 +92,7 @@ function ButtonSecondaryMediumDisabledDanger() {
 function ButtonSecondaryMediumDisabledDangerIcon() {
   return (
     <Button size="medium" variant="secondary" isDisabled danger isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -133,7 +108,7 @@ function ButtonSecondarySmallDanger() {
 function ButtonSecondarySmallDangerIcon() {
   return (
     <Button size="small" variant="secondary" danger isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -149,7 +124,7 @@ function ButtonSecondarySmallDisabledDanger() {
 function ButtonSecondarySmallDisabledDangerIcon() {
   return (
     <Button size="small" variant="secondary" isDisabled danger isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -165,7 +140,7 @@ function ButtonTertiaryMediumDanger() {
 function ButtonTertiaryMediumDangerIcon() {
   return (
     <Button size="medium" variant="tertiary" danger isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -181,7 +156,7 @@ function ButtonTertiaryMediumDisabledDanger() {
 function ButtonTertiaryMediumDisabledDangerIcon() {
   return (
     <Button size="medium" variant="tertiary" isDisabled danger isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -197,7 +172,7 @@ function ButtonTertiarySmallDanger() {
 function ButtonTertiarySmallDangerIcon() {
   return (
     <Button size="small" variant="tertiary" danger isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }
@@ -213,7 +188,7 @@ function ButtonTertiarySmallDisabledDanger() {
 function ButtonTertiarySmallDisabledDangerIcon() {
   return (
     <Button size="small" variant="tertiary" isDisabled danger isIconButton>
-      {iconPlaceholder}
+      <SvgPlaceholderIcon />
     </Button>
   );
 }

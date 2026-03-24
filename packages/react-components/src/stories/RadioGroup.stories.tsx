@@ -47,9 +47,15 @@ export const RadioGroupTemplate: Story = {
     label: "Text label",
     description: "Additional description text",
     children: [
-      <Radio value="1">Option 1</Radio>,
-      <Radio value="2">Option 2</Radio>,
-      <Radio value="3">Option 3</Radio>,
+      <Radio value="1" key="1">
+        Option 1
+      </Radio>,
+      <Radio value="2" key="2">
+        Option 2
+      </Radio>,
+      <Radio value="3" key="3">
+        Option 3
+      </Radio>,
     ],
   },
   render: ({ ...args }: RadioGroupProps) => <RadioGroup {...args} />,
@@ -60,9 +66,15 @@ export const RequiredRadioGroup: Story = {
     label: "Text label",
     description: "Additional description text",
     children: [
-      <Radio value="1">Option 1</Radio>,
-      <Radio value="2">Option 2</Radio>,
-      <Radio value="3">Option 3</Radio>,
+      <Radio value="1" key="1">
+        Option 1
+      </Radio>,
+      <Radio value="2" key="2">
+        Option 2
+      </Radio>,
+      <Radio value="3" key="3">
+        Option 3
+      </Radio>,
     ],
     isRequired: true,
   },
@@ -73,9 +85,15 @@ export const HorizontalRadioGroup: Story = {
     label: "This is a horizontal radio group",
     orientation: "horizontal",
     children: [
-      <Radio value="1">Option 1</Radio>,
-      <Radio value="2">Option 2</Radio>,
-      <Radio value="3">Option 3</Radio>,
+      <Radio value="1" key="1">
+        Option 1
+      </Radio>,
+      <Radio value="2" key="2">
+        Option 2
+      </Radio>,
+      <Radio value="3" key="3">
+        Option 3
+      </Radio>,
     ],
   },
 };
@@ -85,10 +103,18 @@ export const RadioGroupWithDefaultValue: Story = {
     label: "This radio group has a value selected by default",
     defaultValue: "3",
     children: [
-      <Radio value="1">Option 1</Radio>,
-      <Radio value="2">Option 2</Radio>,
-      <Radio value="3">Option 3</Radio>,
-      <Radio value="4">Option 4</Radio>,
+      <Radio value="1" key="1">
+        Option 1
+      </Radio>,
+      <Radio value="2" key="2">
+        Option 2
+      </Radio>,
+      <Radio value="3" key="3">
+        Option 3
+      </Radio>,
+      <Radio value="4" key="4">
+        Option 4
+      </Radio>,
     ],
   },
 };
@@ -99,9 +125,15 @@ export const RadioGroupWithErrors: Story = {
     description: "Additional description text",
     defaultValue: "1",
     children: [
-      <Radio value="1">Option 1</Radio>,
-      <Radio value="2">Option 2</Radio>,
-      <Radio value="3">Option 3</Radio>,
+      <Radio value="1" key="1">
+        Option 1
+      </Radio>,
+      <Radio value="2" key="2">
+        Option 2
+      </Radio>,
+      <Radio value="3" key="3">
+        Option 3
+      </Radio>,
     ],
     isInvalid: true,
     errorMessage: "Error messages can be customised or passed programmatically",
@@ -113,9 +145,13 @@ export const RadioGroupWithDisabledOption: Story = {
     label: "Text label",
     description: "Additional description text",
     children: [
-      <Radio value="1">Option 1</Radio>,
-      <Radio value="2">Option 2</Radio>,
-      <Radio value="3" isDisabled>
+      <Radio value="1" key="1">
+        Option 1
+      </Radio>,
+      <Radio value="2" key="2">
+        Option 2
+      </Radio>,
+      <Radio value="3" isDisabled key="3">
         Option 3 is disabled
       </Radio>,
     ],
@@ -127,9 +163,15 @@ export const DisabledRadioGroup: Story = {
     label: "This radio group is disabled",
     description: "Additional description text",
     children: [
-      <Radio value="1">Option 1</Radio>,
-      <Radio value="2">Option 2</Radio>,
-      <Radio value="3">Option 3</Radio>,
+      <Radio value="1" key="1">
+        Option 1
+      </Radio>,
+      <Radio value="2" key="2">
+        Option 2
+      </Radio>,
+      <Radio value="3" key="3">
+        Option 3
+      </Radio>,
     ],
     isDisabled: true,
   },
@@ -142,9 +184,15 @@ export const ReadOnlyRadioGroup: Story = {
     defaultValue: "2",
     isReadOnly: true,
     children: [
-      <Radio value="1">Option 1</Radio>,
-      <Radio value="2">Option 2</Radio>,
-      <Radio value="3">Option 3</Radio>,
+      <Radio value="1" key="1">
+        Option 1
+      </Radio>,
+      <Radio value="2" key="2">
+        Option 2
+      </Radio>,
+      <Radio value="3" key="3">
+        Option 3
+      </Radio>,
     ],
   },
 };

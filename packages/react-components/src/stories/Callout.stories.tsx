@@ -52,10 +52,10 @@ export const CalloutTemplate: Story = {
     description:
       "Use the description slot to provide the main content of the callout.",
     buttons: [
-      <Button variant="primary" size="small">
+      <Button variant="primary" size="small" key="1">
         Button 1
       </Button>,
-      <Button variant="secondary" size="small">
+      <Button variant="secondary" size="small" key="2">
         Button 2
       </Button>,
     ],
@@ -71,10 +71,10 @@ export const LightBlueTheme: Story = {
     description:
       "Use the description slot to provide the main content of the callout.",
     buttons: [
-      <Button variant="primary" size="small">
+      <Button variant="primary" size="small" key="1">
         Button 1
       </Button>,
-      <Button variant="secondary" size="small">
+      <Button variant="secondary" size="small" key="2">
         Button 2
       </Button>,
     ],
@@ -89,10 +89,10 @@ export const LightGoldTheme: Story = {
     description:
       "Use the description slot to provide the main content of the callout.",
     buttons: [
-      <Button variant="primary" size="small">
+      <Button variant="primary" size="small" key="1">
         Button 1
       </Button>,
-      <Button variant="secondary" size="small">
+      <Button variant="secondary" size="small" key="2">
         Button 2
       </Button>,
     ],
@@ -107,10 +107,10 @@ export const BlueTheme: Story = {
     description:
       "Use the description slot to provide the main content of the callout.",
     buttons: [
-      <Button variant="secondary" size="small">
+      <Button variant="secondary" size="small" key="1">
         Button 1
       </Button>,
-      <Button variant="secondary" size="small">
+      <Button variant="secondary" size="small" key="2">
         Button 2
       </Button>,
     ],
@@ -125,10 +125,10 @@ export const GreyTheme: Story = {
     description:
       "Use the description slot to provide the main content of the callout.",
     buttons: [
-      <Button variant="secondary" size="small">
+      <Button variant="secondary" size="small" key="1">
         Button 1
       </Button>,
-      <Button variant="secondary" size="small">
+      <Button variant="secondary" size="small" key="2">
         Button 2
       </Button>,
     ],
@@ -143,10 +143,10 @@ export const BlackTheme: Story = {
     description:
       "Use the description slot to provide the main content of the callout.",
     buttons: [
-      <Button variant="secondary" size="small">
+      <Button variant="secondary" size="small" key="1">
         Button 1
       </Button>,
-      <Button variant="secondary" size="small">
+      <Button variant="secondary" size="small" key="2">
         Button 2
       </Button>,
     ],
@@ -164,7 +164,7 @@ export const TextOnlyCallout: Story = {
 export const CustomCallout: Story = {
   args: {
     variant: "lightGrey",
-    children: [
+    children: (
       <div
         style={{
           display: "flex",
@@ -200,7 +200,7 @@ export const CustomCallout: Story = {
             Submit
           </Button>
         </Form>
-      </div>,
-    ],
+      </div>
+    ),
   },
 };
