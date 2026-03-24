@@ -1,4 +1,4 @@
-import { DatePicker } from "@/components";
+import { DatePicker, DateRangePicker } from "@/components";
 
 export default function DatePickerPage() {
   return (
@@ -15,6 +15,17 @@ export default function DatePickerPage() {
         </div>
         <div className="col">
           <DatePicker showFormatHelpText={false} label="Format label hidden" />
+        </div>
+      </div>
+      <div className="row">
+        <h3>Date range picker</h3>
+      </div>
+      <div className="row">
+        <div className="col">
+          <DateRangePicker label="Default" />
+        </div>
+        <div className="col">
+          <DateRangePicker label="Default" size="small" separator="to" />
         </div>
       </div>
     </>

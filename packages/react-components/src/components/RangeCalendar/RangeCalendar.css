@@ -1,0 +1,109 @@
+.bcds-react-aria-RangeCalendar {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--layout-margin-large);
+  padding: var(--layout-padding-medium);
+  box-sizing: border-box;
+  justify-content: center;
+  background-color: var(--surface-color-forms-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  font: var(--typography-regular-small-body);
+}
+.bcds-react-aria-RangeCalendar--GridContainer {
+  display: inline-flex;
+  flex: 0 1 0;
+  flex-direction: column;
+  gap: var(--layout-margin-small);
+  box-sizing: border-box;
+}
+.bcds-react-aria-RangeCalendar--Header {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--layout-padding-none) var(--layout-padding-xsmall);
+}
+.bcds-react-aria-RangeCalendar--HeaderButton {
+  width: var(--icons-size-large);
+  height: var(--icons-size-large);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.bcds-react-aria-RangeCalendar--Header > h2.bcds-react-aria-Heading {
+  flex: 1;
+  text-align: center;
+  font: var(--typography-bold-small-body);
+  margin: var(--layout-margin-none);
+}
+.bcds-react-aria-RangeCalendar--Header > button > svg {
+  min-width: var(--icons-size-small);
+  height: var(--icons-size-small);
+}
+.bcds-react-aria-RangeCalendar--Grid {
+  text-align: center;
+  border-spacing: var(--layout-margin-xsmall);
+}
+.bcds-react-aria-RangeCalendar--Cell {
+  cursor: pointer;
+  box-sizing: border-box;
+  width: var(--icons-size-xlarge);
+  height: var(--icons-size-xlarge);
+  padding: var(--layout-padding-xsmall);
+  border: solid var(--layout-border-width-small) transparent;
+}
+/* Hide days outside current month or visible range */
+.bcds-react-aria-RangeCalendar--Cell[data-outside-visible-range],
+.bcds-react-aria-RangeCalendar--Cell[data-outside-month] {
+  visibility: hidden;
+}
+
+/* Calendar item states */
+.bcds-react-aria-RangeCalendar--Cell[data-hovered] {
+  background-color: var(--surface-color-secondary-button-hover);
+  border-radius: var(--layout-border-radius-small);
+}
+.bcds-react-aria-RangeCalendar--Cell[data-selected] {
+  background-color: var(--surface-color-primary-button-default);
+  color: var(--typography-color-primary-invert);
+  border-radius: var(--layout-border-radius-small);
+}
+.bcds-react-aria-RangeCalendar--Cell[data-selected][data-focused],
+.bcds-react-aria-RangeCalendar--Cell[data-selected][data-focus-visible] {
+  background-color: var(--surface-color-primary-button-default);
+  color: var(--typography-color-primary-invert);
+  outline: solid var(--layout-border-width-small)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+  border-radius: var(--layout-border-radius-small);
+}
+.bcds-react-aria-RangeCalendar--Cell[data-selected][data-hovered] {
+  background-color: var(--surface-color-primary-button-hover);
+}
+.bcds-react-aria-RangeCalendar--Cell[data-focused] {
+  outline: none;
+}
+.bcds-react-aria-RangeCalendar--Cell[data-focus-visible] {
+  background-color: var(--surface-color-secondary-button-hover);
+  border: solid var(--layout-border-width-small)
+    var(--surface-color-border-active);
+  border-radius: var(--layout-border-radius-small);
+  outline: none;
+}
+.bcds-react-aria-RangeCalendar--Cell[data-today] {
+  font: var(--typography-bold-small-body);
+}
+.bcds-react-aria-RangeCalendar--Cell[data-disabled],
+.bcds-react-aria-RangeCalendar--Cell[data-unavailable][data-disabled] {
+  color: var(--typography-color-disabled);
+  text-decoration: none;
+  cursor: not-allowed;
+}
+.bcds-react-aria-RangeCalendar--Cell[data-unavailable] {
+  color: var(--typography-color-danger);
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
