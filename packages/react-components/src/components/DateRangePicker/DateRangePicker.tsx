@@ -20,7 +20,7 @@ import { useDateFormatter } from "@react-aria/i18n";
 import "./DateRangePicker.css";
 import Button from "../Button";
 import Dialog from "../Dialog";
-import RangeCalendar from "../RangeCalendar";
+import RangeCalendar, { RangeCalendarProps } from "../RangeCalendar";
 import Separator from "../Separator";
 import SvgCalendarIcon from "../Icons/SvgCalendarIcon";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
@@ -44,6 +44,8 @@ export interface DateRangePickerProps<
   errorMessage?: string | ((validation: ValidationResult) => string);
   /* When true, uses the browser locale for date formatting and internationalization */
   isBrowserLocaleUsed?: boolean;
+  /* Number of months to display in the calendar */
+  visibleDuration?: RangeCalendarProps<DateValue>["visibleDuration"];
 }
 
 export type { DateValue };
@@ -96,6 +98,7 @@ export default function DateRangePicker<T extends DateValue>({
   isCalendarDisabled = false,
   isBrowserLocaleUsed = false,
   separator,
+  visibleDuration = { months: 1 },
   ...props
 }: DateRangePickerProps<T>) {
   const formatHelpText = useFormatHelpText({ showFormatHelpText });
@@ -148,7 +151,7 @@ export default function DateRangePicker<T extends DateValue>({
                 </Button>
                 <Popover>
                   <Dialog isCloseable={false}>
-                    <RangeCalendar />
+                    <RangeCalendar visibleDuration={visibleDuration} />
                   </Dialog>
                 </Popover>
               </>
