@@ -70,7 +70,6 @@ export default function Menu<T extends MenuItemProps>({
     <Popover placement={placement}>
       <ReactAriaMenu
         className={`bcds-react-aria-Menu ${size}`}
-        autoFocus={false}
         {...props}
         items={sectionsArray}
       >
