@@ -91,6 +91,7 @@ export default function App() {
 | ProgressCircle          | https://react-aria.adobe.com/ProgressBar       |
 | RadioGroup, Radio       | https://react-aria.adobe.com/RadioGroup        |
 | Select                  | https://react-aria.adobe.com/Select            |
+| Separator               | https://react-aria.adobe.com/Separator         |
 | Switch                  | https://react-aria.adobe.com/Switch            |
 | TagGroup, TagList, Tag  | https://react-aria.adobe.com/TagGroup          |
 | Text                    | https://react-spectrum.adobe.com/v3/Text       |

@@ -2,7 +2,7 @@
 
 ## 0.7.0
 
-This is a milestone release that adds four new components, and includes various enhancements and bugfixes to existing components.
+This is a milestone release that adds five new components, and includes various enhancements and bugfixes to existing components.
 
 ### Added
 
@@ -10,6 +10,7 @@ This is a milestone release that adds four new components, and includes various 
 - Calendar
 - ProgressBar
 - ProgressCircle
+- Separator
 
 ### Changed
 
