@@ -16,6 +16,7 @@ import TagGroupPage from "./TagGroup";
 import TextPage from "./TextPage";
 import TextAreaPage from "./TextArea";
 import TextFieldPage from "./TextField";
+import TimeFieldPage from "./TimeField";
 import SwitchPage from "./Switch";
 import TooltipPage from "./Tooltip";
 
@@ -38,6 +39,7 @@ export {
   TextPage,
   TextAreaPage,
   TextFieldPage,
+  TimeFieldPage,
   SwitchPage,
   TooltipPage,
 };

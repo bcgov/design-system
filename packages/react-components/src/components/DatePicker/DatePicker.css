@@ -1,16 +1,16 @@
 .bcds-react-aria-DatePicker {
   display: flex;
+  flex: 1 1 0;
   flex-direction: column;
   background-color: var(--surface-color-forms-default);
-  /* Hacks for `stretch`: https://caniuse.com/mdn-css_properties_max-width_stretch */
-  align-self: stretch;
+  align-self: flex-start;
+  width: 100%;
   max-width: -moz-available;
   max-width: -webkit-fill-available;
 }
 .bcds-react-aria-DatePicker--Group {
   display: inline-flex;
   flex-direction: row;
-  flex: 1 1 0;
   align-items: center;
   box-sizing: border-box;
   border: var(--layout-border-width-small) solid
@@ -24,6 +24,7 @@
   width: 100%;
   min-width: 0;
   align-items: center;
+  white-space: nowrap;
   border: none;
 }
 

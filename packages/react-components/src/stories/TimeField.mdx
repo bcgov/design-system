@@ -1,0 +1,125 @@
+{/* TimeField.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
+import * as TimeFieldStories from "./TimeField.stories";
+
+<Meta of={TimeFieldStories} />
+
+# Time field
+
+<Subtitle>
+  A time field enables the user to enter a time value into an interface or form.
+</Subtitle>
+
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA TimeField component. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/TimeField"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      TimeField docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
+<Source
+  code={`import { TimeField } from "@bcgov/design-system-react-components"; `}
+  language="typescript"
+/>
+
+Learn more about working with the time field component:
+
+- [Usage and best practice guidance](#)
+- [View the time field component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+### Values and validation
+
+You can read or set a time field's value using the `value` (controlled) or `defaultValue` (uncontrolled) props. This component uses objects from [the @internationalized/date package](https://react-aria.adobe.com/internationalized/date/):
+
+- [Time](https://react-aria.adobe.com/internationalized/date/Time)
+- [CalendarDateTime](https://react-aria.adobe.com/internationalized/date/CalendarDateTime)
+- [ZonedDateTime](https://react-aria.adobe.com/internationalized/date/ZonedDateTime)
+
+Default and custom data validation support is built in. Consult the React Aria documentation to learn [how to handle and validate a time field's value](https://react-aria.adobe.com/TimeField#forms). You can also use a time field within a [Form](/docs/utility-form--docs).
+
+## Controls
+
+<Canvas of={TimeFieldStories.TimeFieldTemplate} />
+<Controls of={TimeFieldStories.TimeFieldTemplate} />
+
+## Configuration
+
+### Formatting
+
+By default, a time field displays the time in 12-hour format, with an AM/PM label and a time-zone (based on the user's browser locale.)
+
+Set `hourCycle` to `24` to use 24-hour format:
+
+<Canvas of={TimeFieldStories.Hour24} />
+
+Use `hideTimeZone` to hide the time-zone abbreviation:
+
+<Canvas of={TimeFieldStories.HideTimeZone} />
+
+The `granularity` prop sets the smallest unit. Choose from `hour`, `minute` (default) or `second`:
+
+<Canvas of={TimeFieldStories.SecondGranularity} />
+
+Set `shouldForceLeadingZeros` to `true` to display `0` in front of single-digit values:
+
+<Canvas of={TimeFieldStories.LeadingZeros} />
+
+### Size
+
+The `size` prop enables you to choose between medium (default) and small (reduced height) versions:
+
+<Canvas of={TimeFieldStories.Small} />
+
+### Constraining values
+
+Set a `minValue` and/or `maxValue` to limit the range of accepted selections:
+
+<Canvas of={TimeFieldStories.ConstrainedValue} />
+
+### States
+
+By default, input fields are marked as optional. Use the `isRequired` prop to mark an input as required, and display a text label:
+
+<Canvas of={TimeFieldStories.Required} />
+
+Use `isDisabled` to disable a time field. A disabled input cannot be focused or interacted with:
+
+<Canvas of={TimeFieldStories.Disabled} />
+
+Use `isReadOnly` to lock a field to its current value. A read-only input can be focused, but cannot be edited:
+
+<Canvas of={TimeFieldStories.ReadOnly} />
+
+The `isInvalid` prop should be set programmatically when an input is invalid. It renders an error icon in the input field, changes the border colour and displays an `errorMessage` (using the [FieldError subcomponent](https://react-aria.adobe.com/forms#constraint-validation)):
+
+<Canvas of={TimeFieldStories.Invalid} />
