@@ -1,8 +1,5 @@
 # B.C. Design System
 
-> [!NOTE]
-> Effective November 12, 2025, we are resuming development of the design system. If you have questions or ideas, email [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca) or [open an issue](https://github.com/bcgov/design-system/issues).
-
 The B.C. Design System gives design and software development teams the building blocks to deliver intuitive, accessible digital services.
 
 The B.C. Design System comprises 4 core elements:
