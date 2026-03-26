@@ -21,19 +21,25 @@
   border-radius: var(--layout-border-radius-medium);
   background: var(--surface-color-forms-default);
 }
-
 .bcds-react-aria-TimeField--Input {
+  display: inline-flex;
+  align-items: center;
   box-sizing: border-box;
+  gap: var(--layout-margin-hair);
   width: 100%;
   white-space: nowrap;
   border: none;
   color: var(--typography-color-primary);
 }
-
+.bcds-react-aria-TimeField--Segment {
+  padding: var(--layout-padding-none) var(--layout-padding-hair);
+}
+.bcds-react-aria-TimeField--Segment[data-type="literal"] {
+  padding: var(--layout-padding-none);
+}
 .bcds-react-aria-TimeField--Segment[data-type="timeZoneName"] {
   color: var(--typography-color-secondary);
 }
-
 .bcds-react-aria-TimeField--Input[data-placeholder] {
   color: var(--typography-color-placeholder);
 }
@@ -74,7 +80,7 @@
 }
 
 .bcds-react-aria-TimeField.medium .bcds-react-aria-TimeField--InputContainer {
-  padding: var(--layout-padding-xsmall) 0.75rem;
+  padding: var(--layout-padding-small) 0.75rem;
   height: 40px;
 }
 .bcds-react-aria-TimeField.medium .bcds-react-aria-TimeField--Segment {
@@ -101,7 +107,6 @@
   background-color: var(--surface-color-primary-default);
   color: var(--typography-color-primary-invert);
   padding: var(--layout-padding-hair);
-  margin: var(--layout-margin-none) var(--layout-margin-hair);
 }
 .bcds-react-aria-TimeField--Segment[data-focused][data-type="timeZoneName"] {
   background-color: var(--surface-color-forms-disabled);
