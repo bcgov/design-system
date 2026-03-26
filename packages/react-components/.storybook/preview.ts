@@ -11,6 +11,7 @@ const preview: Preview = {
 
     docs: {
       theme: bcdsTheme,
+      codePanel: true,
       canvas: {
         withToolbar: true,
       },
