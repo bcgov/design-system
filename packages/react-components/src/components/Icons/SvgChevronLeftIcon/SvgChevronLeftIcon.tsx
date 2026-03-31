@@ -10,13 +10,11 @@ interface SvgChevronLeftIconProps {
 
 export default function SvgChevronLeftIcon({
   size = "medium",
-  id,
   title,
   ...props
 }: SvgChevronLeftIconProps) {
   return (
     <svg
-      id={id}
       width={
         size === "small"
           ? "var(--icons-size-small)"
