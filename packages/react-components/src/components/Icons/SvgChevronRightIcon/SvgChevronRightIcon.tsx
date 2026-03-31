@@ -1,14 +1,42 @@
 /* The component implements the Chevron Right icon from Font Awesome: https://fontawesome.com/icons/chevron-right */
-export default function SvgChevronRightIcon({ id = "chevron-right-icon" }) {
+interface SvgChevronRightIconProps {
+  /* Unique identifier for icon */
+  id?: string;
+  /* Accessible title for icon, aria-hidden set if not provided */
+  title?: string;
+  /* Icon size */
+  size?: "small" | "medium" | "large";
+}
+export default function SvgChevronRightIcon({
+  size = "medium",
+  id,
+  title,
+  ...props
+}: SvgChevronRightIconProps) {
   return (
     <svg
       id={id}
-      width="20"
-      height="20"
+      width={
+        size === "small"
+          ? "var(--icons-size-small)"
+          : size === "large"
+            ? "var(--icons-size-large)"
+            : "var(--icons-size-medium)"
+      }
+      height={
+        size === "small"
+          ? "var(--icons-size-small)"
+          : size === "large"
+            ? "var(--icons-size-large)"
+            : "var(--icons-size-medium)"
+      }
       viewBox="0 0 640 640"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden={title ? undefined : "true"}
+      {...props}
     >
+      {title && <title>{title}</title>}
       <path
         d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"
         fill="currentColor"

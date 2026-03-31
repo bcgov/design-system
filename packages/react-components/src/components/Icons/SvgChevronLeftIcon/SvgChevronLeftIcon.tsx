@@ -2,7 +2,7 @@
 interface SvgChevronLeftIconProps {
   /* Unique identifier for icon */
   id?: string;
-  /* Accessible title for icon */
+  /* Accessible title for icon, aria-hidden set if not provided */
   title?: string;
   /* Icon size */
   size?: "small" | "medium" | "large";
