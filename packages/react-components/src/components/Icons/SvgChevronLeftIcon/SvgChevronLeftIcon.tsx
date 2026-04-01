@@ -11,6 +11,9 @@ interface SvgChevronLeftIconProps extends SVGProps<SVGSVGElement> {
 export default function SvgChevronLeftIcon({
   size = "medium",
   title,
+  role = "img",
+  "aria-label": ariaLabel,
+  "aria-labelledby": ariaLabelledBy,
   ...props
 }: SvgChevronLeftIconProps) {
   return (
@@ -32,8 +35,11 @@ export default function SvgChevronLeftIcon({
       viewBox="0 0 640 640"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      aria-hidden={title ? undefined : "true"}
-      role="img"
+      aria-label={ariaLabel}
+      aria-labelledby={ariaLabelledBy}
+      aria-hidden={title || ariaLabel || ariaLabelledBy ? undefined : "true"}
+      role={role}
+      focusable="false"
       {...props}
     >
       {title && <title>{title}</title>}
