@@ -1,12 +1,13 @@
+import { SVGProps } from "react";
+
 /* The component implements the Chevron Right icon from Font Awesome: https://fontawesome.com/icons/chevron-right */
-interface SvgChevronRightIconProps {
-  /* Unique identifier for icon */
-  id?: string;
+interface SvgChevronRightIconProps extends SVGProps<SVGSVGElement> {
   /* Accessible title for icon, aria-hidden set if not provided */
   title?: string;
   /* Icon size */
   size?: "small" | "medium" | "large";
 }
+
 export default function SvgChevronRightIcon({
   size = "medium",
   title,
@@ -32,6 +33,7 @@ export default function SvgChevronRightIcon({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden={title ? undefined : "true"}
+      role="img"
       {...props}
     >
       {title && <title>{title}</title>}

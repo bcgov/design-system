@@ -1,7 +1,7 @@
+import { SVGProps } from "react";
+
 /* The component implements the Chevron Left icon from Font Awesome: https://fontawesome.com/icons/chevron-left */
-interface SvgChevronLeftIconProps {
-  /* Unique identifier for icon */
-  id?: string;
+interface SvgChevronLeftIconProps extends SVGProps<SVGSVGElement> {
   /* Accessible title for icon, aria-hidden set if not provided */
   title?: string;
   /* Icon size */
@@ -33,6 +33,7 @@ export default function SvgChevronLeftIcon({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden={title ? undefined : "true"}
+      role="img"
       {...props}
     >
       {title && <title>{title}</title>}
