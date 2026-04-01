@@ -9,10 +9,13 @@ import "./ProgressBar.css";
 export interface ProgressBarProps extends ReactAriaProgressBarProps {
   /* Set the size of the progress bar */
   size?: "small" | "medium" | "large";
+  /* Toggles position of valueText relative to valueLabel */
+  orientation?: "horizontal" | "vertical";
 }
 
 export default function ProgressBar({
   size = "medium",
+  orientation = "horizontal",
   valueLabel,
   ...props
 }: ProgressBarProps) {
@@ -23,7 +26,7 @@ export default function ProgressBar({
           {valueLabel && (
             <div className="bcds-react-aria-ProgressBar--Label">
               <Label>{valueLabel}</Label>
-              {!isIndeterminate && (
+              {!isIndeterminate && orientation === "horizontal" && (
                 <span className="bcds-react-aria-ProgressBar--Value">
                   {valueText}
                 </span>
@@ -40,6 +43,11 @@ export default function ProgressBar({
               }
             />
           </div>
+          {!isIndeterminate && orientation === "vertical" && (
+            <span className="bcds-react-aria-ProgressBar--Value">
+              {valueText}
+            </span>
+          )}
         </>
       )}
     </ReactAriaProgressBar>
