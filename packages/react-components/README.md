@@ -129,9 +129,9 @@ Storybook stories live in `./src/stories`.
 
 Run `npm run storybook-dev` to access the Storybook instance for the component library.
 
-New versions of Storybook are automatically built in a GitHub Actions workflow and deployed in the `-dev` namespace in the OpenShift Silver cluster. See `.github/build_react_component_library_apps.yaml`.
+New versions of Storybook are automatically built in a GitHub Actions workflow and deployed in the `-dev` namespace in the OpenShift Silver cluster. New builds are automatically deployed to the `-prod` namespace when a GitHub release is published. See `.github/build_react_component_library_apps.yaml`.
 
-To deploy a new version of Storybook into `-test` or `-prod`, log in to the OpenShift CLI and run:
+To manually deploy a new version of Storybook into `-test` or `-prod`, log in to the OpenShift CLI and run:
 
 ```sh
 # Create a new layer in the `test` ImageStream from the latest `develop` image:
