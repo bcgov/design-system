@@ -87,12 +87,16 @@ export default function App() {
 | InlineAlert             | N/A                                            |
 | Modal                   | https://react-aria.adobe.com/Modal             |
 | Link                    | https://react-spectrum.adobe.com/v3/Link       |
+| ProgressBar             | https://react-aria.adobe.com/ProgressBar       |
+| ProgressCircle          | https://react-aria.adobe.com/ProgressBar       |
 | RadioGroup, Radio       | https://react-aria.adobe.com/RadioGroup        |
 | Select                  | https://react-aria.adobe.com/Select            |
+| Separator               | https://react-aria.adobe.com/Separator         |
 | Switch                  | https://react-aria.adobe.com/Switch            |
 | TagGroup, TagList, Tag  | https://react-aria.adobe.com/TagGroup          |
 | Text                    | https://react-spectrum.adobe.com/v3/Text       |
 | TextArea, TextField     | https://react-aria.adobe.com/TextField         |
+| TimeField               | https://react-aria.adobe.com/TimeField         |
 | ToggleButton            | https://react-aria.adobe.com/ToggleButton      |
 | ToggleButtonGroup       | https://react-aria.adobe.com/ToggleButtonGroup |
 | Tooltip, TooltipTrigger | https://react-aria.adobe.com/Tooltip           |
