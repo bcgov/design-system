@@ -13,24 +13,21 @@ figma.connect(
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=7780%3A1928",
   {
     props: {
-      // These props were automatically mapped based on your linked code:
       label: figma.string("Text"),
       isDisabled: figma.enum("State", {
         Disabled: true,
       }),
-      hidden: figma.enum("State", {
-        Disabled: true,
-      }),
-      // No matching props could be found for these Figma properties:
-      // "text": figma.string('Text'),
-      // "opened": figma.boolean('Opened')
+      isExpanded: figma.boolean("Opened"),
+      children: figma.slot("Accordion content"),
     },
     example: (props) => (
       <Accordion
         label={props.label}
         isDisabled={props.isDisabled}
-        hidden={props.hidden}
-      />
+        isExpanded={props.isExpanded}
+      >
+        {props.children}
+      </Accordion>
     ),
   }
 );

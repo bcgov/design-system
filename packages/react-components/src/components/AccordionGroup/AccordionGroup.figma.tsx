@@ -13,19 +13,16 @@ figma.connect(
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=7780%3A2135",
   {
     props: {
-      // These props were automatically mapped based on your linked code:
+      title: figma.string("Accordion group label"),
       isDisabled: figma.enum("State", {
         Disabled: true,
       }),
-      hidden: figma.enum("State", {
-        Disabled: true,
-      }),
-      // No matching props could be found for these Figma properties:
-      // "accordionGroupLabel": figma.string('Accordion group label'),
-      // "title": figma.boolean('Title')
+      children: figma.slot("Default"),
     },
     example: (props) => (
-      <AccordionGroup isDisabled={props.isDisabled} hidden={props.hidden} />
+      <AccordionGroup title={props.title} isDisabled={props.isDisabled}>
+        {props.children}
+      </AccordionGroup>
     ),
   }
 );
