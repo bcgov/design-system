@@ -13,39 +13,38 @@ figma.connect(
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=14242%3A1245",
   {
     props: {
-      // These props were automatically mapped based on your linked code:
       size: figma.enum("Size", {
         Xsmall: "xsmall",
         Small: "small",
         Medium: "medium",
         Large: "large",
       }),
+      variant: figma.enum("Hierarchy", {
+        Primary: "primary",
+        Secondary: "secondary",
+        Tertiary: "tertiary",
+        Link: "link",
+      }),
       danger: figma.boolean("Danger"),
       isDisabled: figma.enum("State", {
         Disabled: true,
       }),
-      hidden: figma.enum("State", {
-        Disabled: true,
-      }),
+      children: figma.string("Button Label"),
       // No matching props could be found for these Figma properties:
       // "showLeftIcon": figma.boolean('Show left icon'),
       // "showRightIcon": figma.boolean('Show right icon'),
       // "leftSideIcon": figma.instance('Left side icon '),
       // "rightSideIcon": figma.instance('Right side icon'),
-      // "hierarchy": figma.enum('Hierarchy', {
-      //   "Primary": "primary",
-      //   "Secondary": "secondary",
-      //   "Tertiary": "tertiary",
-      //   "Link": "link"
-      // })
     },
     example: (props) => (
       <Button
         size={props.size}
+        variant={props.variant}
         danger={props.danger}
         isDisabled={props.isDisabled}
-        hidden={props.hidden}
-      />
+      >
+        {props.children}
+      </Button>
     ),
   }
 );
