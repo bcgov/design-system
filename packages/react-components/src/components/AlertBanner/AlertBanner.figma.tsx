@@ -21,11 +21,26 @@ figma.connect(
         Danger: "danger",
         Black: "black",
       }),
+      isIconHidden: figma.boolean("Icon", {
+        false: true,
+        true: false,
+      }),
+      isCloseable: figma.boolean("Close", {
+        false: true,
+        true: false,
+      }),
+      children: figma.slot("Alert content"),
       // No matching props could be found for these Figma properties:
-      // "icon": figma.boolean('Icon'),
-      // "close": figma.boolean('Close'),
       // "action": figma.boolean('Action'),
     },
-    example: (props) => <AlertBanner variant={props.variant} />,
+    example: (props) => (
+      <AlertBanner
+        variant={props.variant}
+        isIconHidden={props.isIconHidden}
+        isCloseable={props.isCloseable}
+      >
+        {props.children}
+      </AlertBanner>
+    ),
   }
 );
