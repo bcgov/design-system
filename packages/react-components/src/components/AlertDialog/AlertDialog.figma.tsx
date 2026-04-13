@@ -13,19 +13,18 @@ figma.connect(
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=6433%3A1885",
   {
     props: {
-      // These props were automatically mapped based on your linked code:
+      variant: figma.enum("Type", {
+        Information: "info",
+        Confirmation: "confirmation",
+        Warning: "warning",
+        Error: "error",
+        Destructive: "destructive",
+      }),
       title: figma.string("Title"),
-      // No matching props could be found for these Figma properties:
-      // "title": figma.string('Title'),
-      // "text": figma.string('Text'),
-      // "type": figma.enum('Type', {
-      //   "Confirmation": "confirmation",
-      //   "Information": "information",
-      //   "Error": "error",
-      //   "Destructive": "destructive",
-      //   "Warning": "warning"
-      // })
+      children: figma.string("Text"),
     },
-    example: (props) => <AlertDialog title={props.title} />,
+    example: (props) => (
+      <AlertDialog variant={props.variant} title={props.title}></AlertDialog>
+    ),
   }
 );
