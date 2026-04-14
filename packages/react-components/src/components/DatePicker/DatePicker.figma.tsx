@@ -13,26 +13,29 @@ figma.connect(
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=15865%3A4285",
   {
     props: {
-      // These props were automatically mapped based on your linked code:
       size: figma.enum("Size", {
         Small: "small",
         Medium: "medium",
       }),
-      hideTimeZone: figma.boolean("Timezone"),
+      hideTimeZone: figma.boolean("Timezone", {
+        false: true,
+        true: false,
+      }),
       isDisabled: figma.enum("State", {
         Disabled: true,
       }),
       isReadOnly: figma.enum("State", {
         "Read only": true,
       }),
-      hidden: figma.enum("State", {
-        Disabled: true,
+      isCalendarDisabled: figma.boolean("Show calendar", {
+        false: true,
+        true: false,
       }),
+      label: figma.textContent("Label"),
+      description: figma.textContent("Description"),
       // No matching props could be found for these Figma properties:
       // "showLabel": figma.boolean('Show label'),
-      // "showCalendar": figma.boolean('Show calendar'),
       // "time": figma.boolean('Time'),
-      // "timezone": figma.boolean('Timezone'),
       // "description": figma.boolean('Description')
     },
     example: (props) => (
@@ -41,7 +44,7 @@ figma.connect(
         hideTimeZone={props.hideTimeZone}
         isDisabled={props.isDisabled}
         isReadOnly={props.isReadOnly}
-        hidden={props.hidden}
+        label={props.label}
       />
     ),
   }
