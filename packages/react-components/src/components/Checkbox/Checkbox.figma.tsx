@@ -14,32 +14,30 @@ figma.connect(
   {
     props: {
       // These props were automatically mapped based on your linked code:
+      isSelected: figma.enum("State", {
+        Inactive: false,
+        Active: true,
+      }),
       isIndeterminate: figma.enum("Selection", {
         Indeterminate: true,
-      }),
-      defaultSelected: figma.enum("State", {
-        Default: true,
       }),
       isDisabled: figma.enum("State", {
         Disabled: true,
       }),
-      hidden: figma.enum("State", {
-        Disabled: true,
-      }),
-      inert: figma.enum("Selection", {
-        Inactive: true,
-      }),
+      isRequired: figma.nestedProps("Label", figma.boolean("Required")),
+      children: figma.nestedProps("Label", figma.string("Label text")),
       // No matching props could be found for these Figma properties:
       // "label": figma.boolean('Label')
     },
     example: (props) => (
       <Checkbox
         isIndeterminate={props.isIndeterminate}
-        defaultSelected={props.defaultSelected}
+        isSelected={props.isSelected}
         isDisabled={props.isDisabled}
-        hidden={props.hidden}
-        inert={props.inert}
-      />
+        isRequired={props.isRequired}
+      >
+        {props.children}
+      </Checkbox>
     ),
   }
 );

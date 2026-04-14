@@ -26,8 +26,8 @@ figma.connect(
         false: true,
         true: false,
       }),
-      title: figma.string("Heading text"),
-      description: figma.string("Body text"),
+      title: figma.textContent("Heading text"),
+      description: figma.textContent("Body text"),
       // No matching props could be found for these Figma properties:
       // "heading": figma.boolean('Heading'),
       // "actions": figma.boolean('Actions'),

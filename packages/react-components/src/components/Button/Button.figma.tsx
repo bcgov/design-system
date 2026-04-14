@@ -29,7 +29,7 @@ figma.connect(
       isDisabled: figma.enum("State", {
         Disabled: true,
       }),
-      children: figma.string("Button Label"),
+      children: figma.textContent("Button Label"),
       // No matching props could be found for these Figma properties:
       // "showLeftIcon": figma.boolean('Show left icon'),
       // "showRightIcon": figma.boolean('Show right icon'),

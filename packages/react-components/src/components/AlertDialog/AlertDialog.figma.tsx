@@ -20,8 +20,8 @@ figma.connect(
         Error: "error",
         Destructive: "destructive",
       }),
-      title: figma.string("Title"),
-      children: figma.string("Text"),
+      title: figma.textContent("Title"),
+      children: figma.textContent("Text"),
     },
     example: (props) => (
       <AlertDialog variant={props.variant} title={props.title}></AlertDialog>
