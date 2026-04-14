@@ -18,11 +18,20 @@ figma.connect(
         Horizontal: "horizontal",
         Vertical: "vertical",
       }),
-      // No matching props could be found for these Figma properties:
-      // "errorText": figma.boolean('Error text'),
-      // "description": figma.boolean('Description'),
-      // "label": figma.boolean('Label')
+      label: figma.textContent("Label"),
+      description: figma.textContent("Description"),
+      children: figma.slot("Default"),
+      isInvalid: figma.boolean("Error text"),
+      errorMessage: figma.textContent("Error message"),
     },
-    example: (props) => <CheckboxGroup orientation={props.orientation} />,
+    example: (props) => (
+      <CheckboxGroup
+        orientation={props.orientation}
+        isInvalid={props.isInvalid}
+        errorMessage={props.errorMessage}
+      >
+        {props.children}
+      </CheckboxGroup>
+    ),
   }
 );
