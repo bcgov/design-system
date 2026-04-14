@@ -13,17 +13,32 @@ figma.connect(
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=3982%3A10968",
   {
     props: {
-      // These props were automatically mapped based on your linked code:
-      hideCopyright: figma.boolean("Copyright"),
+      hideAcknowledgement: figma.boolean("Land acknowledgement", {
+        false: true,
+        true: false,
+      }),
+      hideLogoAndLinks: figma.boolean("Content", {
+        false: true,
+        true: false,
+      }),
+      hideCopyright: figma.boolean("Copyright", {
+        false: true,
+        true: false,
+      }),
+      acknowledgement: figma.slot("Territorial acknowledgement content"),
       // No matching props could be found for these Figma properties:
-      // "copyright": figma.boolean('Copyright'),
-      // "landAcknowledgement": figma.boolean('Land acknowledgement'),
       // "content": figma.boolean('Content'),
-      // "territorialAcknowledgementContent": figma.string('Territorial acknowledgement content'),
       // "type": figma.enum('Type', {
       //   "Default": "default"
       // })
     },
-    example: (props) => <Footer hideCopyright={props.hideCopyright} />,
+    example: (props) => (
+      <Footer
+        hideLogoAndLinks={props.hideLogoAndLinks}
+        hideCopyright={props.hideCopyright}
+        hideAcknowledgement={props.hideAcknowledgement}
+        acknowledgement={props.acknowledgement}
+      />
+    ),
   }
 );
