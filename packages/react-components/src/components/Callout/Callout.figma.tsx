@@ -22,10 +22,15 @@ figma.connect(
         Gray: "Grey",
         Blue: "Blue",
       }),
+      isLeftBorderDisabled: figma.boolean("Stroke", {
+        false: true,
+        true: false,
+      }),
+      title: figma.string("Heading text"),
+      description: figma.string("Body text"),
       // No matching props could be found for these Figma properties:
       // "heading": figma.boolean('Heading'),
       // "actions": figma.boolean('Actions'),
-      // "stroke": figma.boolean('Stroke'),
       // "primary": figma.boolean('Primary'),
       // "secondary": figma.boolean('Secondary'),
     },
