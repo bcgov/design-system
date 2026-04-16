@@ -13,32 +13,24 @@ figma.connect(
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=5146%3A248",
   {
     props: {
-      // These props were automatically mapped based on your linked code:
-      defaultSelected: figma.enum("State", {
-        Default: true,
-      }),
       isSelected: figma.boolean("Active"),
       isDisabled: figma.enum("State", {
         Disabled: true,
       }),
-      hidden: figma.enum("State", {
-        Disabled: true,
+      labelPosition: figma.enum("Layout", {
+        "label-before": "left",
+        "label-after": "right",
       }),
-      // No matching props could be found for these Figma properties:
-      // "label": figma.boolean('Label'),
-      // "layout": figma.enum('Layout', {
-      //   "No label": "no-label",
-      //   "Label after": "label-after",
-      //   "Label before": "label-before"
-      // })
+      children: figma.textContent("Label"),
     },
     example: (props) => (
       <Switch
-        defaultSelected={props.defaultSelected}
         isSelected={props.isSelected}
         isDisabled={props.isDisabled}
-        hidden={props.hidden}
-      />
+        labelPosition={props.labelPosition}
+      >
+        {props.children}
+      </Switch>
     ),
   }
 );
