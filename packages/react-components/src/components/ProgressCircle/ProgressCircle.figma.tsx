@@ -19,6 +19,8 @@ figma.connect(
         Medium: "medium",
         Large: "large",
       }),
+      valueLabel: figma.string("Label"),
+      value: figma.string("Value"),
       isIndeterminate: figma.enum("Style", {
         Indeterminate: true,
       }),
@@ -32,6 +34,8 @@ figma.connect(
     example: (props) => (
       <ProgressCircle
         size={props.size}
+        valueLabel={props.valueLabel}
+        value={Number(props.value) || 0}
         isIndeterminate={props.isIndeterminate}
       />
     ),

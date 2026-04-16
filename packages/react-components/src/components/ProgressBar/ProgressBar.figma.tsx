@@ -19,12 +19,12 @@ figma.connect(
         Medium: "medium",
         Large: "large",
       }),
+      valueLabel: figma.string("Label"),
+      value: figma.string("Value"),
       isIndeterminate: figma.enum("Style", {
         Indeterminate: true,
       }),
       // No matching props could be found for these Figma properties:
-      // "label": figma.string('Label'),
-      // "value": figma.string('Value'),
       // "showLabelValue": figma.boolean('Show label & value'),
       // "orientation": figma.enum('Orientation', {
       //   "Horizontal": "horizontal",
@@ -36,7 +36,12 @@ figma.connect(
       // })
     },
     example: (props) => (
-      <ProgressBar size={props.size} isIndeterminate={props.isIndeterminate} />
+      <ProgressBar
+        size={props.size}
+        valueLabel={props.valueLabel}
+        value={Number(props.value) || 0}
+        isIndeterminate={props.isIndeterminate}
+      />
     ),
   }
 );
