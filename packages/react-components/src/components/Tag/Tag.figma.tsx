@@ -16,7 +16,7 @@ figma.connect(
       // These props were automatically mapped based on your linked code:
       icon: figma.instance("Icon placeholder"),
       color: figma.enum("Color", {
-        Blue: "blue",
+        "Theme blue": "blue",
         "Theme gold": "bc-gold",
         Dark: "dark",
         Gray: "grey",
@@ -32,18 +32,13 @@ figma.connect(
         Small: "small",
         Medium: "medium",
       }),
-      textValue: figma.string("Tag text"),
+      children: figma.string("Tag text"),
       isDisabled: figma.enum("State", {
-        Disabled: true,
-      }),
-      hidden: figma.enum("State", {
         Disabled: true,
       }),
       // No matching props could be found for these Figma properties:
       // "showIcon": figma.boolean('Show icon'),
       // "closeable": figma.boolean('Closeable'),
-      // "iconPlaceholder": figma.instance('Icon placeholder'),
-      // "tagText": figma.string('Tag text')
     },
     example: (props) => (
       <Tag
@@ -51,10 +46,10 @@ figma.connect(
         color={props.color}
         tagStyle={props.tagStyle}
         size={props.size}
-        textValue={props.textValue}
         isDisabled={props.isDisabled}
-        hidden={props.hidden}
-      />
+      >
+        {props.children}
+      </Tag>
     ),
   }
 );

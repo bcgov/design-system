@@ -13,13 +13,21 @@ figma.connect(
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=3970%3A2221",
   {
     props: {
-      // These props were automatically mapped based on your linked code:
-      hidden: figma.boolean("Icon"),
+      label: figma.textContent("Label"),
+      description: figma.textContent("Description"),
+      errorMessage: figma.textContent("Error text"),
+      children: figma.slot("Slot"),
       // No matching props could be found for these Figma properties:
-      // "errorText": figma.boolean('Error text'),
-      // "label": figma.boolean('Label'),
       // "closeable": figma.boolean('Closeable')
     },
-    example: (props) => <TagGroup hidden={props.hidden} />,
+    example: (props) => (
+      <TagGroup
+        label={props.label}
+        description={props.description}
+        errorMessage={props.errorMessage}
+      >
+        {props.children}
+      </TagGroup>
+    ),
   }
 );
