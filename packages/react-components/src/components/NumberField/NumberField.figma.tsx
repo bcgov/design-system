@@ -18,6 +18,8 @@ figma.connect(
         Small: "small",
         Medium: "medium",
       }),
+      label: figma.string("Label text"),
+      description: figma.textContent("Description"),
       isDisabled: figma.enum("State", {
         Disabled: true,
       }),
@@ -41,6 +43,8 @@ figma.connect(
         isDisabled={props.isDisabled}
         isReadOnly={props.isReadOnly}
         hidden={props.hidden}
+        label={props.label}
+        description={props.description}
       />
     ),
   }
