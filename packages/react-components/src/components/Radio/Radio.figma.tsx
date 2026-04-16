@@ -14,22 +14,15 @@ figma.connect(
   {
     props: {
       // These props were automatically mapped based on your linked code:
+      children: figma.string("Label"),
       isDisabled: figma.enum("State", {
         Disabled: true,
       }),
-      hidden: figma.enum("State", {
-        Disabled: true,
-      }),
-      children: figma.string("Label"),
       // No matching props could be found for these Figma properties:
       // "active": figma.boolean('Active')
     },
     example: (props) => (
-      <Radio
-        value={props.children}
-        isDisabled={props.isDisabled}
-        hidden={props.hidden}
-      >
+      <Radio value={props.children} isDisabled={props.isDisabled}>
         {props.children}
       </Radio>
     ),

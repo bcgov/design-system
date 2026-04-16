@@ -18,11 +18,20 @@ figma.connect(
         Vertical: "vertical",
         Horizontal: "horizontal",
       }),
-      // No matching props could be found for these Figma properties:
-      // "errorText": figma.boolean('Error text'),
-      // "description": figma.boolean('Description'),
-      // "label": figma.boolean('Label')
+      label: figma.textContent("Label"),
+      description: figma.textContent("Description"),
+      errorMessage: figma.textContent("Error message"),
+      children: figma.slot("Slots"),
     },
-    example: (props) => <RadioGroup orientation={props.orientation} />,
+    example: (props) => (
+      <RadioGroup
+        orientation={props.orientation}
+        label={props.label}
+        description={props.description}
+        errorMessage={props.errorMessage}
+      >
+        {props.children}
+      </RadioGroup>
+    ),
   }
 );
