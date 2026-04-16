@@ -26,6 +26,7 @@ figma.connect(
         true: false,
       }),
       acknowledgement: figma.slot("Territorial acknowledgement content"),
+      children: figma.slot("Slot"),
       // No matching props could be found for these Figma properties:
       // "content": figma.boolean('Content'),
       // "type": figma.enum('Type', {
@@ -38,7 +39,9 @@ figma.connect(
         hideCopyright={props.hideCopyright}
         hideAcknowledgement={props.hideAcknowledgement}
         acknowledgement={props.acknowledgement}
-      />
+      >
+        {props.children}
+      </Footer>
     ),
   }
 );
