@@ -21,6 +21,7 @@ figma.connect(
         false: true,
         true: false,
       }),
+      isRequired: figma.nestedProps("Title", figma.boolean("Required")),
       isDisabled: figma.enum("State", {
         Disabled: true,
       }),
@@ -31,7 +32,7 @@ figma.connect(
         false: true,
         true: false,
       }),
-      label: figma.textContent("Label"),
+      label: figma.nestedProps("Title", figma.string("Label text")),
       description: figma.textContent("Description"),
       // No matching props could be found for these Figma properties:
       // "showLabel": figma.boolean('Show label'),
@@ -42,6 +43,7 @@ figma.connect(
       <DatePicker
         size={props.size}
         hideTimeZone={props.hideTimeZone}
+        isRequired={props.isRequired}
         isDisabled={props.isDisabled}
         isReadOnly={props.isReadOnly}
         label={props.label}

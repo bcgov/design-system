@@ -20,6 +20,7 @@ figma.connect(
       }),
       label: figma.string("Label text"),
       description: figma.textContent("Description"),
+      isRequired: figma.nestedProps("Label", figma.boolean("Required")),
       isDisabled: figma.enum("State", {
         Disabled: true,
       }),
@@ -40,11 +41,12 @@ figma.connect(
     example: (props) => (
       <NumberField
         size={props.size}
-        isDisabled={props.isDisabled}
-        isReadOnly={props.isReadOnly}
         hidden={props.hidden}
         label={props.label}
         description={props.description}
+        isRequired={props.isRequired}
+        isDisabled={props.isDisabled}
+        isReadOnly={props.isReadOnly}
       />
     ),
   }
