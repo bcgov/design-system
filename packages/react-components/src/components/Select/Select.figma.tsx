@@ -18,26 +18,22 @@ figma.connect(
         Small: "small",
         Medium: "medium",
       }),
+      label: figma.nestedProps("Label", figma.string("Label text")),
+      description: figma.textContent("Description text"),
+      isOpen: figma.boolean("Menu opened"),
+      isRequired: figma.nestedProps("Label", figma.boolean("Required")),
       isDisabled: figma.enum("State", {
         Disabled: true,
       }),
-      isOpen: figma.enum("State", {
-        Opened: true,
-      }),
-      hidden: figma.enum("State", {
-        Disabled: true,
-      }),
-      // No matching props could be found for these Figma properties:
-      // "menuOpened": figma.boolean('Menu opened'),
-      // "label": figma.boolean('Label'),
-      // "description": figma.boolean('Description')
     },
     example: (props) => (
       <Select
         size={props.size}
-        isDisabled={props.isDisabled}
+        label={props.label}
+        description={props.description}
         isOpen={props.isOpen}
-        hidden={props.hidden}
+        isRequired={props.isRequired}
+        isDisabled={props.isDisabled}
       />
     ),
   }
