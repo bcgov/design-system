@@ -18,34 +18,33 @@ figma.connect(
         Medium: "medium",
         Small: "small",
       }),
-      description: figma.string("Description text"),
+      label: figma.nestedProps("Label", figma.string("Label text")),
+      description: figma.nestedProps(
+        "Description",
+        figma.textContent("Description text")
+      ),
       iconLeft: figma.instance("Left icon placeholder"),
       iconRight: figma.instance("Right icon placeholder"),
+      isRequired: figma.nestedProps("Label", figma.boolean("Required")),
       isDisabled: figma.enum("State", {
-        Disabled: true,
-      }),
-      hidden: figma.enum("State", {
         Disabled: true,
       }),
       // No matching props could be found for these Figma properties:
       // "showLeftIcon": figma.boolean('Show left Icon'),
       // "showRightIcon": figma.boolean('Show right icon'),
       // "showLabel": figma.boolean('Show label'),
-      // "leftIconPlaceholder": figma.instance('Left icon placeholder'),
-      // "rightIconPlaceholder": figma.instance('Right icon placeholder'),
-      // "description": figma.boolean('Description'),
-      // "descriptionText": figma.string('Description text'),
       // "prefix": figma.boolean('Prefix'),
       // "suffix": figma.boolean('Suffix')
     },
     example: (props) => (
       <TextField
         size={props.size}
+        label={props.label}
         description={props.description}
         iconLeft={props.iconLeft}
         iconRight={props.iconRight}
+        isRequired={props.isRequired}
         isDisabled={props.isDisabled}
-        hidden={props.hidden}
       />
     ),
   }

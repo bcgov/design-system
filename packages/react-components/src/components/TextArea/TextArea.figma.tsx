@@ -13,25 +13,25 @@ figma.connect(
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=4157%3A2531",
   {
     props: {
-      // These props were automatically mapped based on your linked code:
+      label: figma.nestedProps("Label", figma.string("Label text")),
+      description: figma.nestedProps(
+        "Description",
+        figma.textContent("Description")
+      ),
+      isRequired: figma.nestedProps("Label", figma.boolean("Required")),
       isDisabled: figma.enum("State", {
-        Disabled: true,
-      }),
-      isRequired: figma.boolean("Filled"),
-      hidden: figma.enum("State", {
         Disabled: true,
       }),
       // No matching props could be found for these Figma properties:
       // "showCount": figma.boolean('Show count'),
-      // "description": figma.boolean('Description'),
-      // "label": figma.boolean('Label'),
       // "scrollable": figma.boolean('Scrollable')
     },
     example: (props) => (
       <TextArea
-        isDisabled={props.isDisabled}
+        label={props.label}
+        description={props.description}
         isRequired={props.isRequired}
-        hidden={props.hidden}
+        isDisabled={props.isDisabled}
       />
     ),
   }
