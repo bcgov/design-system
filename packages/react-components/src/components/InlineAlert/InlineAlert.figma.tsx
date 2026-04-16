@@ -13,21 +13,27 @@ figma.connect(
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=5347%3A1946",
   {
     props: {
-      // These props were automatically mapped based on your linked code:
+      variant: figma.enum("Type", {
+        Info: "info",
+        Warning: "warning",
+        Success: "success",
+        Error: "danger",
+      }),
+      title: figma.textContent("Alert title"),
       description: figma.string("Description text"),
+      isCloseable: figma.boolean("Close"),
+      isIconHidden: figma.boolean("Icon", { true: false, false: true }),
       // No matching props could be found for these Figma properties:
-      // "description": figma.boolean('Description'),
-      // "icon": figma.boolean('Icon'),
-      // "close": figma.boolean('Close'),
       // "actions": figma.boolean('Actions'),
-      // "descriptionText": figma.string('Description text'),
-      // "type": figma.enum('Type', {
-      //   "Info": "info",
-      //   "Warning": "warning",
-      //   "Success": "success",
-      //   "Error": "error"
-      // })
     },
-    example: (props) => <InlineAlert description={props.description} />,
+    example: (props) => (
+      <InlineAlert
+        variant={props.variant}
+        title={props.title}
+        description={props.description}
+        isCloseable={props.isCloseable}
+        isIconHidden={props.isIconHidden}
+      />
+    ),
   }
 );
