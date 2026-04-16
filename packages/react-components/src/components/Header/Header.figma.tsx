@@ -15,11 +15,13 @@ figma.connect(
     props: {
       // These props were automatically mapped based on your linked code:
       logoImage: figma.instance("Logo"),
+      children: figma.slot("Slot"),
       // No matching props could be found for these Figma properties:
-      // "logo": figma.instance('Logo'),
       // "showTitle": figma.boolean('Show title'),
       // "hasSubheader": figma.boolean('Has subheader')
     },
-    example: (props) => <Header logoImage={props.logoImage} />,
+    example: (props) => (
+      <Header logoImage={props.logoImage}>{props.children}</Header>
+    ),
   }
 );
