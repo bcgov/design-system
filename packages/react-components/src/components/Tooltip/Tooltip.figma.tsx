@@ -20,7 +20,10 @@ figma.connect(
         "↑ Up": "top",
         "↓ Down": "bottom",
       }),
+      children: figma.textContent("Text"),
     },
-    example: (props) => <Tooltip placement={props.placement} />,
+    example: (props) => (
+      <Tooltip placement={props.placement}>{props.children}</Tooltip>
+    ),
   }
 );
