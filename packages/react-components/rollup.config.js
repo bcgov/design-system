@@ -28,7 +28,7 @@ export default [
       commonjs(),
       typescript({
         tsconfig: "./tsconfig.build.json",
-        include: ["src/index.ts", "src/components/**/*", "src/**/*.d.ts"],
+        include: ["src/index.ts", "src/components/**/*"],
       }),
       postcss(),
     ],
