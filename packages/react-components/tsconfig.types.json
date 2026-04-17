@@ -4,7 +4,6 @@
     "emitDeclarationOnly": true,
     "declaration": true,
     "noEmit": false,
-    "rootDir": "./src",
     "outDir": "dist/types",
     "declarationDir": "dist/types",
     "types": ["react", "react-dom"]
