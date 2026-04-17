@@ -22,11 +22,16 @@ figma.connect(
         Horizontal: "horizontal",
         Vertical: "vertical",
       }),
+      label: figma.nestedProps("Label", figma.string("Label text")),
       // No matching props could be found for these Figma properties:
-      // "label": figma.boolean('Label')
+      // "errorMessage": figma.textContent('Error text'),
     },
     example: (props) => (
-      <ToggleButtonGroup size={props.size} orientation={props.orientation} />
+      <ToggleButtonGroup
+        size={props.size}
+        orientation={props.orientation}
+        label={props.label}
+      />
     ),
   }
 );

@@ -20,11 +20,7 @@ figma.connect(
       }),
       isIconButton: figma.boolean("Icon button?"),
       isSelected: figma.boolean("Selected"),
-      defaultSelected: figma.boolean("Selected"),
       isDisabled: figma.enum("State", {
-        Disabled: true,
-      }),
-      hidden: figma.enum("State", {
         Disabled: true,
       }),
       // No matching props could be found for these Figma properties:
@@ -39,9 +35,7 @@ figma.connect(
         size={props.size}
         isIconButton={props.isIconButton}
         isSelected={props.isSelected}
-        defaultSelected={props.defaultSelected}
         isDisabled={props.isDisabled}
-        hidden={props.hidden}
       />
     ),
   }
