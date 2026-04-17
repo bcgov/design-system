@@ -23,6 +23,7 @@ figma.connect(
         "Description",
         figma.textContent("Description text")
       ),
+      errorMessage: figma.textContent("Error text"),
       iconLeft: figma.instance("Left icon placeholder"),
       iconRight: figma.instance("Right icon placeholder"),
       isRequired: figma.nestedProps("Label", figma.boolean("Required")),
@@ -45,6 +46,7 @@ figma.connect(
         iconRight={props.iconRight}
         isRequired={props.isRequired}
         isDisabled={props.isDisabled}
+        errorMessage={props.errorMessage}
       />
     ),
   }

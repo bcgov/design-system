@@ -18,6 +18,7 @@ figma.connect(
         "Description",
         figma.textContent("Description")
       ),
+      errorMessage: figma.textContent("Error text"),
       isRequired: figma.nestedProps("Label", figma.boolean("Required")),
       isDisabled: figma.enum("State", {
         Disabled: true,
@@ -32,6 +33,7 @@ figma.connect(
         description={props.description}
         isRequired={props.isRequired}
         isDisabled={props.isDisabled}
+        errorMessage={props.errorMessage}
       />
     ),
   }
