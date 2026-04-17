@@ -14,6 +14,6 @@ figma.connect(
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=6433%3A2024",
   {
     props: {},
-    example: (props) => <Modal />,
+    example: (props) => <Modal {...props} />,
   }
 );
