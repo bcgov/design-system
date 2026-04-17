@@ -18,24 +18,40 @@ figma.connect(
         Medium: "medium",
         Small: "small",
       }),
-      hideTimeZone: figma.boolean("Timezone"),
+      hideTimeZone: figma.boolean("Timezone", {
+        false: true,
+        true: false,
+      }),
+      hourCycle: figma.enum("Hour Cycle", {
+        "12-hour": 12,
+        "24-hour": 24,
+      }),
+      granularity: figma.enum("Granularity", {
+        Hour: "hour",
+        Minute: "minute",
+        Second: "second",
+      }),
+      label: figma.nestedProps("Label", figma.string("Label text")),
+      description: figma.textContent("Description"),
+      isRequired: figma.nestedProps("Label", figma.boolean("Required")),
       isDisabled: figma.enum("State", {
         Disabled: true,
       }),
-      hidden: figma.enum("State", {
-        Disabled: true,
-      }),
+      errorMessage: figma.textContent("Error text"),
       // No matching props could be found for these Figma properties:
       // "showLabel": figma.boolean('Show label'),
-      // "description": figma.boolean('Description'),
-      // "timezone": figma.boolean('Timezone')
     },
     example: (props) => (
       <TimeField
         size={props.size}
+        label={props.label}
+        description={props.description}
+        granularity={props.granularity}
+        hourCycle={props.hourCycle}
         hideTimeZone={props.hideTimeZone}
+        isRequired={props.isRequired}
         isDisabled={props.isDisabled}
-        hidden={props.hidden}
+        errorMessage={props.errorMessage}
       />
     ),
   }
