@@ -123,6 +123,8 @@ This project follows semantic versioning. See [CHANGELOG.md](./CHANGELOG.md) for
 
 Components live in `./src/components` and are targeted by the build process with an export in `./src/index.ts`.
 
+The `*.figma.tsx` files alongside each component are used to map component props to their counterpart properties in Figma via [Code Connect](https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect).
+
 #### Testing components with Vitest
 
 Unit tests can be run with Vitest using `npm run test`. Use `npm run test:watch` to run Vitest in watch mode.
