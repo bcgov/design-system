@@ -53,6 +53,7 @@
     "react-dom": "^16.14.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
+    "@figma/code-connect": "1.4.3",
     "@eslint/js": "10.0.1",
     "@react-stately/data": "3.15.0",
     "@rollup/plugin-commonjs": "29.0.0",
@@ -95,6 +96,11 @@
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "*"
+  },
+  "overrides": {
+    "eslint-plugin-react-hooks": {
+      "zod-validation-error": "^4.0.0"
+    }
   },
   "author": "Tyler Krys <Tyler.Krys@gov.bc.ca>",
   "license": "Apache-2.0",
