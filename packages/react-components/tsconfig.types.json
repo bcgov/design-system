@@ -6,7 +6,7 @@
     "noEmit": false,
     "outDir": "dist/types",
     "declarationDir": "dist/types",
-    "types": ["react", "react-dom", "@figma/code-connect/figma-types"]
+    "types": ["react", "react-dom"]
   },
   "include": ["src"]
 }
