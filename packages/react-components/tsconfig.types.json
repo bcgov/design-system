@@ -6,7 +6,8 @@
     "noEmit": false,
     "outDir": "dist/types",
     "declarationDir": "dist/types",
-    "types": ["react", "react-dom"]
+    "types": ["react", "react-dom"],
+    "rootDir": "./src"
   },
   "include": ["src"]
 }
