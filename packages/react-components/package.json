@@ -72,8 +72,8 @@
     "@typescript-eslint/eslint-plugin": "8.58.2",
     "@typescript-eslint/parser": "8.58.2",
     "@vitejs/plugin-react": "6.0.1",
-    "@vitest/browser-playwright": "4.0.14",
-    "@vitest/coverage-v8": "4.0.14",
+    "@vitest/browser-playwright": "4.1.4",
+    "@vitest/coverage-v8": "4.1.4",
     "axe-playwright": "2.2.2",
     "eslint": "10.2.1",
     "eslint-plugin-react-hooks": "7.1.1",
@@ -92,7 +92,7 @@
     "typescript": "5.9.3",
     "typescript-eslint": "8.58.2",
     "vite": "8.0.9",
-    "vitest": "4.0.14"
+    "vitest": "4.1.4"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "*"
