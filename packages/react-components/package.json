@@ -97,11 +97,6 @@
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "*"
   },
-  "overrides": {
-    "eslint-plugin-react-hooks": {
-      "zod-validation-error": "^4.0.0"
-    }
-  },
   "author": "Tyler Krys <Tyler.Krys@gov.bc.ca>",
   "license": "Apache-2.0",
   "bugs": {
