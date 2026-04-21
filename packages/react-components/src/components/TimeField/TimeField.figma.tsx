@@ -12,6 +12,9 @@ figma.connect(
   TimeField,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=19285%3A4805",
   {
+    imports: [
+      "import { TimeField } from '@bcgov/design-system-react-components'",
+    ],
     props: {
       // These props were automatically mapped based on your linked code:
       size: figma.enum("Size", {

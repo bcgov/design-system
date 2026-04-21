@@ -12,6 +12,9 @@ figma.connect(
   Checkbox,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=6009%3A878",
   {
+    imports: [
+      "import { Checkbox } from '@bcgov/design-system-react-components'",
+    ],
     props: {
       // These props were automatically mapped based on your linked code:
       isSelected: figma.enum("State", {

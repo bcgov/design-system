@@ -12,6 +12,9 @@ figma.connect(
   TagGroup,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=3970%3A2221",
   {
+    imports: [
+      "import { TagGroup, TagList, Tag } from '@bcgov/design-system-react-components'",
+    ],
     props: {
       label: figma.textContent("Label"),
       description: figma.textContent("Description"),

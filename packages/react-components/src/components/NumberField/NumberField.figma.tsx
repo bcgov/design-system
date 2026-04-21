@@ -12,6 +12,9 @@ figma.connect(
   NumberField,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=14421%3A4311",
   {
+    imports: [
+      "import { NumberField } from '@bcgov/design-system-react-components'",
+    ],
     props: {
       // These props were automatically mapped based on your linked code:
       size: figma.enum("Size", {

@@ -12,6 +12,7 @@ figma.connect(
   Footer,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=3982%3A10968",
   {
+    imports: ["import { Footer } from '@bcgov/design-system-react-components'"],
     props: {
       hideAcknowledgement: figma.boolean("Land acknowledgement", {
         false: true,

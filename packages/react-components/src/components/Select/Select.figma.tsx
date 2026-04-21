@@ -12,6 +12,7 @@ figma.connect(
   Select,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=3572%3A4229",
   {
+    imports: ["import { Select } from '@bcgov/design-system-react-components'"],
     props: {
       // These props were automatically mapped based on your linked code:
       size: figma.enum("Size", {

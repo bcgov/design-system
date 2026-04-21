@@ -12,6 +12,9 @@ figma.connect(
   ToggleButtonGroup,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=14991%3A13581",
   {
+    imports: [
+      "import { ToggleButtonGroup, ToggleButton } from '@bcgov/design-system-react-components'",
+    ],
     props: {
       // These props were automatically mapped based on your linked code:
       size: figma.enum("Size", {

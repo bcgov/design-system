@@ -12,6 +12,9 @@ figma.connect(
   TextField,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=3649%3A14334",
   {
+    imports: [
+      "import { TextField } from '@bcgov/design-system-react-components'",
+    ],
     props: {
       // These props were automatically mapped based on your linked code:
       size: figma.enum("Size", {

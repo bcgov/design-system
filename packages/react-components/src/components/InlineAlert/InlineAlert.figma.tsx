@@ -12,6 +12,9 @@ figma.connect(
   InlineAlert,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=5347%3A1946",
   {
+    imports: [
+      "import { InlineAlert } from '@bcgov/design-system-react-components'",
+    ],
     props: {
       variant: figma.enum("Type", {
         Info: "info",

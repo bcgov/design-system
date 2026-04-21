@@ -12,6 +12,7 @@ figma.connect(
   Tag,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=3426%3A4647",
   {
+    imports: ["import { Tag } from '@bcgov/design-system-react-components'"],
     props: {
       // These props were automatically mapped based on your linked code:
       icon: figma.instance("Icon placeholder"),

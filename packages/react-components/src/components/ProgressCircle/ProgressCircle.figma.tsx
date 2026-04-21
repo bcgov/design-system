@@ -12,6 +12,9 @@ figma.connect(
   ProgressCircle,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=16696%3A837",
   {
+    imports: [
+      "import { ProgressCircle } from '@bcgov/design-system-react-components'",
+    ],
     props: {
       // These props were automatically mapped based on your linked code:
       size: figma.enum("Track Size", {

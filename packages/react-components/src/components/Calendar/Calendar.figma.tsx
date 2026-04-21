@@ -13,6 +13,9 @@ figma.connect(
   Calendar,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=15871%3A6832",
   {
+    imports: [
+      "import { Calendar } from '@bcgov/design-system-react-components'",
+    ],
     props: {
       // No matching props could be found for these Figma properties:
       visibleDuration: figma.enum("Visible months", {

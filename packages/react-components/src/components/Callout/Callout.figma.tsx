@@ -13,6 +13,9 @@ figma.connect(
   Callout,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=7782%3A3976",
   {
+    imports: [
+      "import { Callout } from '@bcgov/design-system-react-components'",
+    ],
     props: {
       variant: figma.enum("Color", {
         "Light gray": "lightGrey",

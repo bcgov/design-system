@@ -12,6 +12,9 @@ figma.connect(
   DatePicker,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=15865%3A4285",
   {
+    imports: [
+      "import { DatePicker } from '@bcgov/design-system-react-components'",
+    ],
     props: {
       size: figma.enum("Size", {
         Small: "small",

@@ -12,6 +12,9 @@ figma.connect(
   ProgressBar,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=16649%3A4759",
   {
+    imports: [
+      "import { ProgressBar } from '@bcgov/design-system-react-components'",
+    ],
     props: {
       // These props were automatically mapped based on your linked code:
       size: figma.enum("Track Size", {

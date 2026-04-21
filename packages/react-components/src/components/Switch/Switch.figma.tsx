@@ -12,6 +12,7 @@ figma.connect(
   Switch,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=5146%3A248",
   {
+    imports: ["import { Switch } from '@bcgov/design-system-react-components'"],
     props: {
       isSelected: figma.boolean("Active"),
       isDisabled: figma.enum("State", {

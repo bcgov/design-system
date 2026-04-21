@@ -12,6 +12,9 @@ figma.connect(
   TextArea,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=4157%3A2531",
   {
+    imports: [
+      "import { TextArea } from '@bcgov/design-system-react-components'",
+    ],
     props: {
       label: figma.nestedProps("Label", figma.string("Label text")),
       description: figma.nestedProps(

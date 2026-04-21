@@ -12,6 +12,7 @@ figma.connect(
   Header,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=4017%3A17444",
   {
+    imports: ["import { Header } from '@bcgov/design-system-react-components'"],
     props: {
       // These props were automatically mapped based on your linked code:
       logoImage: figma.instance("Logo"),
