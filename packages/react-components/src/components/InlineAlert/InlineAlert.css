@@ -80,7 +80,7 @@
 
 /* Success variant */
 .bcds-Inline-Alert.success {
-  background-color: var(--suport-surface-color-success);
+  background-color: var(--support-surface-color-success);
   border: var(--layout-border-width-small) solid
     var(--support-border-color-success);
   border-radius: var(--layout-border-radius-medium);
