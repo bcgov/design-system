@@ -1,3 +1,4 @@
+// This file is used to map component props to Figma properties via Code Connect
 import Callout from "./Callout";
 import figma from "@figma/code-connect";
 

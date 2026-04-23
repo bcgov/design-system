@@ -1,3 +1,4 @@
+// This file is used to map component props to Figma properties via Code Connect
 import TimeField from "./TimeField";
 import figma from "@figma/code-connect";
 

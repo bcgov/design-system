@@ -1,3 +1,4 @@
+// This file is used to map component props to Figma properties via Code Connect
 import Tooltip from "./Tooltip";
 import figma from "@figma/code-connect";
 
