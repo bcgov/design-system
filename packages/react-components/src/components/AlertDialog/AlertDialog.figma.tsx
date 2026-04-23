@@ -6,7 +6,7 @@ figma.connect(
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=6433%3A1885",
   {
     imports: [
-      "import { AlertDialog, Button, DialogTrigger, Modal } from '@bcgov/design-system-react-components'",
+      "import { AlertDialog } from '@bcgov/design-system-react-components';",
     ],
     props: {
       variant: figma.enum("Type", {
@@ -16,11 +16,16 @@ figma.connect(
         Error: "error",
         Destructive: "destructive",
       }),
-      title: figma.textContent("Title"),
-      children: figma.textContent("Text"),
+      title: figma.string("Title"),
+      children: figma.string("Text"),
+      buttons: figma.slot("Slot"),
     },
     example: (props) => (
-      <AlertDialog variant={props.variant} title={props.title}>
+      <AlertDialog
+        variant={props.variant}
+        title={props.title}
+        buttons={props.buttons}
+      >
         {props.children}
       </AlertDialog>
     ),

@@ -13,7 +13,7 @@ figma.connect(
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=5347%3A1946",
   {
     imports: [
-      "import { InlineAlert } from '@bcgov/design-system-react-components'",
+      "import { InlineAlert } from '@bcgov/design-system-react-components';",
     ],
     props: {
       variant: figma.enum("Type", {
@@ -22,7 +22,7 @@ figma.connect(
         Success: "success",
         Error: "danger",
       }),
-      title: figma.textContent("Alert title"),
+      title: figma.textContent("Alert Title"),
       description: figma.string("Description text"),
       isCloseable: figma.boolean("Close"),
       isIconHidden: figma.boolean("Icon", { true: false, false: true }),
