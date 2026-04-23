@@ -1,3 +1,4 @@
+// This file is used to map component props to Figma properties via Code Connect
 import Button from "./Button";
 import figma from "@figma/code-connect";
 
@@ -12,6 +13,7 @@ figma.connect(
   Button,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=14242%3A1245",
   {
+    imports: ["import { Button } from '@bcgov/design-system-react-components'"],
     props: {
       size: figma.enum("Size", {
         Xsmall: "xsmall",

@@ -1,3 +1,4 @@
+// This file is used to map component props to Figma properties via Code Connect
 import Modal from "./Modal";
 import figma from "@figma/code-connect";
 
@@ -13,6 +14,7 @@ figma.connect(
   Modal,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=6433%3A2024",
   {
+    imports: ["import { Modal } from '@bcgov/design-system-react-components';"],
     props: {},
     example: (props) => <Modal {...props} />,
   }

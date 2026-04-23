@@ -1,3 +1,4 @@
+// This file is used to map component props to Figma properties via Code Connect
 import InlineAlert from "./InlineAlert";
 import figma from "@figma/code-connect";
 
@@ -12,6 +13,9 @@ figma.connect(
   InlineAlert,
   "https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=5347%3A1946",
   {
+    imports: [
+      "import { InlineAlert } from '@bcgov/design-system-react-components';",
+    ],
     props: {
       variant: figma.enum("Type", {
         Info: "info",
@@ -19,7 +23,7 @@ figma.connect(
         Success: "success",
         Error: "danger",
       }),
-      title: figma.textContent("Alert title"),
+      title: figma.textContent("Alert Title"),
       description: figma.string("Description text"),
       isCloseable: figma.boolean("Close"),
       isIconHidden: figma.boolean("Icon", { true: false, false: true }),
