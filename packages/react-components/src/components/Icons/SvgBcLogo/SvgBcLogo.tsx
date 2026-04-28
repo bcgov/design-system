@@ -1,9 +1,33 @@
 // This logo is available as a plain SVG at src/assets/BCID_H_rgb_pos.svg
+import { SVGProps } from "react";
 import "./SvgBcLogo.css";
 
-export default function SvgBcLogo({ id = "bcgov-logo" }) {
+interface SvgBcLogoProps extends SVGProps<SVGSVGElement> {
+  /* Accessible title for icon, aria-hidden set if not provided */
+  title?: string;
+}
+
+export default function SvgBcLogo({
+  id = "bcgov-logo",
+  title,
+  role = "img",
+  "aria-label": ariaLabel,
+  "aria-labelledby": ariaLabelledBy,
+  ...props
+}: SvgBcLogoProps) {
   return (
-    <svg id={id} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 847.65 327.01">
+    <svg
+      id={id}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 847.65 327.01"
+      aria-label={ariaLabel}
+      aria-labelledby={ariaLabelledBy}
+      aria-hidden={title || ariaLabel || ariaLabelledBy ? undefined : "true"}
+      role={role}
+      focusable="false"
+      {...props}
+    >
+      {title && <title>{title}</title>}
       <path
         d="M109.59,226.32c44.7,0,106.54,25.17,151.41,25.17,32.02,0,63.26-8.54,81.04-21.13,1.24-7.39,1.9-14.97,1.9-22.72,0-75.13-60.91-136.04-136.04-136.04s-136.04,60.91-136.04,136.04c0,7.65.64,15.15,1.86,22.46,4.9-.91,21.57-3.79,35.87-3.79Z"
         className="bcds-bc-logo--whiteFill"
