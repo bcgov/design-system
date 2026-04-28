@@ -2,40 +2,30 @@
 // source=https://github.com/bcgov/design-system/blob/main/packages/react-components/src/components/ToggleButtonGroup/ToggleButtonGroup.tsx
 // component=ToggleButtonGroup
 
-import figma from "figma"
+import figma from "figma";
 
 const size = figma.selectedInstance.getEnum("Size", {
   Small: "small",
   Medium: "medium",
-})
+});
 const orientation = figma.selectedInstance.getEnum("Orientation", {
   Horizontal: "horizontal",
   Vertical: "vertical",
-})
-const label = (function () {
-  const nestedLayer0 = figma.selectedInstance.findInstance("Label")
-  return {
-    text:
-      nestedLayer0.type !== "ERROR"
-        ? nestedLayer0.getString("Label text")
-        : undefined,
-  }
-})()
-const children = figma.properties.children(["Toggle button*"])
+});
+const labelInstance = figma.selectedInstance.findInstance("Label");
+const label =
+  labelInstance.type !== "ERROR"
+    ? labelInstance.getString("Label text")
+    : undefined;
+const children = figma.properties.children(["Toggle button*"]);
+
+const { renderProp, renderChildren } = figma.helpers.react;
 
 export default {
   id: "ToggleButtonGroup",
   imports: [
     "import { ToggleButtonGroup, ToggleButton } from '@bcgov/design-system-react-components';",
   ],
-  example: figma.code`<ToggleButtonGroup${figma.helpers.react.renderProp(
-    "size",
-    size,
-  )}${figma.helpers.react.renderProp(
-    "orientation",
-    orientation,
-  )}${figma.helpers.react.renderProp("label", label.text)}>
-        ${figma.helpers.react.renderChildren(children)}
-      </ToggleButtonGroup>`,
+  example: figma.code`<ToggleButtonGroup${renderProp("size", size)}${renderProp("orientation", orientation)}${renderProp("label", label)}>${renderChildren(children)}</ToggleButtonGroup>`,
   metadata: { nestable: true },
-}
+};

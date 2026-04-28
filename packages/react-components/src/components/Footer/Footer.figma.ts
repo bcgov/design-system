@@ -2,42 +2,30 @@
 // source=https://github.com/bcgov/design-system/blob/main/packages/react-components/src/components/Footer/Footer.tsx
 // component=Footer
 
-import figma from "figma"
+import figma from "figma";
 
 const hideAcknowledgement = figma.selectedInstance.getBoolean(
   "Land acknowledgement",
-  {
-    false: true,
-    true: false,
-  },
-)
+  { false: true, true: false }
+);
 const hideLogoAndLinks = figma.selectedInstance.getBoolean("Content", {
   false: true,
   true: false,
-})
+});
 const hideCopyright = figma.selectedInstance.getBoolean("Copyright", {
   false: true,
   true: false,
-})
-const acknowledgement = figma.properties.slot(
-  "Territorial acknowledgement content",
-)
-const children = figma.properties.slot("Slot")
+});
+const acknowledgement = figma.selectedInstance.getSlot(
+  "Territorial acknowledgement content"
+);
+const children = figma.selectedInstance.getSlot("Slot");
+
+const { renderProp, renderChildren } = figma.helpers.react;
 
 export default {
   id: "Footer",
   imports: ["import { Footer } from '@bcgov/design-system-react-components';"],
-  example: figma.code`<Footer${figma.helpers.react.renderProp(
-    "hideLogoAndLinks",
-    hideLogoAndLinks,
-  )}${figma.helpers.react.renderProp(
-    "hideCopyright",
-    hideCopyright,
-  )}${figma.helpers.react.renderProp(
-    "hideAcknowledgement",
-    hideAcknowledgement,
-  )}${figma.helpers.react.renderProp("acknowledgement", acknowledgement)}>
-        ${figma.helpers.react.renderChildren(children)}
-      </Footer>`,
+  example: figma.code`<Footer${renderProp("hideLogoAndLinks", hideLogoAndLinks)}${renderProp("hideCopyright", hideCopyright)}${renderProp("hideAcknowledgement", hideAcknowledgement)}${renderProp("acknowledgement", acknowledgement)}>${renderChildren(children)}</Footer>`,
   metadata: { nestable: true },
-}
+};

@@ -2,7 +2,7 @@
 // source=https://github.com/bcgov/design-system/blob/main/packages/react-components/src/components/Callout/Callout.tsx
 // component=Callout
 
-import figma from "figma"
+import figma from "figma";
 
 const variant = figma.selectedInstance.getEnum("Color", {
   "Light gray": "lightGrey",
@@ -11,29 +11,45 @@ const variant = figma.selectedInstance.getEnum("Color", {
   Black: "Black",
   Gray: "Grey",
   Blue: "Blue",
-})
+});
 const isLeftBorderDisabled = figma.selectedInstance.getBoolean("Stroke", {
   false: true,
   true: false,
-})
-const title = figma.selectedInstance.findText("Heading text").textContent
-const description = figma.selectedInstance.findText("Body text").textContent
+});
+const headingText = figma.selectedInstance.findText("Heading text");
+const title =
+  "textContent" in headingText ? headingText.textContent : undefined;
+const bodyText = figma.selectedInstance.findText("Body text");
+const description =
+  "textContent" in bodyText ? bodyText.textContent : undefined;
+
+const showActions = figma.selectedInstance.getBoolean("Actions");
+const showPrimary = figma.selectedInstance.getBoolean("Primary");
+const showSecondary = figma.selectedInstance.getBoolean("Secondary");
+
+const primaryBtn =
+  figma.code`<Button variant="primary" size="small">Primary action</Button>`
+    .sections;
+const secondaryBtn =
+  figma.code`<Button variant="secondary" size="small">Secondary action</Button>`
+    .sections;
+const buttons = showActions
+  ? showPrimary && showSecondary
+    ? figma.code`[${primaryBtn}, ${secondaryBtn}]`.sections
+    : showPrimary
+      ? figma.code`[${primaryBtn}]`.sections
+      : showSecondary
+        ? figma.code`[${secondaryBtn}]`.sections
+        : undefined
+  : undefined;
+
+const { renderProp } = figma.helpers.react;
 
 export default {
   id: "Callout",
-  imports: ["import { Callout } from '@bcgov/design-system-react-components';"],
-  example: figma.code`<Callout${figma.helpers.react.renderProp(
-    "variant",
-    variant,
-  )}${figma.helpers.react.renderProp(
-    "title",
-    title,
-  )}${figma.helpers.react.renderProp(
-    "description",
-    description,
-  )}${figma.helpers.react.renderProp(
-    "isLeftBorderDisabled",
-    isLeftBorderDisabled,
-  )}/>`,
+  imports: [
+    "import { Callout, Button } from '@bcgov/design-system-react-components';",
+  ],
+  example: figma.code`<Callout${renderProp("variant", variant)}${renderProp("title", title)}${renderProp("description", description)}${renderProp("isLeftBorderDisabled", isLeftBorderDisabled)}${renderProp("buttons", buttons)}/>`,
   metadata: { nestable: true },
-}
+};

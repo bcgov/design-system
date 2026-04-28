@@ -2,19 +2,18 @@
 // source=https://github.com/bcgov/design-system/blob/main/packages/react-components/src/components/Header/Header.tsx
 // component=Header
 
-import figma from "figma"
+import figma from "figma";
 
 const logoImage = figma.selectedInstance
   .getInstanceSwap("Logo")
-  ?.executeTemplate().example
-const children = figma.properties.children(["Header content"])
+  ?.executeTemplate().example;
+const children = figma.properties.children(["Header content"]);
+
+const { renderProp, renderChildren } = figma.helpers.react;
 
 export default {
   id: "Header",
   imports: ["import { Header } from '@bcgov/design-system-react-components';"],
-  example: figma.code`<Header${figma.helpers.react.renderProp(
-    "logoImage",
-    logoImage,
-  )}>${figma.helpers.react.renderChildren(children)}</Header>`,
+  example: figma.code`<Header${renderProp("logoImage", logoImage)}>${renderChildren(children)}</Header>`,
   metadata: { nestable: true },
-}
+};
