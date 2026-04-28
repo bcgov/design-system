@@ -1,0 +1,42 @@
+.bcds-react-aria-Menu {
+  display: flex;
+  flex-direction: column;
+  padding: var(--layout-padding-none);
+}
+
+/* Sizing */
+.bcds-react-aria-Menu.small {
+  font-size: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-Menu.medium {
+  font-size: var(--typography-regular-body);
+}
+
+/* Sections */
+.bcds-react-aria-Menu .react-aria-Header {
+  padding: var(--layout-padding-small);
+  font: var(--typography-bold-small-body);
+}
+.bcds-react-aria-Menu .react-aria-MenuSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-small);
+}
+
+/* States */
+.bcds-react-aria-Menu[data-focused] {
+  outline: none;
+}
+
+/* Popover */
+.bcds-react-aria-Popover {
+  background-color: var(--surface-color-forms-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  box-shadow: var(--surface-shadow-medium);
+  box-sizing: border-box;
+  padding: var(--layout-padding-xsmall) var(--layout-padding-xsmall);
+  min-width: var(--trigger-width);
+}
