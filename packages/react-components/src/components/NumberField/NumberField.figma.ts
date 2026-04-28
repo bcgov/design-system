@@ -21,7 +21,9 @@ const isRequired =
     : undefined;
 const descriptionHandle = figma.selectedInstance.findText("Description");
 const description =
-  descriptionHandle.type !== "ERROR" ? descriptionHandle.textContent : undefined;
+  descriptionHandle.type !== "ERROR"
+    ? descriptionHandle.textContent
+    : undefined;
 
 const isDisabled = figma.selectedInstance.getEnum("State", { Disabled: true });
 const isReadOnly = figma.selectedInstance.getEnum("State", {

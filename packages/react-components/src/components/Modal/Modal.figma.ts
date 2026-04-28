@@ -2,10 +2,10 @@
 // source=https://github.com/bcgov/design-system/blob/main/packages/react-components/src/components/Modal/Modal.tsx
 // component=Modal
 
-import figma from "figma"
+import figma from "figma";
 
 export default {
   id: "Modal",
   imports: ["import { Modal } from '@bcgov/design-system-react-components';"],
   example: figma.code`<Modal />`,
-}
+};
