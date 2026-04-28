@@ -1,0 +1,100 @@
+{/* MenuItem.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
+import * as MenuItemStories from "./MenuItem.stories";
+
+<Meta of={MenuItemStories} />
+
+# Menu Item
+
+<Subtitle>
+  A MenuItem represents a single item within a
+  [Menu](/docs/navigation-and-structure-menu--docs).
+</Subtitle>
+
+<InlineAlert
+  variant="info"
+  customIcon={[<SvgReactAriaIcon />]}
+  title="This is a React Aria component"
+  description="It is based on the RA MenuItem component, its subcomponents and the Collections API. Consult the React Aria docs to understand its full API."
+  buttons={[
+    <Link
+      isButton
+      size="small"
+      buttonVariant="secondary"
+      href="https://react-aria.adobe.com/Menu#menuitem"
+      target="_blank"
+      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+    >
+      MenuItem docs
+    </Link>,
+  ]}
+/>
+
+## Usage and resources
+
+<Source
+  code={`import { Menu, MenuItem, MenuTrigger } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+MenuItem is a subcomponent used within a [Menu](/docs/navigation-and-structure-menu--docs) to represent a single item:
+
+```javascript
+import {
+  Button,
+  Menu,
+  MenuItem,
+  MenuTrigger,
+} from "@bcgov/design-system-react-components";
+
+function App() {
+  return (
+    <MenuTrigger>
+      <Button>This button activates the menu</Button>
+      <Menu>
+        <MenuItem />
+        <MenuItem />
+      </Menu>
+    </MenuTrigger>
+  );
+}
+```
+
+MenuItems are also generated dynamically by a Menu when the `items` or `sections` props are used.
+
+## Controls
+
+<Canvas of={MenuItemStories.MenuItemTemplate} />
+<Controls of={MenuItemStories.MenuItemTemplate} />
+
+## Configuration
+
+Configure a menu item's content using the `label`, `description` and `iconLeft` slots, or compose your own content via the generic `children` slot. Each menu item should also have a unique `id`.
+
+The `size` prop lets you toggle a menu item between `medium` (default) and `small` sizes. `size` can also be set on the parent `<Menu>` to apply it uniformly across all items.
+
+<Canvas of={MenuItemStories.SmallMenuItem} />
+
+Set an `href` to make a menu item a link. You can use `target`, `hrefLang` and `download` to customise link behaviour:
+
+<Canvas of={MenuItemStories.LinkedMenuItem} />
+
+Set `isDisabled` to disable a menu item:
+
+<Canvas of={MenuItemStories.DisabledMenuItem} />

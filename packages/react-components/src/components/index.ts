@@ -18,6 +18,14 @@ export { default as Header } from "./Header";
 export { default as Heading } from "./Heading";
 export { default as InlineAlert } from "./InlineAlert";
 export { default as Link } from "./Link";
+export {
+  default as Menu,
+  MenuTrigger,
+  SubmenuTrigger,
+  MenuSection,
+  MenuSectionHeader,
+} from "./Menu";
+export { default as MenuItem } from "./MenuItem";
 export { default as Modal } from "./Modal";
 export { default as ProgressBar } from "./ProgressBar";
 export { default as ProgressCircle } from "./ProgressCircle";
