@@ -5,10 +5,12 @@ import "./Navbar.css";
 
 export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
   size?: "small" | "medium";
+  orientation?: "horizontal" | "vertical";
 }
 
 export default function Navbar({
   size = "medium",
+  orientation = "horizontal",
   children,
   ...props
 }: NavbarProps) {
@@ -23,7 +25,9 @@ export default function Navbar({
       ...(index < childrenArray.length - 1
         ? [
             <Separator
-              orientation="vertical"
+              orientation={
+                orientation === "horizontal" ? "vertical" : "horizontal"
+              }
               size="small"
               key={`sep-${index}`}
             />,
@@ -34,7 +38,10 @@ export default function Navbar({
 
   return (
     <div className="bcds-react-aria-Navbar">
-      <nav className={`bcds-react-aria-Navbar--Container ${size}`} {...props}>
+      <nav
+        className={`bcds-react-aria-Navbar--Container ${size} ${orientation}`}
+        {...props}
+      >
         {childrenToRender}
       </nav>
     </div>
