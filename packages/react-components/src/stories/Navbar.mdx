@@ -1,0 +1,48 @@
+{/* Navbar.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
+import * as NavbarStories from "./Navbar.stories";
+import * as HeaderStories from "./Header.stories";
+
+<Meta of={NavbarStories} />
+
+# Navbar
+
+<Subtitle>
+  A menu enables the user to select from a list of actions, options or links in
+  a dropdown.
+</Subtitle>
+
+## Usage and resources
+
+<Source
+  code={`import { Navbar} from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+Learn more about working with the Navbar component:
+
+- [Usage and best practice guidance](#)
+- [View the select component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+## Controls
+
+<Canvas of={NavbarStories.NavbarTemplate} />
+<Controls of={NavbarStories.NavbarTemplate} />
+
+## Configuration
