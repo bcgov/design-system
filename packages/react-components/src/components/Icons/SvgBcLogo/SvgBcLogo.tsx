@@ -17,9 +17,9 @@ export default function SvgBcLogo({
 }: SvgBcLogoProps) {
   return (
     <svg
-      id={id}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 847.65 327.01"
+      id={id}
       aria-label={ariaLabel}
       aria-labelledby={ariaLabelledBy}
       aria-hidden={title || ariaLabel || ariaLabelledBy ? undefined : "true"}
