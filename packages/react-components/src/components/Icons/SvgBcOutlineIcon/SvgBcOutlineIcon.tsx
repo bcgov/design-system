@@ -1,25 +1,29 @@
 import { SVGProps } from "react";
+import { IconSize, useIconSize } from "../../../hooks/useIconSize";
 
 interface SvgBcOutlineIconProps extends SVGProps<SVGSVGElement> {
   /* Accessible title for icon, aria-hidden set if not provided */
   title?: string;
-  /** Width and height of the placeholder icon, defaults to 20 */
-  size?: number;
+  /** Width and height of the placeholder icon, defaults to medium (20px) */
+  size?: IconSize;
 }
 
 export default function SvgBcOutlineIcon({
   title,
   id,
+  size = "medium",
   role = "img",
   "aria-label": ariaLabel,
   "aria-labelledby": ariaLabelledBy,
   ...props
 }: SvgBcOutlineIconProps) {
+  const iconSize = useIconSize(size);
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
+      width={iconSize}
+      height={iconSize}
       viewBox="0 0 18 18"
       id={id}
       aria-label={ariaLabel}

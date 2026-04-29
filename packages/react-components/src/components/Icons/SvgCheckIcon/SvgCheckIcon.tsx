@@ -1,23 +1,29 @@
 /* This component implements the Check icon from Font Awesome: https://fontawesome.com/icons/check */
 import { SVGProps } from "react";
+import { IconSize, useIconSize } from "../../../hooks/useIconSize";
 
 interface SvgBcOutlineIconProps extends SVGProps<SVGSVGElement> {
   /* Accessible title for icon, aria-hidden set if not provided */
   title?: string;
+  /** Width and height of the placeholder icon, defaults to medium (20px) */
+  size?: IconSize;
 }
 
 export default function SvgCheckIcon({
   title,
+  size = "medium",
   id,
   role = "img",
   "aria-label": ariaLabel,
   "aria-labelledby": ariaLabelledBy,
   ...props
 }: SvgBcOutlineIconProps) {
+  const iconSize = useIconSize(size);
+
   return (
     <svg
-      width="10"
-      height="10"
+      width={iconSize}
+      height={iconSize}
       viewBox="0 0 512 512"
       xmlns="http://www.w3.org/2000/svg"
       id={id}

@@ -1,23 +1,29 @@
 /* The component implements the Calendar icon from Font Awesome: https://fontawesome.com/icons/calendar */
 import { SVGProps } from "react";
+import { IconSize, useIconSize } from "../../../hooks/useIconSize";
 
 interface SvgCalendarIconProps extends SVGProps<SVGSVGElement> {
   /* Accessible title for icon, aria-hidden set if not provided */
   title?: string;
+  /** Width and height of the placeholder icon, defaults to medium (20px) */
+  size?: IconSize;
 }
 
 export default function SvgCalendarIcon({
   title,
   id,
+  size = "medium",
   role = "img",
   "aria-label": ariaLabel,
   "aria-labelledby": ariaLabelledBy,
   ...props
 }: SvgCalendarIconProps) {
+  const iconSize = useIconSize(size);
+
   return (
     <svg
-      width="20"
-      height="20"
+      width={iconSize}
+      height={iconSize}
       viewBox="0 0 640 640"
       xmlns="http://www.w3.org/2000/svg"
       id={id}
