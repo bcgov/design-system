@@ -1,40 +1,32 @@
-import { SVGProps } from "react";
-
 /* The component implements the Chevron Right icon from Font Awesome: https://fontawesome.com/icons/chevron-right */
+import { SVGProps } from "react";
+import { IconSize, useIconSize } from "../../../hooks/useIconSize";
+
 interface SvgChevronRightIconProps extends SVGProps<SVGSVGElement> {
   /* Accessible title for icon, aria-hidden set if not provided */
   title?: string;
-  /* Icon size */
-  size?: "small" | "medium" | "large";
+  /** Width and height of the placeholder icon, defaults to medium (20px) */
+  size?: IconSize;
 }
 
 export default function SvgChevronRightIcon({
-  size = "medium",
   title,
+  id,
+  size = "medium",
   role = "img",
   "aria-label": ariaLabel,
   "aria-labelledby": ariaLabelledBy,
   ...props
 }: SvgChevronRightIconProps) {
+  const iconSize = useIconSize(size);
   return (
     <svg
-      width={
-        size === "small"
-          ? "var(--icons-size-small)"
-          : size === "large"
-            ? "var(--icons-size-large)"
-            : "var(--icons-size-medium)"
-      }
-      height={
-        size === "small"
-          ? "var(--icons-size-small)"
-          : size === "large"
-            ? "var(--icons-size-large)"
-            : "var(--icons-size-medium)"
-      }
+      width={iconSize}
+      height={iconSize}
       viewBox="0 0 640 640"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      id={id}
       aria-label={ariaLabel}
       aria-labelledby={ariaLabelledBy}
       aria-hidden={title || ariaLabel || ariaLabelledBy ? undefined : "true"}
