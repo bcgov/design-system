@@ -53,6 +53,18 @@ The alert banner ships with a set of themes designed for different use-cases, co
 
 **Note**: if you need to modify the styling of an alert banner's content, you can write additional rules for the `.bcds-Alert-Banner--Container` CSS class.
 
+### Sizing
+
+The `size` prop (defaults to `medium`) controls the vertical height and font size of the banner. Set `size` to `small` for a lower-profile banner:
+
+<Canvas of={AlertBannerStories.SmallAlertBanner} />
+
+### Alignment
+
+By default, alert banner content is centered. Set `alignment` to `stretch` to make it full-width:
+
+<Canvas of={AlertBannerStories.FullWidthAlertBanner} />
+
 ### Alert content
 
 Pass content to the `children` slot to populate an alert banner.

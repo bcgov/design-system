@@ -14,6 +14,22 @@ const meta = {
       control: { type: "radio" },
       description: "Sets the theme and icon for the alert",
     },
+    size: {
+      options: ["small", "medium"],
+      control: { type: "radio" },
+      description: "Sets the vertical height and font size of the banner",
+      table: {
+        defaultValue: { summary: "medium" },
+      },
+    },
+    alignment: {
+      options: ["center", "stretch"],
+      control: { type: "radio" },
+      description: "Controls whether banner content is centered or full-width",
+      table: {
+        defaultValue: { summary: "center" },
+      },
+    },
     children: {
       control: { type: "object" },
       description: "Populates the content of the alert",
@@ -54,6 +70,22 @@ export const AlertBannerTemplate: Story = {
     onClose: () => alert("onClose()"),
   },
   render: ({ ...args }: AlertBannerProps) => <AlertBanner {...args} />,
+};
+
+export const SmallAlertBanner: Story = {
+  ...AlertBannerTemplate,
+  args: {
+    size: "small",
+    ...AlertBannerTemplate.args,
+  },
+};
+
+export const FullWidthAlertBanner: Story = {
+  ...AlertBannerTemplate,
+  args: {
+    alignment: "stretch",
+    ...AlertBannerTemplate.args,
+  },
 };
 
 export const SuccessBanner: Story = {

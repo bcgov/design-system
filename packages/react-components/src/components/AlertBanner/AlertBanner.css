@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  padding: var(--layout-padding-none) var(--layout-padding-medium);
 }
 
 .bcds-Alert-Banner--Container {
@@ -14,8 +13,6 @@
   flex-direction: row;
   align-items: center;
   gap: var(--layout-padding-medium);
-  max-width: 1100px;
-  padding: var(--layout-padding-small) var(--layout-padding-none);
 }
 
 .bcds-Alert-Banner--Icon {
@@ -31,10 +28,36 @@
   align-items: first baseline;
   flex-grow: 1;
   flex-wrap: wrap;
-  font: var(--typography-regular-body);
   color: var(--typography-color-primary-invert);
 }
 
+/* Alignment */
+.bcds-Alert-Banner.center {
+  padding: var(--layout-padding-none) var(--layout-padding-medium);
+}
+.bcds-Alert-Banner.center > .bcds-Alert-Banner--Container {
+  max-width: 1100px;
+}
+.bcds-Alert-Banner.stretch {
+  padding: var(--layout-padding-none) var(--layout-padding-large);
+}
+
+/* Sizing */
+.bcds-Alert-Banner.small > .bcds-Alert-Banner--Container {
+  padding: var(--layout-padding-hair) var(--layout-padding-none);
+}
+.bcds-Alert-Banner.small .bcds-Alert-Banner--Content {
+  font: var(--typography-regular-small-body);
+}
+
+.bcds-Alert-Banner.medium > .bcds-Alert-Banner--Container {
+  padding: var(--layout-padding-small) var(--layout-padding-none);
+}
+.bcds-Alert-Banner.medium .bcds-Alert-Banner--Content {
+  font: var(--typography-regular-body);
+}
+
+/* Close icon */
 .bcds-Alert-Banner--closeIcon {
   align-self: first baseline;
 }
