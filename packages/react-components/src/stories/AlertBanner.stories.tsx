@@ -22,6 +22,14 @@ const meta = {
         defaultValue: { summary: "medium" },
       },
     },
+    alignment: {
+      options: ["center", "stretch"],
+      control: { type: "radio" },
+      description: "Controls whether banner content is centered or full-width",
+      table: {
+        defaultValue: { summary: "center" },
+      },
+    },
     children: {
       control: { type: "object" },
       description: "Populates the content of the alert",
@@ -68,6 +76,14 @@ export const SmallAlertBanner: Story = {
   ...AlertBannerTemplate,
   args: {
     size: "small",
+    ...AlertBannerTemplate.args,
+  },
+};
+
+export const FullWidthAlertBanner: Story = {
+  ...AlertBannerTemplate,
+  args: {
+    alignment: "stretch",
     ...AlertBannerTemplate.args,
   },
 };
