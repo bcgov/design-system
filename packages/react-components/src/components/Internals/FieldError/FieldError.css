@@ -1,0 +1,4 @@
+.bcds-react-aria-FieldError {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-danger);
+}
