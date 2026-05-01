@@ -3,7 +3,7 @@
   color: var(--typography-color-primary);
   padding: var(--layout-padding-xsmall) var(--layout-padding-none);
 }
-.bcds-react-aria-TextField--Label .required {
+.bcds-react-aria-Label .required {
   color: var(--typography-color-secondary);
   padding: var(--layout-padding-none) var(--layout-padding-xsmall);
 }

@@ -11,6 +11,7 @@ export { default as Callout } from "./Callout";
 export { default as Checkbox } from "./Checkbox";
 export { default as CheckboxGroup } from "./CheckboxGroup";
 export { default as DatePicker } from "./DatePicker";
+export { default as Description } from "./Internals/Description";
 export { default as Dialog, DialogTrigger } from "./Dialog";
 export { default as FieldError } from "./Internals/FieldError";
 export { default as Footer, FooterLinks } from "./Footer";
