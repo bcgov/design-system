@@ -5,8 +5,10 @@ import {
 
 import "./FieldError.css";
 
-export default function FieldError(props: FieldErrorProps) {
+export default function FieldError({ children, ...props }: FieldErrorProps) {
   return (
-    <ReactAriaFieldError className="bcds-react-aria-FieldError" {...props} />
+    <ReactAriaFieldError className="bcds-react-aria-FieldError" {...props}>
+      {children}
+    </ReactAriaFieldError>
   );
 }
