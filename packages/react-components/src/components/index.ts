@@ -1,5 +1,6 @@
 import "@bcgov/design-tokens/css/variables.css";
 
+/* Core components */
 export { default as Accordion } from "./Accordion";
 export { default as AccordionGroup } from "./AccordionGroup";
 export { default as AlertBanner } from "./AlertBanner";
@@ -11,23 +12,39 @@ export { default as Callout } from "./Callout";
 export { default as Checkbox } from "./Checkbox";
 export { default as CheckboxGroup } from "./CheckboxGroup";
 export { default as DatePicker } from "./DatePicker";
-export { default as Description } from "./Internals/Description";
 export { default as Dialog, DialogTrigger } from "./Dialog";
-export { default as FieldError } from "./Internals/FieldError";
 export { default as Footer, FooterLinks } from "./Footer";
-export { default as Form } from "./Form";
 export { default as Header } from "./Header";
-export { default as Heading } from "./Heading";
 export { default as InlineAlert } from "./InlineAlert";
-export { default as Label } from "./Internals/Label";
-export { default as Link } from "./Link";
 export { default as Modal } from "./Modal";
 export { default as ProgressBar } from "./ProgressBar";
 export { default as ProgressCircle } from "./ProgressCircle";
 export { default as Radio } from "./Radio";
 export { default as RadioGroup } from "./RadioGroup";
 export { default as Select } from "./Select";
+export { default as Tag } from "./Tag";
+export { default as TagGroup } from "./TagGroup";
+export { default as TagList } from "./TagList";
+export { default as TextArea } from "./TextArea";
+export { default as TextField } from "./TextField";
+export { default as TimeField } from "./TimeField";
+export { default as ToggleButton } from "./ToggleButton";
+export { default as ToggleButtonGroup } from "./ToggleButtonGroup";
+export { default as Switch } from "./Switch";
+export { default as Tooltip, TooltipTrigger } from "./Tooltip";
+export { default as NumberField } from "./NumberField";
+
+/* Internals and utility components */
+export { default as Description } from "./Internals/Description";
+export { default as FieldError } from "./Internals/FieldError";
+export { default as Form } from "./Form";
+export { default as Heading } from "./Heading";
+export { default as Label } from "./Internals/Label";
+export { default as Link } from "./Link";
 export { default as Separator } from "./Separator";
+export { default as Text } from "./Text";
+
+/* Icons */
 export { default as SvgBcLogo } from "./Icons/SvgBcLogo";
 export { default as SvgBcOutlineIcon } from "./Icons/SvgBcOutlineIcon";
 export { default as SvgBetaIcon } from "./Icons/SvgBetaIcon";
@@ -48,15 +65,3 @@ export { default as SvgPlusIcon } from "./Icons/SvgPlusIcon";
 export { default as SvgTooltipArrowUp } from "./Icons/SvgTooltipArrowUp";
 export { default as SvgUpRightFromSquareIcon } from "./Icons/SvgUpRightFromSquareIcon";
 export { default as SvgReactAriaIcon } from "./Icons/SvgReactAriaIcon";
-export { default as Tag } from "./Tag";
-export { default as TagGroup } from "./TagGroup";
-export { default as TagList } from "./TagList";
-export { default as Text } from "./Text";
-export { default as TextArea } from "./TextArea";
-export { default as TextField } from "./TextField";
-export { default as TimeField } from "./TimeField";
-export { default as ToggleButton } from "./ToggleButton";
-export { default as ToggleButtonGroup } from "./ToggleButtonGroup";
-export { default as Switch } from "./Switch";
-export { default as Tooltip, TooltipTrigger } from "./Tooltip";
-export { default as NumberField } from "./NumberField";
