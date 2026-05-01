@@ -41,6 +41,7 @@ export { default as Form } from "./Form";
 export { default as Heading } from "./Heading";
 export { default as Label } from "./Internals/Label";
 export { default as Link } from "./Link";
+export { default as Popover } from "./Internals/Popover";
 export { default as Separator } from "./Separator";
 export { default as Text } from "./Text";
 
