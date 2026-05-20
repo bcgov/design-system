@@ -61,11 +61,14 @@ export default function Menu<T extends MenuItemProps>({
     );
   }
   /* Dynamic collection via items/sections props */
-  const sectionsArray = sections
+  const sectionsArray = sections?.length
     ? sections
     : [{ id: "section", header: "", items: items ? [...items] : [] }];
 
-  const lastSectionId = sectionsArray[sectionsArray.length - 1].id;
+  const lastSectionId =
+    sectionsArray.length > 0
+      ? sectionsArray[sectionsArray.length - 1].id
+      : undefined;
 
   return (
     <Popover className="bcds-react-aria-Popover" placement={placement}>
