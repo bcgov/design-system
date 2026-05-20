@@ -1,4 +1,4 @@
-name: Publish @bcgov/design-system-react-components to npm
+name: Publish @bcgov/design-system-react-components to npm and GitHub Packages
 
 on:
   pull_request:
