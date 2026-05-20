@@ -33,6 +33,7 @@ export default defineConfig({
           name: "unit",
           globals: true,
           environment: "jsdom",
+          setupFiles: ["./src/vitest.unit.setup.ts"],
           include: ["./src/components/**/*.test.{ts,tsx,js,jsx}"],
         },
       },
