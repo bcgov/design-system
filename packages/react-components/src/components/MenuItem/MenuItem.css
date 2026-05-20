@@ -51,6 +51,17 @@ a.bcds-react-aria-MenuItem
   color: var(--typography-color-secondary);
   text-decoration: none;
 }
+a.bcds-react-aria-MenuItem[data-disabled]
+  > .bcds-react-aria-MenuItem--Content
+  > *[slot="label"] {
+  color: var(--typography-color-disabled);
+  text-decoration: none;
+}
+a.bcds-react-aria-MenuItem[data-disabled]
+  > .bcds-react-aria-MenuItem--Content
+  > *[slot="description"] {
+  color: var(--typography-color-disabled);
+}
 
 /* Icon displayed when an item has a submenu */
 .bcds-react-aria-MenuItem > svg {
