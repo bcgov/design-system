@@ -9,5 +9,6 @@
     "types": ["react", "react-dom"],
     "rootDir": "./src"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/**/*.figma.ts"]
 }
