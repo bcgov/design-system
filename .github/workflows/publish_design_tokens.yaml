@@ -9,15 +9,13 @@ on:
   release:
     types: [published]
 
-permissions:
-  contents: read
-
 jobs:
   publish-design-tokens-npm-next:
     name: Publish @bcgov/design-tokens@next to npm
     # Publish a `next` version to npm on PR merge to main branch.
     if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
     permissions:
+      contents: read
       id-token: write # Required for OIDC
     runs-on: ubuntu-latest
 
@@ -79,6 +77,7 @@ jobs:
     # Publish a `next` version to GitHub Packages on PR merge to main branch.
     if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
     permissions:
+      contents: read
       packages: write
     runs-on: ubuntu-latest
 
@@ -141,6 +140,7 @@ jobs:
     # @bcgov/design-tokens@v1.2.3
     if: ${{ github.event_name == 'release' && contains(github.event.release.tag_name, 'bcgov/design-tokens') }}
     permissions:
+      contents: read
       id-token: write # Required for OIDC
     runs-on: ubuntu-latest
 
@@ -181,6 +181,7 @@ jobs:
     # @bcgov/design-tokens@v1.2.3
     if: ${{ github.event_name == 'release' && contains(github.event.release.tag_name, 'bcgov/design-tokens') }}
     permissions:
+      contents: read
       packages: write
     runs-on: ubuntu-latest
 
