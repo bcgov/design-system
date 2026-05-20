@@ -56,6 +56,11 @@ jobs:
         run: npm run vite-build
         working-directory: ./packages/react-components
 
+      # Treat failures in the main build script as test failures
+      - name: Run build
+        run: npm run build
+        working-directory: ./packages/react-components
+
   playwright-accessibility-tests:
     name: Playwright accessibility tests
     runs-on: ubuntu-latest
