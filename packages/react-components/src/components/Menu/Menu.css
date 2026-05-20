@@ -42,4 +42,6 @@
   box-sizing: border-box;
   padding: var(--layout-padding-xsmall) var(--layout-padding-xsmall);
   min-width: var(--trigger-width);
+  max-height: inherit;
+  overflow: scroll;
 }
