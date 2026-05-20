@@ -10,14 +10,14 @@ on:
     types: [published]
 
 permissions:
-  id-token: write # Required for OIDC
   contents: read
-  packages: write
 
 jobs:
   publish-npm-next:
     # Publish a `next` version to npm on PR merge to `main`
     if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
+    permissions:
+      id-token: write # Required for OIDC
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -61,6 +61,8 @@ jobs:
   publish-github-packages-next:
     # Publish a `next` version to GitHub Packages on PR merge to `main`
     if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
+    permissions:
+      packages: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -107,6 +109,8 @@ jobs:
   publish-npm-latest:
     # Publish a `latest` version to npm when a release is published that targets `@bcgov/design-system-react-components`
     if: ${{ github.event_name == 'release' && contains(github.event.release.tag_name, 'bcgov/design-system-react-components') }}
+    permissions:
+      id-token: write # Required for OIDC
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -137,6 +141,8 @@ jobs:
   publish-github-packages-latest:
     # Publish a `latest` version to GitHub Packages when a release is published that targets `@bcgov/design-system-react-components`
     if: ${{ github.event_name == 'release' && contains(github.event.release.tag_name, 'bcgov/design-system-react-components') }}
+    permissions:
+      packages: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
