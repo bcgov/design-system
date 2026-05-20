@@ -6,4 +6,4 @@ export {
   MenuSectionHeader,
 } from "./Menu";
 
-export type { MenuProps } from "react-aria-components";
+export type { MenuProps, MenuSectionProps } from "./Menu";
