@@ -1,17 +1,15 @@
-import { afterEach, beforeEach, expect, vi } from "vitest";
+import { afterAll, afterEach, beforeEach, expect, vi } from "vitest";
 
-let warnSpy: ReturnType<typeof vi.spyOn>;
+// Fail tests on console warnings
+const warnSpy = vi.spyOn(console, "warn").mockImplementation(() => {});
 
 beforeEach(() => {
-  warnSpy = vi.spyOn(console, "warn").mockImplementation(() => {
-    // Silence warning output during tests; assertions below enforce failure.
-  });
+  warnSpy.mockClear();
 });
 
 afterEach(() => {
-  try {
-    expect(warnSpy).not.toHaveBeenCalled();
-  } finally {
-    warnSpy.mockRestore();
-  }
+  expect(warnSpy).not.toHaveBeenCalled();
+});
+afterAll(() => {
+  warnSpy.mockRestore();
 });
