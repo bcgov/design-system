@@ -19,9 +19,10 @@ const isCloseable = figma.selectedInstance.getBoolean("Close");
 const alertText = figma.selectedInstance.findText("Alert text");
 const children = "textContent" in alertText ? alertText.textContent : undefined;
 const actionInstance = figma.selectedInstance.findInstance("Button");
-const action = figma.selectedInstance.getBoolean("Action")
-  ? actionInstance.executeTemplate().example
-  : undefined;
+const action =
+  figma.selectedInstance.getBoolean("Action") && actionInstance.type !== "ERROR"
+    ? actionInstance.executeTemplate().example
+    : undefined;
 
 const { renderProp, renderChildren } = figma.helpers.react;
 

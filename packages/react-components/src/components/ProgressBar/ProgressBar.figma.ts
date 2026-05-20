@@ -14,17 +14,19 @@ const valueLabel = figma.selectedInstance.getBoolean("Show label & value", {
   false: undefined,
 });
 const value = figma.selectedInstance.getString("Value");
+const numericValue =
+  value !== undefined && value !== "" ? Number(value) : undefined;
 const isIndeterminate = figma.selectedInstance.getEnum("Style", {
   Indeterminate: true,
 });
 
-const { renderProp, renderPropValue } = figma.helpers.react;
+const { renderProp } = figma.helpers.react;
 
 export default {
   id: "ProgressBar",
   imports: [
     "import { ProgressBar } from '@bcgov/design-system-react-components';",
   ],
-  example: figma.code`<ProgressBar${renderProp("size", size)}${renderProp("valueLabel", valueLabel)} value={Number(${renderPropValue(value)})}${renderProp("isIndeterminate", isIndeterminate)}/>`,
+  example: figma.code`<ProgressBar${renderProp("size", size)}${renderProp("valueLabel", valueLabel)}${renderProp("value", numericValue)}${renderProp("isIndeterminate", isIndeterminate)}/>`,
   metadata: { nestable: true },
 };
