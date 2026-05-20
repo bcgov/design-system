@@ -78,7 +78,7 @@ export default function Menu<T extends MenuItemProps>({
         items={sectionsArray}
       >
         {(section: MenuSectionProps) => (
-          <MenuSection key={section.id}>
+          <MenuSection key={section.id} id={section.id}>
             {section.header && (
               <MenuSectionHeader>{section.header}</MenuSectionHeader>
             )}
