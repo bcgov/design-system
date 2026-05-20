@@ -28,6 +28,9 @@
 .bcds-react-aria-Menu[data-focused] {
   outline: none;
 }
+.bcds-react-aria-Popover:focus {
+  outline: none;
+}
 
 /* Popover */
 .bcds-react-aria-Popover {
