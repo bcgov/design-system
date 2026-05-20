@@ -6,11 +6,11 @@
 
 /* Sizing */
 .bcds-react-aria-Menu.small {
-  font-size: var(--typography-regular-small-body);
+  font: var(--typography-regular-small-body);
 }
 
 .bcds-react-aria-Menu.medium {
-  font-size: var(--typography-regular-body);
+  font: var(--typography-regular-body);
 }
 
 /* Sections */
