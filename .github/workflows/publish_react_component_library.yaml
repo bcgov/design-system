@@ -76,8 +76,6 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
-          registry-url: "https://npm.pkg.github.com/"
-          scope: "@bcgov"
 
       - name: Install dependencies
         run: npm install
@@ -156,8 +154,6 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
-          registry-url: "https://npm.pkg.github.com/"
-          scope: "@bcgov"
 
       - name: Install dependencies
         run: npm install
