@@ -3,5 +3,6 @@
   "compilerOptions": {
     "noEmit": true,
     "declaration": false
-  }
+  },
+  "exclude": ["src/**/*.figma.ts"]
 }
