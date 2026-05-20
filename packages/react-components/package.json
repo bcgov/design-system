@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@figma/code-connect": "1.4.3",
+    "@figma/code-connect": "1.4.5",
     "@react-stately/data": "3.16.0",
     "@rollup/plugin-commonjs": "29.0.2",
     "@rollup/plugin-json": "6.1.0",
