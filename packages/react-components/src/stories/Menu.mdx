@@ -66,7 +66,7 @@ import * as MenuStories from "./Menu.stories";
 Learn more about working with the Menu component:
 
 - [Usage and best practice guidance](#)
-- [View the select component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+- [View the Menu component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
 
 ## Controls
 
@@ -86,14 +86,14 @@ Each element has its own API. Structurally, these components are assembled like 
 ```typescript
 import { Button, Menu, MenuTrigger } from "@bcgov/design-system-react-components";
 
-function App() {
-  return (
-    <MenuTrigger>
-        <Button>This button activates the menu</Button>
-        <Menu>
-    </MenuTrigger>
+ function App() {
+   return (
+     <MenuTrigger>
+       <Button>This button activates the menu</Button>
+       <Menu />
+     </MenuTrigger>
     );
-}
+ }
 ```
 
 There are three ways to compose a menu:
@@ -104,7 +104,7 @@ There are three ways to compose a menu:
 
 ### `items`
 
-You can dynamically compose a menu using the `items` prop. `items` expects an array of objects, that will each be rendered as a [MenuItem](/story/navigation-and-structure-menu-menuitem):
+You can dynamically compose a menu using the `items` prop. `items` expects an array of objects, that will each be rendered as a [MenuItem](/docs/navigation-and-structure-menu-menuitem--docs):
 
 <Canvas of={MenuStories.Items} />
 

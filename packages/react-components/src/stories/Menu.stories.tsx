@@ -120,10 +120,18 @@ export const MenuTemplate: Story = {
     selectionMode: "single",
     placement: "bottom",
     children: [
-      <MenuItem id={1}>Link 1</MenuItem>,
-      <MenuItem id={2}>Link 2</MenuItem>,
-      <MenuItem id={3}>Link 3</MenuItem>,
-      <MenuItem id={4}>Link 4</MenuItem>,
+      <MenuItem key={1} id={1}>
+        Link 1
+      </MenuItem>,
+      <MenuItem key={2} id={2}>
+        Link 2
+      </MenuItem>,
+      <MenuItem key={3} id={3}>
+        Link 3
+      </MenuItem>,
+      <MenuItem key={4} id={4}>
+        Link 4
+      </MenuItem>,
     ],
   },
   render: ({ ...args }) => (
