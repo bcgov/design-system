@@ -69,7 +69,7 @@ jobs:
         working-directory: ./packages/design-tokens/dist
 
       - name: Publish to npm @next
-        run: npm publish --tag next
+        run: npm publish --tag next --provenance
         working-directory: ./packages/design-tokens/dist
 
   publish-design-tokens-github-packages-next:
@@ -129,9 +129,11 @@ jobs:
         shell: bash
         working-directory: ./packages/design-tokens/dist
 
-      - name: Publish to npm @next
+      - name: Publish to GitHub Packages @next
         run: npm publish --tag next --registry=https://npm.pkg.github.com/
         working-directory: ./packages/design-tokens/dist
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish-design-tokens-npm-latest:
     name: Publish @bcgov/design-tokens@latest to npm
@@ -171,7 +173,7 @@ jobs:
         working-directory: ./packages/design-tokens
 
       - name: Publish to npm @latest
-        run: npm publish --tag latest
+        run: npm publish --tag latest --provenance
         working-directory: ./packages/design-tokens/dist
 
   publish-design-tokens-github-packages-latest:
@@ -213,3 +215,5 @@ jobs:
       - name: Publish to GitHub Packages @latest
         run: npm publish --tag latest --registry=https://npm.pkg.github.com/
         working-directory: ./packages/design-tokens/dist
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
