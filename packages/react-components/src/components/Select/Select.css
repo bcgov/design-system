@@ -25,7 +25,7 @@
 .bcds-react-aria-Select.scroll .bcds-react-aria-Select--TagOverlay {
   overflow-x: auto;
   pointer-events: auto;
-  scrollbar-width: none;
+  scrollbar-width: thin;
   padding-block: calc(
     var(--layout-border-width-medium) + var(--layout-margin-hair) + 1px
   );
@@ -38,10 +38,6 @@
   margin-inline: calc(
     -1 * (var(--layout-border-width-medium) + var(--layout-margin-hair) + 1px)
   );
-}
-.bcds-react-aria-Select.scroll
-  .bcds-react-aria-Select--TagOverlay::-webkit-scrollbar {
-  display: none;
 }
 
 /* Scroll mode: prevent tag list from wrapping */
