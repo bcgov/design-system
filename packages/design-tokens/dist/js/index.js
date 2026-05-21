@@ -13,10 +13,14 @@ export const surfaceOpacity70 = 0.7;
 export const surfaceOpacity80 = 0.8;
 export const surfaceOpacity90 = 0.9;
 export const surfaceOpacity100 = 1;
-export const surfaceShadowNone = "0 0.30000001192092896px 0.8999999761581421px 0 #0000001a, 0 1.600000023841858px 3.5999999046325684px 0 #00000021"; // Default shadow for most content and UI elements
-export const surfaceShadowSmall = "0 0.6000000238418579px 1.7999999523162842px 0 #0000001a, 0 3.200000047683716px 7.199999809265137px 0 #00000021"; // Reduced shadow for secondary UI elements
-export const surfaceShadowMedium = "0 1.2000000476837158px 3.5999999046325684px 0 #0000001a, 0 6.400000095367432px 14.399999618530273px 0 #00000021"; // Standard shadow for UI elements like cards and buttons
-export const surfaceShadowLarge = "0 4.800000190734863px 14.399999618530273px 0 #0000002e, 0 25.600000381469727px 57.599998474121094px 0 #00000038"; // Larger shadow for emphasis. Use sparingly
+export const surfaceShadowNone =
+  "0 0.30000001192092896px 0.8999999761581421px 0 #0000001a, 0 1.600000023841858px 3.5999999046325684px 0 #00000021"; // Default shadow for most content and UI elements
+export const surfaceShadowSmall =
+  "0 0.6000000238418579px 1.7999999523162842px 0 #0000001a, 0 3.200000047683716px 7.199999809265137px 0 #00000021"; // Reduced shadow for secondary UI elements
+export const surfaceShadowMedium =
+  "0 1.2000000476837158px 3.5999999046325684px 0 #0000001a, 0 6.400000095367432px 14.399999618530273px 0 #00000021"; // Standard shadow for UI elements like cards and buttons
+export const surfaceShadowLarge =
+  "0 4.800000190734863px 14.399999618530273px 0 #0000002e, 0 25.600000381469727px 57.599998474121094px 0 #00000038"; // Larger shadow for emphasis. Use sparingly
 export const surfaceColorPrimaryButtonDefault = "#013366"; // Default fill colour for primary buttons
 export const surfaceColorPrimaryButtonHover = "#1E5189"; // Fill colour used when user hovers over primary button
 export const surfaceColorPrimaryButtonDisabled = "#EDEBE9"; // Fill colour for inactive primary buttons
@@ -151,9 +155,11 @@ export const typographyBoldH2 = "700 2rem/3rem 'BC Sans'"; // Default style for 
 export const typographyBoldH1 = "700 2.25rem/3.375rem 'BC Sans'"; // Default style for Heading 6. Includes all sizing/spacing values for H1
 export const typographyBoldDisplay = "700 3rem/AUTO 'BC Sans'"; // Extra-large font size (bolded). Do not use for headings
 export const typographyItalicLabel = "400 italic 0.75rem/1.125rem 'BC Sans'"; // Labels and captions (italic)
-export const typographyItalicSmallBody = "400 italic 0.875rem/1.313rem 'BC Sans'"; // Small body text (italic)
+export const typographyItalicSmallBody =
+  "400 italic 0.875rem/1.313rem 'BC Sans'"; // Small body text (italic)
 export const typographyItalicBody = "400 italic 1rem/1.688rem 'BC Sans'"; // Default for body text (italic)
-export const typographyItalicLargeBody = "400 italic 1.125rem/1.913rem 'BC Sans'"; // Larger text size for body text (italic)
+export const typographyItalicLargeBody =
+  "400 italic 1.125rem/1.913rem 'BC Sans'"; // Larger text size for body text (italic)
 export const typographyItalicH6 = "400 italic 1.125rem/1.913rem 'BC Sans'"; // Alternate (italic) style for Heading 6
 export const typographyItalicH5 = "400 italic 1.25rem/2.125rem 'BC Sans'"; // Alternate (italic) style for Heading 5
 export const typographyItalicH4 = "400 italic 1.5rem/2.25rem 'BC Sans'"; // Alternate (italic) style for Heading 4
