@@ -142,7 +142,7 @@
   min-width: 0;
   display: flex;
   align-items: center;
-  padding: var(--layout-padding-small);
+  padding: calc(var(--layout-padding-small) - 0.5px);
   padding-right: 2.5rem;
   pointer-events: none;
 }
