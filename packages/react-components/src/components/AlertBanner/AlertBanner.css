@@ -31,14 +31,14 @@
   color: var(--typography-color-primary-invert);
 }
 
-/* Alignment */
-.bcds-Alert-Banner.center {
+/* Layout */
+.bcds-Alert-Banner.fixed {
   padding: var(--layout-padding-none) var(--layout-padding-medium);
 }
-.bcds-Alert-Banner.center > .bcds-Alert-Banner--Container {
+.bcds-Alert-Banner.fixed > .bcds-Alert-Banner--Container {
   max-width: 1100px;
 }
-.bcds-Alert-Banner.stretch {
+.bcds-Alert-Banner.fluid {
   padding: var(--layout-padding-none) var(--layout-padding-large);
 }
 

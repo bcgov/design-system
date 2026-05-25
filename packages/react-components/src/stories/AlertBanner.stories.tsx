@@ -22,12 +22,12 @@ const meta = {
         defaultValue: { summary: "medium" },
       },
     },
-    alignment: {
-      options: ["center", "stretch"],
+    layout: {
+      options: ["fixed", "fluid"],
       control: { type: "radio" },
       description: "Controls whether banner content is centered or full-width",
       table: {
-        defaultValue: { summary: "center" },
+        defaultValue: { summary: "fixed" },
       },
     },
     children: {
@@ -83,7 +83,7 @@ export const SmallAlertBanner: Story = {
 export const FullWidthAlertBanner: Story = {
   ...AlertBannerTemplate,
   args: {
-    alignment: "stretch",
+    layout: "fluid",
     ...AlertBannerTemplate.args,
   },
 };
