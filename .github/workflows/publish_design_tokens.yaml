@@ -105,6 +105,14 @@ jobs:
         run: npm run build
         working-directory: ./packages/design-tokens
 
+      # After dependencies are installed and build is complete, change registry to GitHub Packages
+      - name: Rerun Node.js setup for GitHub Packages publishing
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          registry-url: "https://npm.pkg.github.com/"
+          scope: "@bcgov"
+
       - name: Prepare npm package for publishing
         run: npm run prepare-npm-package
         working-directory: ./packages/design-tokens
@@ -211,6 +219,14 @@ jobs:
       - name: Prepare npm package for publishing
         run: npm run prepare-npm-package
         working-directory: ./packages/design-tokens
+
+      # After dependencies are installed and build is complete, change registry to GitHub Packages
+      - name: Rerun Node.js setup for GitHub Packages publishing
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          registry-url: "https://npm.pkg.github.com/"
+          scope: "@bcgov"
 
       - name: Publish to GitHub Packages @latest
         run: npm publish --tag latest --registry=https://npm.pkg.github.com/
