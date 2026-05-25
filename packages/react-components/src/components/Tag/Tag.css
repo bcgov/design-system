@@ -88,7 +88,7 @@
 }
 
 /* Focused */
-.bcds-react-aria-Tag[data-focused] {
+.bcds-react-aria-Tag[data-focus-visible] {
   outline: var(--layout-border-width-medium) solid
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);

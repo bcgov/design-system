@@ -32,7 +32,7 @@
 }
 
 /* Focus */
-.bcds-react-aria-Checkbox[data-focused] > .checkbox {
+.bcds-react-aria-Checkbox[data-focus-visible] > .checkbox {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
