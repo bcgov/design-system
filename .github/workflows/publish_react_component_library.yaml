@@ -71,7 +71,7 @@ jobs:
         run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
         working-directory: ./packages/react-components
 
-      - name: Set up Node.js for GitHub Packages
+      - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
@@ -96,6 +96,14 @@ jobs:
       - name: Build components for publishing
         run: npm run build
         working-directory: ./packages/react-components
+
+      # After dependencies are installed and build is complete, change registry to GitHub Packages
+      - name: Rerun Node.js setup for GitHub Packages publishing
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          registry-url: "https://npm.pkg.github.com/"
+          scope: "@bcgov"
 
       - name: Publish to GitHub Packages @next
         run: npm publish --tag next --registry=https://npm.pkg.github.com/
@@ -151,7 +159,7 @@ jobs:
         run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
         working-directory: ./packages/react-components
 
-      - name: Set up Node.js for GitHub Packages
+      - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
@@ -163,6 +171,14 @@ jobs:
       - name: Build components for publishing
         run: npm run build
         working-directory: ./packages/react-components
+
+      # After dependencies are installed and build is complete, change registry to GitHub Packages
+      - name: Rerun Node.js setup for GitHub Packages publishing
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          registry-url: "https://npm.pkg.github.com/"
+          scope: "@bcgov"
 
       - name: Publish to GitHub Packages @latest
         run: npm publish --tag latest --registry=https://npm.pkg.github.com/
