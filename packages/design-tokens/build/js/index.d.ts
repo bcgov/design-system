@@ -136,12 +136,12 @@ export const iconsColorSuccess: string;
 export const iconsColorWarning: string;
 /** Default colour for icons on dark backgrounds */
 export const iconsColorPrimaryInvert: string;
-export const layoutBorderWidthNone: string;
+export const layoutBorderWidthNone: number;
 export const layoutBorderWidthSmall: string;
 export const layoutBorderWidthMedium: string;
 export const layoutBorderWidthLarge: string;
 /** No padding */
-export const layoutPaddingNone: string;
+export const layoutPaddingNone: number;
 /** Smallest padding value for layout */
 export const layoutPaddingHair: string;
 export const layoutPaddingXsmall: string;
@@ -165,7 +165,7 @@ export const layoutMarginXxlarge: string;
 export const layoutMarginXxxlarge: string;
 /** Largest margin value for layout */
 export const layoutMarginHuge: string;
-export const layoutBorderRadiusNone: string;
+export const layoutBorderRadiusNone: number;
 export const layoutBorderRadiusSmall: string;
 export const layoutBorderRadiusMedium: string;
 export const layoutBorderRadiusLarge: string;
@@ -207,7 +207,7 @@ export const typographyFontSizeDisplay: string;
 /** System token, used to generate type styles */
 export const typographyLetterSpacing0: string;
 /** System token, used to generate type styles */
-export const typographyParagraphSpacing0: string;
+export const typographyParagraphSpacing0: number;
 /** Labels and captions */
 export const typographyRegularLabel: string;
 /** Smaller body text */
