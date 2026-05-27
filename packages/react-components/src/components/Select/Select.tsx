@@ -205,7 +205,7 @@ export default function Select<
             <Button
               className={`bcds-react-aria-Select--Button ${
                 size === "medium" ? "medium" : "small"
-              } ${isInvalid && "invalid"}`}
+              } ${isInvalid ? "invalid" : ""}`}
             >
               <SelectValue
                 className="bcds-react-aria-SelectValue"
