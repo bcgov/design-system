@@ -61,7 +61,10 @@ export const ToggleButtonTemplate: Story = {
 export const SmallToggleButton: Story = {
   ...ToggleButtonTemplate,
   args: {
-    children: [<SvgCheckCircleIcon />, "Button with icon"],
+    children: [
+      <SvgCheckCircleIcon key="1" />,
+      <span key="2">Button with icon</span>,
+    ],
     size: "small",
   },
 };
@@ -69,7 +72,10 @@ export const SmallToggleButton: Story = {
 export const ToggleButtonWithIcon: Story = {
   ...ToggleButtonTemplate,
   args: {
-    children: [<SvgCheckCircleIcon />, "Button with icon"],
+    children: [
+      <SvgCheckCircleIcon key="1" />,
+      <span key="2">Button with icon</span>,
+    ],
   },
 };
 
@@ -78,7 +84,7 @@ export const IconOnlyToggleButton: Story = {
   args: {
     isIconButton: true,
     "aria-label": "Confirm",
-    children: [<SvgCheckCircleIcon />],
+    children: <SvgCheckCircleIcon key="1" />,
   },
 };
 

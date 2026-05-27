@@ -64,19 +64,27 @@ export const CheckboxGroupTemplate: Story = {
     label: "This is a checkbox group",
     orientation: "vertical",
     children: [
-      <Checkbox value="1" isRequired>
+      <Checkbox value="1" isRequired key="1">
         Checkbox 1
       </Checkbox>,
-      <Checkbox value="2">Checkbox 2</Checkbox>,
-      <Checkbox value="3">Checkbox 3</Checkbox>,
-      <Checkbox value="4" isDisabled>
+      <Checkbox value="2" key="2">
+        Checkbox 2
+      </Checkbox>,
+      <Checkbox value="3" key="3">
+        Checkbox 3
+      </Checkbox>,
+      <Checkbox value="4" isDisabled key="4">
         Checkbox 4 is disabled
       </Checkbox>,
-      <Checkbox value="5" isIndeterminate>
+      <Checkbox value="5" isIndeterminate key="5">
         Checkbox 5 is indeterminate
       </Checkbox>,
-      <Checkbox value="6">Checkboxes 6 and 7 are synced</Checkbox>,
-      <Checkbox value="6">Checkboxes 6 and 7 are synced</Checkbox>,
+      <Checkbox value="6" key="6">
+        Checkboxes 6 and 7 are synced
+      </Checkbox>,
+      <Checkbox value="6" key="7">
+        Checkboxes 6 and 7 are synced
+      </Checkbox>,
     ],
   },
   render: ({ ...args }: CheckboxGroupProps) => <CheckboxGroup {...args} />,
@@ -87,9 +95,15 @@ export const CheckboxGroupWithLabelAndDescription: Story = {
     label: "This is the primary label",
     description: "This is an additional description field.",
     children: [
-      <Checkbox value="1">Option 1</Checkbox>,
-      <Checkbox value="2">Option 2</Checkbox>,
-      <Checkbox value="3">Option 3</Checkbox>,
+      <Checkbox value="1" key="1">
+        Option 1
+      </Checkbox>,
+      <Checkbox value="2" key="2">
+        Option 2
+      </Checkbox>,
+      <Checkbox value="3" key="3">
+        Option 3
+      </Checkbox>,
     ],
   },
 };
@@ -99,10 +113,18 @@ export const HorizontalCheckboxGroup: Story = {
     orientation: "horizontal",
     label: "This checkbox group is laid out horizontally",
     children: [
-      <Checkbox value="1">Option 1</Checkbox>,
-      <Checkbox value="2">Option 2</Checkbox>,
-      <Checkbox value="3">Option 3</Checkbox>,
-      <Checkbox value="4">Option 4</Checkbox>,
+      <Checkbox value="1" key="1">
+        Option 1
+      </Checkbox>,
+      <Checkbox value="2" key="2">
+        Option 2
+      </Checkbox>,
+      <Checkbox value="3" key="3">
+        Option 3
+      </Checkbox>,
+      <Checkbox value="4" key="4">
+        Option 4
+      </Checkbox>,
     ],
   },
 };
@@ -112,10 +134,18 @@ export const RequiredCheckboxGroup: Story = {
     label: "This checkbox group requires an input",
     isRequired: true,
     children: [
-      <Checkbox value="1">Option 1</Checkbox>,
-      <Checkbox value="2">Option 2</Checkbox>,
-      <Checkbox value="3">Option 3</Checkbox>,
-      <Checkbox value="4">Option 4</Checkbox>,
+      <Checkbox value="1" key="1">
+        Option 1
+      </Checkbox>,
+      <Checkbox value="2" key="2">
+        Option 2
+      </Checkbox>,
+      <Checkbox value="3" key="3">
+        Option 3
+      </Checkbox>,
+      <Checkbox value="4" key="4">
+        Option 4
+      </Checkbox>,
     ],
   },
 };
@@ -126,10 +156,18 @@ export const DisabledCheckboxGroup: Story = {
     description: "None of the options can be focused or selected",
     isDisabled: true,
     children: [
-      <Checkbox value="1">Option 1</Checkbox>,
-      <Checkbox value="2">Option 2</Checkbox>,
-      <Checkbox value="3">Option 3</Checkbox>,
-      <Checkbox value="4">Option 4</Checkbox>,
+      <Checkbox value="1" key="1">
+        Option 1
+      </Checkbox>,
+      <Checkbox value="2" key="2">
+        Option 2
+      </Checkbox>,
+      <Checkbox value="3" key="3">
+        Option 3
+      </Checkbox>,
+      <Checkbox value="4" key="4">
+        Option 4
+      </Checkbox>,
     ],
   },
 };
@@ -141,12 +179,18 @@ export const CheckboxGroupWithErrors: Story = {
     description: "Description and/or helper text",
     errorMessage: "Error messages can be customised or passed programmatically",
     children: [
-      <Checkbox value="1" isRequired>
+      <Checkbox value="1" isRequired key="1">
         Option 1
       </Checkbox>,
-      <Checkbox value="2">Option 2</Checkbox>,
-      <Checkbox value="3">Option 3</Checkbox>,
-      <Checkbox value="4">Option 4</Checkbox>,
+      <Checkbox value="2" key="2">
+        Option 2
+      </Checkbox>,
+      <Checkbox value="3" key="3">
+        Option 3
+      </Checkbox>,
+      <Checkbox value="4" key="4">
+        Option 4
+      </Checkbox>,
     ],
     isInvalid: true,
     isRequired: true,

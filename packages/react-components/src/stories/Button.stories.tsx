@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Button } from "../components";
 import { ButtonProps } from "@/components/Button";
+import SvgPlaceholderIcon from "@/components/Icons/SvgPlaceholderIcon";
 
 const meta = {
   title: "Inputs and controls/Button",
@@ -55,38 +56,12 @@ export const ButtonTemplate: Story = {
   render: ({ ...args }: ButtonProps) => <Button {...args} />,
 };
 
-const iconPlaceholder = (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <g id="20px/Icon placeholder" clip-path="url(#clip0_717_6325)">
-      <path
-        id="Icon"
-        d="M9.99996 18.3333C14.6023 18.3333 18.3333 14.6023 18.3333 9.99996C18.3333 5.39759 14.6023 1.66663 9.99996 1.66663C5.39759 1.66663 1.66663 5.39759 1.66663 9.99996C1.66663 14.6023 5.39759 18.3333 9.99996 18.3333Z"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_717_6325">
-        <rect width="20" height="20" fill="white" />
-      </clipPath>
-    </defs>
-  </svg>
-);
-
 export const Icon: Story = {
   ...ButtonTemplate,
   args: {
     "aria-label":
       "Icon-only buttons need discernible text labels for accessibility",
-    children: iconPlaceholder,
+    children: <SvgPlaceholderIcon />,
     isIconButton: true,
   },
 };
@@ -94,14 +69,22 @@ export const Icon: Story = {
 export const LeftIcon: Story = {
   ...ButtonTemplate,
   args: {
-    children: <>{iconPlaceholder} Left icon</>,
+    children: (
+      <>
+        <SvgPlaceholderIcon /> Left icon
+      </>
+    ),
   },
 };
 
 export const RightIcon: Story = {
   ...ButtonTemplate,
   args: {
-    children: <>Right icon {iconPlaceholder}</>,
+    children: (
+      <>
+        Right icon <SvgPlaceholderIcon />
+      </>
+    ),
   },
 };
 
@@ -110,7 +93,7 @@ export const BothIcons: Story = {
   args: {
     children: (
       <>
-        {iconPlaceholder} Both icons {iconPlaceholder}
+        <SvgPlaceholderIcon /> Both icons <SvgPlaceholderIcon />
       </>
     ),
   },

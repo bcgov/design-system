@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.7.0
+
+This is a milestone release that adds five new components, and includes various enhancements and bugfixes to existing components.
+
+### Added
+
+- TimeField
+- Calendar
+- ProgressBar
+- ProgressCircle
+- Separator
+
+### Changed
+
+- Button: added `min-width` and `min-height` as accessibility safeguards, and added visible styling for pressed state
+- DatePicker: separator between format and description slots now properly renders only when both fields are present
+
+This release uses:
+
+- `react-aria-components` v1.16.0
+- `@bcgov/design-tokens` v3.2.0
+
 ## 0.6.1
 
 This is a patch release that fixes a bug in the DatePicker component.

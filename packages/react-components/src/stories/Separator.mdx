@@ -1,0 +1,57 @@
+{/* Separator.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import * as SeparatorStories from "./Separator.stories";
+
+<Meta of={SeparatorStories} />
+
+# Separators
+
+<Subtitle>Visual divider for UI elements</Subtitle>
+
+<Source
+  code={`import { Separator } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+A separator provides visual separation between UI elements. It renders as a solid line.
+
+## Configuration
+
+### Orientation
+
+The `orientation` prop defaults to `horizontal`, and renders an `<hr>` element:
+
+<Canvas of={SeparatorStories.HorizontalSeparator} />
+<Controls of={SeparatorStories.HorizontalSeparator} />
+
+Set `orientation` to `vertical` to render a `<div>` with the `separator` role:
+
+<Canvas of={SeparatorStories.VerticalSeparator} />
+<Controls of={SeparatorStories.VerticalSeparator} />
+
+### Sizing
+
+The `size` prop (defaults to `medium`) controls the thickness of the separator:
+
+#### Small
+
+<Canvas of={SeparatorStories.SmallSeparator} />
+
+#### Medium
+
+<Canvas of={SeparatorStories.MediumSeparator} />
+
+#### Large
+
+<Canvas of={SeparatorStories.LargeSeparator} />

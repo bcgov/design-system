@@ -29,7 +29,7 @@ import * as TextAreaStories from "./TextArea.stories";
 
 <InlineAlert
   variant="info"
-  customIcon={[<SvgReactAriaIcon />]}
+  customIcon={<SvgReactAriaIcon />}
   title="This is a React Aria component"
   description="It is based on the RA TextField component. Consult the React Aria docs to understand its full API."
   buttons={[
@@ -39,7 +39,8 @@ import * as TextAreaStories from "./TextArea.stories";
       buttonVariant="secondary"
       href="https://react-aria.adobe.com/TextField"
       target="_blank"
-      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+      iconRight={<SvgUpRightFromSquareIcon size={16} />}
+      key="textfield-docs"
     >
       TextField docs
     </Link>,

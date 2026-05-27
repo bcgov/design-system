@@ -45,13 +45,13 @@ type Story = StoryObj<typeof meta>;
 
 export const DialogTemplate: Story = {
   args: {
-    children: [
+    children: (
       <div>
         <h2 style={{ font: tokens.typographyBoldH2, textAlign: "center" }}>
           Dialog title
         </h2>
-      </div>,
-    ],
+      </div>
+    ),
   },
   render: ({ ...args }: DialogProps) => (
     <DialogTrigger>
@@ -65,7 +65,7 @@ export const DialogTemplate: Story = {
 
 export const DialogWithForm: Story = {
   args: {
-    children: [
+    children: (
       <div style={{ padding: tokens.layoutPaddingMedium }}>
         <span
           style={{
@@ -105,8 +105,8 @@ export const DialogWithForm: Story = {
             </Button>
           </ButtonGroup>
         </Form>
-      </div>,
-    ],
+      </div>
+    ),
   },
   render: ({ ...args }: DialogProps) => (
     <DialogTrigger>

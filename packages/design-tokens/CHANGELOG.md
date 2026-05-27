@@ -1,5 +1,24 @@
 # Changelog
 
+## 4.0.0
+
+This is a milestone release that adds SCSS as an output format.
+
+There are no changes to token names or values from v3.2.0.
+
+### Added
+
+- Tokens are now available as SCSS variables
+
+### Changed
+
+- Minor formatting changes in output files, due to updates in our build pipeline
+
+This release uses:
+
+- `@tokens-studio/sd-transforms` v2.0.3
+- `style-dictionary` v5.2.0
+
 ## 3.2.0
 
 ### Added

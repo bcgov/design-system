@@ -40,6 +40,11 @@ jobs:
         run: npm run lint
         working-directory: ./packages/react-components
 
+      # Errors in Prettier format check will cause this job to fail
+      - name: Prettier format check
+        run: npm run format:check
+        working-directory: ./packages/react-components
+
       - name: Run test suite
         run: npm run test
         working-directory: ./packages/react-components
@@ -49,6 +54,11 @@ jobs:
       # we just care that it completes successfully.
       - name: Run Vite build
         run: npm run vite-build
+        working-directory: ./packages/react-components
+
+      # Treat failures in the main build script as test failures
+      - name: Run build
+        run: npm run build
         working-directory: ./packages/react-components
 
   playwright-accessibility-tests:

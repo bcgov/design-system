@@ -14,6 +14,22 @@ const meta = {
       control: { type: "radio" },
       description: "Sets the theme and icon for the alert",
     },
+    size: {
+      options: ["small", "medium"],
+      control: { type: "radio" },
+      description: "Sets the vertical height and font size of the banner",
+      table: {
+        defaultValue: { summary: "medium" },
+      },
+    },
+    layout: {
+      options: ["fixed", "fluid"],
+      control: { type: "radio" },
+      description: "Controls whether banner content is centered or full-width",
+      table: {
+        defaultValue: { summary: "fixed" },
+      },
+    },
     children: {
       control: { type: "object" },
       description: "Populates the content of the alert",
@@ -56,11 +72,27 @@ export const AlertBannerTemplate: Story = {
   render: ({ ...args }: AlertBannerProps) => <AlertBanner {...args} />,
 };
 
+export const SmallAlertBanner: Story = {
+  ...AlertBannerTemplate,
+  args: {
+    size: "small",
+    ...AlertBannerTemplate.args,
+  },
+};
+
+export const FullWidthAlertBanner: Story = {
+  ...AlertBannerTemplate,
+  args: {
+    layout: "fluid",
+    ...AlertBannerTemplate.args,
+  },
+};
+
 export const SuccessBanner: Story = {
   ...AlertBannerTemplate,
   args: {
     variant: "success",
-    children: ["This banner uses the 'success' theme"],
+    children: "This banner uses the 'success' theme",
   },
 };
 
@@ -68,7 +100,7 @@ export const WarningBanner: Story = {
   ...AlertBannerTemplate,
   args: {
     variant: "warning",
-    children: ["This banner uses the 'warning' theme"],
+    children: "This banner uses the 'warning' theme",
   },
 };
 
@@ -76,7 +108,7 @@ export const DangerBanner: Story = {
   ...AlertBannerTemplate,
   args: {
     variant: "danger",
-    children: ["This banner uses the 'danger' theme"],
+    children: "This banner uses the 'danger' theme",
   },
 };
 
@@ -84,15 +116,15 @@ export const DarkBanner: Story = {
   ...AlertBannerTemplate,
   args: {
     variant: "black",
-    children: ["This banner uses the 'black' theme"],
+    children: "This banner uses the 'black' theme",
   },
 };
 
 export const BannerWithCustomIcon: Story = {
   ...AlertBannerTemplate,
   args: {
-    customIcon: [<SvgBcOutlineIcon />],
-    children: ["This alert banner has a custom icon"],
+    customIcon: <SvgBcOutlineIcon />,
+    children: "This alert banner has a custom icon",
   },
 };
 
@@ -100,7 +132,7 @@ export const BannerWithoutIcon: Story = {
   ...AlertBannerTemplate,
   args: {
     isIconHidden: true,
-    children: ["This banner has its theme icon disabled"],
+    children: "This banner has its theme icon disabled",
   },
 };
 
@@ -108,8 +140,11 @@ export const BannerWithButton: Story = {
   ...AlertBannerTemplate,
   args: {
     children: [
-      "This alert banner also renders a call to action using a Button component",
-      <Button variant="secondary" size="small">
+      <span key="1">
+        "This alert banner also renders a call to action using a Button
+        component"
+      </span>,
+      <Button variant="secondary" size="small" key="2">
         Take an action
       </Button>,
     ],
@@ -120,6 +155,6 @@ export const UncloseableBanner: Story = {
   ...AlertBannerTemplate,
   args: {
     isCloseable: false,
-    children: ["The close button is disabled on this alert banner"],
+    children: "The close button is disabled on this alert banner",
   },
 };

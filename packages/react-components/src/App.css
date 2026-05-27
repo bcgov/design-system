@@ -27,9 +27,15 @@ main {
 }
 
 /* Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-medium);
+}
 .row {
   display: flex;
   flex-direction: row;
+  flex: 1 1 0;
   gap: var(--layout-margin-medium);
   min-width: 0;
   max-width: 100%;
@@ -37,8 +43,7 @@ main {
 .col {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
-  width: 100%;
+  flex: 1 1 0;
 }
 .menu {
   display: flex;

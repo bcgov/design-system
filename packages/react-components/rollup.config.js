@@ -29,6 +29,7 @@ export default [
       typescript({
         tsconfig: "./tsconfig.build.json",
         include: ["src/index.ts", "src/components/**/*"],
+        exclude: ["src/**/*.figma.ts"],
       }),
       postcss(),
     ],

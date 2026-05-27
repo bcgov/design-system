@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Select } from "../components";
 import type { TagProps } from "../components/Tag";
+import SvgPlaceholderIcon from "@/components/Icons/SvgPlaceholderIcon";
 
 const meta = {
   title: "Inputs and controls/Select",
@@ -359,15 +360,15 @@ export const LeftIcon: Story = {
     items: [
       {
         ...items[0],
-        iconLeft: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
       },
       {
         ...items[1],
-        iconLeft: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
       },
       {
         ...items[2],
-        iconLeft: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
       },
     ],
   },
@@ -380,15 +381,15 @@ export const RightIcon: Story = {
     items: [
       {
         ...items[0],
-        iconRight: iconPlaceholder,
+        iconRight: <SvgPlaceholderIcon />,
       },
       {
         ...items[1],
-        iconRight: iconPlaceholder,
+        iconRight: <SvgPlaceholderIcon />,
       },
       {
         ...items[2],
-        iconRight: iconPlaceholder,
+        iconRight: <SvgPlaceholderIcon />,
       },
     ],
   },
@@ -401,18 +402,18 @@ export const BothIcons: Story = {
     items: [
       {
         ...items[0],
-        iconLeft: iconPlaceholder,
-        iconRight: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
+        iconRight: <SvgPlaceholderIcon />,
       },
       {
         ...items[1],
-        iconLeft: iconPlaceholder,
-        iconRight: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
+        iconRight: <SvgPlaceholderIcon />,
       },
       {
         ...items[2],
-        iconLeft: iconPlaceholder,
-        iconRight: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
+        iconRight: <SvgPlaceholderIcon />,
       },
     ],
   },
@@ -425,15 +426,15 @@ export const DescriptionAndLeftIcon: Story = {
     items: [
       {
         ...itemsWithDescriptions[0],
-        iconLeft: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
       },
       {
         ...itemsWithDescriptions[1],
-        iconLeft: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
       },
       {
         ...itemsWithDescriptions[2],
-        iconLeft: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
       },
     ],
   },
@@ -446,15 +447,15 @@ export const DescriptionAndRightIcon: Story = {
     items: [
       {
         ...itemsWithDescriptions[0],
-        iconRight: iconPlaceholder,
+        iconRight: <SvgPlaceholderIcon />,
       },
       {
         ...itemsWithDescriptions[1],
-        iconRight: iconPlaceholder,
+        iconRight: <SvgPlaceholderIcon />,
       },
       {
         ...itemsWithDescriptions[2],
-        iconRight: iconPlaceholder,
+        iconRight: <SvgPlaceholderIcon />,
       },
     ],
   },
@@ -467,18 +468,18 @@ export const DescriptionAndBothIcons: Story = {
     items: [
       {
         ...itemsWithDescriptions[0],
-        iconLeft: iconPlaceholder,
-        iconRight: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
+        iconRight: <SvgPlaceholderIcon />,
       },
       {
         ...itemsWithDescriptions[1],
-        iconLeft: iconPlaceholder,
-        iconRight: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
+        iconRight: <SvgPlaceholderIcon />,
       },
       {
         ...itemsWithDescriptions[2],
-        iconLeft: iconPlaceholder,
-        iconRight: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
+        iconRight: <SvgPlaceholderIcon />,
       },
     ],
   },
@@ -491,18 +492,18 @@ export const DescriptionBothIconsAndDestruction: Story = {
     items: [
       {
         ...itemsWithDescriptions[0],
-        iconLeft: iconPlaceholder,
-        iconRight: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
+        iconRight: <SvgPlaceholderIcon />,
       },
       {
         ...itemsWithDescriptions[1],
-        iconLeft: iconPlaceholder,
-        iconRight: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
+        iconRight: <SvgPlaceholderIcon />,
       },
       {
         ...itemsWithDescriptions[2],
-        iconLeft: iconPlaceholder,
-        iconRight: iconPlaceholder,
+        iconLeft: <SvgPlaceholderIcon />,
+        iconRight: <SvgPlaceholderIcon />,
         isDestructive: true,
       },
     ],

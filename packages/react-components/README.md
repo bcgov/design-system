@@ -87,12 +87,16 @@ export default function App() {
 | InlineAlert             | N/A                                            |
 | Modal                   | https://react-aria.adobe.com/Modal             |
 | Link                    | https://react-spectrum.adobe.com/v3/Link       |
+| ProgressBar             | https://react-aria.adobe.com/ProgressBar       |
+| ProgressCircle          | https://react-aria.adobe.com/ProgressBar       |
 | RadioGroup, Radio       | https://react-aria.adobe.com/RadioGroup        |
 | Select                  | https://react-aria.adobe.com/Select            |
+| Separator               | https://react-aria.adobe.com/Separator         |
 | Switch                  | https://react-aria.adobe.com/Switch            |
 | TagGroup, TagList, Tag  | https://react-aria.adobe.com/TagGroup          |
 | Text                    | https://react-spectrum.adobe.com/v3/Text       |
 | TextArea, TextField     | https://react-aria.adobe.com/TextField         |
+| TimeField               | https://react-aria.adobe.com/TimeField         |
 | ToggleButton            | https://react-aria.adobe.com/ToggleButton      |
 | ToggleButtonGroup       | https://react-aria.adobe.com/ToggleButtonGroup |
 | Tooltip, TooltipTrigger | https://react-aria.adobe.com/Tooltip           |
@@ -119,6 +123,8 @@ This project follows semantic versioning. See [CHANGELOG.md](./CHANGELOG.md) for
 
 Components live in `./src/components` and are targeted by the build process with an export in `./src/index.ts`.
 
+The `*.figma.tsx` files alongside each component are used to map component props to their counterpart properties in Figma via [Code Connect](https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect).
+
 #### Testing components with Vitest
 
 Unit tests can be run with Vitest using `npm run test`. Use `npm run test:watch` to run Vitest in watch mode.
@@ -129,9 +135,9 @@ Storybook stories live in `./src/stories`.
 
 Run `npm run storybook-dev` to access the Storybook instance for the component library.
 
-New versions of Storybook are automatically built in a GitHub Actions workflow and deployed in the `-dev` namespace in the OpenShift Silver cluster. See `.github/build_react_component_library_apps.yaml`.
+New versions of Storybook are automatically built in a GitHub Actions workflow and deployed in the `-dev` namespace in the OpenShift Silver cluster. New builds are automatically deployed to the `-prod` namespace when a GitHub release is published. See `.github/build_react_component_library_apps.yaml`.
 
-To deploy a new version of Storybook into `-test` or `-prod`, log in to the OpenShift CLI and run:
+To manually deploy a new version of Storybook into `-test` or `-prod`, log in to the OpenShift CLI and run:
 
 ```sh
 # Create a new layer in the `test` ImageStream from the latest `develop` image:
@@ -179,7 +185,11 @@ Then in a local React project folder, use `npm link @bcgov/design-system-react-c
 
 ### Linting
 
-ESLint is used for linting. See configuration file `eslint.config.js`.
+ESLint is used for linting. See configuration file `eslint.config.js` and `lint` script in `package.json`.
+
+### Formatting
+
+Prettier is used for formatting. See configuration file `prettier.config.js` and `format` scripts in `package.json`.
 
 ### Publish new versions
 

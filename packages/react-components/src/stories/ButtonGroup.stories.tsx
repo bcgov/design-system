@@ -36,9 +36,15 @@ export const ButtonGroupTemplate: Story = {
     orientation: "horizontal",
     ariaLabel: "A group of buttons",
     children: [
-      <Button variant="primary">Button 1</Button>,
-      <Button variant="secondary">Button 2</Button>,
-      <Button variant="secondary">Button 3</Button>,
+      <Button variant="primary" key="button-1">
+        Button 1
+      </Button>,
+      <Button variant="secondary" key="button-2">
+        Button 2
+      </Button>,
+      <Button variant="secondary" key="button-3">
+        Button 3
+      </Button>,
     ],
   },
   render: ({ ...args }: ButtonGroupProps) => <ButtonGroup {...args} />,
@@ -49,9 +55,15 @@ export const VerticalButtonGroup: Story = {
   args: {
     orientation: "vertical",
     children: [
-      <Button variant="primary">Button 1</Button>,
-      <Button variant="secondary">Button 2</Button>,
-      <Button variant="secondary">Button 3</Button>,
+      <Button variant="primary" key="button-1">
+        Button 1
+      </Button>,
+      <Button variant="secondary" key="button-2">
+        Button 2
+      </Button>,
+      <Button variant="secondary" key="button-3">
+        Button 3
+      </Button>,
     ],
   },
 };
@@ -62,9 +74,15 @@ export const CenteredButtonGroup: Story = {
     orientation: "horizontal",
     alignment: "center",
     children: [
-      <Button variant="primary">Button 1</Button>,
-      <Button variant="secondary">Button 2</Button>,
-      <Button variant="secondary">Button 3</Button>,
+      <Button variant="primary" key="button-1">
+        Button 1
+      </Button>,
+      <Button variant="secondary" key="button-2">
+        Button 2
+      </Button>,
+      <Button variant="secondary" key="button-3">
+        Button 3
+      </Button>,
     ],
   },
 };

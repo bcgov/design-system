@@ -10,18 +10,21 @@ import {
   AlertBannerPage,
   ButtonPage,
   ButtonGroupPage,
+  CalendarPage,
   CalloutPage,
   CheckboxGroupPage,
   DatePickerPage,
   InlineAlertPage,
   ModalDialogPage,
   NumberFieldPage,
+  ProgressBarPage,
   RadioGroupPage,
   SelectPage,
   TagGroupPage,
   TextPage,
   TextAreaPage,
   TextFieldPage,
+  TimeFieldPage,
   SwitchPage,
   TooltipPage,
 } from "@/pages";
@@ -110,11 +113,13 @@ function App() {
         <ButtonPage />
         <ButtonGroupPage />
         <AccordionGroupPage />
+        <CalendarPage />
         <CalloutPage />
         <CheckboxGroupPage />
         <SwitchPage />
         <InlineAlertPage />
         <ModalDialogPage />
+        <ProgressBarPage />
         <RadioGroupPage />
         <SelectPage />
         <TagGroupPage />
@@ -122,6 +127,7 @@ function App() {
         <TextAreaPage />
         <TextFieldPage />
         <DatePickerPage />
+        <TimeFieldPage />
         <NumberFieldPage />
         <TextPage />
       </main>

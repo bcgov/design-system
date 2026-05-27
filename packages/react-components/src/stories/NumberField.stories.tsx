@@ -225,6 +225,7 @@ export const DistanceUnits: Story = {
           ]}
           defaultValue="kilometer"
           value={unit}
+          aria-label="Distance units"
           onChange={(v: Key | null) => {
             if (typeof v === "string") {
               setUnit(v);

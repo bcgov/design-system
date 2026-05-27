@@ -2,18 +2,21 @@ import AccordionGroupPage from "./AccordionGroup";
 import AlertBannerPage from "./AlertBanner";
 import ButtonPage from "./Button";
 import ButtonGroupPage from "./ButtonGroup";
+import CalendarPage from "./Calendar";
 import CalloutPage from "./Callout";
 import CheckboxGroupPage from "./CheckboxGroup";
 import DatePickerPage from "./DatePicker";
 import InlineAlertPage from "./InlineAlert";
 import ModalDialogPage from "./ModalDialog";
 import NumberFieldPage from "./NumberField";
+import ProgressBarPage from "./ProgressBar";
 import RadioGroupPage from "./RadioGroup";
 import SelectPage from "./Select";
 import TagGroupPage from "./TagGroup";
 import TextPage from "./TextPage";
 import TextAreaPage from "./TextArea";
 import TextFieldPage from "./TextField";
+import TimeFieldPage from "./TimeField";
 import SwitchPage from "./Switch";
 import TooltipPage from "./Tooltip";
 
@@ -22,18 +25,21 @@ export {
   AlertBannerPage,
   ButtonPage,
   ButtonGroupPage,
+  CalendarPage,
   CalloutPage,
   CheckboxGroupPage,
   DatePickerPage,
   InlineAlertPage,
   ModalDialogPage,
   NumberFieldPage,
+  ProgressBarPage,
   RadioGroupPage,
   SelectPage,
   TagGroupPage,
   TextPage,
   TextAreaPage,
   TextFieldPage,
+  TimeFieldPage,
   SwitchPage,
   TooltipPage,
 };

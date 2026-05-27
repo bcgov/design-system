@@ -39,7 +39,7 @@ describe("DatePicker component", () => {
         label="Select date"
         defaultValue={new CalendarDate(2026, 2, 5)}
         onChange={handleChange}
-      />,
+      />
     );
 
     const calendarButton = screen.getByRole("button");

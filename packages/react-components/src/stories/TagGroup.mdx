@@ -30,7 +30,7 @@ import {
 
 <InlineAlert
   variant="info"
-  customIcon={[<SvgReactAriaIcon />]}
+  customIcon={<SvgReactAriaIcon />}
   title="This is a React Aria component"
   description="It is based on the RA Tag, TagList and TagGroup components. Consult the React Aria docs to understand its full API."
   buttons={[
@@ -40,7 +40,8 @@ import {
       buttonVariant="secondary"
       href="https://react-aria.adobe.com/TagGroup"
       target="_blank"
-      iconRight={[<SvgUpRightFromSquareIcon size={16} />]}
+      iconRight={<SvgUpRightFromSquareIcon size={16} />}
+      key="taggroup-docs"
     >
       TagGroup docs
     </Link>,

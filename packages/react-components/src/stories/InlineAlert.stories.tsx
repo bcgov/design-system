@@ -99,7 +99,7 @@ export const AlertWithCustomIcon: Story = {
   args: {
     title: "This alert uses a custom icon",
     description: "You can override the default icon set by the alert theme.",
-    customIcon: [<SvgBcOutlineIcon />],
+    customIcon: <SvgBcOutlineIcon />,
   },
 };
 
@@ -124,10 +124,10 @@ export const AlertWithButtons: Story = {
       "It renders a ButtonGroup area, into which you can pass button components.",
     variant: "success",
     buttons: [
-      <Button variant="tertiary" size="small">
+      <Button variant="tertiary" size="small" key="button-1">
         Button 1
       </Button>,
-      <Button variant="secondary" size="small">
+      <Button variant="secondary" size="small" key="button-2">
         Button 2
       </Button>,
     ],
