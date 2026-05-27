@@ -144,7 +144,7 @@ export default function Select<
                                     state.selectionManager.selectedKeys;
 
                                   const updatedSelectedKeys = new Set(
-                                    selectedKeys,
+                                    selectedKeys
                                   );
 
                                   for (const key of keys) {
@@ -152,7 +152,7 @@ export default function Select<
                                   }
 
                                   state.selectionManager.setSelectedKeys(
-                                    updatedSelectedKeys,
+                                    updatedSelectedKeys
                                   );
                                 }}
                               >
@@ -162,7 +162,7 @@ export default function Select<
                                   )
                                     .filter(
                                       (item): item is ListBoxItemProps =>
-                                        item !== null,
+                                        item !== null
                                     )
                                     /* Map ListBoxItem props to Tag props */
                                     .map((item) => ({
@@ -187,7 +187,7 @@ export default function Select<
                                 />
                               </TagGroup>
                             </div>,
-                            tagOverlay,
+                            tagOverlay
                           )}
                       </>
                     );
