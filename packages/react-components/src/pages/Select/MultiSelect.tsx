@@ -1,6 +1,6 @@
 import Select from "@/components/Select/Select";
 import { SvgCalendarIcon } from "@/components";
-import { TagProps } from "@/components/Tag";
+import type { TagProps } from "@/components/Tag";
 
 export default function MultiSelectExample() {
   const items = [
