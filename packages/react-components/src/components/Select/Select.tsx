@@ -25,7 +25,7 @@ import SvgChevronUpIcon from "../Icons/SvgChevronUpIcon";
 import SvgChevronDownIcon from "../Icons/SvgChevronDownIcon";
 import TagGroup from "../TagGroup/TagGroup";
 import TagList from "../TagList/TagList";
-import { TagProps } from "../Tag";
+import type { TagProps } from "../Tag";
 
 import "./Select.css";
 
