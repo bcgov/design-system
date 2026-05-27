@@ -76,7 +76,7 @@ export interface SelectProps<
   overflow?: "wrap" | "scroll";
 }
 
-/** Select displays a collapsible list of options and allows a user to select one of them. */
+/** Select displays a collapsible list of options and allows a user to select one or more of them. */
 export default function Select<
   T extends object,
   M extends "single" | "multiple" = "single",
