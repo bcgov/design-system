@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Select } from "../components";
-import { TagProps } from "../components/Tag";
+import type { TagProps } from "../components/Tag";
 
 const meta = {
   title: "Inputs and controls/Select",
