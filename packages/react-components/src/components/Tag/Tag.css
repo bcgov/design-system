@@ -27,6 +27,14 @@
   padding: 0;
 }
 
+/* Focus handling for close button */
+.bcds-react-aria-Tag .react-aria-Button[data-focus-visible] {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-hair);
+  border-radius: var(--layout-border-radius-small);
+}
+
 /* Tag colors */
 .bcds-react-aria-Tag.bc-blue {
   background-color: var(--theme-primary-blue);
