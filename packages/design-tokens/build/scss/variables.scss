@@ -112,7 +112,7 @@ $typography-line-heights-regular: 2.125rem; // Default line height
 $typography-line-heights-sparse: 2.25rem;
 $typography-line-heights-xsparse: 3rem;
 $typography-line-heights-xxsparse: 3.375rem; // Largest line height
-$typography-line-heights-auto: AUTO; // System token, used to generate type styles
+$typography-line-heights-auto: normal; // System token, used to generate type styles
 $typography-font-weights-regular: 400; // System token, used to generate text styles
 $typography-font-weights-bold: 700; // System token, used to generate text styles
 $typography-font-weights-italic-weight: 400; // System token, used to generate text styles
@@ -139,7 +139,7 @@ $typography-regular-h4: 400 1.5rem/2.25rem 'BC Sans'; // Alternate (unbolded) st
 $typography-regular-h3: 400 1.75rem/3rem 'BC Sans'; // Alternate (unbolded) style for Heading 3
 $typography-regular-h2: 400 2rem/3.375rem 'BC Sans'; // Alternate (unbolded) style for Heading 2
 $typography-regular-h1: 400 2.25rem/3rem 'BC Sans'; // Alternate (unbolded) style for Heading 1
-$typography-regular-display: 400 3rem/NaNAUTO 'BC Sans'; // Extra-large body text size. Do not use for headings
+$typography-regular-display: 400 3rem 'BC Sans'; // Extra-large body text size. Do not use for headings
 $typography-bold-label: 700 0.75rem/1.125rem 'BC Sans'; // Labels and captions (bolded)
 $typography-bold-small-body: 700 0.875rem/1.313rem 'BC Sans'; // Default for small body text (bolded)
 $typography-bold-body: 700 1rem/1.688rem 'BC Sans'; // Default for body text (bolded)
@@ -150,7 +150,7 @@ $typography-bold-h4: 700 1.5rem/2.25rem 'BC Sans'; // Default style for Heading 
 $typography-bold-h3: 700 1.75rem/3rem 'BC Sans'; // Default style for Heading 6. Includes all sizing/spacing values for H3
 $typography-bold-h2: 700 2rem/3rem 'BC Sans'; // Default style for Heading 6. Includes all sizing/spacing values for H2
 $typography-bold-h1: 700 2.25rem/3.375rem 'BC Sans'; // Default style for Heading 6. Includes all sizing/spacing values for H1
-$typography-bold-display: 700 3rem/NaNAUTO 'BC Sans'; // Extra-large font size (bolded). Do not use for headings
+$typography-bold-display: 700 3rem 'BC Sans'; // Extra-large font size (bolded). Do not use for headings
 $typography-italic-label: italic 400 0.75rem/1.125rem 'BC Sans'; // Labels and captions (italic)
 $typography-italic-small-body: italic 400 0.875rem/1.313rem 'BC Sans'; // Small body text (italic)
 $typography-italic-body: italic 400 1rem/1.688rem 'BC Sans'; // Default for body text (italic)
@@ -161,7 +161,7 @@ $typography-italic-h4: italic 400 1.5rem/2.25rem 'BC Sans'; // Alternate (italic
 $typography-italic-h3: italic 400 1.75rem/3.375rem 'BC Sans'; // Alternate (italic) style for Heading 3
 $typography-italic-h2: italic 400 2rem/3rem 'BC Sans'; // Alternate (italic) style for Heading 2
 $typography-italic-h1: italic 400 2.25rem/3.375rem 'BC Sans'; // Alternate (italic) style for Heading 1
-$typography-italic-display: italic 400 3rem/NaNAUTO 'BC Sans'; // Extra-large font size (italic). Do not use for headings
+$typography-italic-display: italic 400 3rem 'BC Sans'; // Extra-large font size (italic). Do not use for headings
 $typography-text-case-none: none;
 $typography-text-decoration-none: none; // System token, used to generate type styles
 $typography-paragraph-indent-0: 0px; // System token, used to generate type styles
