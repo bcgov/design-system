@@ -101,7 +101,7 @@ function App() {
               <Button size="small" variant="secondary">
                 Menu <SvgMenuIcon />
               </Button>
-              <Menu>
+              <Menu aria-label="Menu">
                 <MenuItem>Link</MenuItem>
                 <MenuItem>Link</MenuItem>
                 <MenuItem>Link</MenuItem>
