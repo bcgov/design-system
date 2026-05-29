@@ -1,9 +1,15 @@
-import { Menu, MenuItem, MenuTrigger, Popover } from "react-aria-components";
-
 import "./App.css";
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
-import { Button, Footer, FooterLinks, Header } from "@/components";
+import {
+  Button,
+  Footer,
+  FooterLinks,
+  Header,
+  Menu,
+  MenuItem,
+  MenuTrigger,
+} from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
   AccordionGroupPage,
@@ -95,13 +101,11 @@ function App() {
               <Button size="small" variant="secondary">
                 Menu <SvgMenuIcon />
               </Button>
-              <Popover>
-                <Menu>
-                  <MenuItem className="menu-item">Link</MenuItem>
-                  <MenuItem className="menu-item">Link</MenuItem>
-                  <MenuItem className="menu-item">Link</MenuItem>
-                </Menu>
-              </Popover>
+              <Menu>
+                <MenuItem>Link</MenuItem>
+                <MenuItem>Link</MenuItem>
+                <MenuItem>Link</MenuItem>
+              </Menu>
             </MenuTrigger>
           )}
         </div>
