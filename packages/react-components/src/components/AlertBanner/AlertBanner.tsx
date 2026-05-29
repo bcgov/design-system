@@ -7,10 +7,6 @@ import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 import SvgInfoIcon from "../Icons/SvgInfoIcon";
 
 export interface AlertBannerProps extends React.PropsWithChildren {
-  /* Sets vertical height and font size of the banner */
-  size?: "small" | "medium";
-  /* Sets width of the banner */
-  layout?: "fixed" | "fluid";
   /* Sets banner theme */
   variant?: "info" | "success" | "warning" | "danger" | "black";
   /* Hides icon  */
@@ -45,8 +41,6 @@ function getIcon(variant: string) {
 
 export default function AlertBanner({
   variant = "info",
-  size = "medium",
-  layout = "fixed",
   isIconHidden = false,
   isCloseable = true,
   role = "status",
@@ -56,10 +50,7 @@ export default function AlertBanner({
   ...props
 }: AlertBannerProps) {
   return (
-    <div
-      className={`bcds-Alert-Banner ${variant} ${size} ${layout}`}
-      {...props}
-    >
+    <div className={`bcds-Alert-Banner ${variant}`} {...props}>
       <div className="bcds-Alert-Banner--Container">
         {" "}
         {!isIconHidden && (

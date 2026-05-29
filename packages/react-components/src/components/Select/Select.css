@@ -63,7 +63,7 @@
 .bcds-react-aria-Select--Button[data-hovered] {
   border-color: var(--surface-color-border-dark);
 }
-.bcds-react-aria-Select--Button[data-focus-visible] {
+.bcds-react-aria-Select--Button[data-focused] {
   border-color: var(--surface-color-border-active);
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
