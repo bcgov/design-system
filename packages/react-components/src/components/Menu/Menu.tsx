@@ -28,7 +28,7 @@ export interface MenuSectionProps {
 export interface MenuProps<
   T extends MenuItemProps,
 > extends ReactAriaMenuProps<T> {
-  /* Set size of menu button and items */
+  /* Set size of menu items (does not affect the MenuTrigger element) */
   size?: "small" | "medium";
   /* Use for a simple list menu */
   items?: T[];
