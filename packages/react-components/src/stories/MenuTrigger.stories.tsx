@@ -46,12 +46,13 @@ type Story = StoryObj<typeof meta>;
 export const MenuTriggerTemplate: Story = {
   args: {
     children: [
-      <Button variant="secondary">
+      <Button variant="secondary" key="trigger">
         Menu <SvgChevronDownIcon />
       </Button>,
-      <Menu>
+      <Menu key="menu">
         <MenuItem
           label="Menu item 1"
+          key="1"
           description="Menu item description"
           iconLeft={<SvgBcOutlineIcon />}
         />

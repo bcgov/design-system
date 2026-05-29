@@ -88,9 +88,6 @@ const meta = {
       options: ["none", "single", "multiple"],
       control: { type: "radio" },
       description: "The type of selection that is allowed",
-      table: {
-        defaultValue: { summary: "single" },
-      },
     },
     disallowEmptySelection: {
       control: { type: "boolean" },
@@ -233,7 +230,7 @@ export const Submenu: Story = {
           </Menu>
         </SubmenuTrigger>
       </MenuSection>,
-      <Separator size="small" />,
+      <Separator key="separator" size="small" />,
       <MenuSection key="section2">
         <MenuSectionHeader>Section 2</MenuSectionHeader>
         <MenuItem>Link 1</MenuItem>
