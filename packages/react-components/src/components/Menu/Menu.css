@@ -43,3 +43,4 @@
   padding: var(--layout-padding-xsmall) var(--layout-padding-xsmall);
   min-width: var(--trigger-width);
   overflow-y: auto;
+}
