@@ -10,6 +10,7 @@ import {
   Key,
   Collection,
 } from "react-aria-components";
+import { useRef } from "react";
 
 import MenuItem, { MenuItemProps } from "../MenuItem/MenuItem";
 import Separator from "../Separator";
@@ -46,11 +47,18 @@ export default function Menu<T extends MenuItemProps>({
   placement,
   ...props
 }: MenuProps<T>) {
+  const menuScrollRef = useRef<HTMLDivElement | null>(null);
+
   /* Manual composition via children */
   if (children) {
     return (
-      <Popover className="bcds-react-aria-Popover" placement={placement}>
+      <Popover
+        className="bcds-react-aria-Popover"
+        placement={placement}
+        scrollRef={menuScrollRef}
+      >
         <ReactAriaMenu
+          ref={menuScrollRef}
           className={`bcds-react-aria-Menu ${size}`}
           items={items}
           {...props}
@@ -71,8 +79,13 @@ export default function Menu<T extends MenuItemProps>({
       : undefined;
 
   return (
-    <Popover className="bcds-react-aria-Popover" placement={placement}>
+    <Popover
+      className="bcds-react-aria-Popover"
+      placement={placement}
+      scrollRef={menuScrollRef}
+    >
       <ReactAriaMenu
+        ref={menuScrollRef}
         className={`bcds-react-aria-Menu ${size}`}
         {...props}
         items={sectionsArray}

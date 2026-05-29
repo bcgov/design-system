@@ -79,12 +79,7 @@ a.bcds-react-aria-MenuItem[data-disabled]
   background-color: var(--surface-color-menus-hover);
   outline: none;
 }
-.bcds-react-aria-MenuItem[data-focus-visible] {
-  outline: solid var(--layout-border-width-medium)
-    var(--surface-color-border-active);
-  outline-offset: var(--layout-margin-none);
-  border-radius: var(--layout-border-radius-small);
-}
+
 .bcds-react-aria-MenuItem[data-disabled] {
   color: var(--typography-color-disabled);
   cursor: not-allowed;
