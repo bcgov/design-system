@@ -180,8 +180,8 @@ jobs:
           registry-url: "https://npm.pkg.github.com/"
           scope: "@bcgov"
 
-      - name: Publish to GitHub Packages
-        run: npm publish --registry=https://npm.pkg.github.com/
+      - name: Publish to GitHub Packages @latest
+        run: npm publish --tag latest --registry=https://npm.pkg.github.com/
         working-directory: ./packages/react-components
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
