@@ -40,7 +40,7 @@
   box-sizing: border-box;
   overflow: hidden;
   padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
-  width: var(
+  min-width: var(
     --trigger-width
   ); /* Variable provided by Select component https://react-spectrum.adobe.com/react-aria/Select.html#popover-1 */
 }
