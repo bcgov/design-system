@@ -14,9 +14,10 @@ export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
 
 type NavbarSize = NonNullable<NavbarProps["size"]>;
 
-/* Pass size prop down to expected child component types */
+/* Allowlist of components which will receive the size prop from Navbar */
 const sizableChildTypes = [Button, Link] as const;
 
+/* Clone children and inject size prop */
 function injectSizeToKnownChild(child: React.ReactNode, size: NavbarSize) {
   if (!React.isValidElement(child)) {
     return child;
@@ -49,6 +50,7 @@ export default function Navbar({
   if (typeof children === "function") {
     childrenToRender = children;
   } else {
+    /* Add separator between each child item */
     const childrenArray = React.Children.toArray(children);
     childrenToRender = childrenArray.flatMap((child, index) => [
       injectSizeToKnownChild(child, size),
