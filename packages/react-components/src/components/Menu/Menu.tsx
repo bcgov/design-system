@@ -30,7 +30,7 @@ export interface MenuProps<
   T extends MenuItemProps,
 > extends ReactAriaMenuProps<T> {
   /* Set size of menu items (does not affect the MenuTrigger element) */
-  size?: "small" | "medium";
+  itemSize?: "small" | "medium";
   /* Use for a simple list menu */
   items?: T[];
   /* Use for a sectioned list with `items` in each section */
@@ -40,7 +40,7 @@ export interface MenuProps<
 }
 
 export default function Menu<T extends MenuItemProps>({
-  size = "medium",
+  itemSize = "medium",
   children,
   items,
   sections,
@@ -59,7 +59,7 @@ export default function Menu<T extends MenuItemProps>({
       >
         <ReactAriaMenu
           ref={menuScrollRef}
-          className={`bcds-react-aria-Menu ${size}`}
+          className={`bcds-react-aria-Menu ${itemSize}`}
           items={items}
           {...props}
         >
@@ -86,7 +86,7 @@ export default function Menu<T extends MenuItemProps>({
     >
       <ReactAriaMenu
         ref={menuScrollRef}
-        className={`bcds-react-aria-Menu ${size}`}
+        className={`bcds-react-aria-Menu ${itemSize}`}
         {...props}
         items={sectionsArray}
       >
@@ -97,7 +97,7 @@ export default function Menu<T extends MenuItemProps>({
             )}
             <Collection items={section.items}>
               {(item: MenuItemProps) => (
-                <MenuItem {...item} size={size}>
+                <MenuItem {...item} size={itemSize}>
                   {item.children}
                 </MenuItem>
               )}

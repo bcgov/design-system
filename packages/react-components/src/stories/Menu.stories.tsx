@@ -21,7 +21,7 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
-    size: {
+    itemSize: {
       options: ["small", "medium"],
       control: { type: "radio" },
       description:
@@ -113,7 +113,7 @@ type Story = StoryObj<typeof meta>;
 
 export const MenuTemplate: Story = {
   args: {
-    size: "medium",
+    itemSize: "medium",
     selectionMode: "single",
     placement: "bottom",
     children: [
@@ -167,7 +167,7 @@ export const Items: Story = {
 
 export const SmallMenu: Story = {
   args: {
-    size: "small",
+    itemSize: "small",
     items: [
       { id: 1, children: "Link 1" },
       { id: 2, children: "Link 2" },
@@ -216,7 +216,7 @@ export const SectionedMenu: Story = {
 
 export const Submenu: Story = {
   args: {
-    size: "medium",
+    itemSize: "medium",
     children: [
       <MenuSection key="section1">
         <MenuSectionHeader>Section 1</MenuSectionHeader>

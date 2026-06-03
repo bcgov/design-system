@@ -33,7 +33,7 @@ describe("Menu", () => {
     render(
       <MenuTrigger>
         <Button>Open</Button>
-        <Menu aria-label="Actions" size="small">
+        <Menu aria-label="Actions" itemSize="small">
           <MenuItem id="edit">Edit</MenuItem>
         </Menu>
       </MenuTrigger>
