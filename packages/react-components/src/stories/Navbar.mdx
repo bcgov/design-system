@@ -59,9 +59,13 @@ The primary use case for a Navbar is alongside the Header component:
 
 Set `size` to `small` to reduce the amount of vertical padding and spacing between individual items.
 
-**Note**: this does not affect child components directly. You should set the size of each child accordingly.
-
 <Canvas of={NavbarStories.Small} />
+
+Any of these B.C. Design System components passed as children will also receive the `size` prop:
+
+- [Button](/docs/inputs-and-controls-button--docs)
+- [Menu](/docs/navigation-and-structure-menu--docs)
+- [Link](/docs/utility-text-and-links-link--docs)
 
 ### Orientation
 

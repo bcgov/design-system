@@ -44,22 +44,22 @@ export const HeaderWithNavbar: Story = {
     size: "small",
     orientation: "horizontal",
     children: [
-      <Link size="small" href="#" id="1">
+      <Link href="#" id="1">
         Link 1
       </Link>,
-      <Link size="small" href="#" id="2">
+      <Link href="#" id="2">
         Link 2
       </Link>,
-      <Link size="small" href="#" id="3">
+      <Link href="#" id="3">
         Link 3
       </Link>,
-      <Link size="small" href="#" id="4">
+      <Link href="#" id="4">
         Link 4
       </Link>,
-      <Link size="small" href="#" id="5">
+      <Link href="#" id="5">
         Link 5
       </Link>,
-      <Link size="small" href="#" id="6">
+      <Link href="#" id="6">
         Link 6
       </Link>,
     ],
@@ -79,18 +79,10 @@ export const Small: Story = {
   args: {
     size: "small",
     children: [
-      <Link href="#" size="small">
-        Link 1
-      </Link>,
-      <Link href="#" size="small">
-        Link 2
-      </Link>,
-      <Link href="#" size="small">
-        Link 3
-      </Link>,
-      <Button variant="primary" size="small">
-        Log in
-      </Button>,
+      <Link href="#">Link 1</Link>,
+      <Link href="#">Link 2</Link>,
+      <Link href="#">Link 3</Link>,
+      <Button variant="primary">Log in</Button>,
     ],
   },
 };
