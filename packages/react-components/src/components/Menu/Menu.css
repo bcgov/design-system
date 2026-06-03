@@ -1,8 +1,8 @@
 .bcds-react-aria-Menu {
+  box-sizing: border-box;
   overflow-y: auto;
   max-height: inherit;
-  scroll-padding-block: var(--layout-border-width-medium);
-  padding: var(--layout-padding-hair) var(--layout-padding-none);
+  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
 }
 
 /* Sizing */
@@ -39,7 +39,7 @@
   box-shadow: var(--surface-shadow-medium);
   box-sizing: border-box;
   overflow: hidden;
-  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
+  /* padding: var(--layout-padding-hair) var(--layout-padding-xsmall); */
   width: var(
     --trigger-width
   ); /* Variable provided by Select component https://react-spectrum.adobe.com/react-aria/Select.html#popover-1 */

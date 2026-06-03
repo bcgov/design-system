@@ -47,7 +47,7 @@ export default function Menu<T extends MenuItemProps>({
   placement,
   ...props
 }: MenuProps<T>) {
-  const menuScrollRef = useRef<HTMLDivElement | null>(null);
+  // const menuScrollRef = useRef<HTMLDivElement | null>(null);
 
   /* Manual composition via children */
   if (children) {
@@ -55,10 +55,10 @@ export default function Menu<T extends MenuItemProps>({
       <Popover
         className="bcds-react-aria-Popover"
         placement={placement}
-        scrollRef={menuScrollRef}
+        // scrollRef={menuScrollRef}
       >
         <ReactAriaMenu
-          ref={menuScrollRef}
+          // ref={menuScrollRef}
           className={`bcds-react-aria-Menu ${itemSize}`}
           items={items}
           {...props}
@@ -82,10 +82,10 @@ export default function Menu<T extends MenuItemProps>({
     <Popover
       className="bcds-react-aria-Popover"
       placement={placement}
-      scrollRef={menuScrollRef}
+      // scrollRef={menuScrollRef}
     >
       <ReactAriaMenu
-        ref={menuScrollRef}
+        // ref={menuScrollRef}
         className={`bcds-react-aria-Menu ${itemSize}`}
         {...props}
         items={sectionsArray}
