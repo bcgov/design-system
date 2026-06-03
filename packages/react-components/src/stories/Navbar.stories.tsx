@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Button, Link, Navbar } from "../components";
+import { Button, Header, Link, Navbar } from "../components";
 
 import { NavbarProps } from "@/components/Navbar";
 
@@ -39,7 +39,63 @@ export const NavbarTemplate: Story = {
   render: ({ ...args }: NavbarProps) => <Navbar {...args} />,
 };
 
-export const VerticalNavbarTemplate: Story = {
+export const HeaderWithNavbar: Story = {
+  args: {
+    size: "small",
+    orientation: "horizontal",
+    children: [
+      <Link size="small" href="#" id="1">
+        Link 1
+      </Link>,
+      <Link size="small" href="#" id="2">
+        Link 2
+      </Link>,
+      <Link size="small" href="#" id="3">
+        Link 3
+      </Link>,
+      <Link size="small" href="#" id="4">
+        Link 4
+      </Link>,
+      <Link size="small" href="#" id="5">
+        Link 5
+      </Link>,
+      <Link size="small" href="#" id="6">
+        Link 6
+      </Link>,
+    ],
+  },
+  render: ({ ...args }: NavbarProps) => (
+    <>
+      <Header title="Example header with navbar">
+        <Button size="small">Log in</Button>
+      </Header>
+      <Navbar {...args} />
+    </>
+  ),
+};
+
+export const Small: Story = {
+  ...NavbarTemplate,
+  args: {
+    size: "small",
+    children: [
+      <Link href="#" size="small">
+        Link 1
+      </Link>,
+      <Link href="#" size="small">
+        Link 2
+      </Link>,
+      <Link href="#" size="small">
+        Link 3
+      </Link>,
+      <Button variant="primary" size="small">
+        Log in
+      </Button>,
+    ],
+  },
+};
+
+export const Vertical: Story = {
   args: {
     orientation: "vertical",
     children: [

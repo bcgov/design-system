@@ -24,8 +24,8 @@ import * as HeaderStories from "./Header.stories";
 # Navbar
 
 <Subtitle>
-  A menu enables the user to select from a list of actions, options or links in
-  a dropdown.
+  A navbar displays a list of links, menus or buttons to help the user navigate
+  an interface.
 </Subtitle>
 
 ## Usage and resources
@@ -35,9 +35,11 @@ import * as HeaderStories from "./Header.stories";
   language="typescript"
 />
 
+Navbar is a simple container component renders a list of links, menus and/or buttons. It is primarily intended to be used in parallel with the [Header](/docs/navigation-and-structure-header--docs) component.
+
 Learn more about working with the Navbar component:
 
-- [Usage and best practice guidance](#)
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=AE80414124294EADA75D7853A96BD2E5)
 - [View the select component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
 
 ## Controls
@@ -46,3 +48,23 @@ Learn more about working with the Navbar component:
 <Controls of={NavbarStories.NavbarTemplate} />
 
 ## Configuration
+
+Navbar renders as a `<div>` containing a `<nav>` element. It automatically renders a [Separator](/docs/utility-separator--docs) between each child item.
+
+The primary use case for a Navbar is alongside the Header component:
+
+<Canvas of={NavbarStories.HeaderWithNavbar} />
+
+### Sizing
+
+Set `size` to `small` to reduce the amount of vertical padding and spacing between individual items.
+
+**Note**: this does not affect child components directly. You should set the size of each child accordingly.
+
+<Canvas of={NavbarStories.Small} />
+
+### Orientation
+
+Navbar can also be used as a vertical navigation menu, via the `orientation` prop:
+
+<Canvas of={NavbarStories.Vertical} />
