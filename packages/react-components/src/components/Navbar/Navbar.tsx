@@ -6,7 +6,9 @@ import Separator from "../Separator";
 import "./Navbar.css";
 
 export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
+  /* Set vertical padding and gap size, and set size of specific types of children */
   size?: "small" | "medium";
+  /* Set the navbar orientation */
   orientation?: "horizontal" | "vertical";
 }
 
