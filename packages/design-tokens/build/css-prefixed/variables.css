@@ -112,7 +112,7 @@
   --bcds-typography-line-heights-sparse: 2.25rem;
   --bcds-typography-line-heights-xsparse: 3rem;
   --bcds-typography-line-heights-xxsparse: 3.375rem; /** Largest line height */
-  --bcds-typography-line-heights-auto: normal; /** System token, used to generate type styles */
+  --bcds-typography-line-heights-auto: AUTO; /** System token, used to generate type styles */
   --bcds-typography-font-weights-regular: 400; /** System token, used to generate text styles */
   --bcds-typography-font-weights-bold: 700; /** System token, used to generate text styles */
   --bcds-typography-font-weights-italic-weight: 400; /** System token, used to generate text styles */
@@ -139,7 +139,7 @@
   --bcds-typography-regular-h3: 400 1.75rem/3rem 'BC Sans'; /** Alternate (unbolded) style for Heading 3 */
   --bcds-typography-regular-h2: 400 2rem/3.375rem 'BC Sans'; /** Alternate (unbolded) style for Heading 2 */
   --bcds-typography-regular-h1: 400 2.25rem/3rem 'BC Sans'; /** Alternate (unbolded) style for Heading 1 */
-  --bcds-typography-regular-display: 400 3rem 'BC Sans'; /** Extra-large body text size. Do not use for headings */
+  --bcds-typography-regular-display: 400 3rem/NaNAUTO 'BC Sans'; /** Extra-large body text size. Do not use for headings */
   --bcds-typography-bold-label: 700 0.75rem/1.125rem 'BC Sans'; /** Labels and captions (bolded) */
   --bcds-typography-bold-small-body: 700 0.875rem/1.313rem 'BC Sans'; /** Default for small body text (bolded) */
   --bcds-typography-bold-body: 700 1rem/1.688rem 'BC Sans'; /** Default for body text (bolded) */
@@ -150,7 +150,7 @@
   --bcds-typography-bold-h3: 700 1.75rem/3rem 'BC Sans'; /** Default style for Heading 6. Includes all sizing/spacing values for H3 */
   --bcds-typography-bold-h2: 700 2rem/3rem 'BC Sans'; /** Default style for Heading 6. Includes all sizing/spacing values for H2 */
   --bcds-typography-bold-h1: 700 2.25rem/3.375rem 'BC Sans'; /** Default style for Heading 6. Includes all sizing/spacing values for H1 */
-  --bcds-typography-bold-display: 700 3rem 'BC Sans'; /** Extra-large font size (bolded). Do not use for headings */
+  --bcds-typography-bold-display: 700 3rem/NaNAUTO 'BC Sans'; /** Extra-large font size (bolded). Do not use for headings */
   --bcds-typography-italic-label: italic 400 0.75rem/1.125rem 'BC Sans'; /** Labels and captions (italic) */
   --bcds-typography-italic-small-body: italic 400 0.875rem/1.313rem 'BC Sans'; /** Small body text (italic) */
   --bcds-typography-italic-body: italic 400 1rem/1.688rem 'BC Sans'; /** Default for body text (italic) */
@@ -161,7 +161,7 @@
   --bcds-typography-italic-h3: italic 400 1.75rem/3.375rem 'BC Sans'; /** Alternate (italic) style for Heading 3 */
   --bcds-typography-italic-h2: italic 400 2rem/3rem 'BC Sans'; /** Alternate (italic) style for Heading 2 */
   --bcds-typography-italic-h1: italic 400 2.25rem/3.375rem 'BC Sans'; /** Alternate (italic) style for Heading 1 */
-  --bcds-typography-italic-display: italic 400 3rem 'BC Sans'; /** Extra-large font size (italic). Do not use for headings */
+  --bcds-typography-italic-display: italic 400 3rem/NaNAUTO 'BC Sans'; /** Extra-large font size (italic). Do not use for headings */
   --bcds-typography-text-case-none: none;
   --bcds-typography-text-decoration-none: none; /** System token, used to generate type styles */
   --bcds-typography-paragraph-indent-0: 0px; /** System token, used to generate type styles */
