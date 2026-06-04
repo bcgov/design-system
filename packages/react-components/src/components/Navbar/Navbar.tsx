@@ -13,7 +13,6 @@ export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
 type NavbarSize = NonNullable<NavbarProps["size"]>;
 
 /* Allowlist of components which will receive the size prop from Navbar */
-/* TODO: add Menu to this list */
 const sizableChildTypes = [Button, Link] as const;
 
 /* Clone children and inject size prop */
