@@ -70,17 +70,17 @@
 }
 
 .bcds-react-aria-TextArea--Container:has(
-    > .bcds-react-aria-TextArea--Input[data-focused]
-  ),
+  > .bcds-react-aria-TextArea--Input[data-focused]
+),
 .bcds-react-aria-TextArea--Container:has(
-    > .bcds-react-aria-TextArea--Input[data-focused][data-hovered]
-  ) {
+  > .bcds-react-aria-TextArea--Input[data-focused][data-hovered]
+) {
   border-color: var(--surface-color-border-active);
 }
 
 .bcds-react-aria-TextArea--Container:has(
-    > .bcds-react-aria-TextArea--Input[data-focus-visible]
-  ) {
+  > .bcds-react-aria-TextArea--Input[data-focus-visible]
+) {
   border-radius: var(--layout-border-radius-large);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-active);
@@ -90,8 +90,8 @@
 }
 
 .bcds-react-aria-TextArea--Container:has(
-    > .bcds-react-aria-TextArea--Input[data-hovered]
-  ) {
+  > .bcds-react-aria-TextArea--Input[data-hovered]
+) {
   border-color: var(--surface-color-border-dark);
 }
 
