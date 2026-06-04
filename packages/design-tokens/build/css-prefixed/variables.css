@@ -135,7 +135,7 @@
   --bcds-typography-line-heights-sparse: 2.25rem;
   --bcds-typography-line-heights-xsparse: 3rem;
   --bcds-typography-line-heights-xxsparse: 3.375rem; /** Largest line height */
-  --bcds-typography-line-heights-auto: normal; /** System token, used to generate type styles */
+  --bcds-typography-line-heights-auto: AUTO; /** System token, used to generate type styles */
   --bcds-typography-font-weights-regular: 400; /** System token, used to generate text styles */
   --bcds-typography-font-weights-bold: 700; /** System token, used to generate text styles */
   --bcds-typography-font-weights-italic-weight: 400; /** System token, used to generate text styles */
