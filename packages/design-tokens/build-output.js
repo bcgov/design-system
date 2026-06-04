@@ -3,6 +3,30 @@ import StyleDictionary from "style-dictionary";
 
 register(StyleDictionary);
 
+const AUTO_LINE_HEIGHT_TRANSFORM = "bcds/typography/lineheight-auto-normalize";
+
+StyleDictionary.registerTransform({
+  name: AUTO_LINE_HEIGHT_TRANSFORM,
+  type: "value",
+  matcher: (token) =>
+    token.type === "lineHeights" &&
+    token.path?.join(".") === "typography.lineHeights.auto",
+  transform: (token) => {
+    if (typeof token.value !== "string") {
+      return token.value;
+    }
+
+    return token.value.toUpperCase() === "AUTO" ? "normal" : token.value;
+  },
+});
+
+const TOKENS_STUDIO_TRANSFORMS =
+  StyleDictionary.hooks.transformGroups["tokens-studio"];
+const TOKENS_STUDIO_TRANSFORMS_WITH_AUTO_LINE_HEIGHT = [
+  ...TOKENS_STUDIO_TRANSFORMS,
+  AUTO_LINE_HEIGHT_TRANSFORM,
+];
+
 const sd = new StyleDictionary({
   source: ["input/tokens.json"],
   preprocessors: ["tokens-studio"],
@@ -22,6 +46,7 @@ const sd = new StyleDictionary({
         "ts/size/css/letterspacing",
         "ts/color/css/hexrgba",
         "ts/color/modifiers",
+        AUTO_LINE_HEIGHT_TRANSFORM,
         "name/kebab",
       ],
       buildPath: "build/css/",
@@ -45,6 +70,7 @@ const sd = new StyleDictionary({
         "ts/size/css/letterspacing",
         "ts/color/css/hexrgba",
         "ts/color/modifiers",
+        AUTO_LINE_HEIGHT_TRANSFORM,
         "name/kebab",
       ],
       buildPath: "build/css-prefixed/",
@@ -56,7 +82,7 @@ const sd = new StyleDictionary({
       ],
     },
     js: {
-      transformGroup: "tokens-studio",
+      transforms: TOKENS_STUDIO_TRANSFORMS_WITH_AUTO_LINE_HEIGHT,
       buildPath: "build/js/",
       files: [
         {
@@ -70,7 +96,7 @@ const sd = new StyleDictionary({
       ],
     },
     jsPrefixed: {
-      transformGroup: "tokens-studio",
+      transforms: TOKENS_STUDIO_TRANSFORMS_WITH_AUTO_LINE_HEIGHT,
       prefix: "bcds",
       buildPath: "build/js-prefixed/",
       files: [
@@ -85,7 +111,7 @@ const sd = new StyleDictionary({
       ],
     },
     cjs: {
-      transformGroup: "tokens-studio",
+      transforms: TOKENS_STUDIO_TRANSFORMS_WITH_AUTO_LINE_HEIGHT,
       buildPath: "build/cjs/",
       files: [
         {
@@ -99,7 +125,7 @@ const sd = new StyleDictionary({
       ],
     },
     cjsPrefixed: {
-      transformGroup: "tokens-studio",
+      transforms: TOKENS_STUDIO_TRANSFORMS_WITH_AUTO_LINE_HEIGHT,
       prefix: "bcds",
       buildPath: "build/cjs-prefixed/",
       files: [
@@ -115,7 +141,7 @@ const sd = new StyleDictionary({
     },
     scss: {
       transformGroup: "tokens-studio",
-      transforms: ["name/kebab"],
+      transforms: [AUTO_LINE_HEIGHT_TRANSFORM, "name/kebab"],
       buildPath: "build/scss/",
       files: [
         {
@@ -133,7 +159,7 @@ const sd = new StyleDictionary({
     },
     scssPrefixed: {
       transformGroup: "tokens-studio",
-      transforms: ["name/kebab"],
+      transforms: [AUTO_LINE_HEIGHT_TRANSFORM, "name/kebab"],
       buildPath: "build/scss-prefixed/",
       prefix: "bcds",
       files: [
