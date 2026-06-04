@@ -1,0 +1,45 @@
+.bcds-react-aria-Menu {
+  box-sizing: border-box;
+  overflow-y: auto;
+  max-height: inherit;
+  padding: var(--layout-padding-xsmall);
+}
+
+/* Sizing */
+.bcds-react-aria-Menu.small {
+  font: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-Menu.medium {
+  font: var(--typography-regular-body);
+}
+
+/* Sections */
+.bcds-react-aria-Menu .react-aria-Header {
+  padding: var(--layout-padding-small);
+  font: var(--typography-bold-small-body);
+}
+.bcds-react-aria-Menu .react-aria-MenuSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-small);
+}
+
+/* States */
+.bcds-react-aria-Menu[data-focused] {
+  outline: none;
+}
+
+/* Popover */
+.bcds-react-aria-Popover {
+  background-color: var(--surface-color-forms-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  box-shadow: var(--surface-shadow-medium);
+  box-sizing: border-box;
+  overflow: hidden;
+  min-width: var(
+    --trigger-width
+  ); /* Variable provided by Select component https://react-spectrum.adobe.com/react-aria/Select.html#popover-1 */
+}
