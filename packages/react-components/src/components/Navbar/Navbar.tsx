@@ -44,31 +44,25 @@ export default function Navbar({
   children,
   ...props
 }: NavbarProps) {
-  let childrenToRender: typeof children;
-
-  if (typeof children === "function") {
-    childrenToRender = children;
-  } else {
-    /* Add separator between each child item */
-    const childrenArray = React.Children.toArray(children);
-    childrenToRender = childrenArray.flatMap((child, index) => [
-      <li className="bcds-react-aria-Navbar--Item" key={`item-${index}`}>
-        {injectSizeToKnownChild(child, size)}
-      </li>,
-      ...(index < childrenArray.length - 1
-        ? [
-            <li
-              className="bcds-react-aria-Navbar--Separator"
-              key={`sep-${index}`}
-              role="presentation"
-              aria-hidden="true"
-            >
-              <Separator orientation="vertical" size="small" />
-            </li>,
-          ]
-        : []),
-    ]);
-  }
+  /* Add separator between each child item */
+  const childrenArray = React.Children.toArray(children);
+  const childrenToRender = childrenArray.flatMap((child, index) => [
+    <li className="bcds-react-aria-Navbar--Item" key={`item-${index}`}>
+      {injectSizeToKnownChild(child, size)}
+    </li>,
+    ...(index < childrenArray.length - 1
+      ? [
+          <li
+            className="bcds-react-aria-Navbar--Separator"
+            key={`sep-${index}`}
+            role="presentation"
+            aria-hidden="true"
+          >
+            <Separator orientation="vertical" size="small" />
+          </li>,
+        ]
+      : []),
+  ]);
 
   return (
     <div className="bcds-react-aria-Navbar">
