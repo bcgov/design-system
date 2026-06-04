@@ -14,19 +14,37 @@
 .bcds-react-aria-Navbar--Container {
   box-sizing: border-box;
   display: flex;
+  flex-direction: row;
   flex-grow: 1;
-  flex-wrap: wrap;
-  white-space: normal;
-  align-items: center;
   max-width: 1100px;
 }
 
+.bcds-react-aria-Navbar--List {
+  display: flex;
+  flex-wrap: wrap;
+  white-space: normal;
+  align-items: center;
+  list-style: none;
+  margin: unset;
+  padding: unset;
+}
+
+.bcds-react-aria-Navbar--Separator {
+  display: flex;
+  align-self: stretch;
+}
+
+.bcds-react-aria-Navbar--Separator
+  > .bcds-react-aria-Separator[aria-orientation="vertical"] {
+  height: 100%;
+}
+
 /* Sizing */
-.bcds-react-aria-Navbar--Container.small {
+.bcds-react-aria-Navbar--Container.small > .bcds-react-aria-Navbar--List {
   padding: var(--layout-padding-xsmall) var(--layout-padding-none);
   gap: var(--layout-margin-xsmall);
 }
-.bcds-react-aria-Navbar--Container.medium {
+.bcds-react-aria-Navbar--Container.medium > .bcds-react-aria-Navbar--List {
   padding: var(--layout-padding-small) var(--layout-padding-none);
   gap: var(--layout-margin-small);
 }

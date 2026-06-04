@@ -22,7 +22,7 @@ describe("Navbar", () => {
   const navbar = screen.getByTestId("navbar");
   const button = screen.getByRole("button", { name: /button/i });
   const link = screen.getByRole("link", { name: /link/i });
-  const separators = screen.getAllByRole("separator");
+  const separators = screen.getAllByRole("separator", { hidden: true });
   const customChild = screen.getByTestId("custom-child");
 
   it("renders the navigation container", () => {
