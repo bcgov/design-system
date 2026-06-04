@@ -1,0 +1,69 @@
+{/* Navbar.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/addon-docs/blocks";
+
+import {
+  InlineAlert,
+  Link,
+  SvgUpRightFromSquareIcon,
+  SvgReactAriaIcon,
+} from "@/components";
+
+import * as NavbarStories from "./Navbar.stories";
+import * as HeaderStories from "./Header.stories";
+
+<Meta of={NavbarStories} />
+
+# Navbar
+
+<Subtitle>
+  A navbar displays a list of links, menus or buttons to help the user navigate
+  an interface.
+</Subtitle>
+
+## Usage and resources
+
+<Source
+  code={`import { Navbar } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+Navbar is a simple container component that renders a list of [links](/docs/utility-text-and-links-link--docs), [menus](/docs/navigation-and-structure-menu--docs) and/or [buttons](/docs/inputs-and-controls-button--docs). It is primarily intended to be used in parallel with the [Header](/docs/navigation-and-structure-header--docs) component.
+
+Learn more about working with the Navbar component:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=AE80414124294EADA75D7853A96BD2E5)
+- [View the navbar component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+## Controls
+
+<Canvas of={NavbarStories.NavbarTemplate} />
+<Controls of={NavbarStories.NavbarTemplate} />
+
+## Configuration
+
+Navbar renders as a `<div>` containing a `<nav>` element. It automatically renders a [Separator](/docs/utility-separator--docs) between each child item.
+
+The primary use case for a Navbar is alongside the Header component:
+
+<Canvas of={NavbarStories.HeaderWithNavbar} />
+
+**Note**: Navbar has the ARIA ["navigation"](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role) role. When using it alongside other navigation landmarks (like the Header), you should also set a descriptive name using the `ariaLabel` prop.
+
+### Sizing
+
+Set `size` to `small` to reduce the amount of vertical padding and spacing between individual items.
+
+<Canvas of={NavbarStories.Small} />
+
+Any of these B.C. Design System components passed as children will also receive the `size` prop:
+
+- [Button](/docs/inputs-and-controls-button--docs)
+- [Link](/docs/utility-text-and-links-link--docs)
