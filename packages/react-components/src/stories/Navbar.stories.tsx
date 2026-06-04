@@ -21,6 +21,10 @@ const meta = {
       description:
         "Navbar padding and spacing. Also sets the size of child components like `Button` and `Link`",
     },
+    ariaLabel: {
+      control: { type: "text" },
+      description: "ARIA label for the navigation region",
+    },
   },
 } satisfies Meta<typeof Navbar>;
 
@@ -50,6 +54,7 @@ export const NavbarTemplate: Story = {
 export const HeaderWithNavbar: Story = {
   args: {
     size: "small",
+    ariaLabel: "Secondary navigation",
     children: [
       <Link href="#" key="1">
         Link 1

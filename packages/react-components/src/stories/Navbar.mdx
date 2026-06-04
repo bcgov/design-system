@@ -55,6 +55,8 @@ The primary use case for a Navbar is alongside the Header component:
 
 <Canvas of={NavbarStories.HeaderWithNavbar} />
 
+**Note**: Navbar has the ARIA ["navigation"](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role) role. When using it alongside other navigation landmarks (like the Header), you should also set a descriptive name using the `ariaLabel` prop.
+
 ### Sizing
 
 Set `size` to `small` to reduce the amount of vertical padding and spacing between individual items.

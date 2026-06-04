@@ -8,6 +8,7 @@ import "./Navbar.css";
 export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
   /* Set vertical padding and gap size, and set size of specific types of children */
   size?: "small" | "medium";
+  ariaLabel?: string;
 }
 
 type NavbarSize = NonNullable<NavbarProps["size"]>;
@@ -39,6 +40,7 @@ function injectSizeToKnownChild(child: React.ReactNode, size: NavbarSize) {
 
 export default function Navbar({
   size = "medium",
+  ariaLabel,
   children,
   ...props
 }: NavbarProps) {
@@ -70,7 +72,11 @@ export default function Navbar({
 
   return (
     <div className="bcds-react-aria-Navbar">
-      <nav className={`bcds-react-aria-Navbar--Container ${size}`} {...props}>
+      <nav
+        className={`bcds-react-aria-Navbar--Container ${size}`}
+        aria-label={ariaLabel}
+        {...props}
+      >
         <ul className="bcds-react-aria-Navbar--List">{childrenToRender}</ul>
       </nav>
     </div>
