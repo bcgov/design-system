@@ -41,6 +41,7 @@ export { default as SvgExclamationCircleIcon } from "./Icons/SvgExclamationCircl
 export { default as SvgCloseIcon } from "./Icons/SvgCloseIcon";
 export { default as SvgInfoIcon } from "./Icons/SvgInfoIcon";
 export { default as SvgMinusIcon } from "./Icons/SvgMinusIcon";
+export { default as SvgPlaceholderIcon } from "./Icons/SvgPlaceholderIcon";
 export { default as SvgPlusIcon } from "./Icons/SvgPlusIcon";
 export { default as SvgTooltipArrowUp } from "./Icons/SvgTooltipArrowUp";
 export { default as SvgUpRightFromSquareIcon } from "./Icons/SvgUpRightFromSquareIcon";
