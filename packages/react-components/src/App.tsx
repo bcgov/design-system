@@ -3,7 +3,14 @@ import { Menu, MenuItem, MenuTrigger, Popover } from "react-aria-components";
 import "./App.css";
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
-import { Button, Footer, FooterLinks, Header } from "@/components";
+import {
+  Button,
+  Footer,
+  FooterLinks,
+  Header,
+  Link,
+  Navbar,
+} from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
   AccordionGroupPage,
@@ -107,6 +114,32 @@ function App() {
         </div>
       </Header>
       <Header />
+      <Navbar>
+        <Link key="1" href="#">
+          Link 1
+        </Link>
+        <Link key="2" href="#">
+          Link 2
+        </Link>
+        <Link key="3" href="#">
+          Link 3
+        </Link>
+        <Link key="4" href="#">
+          Link 4
+        </Link>
+        <MenuTrigger>
+          <Button size="small" variant="secondary">
+            Menu <SvgMenuIcon />
+          </Button>
+          <Popover>
+            <Menu>
+              <MenuItem className="menu-item">Link</MenuItem>
+              <MenuItem className="menu-item">Link</MenuItem>
+              <MenuItem className="menu-item">Link</MenuItem>
+            </Menu>
+          </Popover>
+        </MenuTrigger>
+      </Navbar>
       <AlertBannerPage />
       <main>
         <h1>Components</h1>
