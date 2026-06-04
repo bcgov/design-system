@@ -26,9 +26,7 @@ describe("Navbar", () => {
   const customChild = screen.getByTestId("custom-child");
 
   it("renders the navigation container", () => {
-    expect(navbar).toHaveClass(
-      "bcds-react-aria-Navbar--Container small horizontal"
-    );
+    expect(navbar).toHaveClass("bcds-react-aria-Navbar--Container small");
     expect(navbar).toHaveAttribute("data-testid", "navbar");
   });
 
