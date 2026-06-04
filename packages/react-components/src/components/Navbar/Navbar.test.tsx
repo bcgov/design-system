@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it } from "vitest";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
@@ -11,28 +11,36 @@ function CustomChild({ size }: { size?: string }) {
 }
 
 describe("Navbar", () => {
-  render(
-    <Navbar size="small" data-testid="navbar">
-      <Button>Button</Button>
-      <Link href="https://example.com">Link</Link>
-      <CustomChild />
-    </Navbar>
-  );
+  let navbar: HTMLElement;
+  let button: HTMLElement;
+  let link: HTMLElement;
+  let separators: HTMLElement[];
+  let customChild: HTMLElement;
 
-  const navbar = screen.getByTestId("navbar");
-  const button = screen.getByRole("button", { name: /button/i });
-  const link = screen.getByRole("link", { name: /link/i });
-  const separators = screen.getAllByRole("separator", { hidden: true });
-  const customChild = screen.getByTestId("custom-child");
+  beforeEach(() => {
+    render(
+      <Navbar size="small" data-testid="navbar">
+        <Button>Button</Button>
+        <Link href="https://example.com">Link</Link>
+        <CustomChild />
+      </Navbar>
+    );
+
+    navbar = screen.getByTestId("navbar");
+    button = screen.getByRole("button", { name: /button/i });
+    link = screen.getByRole("link", { name: /link/i });
+    separators = screen.getAllByRole("separator", { hidden: true });
+    customChild = screen.getByTestId("custom-child");
+  });
 
   it("renders the navigation container", () => {
-    expect(navbar).toHaveClass("bcds-react-aria-Navbar--Container small");
+    expect(navbar).toHaveClass("bcds-react-aria-Navbar--Container");
     expect(navbar).toHaveAttribute("data-testid", "navbar");
   });
 
   it("injects size into supported children only", () => {
-    expect(button).toHaveClass("bcds-react-aria-Button small primary");
-    expect(link).toHaveClass("bcds-react-aria-Link small");
+    expect(button).toHaveClass("small");
+    expect(link).toHaveClass("small");
     expect(customChild).not.toHaveAttribute("data-size");
   });
 

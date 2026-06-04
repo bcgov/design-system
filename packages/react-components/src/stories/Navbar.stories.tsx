@@ -30,10 +30,18 @@ type Story = StoryObj<typeof meta>;
 export const NavbarTemplate: Story = {
   args: {
     children: [
-      <Link href="#">Link 1</Link>,
-      <Link href="#">Link 2</Link>,
-      <Link href="#">Link 3</Link>,
-      <Button variant="primary">Log in</Button>,
+      <Link href="#" key="1">
+        Link 1
+      </Link>,
+      <Link href="#" key="2">
+        Link 2
+      </Link>,
+      <Link href="#" key="3">
+        Link 3
+      </Link>,
+      <Button variant="primary" key="4">
+        Log in
+      </Button>,
     ],
   },
   render: ({ ...args }: NavbarProps) => <Navbar {...args} />,
@@ -43,22 +51,22 @@ export const HeaderWithNavbar: Story = {
   args: {
     size: "small",
     children: [
-      <Link href="#" id="1">
+      <Link href="#" key="1">
         Link 1
       </Link>,
-      <Link href="#" id="2">
+      <Link href="#" key="2">
         Link 2
       </Link>,
-      <Link href="#" id="3">
+      <Link href="#" key="3">
         Link 3
       </Link>,
-      <Link href="#" id="4">
+      <Link href="#" key="4">
         Link 4
       </Link>,
-      <Link href="#" id="5">
+      <Link href="#" key="5">
         Link 5
       </Link>,
-      <Link href="#" id="6">
+      <Link href="#" key="6">
         Link 6
       </Link>,
     ],
@@ -78,10 +86,18 @@ export const Small: Story = {
   args: {
     size: "small",
     children: [
-      <Link href="#">Link 1</Link>,
-      <Link href="#">Link 2</Link>,
-      <Link href="#">Link 3</Link>,
-      <Button variant="primary">Log in</Button>,
+      <Link href="#" key="1">
+        Link 1
+      </Link>,
+      <Link href="#" key="2">
+        Link 2
+      </Link>,
+      <Link href="#" key="3">
+        Link 3
+      </Link>,
+      <Button variant="primary" key="4">
+        Log in
+      </Button>,
     ],
   },
 };
