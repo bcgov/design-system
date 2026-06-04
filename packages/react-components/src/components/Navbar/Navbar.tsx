@@ -8,13 +8,12 @@ import "./Navbar.css";
 export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
   /* Set vertical padding and gap size, and set size of specific types of children */
   size?: "small" | "medium";
-  /* Set the navbar orientation */
-  orientation?: "horizontal" | "vertical";
 }
 
 type NavbarSize = NonNullable<NavbarProps["size"]>;
 
 /* Allowlist of components which will receive the size prop from Navbar */
+/* TODO: add Menu to this list */
 const sizableChildTypes = [Button, Link] as const;
 
 /* Clone children and inject size prop */
@@ -41,7 +40,6 @@ function injectSizeToKnownChild(child: React.ReactNode, size: NavbarSize) {
 
 export default function Navbar({
   size = "medium",
-  orientation = "horizontal",
   children,
   ...props
 }: NavbarProps) {
@@ -57,9 +55,7 @@ export default function Navbar({
       ...(index < childrenArray.length - 1
         ? [
             <Separator
-              orientation={
-                orientation === "horizontal" ? "vertical" : "horizontal"
-              }
+              orientation="vertical"
               size="small"
               key={`sep-${index}`}
             />,
@@ -70,10 +66,7 @@ export default function Navbar({
 
   return (
     <div className="bcds-react-aria-Navbar">
-      <nav
-        className={`bcds-react-aria-Navbar--Container ${size} ${orientation}`}
-        {...props}
-      >
+      <nav className={`bcds-react-aria-Navbar--Container ${size}`} {...props}>
         {childrenToRender}
       </nav>
     </div>

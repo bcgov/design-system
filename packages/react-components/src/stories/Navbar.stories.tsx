@@ -11,14 +11,15 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
-    orientation: {
-      options: ["horizontal", "vertical"],
-      control: { type: "radio" },
-      description: "Sets the orientation of the navbar",
-    },
     children: {
       control: { type: "object" },
       description: "Array of navigation items",
+    },
+    size: {
+      control: { type: "radio" },
+      options: ["small", "medium"],
+      description:
+        "Navbar padding and spacing. Also sets the size of child components like `Button` and `Link`",
     },
   },
 } satisfies Meta<typeof Navbar>;
@@ -28,7 +29,6 @@ type Story = StoryObj<typeof meta>;
 
 export const NavbarTemplate: Story = {
   args: {
-    orientation: "horizontal",
     children: [
       <Link href="#">Link 1</Link>,
       <Link href="#">Link 2</Link>,
@@ -42,7 +42,6 @@ export const NavbarTemplate: Story = {
 export const HeaderWithNavbar: Story = {
   args: {
     size: "small",
-    orientation: "horizontal",
     children: [
       <Link href="#" id="1">
         Link 1
@@ -85,17 +84,4 @@ export const Small: Story = {
       <Button variant="primary">Log in</Button>,
     ],
   },
-};
-
-export const Vertical: Story = {
-  args: {
-    orientation: "vertical",
-    children: [
-      <Link href="#">Link 1</Link>,
-      <Link href="#">Link 2</Link>,
-      <Link href="#">Link 3</Link>,
-      <Button variant="primary">Log in</Button>,
-    ],
-  },
-  render: ({ ...args }: NavbarProps) => <Navbar {...args} />,
 };
