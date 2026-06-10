@@ -1,0 +1,6 @@
+{
+  "ignore": [
+    "packages/react-components/src/pages",
+    "packages/react-components/src/App.tsx"
+  ]
+}
