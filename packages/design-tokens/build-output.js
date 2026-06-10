@@ -3,10 +3,11 @@ import StyleDictionary from "style-dictionary";
 
 register(StyleDictionary);
 
-const AUTO_LINE_HEIGHT_TRANSFORM = "bcds/typography/lineheight-auto-normalize";
+const AUTO_LINE_HEIGHT_TRANSFORM = "bcds/typography/lineHeightAuto";
 
+/* Rewrite Figma's `AUTO` line-height value to `normal` */
 StyleDictionary.registerTransform({
-  name: AUTO_LINE_HEIGHT_TRANSFORM,
+  name: "bcds/typography/lineHeightAuto",
   type: "value",
   matcher: (token) =>
     token.type === "lineHeights" &&
@@ -37,6 +38,7 @@ const sd = new StyleDictionary({
     css: {
       transformGroup: "tokens-studio",
       transforms: [
+        "bcds/typography/lineHeightAuto",
         "ts/descriptionToComment",
         "ts/size/px",
         "ts/opacity",
@@ -46,7 +48,6 @@ const sd = new StyleDictionary({
         "ts/size/css/letterspacing",
         "ts/color/css/hexrgba",
         "ts/color/modifiers",
-        AUTO_LINE_HEIGHT_TRANSFORM,
         "name/kebab",
       ],
       buildPath: "build/css/",
@@ -61,6 +62,7 @@ const sd = new StyleDictionary({
       transformGroup: "tokens-studio",
       prefix: "bcds",
       transforms: [
+        "bcds/typography/lineHeightAuto",
         "ts/descriptionToComment",
         "ts/size/px",
         "ts/opacity",
@@ -70,7 +72,6 @@ const sd = new StyleDictionary({
         "ts/size/css/letterspacing",
         "ts/color/css/hexrgba",
         "ts/color/modifiers",
-        AUTO_LINE_HEIGHT_TRANSFORM,
         "name/kebab",
       ],
       buildPath: "build/css-prefixed/",
@@ -141,7 +142,7 @@ const sd = new StyleDictionary({
     },
     scss: {
       transformGroup: "tokens-studio",
-      transforms: [AUTO_LINE_HEIGHT_TRANSFORM, "name/kebab"],
+      transforms: ["bcds/typography/lineHeightAuto", "name/kebab"],
       buildPath: "build/scss/",
       files: [
         {
@@ -159,7 +160,7 @@ const sd = new StyleDictionary({
     },
     scssPrefixed: {
       transformGroup: "tokens-studio",
-      transforms: [AUTO_LINE_HEIGHT_TRANSFORM, "name/kebab"],
+      transforms: ["bcds/typography/lineHeightAuto", "name/kebab"],
       buildPath: "build/scss-prefixed/",
       prefix: "bcds",
       files: [
