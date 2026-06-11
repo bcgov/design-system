@@ -61,7 +61,7 @@
     "@rollup/plugin-node-resolve": "16.0.3",
     "@rollup/plugin-typescript": "12.3.0",
     "@storybook/addon-a11y": "10.4.0",
-    "@storybook/addon-docs": "10.4.0",
+    "@storybook/addon-docs": "10.4.2",
     "@storybook/addon-links": "10.4.0",
     "@storybook/addon-vitest": "10.4.0",
     "@storybook/react-vite": "10.4.0",
