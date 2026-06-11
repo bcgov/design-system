@@ -1,4 +1,19 @@
 {
+  "workspaces": {
+    "@bcgov/design-system-react-components": {
+      "exports": {
+        ".": "./src/index.ts"
+      },
+      "aliases": {
+        "@/*": [
+          "./src/*"
+        ],
+        "@": [
+          "./src"
+        ]
+      }
+    }
+  },
   "ignore": [
     "packages/react-components/src/pages",
     "packages/react-components/src/App.tsx"
