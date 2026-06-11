@@ -9,8 +9,12 @@ updates:
       day: "monday"
       time: "04:00"
       timezone: "Canada/Pacific"
+    # Wait 7 days before opening PRs for new versions
+    cooldown:
+      default-days: 7
+      include: ["*"]
     assignees: [mkernohanbc]
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 10
     # Do not open PRs for major version updates
     ignore:
       - dependency-name: "*"
