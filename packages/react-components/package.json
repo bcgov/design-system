@@ -10,7 +10,6 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build:js": "rolldown -c rolldown.config.js",
-    "build:types": "tsc -p tsconfig.types.json",
     "build:dts": "rolldown -c rolldown.dts.config.js",
     "build": "npm run clean && npm run build:js && npm run build:dts",
     "format:check": "npx prettier . --check",
@@ -56,10 +55,6 @@
     "@eslint/js": "10.0.1",
     "@figma/code-connect": "1.4.5",
     "@react-stately/data": "3.16.0",
-    "@rollup/plugin-commonjs": "29.0.2",
-    "@rollup/plugin-json": "6.1.0",
-    "@rollup/plugin-node-resolve": "16.0.3",
-    "@rollup/plugin-typescript": "12.3.0",
     "@storybook/addon-a11y": "10.4.0",
     "@storybook/addon-docs": "10.4.0",
     "@storybook/addon-links": "10.4.0",
@@ -86,19 +81,11 @@
     "prettier": "3.8.3",
     "rolldown": "1.1.1",
     "rolldown-plugin-dts": "0.25.2",
-    "rollup": "4.60.4",
-    "rollup-plugin-dts": "6.4.1",
-    "rollup-plugin-peer-deps-external": "2.2.4",
-    "rollup-plugin-postcss": "4.0.2",
     "storybook": "10.4.0",
-    "tslib": "2.8.1",
     "typescript": "6.0.3",
     "typescript-eslint": "8.59.4",
     "vite": "8.0.13",
     "vitest": "4.1.7"
-  },
-  "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "*"
   },
   "overrides": {
     "eslint-plugin-react-hooks": {
