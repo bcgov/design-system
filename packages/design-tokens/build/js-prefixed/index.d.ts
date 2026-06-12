@@ -136,12 +136,12 @@ export const bcdsIconsColorSuccess: string;
 export const bcdsIconsColorWarning: string;
 /** Default colour for icons on dark backgrounds */
 export const bcdsIconsColorPrimaryInvert: string;
-export const bcdsLayoutBorderWidthNone: string;
+export const bcdsLayoutBorderWidthNone: number;
 export const bcdsLayoutBorderWidthSmall: string;
 export const bcdsLayoutBorderWidthMedium: string;
 export const bcdsLayoutBorderWidthLarge: string;
 /** No padding */
-export const bcdsLayoutPaddingNone: string;
+export const bcdsLayoutPaddingNone: number;
 /** Smallest padding value for layout */
 export const bcdsLayoutPaddingHair: string;
 export const bcdsLayoutPaddingXsmall: string;
@@ -165,7 +165,7 @@ export const bcdsLayoutMarginXxlarge: string;
 export const bcdsLayoutMarginXxxlarge: string;
 /** Largest margin value for layout */
 export const bcdsLayoutMarginHuge: string;
-export const bcdsLayoutBorderRadiusNone: string;
+export const bcdsLayoutBorderRadiusNone: number;
 export const bcdsLayoutBorderRadiusSmall: string;
 export const bcdsLayoutBorderRadiusMedium: string;
 export const bcdsLayoutBorderRadiusLarge: string;
@@ -207,7 +207,7 @@ export const bcdsTypographyFontSizeDisplay: string;
 /** System token, used to generate type styles */
 export const bcdsTypographyLetterSpacing0: string;
 /** System token, used to generate type styles */
-export const bcdsTypographyParagraphSpacing0: string;
+export const bcdsTypographyParagraphSpacing0: number;
 /** Labels and captions */
 export const bcdsTypographyRegularLabel: string;
 /** Smaller body text */

@@ -19,7 +19,7 @@ test("build-output.js should complete without errors", async () => {
           }
           console.log("build-output.js executed successfully:", stdout);
           resolve();
-        },
+        }
       );
     });
     assert.ok(true);
@@ -107,7 +107,53 @@ test("theme.blue.100 should be present in all output files", async () => {
     const fileContent = readFileSync(filePath, "utf-8");
     assert.ok(
       fileContent.includes(token),
-      `Expected token "${token}" to be present in file ${file}`,
+      `Expected token "${token}" to be present in file ${file}`
+    );
+  }
+});
+
+test("typography.lineHeights.auto should be normalized to normal in all output files", async () => {
+  const checks = [
+    {
+      file: "build/css/variables.css",
+      token: "--typography-line-heights-auto: normal;",
+    },
+    {
+      file: "build/css-prefixed/variables.css",
+      token: "--bcds-typography-line-heights-auto: normal;",
+    },
+    {
+      file: "build/scss/variables.scss",
+      token: "$typography-line-heights-auto: normal;",
+    },
+    {
+      file: "build/scss-prefixed/variables.scss",
+      token: "$bcds-typography-line-heights-auto: normal;",
+    },
+    {
+      file: "build/js/index.js",
+      token: 'export const typographyLineHeightsAuto = "normal";',
+    },
+    {
+      file: "build/js-prefixed/index.js",
+      token: 'export const bcdsTypographyLineHeightsAuto = "normal";',
+    },
+    {
+      file: "build/cjs/index.js",
+      token: 'typographyLineHeightsAuto: "normal"',
+    },
+    {
+      file: "build/cjs-prefixed/index.js",
+      token: 'bcdsTypographyLineHeightsAuto: "normal"',
+    },
+  ];
+
+  for (const { file, token } of checks) {
+    const filePath = join(process.cwd(), file);
+    const fileContent = readFileSync(filePath, "utf-8");
+    assert.ok(
+      fileContent.includes(token),
+      `Expected token "${token}" to be present in file ${file}`
     );
   }
 });
