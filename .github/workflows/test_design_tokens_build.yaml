@@ -35,6 +35,10 @@ jobs:
         run: npm install
         working-directory: ./packages/design-tokens
 
+      - name: Prettier format check
+        run: npm run format:check
+        working-directory: ./packages/design-tokens
+
       - name: Run test suite with npm script
         run: npm run test
         working-directory: ./packages/design-tokens
