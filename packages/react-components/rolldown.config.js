@@ -4,6 +4,8 @@ import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const pkg = require("./package.json");
 
+// Custom plugin to handle CSS bundling
+// TODO: remove once Rolldown supports CSS bundling natively
 const STYLE_INJECT_ID = "\0style-inject";
 const STYLE_INJECT_CODE = `
 export function styleInject(css) {
@@ -20,6 +22,7 @@ export function styleInject(css) {
 }
 `;
 
+// Convert CSS into JS modules
 function cssInject() {
   return {
     name: "css-inject",
