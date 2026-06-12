@@ -9,10 +9,10 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf dist",
-    "build:js": "rollup -c rollup.config.js --bundleConfigAsCjs",
+    "build:js": "rolldown -c rolldown.config.js",
     "build:types": "tsc -p tsconfig.types.json",
-    "build:dts": "rollup -c rollup.dts.config.js",
-    "build": "npm run clean && npm run build:js && npm run build:types && npm run build:dts",
+    "build:dts": "rolldown -c rolldown.dts.config.js",
+    "build": "npm run clean && npm run build:js && npm run build:dts",
     "format:check": "npx prettier . --check",
     "format": "npx prettier . --write",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
