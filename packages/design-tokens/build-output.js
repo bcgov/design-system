@@ -239,14 +239,13 @@ const sd = new StyleDictionary({
         {
           destination: "variables.scss",
           format: "scss/map-deep",
-          filter: (t) => (
+          filter: (t) =>
             /* strip metadata */
-            !(['$themes', '$metadata'].includes(t))
-          ),
+            !["$themes", "$metadata"].includes(t),
           options: {
-            "mapName": "bcds",
-            "themeable": false
-          }
+            mapName: "bcds",
+            themeable: false,
+          },
         },
       ],
     },
@@ -264,14 +263,13 @@ const sd = new StyleDictionary({
         {
           destination: "variables.scss",
           format: "scss/map-deep",
-          filter: (t) => (
+          filter: (t) =>
             /* strip metadata */
-            !(['$themes', '$metadata'].includes(t))
-          ),
+            !["$themes", "$metadata"].includes(t),
           options: {
-            "mapName": "bcds",
-            "themeable": false
-          }
+            mapName: "bcds",
+            themeable: false,
+          },
         },
       ],
     },
