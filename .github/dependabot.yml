@@ -1,5 +1,5 @@
 # Dependabot config
-# Docs: https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#directories-or-directory--
+# Docs: https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference
 version: 2
 updates:
   - package-ecosystem: "npm"
