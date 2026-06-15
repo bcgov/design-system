@@ -70,7 +70,7 @@
     "@types/node": "25.9.1",
     "@types/react": "19.2.16",
     "@types/react-dom": "19.2.3",
-    "@typescript-eslint/eslint-plugin": "8.59.4",
+    "@typescript-eslint/eslint-plugin": "8.60.1",
     "@typescript-eslint/parser": "8.59.4",
     "@vitejs/plugin-react": "6.0.2",
     "@vitest/browser-playwright": "4.1.7",
