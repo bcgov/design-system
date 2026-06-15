@@ -30,3 +30,6 @@ updates:
       rollup:
         applies-to: version-updates
         patterns: ["rollup", "@rollup/*"]
+      typescript-eslint:
+        applies-to: version-updates
+        patterns: ["typescript-eslint", "@typescript-eslint/*"]
