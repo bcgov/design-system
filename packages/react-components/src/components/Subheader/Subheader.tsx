@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Button";
 import Link from "../Link";
+import Menu from "../Menu";
 import Separator from "../Separator";
 
 import "./Subheader.css";
@@ -14,7 +15,7 @@ export interface SubheaderProps extends React.HTMLAttributes<HTMLElement> {
 type SubheaderSize = NonNullable<SubheaderProps["size"]>;
 
 /* Allowlist of components which will receive the size prop from Subheader */
-const sizableChildTypes = [Button, Link] as const;
+const sizableChildTypes = [Button, Link, Menu] as const;
 
 /* Clone children and inject size prop */
 function injectSizeToKnownChild(child: React.ReactNode, size: SubheaderSize) {
