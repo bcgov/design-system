@@ -130,13 +130,11 @@ function App() {
           <Button size="small" variant="secondary">
             Menu <SvgMenuIcon />
           </Button>
-          <Popover>
-            <Menu>
-              <MenuItem className="menu-item">Link</MenuItem>
-              <MenuItem className="menu-item">Link</MenuItem>
-              <MenuItem className="menu-item">Link</MenuItem>
-            </Menu>
-          </Popover>
+          <Menu>
+            <MenuItem className="menu-item">Link</MenuItem>
+            <MenuItem className="menu-item">Link</MenuItem>
+            <MenuItem className="menu-item">Link</MenuItem>
+          </Menu>
         </MenuTrigger>
       </Subheader>
       <AlertBannerPage />
