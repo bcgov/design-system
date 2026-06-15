@@ -9,7 +9,7 @@ import {
   FooterLinks,
   Header,
   Link,
-  Navbar,
+  Subheader,
 } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
@@ -114,7 +114,7 @@ function App() {
         </div>
       </Header>
       <Header />
-      <Navbar>
+      <Subheader>
         <Link key="1" href="#">
           Link 1
         </Link>
@@ -139,7 +139,7 @@ function App() {
             </Menu>
           </Popover>
         </MenuTrigger>
-      </Navbar>
+      </Subheader>
       <AlertBannerPage />
       <main>
         <h1>Components</h1>

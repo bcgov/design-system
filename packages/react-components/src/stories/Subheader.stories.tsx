@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Button, Header, Link, Navbar } from "../components";
+import { Button, Header, Link, Subheader } from "../components";
 
-import { NavbarProps } from "@/components/Navbar";
+import { SubheaderProps } from "@/components/Subheader";
 
 const meta = {
-  title: "Navigation and structure/Navbar",
-  component: Navbar,
+  title: "Navigation and structure/Subheader",
+  component: Subheader,
   parameters: {
     layout: "centered",
   },
@@ -19,19 +19,19 @@ const meta = {
       control: { type: "radio" },
       options: ["small", "medium"],
       description:
-        "Navbar padding and spacing. Also sets the size of child components like `Button` and `Link`",
+        "Subheader padding and spacing. Also sets the size of child components like `Button` and `Link`",
     },
     ariaLabel: {
       control: { type: "text" },
       description: "ARIA label for the navigation region",
     },
   },
-} satisfies Meta<typeof Navbar>;
+} satisfies Meta<typeof Subheader>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const NavbarTemplate: Story = {
+export const SubheaderTemplate: Story = {
   args: {
     children: [
       <Link href="#" key="1">
@@ -48,10 +48,10 @@ export const NavbarTemplate: Story = {
       </Button>,
     ],
   },
-  render: ({ ...args }: NavbarProps) => <Navbar {...args} />,
+  render: ({ ...args }: SubheaderProps) => <Subheader {...args} />,
 };
 
-export const HeaderWithNavbar: Story = {
+export const HeaderWithSubheader: Story = {
   args: {
     size: "small",
     ariaLabel: "Secondary navigation",
@@ -76,18 +76,18 @@ export const HeaderWithNavbar: Story = {
       </Link>,
     ],
   },
-  render: ({ ...args }: NavbarProps) => (
+  render: ({ ...args }: SubheaderProps) => (
     <>
       <Header title="Example header with navbar">
         <Button size="small">Log in</Button>
       </Header>
-      <Navbar {...args} />
+      <Subheader {...args} />
     </>
   ),
 };
 
 export const Small: Story = {
-  ...NavbarTemplate,
+  ...SubheaderTemplate,
   args: {
     size: "small",
     children: [

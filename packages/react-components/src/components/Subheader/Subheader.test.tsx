@@ -4,14 +4,14 @@ import { render, screen } from "@testing-library/react";
 
 import Button from "../Button";
 import Link from "../Link";
-import Navbar from "./Navbar";
+import Subheader from "./Subheader";
 
 function CustomChild({ size }: { size?: string }) {
   return <div data-testid="custom-child" data-size={size} />;
 }
 
-describe("Navbar", () => {
-  let navbar: HTMLElement;
+describe("Subheader", () => {
+  let subheader: HTMLElement;
   let button: HTMLElement;
   let link: HTMLElement;
   let separators: HTMLElement[];
@@ -19,14 +19,14 @@ describe("Navbar", () => {
 
   beforeEach(() => {
     render(
-      <Navbar size="small" data-testid="navbar">
+      <Subheader size="small" data-testid="subheader">
         <Button>Button</Button>
         <Link href="https://example.com">Link</Link>
         <CustomChild />
-      </Navbar>
+      </Subheader>
     );
 
-    navbar = screen.getByTestId("navbar");
+    subheader = screen.getByTestId("subheader");
     button = screen.getByRole("button", { name: /button/i });
     link = screen.getByRole("link", { name: /link/i });
     separators = screen.getAllByRole("separator", { hidden: true });
@@ -34,8 +34,8 @@ describe("Navbar", () => {
   });
 
   it("renders the navigation container", () => {
-    expect(navbar).toHaveClass("bcds-react-aria-Navbar--Container");
-    expect(navbar).toHaveAttribute("data-testid", "navbar");
+    expect(subheader).toHaveClass("bcds-react-aria-Subheader--Container");
+    expect(subheader).toHaveAttribute("data-testid", "subheader");
   });
 
   it("injects size into supported children only", () => {
