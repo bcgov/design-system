@@ -18,6 +18,14 @@ export { default as Header } from "./Header";
 export { default as Heading } from "./Heading";
 export { default as InlineAlert } from "./InlineAlert";
 export { default as Link } from "./Link";
+export {
+  default as Menu,
+  MenuTrigger,
+  SubmenuTrigger,
+  MenuSection,
+  MenuSectionHeader,
+} from "./Menu";
+export { default as MenuItem } from "./MenuItem";
 export { default as Modal } from "./Modal";
 export { default as Subheader } from "./Subheader";
 export { default as ProgressBar } from "./ProgressBar";
@@ -42,6 +50,7 @@ export { default as SvgExclamationCircleIcon } from "./Icons/SvgExclamationCircl
 export { default as SvgCloseIcon } from "./Icons/SvgCloseIcon";
 export { default as SvgInfoIcon } from "./Icons/SvgInfoIcon";
 export { default as SvgMinusIcon } from "./Icons/SvgMinusIcon";
+export { default as SvgPlaceholderIcon } from "./Icons/SvgPlaceholderIcon";
 export { default as SvgPlusIcon } from "./Icons/SvgPlusIcon";
 export { default as SvgTooltipArrowUp } from "./Icons/SvgTooltipArrowUp";
 export { default as SvgUpRightFromSquareIcon } from "./Icons/SvgUpRightFromSquareIcon";

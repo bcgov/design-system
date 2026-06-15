@@ -1,0 +1,21 @@
+# Dependabot config
+# Docs: https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#directories-or-directory--
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directories: ["/packages/react-components", "/packages/design-tokens"]
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+    # Wait 7 days before opening PRs for new versions
+    cooldown:
+      default-days: 7
+      include: ["*"]
+    assignees: [mkernohanbc]
+    open-pull-requests-limit: 10
+    # Do not open PRs for major version updates
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]

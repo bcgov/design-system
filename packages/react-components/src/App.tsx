@@ -1,5 +1,3 @@
-import { Menu, MenuItem, MenuTrigger, Popover } from "react-aria-components";
-
 import "./App.css";
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
@@ -10,6 +8,9 @@ import {
   Header,
   Link,
   Subheader,
+  Menu,
+  MenuItem,
+  MenuTrigger,
 } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
@@ -102,13 +103,11 @@ function App() {
               <Button size="small" variant="secondary">
                 Menu <SvgMenuIcon />
               </Button>
-              <Popover>
-                <Menu>
-                  <MenuItem className="menu-item">Link</MenuItem>
-                  <MenuItem className="menu-item">Link</MenuItem>
-                  <MenuItem className="menu-item">Link</MenuItem>
-                </Menu>
-              </Popover>
+              <Menu aria-label="Menu">
+                <MenuItem>Link</MenuItem>
+                <MenuItem>Link</MenuItem>
+                <MenuItem>Link</MenuItem>
+              </Menu>
             </MenuTrigger>
           )}
         </div>

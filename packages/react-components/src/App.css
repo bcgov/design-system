@@ -37,6 +37,8 @@ main {
   flex-direction: row;
   flex: 1 1 0;
   gap: var(--layout-margin-medium);
+  min-width: 0;
+  max-width: 100%;
 }
 .col {
   display: flex;
