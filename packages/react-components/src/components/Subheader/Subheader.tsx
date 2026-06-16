@@ -6,6 +6,7 @@ import "./Subheader.css";
 export interface SubheaderProps extends React.HTMLAttributes<HTMLElement> {
   /* Set vertical padding and gap size */
   size?: "small" | "medium";
+  /* Accessible label for the navigation landmark */
   ariaLabel?: string;
 }
 
