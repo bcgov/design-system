@@ -1,5 +1,4 @@
 import React from "react";
-import { MenuTrigger } from "react-aria-components";
 import Button from "../Button";
 import Link from "../Link";
 import Menu from "../Menu";
@@ -18,32 +17,26 @@ type SubheaderSize = NonNullable<SubheaderProps["size"]>;
 /* Allowlist of components which will receive the size prop from Subheader */
 const sizableChildTypes = [Button, Link, Menu] as const;
 
-/* Allowlist of wrapper components whose children are recursively processed */
-const transparentContainerTypes = [MenuTrigger] as const;
-
-/* Clone children and inject size prop, recursing into transparent containers */
-function injectSizeToKnownChild(child: React.ReactNode, size: SubheaderSize): React.ReactNode {
+/* Clone children and inject size prop */
+function injectSizeToKnownChild(child: React.ReactNode, size: SubheaderSize) {
   if (!React.isValidElement(child)) {
     return child;
   }
 
-  if (sizableChildTypes.includes(child.type as (typeof sizableChildTypes)[number])) {
-    return React.cloneElement(
-      child as React.ReactElement<{ size?: SubheaderSize }>,
-      { size }
-    );
+  if (
+    !sizableChildTypes.includes(
+      child.type as (typeof sizableChildTypes)[number]
+    )
+  ) {
+    return child;
   }
 
-  if (transparentContainerTypes.includes(child.type as (typeof transparentContainerTypes)[number])) {
-    const container = child as React.ReactElement<{ children?: React.ReactNode }>;
-    return React.cloneElement(container, {
-      children: React.Children.map(container.props.children, (nested) =>
-        injectSizeToKnownChild(nested, size)
-      ),
-    });
-  }
-
-  return child;
+  return React.cloneElement(
+    child as React.ReactElement<{ size?: SubheaderSize }>,
+    {
+      size,
+    }
+  );
 }
 
 export default function Subheader({
