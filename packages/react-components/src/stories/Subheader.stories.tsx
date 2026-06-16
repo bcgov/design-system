@@ -1,15 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import {
-  Button,
-  Header,
-  Link,
-  Menu,
-  MenuTrigger,
-  MenuItem,
-  Subheader,
-  SvgChevronDownIcon,
-} from "../components";
+import { Button, Header, Link, Subheader } from "../components";
 
 import { SubheaderProps } from "@/components/Subheader";
 
@@ -52,17 +43,6 @@ export const SubheaderTemplate: Story = {
       <Link href="#" key="3">
         Link 3
       </Link>,
-      <MenuTrigger>
-        <Button variant="secondary" key="5">
-          Menu
-          <SvgChevronDownIcon aria-hidden="true" />
-        </Button>
-        <Menu>
-          <MenuItem key="item1">Menu Item 1</MenuItem>
-          <MenuItem key="item2">Menu Item 2</MenuItem>
-          <MenuItem key="item3">Menu Item 3</MenuItem>
-        </Menu>
-      </MenuTrigger>,
       <Button variant="primary" key="4">
         Log in
       </Button>,
