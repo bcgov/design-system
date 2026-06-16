@@ -18,8 +18,7 @@ const meta = {
     size: {
       control: { type: "radio" },
       options: ["small", "medium"],
-      description:
-        "Subheader padding and spacing. Also sets the size of child components like `Button` and `Link`",
+      description: "Subheader padding and spacing",
     },
     ariaLabel: {
       control: { type: "text" },

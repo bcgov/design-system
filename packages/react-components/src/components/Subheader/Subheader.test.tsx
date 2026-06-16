@@ -12,10 +12,7 @@ function CustomChild({ size }: { size?: string }) {
 
 describe("Subheader", () => {
   let subheader: HTMLElement;
-  let button: HTMLElement;
-  let link: HTMLElement;
   let separators: HTMLElement[];
-  let customChild: HTMLElement;
 
   beforeEach(() => {
     render(
@@ -27,21 +24,12 @@ describe("Subheader", () => {
     );
 
     subheader = screen.getByTestId("subheader");
-    button = screen.getByRole("button", { name: /button/i });
-    link = screen.getByRole("link", { name: /link/i });
     separators = screen.getAllByRole("separator", { hidden: true });
-    customChild = screen.getByTestId("custom-child");
   });
 
   it("renders the navigation container", () => {
     expect(subheader).toHaveClass("bcds-react-aria-Subheader--Container");
     expect(subheader).toHaveAttribute("data-testid", "subheader");
-  });
-
-  it("injects size into supported children only", () => {
-    expect(button).toHaveClass("small");
-    expect(link).toHaveClass("small");
-    expect(customChild).not.toHaveAttribute("data-size");
   });
 
   it("renders separators between children", () => {
