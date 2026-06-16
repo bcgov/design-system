@@ -22,20 +22,31 @@ const sizableChildTypes = [Button, Link, Menu] as const;
 const transparentContainerTypes = [MenuTrigger] as const;
 
 /* Clone children and inject size prop, recursing into transparent containers */
-function injectSizeToKnownChild(child: React.ReactNode, size: SubheaderSize): React.ReactNode {
+function injectSizeToKnownChild(
+  child: React.ReactNode,
+  size: SubheaderSize
+): React.ReactNode {
   if (!React.isValidElement(child)) {
     return child;
   }
 
-  if (sizableChildTypes.includes(child.type as (typeof sizableChildTypes)[number])) {
+  if (
+    sizableChildTypes.includes(child.type as (typeof sizableChildTypes)[number])
+  ) {
     return React.cloneElement(
       child as React.ReactElement<{ size?: SubheaderSize }>,
       { size }
     );
   }
 
-  if (transparentContainerTypes.includes(child.type as (typeof transparentContainerTypes)[number])) {
-    const container = child as React.ReactElement<{ children?: React.ReactNode }>;
+  if (
+    transparentContainerTypes.includes(
+      child.type as (typeof transparentContainerTypes)[number]
+    )
+  ) {
+    const container = child as React.ReactElement<{
+      children?: React.ReactNode;
+    }>;
     return React.cloneElement(container, {
       children: React.Children.map(container.props.children, (nested) =>
         injectSizeToKnownChild(nested, size)
