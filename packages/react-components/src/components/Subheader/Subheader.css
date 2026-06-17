@@ -22,6 +22,7 @@ ul.bcds-Subheader--List {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  gap: var(--layout-margin-small);
   list-style: none;
   padding: unset;
   margin: unset;
@@ -30,6 +31,7 @@ ul.bcds-Subheader--List {
 li.bcds-Subheader--Item {
   display: flex;
   align-items: center;
+  padding: var(--layout-padding-none) var(--layout-padding-small);
 }
 
 .bcds-Subheader--Separator {
@@ -46,11 +48,9 @@ li.bcds-Subheader--Item {
 /* Sizing */
 .bcds-Subheader--Container.small > .bcds-Subheader--List {
   padding: var(--layout-padding-hair) var(--layout-padding-none);
-  gap: var(--layout-margin-xsmall);
   min-height: 32px;
 }
 .bcds-Subheader--Container.medium > .bcds-Subheader--List {
   padding: var(--layout-padding-xsmall) var(--layout-padding-none);
-  gap: var(--layout-margin-small);
   min-height: 40px;
 }
