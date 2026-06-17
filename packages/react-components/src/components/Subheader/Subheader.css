@@ -1,7 +1,6 @@
 .bcds-react-aria-Subheader {
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   width: 100%;
@@ -14,19 +13,23 @@
 .bcds-react-aria-Subheader--Container {
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
   flex-grow: 1;
   max-width: 1100px;
 }
 
-.bcds-react-aria-Subheader--List {
+ul.bcds-react-aria-Subheader--List {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  white-space: normal;
   align-items: center;
   list-style: none;
-  margin: unset;
   padding: unset;
+  margin: unset;
+}
+
+li.bcds-react-aria-Subheader--Item {
+  display: flex;
+  align-items: center;
 }
 
 .bcds-react-aria-Subheader--Separator {
@@ -41,11 +44,13 @@
 
 /* Sizing */
 .bcds-react-aria-Subheader--Container.small > .bcds-react-aria-Subheader--List {
-  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
+  padding: var(--layout-padding-hair) var(--layout-padding-none);
   gap: var(--layout-margin-xsmall);
+  min-height: 32px;
 }
 .bcds-react-aria-Subheader--Container.medium
   > .bcds-react-aria-Subheader--List {
-  padding: var(--layout-padding-small) var(--layout-padding-none);
+  padding: var(--layout-padding-xsmall) var(--layout-padding-none);
   gap: var(--layout-margin-small);
+  min-height: 40px;
 }
