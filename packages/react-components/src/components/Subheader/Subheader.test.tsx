@@ -28,7 +28,7 @@ describe("Subheader", () => {
   });
 
   it("renders the navigation container", () => {
-    expect(subheader).toHaveClass("bcds-react-aria-Subheader--Container");
+    expect(subheader).toHaveClass("bcds-Subheader--Container");
     expect(subheader).toHaveAttribute("data-testid", "subheader");
   });
 
