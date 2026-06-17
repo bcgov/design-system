@@ -35,6 +35,7 @@ li.bcds-Subheader--Item {
 .bcds-Subheader--Separator {
   display: flex;
   align-self: stretch;
+  margin: var(--layout-margin-hair) var(--layout-margin-none);
 }
 
 .bcds-Subheader--Separator
