@@ -19,13 +19,13 @@ export default function Subheader({
   /* Add separator between each child item */
   const childrenArray = React.Children.toArray(children);
   const childrenToRender = childrenArray.flatMap((child, index) => [
-    <li className="bcds-react-aria-Subheader--Item" key={`item-${index}`}>
+    <li className="bcds-Subheader--Item" key={`item-${index}`}>
       {child}
     </li>,
     ...(index < childrenArray.length - 1
       ? [
           <li
-            className="bcds-react-aria-Subheader--Separator"
+            className="bcds-Subheader--Separator"
             key={`sep-${index}`}
             role="presentation"
             aria-hidden="true"
@@ -37,13 +37,13 @@ export default function Subheader({
   ]);
 
   return (
-    <div className="bcds-react-aria-Subheader">
+    <div className="bcds-Subheader">
       <nav
-        className={`bcds-react-aria-Subheader--Container ${size}`}
+        className={`bcds-Subheader--Container ${size}`}
         aria-label={ariaLabel}
         {...props}
       >
-        <ul className="bcds-react-aria-Subheader--List">{childrenToRender}</ul>
+        <ul className="bcds-Subheader--List">{childrenToRender}</ul>
       </nav>
     </div>
   );
