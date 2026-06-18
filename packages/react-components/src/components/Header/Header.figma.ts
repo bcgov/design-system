@@ -11,7 +11,9 @@ const children = figma.properties.children(["Header content"]);
 const hasSubheader = figma.selectedInstance.getBoolean("Has subheader");
 const subheaderChildren = figma.selectedInstance.getSlot("Slot 2");
 const imports = hasSubheader
-  ? ["import { Header, Navbar } from '@bcgov/design-system-react-components';"]
+  ? [
+      "import { Header, Subheader } from '@bcgov/design-system-react-components';",
+    ]
   : ["import { Header } from '@bcgov/design-system-react-components';"];
 
 const { renderProp, renderChildren } = figma.helpers.react;
@@ -22,7 +24,7 @@ export default {
   example: hasSubheader
     ? figma.code`<>
   <Header${renderProp("logoImage", logoImage)}>${renderChildren(children)}</Header>
-  <Navbar>${renderChildren(subheaderChildren)}</Navbar>
+  <Subheader>${renderChildren(subheaderChildren)}</Subheader>
 </>`
     : figma.code`<Header${renderProp("logoImage", logoImage)}>${renderChildren(children)}</Header>`,
   metadata: { nestable: true },
