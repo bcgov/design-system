@@ -1,5 +1,5 @@
 # Dependabot config
-# Docs: https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#directories-or-directory--
+# Docs: https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference
 version: 2
 updates:
   - package-ecosystem: "npm"
@@ -19,3 +19,17 @@ updates:
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
+    # Group related dependency updates
+    groups:
+      storybook:
+        applies-to: version-updates
+        patterns: ["storybook", "@storybook/*", "eslint-plugin-storybook"]
+      vitest:
+        applies-to: version-updates
+        patterns: ["vitest", "@vitest/*"]
+      rollup:
+        applies-to: version-updates
+        patterns: ["rollup", "@rollup/*"]
+      typescript-eslint:
+        applies-to: version-updates
+        patterns: ["typescript-eslint", "@typescript-eslint/*"]
