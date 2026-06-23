@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.8.0
+
+This is a milestone release that adds two new components, and includes various enhancements and bugfixes to existing components.
+
+### Added
+
+- Menu (including MenuItem, MenuTrigger, SubmenuTrigger, MenuSection and MenuSectionHeader subcomponents)
+- Subheader
+- Component APIs are now mapped to their counterparts in Figma via [Code Connect](https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect)
+- `@bcgov/design-system-react-components` is now installable from either the npm or GitHub Packages registries
+
+### Changed
+
+- AlertBanner: added new `size` and `layout` props to make the component more flexible
+- InlineAlert: `success` variant now applies the correct background colour
+- Select: added support for accepting multiple selections
+- Tag: added new `xsmall` size option
+- Improved consistency of focus styling across various components (Checkbox, Select, Tag, TextArea and TextField)
+
+This release uses:
+
+- `react-aria-components` v1.17.0
+- `@bcgov/design-tokens` v5.0.0
+
 ## 0.7.0
 
 This is a milestone release that adds five new components, and includes various enhancements and bugfixes to existing components.
