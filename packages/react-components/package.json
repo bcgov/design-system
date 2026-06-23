@@ -1,6 +1,6 @@
 {
   "name": "@bcgov/design-system-react-components",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bcgov/design-system.git",
@@ -42,7 +42,7 @@
     "dist/cjs"
   ],
   "dependencies": {
-    "@bcgov/design-tokens": "4.0.0",
+    "@bcgov/design-tokens": "5.0.0",
     "@react-aria/datepicker": "3.17.1",
     "@react-aria/i18n": "3.13.1",
     "react-aria-components": "1.17.0"
