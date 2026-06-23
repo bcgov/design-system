@@ -30,7 +30,7 @@ const preview: Preview = {
           "Introduction",
           "Changelog",
           "Navigation and structure",
-          ["Header", "Footer"],
+          ["Header", "Subheader", "Footer", "Menu"],
           "Inputs and controls",
           "Notifications and feedback",
           "Content",

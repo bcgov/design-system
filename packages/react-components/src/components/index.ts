@@ -27,6 +27,7 @@ export {
 } from "./Menu";
 export { default as MenuItem } from "./MenuItem";
 export { default as Modal } from "./Modal";
+export { default as Subheader } from "./Subheader";
 export { default as ProgressBar } from "./ProgressBar";
 export { default as ProgressCircle } from "./ProgressCircle";
 export { default as Radio } from "./Radio";

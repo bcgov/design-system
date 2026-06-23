@@ -6,6 +6,8 @@ import {
   Footer,
   FooterLinks,
   Header,
+  Link,
+  Subheader,
   Menu,
   MenuItem,
   MenuTrigger,
@@ -111,6 +113,30 @@ function App() {
         </div>
       </Header>
       <Header />
+      <Subheader>
+        <Link key="1" href="#">
+          Link 1
+        </Link>
+        <Link key="2" href="#">
+          Link 2
+        </Link>
+        <Link key="3" href="#">
+          Link 3
+        </Link>
+        <Link key="4" href="#">
+          Link 4
+        </Link>
+        <MenuTrigger>
+          <Button size="small" variant="secondary">
+            Menu <SvgMenuIcon />
+          </Button>
+          <Menu>
+            <MenuItem className="menu-item">Link</MenuItem>
+            <MenuItem className="menu-item">Link</MenuItem>
+            <MenuItem className="menu-item">Link</MenuItem>
+          </Menu>
+        </MenuTrigger>
+      </Subheader>
       <AlertBannerPage />
       <main>
         <h1>Components</h1>
