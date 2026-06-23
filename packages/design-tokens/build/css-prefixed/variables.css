@@ -14,18 +14,10 @@
   --bcds-surface-opacity-80: 0.8;
   --bcds-surface-opacity-90: 0.9;
   --bcds-surface-opacity-100: 1;
-  --bcds-surface-shadow-none:
-    0 0.30000001192092896px 0.8999999761581421px 0 #0000001a,
-    0 1.600000023841858px 3.5999999046325684px 0 #00000021; /** Default shadow for most content and UI elements */
-  --bcds-surface-shadow-small:
-    0 0.6000000238418579px 1.7999999523162842px 0 #0000001a,
-    0 3.200000047683716px 7.199999809265137px 0 #00000021; /** Reduced shadow for secondary UI elements */
-  --bcds-surface-shadow-medium:
-    0 1.2000000476837158px 3.5999999046325684px 0 #0000001a,
-    0 6.400000095367432px 14.399999618530273px 0 #00000021; /** Standard shadow for UI elements like cards and buttons */
-  --bcds-surface-shadow-large:
-    0 4.800000190734863px 14.399999618530273px 0 #0000002e,
-    0 25.600000381469727px 57.599998474121094px 0 #00000038; /** Larger shadow for emphasis. Use sparingly */
+  --bcds-surface-shadow-none: 0 0.30000001192092896px 0.8999999761581421px 0 #0000001a, 0 1.600000023841858px 3.5999999046325684px 0 #00000021; /** Default shadow for most content and UI elements */
+  --bcds-surface-shadow-small: 0 0.6000000238418579px 1.7999999523162842px 0 #0000001a, 0 3.200000047683716px 7.199999809265137px 0 #00000021; /** Reduced shadow for secondary UI elements */
+  --bcds-surface-shadow-medium: 0 1.2000000476837158px 3.5999999046325684px 0 #0000001a, 0 6.400000095367432px 14.399999618530273px 0 #00000021; /** Standard shadow for UI elements like cards and buttons */
+  --bcds-surface-shadow-large: 0 4.800000190734863px 14.399999618530273px 0 #0000002e, 0 25.600000381469727px 57.599998474121094px 0 #00000038; /** Larger shadow for emphasis. Use sparingly */
   --bcds-surface-color-primary-button-default: #013366; /** Default fill colour for primary buttons */
   --bcds-surface-color-primary-button-hover: #1e5189; /** Fill colour used when user hovers over primary button */
   --bcds-surface-color-primary-button-disabled: #edebe9; /** Fill colour for inactive primary buttons */
@@ -43,20 +35,10 @@
   --bcds-surface-color-secondary-hover: #edebe9; /** Hover variant of surface.color.secondary.default */
   --bcds-surface-color-secondary-pressed: #e0dedc; /** Selected/pressed variant of surface.color.secondary.default */
   --bcds-surface-color-secondary-disabled: #edebe9; /** Disabled/inactive variant of surface.color.secondary default */
-  --bcds-surface-color-tertiary-button-default: rgba(
-    255,
-    255,
-    255,
-    0
-  ); /** Default fill colour for tertiary buttons */
+  --bcds-surface-color-tertiary-button-default: rgba(255, 255, 255, 0); /** Default fill colour for tertiary buttons */
   --bcds-surface-color-tertiary-button-hover: #eceae8; /** Fill colour used when user hovers over tertiary button */
   --bcds-surface-color-tertiary-button-disabled: #edebe9; /** Fill colour for inactive tertiary buttons */
-  --bcds-surface-color-tertiary-default: rgba(
-    255,
-    255,
-    255,
-    0
-  ); /** Alternative light theme colour for components and layout */
+  --bcds-surface-color-tertiary-default: rgba(255, 255, 255, 0); /** Alternative light theme colour for components and layout */
   --bcds-surface-color-tertiary-hover: #eceae8; /** Hover variant of surface.color.tertiary.default */
   --bcds-surface-color-tertiary-pressed: #e0dedc; /** Selected/pressed variant of surface.color.tertiary.default */
   --bcds-surface-color-tertiary-disabled: #edebe9; /** Disabled/inactive variant of surface.color.tertiary default */
@@ -72,12 +54,7 @@
   --bcds-surface-color-border-medium: #898785; /** Default border colour for UI elements */
   --bcds-surface-color-border-dark: #353433; /** Used as a hover colour for form fields and inputs */
   --bcds-surface-color-border-active: #2e5dd7; /** Used as the active stroke colour for UI elements */
-  --bcds-surface-color-overlay-default: rgba(
-    0,
-    0,
-    0,
-    0.45
-  ); /** Background overlay colour for images and modal dialogues */
+  --bcds-surface-color-overlay-default: rgba(0, 0, 0, 0.45); /** Background overlay colour for images and modal dialogues */
   --bcds-support-surface-color-info: #f7f9fc;
   --bcds-support-surface-color-danger: #f4e1e2; /** Background colour for error, failure or danger messages */
   --bcds-support-surface-color-success: #f6fff8; /** Background colour for success messages */
@@ -126,7 +103,7 @@
   --bcds-layout-border-radius-medium: 4px;
   --bcds-layout-border-radius-large: 6px;
   --bcds-layout-border-radius-circular: 9999px; /** Used for components with a circular radius */
-  --bcds-typography-font-families-bc-sans: "BC Sans"; /** BC Sans font. Requires BC Sans package */
+  --bcds-typography-font-families-bc-sans: 'BC Sans'; /** BC Sans font. Requires BC Sans package */
   --bcds-typography-line-heights-xxxdense: 1.125rem; /** Smallest line height */
   --bcds-typography-line-heights-xxdense: 1.313rem;
   --bcds-typography-line-heights-xdense: 1.688rem;
@@ -152,39 +129,39 @@
   --bcds-typography-font-size-display: 3rem;
   --bcds-typography-letter-spacing-0: 0em; /** System token, used to generate type styles */
   --bcds-typography-paragraph-spacing-0: 0; /** System token, used to generate type styles */
-  --bcds-typography-regular-label: 400 0.75rem/1.125rem "BC Sans"; /** Labels and captions */
-  --bcds-typography-regular-small-body: 400 0.875rem/1.313rem "BC Sans"; /** Smaller body text */
-  --bcds-typography-regular-body: 400 1rem/1.688rem "BC Sans"; /** Default body text */
-  --bcds-typography-regular-large-body: 400 1.125rem/1.913rem "BC Sans"; /** Larger body text */
-  --bcds-typography-regular-h6: 400 1.125rem/1.913rem "BC Sans"; /** Alternate (unbolded) style for Heading 6 */
-  --bcds-typography-regular-h5: 400 1.25rem/2.125rem "BC Sans"; /** Alternate (unbolded) style for Heading 5 */
-  --bcds-typography-regular-h4: 400 1.5rem/2.25rem "BC Sans"; /** Alternate (unbolded) style for Heading 4 */
-  --bcds-typography-regular-h3: 400 1.75rem/3rem "BC Sans"; /** Alternate (unbolded) style for Heading 3 */
-  --bcds-typography-regular-h2: 400 2rem/3.375rem "BC Sans"; /** Alternate (unbolded) style for Heading 2 */
-  --bcds-typography-regular-h1: 400 2.25rem/3rem "BC Sans"; /** Alternate (unbolded) style for Heading 1 */
-  --bcds-typography-regular-display: 400 3rem "BC Sans"; /** Extra-large body text size. Do not use for headings */
-  --bcds-typography-bold-label: 700 0.75rem/1.125rem "BC Sans"; /** Labels and captions (bolded) */
-  --bcds-typography-bold-small-body: 700 0.875rem/1.313rem "BC Sans"; /** Default for small body text (bolded) */
-  --bcds-typography-bold-body: 700 1rem/1.688rem "BC Sans"; /** Default for body text (bolded) */
-  --bcds-typography-bold-large-body: 700 1.125rem/1.913rem "BC Sans"; /** Larger text size for body text (bolded) */
-  --bcds-typography-bold-h6: 700 1.125rem/1.913rem "BC Sans"; /** Default style for Heading 6. Includes all sizing/spacing values for H6 */
-  --bcds-typography-bold-h5: 700 1.25rem/2.125rem "BC Sans"; /** Default style for Heading 6. Includes all sizing/spacing values for H5 */
-  --bcds-typography-bold-h4: 700 1.5rem/2.25rem "BC Sans"; /** Default style for Heading 6. Includes all sizing/spacing values for H4 */
-  --bcds-typography-bold-h3: 700 1.75rem/3rem "BC Sans"; /** Default style for Heading 6. Includes all sizing/spacing values for H3 */
-  --bcds-typography-bold-h2: 700 2rem/3rem "BC Sans"; /** Default style for Heading 6. Includes all sizing/spacing values for H2 */
-  --bcds-typography-bold-h1: 700 2.25rem/3.375rem "BC Sans"; /** Default style for Heading 6. Includes all sizing/spacing values for H1 */
-  --bcds-typography-bold-display: 700 3rem "BC Sans"; /** Extra-large font size (bolded). Do not use for headings */
-  --bcds-typography-italic-label: italic 400 0.75rem/1.125rem "BC Sans"; /** Labels and captions (italic) */
-  --bcds-typography-italic-small-body: italic 400 0.875rem/1.313rem "BC Sans"; /** Small body text (italic) */
-  --bcds-typography-italic-body: italic 400 1rem/1.688rem "BC Sans"; /** Default for body text (italic) */
-  --bcds-typography-italic-large-body: italic 400 1.125rem/1.913rem "BC Sans"; /** Larger text size for body text (italic) */
-  --bcds-typography-italic-h6: italic 400 1.125rem/1.913rem "BC Sans"; /** Alternate (italic) style for Heading 6 */
-  --bcds-typography-italic-h5: italic 400 1.25rem/2.125rem "BC Sans"; /** Alternate (italic) style for Heading 5 */
-  --bcds-typography-italic-h4: italic 400 1.5rem/2.25rem "BC Sans"; /** Alternate (italic) style for Heading 4 */
-  --bcds-typography-italic-h3: italic 400 1.75rem/3.375rem "BC Sans"; /** Alternate (italic) style for Heading 3 */
-  --bcds-typography-italic-h2: italic 400 2rem/3rem "BC Sans"; /** Alternate (italic) style for Heading 2 */
-  --bcds-typography-italic-h1: italic 400 2.25rem/3.375rem "BC Sans"; /** Alternate (italic) style for Heading 1 */
-  --bcds-typography-italic-display: italic 400 3rem "BC Sans"; /** Extra-large font size (italic). Do not use for headings */
+  --bcds-typography-regular-label: 400 0.75rem/1.125rem 'BC Sans'; /** Labels and captions */
+  --bcds-typography-regular-small-body: 400 0.875rem/1.313rem 'BC Sans'; /** Smaller body text */
+  --bcds-typography-regular-body: 400 1rem/1.688rem 'BC Sans'; /** Default body text */
+  --bcds-typography-regular-large-body: 400 1.125rem/1.913rem 'BC Sans'; /** Larger body text */
+  --bcds-typography-regular-h6: 400 1.125rem/1.913rem 'BC Sans'; /** Alternate (unbolded) style for Heading 6 */
+  --bcds-typography-regular-h5: 400 1.25rem/2.125rem 'BC Sans'; /** Alternate (unbolded) style for Heading 5 */
+  --bcds-typography-regular-h4: 400 1.5rem/2.25rem 'BC Sans'; /** Alternate (unbolded) style for Heading 4 */
+  --bcds-typography-regular-h3: 400 1.75rem/3rem 'BC Sans'; /** Alternate (unbolded) style for Heading 3 */
+  --bcds-typography-regular-h2: 400 2rem/3.375rem 'BC Sans'; /** Alternate (unbolded) style for Heading 2 */
+  --bcds-typography-regular-h1: 400 2.25rem/3rem 'BC Sans'; /** Alternate (unbolded) style for Heading 1 */
+  --bcds-typography-regular-display: 400 3rem 'BC Sans'; /** Extra-large body text size. Do not use for headings */
+  --bcds-typography-bold-label: 700 0.75rem/1.125rem 'BC Sans'; /** Labels and captions (bolded) */
+  --bcds-typography-bold-small-body: 700 0.875rem/1.313rem 'BC Sans'; /** Default for small body text (bolded) */
+  --bcds-typography-bold-body: 700 1rem/1.688rem 'BC Sans'; /** Default for body text (bolded) */
+  --bcds-typography-bold-large-body: 700 1.125rem/1.913rem 'BC Sans'; /** Larger text size for body text (bolded) */
+  --bcds-typography-bold-h6: 700 1.125rem/1.913rem 'BC Sans'; /** Default style for Heading 6. Includes all sizing/spacing values for H6 */
+  --bcds-typography-bold-h5: 700 1.25rem/2.125rem 'BC Sans'; /** Default style for Heading 6. Includes all sizing/spacing values for H5 */
+  --bcds-typography-bold-h4: 700 1.5rem/2.25rem 'BC Sans'; /** Default style for Heading 6. Includes all sizing/spacing values for H4 */
+  --bcds-typography-bold-h3: 700 1.75rem/3rem 'BC Sans'; /** Default style for Heading 6. Includes all sizing/spacing values for H3 */
+  --bcds-typography-bold-h2: 700 2rem/3rem 'BC Sans'; /** Default style for Heading 6. Includes all sizing/spacing values for H2 */
+  --bcds-typography-bold-h1: 700 2.25rem/3.375rem 'BC Sans'; /** Default style for Heading 6. Includes all sizing/spacing values for H1 */
+  --bcds-typography-bold-display: 700 3rem 'BC Sans'; /** Extra-large font size (bolded). Do not use for headings */
+  --bcds-typography-italic-label: italic 400 0.75rem/1.125rem 'BC Sans'; /** Labels and captions (italic) */
+  --bcds-typography-italic-small-body: italic 400 0.875rem/1.313rem 'BC Sans'; /** Small body text (italic) */
+  --bcds-typography-italic-body: italic 400 1rem/1.688rem 'BC Sans'; /** Default for body text (italic) */
+  --bcds-typography-italic-large-body: italic 400 1.125rem/1.913rem 'BC Sans'; /** Larger text size for body text (italic) */
+  --bcds-typography-italic-h6: italic 400 1.125rem/1.913rem 'BC Sans'; /** Alternate (italic) style for Heading 6 */
+  --bcds-typography-italic-h5: italic 400 1.25rem/2.125rem 'BC Sans'; /** Alternate (italic) style for Heading 5 */
+  --bcds-typography-italic-h4: italic 400 1.5rem/2.25rem 'BC Sans'; /** Alternate (italic) style for Heading 4 */
+  --bcds-typography-italic-h3: italic 400 1.75rem/3.375rem 'BC Sans'; /** Alternate (italic) style for Heading 3 */
+  --bcds-typography-italic-h2: italic 400 2rem/3rem 'BC Sans'; /** Alternate (italic) style for Heading 2 */
+  --bcds-typography-italic-h1: italic 400 2.25rem/3.375rem 'BC Sans'; /** Alternate (italic) style for Heading 1 */
+  --bcds-typography-italic-display: italic 400 3rem 'BC Sans'; /** Extra-large font size (italic). Do not use for headings */
   --bcds-typography-text-case-none: none;
   --bcds-typography-text-decoration-none: none; /** System token, used to generate type styles */
   --bcds-typography-paragraph-indent-0: 0px; /** System token, used to generate type styles */

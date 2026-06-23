@@ -1,3 +1,4 @@
+
 /**
  * Do not edit directly, this file was auto-generated.
  */
@@ -13,18 +14,10 @@ $surface-opacity-70: 0.7;
 $surface-opacity-80: 0.8;
 $surface-opacity-90: 0.9;
 $surface-opacity-100: 1;
-$surface-shadow-none:
-  0 0.30000001192092896px 0.8999999761581421px 0 #0000001a,
-  0 1.600000023841858px 3.5999999046325684px 0 #00000021; // Default shadow for most content and UI elements
-$surface-shadow-small:
-  0 0.6000000238418579px 1.7999999523162842px 0 #0000001a,
-  0 3.200000047683716px 7.199999809265137px 0 #00000021; // Reduced shadow for secondary UI elements
-$surface-shadow-medium:
-  0 1.2000000476837158px 3.5999999046325684px 0 #0000001a,
-  0 6.400000095367432px 14.399999618530273px 0 #00000021; // Standard shadow for UI elements like cards and buttons
-$surface-shadow-large:
-  0 4.800000190734863px 14.399999618530273px 0 #0000002e,
-  0 25.600000381469727px 57.599998474121094px 0 #00000038; // Larger shadow for emphasis. Use sparingly
+$surface-shadow-none: 0 0.30000001192092896px 0.8999999761581421px 0 #0000001a, 0 1.600000023841858px 3.5999999046325684px 0 #00000021; // Default shadow for most content and UI elements
+$surface-shadow-small: 0 0.6000000238418579px 1.7999999523162842px 0 #0000001a, 0 3.200000047683716px 7.199999809265137px 0 #00000021; // Reduced shadow for secondary UI elements
+$surface-shadow-medium: 0 1.2000000476837158px 3.5999999046325684px 0 #0000001a, 0 6.400000095367432px 14.399999618530273px 0 #00000021; // Standard shadow for UI elements like cards and buttons
+$surface-shadow-large: 0 4.800000190734863px 14.399999618530273px 0 #0000002e, 0 25.600000381469727px 57.599998474121094px 0 #00000038; // Larger shadow for emphasis. Use sparingly
 $surface-color-primary-button-default: #013366; // Default fill colour for primary buttons
 $surface-color-primary-button-hover: #1e5189; // Fill colour used when user hovers over primary button
 $surface-color-primary-button-disabled: #edebe9; // Fill colour for inactive primary buttons
@@ -42,20 +35,10 @@ $surface-color-secondary-default: #ffffff; // Light theme colour for components 
 $surface-color-secondary-hover: #edebe9; // Hover variant of surface.color.secondary.default
 $surface-color-secondary-pressed: #e0dedc; // Selected/pressed variant of surface.color.secondary.default
 $surface-color-secondary-disabled: #edebe9; // Disabled/inactive variant of surface.color.secondary default
-$surface-color-tertiary-button-default: rgba(
-  255,
-  255,
-  255,
-  0
-); // Default fill colour for tertiary buttons
+$surface-color-tertiary-button-default: rgba(255, 255, 255, 0); // Default fill colour for tertiary buttons
 $surface-color-tertiary-button-hover: #eceae8; // Fill colour used when user hovers over tertiary button
 $surface-color-tertiary-button-disabled: #edebe9; // Fill colour for inactive tertiary buttons
-$surface-color-tertiary-default: rgba(
-  255,
-  255,
-  255,
-  0
-); // Alternative light theme colour for components and layout
+$surface-color-tertiary-default: rgba(255, 255, 255, 0); // Alternative light theme colour for components and layout
 $surface-color-tertiary-hover: #eceae8; // Hover variant of surface.color.tertiary.default
 $surface-color-tertiary-pressed: #e0dedc; // Selected/pressed variant of surface.color.tertiary.default
 $surface-color-tertiary-disabled: #edebe9; // Disabled/inactive variant of surface.color.tertiary default
@@ -71,12 +54,7 @@ $surface-color-border-default: #d8d8d8; // Lighter border colour for UI elements
 $surface-color-border-medium: #898785; // Default border colour for UI elements
 $surface-color-border-dark: #353433; // Used as a hover colour for form fields and inputs
 $surface-color-border-active: #2e5dd7; // Used as the active stroke colour for UI elements
-$surface-color-overlay-default: rgba(
-  0,
-  0,
-  0,
-  0.45
-); // Background overlay colour for images and modal dialogues
+$surface-color-overlay-default: rgba(0, 0, 0, 0.45); // Background overlay colour for images and modal dialogues
 $support-surface-color-info: #f7f9fc;
 $support-surface-color-danger: #f4e1e2; // Background colour for error, failure or danger messages
 $support-surface-color-success: #f6fff8; // Background colour for success messages
@@ -125,7 +103,7 @@ $layout-border-radius-small: 2px;
 $layout-border-radius-medium: 4px;
 $layout-border-radius-large: 6px;
 $layout-border-radius-circular: 9999px; // Used for components with a circular radius
-$typography-font-families-bc-sans: "BC Sans"; // BC Sans font. Requires BC Sans package
+$typography-font-families-bc-sans: 'BC Sans'; // BC Sans font. Requires BC Sans package
 $typography-line-heights-xxxdense: 1.125rem; // Smallest line height
 $typography-line-heights-xxdense: 1.313rem;
 $typography-line-heights-xdense: 1.688rem;
@@ -151,39 +129,39 @@ $typography-font-size-h1: 2.25rem;
 $typography-font-size-display: 3rem;
 $typography-letter-spacing-0: 0em; // System token, used to generate type styles
 $typography-paragraph-spacing-0: 0; // System token, used to generate type styles
-$typography-regular-label: 400 0.75rem/1.125rem "BC Sans"; // Labels and captions
-$typography-regular-small-body: 400 0.875rem/1.313rem "BC Sans"; // Smaller body text
-$typography-regular-body: 400 1rem/1.688rem "BC Sans"; // Default body text
-$typography-regular-large-body: 400 1.125rem/1.913rem "BC Sans"; // Larger body text
-$typography-regular-h6: 400 1.125rem/1.913rem "BC Sans"; // Alternate (unbolded) style for Heading 6
-$typography-regular-h5: 400 1.25rem/2.125rem "BC Sans"; // Alternate (unbolded) style for Heading 5
-$typography-regular-h4: 400 1.5rem/2.25rem "BC Sans"; // Alternate (unbolded) style for Heading 4
-$typography-regular-h3: 400 1.75rem/3rem "BC Sans"; // Alternate (unbolded) style for Heading 3
-$typography-regular-h2: 400 2rem/3.375rem "BC Sans"; // Alternate (unbolded) style for Heading 2
-$typography-regular-h1: 400 2.25rem/3rem "BC Sans"; // Alternate (unbolded) style for Heading 1
-$typography-regular-display: 400 3rem "BC Sans"; // Extra-large body text size. Do not use for headings
-$typography-bold-label: 700 0.75rem/1.125rem "BC Sans"; // Labels and captions (bolded)
-$typography-bold-small-body: 700 0.875rem/1.313rem "BC Sans"; // Default for small body text (bolded)
-$typography-bold-body: 700 1rem/1.688rem "BC Sans"; // Default for body text (bolded)
-$typography-bold-large-body: 700 1.125rem/1.913rem "BC Sans"; // Larger text size for body text (bolded)
-$typography-bold-h6: 700 1.125rem/1.913rem "BC Sans"; // Default style for Heading 6. Includes all sizing/spacing values for H6
-$typography-bold-h5: 700 1.25rem/2.125rem "BC Sans"; // Default style for Heading 6. Includes all sizing/spacing values for H5
-$typography-bold-h4: 700 1.5rem/2.25rem "BC Sans"; // Default style for Heading 6. Includes all sizing/spacing values for H4
-$typography-bold-h3: 700 1.75rem/3rem "BC Sans"; // Default style for Heading 6. Includes all sizing/spacing values for H3
-$typography-bold-h2: 700 2rem/3rem "BC Sans"; // Default style for Heading 6. Includes all sizing/spacing values for H2
-$typography-bold-h1: 700 2.25rem/3.375rem "BC Sans"; // Default style for Heading 6. Includes all sizing/spacing values for H1
-$typography-bold-display: 700 3rem "BC Sans"; // Extra-large font size (bolded). Do not use for headings
-$typography-italic-label: italic 400 0.75rem/1.125rem "BC Sans"; // Labels and captions (italic)
-$typography-italic-small-body: italic 400 0.875rem/1.313rem "BC Sans"; // Small body text (italic)
-$typography-italic-body: italic 400 1rem/1.688rem "BC Sans"; // Default for body text (italic)
-$typography-italic-large-body: italic 400 1.125rem/1.913rem "BC Sans"; // Larger text size for body text (italic)
-$typography-italic-h6: italic 400 1.125rem/1.913rem "BC Sans"; // Alternate (italic) style for Heading 6
-$typography-italic-h5: italic 400 1.25rem/2.125rem "BC Sans"; // Alternate (italic) style for Heading 5
-$typography-italic-h4: italic 400 1.5rem/2.25rem "BC Sans"; // Alternate (italic) style for Heading 4
-$typography-italic-h3: italic 400 1.75rem/3.375rem "BC Sans"; // Alternate (italic) style for Heading 3
-$typography-italic-h2: italic 400 2rem/3rem "BC Sans"; // Alternate (italic) style for Heading 2
-$typography-italic-h1: italic 400 2.25rem/3.375rem "BC Sans"; // Alternate (italic) style for Heading 1
-$typography-italic-display: italic 400 3rem "BC Sans"; // Extra-large font size (italic). Do not use for headings
+$typography-regular-label: 400 0.75rem/1.125rem 'BC Sans'; // Labels and captions
+$typography-regular-small-body: 400 0.875rem/1.313rem 'BC Sans'; // Smaller body text
+$typography-regular-body: 400 1rem/1.688rem 'BC Sans'; // Default body text
+$typography-regular-large-body: 400 1.125rem/1.913rem 'BC Sans'; // Larger body text
+$typography-regular-h6: 400 1.125rem/1.913rem 'BC Sans'; // Alternate (unbolded) style for Heading 6
+$typography-regular-h5: 400 1.25rem/2.125rem 'BC Sans'; // Alternate (unbolded) style for Heading 5
+$typography-regular-h4: 400 1.5rem/2.25rem 'BC Sans'; // Alternate (unbolded) style for Heading 4
+$typography-regular-h3: 400 1.75rem/3rem 'BC Sans'; // Alternate (unbolded) style for Heading 3
+$typography-regular-h2: 400 2rem/3.375rem 'BC Sans'; // Alternate (unbolded) style for Heading 2
+$typography-regular-h1: 400 2.25rem/3rem 'BC Sans'; // Alternate (unbolded) style for Heading 1
+$typography-regular-display: 400 3rem 'BC Sans'; // Extra-large body text size. Do not use for headings
+$typography-bold-label: 700 0.75rem/1.125rem 'BC Sans'; // Labels and captions (bolded)
+$typography-bold-small-body: 700 0.875rem/1.313rem 'BC Sans'; // Default for small body text (bolded)
+$typography-bold-body: 700 1rem/1.688rem 'BC Sans'; // Default for body text (bolded)
+$typography-bold-large-body: 700 1.125rem/1.913rem 'BC Sans'; // Larger text size for body text (bolded)
+$typography-bold-h6: 700 1.125rem/1.913rem 'BC Sans'; // Default style for Heading 6. Includes all sizing/spacing values for H6
+$typography-bold-h5: 700 1.25rem/2.125rem 'BC Sans'; // Default style for Heading 6. Includes all sizing/spacing values for H5
+$typography-bold-h4: 700 1.5rem/2.25rem 'BC Sans'; // Default style for Heading 6. Includes all sizing/spacing values for H4
+$typography-bold-h3: 700 1.75rem/3rem 'BC Sans'; // Default style for Heading 6. Includes all sizing/spacing values for H3
+$typography-bold-h2: 700 2rem/3rem 'BC Sans'; // Default style for Heading 6. Includes all sizing/spacing values for H2
+$typography-bold-h1: 700 2.25rem/3.375rem 'BC Sans'; // Default style for Heading 6. Includes all sizing/spacing values for H1
+$typography-bold-display: 700 3rem 'BC Sans'; // Extra-large font size (bolded). Do not use for headings
+$typography-italic-label: italic 400 0.75rem/1.125rem 'BC Sans'; // Labels and captions (italic)
+$typography-italic-small-body: italic 400 0.875rem/1.313rem 'BC Sans'; // Small body text (italic)
+$typography-italic-body: italic 400 1rem/1.688rem 'BC Sans'; // Default for body text (italic)
+$typography-italic-large-body: italic 400 1.125rem/1.913rem 'BC Sans'; // Larger text size for body text (italic)
+$typography-italic-h6: italic 400 1.125rem/1.913rem 'BC Sans'; // Alternate (italic) style for Heading 6
+$typography-italic-h5: italic 400 1.25rem/2.125rem 'BC Sans'; // Alternate (italic) style for Heading 5
+$typography-italic-h4: italic 400 1.5rem/2.25rem 'BC Sans'; // Alternate (italic) style for Heading 4
+$typography-italic-h3: italic 400 1.75rem/3.375rem 'BC Sans'; // Alternate (italic) style for Heading 3
+$typography-italic-h2: italic 400 2rem/3rem 'BC Sans'; // Alternate (italic) style for Heading 2
+$typography-italic-h1: italic 400 2.25rem/3.375rem 'BC Sans'; // Alternate (italic) style for Heading 1
+$typography-italic-display: italic 400 3rem 'BC Sans'; // Extra-large font size (italic). Do not use for headings
 $typography-text-case-none: none;
 $typography-text-decoration-none: none; // System token, used to generate type styles
 $typography-paragraph-indent-0: 0px; // System token, used to generate type styles
@@ -231,300 +209,300 @@ $theme-primary-blue: #013366; // Primary Blue (Blue 100)
 $theme-primary-gold: #fcba19; // Primary Gold (Gold 100)
 
 $bcds: (
-  "surface": (
-    "opacity": (
-      "0": $surface-opacity-0,
-      "10": $surface-opacity-10,
-      "20": $surface-opacity-20,
-      "30": $surface-opacity-30,
-      "40": $surface-opacity-40,
-      "50": $surface-opacity-50,
-      "60": $surface-opacity-60,
-      "70": $surface-opacity-70,
-      "80": $surface-opacity-80,
-      "90": $surface-opacity-90,
-      "100": $surface-opacity-100,
+  'surface': (
+    'opacity': (
+      '0': $surface-opacity-0,
+      '10': $surface-opacity-10,
+      '20': $surface-opacity-20,
+      '30': $surface-opacity-30,
+      '40': $surface-opacity-40,
+      '50': $surface-opacity-50,
+      '60': $surface-opacity-60,
+      '70': $surface-opacity-70,
+      '80': $surface-opacity-80,
+      '90': $surface-opacity-90,
+      '100': $surface-opacity-100
     ),
-    "shadow": (
-      "none": $surface-shadow-none,
-      "small": $surface-shadow-small,
-      "medium": $surface-shadow-medium,
-      "large": $surface-shadow-large,
+    'shadow': (
+      'none': $surface-shadow-none,
+      'small': $surface-shadow-small,
+      'medium': $surface-shadow-medium,
+      'large': $surface-shadow-large
     ),
-    "color": (
-      "primary": (
-        "button": (
-          "default": $surface-color-primary-button-default,
-          "hover": $surface-color-primary-button-hover,
-          "disabled": $surface-color-primary-button-disabled,
+    'color': (
+      'primary': (
+        'button': (
+          'default': $surface-color-primary-button-default,
+          'hover': $surface-color-primary-button-hover,
+          'disabled': $surface-color-primary-button-disabled
         ),
-        "dangerButton": (
-          "default": $surface-color-primary-danger-button-default,
-          "hover": $surface-color-primary-danger-button-hover,
-          "disabled": $surface-color-primary-danger-button-disabled,
+        'dangerButton': (
+          'default': $surface-color-primary-danger-button-default,
+          'hover': $surface-color-primary-danger-button-hover,
+          'disabled': $surface-color-primary-danger-button-disabled
         ),
-        "default": $surface-color-primary-default,
-        "hover": $surface-color-primary-hover,
-        "pressed": $surface-color-primary-pressed,
-        "disabled": $surface-color-primary-disabled,
+        'default': $surface-color-primary-default,
+        'hover': $surface-color-primary-hover,
+        'pressed': $surface-color-primary-pressed,
+        'disabled': $surface-color-primary-disabled
       ),
-      "secondary": (
-        "button": (
-          "default": $surface-color-secondary-button-default,
-          "hover": $surface-color-secondary-button-hover,
-          "disabled": $surface-color-secondary-button-disabled,
+      'secondary': (
+        'button': (
+          'default': $surface-color-secondary-button-default,
+          'hover': $surface-color-secondary-button-hover,
+          'disabled': $surface-color-secondary-button-disabled
         ),
-        "default": $surface-color-secondary-default,
-        "hover": $surface-color-secondary-hover,
-        "pressed": $surface-color-secondary-pressed,
-        "disabled": $surface-color-secondary-disabled,
+        'default': $surface-color-secondary-default,
+        'hover': $surface-color-secondary-hover,
+        'pressed': $surface-color-secondary-pressed,
+        'disabled': $surface-color-secondary-disabled
       ),
-      "tertiary": (
-        "button": (
-          "default": $surface-color-tertiary-button-default,
-          "hover": $surface-color-tertiary-button-hover,
-          "disabled": $surface-color-tertiary-button-disabled,
+      'tertiary': (
+        'button': (
+          'default': $surface-color-tertiary-button-default,
+          'hover': $surface-color-tertiary-button-hover,
+          'disabled': $surface-color-tertiary-button-disabled
         ),
-        "default": $surface-color-tertiary-default,
-        "hover": $surface-color-tertiary-hover,
-        "pressed": $surface-color-tertiary-pressed,
-        "disabled": $surface-color-tertiary-disabled,
+        'default': $surface-color-tertiary-default,
+        'hover': $surface-color-tertiary-hover,
+        'pressed': $surface-color-tertiary-pressed,
+        'disabled': $surface-color-tertiary-disabled
       ),
-      "menus": (
-        "default": $surface-color-menus-default,
-        "hover": $surface-color-menus-hover,
+      'menus': (
+        'default': $surface-color-menus-default,
+        'hover': $surface-color-menus-hover
       ),
-      "forms": (
-        "default": $surface-color-forms-default,
-        "disabled": $surface-color-forms-disabled,
+      'forms': (
+        'default': $surface-color-forms-default,
+        'disabled': $surface-color-forms-disabled
       ),
-      "background": (
-        "white": $surface-color-background-white,
-        "lightGray": $surface-color-background-light-gray,
-        "lightBlue": $surface-color-background-light-blue,
-        "darkBlue": $surface-color-background-dark-blue,
+      'background': (
+        'white': $surface-color-background-white,
+        'lightGray': $surface-color-background-light-gray,
+        'lightBlue': $surface-color-background-light-blue,
+        'darkBlue': $surface-color-background-dark-blue
       ),
-      "border": (
-        "default": $surface-color-border-default,
-        "medium": $surface-color-border-medium,
-        "dark": $surface-color-border-dark,
-        "active": $surface-color-border-active,
+      'border': (
+        'default': $surface-color-border-default,
+        'medium': $surface-color-border-medium,
+        'dark': $surface-color-border-dark,
+        'active': $surface-color-border-active
       ),
-      "overlay": (
-        "default": $surface-color-overlay-default,
-      ),
-    ),
+      'overlay': (
+        'default': $surface-color-overlay-default
+      )
+    )
   ),
-  "support": (
-    "surfaceColor": (
-      "info": $support-surface-color-info,
-      "danger": $support-surface-color-danger,
-      "success": $support-surface-color-success,
-      "warning": $support-surface-color-warning,
+  'support': (
+    'surfaceColor': (
+      'info': $support-surface-color-info,
+      'danger': $support-surface-color-danger,
+      'success': $support-surface-color-success,
+      'warning': $support-surface-color-warning
     ),
-    "borderColor": (
-      "info": $support-border-color-info,
-      "danger": $support-border-color-danger,
-      "success": $support-border-color-success,
-      "warning": $support-border-color-warning,
-    ),
+    'borderColor': (
+      'info': $support-border-color-info,
+      'danger': $support-border-color-danger,
+      'success': $support-border-color-success,
+      'warning': $support-border-color-warning
+    )
   ),
-  "icons": (
-    "size": (
-      "xsmall": $icons-size-xsmall,
-      "small": $icons-size-small,
-      "medium": $icons-size-medium,
-      "large": $icons-size-large,
-      "xlarge": $icons-size-xlarge,
+  'icons': (
+    'size': (
+      'xsmall': $icons-size-xsmall,
+      'small': $icons-size-small,
+      'medium': $icons-size-medium,
+      'large': $icons-size-large,
+      'xlarge': $icons-size-xlarge
     ),
-    "color": (
-      "primary": $icons-color-primary,
-      "secondary": $icons-color-secondary,
-      "disabled": $icons-color-disabled,
-      "link": $icons-color-link,
-      "info": $icons-color-info,
-      "danger": $icons-color-danger,
-      "success": $icons-color-success,
-      "warning": $icons-color-warning,
-      "primaryInvert": $icons-color-primary-invert,
-    ),
+    'color': (
+      'primary': $icons-color-primary,
+      'secondary': $icons-color-secondary,
+      'disabled': $icons-color-disabled,
+      'link': $icons-color-link,
+      'info': $icons-color-info,
+      'danger': $icons-color-danger,
+      'success': $icons-color-success,
+      'warning': $icons-color-warning,
+      'primaryInvert': $icons-color-primary-invert
+    )
   ),
-  "layout": (
-    "borderWidth": (
-      "none": $layout-border-width-none,
-      "small": $layout-border-width-small,
-      "medium": $layout-border-width-medium,
-      "large": $layout-border-width-large,
+  'layout': (
+    'borderWidth': (
+      'none': $layout-border-width-none,
+      'small': $layout-border-width-small,
+      'medium': $layout-border-width-medium,
+      'large': $layout-border-width-large
     ),
-    "padding": (
-      "none": $layout-padding-none,
-      "hair": $layout-padding-hair,
-      "xsmall": $layout-padding-xsmall,
-      "small": $layout-padding-small,
-      "medium": $layout-padding-medium,
-      "large": $layout-padding-large,
-      "xlarge": $layout-padding-xlarge,
+    'padding': (
+      'none': $layout-padding-none,
+      'hair': $layout-padding-hair,
+      'xsmall': $layout-padding-xsmall,
+      'small': $layout-padding-small,
+      'medium': $layout-padding-medium,
+      'large': $layout-padding-large,
+      'xlarge': $layout-padding-xlarge
     ),
-    "margin": (
-      "none": $layout-margin-none,
-      "hair": $layout-margin-hair,
-      "xsmall": $layout-margin-xsmall,
-      "small": $layout-margin-small,
-      "medium": $layout-margin-medium,
-      "large": $layout-margin-large,
-      "xlarge": $layout-margin-xlarge,
-      "xxlarge": $layout-margin-xxlarge,
-      "xxxlarge": $layout-margin-xxxlarge,
-      "huge": $layout-margin-huge,
+    'margin': (
+      'none': $layout-margin-none,
+      'hair': $layout-margin-hair,
+      'xsmall': $layout-margin-xsmall,
+      'small': $layout-margin-small,
+      'medium': $layout-margin-medium,
+      'large': $layout-margin-large,
+      'xlarge': $layout-margin-xlarge,
+      'xxlarge': $layout-margin-xxlarge,
+      'xxxlarge': $layout-margin-xxxlarge,
+      'huge': $layout-margin-huge
     ),
-    "borderRadius": (
-      "none": $layout-border-radius-none,
-      "small": $layout-border-radius-small,
-      "medium": $layout-border-radius-medium,
-      "large": $layout-border-radius-large,
-      "circular": $layout-border-radius-circular,
-    ),
+    'borderRadius': (
+      'none': $layout-border-radius-none,
+      'small': $layout-border-radius-small,
+      'medium': $layout-border-radius-medium,
+      'large': $layout-border-radius-large,
+      'circular': $layout-border-radius-circular
+    )
   ),
-  "typography": (
-    "fontFamilies": (
-      "bc-sans": $typography-font-families-bc-sans,
+  'typography': (
+    'fontFamilies': (
+      'bc-sans': $typography-font-families-bc-sans
     ),
-    "lineHeights": (
-      "xxxdense": $typography-line-heights-xxxdense,
-      "xxdense": $typography-line-heights-xxdense,
-      "xdense": $typography-line-heights-xdense,
-      "dense": $typography-line-heights-dense,
-      "regular": $typography-line-heights-regular,
-      "sparse": $typography-line-heights-sparse,
-      "xsparse": $typography-line-heights-xsparse,
-      "xxsparse": $typography-line-heights-xxsparse,
-      "auto": $typography-line-heights-auto,
+    'lineHeights': (
+      'xxxdense': $typography-line-heights-xxxdense,
+      'xxdense': $typography-line-heights-xxdense,
+      'xdense': $typography-line-heights-xdense,
+      'dense': $typography-line-heights-dense,
+      'regular': $typography-line-heights-regular,
+      'sparse': $typography-line-heights-sparse,
+      'xsparse': $typography-line-heights-xsparse,
+      'xxsparse': $typography-line-heights-xxsparse,
+      'auto': $typography-line-heights-auto
     ),
-    "fontWeights": (
-      "regular": $typography-font-weights-regular,
-      "bold": $typography-font-weights-bold,
-      "italic": (
-        "weight": $typography-font-weights-italic-weight,
-        "style": $typography-font-weights-italic-style,
-      ),
+    'fontWeights': (
+      'regular': $typography-font-weights-regular,
+      'bold': $typography-font-weights-bold,
+      'italic': (
+        'weight': $typography-font-weights-italic-weight,
+        'style': $typography-font-weights-italic-style
+      )
     ),
-    "fontSize": (
-      "label": $typography-font-size-label,
-      "smallBody": $typography-font-size-small-body,
-      "body": $typography-font-size-body,
-      "largeBody": $typography-font-size-large-body,
-      "H5": $typography-font-size-h5,
-      "H4": $typography-font-size-h4,
-      "H3": $typography-font-size-h3,
-      "H2": $typography-font-size-h2,
-      "H1": $typography-font-size-h1,
-      "display": $typography-font-size-display,
+    'fontSize': (
+      'label': $typography-font-size-label,
+      'smallBody': $typography-font-size-small-body,
+      'body': $typography-font-size-body,
+      'largeBody': $typography-font-size-large-body,
+      'H5': $typography-font-size-h5,
+      'H4': $typography-font-size-h4,
+      'H3': $typography-font-size-h3,
+      'H2': $typography-font-size-h2,
+      'H1': $typography-font-size-h1,
+      'display': $typography-font-size-display
     ),
-    "letterSpacing": (
-      "0": $typography-letter-spacing-0,
+    'letterSpacing': (
+      '0': $typography-letter-spacing-0
     ),
-    "paragraphSpacing": (
-      "0": $typography-paragraph-spacing-0,
+    'paragraphSpacing': (
+      '0': $typography-paragraph-spacing-0
     ),
-    "regular": (
-      "label": $typography-regular-label,
-      "smallBody": $typography-regular-small-body,
-      "body": $typography-regular-body,
-      "largeBody": $typography-regular-large-body,
-      "H6": $typography-regular-h6,
-      "H5": $typography-regular-h5,
-      "H4": $typography-regular-h4,
-      "H3": $typography-regular-h3,
-      "H2": $typography-regular-h2,
-      "H1": $typography-regular-h1,
-      "display": $typography-regular-display,
+    'regular': (
+      'label': $typography-regular-label,
+      'smallBody': $typography-regular-small-body,
+      'body': $typography-regular-body,
+      'largeBody': $typography-regular-large-body,
+      'H6': $typography-regular-h6,
+      'H5': $typography-regular-h5,
+      'H4': $typography-regular-h4,
+      'H3': $typography-regular-h3,
+      'H2': $typography-regular-h2,
+      'H1': $typography-regular-h1,
+      'display': $typography-regular-display
     ),
-    "bold": (
-      "label": $typography-bold-label,
-      "smallBody": $typography-bold-small-body,
-      "body": $typography-bold-body,
-      "largeBody": $typography-bold-large-body,
-      "H6": $typography-bold-h6,
-      "H5": $typography-bold-h5,
-      "H4": $typography-bold-h4,
-      "H3": $typography-bold-h3,
-      "H2": $typography-bold-h2,
-      "H1": $typography-bold-h1,
-      "display": $typography-bold-display,
+    'bold': (
+      'label': $typography-bold-label,
+      'smallBody': $typography-bold-small-body,
+      'body': $typography-bold-body,
+      'largeBody': $typography-bold-large-body,
+      'H6': $typography-bold-h6,
+      'H5': $typography-bold-h5,
+      'H4': $typography-bold-h4,
+      'H3': $typography-bold-h3,
+      'H2': $typography-bold-h2,
+      'H1': $typography-bold-h1,
+      'display': $typography-bold-display
     ),
-    "italic": (
-      "label": $typography-italic-label,
-      "smallBody": $typography-italic-small-body,
-      "body": $typography-italic-body,
-      "largeBody": $typography-italic-large-body,
-      "H6": $typography-italic-h6,
-      "H5": $typography-italic-h5,
-      "H4": $typography-italic-h4,
-      "H3": $typography-italic-h3,
-      "H2": $typography-italic-h2,
-      "H1": $typography-italic-h1,
-      "display": $typography-italic-display,
+    'italic': (
+      'label': $typography-italic-label,
+      'smallBody': $typography-italic-small-body,
+      'body': $typography-italic-body,
+      'largeBody': $typography-italic-large-body,
+      'H6': $typography-italic-h6,
+      'H5': $typography-italic-h5,
+      'H4': $typography-italic-h4,
+      'H3': $typography-italic-h3,
+      'H2': $typography-italic-h2,
+      'H1': $typography-italic-h1,
+      'display': $typography-italic-display
     ),
-    "textCase": (
-      "none": $typography-text-case-none,
+    'textCase': (
+      'none': $typography-text-case-none
     ),
-    "textDecoration": (
-      "none": $typography-text-decoration-none,
+    'textDecoration': (
+      'none': $typography-text-decoration-none
     ),
-    "paragraphIndent": (
-      "0": $typography-paragraph-indent-0,
+    'paragraphIndent': (
+      '0': $typography-paragraph-indent-0
     ),
-    "color": (
-      "primary": $typography-color-primary,
-      "secondary": $typography-color-secondary,
-      "placeholder": $typography-color-placeholder,
-      "disabled": $typography-color-disabled,
-      "link": $typography-color-link,
-      "danger": $typography-color-danger,
-      "primaryInvert": $typography-color-primary-invert,
-      "secondaryInvert": $typography-color-secondary-invert,
-    ),
+    'color': (
+      'primary': $typography-color-primary,
+      'secondary': $typography-color-secondary,
+      'placeholder': $typography-color-placeholder,
+      'disabled': $typography-color-disabled,
+      'link': $typography-color-link,
+      'danger': $typography-color-danger,
+      'primaryInvert': $typography-color-primary-invert,
+      'secondaryInvert': $typography-color-secondary-invert
+    )
   ),
-  "theme": (
-    "gold": (
-      "10": $theme-gold-10,
-      "20": $theme-gold-20,
-      "30": $theme-gold-30,
-      "40": $theme-gold-40,
-      "50": $theme-gold-50,
-      "60": $theme-gold-60,
-      "70": $theme-gold-70,
-      "80": $theme-gold-80,
-      "90": $theme-gold-90,
-      "100": $theme-gold-100,
+  'theme': (
+    'gold': (
+      '10': $theme-gold-10,
+      '20': $theme-gold-20,
+      '30': $theme-gold-30,
+      '40': $theme-gold-40,
+      '50': $theme-gold-50,
+      '60': $theme-gold-60,
+      '70': $theme-gold-70,
+      '80': $theme-gold-80,
+      '90': $theme-gold-90,
+      '100': $theme-gold-100
     ),
-    "blue": (
-      "10": $theme-blue-10,
-      "20": $theme-blue-20,
-      "30": $theme-blue-30,
-      "40": $theme-blue-40,
-      "50": $theme-blue-50,
-      "60": $theme-blue-60,
-      "70": $theme-blue-70,
-      "80": $theme-blue-80,
-      "90": $theme-blue-90,
-      "100": $theme-blue-100,
+    'blue': (
+      '10': $theme-blue-10,
+      '20': $theme-blue-20,
+      '30': $theme-blue-30,
+      '40': $theme-blue-40,
+      '50': $theme-blue-50,
+      '60': $theme-blue-60,
+      '70': $theme-blue-70,
+      '80': $theme-blue-80,
+      '90': $theme-blue-90,
+      '100': $theme-blue-100
     ),
-    "gray": (
-      "10": $theme-gray-10,
-      "20": $theme-gray-20,
-      "30": $theme-gray-30,
-      "40": $theme-gray-40,
-      "50": $theme-gray-50,
-      "60": $theme-gray-60,
-      "70": $theme-gray-70,
-      "80": $theme-gray-80,
-      "90": $theme-gray-90,
-      "100": $theme-gray-100,
-      "110": $theme-gray-110,
-      "white": $theme-gray-white,
+    'gray': (
+      '10': $theme-gray-10,
+      '20': $theme-gray-20,
+      '30': $theme-gray-30,
+      '40': $theme-gray-40,
+      '50': $theme-gray-50,
+      '60': $theme-gray-60,
+      '70': $theme-gray-70,
+      '80': $theme-gray-80,
+      '90': $theme-gray-90,
+      '100': $theme-gray-100,
+      '110': $theme-gray-110,
+      'white': $theme-gray-white
     ),
-    "primaryBlue": $theme-primary-blue,
-    "primaryGold": $theme-primary-gold,
-  ),
+    'primaryBlue': $theme-primary-blue,
+    'primaryGold': $theme-primary-gold
+  )
 );
