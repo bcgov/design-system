@@ -77,7 +77,7 @@ export const HeaderWithSubheader: Story = {
   },
   render: ({ ...args }: SubheaderProps) => (
     <>
-      <Header title="Example header with navbar">
+      <Header title="Example header with subheader">
         <Button size="small">Log in</Button>
       </Header>
       <Subheader {...args} />
