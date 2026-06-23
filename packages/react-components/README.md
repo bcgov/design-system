@@ -85,7 +85,7 @@ export default function App() {
 | Header                                      | N/A                                            |
 | Heading                                     | https://react-spectrum.adobe.com/v3/Heading    |
 | InlineAlert                                 | N/A                                            |
-| Menu, MenuItem, MenuTrigger, SubmenuTrigger | https://react-aria.adobe.com/Menu              |
+| Menu, MenuItem, MenuTrigger, SubmenuTrigger, MenuSection, MenuSectionHeader | https://react-aria.adobe.com/Menu              |
 | Modal                                       | https://react-aria.adobe.com/Modal             |
 | Link                                        | https://react-spectrum.adobe.com/v3/Link       |
 | ProgressBar                                 | https://react-aria.adobe.com/ProgressBar       |
