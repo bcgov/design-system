@@ -88,6 +88,7 @@ export default function App() {
 | Menu, MenuItem, MenuTrigger, SubmenuTrigger, MenuSection, MenuSectionHeader | https://react-aria.adobe.com/Menu              |
 | Modal                                       | https://react-aria.adobe.com/Modal             |
 | Link                                        | https://react-spectrum.adobe.com/v3/Link       |
+| NumberField                                  | https://react-aria.adobe.com/NumberField       |
 | ProgressBar                                 | https://react-aria.adobe.com/ProgressBar       |
 | ProgressCircle                              | https://react-aria.adobe.com/ProgressBar       |
 | RadioGroup, Radio                           | https://react-aria.adobe.com/RadioGroup        |
