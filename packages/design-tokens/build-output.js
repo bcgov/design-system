@@ -3,92 +3,30 @@ import StyleDictionary from "style-dictionary";
 
 register(StyleDictionary);
 
-// TODO: Remove the `bcds` custom transformations and keep the default new
-//       behavior for these tokens when we have a breaking change that will
-//       move us to a new major version.
+const AUTO_LINE_HEIGHT_TRANSFORM = "bcds/typography/lineHeightAuto";
 
-// Matches 6 or 8 digit hex color codes
-const hexColorRegex = /#([0-9a-fA-F]{6}([0-9a-fA-F]{2})?)/g;
-
-// Keep old capitalization of hex codes behavior.
+/* Rewrite Figma's `AUTO` line-height value to `normal` */
 StyleDictionary.registerTransform({
-  name: "bcds/color/uppercase",
+  name: "bcds/typography/lineHeightAuto",
   type: "value",
-  filter: function (token) {
-    return token.type === "color";
-  },
-  transform: function (token) {
-    return hexColorRegex.test(token)
-      ? token.original.value.toUpperCase()
-      : token.original.value;
-  },
-});
-
-// Matches dimension rules with leading "0" characters like "0px"
-const leadingZeroValueRegex = /^0(?:em||px|rem|%)$/g;
-
-// Keep old "0" dimension value behavior where units are left off the "0" token.
-StyleDictionary.registerTransform({
-  name: "bcds/css/size/zero",
-  type: "value",
-  filter: function (token) {
-    return token.type === "dimension";
-  },
-  transform: function (token) {
-    return leadingZeroValueRegex.test(token) ? "0" : token.original.value;
-  },
-});
-
-StyleDictionary.registerTransform({
-  name: "bcds/js/size/zero",
-  type: "value",
-  filter: function (token) {
-    return token.type === "dimension";
-  },
-  transform: function (token) {
-    // `layout.margin.none` was already using "0rem" so handle it specifically.
-    if (["layoutMarginNone", "bcdsLayoutMarginNone"].includes(token.name)) {
-      return "0rem";
+  matcher: (token) =>
+    token.type === "lineHeights" &&
+    token.path?.join(".") === "typography.lineHeights.auto",
+  transform: (token) => {
+    if (typeof token.value !== "string") {
+      return token.value;
     }
 
-    return token.value === "0rem" ? "0" : token.value;
+    return token.value.toUpperCase() === "AUTO" ? "normal" : token.value;
   },
 });
 
-// Keep old "italic" font v3 values.
-// Without this transformation, the order of the `font` shorthand tokens for the
-// italic font faces has its first two values flipped. The new default format
-// with Style Dictionary v4 and sd-transforms v1 is better - it matches the CSS
-// `font` shorthand: https://developer.mozilla.org/en-US/docs/Web/CSS/font
-StyleDictionary.registerTransform({
-  name: "bcds/typography/italic",
-  type: "value",
-  transitive: true,
-  filter: function (token) {
-    if (token.type === "typography" && token?.name?.includes("Italic")) {
-      return true;
-    }
-
-    return false;
-  },
-  transform: function (token) {
-    // `token` ex: `italic 400 1rem/1.688rem 'BC Sans'`
-    const arr = token.value.split(" ");
-
-    let newArr = [];
-
-    arr.forEach((chunk, index) => {
-      if (index === 1) {
-        newArr.unshift(chunk);
-      } else {
-        newArr.push(chunk);
-      }
-    });
-
-    // Returns ex: `400 italic 1rem/1.688rem 'BC Sans'`
-    return newArr.join(" ");
-  },
-});
+const TOKENS_STUDIO_TRANSFORMS =
+  StyleDictionary.hooks.transformGroups["tokens-studio"];
+const TOKENS_STUDIO_TRANSFORMS_WITH_AUTO_LINE_HEIGHT = [
+  ...TOKENS_STUDIO_TRANSFORMS,
+  AUTO_LINE_HEIGHT_TRANSFORM,
+];
 
 const sd = new StyleDictionary({
   source: ["input/tokens.json"],
@@ -100,9 +38,7 @@ const sd = new StyleDictionary({
     css: {
       transformGroup: "tokens-studio",
       transforms: [
-        "bcds/typography/italic",
-        "bcds/color/uppercase",
-        "bcds/css/size/zero",
+        "bcds/typography/lineHeightAuto",
         "ts/descriptionToComment",
         "ts/size/px",
         "ts/opacity",
@@ -126,9 +62,7 @@ const sd = new StyleDictionary({
       transformGroup: "tokens-studio",
       prefix: "bcds",
       transforms: [
-        "bcds/typography/italic",
-        "bcds/color/uppercase",
-        "bcds/css/size/zero",
+        "bcds/typography/lineHeightAuto",
         "ts/descriptionToComment",
         "ts/size/px",
         "ts/opacity",
@@ -149,12 +83,7 @@ const sd = new StyleDictionary({
       ],
     },
     js: {
-      transformGroup: "tokens-studio",
-      transforms: [
-        "bcds/typography/italic",
-        "bcds/color/uppercase",
-        "bcds/js/size/zero",
-      ],
+      transforms: TOKENS_STUDIO_TRANSFORMS_WITH_AUTO_LINE_HEIGHT,
       buildPath: "build/js/",
       files: [
         {
@@ -168,12 +97,7 @@ const sd = new StyleDictionary({
       ],
     },
     jsPrefixed: {
-      transformGroup: "tokens-studio",
-      transforms: [
-        "bcds/typography/italic",
-        "bcds/color/uppercase",
-        "bcds/js/size/zero",
-      ],
+      transforms: TOKENS_STUDIO_TRANSFORMS_WITH_AUTO_LINE_HEIGHT,
       prefix: "bcds",
       buildPath: "build/js-prefixed/",
       files: [
@@ -188,12 +112,7 @@ const sd = new StyleDictionary({
       ],
     },
     cjs: {
-      transformGroup: "tokens-studio",
-      transforms: [
-        "bcds/typography/italic",
-        "bcds/color/uppercase",
-        "bcds/js/size/zero",
-      ],
+      transforms: TOKENS_STUDIO_TRANSFORMS_WITH_AUTO_LINE_HEIGHT,
       buildPath: "build/cjs/",
       files: [
         {
@@ -207,12 +126,7 @@ const sd = new StyleDictionary({
       ],
     },
     cjsPrefixed: {
-      transformGroup: "tokens-studio",
-      transforms: [
-        "bcds/typography/italic",
-        "bcds/color/uppercase",
-        "bcds/js/size/zero",
-      ],
+      transforms: TOKENS_STUDIO_TRANSFORMS_WITH_AUTO_LINE_HEIGHT,
       prefix: "bcds",
       buildPath: "build/cjs-prefixed/",
       files: [
@@ -228,50 +142,38 @@ const sd = new StyleDictionary({
     },
     scss: {
       transformGroup: "tokens-studio",
-      transforms: [
-        "bcds/typography/italic",
-        "bcds/color/uppercase",
-        "bcds/css/size/zero",
-        "name/kebab",
-      ],
+      transforms: ["bcds/typography/lineHeightAuto", "name/kebab"],
       buildPath: "build/scss/",
       files: [
         {
           destination: "variables.scss",
           format: "scss/map-deep",
-          filter: (t) => (
+          filter: (t) =>
             /* strip metadata */
-            !(['$themes', '$metadata'].includes(t))
-          ),
+            !["$themes", "$metadata"].includes(t),
           options: {
-            "mapName": "bcds",
-            "themeable": false
-          }
+            mapName: "bcds",
+            themeable: false,
+          },
         },
       ],
     },
     scssPrefixed: {
       transformGroup: "tokens-studio",
-      transforms: [
-        "bcds/typography/italic",
-        "bcds/color/uppercase",
-        "bcds/css/size/zero",
-        "name/kebab",
-      ],
+      transforms: ["bcds/typography/lineHeightAuto", "name/kebab"],
       buildPath: "build/scss-prefixed/",
       prefix: "bcds",
       files: [
         {
           destination: "variables.scss",
           format: "scss/map-deep",
-          filter: (t) => (
+          filter: (t) =>
             /* strip metadata */
-            !(['$themes', '$metadata'].includes(t))
-          ),
+            !["$themes", "$metadata"].includes(t),
           options: {
-            "mapName": "bcds",
-            "themeable": false
-          }
+            mapName: "bcds",
+            themeable: false,
+          },
         },
       ],
     },
