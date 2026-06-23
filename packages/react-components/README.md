@@ -66,43 +66,43 @@ export default function App() {
 
 ## Component list
 
-| Component                                   | React Aria docs link                           |
-| ------------------------------------------- | ---------------------------------------------- |
-| AlertBanner                                 | N/A                                            |
-| AlertDialog                                 | N/A                                            |
-| Accordion                                   | https://react-aria.adobe.com/Disclosure        |
-| AccordionGroup                              | https://react-aria.adobe.com/DisclosureGroup   |
-| Button                                      | https://react-aria.adobe.com/Button            |
-| ButtonGroup                                 | N/A                                            |
-| Calendar                                    | https://react-aria.adobe.com/Calendar          |
-| Callout                                     | N/A                                            |
-| Checkbox                                    | https://react-aria.adobe.com/Checkbox          |
-| CheckboxGroup                               | https://react-aria.adobe.com/CheckboxGroup     |
-| DatePicker                                  | https://react-aria.adobe.com/DatePicker        |
-| Dialog                                      | https://react-aria.adobe.com/Dialog            |
-| Footer                                      | N/A                                            |
-| Form                                        | https://react-aria.adobe.com/Form              |
-| Header                                      | N/A                                            |
-| Heading                                     | https://react-spectrum.adobe.com/v3/Heading    |
-| InlineAlert                                 | N/A                                            |
+| Component                                                                   | React Aria docs link                           |
+| --------------------------------------------------------------------------- | ---------------------------------------------- |
+| AlertBanner                                                                 | N/A                                            |
+| AlertDialog                                                                 | N/A                                            |
+| Accordion                                                                   | https://react-aria.adobe.com/Disclosure        |
+| AccordionGroup                                                              | https://react-aria.adobe.com/DisclosureGroup   |
+| Button                                                                      | https://react-aria.adobe.com/Button            |
+| ButtonGroup                                                                 | N/A                                            |
+| Calendar                                                                    | https://react-aria.adobe.com/Calendar          |
+| Callout                                                                     | N/A                                            |
+| Checkbox                                                                    | https://react-aria.adobe.com/Checkbox          |
+| CheckboxGroup                                                               | https://react-aria.adobe.com/CheckboxGroup     |
+| DatePicker                                                                  | https://react-aria.adobe.com/DatePicker        |
+| Dialog                                                                      | https://react-aria.adobe.com/Dialog            |
+| Footer                                                                      | N/A                                            |
+| Form                                                                        | https://react-aria.adobe.com/Form              |
+| Header                                                                      | N/A                                            |
+| Heading                                                                     | https://react-spectrum.adobe.com/v3/Heading    |
+| InlineAlert                                                                 | N/A                                            |
 | Menu, MenuItem, MenuTrigger, SubmenuTrigger, MenuSection, MenuSectionHeader | https://react-aria.adobe.com/Menu              |
-| Modal                                       | https://react-aria.adobe.com/Modal             |
-| Link                                        | https://react-spectrum.adobe.com/v3/Link       |
-| NumberField                                  | https://react-aria.adobe.com/NumberField       |
-| ProgressBar                                 | https://react-aria.adobe.com/ProgressBar       |
-| ProgressCircle                              | https://react-aria.adobe.com/ProgressBar       |
-| RadioGroup, Radio                           | https://react-aria.adobe.com/RadioGroup        |
-| Select                                      | https://react-aria.adobe.com/Select            |
-| Separator                                   | https://react-aria.adobe.com/Separator         |
-| Subheader                                   | N/A                                            |
-| Switch                                      | https://react-aria.adobe.com/Switch            |
-| TagGroup, TagList, Tag                      | https://react-aria.adobe.com/TagGroup          |
-| Text                                        | https://react-spectrum.adobe.com/v3/Text       |
-| TextArea, TextField                         | https://react-aria.adobe.com/TextField         |
-| TimeField                                   | https://react-aria.adobe.com/TimeField         |
-| ToggleButton                                | https://react-aria.adobe.com/ToggleButton      |
-| ToggleButtonGroup                           | https://react-aria.adobe.com/ToggleButtonGroup |
-| Tooltip, TooltipTrigger                     | https://react-aria.adobe.com/Tooltip           |
+| Modal                                                                       | https://react-aria.adobe.com/Modal             |
+| Link                                                                        | https://react-spectrum.adobe.com/v3/Link       |
+| NumberField                                                                 | https://react-aria.adobe.com/NumberField       |
+| ProgressBar                                                                 | https://react-aria.adobe.com/ProgressBar       |
+| ProgressCircle                                                              | https://react-aria.adobe.com/ProgressBar       |
+| RadioGroup, Radio                                                           | https://react-aria.adobe.com/RadioGroup        |
+| Select                                                                      | https://react-aria.adobe.com/Select            |
+| Separator                                                                   | https://react-aria.adobe.com/Separator         |
+| Subheader                                                                   | N/A                                            |
+| Switch                                                                      | https://react-aria.adobe.com/Switch            |
+| TagGroup, TagList, Tag                                                      | https://react-aria.adobe.com/TagGroup          |
+| Text                                                                        | https://react-spectrum.adobe.com/v3/Text       |
+| TextArea, TextField                                                         | https://react-aria.adobe.com/TextField         |
+| TimeField                                                                   | https://react-aria.adobe.com/TimeField         |
+| ToggleButton                                                                | https://react-aria.adobe.com/ToggleButton      |
+| ToggleButtonGroup                                                           | https://react-aria.adobe.com/ToggleButtonGroup |
+| Tooltip, TooltipTrigger                                                     | https://react-aria.adobe.com/Tooltip           |
 
 ## Supported React versions
 
