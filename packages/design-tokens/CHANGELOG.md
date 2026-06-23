@@ -1,5 +1,26 @@
 # Changelog
 
+## 5.0.0
+
+This is a milestone release that cross-publishes the design tokens library to GitHub Packages registry as well as npm.
+
+This release contains non-breaking changes to token values. There are no changes to token names.
+
+### Added
+
+- `@bcgov/design-tokens` is now installable from either the npm or GitHub Packages registries
+
+### Changed
+
+- Removed explicit line-height declaration from `typography.regular.display` and `typography.bold.display` tokens, so it will properly default to `normal`
+- Corrected value of `typography.lineHeights.auto` token from `AUTO` (Figma-generated) to `normal`
+- Re-ordered declarations for all `typography.italic.*` tokens to follow proper `font` shorthand order
+
+This release uses:
+
+- `@tokens-studio/sd-transforms` v2.0.3
+- `style-dictionary` v5.4.4
+
 ## 4.0.0
 
 This is a milestone release that adds SCSS as an output format.
