@@ -6,7 +6,7 @@ This is a milestone release that adds two new components, and includes various e
 
 ### Added
 
-- Menu (including MenuItem, MenuTrigger and SubmenuTrigger subcomponents)
+- Menu (including MenuItem, MenuTrigger, SubmenuTrigger, MenuSection and MenuSectionHeader subcomponents)
 - Subheader
 - Component APIs are now mapped to their counterparts in Figma via [Code Connect](https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect)
 - `@bcgov/design-system-react-components` is now installable from either the npm or GitHub Packages registries
