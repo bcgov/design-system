@@ -10,7 +10,7 @@ test("build-output.js should complete without errors", async () => {
       // Execute the `build` script from package.json, removing the build
       // directory contents before running build-output.js.
       exec(
-        "rm -rf build/cjs* && rm -rf build/css* && rm -rf build/js* && node build-output.js",
+        "rm -rf build/cjs* && rm -rf build/css* && rm -rf build/js* && rm -rf build/scss* && node build-output.js",
         (error, stdout, stderr) => {
           // If there was an error, the test should fail.
           if (error) {
@@ -19,7 +19,7 @@ test("build-output.js should complete without errors", async () => {
           }
           console.log("build-output.js executed successfully:", stdout);
           resolve();
-        },
+        }
       );
     });
     assert.ok(true);
@@ -107,7 +107,7 @@ test("theme.blue.100 should be present in all output files", async () => {
     const fileContent = readFileSync(filePath, "utf-8");
     assert.ok(
       fileContent.includes(token),
-      `Expected token "${token}" to be present in file ${file}`,
+      `Expected token "${token}" to be present in file ${file}`
     );
   }
 });
@@ -153,7 +153,7 @@ test("typography.lineHeights.auto should be normalized to normal in all output f
     const fileContent = readFileSync(filePath, "utf-8");
     assert.ok(
       fileContent.includes(token),
-      `Expected token "${token}" to be present in file ${file}`,
+      `Expected token "${token}" to be present in file ${file}`
     );
   }
 });
