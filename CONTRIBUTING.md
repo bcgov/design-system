@@ -2,7 +2,7 @@
 
 The B.C. Design System is a resource for all designers and developers in the B.C. Public Service. Your ideas, feedback and support are essential to making it successful.
 
-The design system is maintained by the Online Service Solutions team at Service BC, part of the Ministry of Citizens' Services. You can contact the team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca).
+The design system is maintained by the Everyday Life Events Common Capabilities & AI Platforms branch at Connected Services BC, part of the Ministry of Citizens' Services. You can contact the team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca).
 
 ## Suggest a new component or pattern
 
@@ -28,7 +28,7 @@ If you'd like to contribute a larger feature (for example, a new component), we 
 Before release, all components must have:
 
 - A Figma component and design specification
-- A React component, using [React Aria Components](https://react-spectrum.adobe.com/react-aria/index.html) as a base (where applicable)
+- A React component, using [React Aria](https://react-spectrum.adobe.com/react-aria/index.html) components as a base (where applicable)
 - Technical documentation and examples in [Storybook](https://designsystem.gov.bc.ca/react-components/)
 
 All components must also undergo both human and automated accessibility testing, to ensure they conform to [WCAG 2.2 Level AA](https://www.w3.org/TR/WCAG22/) at a minimum.

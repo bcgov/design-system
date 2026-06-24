@@ -1,14 +1,17 @@
 # @bcgov/design-system-react-components
 
-This package contains a library of React components built using [React Aria](https://react-aria.adobe.com) to implement the [B.C. Design System](https://gov.bc.ca/designsystem).
+This package contains a library of React components, built using React Aria, as part of the B.C. Design System.
 
-Questions? Please email the <a href="mailto:DesignSystem@gov.bc.ca">GDX OSS Design Team</a>.
+To use these components, install this package and import the components you need into your application.
 
-Storybook: https://designsystem.gov.bc.ca/react-components/
+- GitHub: https://github.com/bcgov/design-system/
+- Storybook: https://designsystem.gov.bc.ca/react-components/
+- Documentation: https://gov.bc.ca/designsystem/
 
-GitHub Repository: https://github.com/bcgov/design-system
+If you have questions, you can:
 
-To use, install this package and import the components into your application.
+- <a href="mailto:DesignSystem@gov.bc.ca">Email designsystem@gov.bc.ca</a>
+- <a href="https://github.com/bcgov/design-system/issues">Open an issue on GitHub</a>
 
 ## Install
 
@@ -65,6 +68,8 @@ export default function App() {
 ```
 
 ## Component list
+
+Most components are based on <a href="https://react-aria.adobe.com">React Aria</a> primitives.
 
 | Component                                                                   | React Aria docs link                           |
 | --------------------------------------------------------------------------- | ---------------------------------------------- |
@@ -198,14 +203,14 @@ Prettier is used for formatting. See configuration file `prettier.config.js` and
 
 #### npm package
 
-Publishing new versions of the package to npm is done via GitHub Actions.
+Publishing new versions of the package is done via GitHub Actions.
 
 GitHub Actions are located in `/.github/workflows` in the project root. Actions are included to:
 
 - Build the Storybook and Vite applications on merge to `main`
 - Test (Vitest and Playwright) on pull request
-- Publish new versions of the library on npm (`next` tag) on merge to `main`
-- Publish new versions of the library on npm (`latest` tag) when a GitHub release is published
+- Publish new versions of the library to npm (`next` tag) and GitHub Packages on merge to `main`
+- Publish new production versions of the library to npm (`latest` tag) and GitHub Packages when a GitHub release is published
 
 #### GitHub release
 
