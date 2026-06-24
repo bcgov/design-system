@@ -4,7 +4,7 @@ The B.C. Design System gives design and software development teams the building 
 
 The B.C. Design System comprises 4 core elements:
 
-- [Design tokens](#bc-design-tokens)
+- [Design tokens](#design-tokens)
 - [Figma and React component libraries](#component-library)
 - [Documentation hub](https://gov.bc.ca/designsystem)
 
@@ -12,20 +12,32 @@ The new design system replaces [the legacy design system](/legacy), which has no
 
 ## Design tokens
 
-The [@bcgov/design-tokens package](https://github.com/bcgov/design-system/tree/docs/packages/design-tokens) provides a method to quickly and consistently implement the province's look and feel for digital services. They offer a set of standardized options to help developers style user interfaces in a consistent and future-proof way.
+The [@bcgov/design-tokens package](https://github.com/bcgov/design-system/tree/main/packages/design-tokens) provides a method to quickly and consistently implement the province's look and feel for digital services. They offer a set of standardized options to help developers style user interfaces in a coherent and future-proof way.
 
-- [Installable package on npm](https://www.npmjs.com/package/@bcgov/design-tokens)
-- [Source code](https://github.com/bcgov/design-system/tree/main/packages/design-tokens)
-- [Figma library](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+You can install the design tokens library via:
+
+- [npm](https://www.npmjs.com/package/@bcgov/design-tokens)
+- [GitHub Packages](https://github.com/bcgov/design-system/pkgs/npm/design-tokens)
+
+To learn more about the design tokens:
+
 - [Design tokens docs](https://www2.gov.bc.ca/gov/content?id=5993A3D597F1454CB0E5DFA02DBB2EB7)
+- [Figma library](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+- [Source code](https://github.com/bcgov/design-system/tree/main/packages/design-tokens)
 
 ## Component library
 
-The [@bcgov/design-system-react-components package](https://www.npmjs.com/package/@bcgov/design-system-react-components) provides a library of reusable UI components, implemented in Figma and React. Support for other languages and frameworks is currently out-of-scope.
+The [@bcgov/design-system-react-components package](https://github.com/bcgov/design-system/tree/main/packages/react-components) provides a library of reusable UI components, implemented in Figma and React. Support for other languages and frameworks is currently out-of-scope.
 
 The component library is currently in active development. New components are added when both Figma and React implementations are complete and fully documented.
 
-- [Install via npm](https://www.npmjs.com/package/@bcgov/design-system-react-components)
+You can install the component library via:
+
+- [npm](https://www.npmjs.com/package/@bcgov/design-system-react-components)
+- [GitHub Packages](https://github.com/orgs/bcgov/packages/npm/package/design-system-react-components)
+
+Additional information and documentation:
+
 - [Source code](https://github.com/bcgov/design-system/tree/main/packages/react-components)
 - [Storybook UI workshop](https://designsystem.gov.bc.ca/react-components/)
 - [Figma library](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
@@ -33,4 +45,8 @@ The component library is currently in active development. New components are add
 
 ## Contact
 
-The B.C. Design System is maintained by the Everyday Life Events Application Management branch at Connected Services BC, part of the Ministry of Citizens' Services. You can contact the design system team by email at [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca), or [open an issue](https://github.com/bcgov/design-system/issues/new/choose).
+The B.C. Design System is maintained by the Everyday Life Events Common Capabilities & AI Platforms branch at Connected Services BC, part of the Ministry of Citizens' Services. To get in touch:
+
+- Email [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca)
+- [Open an issue](https://github.com/bcgov/design-system/issues/new/choose)
+- [Start a discussion](https://github.com/bcgov/design-system/discussions)
