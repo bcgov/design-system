@@ -16,7 +16,7 @@ The [@bcgov/design-tokens package](https://github.com/bcgov/design-system/tree/m
 
 You can install the design tokens library via:
 
-- [npm](https://www.npmjs.com/@bcgov/design-tokens)
+- [npm](https://www.npmjs.com/package/@bcgov/design-tokens)
 - [GitHub Packages](https://github.com/bcgov/design-system/pkgs/npm/design-tokens)
 
 To learn more about the design tokens:
