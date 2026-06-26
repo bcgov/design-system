@@ -10,34 +10,33 @@ on:
     types: [published]
 
 jobs:
-  publish-design-tokens-npm-next:
-    name: Publish @bcgov/design-tokens@next to npm
-    # Publish a `next` version to npm on PR merge to main branch.
-    if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
+  build:
+    if: ${{ (github.event.pull_request.merged == true && github.repository == 'bcgov/design-system') || (github.event_name == 'release' && contains(github.event.release.tag_name, 'bcgov/design-tokens')) }}
+    runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write # Required for OIDC
-    runs-on: ubuntu-latest
-
+    outputs:
+      node-version: ${{ steps.nvmrc.outputs.version }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
 
       - name: Read .nvmrc
-        run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
+        id: nvmrc
+        run: echo "version=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         working-directory: ./packages/design-tokens
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
-          registry-url: "https://registry.npmjs.org/"
+          node-version: ${{ steps.nvmrc.outputs.version }}
 
       - name: Install dependencies
         run: npm ci
         working-directory: ./packages/design-tokens
 
       - name: Install jq
+        if: ${{ github.event.pull_request.merged == true }}
         run: sudo apt-get install -y jq
 
       - name: Run build script
@@ -48,18 +47,9 @@ jobs:
         run: npm run prepare-npm-package
         working-directory: ./packages/design-tokens
 
-      # Use `jq` to change the package.json version to look like:
-      #
-      #   <version in package.json>-pr<PR # that caused the workflow run>
-      #
-      # So package.json version v1.2.3 with a run caused by merging PR #456 to
-      # `main` causes the version of the package on npm to look like:
-      #
-      #   1.2.3-pr456
-      #
-      # This is to ensure that it's easy to map an npm version to a particular PR.
-      #
+      # Append PR number to version number in dist/package.json
       - name: Update version in dist/package.json
+        if: ${{ github.event.pull_request.merged == true }}
         run: |
           PR_NUMBER=${{ github.event.pull_request.number }}
           CURRENT_VERSION=$(jq -r '.version' package.json)
@@ -67,6 +57,32 @@ jobs:
           jq --arg new_version "$NEW_VERSION" '.version = $new_version' package.json > tmp.json && mv tmp.json package.json
         shell: bash
         working-directory: ./packages/design-tokens/dist
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: design-tokens-build
+          path: packages/design-tokens/dist
+
+  publish-design-tokens-npm-next:
+    name: Publish @bcgov/design-tokens@next to npm
+    needs: build
+    if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
+    permissions:
+      contents: read
+      id-token: write # Required for OIDC
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: design-tokens-build
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ needs.build.outputs.node-version }}
+          registry-url: "https://registry.npmjs.org/"
 
       - name: Publish to npm @next
         run: npm publish --tag next --provenance
@@ -74,68 +90,24 @@ jobs:
 
   publish-design-tokens-github-packages-next:
     name: Publish @bcgov/design-tokens@next to GitHub Packages
-    # Publish a `next` version to GitHub Packages on PR merge to main branch.
+    needs: build
     if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
     permissions:
       contents: read
       packages: write
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-
-      - name: Read .nvmrc
-        run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
-        working-directory: ./packages/design-tokens
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: design-tokens-build
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
-
-      - name: Install dependencies
-        run: npm ci
-        working-directory: ./packages/design-tokens
-
-      - name: Install jq
-        run: sudo apt-get install -y jq
-
-      - name: Run build script
-        run: npm run build
-        working-directory: ./packages/design-tokens
-
-      # After dependencies are installed and build is complete, change registry to GitHub Packages
-      - name: Rerun Node.js setup for GitHub Packages publishing
-        uses: actions/setup-node@v6
-        with:
-          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          node-version: ${{ needs.build.outputs.node-version }}
           registry-url: "https://npm.pkg.github.com/"
           scope: "@bcgov"
-
-      - name: Prepare npm package for publishing
-        run: npm run prepare-npm-package
-        working-directory: ./packages/design-tokens
-
-      # Use `jq` to change the package.json version to look like:
-      #
-      #   <version in package.json>-pr<PR # that caused the workflow run>
-      #
-      # So package.json version v1.2.3 with a run caused by merging PR #456 to
-      # `main` causes the version of the package on npm to look like:
-      #
-      #   1.2.3-pr456
-      #
-      # This is to ensure that it's easy to map an npm version to a particular PR.
-      #
-      - name: Update version in dist/package.json
-        run: |
-          PR_NUMBER=${{ github.event.pull_request.number }}
-          CURRENT_VERSION=$(jq -r '.version' package.json)
-          NEW_VERSION="${CURRENT_VERSION}-pr${PR_NUMBER}"
-          jq --arg new_version "$NEW_VERSION" '.version = $new_version' package.json > tmp.json && mv tmp.json package.json
-        shell: bash
-        working-directory: ./packages/design-tokens/dist
 
       - name: Publish to GitHub Packages @next
         run: npm publish --tag next --registry=https://npm.pkg.github.com/
@@ -145,40 +117,23 @@ jobs:
 
   publish-design-tokens-npm-latest:
     name: Publish @bcgov/design-tokens@latest to npm
-    # Publish a `latest` version to npm only when a release is published that targets
-    # the design tokens package via a tag like:
-    # @bcgov/design-tokens@v1.2.3
+    needs: build
     if: ${{ github.event_name == 'release' && contains(github.event.release.tag_name, 'bcgov/design-tokens') }}
     permissions:
       contents: read
       id-token: write # Required for OIDC
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-
-      - name: Read .nvmrc
-        run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
-        working-directory: ./packages/design-tokens
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: design-tokens-build
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          node-version: ${{ needs.build.outputs.node-version }}
           registry-url: "https://registry.npmjs.org/"
-
-      - name: Install dependencies
-        run: npm ci
-        working-directory: ./packages/design-tokens
-
-      - name: Run build script
-        run: npm run build
-        working-directory: ./packages/design-tokens
-
-      - name: Prepare npm package for publishing
-        run: npm run prepare-npm-package
-        working-directory: ./packages/design-tokens
 
       - name: Publish to npm @latest
         run: npm publish --tag latest --provenance
@@ -186,45 +141,22 @@ jobs:
 
   publish-design-tokens-github-packages-latest:
     name: Publish @bcgov/design-tokens@latest to GitHub Packages
-    # Publish a `latest` version to GitHub Packages only when a release is published that targets
-    # the design tokens package via a tag like:
-    # @bcgov/design-tokens@v1.2.3
+    needs: build
     if: ${{ github.event_name == 'release' && contains(github.event.release.tag_name, 'bcgov/design-tokens') }}
     permissions:
       contents: read
       packages: write
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-
-      - name: Read .nvmrc
-        run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
-        working-directory: ./packages/design-tokens
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: design-tokens-build
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
-
-      - name: Install dependencies
-        run: npm ci
-        working-directory: ./packages/design-tokens
-
-      - name: Run build script
-        run: npm run build
-        working-directory: ./packages/design-tokens
-
-      - name: Prepare npm package for publishing
-        run: npm run prepare-npm-package
-        working-directory: ./packages/design-tokens
-
-      # After dependencies are installed and build is complete, change registry to GitHub Packages
-      - name: Rerun Node.js setup for GitHub Packages publishing
-        uses: actions/setup-node@v6
-        with:
-          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          node-version: ${{ needs.build.outputs.node-version }}
           registry-url: "https://npm.pkg.github.com/"
           scope: "@bcgov"
 
