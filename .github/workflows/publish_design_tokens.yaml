@@ -34,7 +34,7 @@ jobs:
           registry-url: "https://registry.npmjs.org/"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
         working-directory: ./packages/design-tokens
 
       - name: Install jq
@@ -95,7 +95,7 @@ jobs:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
         working-directory: ./packages/design-tokens
 
       - name: Install jq
@@ -169,7 +169,7 @@ jobs:
           registry-url: "https://registry.npmjs.org/"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
         working-directory: ./packages/design-tokens
 
       - name: Run build script
@@ -209,7 +209,7 @@ jobs:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
         working-directory: ./packages/design-tokens
 
       - name: Run build script
