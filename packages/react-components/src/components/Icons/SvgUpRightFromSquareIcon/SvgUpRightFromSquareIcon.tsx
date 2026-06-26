@@ -3,8 +3,7 @@
 import { useId } from "react";
 import getIconSize, { IconSize } from "../../../hooks/getIconSize";
 
-export interface SvgUpRightFromSquareIconProps
-  extends React.SVGProps<SVGSVGElement> {
+export interface SvgUpRightFromSquareIconProps extends React.SVGProps<SVGSVGElement> {
   size?: IconSize;
   /** Accessible label for non-decorative usage. When omitted, the icon is hidden from assistive technology. */
   title?: string;
