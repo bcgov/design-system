@@ -1,4 +1,4 @@
-// url= https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=3351-1788&t=yPX74R4GVseHsAvd-4
+// url=https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=3351-1788&t=yPX74R4GVseHsAvd-4
 // source=https://github.com/bcgov/design-system/blob/main/packages/react-components/src/components/Icons/SvgBcLogo/SvgBcLogo.tsx
 // component=BC Logo
 
