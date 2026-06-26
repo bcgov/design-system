@@ -10,98 +10,105 @@ on:
     types: [published]
 
 jobs:
+  build:
+    if: ${{ (github.event.pull_request.merged == true && github.repository == 'bcgov/design-system') || (github.event_name == 'release' && contains(github.event.release.tag_name, 'bcgov/design-system-react-components')) }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      node-version: ${{ steps.nvmrc.outputs.version }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Read .nvmrc
+        id: nvmrc
+        run: echo "version=$(cat .nvmrc)" >> $GITHUB_OUTPUT
+        working-directory: ./packages/react-components
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ steps.nvmrc.outputs.version }}
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./packages/react-components
+
+      - name: Install jq
+        if: ${{ github.event.pull_request.merged == true }}
+        run: sudo apt-get install -y jq
+
+      # Append PR number to version number in package.json
+      - name: Update version in package.json
+        if: ${{ github.event.pull_request.merged == true }}
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          CURRENT_VERSION=$(jq -r '.version' package.json)
+          NEW_VERSION="${CURRENT_VERSION}-pr${PR_NUMBER}"
+          jq --arg new_version "$NEW_VERSION" '.version = $new_version' package.json > tmp.json && mv tmp.json package.json
+        shell: bash
+        working-directory: ./packages/react-components
+
+      - name: Build components for publishing
+        run: npm run build
+        working-directory: ./packages/react-components
+
+      - name: Publish Figma Code Connect files
+        if: ${{ github.event_name == 'release' && contains(github.event.release.tag_name, 'bcgov/design-system-react-components') }}
+        run: npx figma connect publish --token "$FIGMA_ACCESS_TOKEN"
+        working-directory: ./packages/react-components
+        env:
+          FIGMA_ACCESS_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: react-components-build
+          path: |
+            packages/react-components
+            !packages/react-components/node_modules
+
   publish-npm-next:
-    # Publish a `next` version to npm on PR merge to `main`
+    needs: build
     if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
     permissions:
       contents: read
       id-token: write # Required for OIDC
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-
-      - name: Read .nvmrc
-        run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
-        working-directory: ./packages/react-components
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: react-components-build
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          node-version: ${{ needs.build.outputs.node-version }}
           registry-url: "https://registry.npmjs.org/"
-
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./packages/react-components
-
-      - name: Install jq
-        run: sudo apt-get install -y jq
-
-      # Append PR number to version number in package.json
-      - name: Update version in package.json
-        run: |
-          PR_NUMBER=${{ github.event.pull_request.number }}
-          CURRENT_VERSION=$(jq -r '.version' package.json)
-          NEW_VERSION="${CURRENT_VERSION}-pr${PR_NUMBER}"
-          jq --arg new_version "$NEW_VERSION" '.version = $new_version' package.json > tmp.json && mv tmp.json package.json
-        shell: bash
-        working-directory: ./packages/react-components
-
-      - name: Build components for publishing
-        run: npm run build
-        working-directory: ./packages/react-components
 
       - name: Publish to npm @next
         run: npm publish --tag next --provenance
         working-directory: ./packages/react-components
 
   publish-github-packages-next:
-    # Publish a `next` version to GitHub Packages on PR merge to `main`
+    needs: build
     if: ${{ github.event.pull_request.merged == true && github.repository == 'bcgov/design-system' }}
     permissions:
       contents: read
       packages: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-
-      - name: Read .nvmrc
-        run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
-        working-directory: ./packages/react-components
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: react-components-build
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
-
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./packages/react-components
-
-      - name: Install jq
-        run: sudo apt-get install -y jq
-
-      # Append PR number to version number in package.json
-      - name: Update version in package.json
-        run: |
-          PR_NUMBER=${{ github.event.pull_request.number }}
-          CURRENT_VERSION=$(jq -r '.version' package.json)
-          NEW_VERSION="${CURRENT_VERSION}-pr${PR_NUMBER}"
-          jq --arg new_version "$NEW_VERSION" '.version = $new_version' package.json > tmp.json && mv tmp.json package.json
-        shell: bash
-        working-directory: ./packages/react-components
-
-      - name: Build components for publishing
-        run: npm run build
-        working-directory: ./packages/react-components
-
-      # After dependencies are installed and build is complete, change registry to GitHub Packages
-      - name: Rerun Node.js setup for GitHub Packages publishing
-        uses: actions/setup-node@v6
-        with:
-          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          node-version: ${{ needs.build.outputs.node-version }}
           registry-url: "https://npm.pkg.github.com/"
           scope: "@bcgov"
 
@@ -112,71 +119,45 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish-npm-latest:
-    # Publish a `latest` version to npm when a release is published that targets `@bcgov/design-system-react-components`
+    needs: build
     if: ${{ github.event_name == 'release' && contains(github.event.release.tag_name, 'bcgov/design-system-react-components') }}
     permissions:
       contents: read
       id-token: write # Required for OIDC
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-
-      - name: Read .nvmrc
-        run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
-        working-directory: ./packages/react-components
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: react-components-build
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          node-version: ${{ needs.build.outputs.node-version }}
           registry-url: "https://registry.npmjs.org/"
-
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./packages/react-components
-
-      - name: Build components for publishing
-        run: npm run build
-        working-directory: ./packages/react-components
 
       - name: Publish to npm @latest
         run: npm publish --tag latest --provenance
         working-directory: ./packages/react-components
 
   publish-github-packages-latest:
-    # Publish a `latest` version to GitHub Packages when a release is published that targets `@bcgov/design-system-react-components`
+    needs: build
     if: ${{ github.event_name == 'release' && contains(github.event.release.tag_name, 'bcgov/design-system-react-components') }}
     permissions:
       contents: read
       packages: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-
-      - name: Read .nvmrc
-        run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
-        working-directory: ./packages/react-components
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: react-components-build
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
-
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./packages/react-components
-
-      - name: Build components for publishing
-        run: npm run build
-        working-directory: ./packages/react-components
-
-      # After dependencies are installed and build is complete, change registry to GitHub Packages
-      - name: Rerun Node.js setup for GitHub Packages publishing
-        uses: actions/setup-node@v6
-        with:
-          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+          node-version: ${{ needs.build.outputs.node-version }}
           registry-url: "https://npm.pkg.github.com/"
           scope: "@bcgov"
 
