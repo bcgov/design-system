@@ -1,0 +1,165 @@
+name: "[TEST] Publish @bcgov/design-tokens to npm and GitHub Packages"
+
+on:
+  workflow_dispatch:
+    inputs:
+      simulate:
+        description: Which publish path to simulate
+        required: true
+        type: choice
+        options: [next, latest]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      node-version: ${{ steps.nvmrc.outputs.version }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Read .nvmrc
+        id: nvmrc
+        run: echo "version=$(cat .nvmrc)" >> $GITHUB_OUTPUT
+        working-directory: ./packages/design-tokens
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ steps.nvmrc.outputs.version }}
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./packages/design-tokens
+
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Run build script
+        run: npm run build
+        working-directory: ./packages/design-tokens
+
+      - name: Prepare npm package for publishing
+        run: npm run prepare-npm-package
+        working-directory: ./packages/design-tokens
+
+      # Append stub PR number to version (no real PR in a manual dispatch)
+      - name: Update version in dist/package.json
+        if: ${{ github.event.inputs.simulate == 'next' }}
+        run: |
+          PR_NUMBER=0
+          CURRENT_VERSION=$(jq -r '.version' package.json)
+          NEW_VERSION="${CURRENT_VERSION}-pr${PR_NUMBER}"
+          jq --arg new_version "$NEW_VERSION" '.version = $new_version' package.json > tmp.json && mv tmp.json package.json
+        shell: bash
+        working-directory: ./packages/design-tokens/dist
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: design-tokens-build
+          path: packages/design-tokens/dist
+
+  publish-design-tokens-npm-next:
+    name: Publish @bcgov/design-tokens@next to npm
+    needs: build
+    if: ${{ github.event.inputs.simulate == 'next' }}
+    permissions:
+      contents: read
+      id-token: write # Required for OIDC
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: design-tokens-build
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ needs.build.outputs.node-version }}
+          registry-url: "https://registry.npmjs.org/"
+
+      - name: Publish to npm @next (dry run)
+        run: npm publish --tag next --provenance --dry-run
+        working-directory: ./packages/design-tokens/dist
+
+  publish-design-tokens-github-packages-next:
+    name: Publish @bcgov/design-tokens@next to GitHub Packages
+    needs: build
+    if: ${{ github.event.inputs.simulate == 'next' }}
+    permissions:
+      contents: read
+      packages: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: design-tokens-build
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ needs.build.outputs.node-version }}
+          registry-url: "https://npm.pkg.github.com/"
+          scope: "@bcgov"
+
+      - name: Publish to GitHub Packages @next (dry run)
+        run: npm publish --tag next --registry=https://npm.pkg.github.com/ --dry-run
+        working-directory: ./packages/design-tokens/dist
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish-design-tokens-npm-latest:
+    name: Publish @bcgov/design-tokens@latest to npm
+    needs: build
+    if: ${{ github.event.inputs.simulate == 'latest' }}
+    permissions:
+      contents: read
+      id-token: write # Required for OIDC
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: design-tokens-build
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ needs.build.outputs.node-version }}
+          registry-url: "https://registry.npmjs.org/"
+
+      - name: Publish to npm @latest (dry run)
+        run: npm publish --tag latest --provenance --dry-run
+        working-directory: ./packages/design-tokens/dist
+
+  publish-design-tokens-github-packages-latest:
+    name: Publish @bcgov/design-tokens@latest to GitHub Packages
+    needs: build
+    if: ${{ github.event.inputs.simulate == 'latest' }}
+    permissions:
+      contents: read
+      packages: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: design-tokens-build
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ needs.build.outputs.node-version }}
+          registry-url: "https://npm.pkg.github.com/"
+          scope: "@bcgov"
+
+      - name: Publish to GitHub Packages (dry run)
+        run: npm publish --registry=https://npm.pkg.github.com/ --dry-run
+        working-directory: ./packages/design-tokens/dist
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
