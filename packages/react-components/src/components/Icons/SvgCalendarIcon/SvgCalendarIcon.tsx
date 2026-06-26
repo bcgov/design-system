@@ -16,11 +16,8 @@ export default function SvgCalendarIcon({
   id,
   ...props
 }: SvgCalendarIconProps) {
-  /* Fetch correct icon size token */
   const iconSize = getIconSize(size);
-  /* Generate unique ID for the title element */
   const titleId = useId();
-  /* Determine if the icon is meaningful (non-decorative) */
   const isMeaningful = Boolean(title);
   return (
     <svg
