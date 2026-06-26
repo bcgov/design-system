@@ -73,6 +73,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: react-components-build
+          path: packages/react-components
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
@@ -96,6 +97,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: react-components-build
+          path: packages/react-components
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
@@ -122,6 +124,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: react-components-build
+          path: packages/react-components
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
@@ -145,6 +148,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: react-components-build
+          path: packages/react-components
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
