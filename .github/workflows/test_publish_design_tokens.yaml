@@ -35,7 +35,6 @@ jobs:
         working-directory: ./packages/design-tokens
 
       - name: Install jq
-        if: ${{ github.event.inputs.simulate == 'next' }}
         run: sudo apt-get install -y jq
 
       - name: Run build script
