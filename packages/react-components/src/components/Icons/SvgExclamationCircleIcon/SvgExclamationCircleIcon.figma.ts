@@ -1,6 +1,6 @@
 // url=https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=3351-1746&t=yPX74R4GVseHsAvd-4
 // source=https://github.com/bcgov/design-system/blob/main/packages/react-components/src/components/Icons/SvgExclamationCircleIcon/SvgExclamationCircleIcon.tsx
-// component=Exclamation circle
+// component=Exclamation circle icon
 
 import figma from "figma";
 
