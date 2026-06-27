@@ -5,7 +5,7 @@
 import figma from "figma";
 
 export default {
-  id: "20px/govbc/BC",
+  id: "BC Outline",
   imports: [
     "import { SvgBcOutlineIcon } from '@bcgov/design-system-react-components';",
   ],
