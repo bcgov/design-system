@@ -21,7 +21,8 @@ export default function SvgReactAriaIcon({
   return (
     <svg
       id={id}
-      style={{ width: iconSize, height: iconSize }}
+      width={iconSize}
+      height={iconSize}
       viewBox="200 206 800 790"
       xmlns="http://www.w3.org/2000/svg"
       role={isMeaningful ? "img" : undefined}

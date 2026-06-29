@@ -19,7 +19,8 @@ export default function SvgPlaceholderIcon({
   return (
     <svg
       id={id}
-      style={{ width: iconSize, height: iconSize }}
+      width={iconSize}
+      height={iconSize}
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

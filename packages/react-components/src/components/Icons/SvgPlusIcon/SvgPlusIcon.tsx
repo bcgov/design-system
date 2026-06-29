@@ -21,7 +21,8 @@ export default function SvgPlusIcon({
   return (
     <svg
       id={id}
-      style={{ width: iconSize, height: iconSize }}
+      width={iconSize}
+      height={iconSize}
       viewBox="0 0 640 640"
       xmlns="http://www.w3.org/2000/svg"
       role={isMeaningful ? "img" : undefined}
