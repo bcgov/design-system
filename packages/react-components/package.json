@@ -45,7 +45,7 @@
     "@bcgov/design-tokens": "5.0.0",
     "@react-aria/datepicker": "3.17.1",
     "@react-aria/i18n": "3.13.1",
-    "react-aria-components": "1.17.0"
+    "react-aria-components": "1.19.0"
   },
   "peerDependencies": {
     "@bcgov/bc-sans": "^2.1.0",
