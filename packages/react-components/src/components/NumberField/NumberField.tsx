@@ -32,13 +32,14 @@ export default function NumberField({
   size = "medium",
   label,
   description,
+  minValue = 0,
   errorMessage,
   ...props
 }: NumberFieldProps) {
   return (
     <ReactAriaNumberField
       className={`bcds-react-aria-NumberField ${size}`}
-      minValue={0}
+      minValue={minValue}
       {...props}
     >
       {({ isRequired, isInvalid }: ReactAriaNumberFieldRenderProps) => (
