@@ -31,7 +31,6 @@ export default function TimeField<T extends TimeValue>({
   label,
   description,
   errorMessage,
-  isRequired,
   ...props
 }: TimeFieldProps<T>) {
   return (
@@ -39,7 +38,7 @@ export default function TimeField<T extends TimeValue>({
       className={`bcds-react-aria-TimeField ${size}`}
       {...props}
     >
-      {({ isInvalid }) => (
+      {({ isRequired, isInvalid }) => (
         <>
           {label && (
             <Label className="bcds-react-aria-TimeField--Label">
