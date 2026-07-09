@@ -34,6 +34,6 @@
     "style-dictionary": "5.4.4"
   },
   "devDependencies": {
-    "prettier": "3.9.3"
+    "prettier": "3.9.4"
   }
 }
