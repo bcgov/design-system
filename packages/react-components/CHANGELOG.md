@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.8.1
+
+This is a patch release that fixes bugs in three components.
+
+### Changed
+
+- NumberField: `minValue` is no longer hardcoded
+- Radio: correct styling is now applied when a Radio is both selected and disabled
+- TimeField: `isRequired` prop now properly applies data attributes
+
 ## 0.8.0
 
 This is a milestone release that adds two new components, and includes various enhancements and bugfixes to existing components.
