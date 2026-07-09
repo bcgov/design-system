@@ -13,7 +13,6 @@ updates:
     cooldown:
       default-days: 7
       include: ["*"]
-    assignees: [mkernohanbc]
     open-pull-requests-limit: 10
     # Do not open PRs for major version updates
     ignore:
