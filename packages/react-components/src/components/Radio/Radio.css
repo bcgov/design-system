@@ -72,7 +72,7 @@
   color: var(--typography-color-disabled);
   cursor: not-allowed;
 }
-.bcds-react-aria-radio[data-selected][data-disabled]:before {
+.bcds-react-aria-Radio[data-selected][data-disabled]:before {
   border: 5px solid var(--surface-color-border-default);
 }
 
