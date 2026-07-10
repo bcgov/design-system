@@ -1,13 +1,21 @@
+import {
+  iconsSizeXsmall,
+  iconsSizeSmall,
+  iconsSizeMedium,
+  iconsSizeLarge,
+  iconsSizeXlarge,
+} from "@bcgov/design-tokens/js";
+
 export type IconSize = "xsmall" | "small" | "medium" | "large" | "xlarge";
 
-const iconSizeMap: Record<IconSize, number> = {
-  xsmall: 14, // var(--icons-size-xsmall)
-  small: 16, // var(--icons-size-small)
-  medium: 20, // var(--icons-size-medium)
-  large: 24, // var(--icons-size-large)
-  xlarge: 32, // var(--icons-size-xlarge)
+const iconSizeMap: Record<IconSize, string> = {
+  xsmall: iconsSizeXsmall,
+  small: iconsSizeSmall,
+  medium: iconsSizeMedium,
+  large: iconsSizeLarge,
+  xlarge: iconsSizeXlarge,
 };
 
-export default function getIconSize(size: IconSize = "medium"): number {
+export default function getIconSize(size: IconSize = "medium"): string {
   return iconSizeMap[size];
 }
