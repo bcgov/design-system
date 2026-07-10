@@ -1,5 +1,5 @@
 // This logo is available as a plain SVG at src/assets/BCID_H_rgb_pos.svg
-import { useId } from "react";
+import { useId } from "react-aria/useId";
 import "./SvgBcLogo.css";
 
 export interface SvgBcLogoProps extends React.SVGProps<SVGSVGElement> {

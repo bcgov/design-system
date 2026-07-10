@@ -1,6 +1,6 @@
 /* This component implements the Chevron Up icon from Font Awesome: https://fontawesome.com/icons/chevron-up */
 
-import { useId } from "react";
+import { useId } from "react-aria/useId";
 import getIconSize, { IconSize } from "../../../hooks/getIconSize";
 
 export interface SvgChevronUpIconProps extends React.SVGProps<SVGSVGElement> {

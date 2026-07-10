@@ -1,6 +1,6 @@
 /* This component implements the Circle Info icon from Font Awesome: https://fontawesome.com/icons/circle-info */
 
-import { useId } from "react";
+import { useId } from "react-aria/useId";
 import getIconSize, { IconSize } from "../../../hooks/getIconSize";
 
 export interface SvgInfoIconProps extends React.SVGProps<SVGSVGElement> {

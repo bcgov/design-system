@@ -1,6 +1,6 @@
 /* This component implements the Minus icon from Font Awesome: https://fontawesome.com/icons/minus */
 
-import { useId } from "react";
+import { useId } from "react-aria/useId";
 import getIconSize, { IconSize } from "../../../hooks/getIconSize";
 
 export interface SvgMinusIconProps extends React.SVGProps<SVGSVGElement> {

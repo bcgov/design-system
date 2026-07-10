@@ -1,6 +1,6 @@
 /* This component implements the Triangle Exclamation icon from Font Awesome: https://fontawesome.com/icons/triangle-exclamation */
 
-import { useId } from "react";
+import { useId } from "react-aria/useId";
 import getIconSize, { IconSize } from "../../../hooks/getIconSize";
 
 export interface SvgExclamationIconProps extends React.SVGProps<SVGSVGElement> {

@@ -1,6 +1,6 @@
 /* React Aria logo icon, used in Storybook docs. Not intended for general use */
 
-import { useId } from "react";
+import { useId } from "react-aria/useId";
 import getIconSize, { IconSize } from "../../../hooks/getIconSize";
 
 export interface SvgReactAriaIconProps extends React.SVGProps<SVGSVGElement> {

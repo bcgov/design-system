@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useId } from "react-aria/useId";
 
 export interface SvgDashIconProps extends React.SVGProps<SVGSVGElement> {
   /** Accessible label for non-decorative usage. When omitted, the icon is hidden from assistive technology. */

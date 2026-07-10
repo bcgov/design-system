@@ -1,6 +1,6 @@
 /* This component implements the Plus icon from Font Awesome: https://fontawesome.com/icons/plus */
 
-import { useId } from "react";
+import { useId } from "react-aria/useId";
 import getIconSize, { IconSize } from "../../../hooks/getIconSize";
 
 export interface SvgPlusIconProps extends React.SVGProps<SVGSVGElement> {

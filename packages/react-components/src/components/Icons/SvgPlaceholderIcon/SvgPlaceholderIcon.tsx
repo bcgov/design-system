@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useId } from "react-aria/useId";
 import getIconSize, { IconSize } from "../../../hooks/getIconSize";
 
 export interface SvgPlaceholderIconProps extends React.SVGProps<SVGSVGElement> {

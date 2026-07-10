@@ -1,6 +1,6 @@
 /* This component implements the Circle Check icon from Font Awesome: https://fontawesome.com/icons/circle-check */
 
-import { useId } from "react";
+import { useId } from "react-aria/useId";
 import getIconSize, { IconSize } from "../../../hooks/getIconSize";
 
 export interface SvgCheckCircleIconProps extends React.SVGProps<SVGSVGElement> {

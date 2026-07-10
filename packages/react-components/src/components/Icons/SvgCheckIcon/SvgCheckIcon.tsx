@@ -1,6 +1,6 @@
 /* This component implements the Check icon from Font Awesome: https://fontawesome.com/icons/check */
 
-import { useId } from "react";
+import { useId } from "react-aria/useId";
 import getIconSize, { IconSize } from "../../../hooks/getIconSize";
 
 export interface SvgCheckIconProps extends React.SVGProps<SVGSVGElement> {
