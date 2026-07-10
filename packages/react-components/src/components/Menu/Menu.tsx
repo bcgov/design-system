@@ -22,7 +22,7 @@ export interface MenuSectionProps {
   /* Text label for the section */
   header?: string;
   /* Array of items in the section */
-  items: MenuItemProps[];
+  items?: MenuItemProps[];
 }
 
 export interface MenuProps extends ReactAriaMenuProps<MenuItemProps> {
