@@ -1,7 +1,7 @@
 /* The component implements the Up Right From Square icon from Font Awesome: https://fontawesome.com/icons/up-right-from-square */
 
 import { useId } from "react-aria/useId";
-import getIconSize, { IconSize } from "../../../hooks/getIconSize";
+import getIconSize, { IconSize } from "../../../utils/getIconSize";
 
 export interface SvgUpRightFromSquareIconProps extends React.SVGProps<SVGSVGElement> {
   size?: IconSize;

@@ -1,7 +1,7 @@
 /* The component implements the Chevron Left icon from Font Awesome: https://fontawesome.com/icons/chevron-left */
 
 import { useId } from "react-aria/useId";
-import getIconSize, { IconSize } from "../../../hooks/getIconSize";
+import getIconSize, { IconSize } from "../../../utils/getIconSize";
 
 export interface SvgChevronLeftIconProps extends React.SVGProps<SVGSVGElement> {
   size?: IconSize;

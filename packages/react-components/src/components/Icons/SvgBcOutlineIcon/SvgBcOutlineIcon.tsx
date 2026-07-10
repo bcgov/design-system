@@ -1,5 +1,5 @@
 import { useId } from "react-aria/useId";
-import getIconSize, { IconSize } from "../../../hooks/getIconSize";
+import getIconSize, { IconSize } from "../../../utils/getIconSize";
 
 export interface SvgBcOutlineIconProps extends React.SVGProps<SVGSVGElement> {
   size?: IconSize;

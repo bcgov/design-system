@@ -1,7 +1,7 @@
 /* This component implements the Circle Exclamation icon from Font Awesome: https://fontawesome.com/icons/circle-exclamation */
 
 import { useId } from "react-aria/useId";
-import getIconSize, { IconSize } from "../../../hooks/getIconSize";
+import getIconSize, { IconSize } from "../../../utils/getIconSize";
 
 export interface SvgExclamationCircleIconProps extends React.SVGProps<SVGSVGElement> {
   size?: IconSize;

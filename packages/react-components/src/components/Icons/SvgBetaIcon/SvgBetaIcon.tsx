@@ -1,7 +1,7 @@
 /* This component implements the Flask icon from Font Awesome: https://fontawesome.com/icons/flask */
 
 import { useId } from "react-aria/useId";
-import getIconSize, { IconSize } from "../../../hooks/getIconSize";
+import getIconSize, { IconSize } from "../../../utils/getIconSize";
 
 export interface SvgBetaIconProps extends React.SVGProps<SVGSVGElement> {
   size?: IconSize;

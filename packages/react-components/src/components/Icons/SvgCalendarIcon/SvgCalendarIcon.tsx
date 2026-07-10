@@ -1,7 +1,7 @@
 /* The component implements the Calendar icon from Font Awesome: https://fontawesome.com/icons/calendar */
 
 import { useId } from "react-aria/useId";
-import getIconSize, { IconSize } from "../../../hooks/getIconSize";
+import getIconSize, { IconSize } from "../../../utils/getIconSize";
 
 export interface SvgCalendarIconProps extends React.SVGProps<SVGSVGElement> {
   /* Set size of icon */

@@ -1,7 +1,7 @@
 /* This component implements the X Mark icon from Font Awesome: https://fontawesome.com/icons/xmark */
 
 import { useId } from "react-aria/useId";
-import getIconSize, { IconSize } from "../../../hooks/getIconSize";
+import getIconSize, { IconSize } from "../../../utils/getIconSize";
 
 export interface SvgCloseIconProps extends React.SVGProps<SVGSVGElement> {
   size?: IconSize;
