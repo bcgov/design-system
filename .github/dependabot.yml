@@ -1,7 +1,9 @@
 # Dependabot config
 # Docs: https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference
+
 version: 2
 updates:
+  # Dependency updates for @bcgov/design-tokens and @bcgov/design-system-react-components
   - package-ecosystem: "npm"
     directories: ["/packages/react-components", "/packages/design-tokens"]
     schedule:
@@ -32,3 +34,21 @@ updates:
       typescript-eslint:
         applies-to: version-updates
         patterns: ["typescript-eslint", "@typescript-eslint/*"]
+
+  # Dependency updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+    # Wait 7 days before opening PRs for new versions
+    cooldown:
+      default-days: 7
+      include: ["*"]
+    open-pull-requests-limit: 10
+    groups:
+      github-actions:
+        applies-to: version-updates
+        patterns: ["actions/*"]
