@@ -22,30 +22,28 @@ export interface MenuSectionProps {
   /* Text label for the section */
   header?: string;
   /* Array of items in the section */
-  items: MenuItemProps[];
+  items?: MenuItemProps[];
 }
 
-export interface MenuProps<
-  T extends MenuItemProps,
-> extends ReactAriaMenuProps<T> {
+export interface MenuProps extends ReactAriaMenuProps<MenuItemProps> {
   /* Set size of menu items (does not affect the MenuTrigger element) */
   itemSize?: "small" | "medium";
   /* Use for a simple list menu */
-  items?: T[];
+  items?: MenuItemProps[];
   /* Use for a sectioned list with `items` in each section */
   sections?: MenuSectionProps[];
   /* Popover position */
   placement?: PopoverProps["placement"];
 }
 
-export default function Menu<T extends MenuItemProps>({
+export default function Menu({
   itemSize = "medium",
   children,
   items,
   sections,
   placement,
   ...props
-}: MenuProps<T>) {
+}: MenuProps) {
   /* Manual composition via children */
   if (children) {
     return (
