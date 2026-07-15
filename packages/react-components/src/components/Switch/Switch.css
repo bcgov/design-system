@@ -1,14 +1,29 @@
 .bcds-react-aria-Switch {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: var(--layout-margin-small);
   font: var(--typography-regular-small-body);
   color: var(--typography-color-secondary);
   forced-color-adjust: none;
 }
 
-/* Container */
-.bcds-react-aria-Switch > .indicator {
+/* Button */
+.bcds-react-aria-Switch--Button {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--layout-margin-small);
+}
+
+/* Description */
+.bcds-react-aria-Switch--Description {
+  flex: 1 1 100%;
+  font: var(--typography-regular-label);
+}
+
+/* Track */
+.bcds-react-aria-Switch--Button > .track {
   align-items: center;
   width: var(--layout-margin-xxlarge);
   height: var(--icons-size-medium);
@@ -17,15 +32,14 @@
   transition: all 200ms;
 }
 @media (prefers-reduced-motion) {
-  /* No animation on Switch container color if user has reduced motion set */
-  .bcds-react-aria-Switch > .indicator {
+  /* No animation on Switch track color if user has reduced motion set */
+  .bcds-react-aria-Switch--Button > .track {
     transition: none;
   }
 }
 
-/* Indicator */
-.bcds-react-aria-Switch > .indicator::before {
-  content: "";
+/* Handle */
+.bcds-react-aria-Switch--Button > .track > .handle {
   display: block;
   box-sizing: border-box;
   width: var(--icons-size-medium);
@@ -37,44 +51,46 @@
   transition: all 200ms;
 }
 @media (prefers-reduced-motion) {
-  /* No animation on Switch circle indicator if user has reduced motion set */
-  .bcds-react-aria-Switch > .indicator::before {
+  /* No animation on Switch handle if user has reduced motion set */
+  .bcds-react-aria-Switch--Button > .track > .handle {
     transition: none;
   }
 }
 
 /* Selected */
-.bcds-react-aria-Switch[data-selected] > .indicator {
+.bcds-react-aria-Switch--Button[data-selected] > .track {
   background-color: var(--surface-color-primary-default);
 }
 
-.bcds-react-aria-Switch[data-selected] > .indicator::before {
+.bcds-react-aria-Switch--Button[data-selected] > .track > .handle {
   transform: translateX(100%);
   border: var(--layout-border-width-medium) solid
     var(--surface-color-primary-default);
 }
 
 /* Hover */
-.bcds-react-aria-Switch[data-hovered] {
+.bcds-react-aria-Switch--Button[data-hovered] {
   cursor: pointer;
 }
 
-.bcds-react-aria-Switch[data-hovered][data-selected] > .indicator {
+.bcds-react-aria-Switch--Button[data-hovered][data-selected] > .track {
   background-color: var(--surface-color-primary-hover);
 }
 
-.bcds-react-aria-Switch[data-hovered] > .indicator::before {
+.bcds-react-aria-Switch--Button[data-hovered] > .track > .handle {
   border: var(--layout-border-width-medium) solid
     var(--surface-color-border-dark);
 }
 
-.bcds-react-aria-Switch[data-hovered][data-selected] > .indicator::before {
+.bcds-react-aria-Switch--Button[data-hovered][data-selected]
+  > .track
+  > .handle {
   border: var(--layout-border-width-medium) solid
     var(--surface-color-primary-hover);
 }
 
 /* Focused */
-.bcds-react-aria-Switch[data-focus-visible] > .indicator {
+.bcds-react-aria-Switch--Button[data-focus-visible] > .track {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
@@ -86,11 +102,11 @@
   cursor: not-allowed;
 }
 
-.bcds-react-aria-Switch[data-disabled] > .indicator {
+.bcds-react-aria-Switch--Button[data-disabled] > .track {
   background-color: var(--surface-color-primary-disabled);
 }
 
-.bcds-react-aria-Switch[data-disabled] > .indicator::before {
+.bcds-react-aria-Switch--Button > .track > .handle[data-disabled] {
   background-color: var(--theme-gray-10);
   border: var(--layout-border-width-medium) solid
     var(--surface-color-border-default);
@@ -99,4 +115,10 @@
 /* Read only */
 .bcds-react-aria-Switch[data-readonly] {
   cursor: not-allowed;
+}
+
+/* Error message */
+.bcds-react-aria-Switch--Error {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-danger);
 }
