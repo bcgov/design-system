@@ -119,6 +119,16 @@
 
 /* Error message */
 .bcds-react-aria-Switch--Error {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font: var(--typography-regular-small-body);
   color: var(--typography-color-danger);
+}
+
+.bcds-react-aria-Switch--Error > svg {
+  padding-right: var(--layout-padding-xsmall);
+  color: var(--icons-color-danger);
+  width: var(--icons-size-medium);
+  height: var(--icons-size-medium);
 }
