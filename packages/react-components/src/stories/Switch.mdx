@@ -75,6 +75,12 @@ By default, the text label renders to the right of the switch. Use the `labelPos
 
 <Canvas of={SwitchStories.LabelReversed} />
 
+### Description
+
+Use the `description` slot to display additional explanatory text under the switch:
+
+<Canvas of={SwitchStories.SwitchWithDescription} />
+
 ### States
 
 You can use the `isSelected` prop to make a switch controlled. You can also use the `name` and `value` props to integrate a switch into an HTML form. Consult [the React Aria documentation](https://react-spectrum.adobe.com/react-aria/Switch.html#value) for more information.
@@ -90,3 +96,7 @@ Use `isDisabled` to disable a switch. A disabled switch cannot be focused or sel
 Use `isReadOnly` to lock a switch to its current value. A read-only switch can be focused, but cannot be selected:
 
 <Canvas of={SwitchStories.ReadOnlySwitch} />
+
+Use `isInvalid` when a switch is in an invalid state. An error message (populated via `errorMessage`) is displayed below the switch:
+
+<Canvas of={SwitchStories.ErrorSwitch} />

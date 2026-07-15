@@ -19,6 +19,15 @@ const meta = {
       control: { type: "radio" },
       description: "Sets the position of the text label",
     },
+    description: {
+      control: "text",
+      description: "Explanatory text displayed below the switch",
+    },
+    errorMessage: {
+      control: "text",
+      description:
+        "Message displayed when `isInvalid` prop is passed (usually populated dynamically)",
+    },
     isSelected: {
       control: "boolean",
       description: "Whether a switch is currently selected",
@@ -57,6 +66,14 @@ export const LabelReversed: Story = {
   },
 };
 
+export const SwitchWithDescription: Story = {
+  ...SwitchTemplate,
+  args: {
+    children: "Switch with description",
+    description: "This is a description for the switch",
+  },
+};
+
 export const DefaultSelectedSwitch: Story = {
   ...SwitchTemplate,
   args: {
@@ -70,6 +87,15 @@ export const DisabledSwitch: Story = {
   args: {
     children: "Disabled switch",
     isDisabled: true,
+  },
+};
+
+export const ErrorSwitch: Story = {
+  ...SwitchTemplate,
+  args: {
+    children: "Switch with error",
+    isInvalid: true,
+    errorMessage: "This switch is in an invalid state",
   },
 };
 
