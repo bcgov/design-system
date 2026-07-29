@@ -21,14 +21,14 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Read .nvmrc
         run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
         working-directory: ./packages/design-tokens
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
           registry-url: "https://registry.npmjs.org/"
@@ -83,14 +83,14 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Read .nvmrc
         run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
         working-directory: ./packages/design-tokens
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
 
@@ -107,7 +107,7 @@ jobs:
 
       # After dependencies are installed and build is complete, change registry to GitHub Packages
       - name: Rerun Node.js setup for GitHub Packages publishing
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
           registry-url: "https://npm.pkg.github.com/"
@@ -156,14 +156,14 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Read .nvmrc
         run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
         working-directory: ./packages/design-tokens
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
           registry-url: "https://registry.npmjs.org/"
@@ -197,14 +197,14 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Read .nvmrc
         run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
         working-directory: ./packages/design-tokens
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
 
@@ -222,7 +222,7 @@ jobs:
 
       # After dependencies are installed and build is complete, change registry to GitHub Packages
       - name: Rerun Node.js setup for GitHub Packages publishing
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ env.GITHUB_NVMRC_VERSION }}
           registry-url: "https://npm.pkg.github.com/"

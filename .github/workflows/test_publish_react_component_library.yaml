@@ -18,7 +18,7 @@ jobs:
       node-version: ${{ steps.nvmrc.outputs.version }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Read .nvmrc
         id: nvmrc
@@ -26,7 +26,7 @@ jobs:
         working-directory: ./packages/react-components
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ steps.nvmrc.outputs.version }}
 
@@ -54,7 +54,7 @@ jobs:
         working-directory: ./packages/react-components
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: react-components-build
           path: |
@@ -70,13 +70,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: react-components-build
           path: packages/react-components
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ needs.build.outputs.node-version }}
           registry-url: "https://registry.npmjs.org/"
@@ -94,13 +94,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: react-components-build
           path: packages/react-components
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ needs.build.outputs.node-version }}
           registry-url: "https://npm.pkg.github.com/"
@@ -121,13 +121,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: react-components-build
           path: packages/react-components
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ needs.build.outputs.node-version }}
           registry-url: "https://registry.npmjs.org/"
@@ -145,13 +145,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: react-components-build
           path: packages/react-components
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ needs.build.outputs.node-version }}
           registry-url: "https://npm.pkg.github.com/"
