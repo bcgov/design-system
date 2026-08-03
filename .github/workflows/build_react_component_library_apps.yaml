@@ -35,7 +35,7 @@ jobs:
         run: docker build ./packages/react-components/ -f ./packages/react-components/Dockerfile.storybook -t design-system-react-components-storybook:latest --build-arg GITHUB_SHA=${{ github.sha }}
 
       - name: Login to OpenShift Silver image registry
-        uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
+        uses: docker/login-action@371161bbe7024a29a25c5e19bfcbc0804fe9ad2c # v4.5.2
         with:
           registry: image-registry.apps.silver.devops.gov.bc.ca
           # This refers to the serviceaccount name alone, not the fully qualified
@@ -68,7 +68,7 @@ jobs:
         run: docker build ./packages/react-components/ -f ./packages/react-components/Dockerfile.storybook -t design-system-react-components-storybook:latest --build-arg GITHUB_SHA=${{ github.sha }}
 
       - name: Login to OpenShift Silver image registry
-        uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
+        uses: docker/login-action@371161bbe7024a29a25c5e19bfcbc0804fe9ad2c # v4.5.2
         with:
           registry: image-registry.apps.silver.devops.gov.bc.ca
           # This refers to the serviceaccount name alone, not the fully qualified
@@ -101,7 +101,7 @@ jobs:
         run: docker build ./packages/react-components/ -f ./packages/react-components/Dockerfile.vite -t design-system-react-components-vite:latest
 
       - name: Login to OpenShift Silver image registry
-        uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
+        uses: docker/login-action@371161bbe7024a29a25c5e19bfcbc0804fe9ad2c # v4.5.2
         with:
           registry: image-registry.apps.silver.devops.gov.bc.ca
           username: ${{ secrets.OPENSHIFT_SILVER_SERVICEACCOUNT_USERNAME }}
