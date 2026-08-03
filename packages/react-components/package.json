@@ -84,7 +84,7 @@
     "jsdom": "29.1.1",
     "playwright": "1.61.1",
     "prettier": "3.9.6",
-    "rollup": "4.62.2",
+    "rollup": "4.62.3",
     "rollup-plugin-dts": "6.4.1",
     "rollup-plugin-peer-deps-external": "2.2.4",
     "rollup-plugin-postcss": "4.0.2",
