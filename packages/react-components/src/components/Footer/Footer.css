@@ -246,7 +246,7 @@ p.bcds-footer--copyright {
 }
 
 /* Tablet */
-@media (max-width: 991px) {
+@media (width <= 991px) {
   /* Links drop beneath logo in the default configuration */
   .bcds-footer
     > .bcds-footer--container
@@ -278,7 +278,7 @@ p.bcds-footer--copyright {
 }
 
 /* Extra small screens */
-@media (max-width: 575px) {
+@media (width <= 575px) {
   .bcds-footer > .bcds-footer--acknowledgement {
     padding: var(--layout-padding-xlarge) var(--layout-padding-medium);
   }
