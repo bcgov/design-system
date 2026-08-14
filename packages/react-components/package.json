@@ -82,7 +82,7 @@
     "eslint-plugin-storybook": "10.5.5",
     "globals": "17.9.0",
     "jsdom": "29.1.1",
-    "playwright": "1.62.0",
+    "playwright": "1.62.1",
     "prettier": "3.9.6",
     "rollup": "4.62.4",
     "rollup-plugin-dts": "6.4.1",
