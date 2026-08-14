@@ -72,7 +72,7 @@
     "@types/react-dom": "19.2.3",
     "@typescript-eslint/eslint-plugin": "8.65.0",
     "@typescript-eslint/parser": "8.65.0",
-    "@vitejs/plugin-react": "6.0.4",
+    "@vitejs/plugin-react": "6.0.5",
     "@vitest/browser-playwright": "4.1.10",
     "@vitest/coverage-v8": "4.1.10",
     "axe-playwright": "2.2.2",
