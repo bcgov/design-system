@@ -18,9 +18,6 @@
   flex-direction: row;
   gap: var(--layout-margin-medium);
 }
-.bcds-react-aria-RadioGroup--options.horizontal.flex-wrap-nowrap {
-  flex-wrap: nowrap;
-}
 .bcds-react-aria-RadioGroup--options.horizontal.flex-wrap-wrap {
   flex-wrap: wrap;
 }
