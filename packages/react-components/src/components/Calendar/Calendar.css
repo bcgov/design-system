@@ -1,7 +1,6 @@
 .bcds-react-aria-Calendar {
   display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   gap: var(--layout-margin-large);
   padding: var(--layout-padding-medium);
   box-sizing: border-box;
