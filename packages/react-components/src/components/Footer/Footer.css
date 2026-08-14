@@ -61,8 +61,7 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
-  column-gap: var(--layout-padding-xlarge);
-  row-gap: var(--layout-padding-medium);
+  gap: var(--layout-padding-medium) var(--layout-padding-xlarge);
   justify-content: space-between;
   width: 100%;
 }
