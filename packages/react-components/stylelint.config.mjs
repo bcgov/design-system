@@ -18,7 +18,7 @@ export default {
      *
      * See: https://stylelint.io/user-guide/rules/no-descending-specificity
      */
-    "no-descending-specificity": false,
+    "no-descending-specificity": null,
     "no-duplicate-at-import-rules": true,
     "property-no-unknown": true,
 
