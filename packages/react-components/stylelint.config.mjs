@@ -1,6 +1,10 @@
 export default {
   extends: "stylelint-config-standard",
   rules: {
+    /**
+     * We prefer to allow @-rule placement freedom.
+     */
+    "at-rule-empty-line-before": null,
     "at-rule-no-unknown": true,
     "block-no-empty": true,
     "color-no-invalid-hex": true,
