@@ -193,7 +193,11 @@ Then in a local React project folder, use `npm link @bcgov/design-system-react-c
 
 ### Linting
 
-ESLint is used for linting. See configuration file `eslint.config.js` and `lint` script in `package.json`.
+ESLint is used for linting TypeScript files. See configuration file `eslint.config.js` and `lint:ts` script in `package.json`.
+
+Stylelint is used for linting CSS files. See configuration file `stylelint.config.mjs` and `lint:css` script in `package.json`.
+
+The `lint` script in `package.json` runs both the TypeScript and CSS linting in series.
 
 ### Formatting
 
