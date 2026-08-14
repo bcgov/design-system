@@ -59,8 +59,7 @@
   > .bcds-footer--container-content
   > .bcds-footer--logo-links {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   align-items: flex-start;
   column-gap: var(--layout-padding-xlarge);
   row-gap: var(--layout-padding-medium);
