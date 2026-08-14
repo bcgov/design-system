@@ -179,7 +179,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  grid-gap: var(--layout-padding-small) var(--layout-padding-xlarge);
+  gap: var(--layout-padding-small) var(--layout-padding-xlarge);
   list-style: none;
   margin: var(--layout-margin-none);
   padding: var(--layout-padding-none);
