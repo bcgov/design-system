@@ -10,7 +10,7 @@
 }
 
 /* Selector */
-.bcds-react-aria-Radio:before {
+.bcds-react-aria-Radio::before {
   align-self: first baseline;
   margin-top: var(--layout-margin-xsmall);
   content: "";
@@ -25,45 +25,45 @@
   transition: all 200ms;
 }
 @media (prefers-reduced-motion) {
-  .bcds-react-aria-Radio:before {
+  .bcds-react-aria-Radio::before {
     /* No animation on radio button circle if user has reduced motion set */
     transition: none;
   }
 }
 
 /* Hover */
-.bcds-react-aria-Radio[data-hovered]:before {
+.bcds-react-aria-Radio[data-hovered]::before {
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-dark);
 }
 
 /* Pressed */
-.bcds-react-aria-Radio[data-pressed]:before {
+.bcds-react-aria-Radio[data-pressed]::before {
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-dark);
 }
 
 /* Selected */
-.bcds-react-aria-Radio[data-selected]:before {
+.bcds-react-aria-Radio[data-selected]::before {
   border: 5px solid var(--surface-color-primary-default);
 }
 
 /* Focused */
-.bcds-react-aria-Radio[data-focus-visible]:before {
+.bcds-react-aria-Radio[data-focus-visible]::before {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
 }
 
 /* Invalid */
-.bcds-react-aria-Radio[data-invalid]:before {
+.bcds-react-aria-Radio[data-invalid]::before {
   border: var(--layout-border-width-small) solid
     var(--support-border-color-danger);
 }
 .bcds-react-aria-Radio[data-selected][data-invalid] {
   color: var(--typography-color-danger);
 }
-.bcds-react-aria-Radio[data-selected][data-invalid]:before {
+.bcds-react-aria-Radio[data-selected][data-invalid]::before {
   border: 5px solid var(--support-border-color-danger);
 }
 
@@ -72,7 +72,7 @@
   color: var(--typography-color-disabled);
   cursor: not-allowed;
 }
-.bcds-react-aria-Radio[data-selected][data-disabled]:before {
+.bcds-react-aria-Radio[data-selected][data-disabled]::before {
   border: 5px solid var(--surface-color-border-default);
 }
 
