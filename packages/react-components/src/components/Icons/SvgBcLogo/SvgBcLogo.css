@@ -1,19 +1,19 @@
 .bcds-bc-logo--whiteFill {
-  fill: #ffffff;
-  stroke-width: 0px;
+  fill: #fff;
+  stroke-width: 0;
 }
 
 .bcds-bc-logo--blueFill {
   fill: #234075;
-  stroke-width: 0px;
+  stroke-width: 0;
 }
 
 .bcds-bc-logo--goldFill {
   fill: #e3a82b;
-  stroke-width: 0px;
+  stroke-width: 0;
 }
 
 .bcds-bc-logo--noFill {
   fill: none;
-  stroke-width: 0px;
+  stroke-width: 0;
 }

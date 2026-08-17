@@ -16,8 +16,7 @@
 }
 
 .bcds-Alert-Banner--Icon {
-  align-self: first baseline;
-  justify-self: flex-start;
+  place-self: first baseline flex-start;
   padding-top: var(--layout-padding-xsmall);
   color: var(--icons-color-primary-invert);
 }

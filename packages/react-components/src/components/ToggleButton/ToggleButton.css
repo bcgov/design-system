@@ -1,8 +1,7 @@
 .bcds-react-aria-ToggleButton {
   display: inline-flex;
   flex: 0 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   white-space: normal;
   box-sizing: border-box;
   gap: var(--layout-margin-xsmall);

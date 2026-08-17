@@ -37,8 +37,7 @@
 }
 
 .bcds-react-aria-AlertDialog--Icon {
-  justify-self: flex-start;
-  align-self: center;
+  place-self: center flex-start;
   padding-top: var(--layout-padding-xsmall);
 }
 
