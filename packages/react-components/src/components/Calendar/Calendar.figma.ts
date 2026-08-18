@@ -1,6 +1,6 @@
 // url=https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?node-id=15871%3A6832
 // source=https://github.com/bcgov/design-system/blob/main/packages/react-components/src/components/Calendar/Calendar.tsx
-// component=Calendar
+// component=Calendar icon
 
 import figma from "figma";
 
@@ -13,7 +13,7 @@ const visibleDuration = figma.selectedInstance.getEnum("Visible months", {
 });
 
 export default {
-  id: "Calendar",
+  id: "Calendar icon",
   imports: [
     "import { Calendar } from '@bcgov/design-system-react-components';",
   ],
