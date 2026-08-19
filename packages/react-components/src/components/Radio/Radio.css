@@ -78,25 +78,37 @@
   border: var(--layout-border-width-small) solid
     var(--support-border-color-danger);
 }
+
+/* Disabled */
+.bcds-react-aria-Radio[data-disabled] {
+  .bcds-react-aria-Radio--Button {
+    cursor: not-allowed;
+  }
+  .bcds-react-aria-Radio--Label {
+    color: var(--typography-color-disabled);
+  }
+}
+
+/* Read only */
+.bcds-react-aria-Radio[data-readonly] {
+  .bcds-react-aria-Radio--Button {
+    cursor: not-allowed;
+  }
+}
+
+/* Compound states */
+
+/* Selected + Invalid */
 .bcds-react-aria-Radio[data-selected][data-invalid] {
   color: var(--typography-color-danger);
 
   .bcds-react-aria-Radio--Indicator {
     border: 5px solid var(--support-border-color-danger);
   }
+}
 
-  /* Disabled */
-  .bcds-react-aria-Radio[data-disabled] {
-    color: var(--typography-color-disabled);
-    cursor: not-allowed;
-  }
-  .bcds-react-aria-Radio[data-selected][data-disabled]
-    .bcds-react-aria-Radio--Indicator {
-    border: 5px solid var(--surface-color-border-default);
-  }
-
-  /* Read only */
-  .bcds-react-aria-Radio[data-readonly] {
-    cursor: not-allowed;
-  }
+/* Selected + Disabled */
+.bcds-react-aria-Radio[data-selected][data-disabled]
+  .bcds-react-aria-Radio--Indicator {
+  border: 5px solid var(--surface-color-border-default);
 }
