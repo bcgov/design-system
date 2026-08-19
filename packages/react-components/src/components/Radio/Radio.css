@@ -67,7 +67,8 @@
 }
 
 /* Focused */
-.bcds-react-aria-Radio[data-focus-visible] .bcds-react-aria-Radio--Indicator {
+.bcds-react-aria-Radio--Button[data-focus-visible]
+  .bcds-react-aria-Radio--Indicator {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
