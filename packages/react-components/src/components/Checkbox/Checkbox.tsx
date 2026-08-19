@@ -3,6 +3,7 @@ import {
   CheckboxField,
   CheckboxFieldProps,
   FieldError,
+  Text,
   ValidationResult,
 } from "react-aria-components";
 
@@ -23,12 +24,17 @@ export interface CheckboxProps extends CheckboxFieldProps {
 export default function Checkbox({
   value,
   children,
+  description,
   errorMessage,
   ...props
 }: CheckboxProps) {
   return (
-    <CheckboxField value={value} {...props}>
-      <CheckboxButton className="bcds-react-aria-Checkbox">
+    <CheckboxField
+      className="bcds-react-aria-Checkbox"
+      value={value}
+      {...props}
+    >
+      <CheckboxButton className="bcds-react-aria-Checkbox--Button">
         {({ isRequired, isSelected, isIndeterminate }) => (
           <>
             <div className="bcds-react-aria-Checkbox--Indicator">
@@ -41,7 +47,17 @@ export default function Checkbox({
           </>
         )}
       </CheckboxButton>
-      <FieldError>{errorMessage}</FieldError>
+      {description && (
+        <Text
+          slot="description"
+          className="bcds-react-aria-Checkbox--Description"
+        >
+          {description}
+        </Text>
+      )}
+      <FieldError className="bcds-react-aria-Checkbox--Error">
+        {errorMessage}
+      </FieldError>
     </CheckboxField>
   );
 }
