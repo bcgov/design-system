@@ -18,6 +18,10 @@ const meta = {
       control: { type: "object" },
       description: "Text label",
     },
+    description: {
+      control: { type: "text" },
+      description: "Optional description text below label",
+    },
     defaultSelected: {
       control: { type: "boolean" },
       description: "Whether a checkbox is selected by default",
@@ -58,6 +62,13 @@ export const CheckboxTemplate: Story = {
   render: ({ ...args }: CheckboxProps) => <Checkbox {...args} />,
 };
 
+export const CheckboxWithDescription: Story = {
+  args: {
+    children: "This is a checkbox label",
+    description: "This is a description for the checkbox",
+  },
+};
+
 export const DefaultSelectedCheckbox: Story = {
   args: {
     children: "This checkbox is selected by default",
@@ -91,5 +102,14 @@ export const IndeterminateCheckbox: Story = {
   args: {
     children: "This checkbox is neither selected nor deselected",
     isIndeterminate: true,
+  },
+};
+
+export const InvalidCheckbox: Story = {
+  args: {
+    children: "This checkbox is invalid",
+    description: "You have to select this checkbox",
+    isInvalid: true,
+    errorMessage: "It displays an additional error message",
   },
 };
