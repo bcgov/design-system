@@ -28,9 +28,11 @@ describe("RadioGroup", () => {
   });
 
   it("user can select a radio input option with a click", () => {
-    const optionOne: HTMLFormElement = screen.getByTestId("one");
-    expect(optionOne).not.toHaveAttribute("data-selected");
+    const optionOne: HTMLInputElement = screen.getByRole("radio", {
+      name: /option 1/i,
+    });
+    expect(optionOne).not.toBeChecked();
     fireEvent.click(optionOne);
-    expect(optionOne).toHaveAttribute("data-selected");
+    expect(optionOne).toBeChecked();
   });
 });
