@@ -8,7 +8,11 @@ import {
 import { useLocale } from "react-aria-components";
 
 import { Calendar } from "../components";
-import { CalendarProps, DateValue } from "../components/Calendar";
+import {
+  CalendarProps,
+  DateValue,
+  CalendarSelectionMode,
+} from "../components/Calendar";
 
 const meta = {
   title: "Inputs and controls/Calendar",
@@ -34,6 +38,14 @@ const meta = {
       description: "Controls the behavior of pagination",
       table: {
         defaultValue: { summary: "visible" },
+      },
+    },
+    selectionMode: {
+      control: { type: "radio" },
+      options: ["single", "multiple"],
+      description: "How many options can be selected",
+      table: {
+        defaultValue: { summary: "single" },
       },
     },
     value: {
@@ -93,7 +105,9 @@ export const CalendarTemplate: Story = {
     firstDayOfWeek: "sun",
     isDisabled: false,
   },
-  render: ({ ...args }: CalendarProps<DateValue>) => <Calendar {...args} />,
+  render: ({ ...args }: CalendarProps<DateValue, CalendarSelectionMode>) => (
+    <Calendar {...args} />
+  ),
 };
 
 export const ConstrainedRange: Story = {
@@ -111,6 +125,13 @@ export const DefaultValue: Story = {
   args: {
     ...CalendarTemplate.args,
     defaultValue: today(getLocalTimeZone()),
+  },
+};
+
+export const MultipleSelection: Story = {
+  args: {
+    defaultValue: today(getLocalTimeZone()),
+    selectionMode: "multiple",
   },
 };
 
