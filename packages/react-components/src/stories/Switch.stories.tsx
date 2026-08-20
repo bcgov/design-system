@@ -14,6 +14,10 @@ const meta = {
       control: { type: "object" },
       description: "Used to set label text",
     },
+    description: {
+      control: { type: "text" },
+      description: "Optional description text below label",
+    },
     labelPosition: {
       options: ["left", "right"],
       control: { type: "radio" },
@@ -35,6 +39,11 @@ const meta = {
       control: "boolean",
       description: "Sets the switch to 'on' by default",
     },
+    errorMessage: {
+      control: "text",
+      description:
+        "Message displayed when `isInvalid` prop is passed (usually populated dynamically)",
+    },
   },
 } satisfies Meta<typeof Switch>;
 
@@ -45,6 +54,7 @@ export const SwitchTemplate: Story = {
   args: {
     children: "Label text",
     labelPosition: "right",
+    description: "The description field is optional.",
   },
   render: ({ ...args }: SwitchProps) => <Switch {...args} />,
 };
