@@ -65,6 +65,7 @@
     "@storybook/addon-a11y": "10.5.7",
     "@storybook/addon-docs": "10.5.7",
     "@storybook/addon-links": "10.5.7",
+    "@storybook/addon-mcp": "^0.7.0",
     "@storybook/addon-vitest": "10.5.7",
     "@storybook/react-vite": "10.5.7",
     "@testing-library/jest-dom": "6.9.1",
