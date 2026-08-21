@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 import SvgPlaceholderIcon from "@/components/Icons/SvgPlaceholderIcon";
 
 function SvgPlaceholderIconSmall() {
-  return <SvgPlaceholderIcon size={16} />;
+  return <SvgPlaceholderIcon size="small" />;
 }
 
 function ButtonPrimaryLarge() {

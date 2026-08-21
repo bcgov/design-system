@@ -303,7 +303,7 @@ export default function Select<
                             </div>
                             {isSelected ? (
                               <div className="bcds-react-aria-Select--ListBoxItem-icon">
-                                <SvgCheckIcon />
+                                <SvgCheckIcon size="xsmall" />
                               </div>
                             ) : (
                               item?.iconRight && (

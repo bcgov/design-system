@@ -19,7 +19,7 @@ export default function Checkbox({ value, children, ...props }: CheckboxProps) {
       {({ isRequired, isSelected, isIndeterminate }: CheckboxRenderProps) => (
         <>
           <div className="checkbox">
-            {isSelected && !isIndeterminate && <SvgCheckIcon />}
+            {isSelected && !isIndeterminate && <SvgCheckIcon size="xsmall" />}
             {isIndeterminate && <SvgDashIcon />}
           </div>
           <span className="label">

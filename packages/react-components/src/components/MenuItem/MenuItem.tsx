@@ -60,7 +60,7 @@ export default function MenuItem({
               </div>
             )}
             {renderProps.hasSubmenu && <SvgChevronRightIcon />}
-            {renderProps.isSelected && <SvgCheckIcon />}
+            {renderProps.isSelected && <SvgCheckIcon size="xsmall" />}
           </>
         );
       }}
