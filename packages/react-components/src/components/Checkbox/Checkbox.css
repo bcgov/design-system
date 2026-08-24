@@ -50,12 +50,11 @@
 
 /* Error */
 .bcds-react-aria-Checkbox--Error {
+  display: flex;
+  align-items: center;
+  gap: var(--layout-margin-small);
   font: var(--typography-regular-label);
   color: var(--typography-color-danger);
-  /* Offset to align with the label text */
-  margin-left: calc(
-    var(--icons-size-small) + (var(--layout-border-width-small) * 2) + 10px
-  );
 }
 
 /* Focus */
