@@ -18,11 +18,10 @@ import SvgChevronRightIcon from "../Icons/SvgChevronRightIcon";
 
 export type { DateValue, CalendarSelectionMode };
 
-export default function Calendar({
+export default function Calendar<M extends CalendarSelectionMode = "single">({
   visibleDuration = { months: 1 },
-  selectionMode = "single",
   ...props
-}: CalendarProps<DateValue, CalendarSelectionMode>) {
+}: CalendarProps<DateValue, M>) {
   const monthFormatter = useDateFormatter({
     month: "long",
     year: "numeric",
@@ -31,7 +30,6 @@ export default function Calendar({
   return (
     <ReactAriaCalendar
       className="bcds-react-aria-Calendar"
-      selectionMode={selectionMode}
       visibleDuration={visibleDuration}
       {...props}
     >
