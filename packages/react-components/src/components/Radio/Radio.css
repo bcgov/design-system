@@ -50,25 +50,28 @@
 }
 
 /* Hover */
-.bcds-react-aria-Radio[data-hovered] .bcds-react-aria-Radio--Indicator {
+.bcds-react-aria-Radio--Button[data-hovered]
+  > .bcds-react-aria-Radio--Indicator {
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-dark);
 }
 
 /* Pressed */
-.bcds-react-aria-Radio[data-pressed] .bcds-react-aria-Radio--Indicator {
+.bcds-react-aria-Radio--Button[data-pressed]
+  > .bcds-react-aria-Radio--Indicator {
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-dark);
 }
 
 /* Selected */
-.bcds-react-aria-Radio[data-selected] .bcds-react-aria-Radio--Indicator {
+.bcds-react-aria-Radio--Button[data-selected]
+  > .bcds-react-aria-Radio--Indicator {
   border: 5px solid var(--surface-color-primary-default);
 }
 
 /* Focused */
 .bcds-react-aria-Radio--Button[data-focus-visible]
-  .bcds-react-aria-Radio--Indicator {
+  > .bcds-react-aria-Radio--Indicator {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
@@ -101,8 +104,9 @@
 
 /* Selected + Invalid */
 .bcds-react-aria-Radio[data-selected][data-invalid] {
-  color: var(--typography-color-danger);
-
+  .bcds-react-aria-Radio--Label {
+    color: var(--typography-color-danger);
+  }
   .bcds-react-aria-Radio--Indicator {
     border: 5px solid var(--support-border-color-danger);
   }
