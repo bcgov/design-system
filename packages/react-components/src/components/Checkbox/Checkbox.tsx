@@ -13,8 +13,6 @@ import SvgDashIcon from "../Icons/SvgDashIcon";
 import "./Checkbox.css";
 
 export interface CheckboxProps extends CheckboxFieldProps {
-  /* Sets text label for checkbox */
-  children?: React.ReactNode;
   /* Sets optional description text below label */
   description?: string;
   /* Used for data validation and error handling */
