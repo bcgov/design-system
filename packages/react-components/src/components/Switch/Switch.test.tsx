@@ -39,9 +39,7 @@ describe("Switch", () => {
   });
 
   it("description is associated with the switch", () => {
-    render(
-      <Switch description="Enables background sync">Auto-sync</Switch>
-    );
+    render(<Switch description="Enables background sync">Auto-sync</Switch>);
 
     const switchElement = screen.getByLabelText(/auto-sync/i);
 
@@ -68,9 +66,7 @@ describe("Switch", () => {
     const switchElement = screen.getByLabelText(/auto-sync/i);
 
     expect(screen.getByText("This field is required")).toBeInTheDocument();
-    expect(switchElement).toHaveAccessibleDescription(
-      "This field is required"
-    );
+    expect(switchElement).toHaveAccessibleDescription("This field is required");
   });
 
   it("error message supports the validation callback form and only renders when invalid", () => {
