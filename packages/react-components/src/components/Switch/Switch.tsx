@@ -28,38 +28,42 @@ export default function Switch({
 }: SwitchProps) {
   return (
     <ReactAriaSwitchField className="bcds-react-aria-Switch" {...props}>
-      <ReactAriaSwitchButton className="bcds-react-aria-Switch--Button">
-        {({ isSelected, isDisabled }) => (
-          <>
-            {labelPosition === "left" && <>{children}</>}
-            <div className="bcds-react-aria-Switch--Track indicator">
-              <div
-                data-disabled={isDisabled || undefined}
-                className={
-                  isSelected
-                    ? "bcds-react-aria-Switch--Handle"
-                    : "bcds-react-aria-Switch--Handle indicator"
-                }
-              />
-            </div>
-            {labelPosition === "right" && <>{children}</>}
-          </>
-        )}
-      </ReactAriaSwitchButton>
-      {description && (
-        <Text
-          className="bcds-react-aria-Switch--Description"
-          slot="description"
-        >
-          {description}
-        </Text>
-      )}
-      <FieldError className="bcds-react-aria-Switch--Error">
+      {({ isInvalid }) => (
         <>
-          <SvgExclamationIcon />
-          {errorMessage}
+          <ReactAriaSwitchButton className="bcds-react-aria-Switch--Button">
+            {({ isSelected, isDisabled }) => (
+              <>
+                {labelPosition === "left" && <>{children}</>}
+                <div className="bcds-react-aria-Switch--Track indicator">
+                  <div
+                    data-disabled={isDisabled || undefined}
+                    className={
+                      isSelected
+                        ? "bcds-react-aria-Switch--Handle"
+                        : "bcds-react-aria-Switch--Handle indicator"
+                    }
+                  />
+                </div>
+                {labelPosition === "right" && <>{children}</>}
+              </>
+            )}
+          </ReactAriaSwitchButton>
+          {description && (
+            <Text
+              className="bcds-react-aria-Switch--Description"
+              slot="description"
+            >
+              {description}
+            </Text>
+          )}
+          {isInvalid && (
+            <div className="bcds-react-aria-Switch--Error">
+              <SvgExclamationIcon />
+              <FieldError>{errorMessage}</FieldError>
+            </div>
+          )}
         </>
-      </FieldError>
+      )}
     </ReactAriaSwitchField>
   );
 }
