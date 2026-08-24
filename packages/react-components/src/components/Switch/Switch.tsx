@@ -30,20 +30,14 @@ export default function Switch({
 }: SwitchProps) {
   return (
     <ReactAriaSwitchField className="bcds-react-aria-Switch" {...props}>
-      {({ isSelected, isInvalid }) => (
+      {({ isInvalid }) => (
         <>
           <ReactAriaSwitchButton className="bcds-react-aria-Switch--Button">
             {composeRenderProps(children, (children) => (
               <>
                 {labelPosition === "left" && children}
-                <div className="bcds-react-aria-Switch--Track indicator">
-                  <div
-                    className={
-                      isSelected
-                        ? "bcds-react-aria-Switch--Handle"
-                        : "bcds-react-aria-Switch--Handle indicator"
-                    }
-                  />
+                <div className="bcds-react-aria-Switch--Track">
+                  <div className="bcds-react-aria-Switch--Handle" />
                 </div>
                 {labelPosition === "right" && children}
               </>
