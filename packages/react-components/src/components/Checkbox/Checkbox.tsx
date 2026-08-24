@@ -9,6 +9,9 @@ import {
 
 import SvgCheckIcon from "../Icons/SvgCheckIcon";
 import SvgDashIcon from "../Icons/SvgDashIcon";
+import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
+
+import { composeRenderProps } from "react-aria-components/composeRenderProps";
 
 import "./Checkbox.css";
 
@@ -32,30 +35,37 @@ export default function Checkbox({
       value={value}
       {...props}
     >
-      <CheckboxButton className="bcds-react-aria-Checkbox--Button">
-        {({ isRequired, isSelected, isIndeterminate }) => (
-          <>
-            <div className="bcds-react-aria-Checkbox--Indicator">
-              {isSelected && !isIndeterminate && <SvgCheckIcon />}
-              {isIndeterminate && <SvgDashIcon />}
+      {({ isSelected, isInvalid, isRequired, isIndeterminate }) => (
+        <>
+          <CheckboxButton className="bcds-react-aria-Checkbox--Button">
+            {composeRenderProps(children, (children) => (
+              <>
+                <div className="bcds-react-aria-Checkbox--Indicator">
+                  {isSelected && !isIndeterminate && <SvgCheckIcon />}
+                  {isIndeterminate && <SvgDashIcon />}
+                </div>
+                <span className="bcds-react-aria-Checkbox--Label">
+                  <>{children}</> {isRequired && "(required)"}
+                </span>
+              </>
+            ))}
+          </CheckboxButton>
+          {description && (
+            <Text
+              slot="description"
+              className="bcds-react-aria-Checkbox--Description"
+            >
+              {description}
+            </Text>
+          )}
+          {isInvalid && (
+            <div className="bcds-react-aria-Checkbox--Error">
+              <SvgExclamationIcon />
+              <FieldError>{errorMessage}</FieldError>
             </div>
-            <span className="bcds-react-aria-Checkbox--Label">
-              <>{children}</> {isRequired && "(required)"}
-            </span>
-          </>
-        )}
-      </CheckboxButton>
-      {description && (
-        <Text
-          slot="description"
-          className="bcds-react-aria-Checkbox--Description"
-        >
-          {description}
-        </Text>
+          )}
+        </>
       )}
-      <FieldError className="bcds-react-aria-Checkbox--Error">
-        {errorMessage}
-      </FieldError>
     </CheckboxField>
   );
 }

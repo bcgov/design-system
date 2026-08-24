@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { useState } from "react";
 
 import { Checkbox } from "../components";
 import { CheckboxProps } from "../components/Checkbox";
@@ -111,5 +112,16 @@ export const InvalidCheckbox: Story = {
     description: "You have to select this checkbox",
     isInvalid: true,
     errorMessage: "It displays an additional error message",
+  },
+  render: ({ ...args }: CheckboxProps) => {
+    const [isSelected, setIsSelected] = useState(false);
+    return (
+      <Checkbox
+        {...args}
+        isSelected={isSelected}
+        onChange={setIsSelected}
+        isInvalid={!isSelected}
+      />
+    );
   },
 };
