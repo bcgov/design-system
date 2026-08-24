@@ -102,11 +102,11 @@
   cursor: not-allowed;
   > .bcds-react-aria-Switch--Track {
     background-color: var(--surface-color-primary-disabled);
-  }
-  > .bcds-react-aria-Switch--Handle {
-    background-color: var(--theme-gray-10);
-    border: var(--layout-border-width-medium) solid
-      var(--surface-color-border-default);
+    > .bcds-react-aria-Switch--Handle {
+      background-color: var(--theme-gray-10);
+      border: var(--layout-border-width-medium) solid
+        var(--surface-color-border-default);
+    }
   }
 }
 
