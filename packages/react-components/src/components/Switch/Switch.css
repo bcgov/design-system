@@ -91,6 +91,17 @@
   outline-offset: var(--layout-margin-hair);
 }
 
+/* Selected */
+.bcds-react-aria-Switch--Button[data-selected]
+  > .bcds-react-aria-Switch--Track {
+  background-color: var(--surface-color-primary-default);
+  > .bcds-react-aria-Switch--Handle {
+    transform: translateX(100%);
+    border: var(--layout-border-width-medium) solid
+      var(--surface-color-primary-default);
+  }
+}
+
 /* Read only */
 .bcds-react-aria-Switch--Button[data-readonly] {
   cursor: not-allowed;
@@ -107,17 +118,6 @@
       border: var(--layout-border-width-medium) solid
         var(--surface-color-border-default);
     }
-  }
-}
-
-/* Selected */
-.bcds-react-aria-Switch--Button[data-selected]
-  > .bcds-react-aria-Switch--Track {
-  background-color: var(--surface-color-primary-default);
-  > .bcds-react-aria-Switch--Handle {
-    transform: translateX(100%);
-    border: var(--layout-border-width-medium) solid
-      var(--surface-color-primary-default);
   }
 }
 
