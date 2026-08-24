@@ -7,6 +7,8 @@ import {
   Text,
 } from "react-aria-components";
 
+import { composeRenderProps } from "react-aria-components/composeRenderProps";
+
 import "./Switch.css";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 
@@ -28,15 +30,14 @@ export default function Switch({
 }: SwitchProps) {
   return (
     <ReactAriaSwitchField className="bcds-react-aria-Switch" {...props}>
-      {({ isInvalid }) => (
+      {({ isSelected, isInvalid }) => (
         <>
           <ReactAriaSwitchButton className="bcds-react-aria-Switch--Button">
-            {({ isSelected, isDisabled }) => (
+            {composeRenderProps(children, (children) => (
               <>
-                {labelPosition === "left" && <>{children}</>}
+                {labelPosition === "left" && children}
                 <div className="bcds-react-aria-Switch--Track indicator">
                   <div
-                    data-disabled={isDisabled || undefined}
                     className={
                       isSelected
                         ? "bcds-react-aria-Switch--Handle"
@@ -44,9 +45,9 @@ export default function Switch({
                     }
                   />
                 </div>
-                {labelPosition === "right" && <>{children}</>}
+                {labelPosition === "right" && children}
               </>
-            )}
+            ))}
           </ReactAriaSwitchButton>
           {description && (
             <Text
