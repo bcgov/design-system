@@ -130,7 +130,7 @@ export const DefaultValue: Story = {
 
 export const MultipleSelection: Story = {
   args: {
-    defaultValue: today(getLocalTimeZone()),
+    defaultValue: [today(getLocalTimeZone())],
     selectionMode: "multiple",
   },
 };
