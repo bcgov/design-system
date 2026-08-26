@@ -58,7 +58,7 @@ export default function Checkbox({
               {description}
             </Text>
           )}
-          {isInvalid && (
+          {isInvalid && errorMessage && (
             <div className="bcds-react-aria-Checkbox--Error">
               <SvgExclamationIcon />
               <FieldError>{errorMessage}</FieldError>
