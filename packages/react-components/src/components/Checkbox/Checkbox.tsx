@@ -1,7 +1,7 @@
 import {
   CheckboxButton,
   CheckboxField,
-  CheckboxFieldProps,
+  CheckboxFieldProps as ReactAriaCheckboxFieldProps,
   FieldError,
   Text,
   ValidationResult,
@@ -15,7 +15,7 @@ import { composeRenderProps } from "react-aria-components/composeRenderProps";
 
 import "./Checkbox.css";
 
-export interface CheckboxProps extends CheckboxFieldProps {
+export interface CheckboxProps extends ReactAriaCheckboxFieldProps {
   /* Sets optional description text below label */
   description?: string;
   /* Used for data validation and error handling */
