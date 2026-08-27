@@ -7,7 +7,46 @@ import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const repoRoot = process.cwd();
+
+function resolveCliArg(flagName) {
+  const args = process.argv.slice(2);
+
+  const directIndex = args.findIndex((arg) => arg === flagName);
+  if (directIndex !== -1) {
+    return args[directIndex + 1] || undefined;
+  }
+
+  const equals = args.find((arg) => arg.startsWith(`${flagName}=`));
+  if (equals) {
+    return equals.slice(flagName.length + 1);
+  }
+
+  return undefined;
+}
+
+/* Create agent files at root of user's repository */
+function findGitRoot(startDir) {
+  let dir = path.resolve(startDir);
+
+  while (true) {
+    if (fs.existsSync(path.join(dir, ".git"))) {
+      return dir;
+    }
+
+    const parent = path.dirname(dir);
+    if (parent === dir) {
+      return null;
+    }
+
+    dir = parent;
+  }
+}
+
+/* User can override file creation location with --cwd flag */
+const cliCwd = resolveCliArg("--cwd");
+const repoRoot = path.resolve(
+  cliCwd || findGitRoot(process.cwd()) || process.cwd()
+);
 
 const templateRoot = path.join(__dirname, "..", "templates", "copilot");
 
@@ -15,6 +54,7 @@ function readTemplate(fileName) {
   return fs.readFileSync(path.join(templateRoot, fileName), "utf8");
 }
 
+/* Source content for generated files */
 const instructionsContent = readTemplate("copilot-instructions.md");
 const skillContent = readTemplate("design-system.skill.md");
 
@@ -58,6 +98,7 @@ const targets = [
 
 let wroteCount = 0;
 
+/* Do not overwrite user's existing config files */
 for (const target of targets) {
   fs.mkdirSync(path.dirname(target.file), { recursive: true });
 
