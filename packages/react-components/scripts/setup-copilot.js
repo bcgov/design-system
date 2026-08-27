@@ -54,6 +54,7 @@ const instructionsContent = readTemplate("copilot-instructions.md");
 const skillContent = readTemplate("design-system.skill.md");
 
 const targets = [
+  /* Create basic B.C. Design System instruction set in .github/instructions */
   {
     file: path.join(
       repoRoot,
@@ -64,11 +65,13 @@ const targets = [
     content: instructionsContent,
     label: "design system instructions",
   },
+  /* Create B.C. Design System agent in .agents */
   {
-    file: path.join(repoRoot, ".github", "agents", "bc-design-system.agent.md"),
+    file: path.join(repoRoot, ".agents", "bc-design-system.agent.md"),
     content: `---\nname: bc-design-system\ndescription: Use the BC Gov design system for user interface work\n---\n\n${instructionsContent}`,
     label: "GitHub Copilot agent definition",
   },
+  /* Create B.C. Design System setup/config skill in .agents/skills */
   {
     file: path.join(repoRoot, ".agents", "skills", "setup-design-system.md"),
     content: skillContent,
