@@ -55,11 +55,6 @@ const skillContent = readTemplate("design-system.skill.md");
 
 const targets = [
   {
-    file: path.join(repoRoot, ".github", "copilot-instructions.md"),
-    content: instructionsContent,
-    label: "GitHub Copilot instructions",
-  },
-  {
     file: path.join(
       repoRoot,
       ".github",
