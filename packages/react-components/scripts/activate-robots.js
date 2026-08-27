@@ -51,7 +51,7 @@ function readTemplate(fileName) {
 
 /* Source content for generated files */
 const instructionsContent = readTemplate("copilot-instructions.md");
-const skillContent = readTemplate("design-system.skill.md");
+const skillContentSetup = readTemplate("setup-design-system.skill.md");
 
 const targets = [
   /* Create basic B.C. Design System instruction set in .github/instructions */
@@ -74,7 +74,7 @@ const targets = [
   /* Create B.C. Design System setup/config skill in .agents/skills */
   {
     file: path.join(repoRoot, ".agents", "skills", "setup-design-system.md"),
-    content: skillContent,
+    content: skillContentSetup,
     label: "agent skill",
   },
 ];
