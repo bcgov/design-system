@@ -43,7 +43,7 @@ const repoRoot = path.resolve(
   cliCwd || findGitRoot(process.cwd()) || process.cwd()
 );
 
-const templateRoot = path.join(__dirname, "..", "templates", "copilot");
+const templateRoot = path.join(__dirname, "..", "templates", "agents");
 
 function readTemplate(fileName) {
   return fs.readFileSync(path.join(templateRoot, fileName), "utf8");
