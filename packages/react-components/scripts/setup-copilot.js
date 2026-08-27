@@ -3,26 +3,21 @@
 import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
+import { parseArgs } from "node:util";
 import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-function resolveCliArg(flagName) {
-  const args = process.argv.slice(2);
-
-  const directIndex = args.findIndex((arg) => arg === flagName);
-  if (directIndex !== -1) {
-    return args[directIndex + 1] || undefined;
-  }
-
-  const equals = args.find((arg) => arg.startsWith(`${flagName}=`));
-  if (equals) {
-    return equals.slice(flagName.length + 1);
-  }
-
-  return undefined;
-}
+/* CLI flags */
+const { values } = parseArgs({
+  args: process.argv.slice(2),
+  options: {
+    cwd: { type: "string" },
+  },
+  strict: true,
+  allowPositionals: true,
+});
 
 /* Create agent files at root of user's repository */
 function findGitRoot(startDir) {
@@ -43,7 +38,7 @@ function findGitRoot(startDir) {
 }
 
 /* User can override file creation location with --cwd flag */
-const cliCwd = resolveCliArg("--cwd");
+const cliCwd = values.cwd;
 const repoRoot = path.resolve(
   cliCwd || findGitRoot(process.cwd()) || process.cwd()
 );
