@@ -75,16 +75,6 @@ const targets = [
     label: "GitHub Copilot agent definition",
   },
   {
-    file: path.join(
-      repoRoot,
-      ".github",
-      "chatmodes",
-      "bc-design-system.chatmode.md"
-    ),
-    content: `---\nmode: agent\n---\n\n${instructionsContent}`,
-    label: "Copilot chat mode",
-  },
-  {
     file: path.join(repoRoot, ".agents", "skills", "setup-design-system.md"),
     content: skillContent,
     label: "agent skill",
