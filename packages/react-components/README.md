@@ -129,6 +129,33 @@ This project follows semantic versioning. See [CHANGELOG.md](./CHANGELOG.md) for
 
 ## Development
 
+### Development Principles
+
+- We must maintain an **extremely high bar for accessibility**. For example, every action possible with a mouse needs to be possible with a keyboard (or other assistive technology). Adobe's `react-aria-components` is very adept at cross-device support for this, which is one of the main reasons we chose it as our base, un-styled component library.
+- We endeavour to **follow semantic versioning**, though we have not yet released a major version 1. On v0, we are still willing to carefully make breaking changes if the alternative is painting ourselves into a corner. Our rationale here comes from [item #4 of the SemVer spec](https://semver.org/#spec-item-4).
+  - Once we are on a major version 1, we will be much more strict about only making breaking changes with major version bumps. [Here's an example of a breaking component change that we consider okay in v0](https://github.com/bcgov/design-system/pull/844#issuecomment-5431222716).
+  - We endeavour to release a major version 1 as soon as we consider our initial component set complete.
+  - We **do NOT want to make life hard for early adopters**, so we think very hard about breaking changes and we publish specific guidance with releases that involve breaks.
+- We **keep our dependencies extremely minimal**. New `devDependencies` are fine and anticipated, but `dependencies` that get shipped with the library need very careful consideration. So far, we have only added dependencies from under the umbrella of Adobe's Spectrum design system, and only where it's necessary because a particular piece of functionality isn't exposed directly from `react-aria-components`.
+- We want to **support as many new and existing React projects as possible**. To this end, we avoid dependencies that might conflict with existing choices in a project:
+  - We avoid importing BC Sans in case a project is already shipping it themselves. It's much worse to ship the heavy BC Sans font files twice in production than to show a generic serifed font in development until the developer figures out that something is wrong.
+  - The library should work on as wide a range of React versions as possible given the `react-aria-components` dependency. We chose to very slightly narrow their support version range to start our own support at v16.14.0. This is the version where it's no longer necessary to import unused `react` dependencies into every component file (see [Introducing the New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html)).
+    - Choices that make things harder for apps on older versions of React to adopt the library should be thought through. [Here's an example of thinking through a mitigation that affects React v16 and v17 projects](https://github.com/bcgov/design-system/pull/760#issuecomment-5321364758).
+  - We write our CSS styles without the use of a CSS-in-JS tool to avoid conflicts with any existing tools that existing projects might be using.
+  - We don't use a CSS framework like Tailwind or Bootstrap.
+- We want to **keep all tests passing**. GitHub Actions is used to run test suites when a PR is made. PRs should not be merged to `main` if new breaks are introduced.
+- Nitty gritty code details below:
+  - Class names:
+    - Class names start like this:
+      - When a React Aria component is being styled: `.bcds-react-aria-<RACComponentName>`
+        - React Aria Components are unstyled components that use default class names like `.react-aria-<RACComponentName>`. We append `bcds-` for "B.C. Design System" to scope our styles in case people are using RAC for other things.
+      - When a generic HTML tag is the top level component: `.bcds-<ComponentName>`
+        - For example, the `Header` and `Footer` are just `<header>` and `<footer>` elements, not components from RAC.
+    - Class names use vaguely BEM-like conventions after the first chunk. Ex: `.bcds-react-aria-Disclosure--Panel`
+    - We are not currently doing any kind of unique ID-based class name generation/scoping, so it's important to be somewhat verbose in selecting class names. If you accidentally reuse a class like `.bcds-react-aria-Button` as part of some composite selector, its styles will collide with the styles from the `Button` component.
+  - We always want to use tokens from our tokens library where possible. Where a hard-coded value is being used because no token is available, it's a good idea to raise it to the team so designers can make the call on whether a new token should be added or if a particular hard-coded value is a genuine one-off.
+  - We lint our styles with `stylelint`, and should endeavour to pass the [`no-descending-specificity` rule](https://stylelint.io/user-guide/rules/no-descending-specificity/).
+
 ### Components
 
 Components live in `./src/components` and are targeted by the build process with an export in `./src/index.ts`.
