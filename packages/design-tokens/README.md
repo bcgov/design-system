@@ -11,13 +11,37 @@ If you have questions, you can:
 
 See `dist/README.md` (the README shipped with [the published package](https://www.npmjs.com/package/@bcgov/design-tokens)) for how to use the design tokens in your project.
 
-## Development workflow
+## Versions
+
+This project follows semantic versioning. See [CHANGELOG.md](./CHANGELOG.md) for version details.
+
+## Development
+
+### Development principles
+
+- Consumers of our tokens should be able to use them directly from the tokens library, **referencing variable names in code instead of copy-pasting**.
+- We endeavour to **follow semantic versioning**, and we would rather put out a new major version than break something for consumers. We are careful to list changes in our changelog. We treat breaks like this:
+  - Major version bumps (breaks) can be caused by:
+    - Stuff that requires code changes for consumers
+    - A token being dropped or renamed
+    - A token target set being dropped (ex: we drop support for an output file format because we can no longer support it with our tooling)
+    - An API break (ex: we change our file names and all imports need to change to match the new file names)
+  - Minor version bumps can be caused by:
+    - A token value changing in a way that could change how a consumer's product looks, but which does not require a code change on their part
+    - Adding tokens
+    - Adding token target sets (ex: we add JSON5 or YAML as an output format)
+    - Non-breaking restructuring to files, or other internal library layout changes that don't require code changes by consumers
+  - Patch versions can be caused by:
+    - Token bug fixes (ex: a token value was changed to make it work where it didn't previously)
+    - Documentation fixes
+
+### Development workflow
 
 1. Collect design tokens input data from the [Tokens Studio for Figma](<https://www.figma.com/community/plugin/843461159747178978/Tokens-Studio-for-Figma-(Figma-Tokens)>) plugin
 2. Transform the raw data from Tokens Studio using the [Style Dictionary](https://amzn.github.io/style-dictionary/#/) along with the [@tokens-studio/sd-transforms](https://github.com/tokens-studio/sd-transforms) custom transforms package for Tokens Studio data
 3. Publish the output data on [npm](https://www.npmjs.com/package/@bcgov/design-tokens) and [GitHub Packages](https://github.com/orgs/bcgov/packages/npm/package/design-tokens)
 
-## Steps to update and publish tokens
+### Steps to update and publish tokens
 
 Publishing new versions of the package to npm is done via GitHub Actions. GitHub Actions are located in `/.github/workflows` in the project root.
 
@@ -27,7 +51,7 @@ To publish a new release:
 2. Manually update composite tokens to include parent category. Ex: `{fontWeights.regular}` must become `{typography.fontWeights.regular}`.
 3. Create and publish a GitHub release to trigger the publishing workflow
 
-### GitHub release
+#### GitHub release
 
 GitHub releases are based on git tags.
 
@@ -47,11 +71,11 @@ Copy the changelog notes for the new version and link to the npm page for the ne
 
 Publish the release to publish the latest version of the library on npm. The release tag must start with `@bcgov/design-tokens` to trigger the publish workflow.
 
-## Test the build script
+### Test the build script
 
 A Node.js test script is included to confirm that the build script runs as intended: `npm run test`
 
-## Folder structure
+### Folder structure
 
 ```
 .
