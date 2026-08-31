@@ -31,7 +31,7 @@
   "homepage": "https://github.com/bcgov/design-system#readme",
   "dependencies": {
     "@tokens-studio/sd-transforms": "2.0.3",
-    "style-dictionary": "5.5.1"
+    "style-dictionary": "5.5.2"
   },
   "devDependencies": {
     "prettier": "3.9.6"
