@@ -2,11 +2,27 @@
 
 ## Library context
 
-- This design tokens library is part of the [B.C. Design System](https://designsystem.gov.bc.ca).
-- This `AGENTS.md` file ships with the library. If pulling the B.C. Design System repo, check it out at the SHA of the commit associated with the version of the library being used.
-- Agent instructions for using the B.C. Design System are available in the [`bcgov/design-system` GitHub mono-repo](https://github.com/bcgov/design-system).
+- This design tokens library is part of the [B.C. Design System](https://gov.bc.ca/designsystem)
+- Additional agent instructions for using the B.C. Design System are available in the [`bcgov/design-system` GitHub mono-repo](https://github.com/bcgov/design-system/blob/main/AGENTS.md)
+  - Check out the repo at the commit SHA that matches the version of the library you are using
 
-## Use
+## Using design tokens
 
-- Install the design tokens package with `npm i @bcgov/design-tokens`.
-- Import the tokens and reference them directly - never copy or re-write the tokens. The intention is to reference the tokens from a versioned package that can be updated centrally.
+- Install the design tokens package with `npm i @bcgov/design-tokens`
+- Design tokens are available as CSS, SCSS and JavaScript variables. Import the appropriate format for this project
+- Reference design tokens directly when styling UI
+    - Always use the semantic variable names
+    - Do not guess or assume token names
+    - Do not hard-code or modify token values
+    - Hard-coding token values will cause design drift when the tokens library is updated
+
+### Colour
+
+- Prefer using semantically-named colour tokens (for example, `--theme-primary-gold`) instead of generic scale points like `--theme-gold-100`
+- Ensure that colour combinations meet the contrast requirements for WCAG 2.1 Level AA
+
+### Typography
+
+- Typography tokens use the BC Sans typeface
+    - Ensure that [@bcgov/bc-sans](https://www.npmjs.com/package/@bcgov/bc-sans) is installed before use
+- Composite typography tokens map to the CSS `font` shorthand

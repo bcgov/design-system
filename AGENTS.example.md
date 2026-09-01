@@ -2,7 +2,7 @@
 
 ## Set up the B.C. Design System
 
-- Ensure that the user's project has the core B.C. Design System dependencies installed:
+- Ensure that the project has the core B.C. Design System dependencies installed:
   - [@bcgov/bc-sans](https://www.npmjs.com/package/@bcgov/bc-sans)
   - [@bcgov/design-tokens](https://www.npmjs.com/package/@bcgov/design-tokens)
   - [@bcgov/design-system-react-components](https://www.npmjs.com/package/@bcgov/design-system-react-components)
