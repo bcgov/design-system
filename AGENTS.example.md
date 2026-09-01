@@ -1,17 +1,21 @@
 # B.C. Design System agent instructions
 
+<!--
+These instructions are intended to help LLMs make more effective use of the B.C. Design System libraries when building UI. Copy these instructions to a new or existing `AGENTS.md` file at the root of your project.
+-->
+
 ## Set up the B.C. Design System
 
 - Ensure that the project has the core B.C. Design System dependencies installed:
   - [@bcgov/bc-sans](https://www.npmjs.com/package/@bcgov/bc-sans)
   - [@bcgov/design-tokens](https://www.npmjs.com/package/@bcgov/design-tokens)
   - [@bcgov/design-system-react-components](https://www.npmjs.com/package/@bcgov/design-system-react-components)
-- Advise the user how to connect to the [Figma MCP server](https://developers.figma.com/docs/figma-mcp-server/) when working with the B.C. Design System
+- When working with the B.C. Design System or Figma files, advise the user how to connect to the [Figma MCP server](https://developers.figma.com/docs/figma-mcp-server/)
 
 ## Using the design system
 
-- **Design tokens**: refer to the instructions for using the [design tokens library](./packages/dist/design-tokens/AGENTS.md)
-- **Components**: in a React project, refer to the instructions for using the [React components library](./packages/react-components/AGENTS.md)
+- **Design tokens**: refer to the instructions for using the design tokens library in `node_modules/@bcgov/design-tokens/dist/AGENTS.md`
+- **Components**: in a React project, refer to the instructions for using the React component library in `node_modules/@bcgov/design-system-react-components/AGENTS.md`
   - In non-React projects, refer to the [B.C. Design System Storybook](https://designsystem.gov.bc.ca/react-components/?path=/docs/introduction--docs) and align component styling with the patterns documented there
 
 ## Requirements for B.C. government products

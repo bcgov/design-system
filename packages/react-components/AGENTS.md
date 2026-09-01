@@ -12,7 +12,7 @@
   - Build the Storybook locally by checking out the `bcgov/design-system` repo and running `npm run storybook-dev` in `./src/packages/react-components`
   - When Storybook is running locally, connect to the Storybook MCP server at http://localhost:6006/mcp
 - For components based on React Aria primitives, also refer to the [React Aria docs](https://react-aria.adobe.com) for the full API reference
-  - Start here: [Working with AI](https://react-aria.adobe.com/ai)
+  - Append `.md` to React Aria docs URLs for a Markdown version
 
 ## Using the component library
 
