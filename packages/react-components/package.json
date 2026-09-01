@@ -39,6 +39,7 @@
     }
   },
   "files": [
+    "AGENTS.md",
     "dist/index.d.ts",
     "dist/esm",
     "dist/cjs"
