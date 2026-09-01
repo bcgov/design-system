@@ -27,6 +27,4 @@
 - Prefer component-level styling and design tokens over bespoke CSS
 - Do not overwrite the `className` for existing design system components
 - If writing new components, use design tokens from the `@bcgov/design-tokens` library to ensure coherence with other components
-  - Import variables in the user's preferred format from `@bcgov/design-tokens`
-  - Do not guess or invent new variables unless explicitly instructed
-  - Always use semantic variables rather than hard-coding their values
+  - Refer to additional instructions for working with design tokens in `node_modules/@bcgov/design-tokens/dist/AGENTS.md`
