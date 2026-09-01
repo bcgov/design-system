@@ -12,8 +12,8 @@
 - Design tokens are available as CSS, SCSS and JavaScript variables. Import the appropriate format for this project
 - Reference design tokens directly when styling UI
     - Always use the semantic variable names
-    - Do not guess or assume token names
-    - Do not hard-code or modify token values
+    - Never guess or assume token names
+    - Never hard-code or modify token values
     - Hard-coding token values will cause design drift when the tokens library is updated
 
 ### Colour
