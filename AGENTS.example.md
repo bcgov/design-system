@@ -14,8 +14,8 @@ These instructions are intended to help LLMs make more effective use of the B.C.
 
 ## Using the design system
 
-- **Design tokens**: refer to the instructions for using the design tokens library in `node_modules/@bcgov/design-tokens/dist/AGENTS.md`
-- **Components**: in a React project, refer to the instructions for using the React component library in `node_modules/@bcgov/design-system-react-components/AGENTS.md`
+- **Design tokens**: get instructions for using the design tokens library from `node_modules/@bcgov/design-tokens/dist/AGENTS.md`
+- **Components**: in a React project, get instructions for using the React component library from `node_modules/@bcgov/design-system-react-components/AGENTS.md`
   - In non-React projects, refer to the [B.C. Design System Storybook](https://designsystem.gov.bc.ca/react-components/?path=/docs/introduction--docs) and align component styling with the patterns documented there
 
 ## Requirements for B.C. government products

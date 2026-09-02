@@ -1,10 +1,8 @@
-# React components for the B.C. Design System
+# B.C. Design System React Components
 
 ## Library context
 
 - This React component library is part of the [B.C. Design System](https://gov.bc.ca/designsystem)
-- Additional agent instructions for using the B.C. Design System are available in the [`bcgov/design-system` GitHub mono-repo](https://github.com/bcgov/design-system/blob/main/AGENTS.md)
-  - Check out the repo at the commit SHA that matches the version of the library you are using
 
 ### Component documentation
 

@@ -1,17 +1,15 @@
-# Design tokens for the B.C. Design System
+# B.C. Design System Design Tokens
 
 ## Library context
 
 - This design tokens library is part of the [B.C. Design System](https://gov.bc.ca/designsystem)
-- Additional agent instructions for using the B.C. Design System are available in the [`bcgov/design-system` GitHub repo](https://github.com/bcgov/design-system/blob/main/AGENTS.md)
-  - Check out the repo at the commit SHA that matches the version of the library you are using
 
 ## Using design tokens
 
 - Install the design tokens package with `npm i @bcgov/design-tokens`
 - Design tokens are available as CSS, SCSS and JavaScript variables. Import the appropriate format for this project
 - Reference design tokens directly when styling UI
-    - Always use the semantic variable names
+- Always use the semantic variable names
     - Never guess or assume token names
     - Never hard-code or modify token values
     - Hard-coding token values will cause design drift when the tokens library is updated
