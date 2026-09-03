@@ -6,6 +6,7 @@ import {
   DateValue,
 } from "react-aria-components";
 
+import type { CalendarSelectionMode } from "react-aria-components/Calendar";
 import { useDateFormatter } from "react-aria";
 
 import "./Calendar.css";
@@ -15,12 +16,12 @@ import Heading from "../Heading";
 import SvgChevronLeftIcon from "../Icons/SvgChevronLeftIcon";
 import SvgChevronRightIcon from "../Icons/SvgChevronRightIcon";
 
-export type { DateValue };
+export type { DateValue, CalendarSelectionMode };
 
-export default function Calendar({
+export default function Calendar<M extends CalendarSelectionMode = "single">({
   visibleDuration = { months: 1 },
   ...props
-}: CalendarProps<DateValue>) {
+}: CalendarProps<DateValue, M>) {
   const monthFormatter = useDateFormatter({
     month: "long",
     year: "numeric",
