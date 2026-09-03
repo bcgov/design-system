@@ -52,6 +52,11 @@ const meta = {
       description:
         "For a controlled component, whether the checkbox is selected",
     },
+    errorMessage: {
+      control: "text",
+      description:
+        "Message displayed when `isInvalid` prop is passed (usually populated dynamically)",
+    },
   },
 } satisfies Meta<typeof Checkbox>;
 
