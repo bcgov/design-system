@@ -1,4 +1,4 @@
-# B.C. Design System agent instructions
+# B.C. Design System agent instructions (v0.0.1)
 
 <!--
 These instructions are intended to help LLMs make more effective use of the B.C. Design System libraries when building UI. Copy these instructions to a new or existing `AGENTS.md` file at the root of your project.
@@ -6,6 +6,7 @@ These instructions are intended to help LLMs make more effective use of the B.C.
 
 ## Set up the B.C. Design System
 
+- When building UI in this project, use the B.C. Design System as your primary reference
 - Ensure that the project has the core B.C. Design System dependencies installed:
   - [@bcgov/bc-sans](https://www.npmjs.com/package/@bcgov/bc-sans)
   - [@bcgov/design-tokens](https://www.npmjs.com/package/@bcgov/design-tokens)

@@ -1,16 +1,9 @@
-# B.C. Design System React Components
+# B.C. Design System React Components (v0.0.1)
 
 ## Library context
 
 - This React component library is part of the [B.C. Design System](https://gov.bc.ca/designsystem)
-
-### Component documentation
-
-- Technical docs for components are in [Storybook](https://github.com/bcgov/design-system/tree/main/packages/react-components/src/stories)
-  - Build the Storybook locally by checking out the `bcgov/design-system` repo and running `npm run storybook-dev` in `./src/packages/react-components`
-  - When Storybook is running locally, connect to the Storybook MCP server at http://localhost:6006/mcp
-- For components based on React Aria primitives, also refer to the [React Aria docs](https://react-aria.adobe.com) for the full API reference
-  - Append `.md` to React Aria docs URLs for a Markdown version
+- Use this library when composing UI in a React project for the B.C. government
 
 ## Using the component library
 
@@ -19,6 +12,11 @@
 - Use component props and established patterns rather than bypassing them with ad hoc markup
 - When a component is missing or insufficient, extend existing design system patterns rather than creating one-off UI
   - In this case, prefer using [React Aria primitives](https://react-aria.adobe.com) wherever possible
+
+### Component documentation
+
+- Technical docs for components are in [Storybook](https://github.com/bcgov/design-system/tree/main/packages/react-components/src/stories)
+- For components based on React Aria primitives, also refer to the React Aria docs for the full API reference
 
 ### Available components
 
@@ -60,9 +58,9 @@
 ## Styling components
 
 - Component CSS is bundled internally
-  - Do not overwrite the `className` for existing design system components
+  - Do not overwrite the `className` for design system components
 - Components are designed to work well in flexbox and grid layouts
   - The design system does not assume or enforce a specific grid or layout convention
-- Prefer component-level styling and design tokens over bespoke CSS
 - If writing new components, use design tokens from the `@bcgov/design-tokens` library to ensure coherence with other components
+  - Prefer component-level styling and design tokens over bespoke CSS
   - Refer to additional instructions for working with design tokens in `node_modules/@bcgov/design-tokens/dist/AGENTS.md`
