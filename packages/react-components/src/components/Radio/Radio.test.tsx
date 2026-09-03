@@ -29,4 +29,22 @@ describe("Radio", () => {
     const label = radio[0].parentElement?.parentElement;
     expect(label).toHaveTextContent(/option 1/i);
   });
+
+  it("renders a visible description and associates it as the accessible description", () => {
+    render(
+      <RadioGroup label="More options">
+        <Radio value="four" description="Extra context for option 4">
+          Option 4
+        </Radio>
+      </RadioGroup>
+    );
+
+    expect(screen.getByText("Extra context for option 4")).toBeVisible();
+    expect(
+      screen.getByRole("radio", {
+        name: /option 4/i,
+        description: "Extra context for option 4",
+      })
+    ).toBeInTheDocument();
+  });
 });
