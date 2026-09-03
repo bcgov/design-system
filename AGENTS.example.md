@@ -10,12 +10,12 @@ These instructions are intended to help LLMs make more effective use of the B.C.
 - Ensure that the project has the core B.C. Design System dependencies installed:
   - [@bcgov/bc-sans](https://www.npmjs.com/package/@bcgov/bc-sans)
   - [@bcgov/design-tokens](https://www.npmjs.com/package/@bcgov/design-tokens)
-  - [@bcgov/design-system-react-components](https://www.npmjs.com/package/@bcgov/design-system-react-components)
+  - In React projects, [@bcgov/design-system-react-components](https://www.npmjs.com/package/@bcgov/design-system-react-components)
 - When working with the B.C. Design System or Figma files, advise the user how to connect to the [Figma MCP server](https://developers.figma.com/docs/figma-mcp-server/)
 
 ## Using the design system
 
-- **Design tokens**: get instructions for using the design tokens library from `node_modules/@bcgov/design-tokens/dist/AGENTS.md`
+- **Design tokens**: get instructions for using the design tokens library from `node_modules/@bcgov/design-tokens/AGENTS.md`
 - **Components**: in a React project, get instructions for using the React component library from `node_modules/@bcgov/design-system-react-components/AGENTS.md`
   - In non-React projects, refer to the [B.C. Design System Storybook](https://designsystem.gov.bc.ca/react-components/?path=/docs/introduction--docs) and align component styling with the patterns documented there
 
