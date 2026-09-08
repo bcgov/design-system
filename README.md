@@ -10,6 +10,12 @@ The B.C. Design System comprises 4 core elements:
 
 The new design system replaces [the legacy design system](/legacy), which has now been archived.
 
+## Using these libraries with LLMs
+
+Each library ships an `AGENTS.md` file to help AI agents make effective use of the B.C. Design System.
+
+Add the B.C. Design System boilerplate from [AGENTS.example.md](https://github.com/bcgov/design-system/blob/main/AGENTS.example.md) to an `AGENTS.md` file at the root of your project. This directs agents to load the package-specific instructions for each library.
+
 ## Design tokens
 
 The [@bcgov/design-tokens package](https://github.com/bcgov/design-system/tree/main/packages/design-tokens) provides a method to quickly and consistently implement the province's look and feel for digital services. They offer a set of standardized options to help developers style user interfaces in a coherent and future-proof way.
@@ -42,12 +48,6 @@ Additional information and documentation:
 - [Storybook UI workshop](https://designsystem.gov.bc.ca/react-components/)
 - [Figma library](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
 - [Component docs](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43)
-
-### Using these libraries with LLMs
-
-Each library ships an `AGENTS.md` file to help AI agents make effective use of the B.C. Design System.
-
-Add the B.C. Design System boilerplate from [AGENTS.example.md](https://github.com/bcgov/design-system/blob/main/AGENTS.example.md) to an `AGENTS.md` file at the root of your project. This directs agents to load the package-specific instructions for each library.
 
 ## Contact
 
