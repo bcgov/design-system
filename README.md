@@ -43,6 +43,12 @@ Additional information and documentation:
 - [Figma library](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
 - [Component docs](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43)
 
+### Using these libraries with LLMs
+
+Each library ships an `AGENTS.md` file to help AI agents make effective use of the B.C. Design System.
+
+Add the B.C. Design System boilerplate from [AGENTS.example.md](https://github.com/bcgov/design-system/blob/main/AGENTS.example.md) to an `AGENTS.md` file at the root of your project. This directs agents to load the package-specific instructions for each library.
+
 ## Contact
 
 The B.C. Design System is maintained by the Everyday Life Events Common Capabilities & AI Platforms branch at Connected Services BC, part of the Ministry of Citizens' Services. To get in touch:

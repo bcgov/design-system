@@ -17,6 +17,14 @@ If you have questions, you can:
 
 `npm install @bcgov/design-system-react-components`
 
+### Using this library with LLMs
+
+Instructions for AI agents are shipped with this library (`/node_modules/@bcgov/design-system-react-components/AGENTS.md`).
+
+Add the B.C. Design System boilerplate from [AGENTS.example.md](https://github.com/bcgov/design-system/blob/main/AGENTS.example.md) to an `AGENTS.md` file at the root of your project. This directs agents to load the library-specific instructions.
+
+Run `/context` to confirm that your agent has loaded the instructions into its context window.
+
 ### BC Sans font dependency
 
 This package installs [@bcgov/bc-sans](https://www.npmjs.com/package/@bcgov/bc-sans) as a peer dependency. You must import the font-face declarations from @bcgov/bc-sans and ensure the font is reachable for your end user. The React components require that the `BC Sans` font-face is available to display correctly. The components do not ship their own copies of the font to minimize your bundle size.
