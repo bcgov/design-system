@@ -1,8 +1,8 @@
 # B.C. Design System agent instructions (v0.0.1)
 
-<!--
-These instructions are intended to help LLMs make more effective use of the B.C. Design System libraries when building UI. Copy these instructions to a new or existing `AGENTS.md` file at the root of your project.
--->
+## What this file is for
+
+These instructions are intended to help LLMs make more effective use of the B.C. Design System libraries when building UI. Copy the instructions below to a new or existing `AGENTS.md` file at the root of your project.
 
 ## Set up the B.C. Design System
 
