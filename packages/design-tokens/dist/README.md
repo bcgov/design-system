@@ -12,6 +12,14 @@ To use, install this package (`npm i @bcgov/design-tokens`) and import the desig
 
 This package includes tokens in JavaScript (ECMAScript Module and CommonJS), CSS and SCSS formats.
 
+### Using this library with LLMs
+
+Instructions for AI agents are shipped with this library (`/node_modules/@bcgov/design-tokens/AGENTS.md`).
+
+Add the B.C. Design System boilerplate from [AGENTS.example.md](https://github.com/bcgov/design-system/blob/main/AGENTS.example.md) to an `AGENTS.md` file at the root of your project. This directs agents to load the library-specific instructions.
+
+Run `/context` to confirm that your agent has loaded the instructions into its context window.
+
 ### JavaScript (ECMAScript Module)
 
 > **Try this first!** Using JavaScript variables can give you a better developer experience with autocomplete.
