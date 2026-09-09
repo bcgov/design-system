@@ -71,7 +71,7 @@
     "@storybook/mcp": "0.8.0",
     "@storybook/react-vite": "10.5.10",
     "@testing-library/jest-dom": "6.9.1",
-    "@testing-library/react": "16.3.2",
+    "@testing-library/react": "16.3.3",
     "@types/node": "25.9.5",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
