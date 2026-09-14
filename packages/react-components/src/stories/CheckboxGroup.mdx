@@ -101,6 +101,10 @@ Each component has its own set of supported props.
 
 Each checkbox should also have a unique identifier, set using the `value` prop. This is used for data validation and submission. If two checkboxes have the same `value`, selecting one will set both to `isSelected`.
 
+Use `description` to provide additional text below the checkbox label:
+
+<Canvas of={CheckboxStories.CheckboxWithDescription} />
+
 Use `defaultSelected` to make a checkbox selected by default:
 
 <Canvas of={CheckboxStories.DefaultSelectedCheckbox} />
@@ -124,6 +128,12 @@ A checkbox can be put in [an 'indeterminate' (mixed/uncertain) state](https://re
 <Canvas of={CheckboxStories.IndeterminateCheckbox} />
 
 `isIndeterminate` overrides the checkbox's appearance, until it is set to `false` (for example, conditionally based on other selections.)
+
+When a checkbox is marked as invalid via `isInvalid`, it displays an additional message:
+
+<Canvas of={CheckboxStories.InvalidCheckbox} />
+
+Checkbox uses the FieldError subcomponent to render error messages. You can pass custom or dynamically-generated content to the `errorMessage` slot.
 
 ## CheckboxGroup
 

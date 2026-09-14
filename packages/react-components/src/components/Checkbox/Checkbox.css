@@ -1,13 +1,19 @@
 .bcds-react-aria-Checkbox {
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-xsmall);
+}
+
+.bcds-react-aria-Checkbox--Button {
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
+  cursor: pointer;
 }
 
 /* Checkbox */
-.bcds-react-aria-Checkbox > .checkbox {
+.bcds-react-aria-Checkbox--Indicator {
   align-self: first baseline;
   display: flex;
   margin-top: var(--layout-margin-hair);
@@ -21,98 +27,151 @@
   border-width: var(--layout-border-width-small);
   border-radius: var(--layout-border-radius-small);
 }
-.bcds-react-aria-Checkbox > .checkbox > svg {
+.bcds-react-aria-Checkbox--Indicator > svg {
+  padding: var(--layout-padding-hair);
   align-self: center;
 }
 
 /* Label */
-.bcds-react-aria-Checkbox > .label {
+.bcds-react-aria-Checkbox--Label {
   font: var(--typography-regular-small-body);
   color: var(--typography-color-secondary);
 }
 
+/* Description */
+.bcds-react-aria-Checkbox--Description {
+  font: var(--typography-regular-label);
+  color: var(--typography-color-secondary);
+  /* Offset to align with the label text */
+  margin-left: calc(
+    var(--icons-size-small) + (var(--layout-border-width-small) * 2) + 10px
+  );
+}
+
+/* Error */
+.bcds-react-aria-Checkbox--Error {
+  display: flex;
+  align-items: center;
+  gap: var(--layout-margin-small);
+  font: var(--typography-regular-label);
+  color: var(--typography-color-danger);
+}
+
 /* Focus */
-.bcds-react-aria-Checkbox[data-focus-visible] > .checkbox {
+.bcds-react-aria-Checkbox--Button[data-focus-visible]
+  > .bcds-react-aria-Checkbox--Indicator {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
 }
 
 /* Hover */
-.bcds-react-aria-Checkbox[data-hovered] > .checkbox {
+.bcds-react-aria-Checkbox--Button[data-hovered]
+  > .bcds-react-aria-Checkbox--Indicator {
   border-color: var(--surface-color-border-dark);
-}
-.bcds-react-aria-Checkbox[data-selected][data-hovered] > .checkbox {
-  background-color: var(--surface-color-primary-hover);
-  border-color: var(--surface-color-primary-hover);
 }
 
 /* Pressed */
-.bcds-react-aria-Checkbox[data-pressed] > .checkbox {
+.bcds-react-aria-Checkbox--Button[data-pressed]
+  > .bcds-react-aria-Checkbox--Indicator {
   background-color: var(--surface-color-primary-default);
 }
 
 /* Selected */
-.bcds-react-aria-Checkbox[data-selected] > .checkbox {
+.bcds-react-aria-Checkbox--Button[data-selected]
+  > .bcds-react-aria-Checkbox--Indicator {
   background-color: var(--surface-color-primary-default);
   border-color: var(--surface-color-primary-default);
-}
-.bcds-react-aria-Checkbox[data-selected] > .checkbox > svg {
-  color: var(--icons-color-primary-invert);
+  > svg {
+    color: var(--icons-color-primary-invert);
+  }
 }
 
 /* Disabled */
 .bcds-react-aria-Checkbox[data-disabled] {
-  cursor: not-allowed;
-}
-.bcds-react-aria-Checkbox[data-disabled] > .checkbox {
-  border-color: var(--surface-color-border-medium);
-  background-color: var(--surface-color-primary-disabled);
-}
-.bcds-react-aria-Checkbox[data-disabled] > .label {
-  color: var(--typography-color-disabled);
-}
-.bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox {
-  border-color: var(--surface-color-primary-disabled);
-  background-color: var(--surface-color-primary-disabled);
-}
-.bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox > svg {
-  color: var(--icons-color-disabled);
+  .bcds-react-aria-Checkbox--Button {
+    cursor: not-allowed;
+  }
+  .bcds-react-aria-Checkbox--Indicator {
+    border-color: var(--surface-color-border-medium);
+    background-color: var(--surface-color-primary-disabled);
+  }
+  .bcds-react-aria-Checkbox--Label {
+    color: var(--typography-color-disabled);
+  }
 }
 
 /* Indeterminate */
-.bcds-react-aria-Checkbox[data-indeterminate] > .checkbox {
-  background-color: var(--surface-color-primary-default);
-  border-color: var(--surface-color-primary-default);
-}
-.bcds-react-aria-Checkbox[data-indeterminate][data-disabled] > .checkbox {
-  background-color: var(--surface-color-primary-disabled);
-  border-color: var(--surface-color-primary-disabled);
-}
-.bcds-react-aria-Checkbox[data-indeterminate][data-invalid] > .checkbox {
-  background-color: var(--surface-color-primary-danger-button-default);
-}
-.bcds-react-aria-Checkbox[data-indeterminate] > .checkbox > svg {
-  color: var(--icons-color-primary-invert);
-  align-self: center;
-  vertical-align: middle;
-}
-.bcds-react-aria-Checkbox[data-indeterminate][data-disabled] > .checkbox > svg {
-  color: var(--icons-color-disabled);
+.bcds-react-aria-Checkbox[data-indeterminate] {
+  .bcds-react-aria-Checkbox--Indicator {
+    background-color: var(--surface-color-primary-default);
+    border-color: var(--surface-color-primary-default);
+    > svg {
+      color: var(--icons-color-primary-invert);
+      align-self: center;
+      vertical-align: middle;
+    }
+  }
 }
 
 /* Read-only */
-.bcds-react-aria-Checkbox[data-readonly] {
+.bcds-react-aria-Checkbox--Button[data-readonly] {
   cursor: not-allowed;
 }
 
 /* Invalid */
-.bcds-react-aria-Checkbox[data-invalid] > .checkbox {
-  border-color: var(--support-border-color-danger);
+.bcds-react-aria-Checkbox[data-invalid] {
+  .bcds-react-aria-Checkbox--Indicator {
+    border-color: var(--support-border-color-danger);
+    > svg {
+      color: var(--icons-color-primary-invert);
+    }
+  }
 }
-.bcds-react-aria-Checkbox[data-invalid] > .checkbox > svg {
-  color: var(--icons-color-primary-invert);
+
+/* Compound states */
+
+/* Selected + Hovered */
+.bcds-react-aria-Checkbox--Button[data-selected][data-hovered]
+  > .bcds-react-aria-Checkbox--Indicator {
+  background-color: var(--surface-color-primary-hover);
+  border-color: var(--surface-color-primary-hover);
 }
-.bcds-react-aria-Checkbox[data-selected][data-invalid] > .checkbox {
+
+/* Disabled + Selected */
+.bcds-react-aria-Checkbox[data-disabled][data-selected] {
+  .bcds-react-aria-Checkbox--Button {
+    cursor: not-allowed;
+  }
+  .bcds-react-aria-Checkbox--Indicator {
+    border-color: var(--surface-color-primary-disabled);
+    background-color: var(--surface-color-primary-disabled);
+    > svg {
+      color: var(--icons-color-disabled);
+    }
+  }
+}
+
+/* Indeterminate + Disabled */
+.bcds-react-aria-Checkbox[data-indeterminate][data-disabled] {
+  .bcds-react-aria-Checkbox--Indicator {
+    background-color: var(--surface-color-primary-disabled);
+    border-color: var(--surface-color-primary-disabled);
+    > svg {
+      color: var(--icons-color-disabled);
+    }
+  }
+}
+
+/* Indeterminate + Invalid */
+.bcds-react-aria-Checkbox--Button[data-indeterminate][data-invalid]
+  > .bcds-react-aria-Checkbox--Indicator {
   background-color: var(--surface-color-primary-danger-button-default);
+}
+
+/* Invalid + Selected */
+.bcds-react-aria-Checkbox[data-selected][data-invalid] {
+  .bcds-react-aria-Checkbox--Indicator {
+    background-color: var(--surface-color-primary-danger-button-default);
+  }
 }
