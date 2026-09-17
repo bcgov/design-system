@@ -132,6 +132,18 @@
   > .bcds-footer--container
   > .bcds-footer--container-content
   > .bcds-footer--logo-links
+  > .bcds-footer--links
+  > ul
+  > li
+  > a {
+  color: var(--typography-color-primary);
+  text-decoration: none;
+}
+
+.bcds-footer
+  > .bcds-footer--container
+  > .bcds-footer--container-content
+  > .bcds-footer--logo-links
   > .bcds-footer--logo
   > p
   > a:hover {
@@ -206,18 +218,6 @@
   > ul
   > li {
   font: var(--typography-regular-small-body);
-}
-
-.bcds-footer
-  > .bcds-footer--container
-  > .bcds-footer--container-content
-  > .bcds-footer--logo-links
-  > .bcds-footer--links
-  > ul
-  > li
-  > a {
-  color: var(--typography-color-primary);
-  text-decoration: none;
 }
 
 .bcds-footer

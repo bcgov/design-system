@@ -72,13 +72,8 @@
   outline: none;
 }
 
-.bcds-react-aria-TextField--container:has(
-  > .bcds-react-aria-TextField--Input[data-focused]
-),
-.bcds-react-aria-TextField--container:has(
-  > .bcds-react-aria-TextField--Input[data-focused][data-hovered]
-) {
-  border-color: var(--surface-color-border-active);
+.bcds-react-aria-TextField--container:hover {
+  border-color: var(--surface-color-border-dark);
 }
 
 .bcds-react-aria-TextField--container:has(
@@ -90,10 +85,6 @@
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
-}
-
-.bcds-react-aria-TextField--container:hover {
-  border-color: var(--surface-color-border-dark);
 }
 
 /* Disabled and invalid states */
@@ -124,6 +115,15 @@
   > .bcds-react-aria-TextField--container
   > .bcds-react-aria-TextField--Input {
   background: var(--surface-color-forms-disabled);
+}
+
+.bcds-react-aria-TextField--container:has(
+  > .bcds-react-aria-TextField--Input[data-focused]
+),
+.bcds-react-aria-TextField--container:has(
+  > .bcds-react-aria-TextField--Input[data-focused][data-hovered]
+) {
+  border-color: var(--surface-color-border-active);
 }
 
 /* Styles for the error message slot */

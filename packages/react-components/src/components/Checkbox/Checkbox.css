@@ -42,10 +42,6 @@
 .bcds-react-aria-Checkbox[data-hovered] > .checkbox {
   border-color: var(--surface-color-border-dark);
 }
-.bcds-react-aria-Checkbox[data-selected][data-hovered] > .checkbox {
-  background-color: var(--surface-color-primary-hover);
-  border-color: var(--surface-color-primary-hover);
-}
 
 /* Pressed */
 .bcds-react-aria-Checkbox[data-pressed] > .checkbox {
@@ -72,33 +68,16 @@
 .bcds-react-aria-Checkbox[data-disabled] > .label {
   color: var(--typography-color-disabled);
 }
-.bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox {
-  border-color: var(--surface-color-primary-disabled);
-  background-color: var(--surface-color-primary-disabled);
-}
-.bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox > svg {
-  color: var(--icons-color-disabled);
-}
 
 /* Indeterminate */
 .bcds-react-aria-Checkbox[data-indeterminate] > .checkbox {
   background-color: var(--surface-color-primary-default);
   border-color: var(--surface-color-primary-default);
 }
-.bcds-react-aria-Checkbox[data-indeterminate][data-disabled] > .checkbox {
-  background-color: var(--surface-color-primary-disabled);
-  border-color: var(--surface-color-primary-disabled);
-}
-.bcds-react-aria-Checkbox[data-indeterminate][data-invalid] > .checkbox {
-  background-color: var(--surface-color-primary-danger-button-default);
-}
 .bcds-react-aria-Checkbox[data-indeterminate] > .checkbox > svg {
   color: var(--icons-color-primary-invert);
   align-self: center;
   vertical-align: middle;
-}
-.bcds-react-aria-Checkbox[data-indeterminate][data-disabled] > .checkbox > svg {
-  color: var(--icons-color-disabled);
 }
 
 /* Read-only */
@@ -113,6 +92,35 @@
 .bcds-react-aria-Checkbox[data-invalid] > .checkbox > svg {
   color: var(--icons-color-primary-invert);
 }
+
+/* Selected and hovered */
+.bcds-react-aria-Checkbox[data-selected][data-hovered] > .checkbox {
+  background-color: var(--surface-color-primary-hover);
+  border-color: var(--surface-color-primary-hover);
+}
+
+/* Selected and disabled */
+.bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox {
+  border-color: var(--surface-color-primary-disabled);
+  background-color: var(--surface-color-primary-disabled);
+}
+.bcds-react-aria-Checkbox[data-selected][data-disabled] > .checkbox > svg {
+  color: var(--icons-color-disabled);
+}
+
+/* Indeterminate multi-state */
+.bcds-react-aria-Checkbox[data-indeterminate][data-disabled] > .checkbox {
+  background-color: var(--surface-color-primary-disabled);
+  border-color: var(--surface-color-primary-disabled);
+}
+.bcds-react-aria-Checkbox[data-indeterminate][data-disabled] > .checkbox > svg {
+  color: var(--icons-color-disabled);
+}
+.bcds-react-aria-Checkbox[data-indeterminate][data-invalid] > .checkbox {
+  background-color: var(--surface-color-primary-danger-button-default);
+}
+
+/* Selected and invalid */
 .bcds-react-aria-Checkbox[data-selected][data-invalid] > .checkbox {
   background-color: var(--surface-color-primary-danger-button-default);
 }
