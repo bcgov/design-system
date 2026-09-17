@@ -70,15 +70,6 @@
 }
 
 .bcds-react-aria-TextArea--Container:has(
-  > .bcds-react-aria-TextArea--Input[data-focused]
-),
-.bcds-react-aria-TextArea--Container:has(
-  > .bcds-react-aria-TextArea--Input[data-focused][data-hovered]
-) {
-  border-color: var(--surface-color-border-active);
-}
-
-.bcds-react-aria-TextArea--Container:has(
   > .bcds-react-aria-TextArea--Input[data-focus-visible]
 ) {
   border-radius: var(--layout-border-radius-large);
@@ -113,6 +104,15 @@
 .bcds-react-aria-TextArea[data-readonly] > .bcds-react-aria-TextArea--Container,
 .bcds-react-aria-TextArea[data-readonly] .bcds-react-aria-TextArea--Input {
   background: var(--surface-color-forms-disabled);
+}
+
+.bcds-react-aria-TextArea--Container:has(
+  > .bcds-react-aria-TextArea--Input[data-focused]
+),
+.bcds-react-aria-TextArea--Container:has(
+  > .bcds-react-aria-TextArea--Input[data-focused][data-hovered]
+) {
+  border-color: var(--surface-color-border-active);
 }
 
 /* Styles for the error message slot */
