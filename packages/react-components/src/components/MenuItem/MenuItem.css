@@ -65,7 +65,6 @@ a.bcds-react-aria-MenuItem[data-disabled]
   color: var(--typography-color-disabled);
 }
 
-
 /* Icon displayed when an item has a submenu */
 .bcds-react-aria-MenuItem > svg {
   width: var(--icons-size-xsmall);
