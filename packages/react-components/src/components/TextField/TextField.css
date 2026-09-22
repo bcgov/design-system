@@ -72,13 +72,8 @@
   outline: none;
 }
 
-.bcds-react-aria-TextField--container:has(
-  > .bcds-react-aria-TextField--Input[data-focused]
-),
-.bcds-react-aria-TextField--container:has(
-  > .bcds-react-aria-TextField--Input[data-focused][data-hovered]
-) {
-  border-color: var(--surface-color-border-active);
+.bcds-react-aria-TextField--container:hover {
+  border-color: var(--surface-color-border-dark);
 }
 
 .bcds-react-aria-TextField--container:has(
@@ -92,10 +87,6 @@
   outline-offset: var(--layout-margin-hair);
 }
 
-.bcds-react-aria-TextField--container:hover {
-  border-color: var(--surface-color-border-dark);
-}
-
 /* Disabled and invalid states */
 
 .bcds-react-aria-TextField[data-disabled]
@@ -104,6 +95,12 @@
   background: var(--surface-color-forms-disabled);
   color: var(--typography-color-placeholder);
   cursor: not-allowed;
+}
+
+.bcds-react-aria-TextField--container:has(
+  > .bcds-react-aria-TextField--Input[data-focused]
+) {
+  border-color: var(--surface-color-border-active);
 }
 
 .bcds-react-aria-TextField[data-invalid]
@@ -124,6 +121,14 @@
   > .bcds-react-aria-TextField--container
   > .bcds-react-aria-TextField--Input {
   background: var(--surface-color-forms-disabled);
+}
+
+/* Invalid wins over focus: red border stays even while focused */
+.bcds-react-aria-TextField[data-invalid]
+  > .bcds-react-aria-TextField--container:has(
+    > .bcds-react-aria-TextField--Input[data-focused]
+  ) {
+  border-color: var(--support-border-color-danger);
 }
 
 /* Styles for the error message slot */
