@@ -34,6 +34,9 @@ updates:
       typescript-eslint:
         applies-to: version-updates
         patterns: ["typescript-eslint", "@typescript-eslint/*"]
+      types-react:
+        applies-to: version-updates
+        patterns: ["@types/react", "@types/react-dom"]
 
   # Dependency updates for GitHub Actions
   - package-ecosystem: "github-actions"
