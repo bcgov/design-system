@@ -65,12 +65,13 @@
   outline: none;
 }
 
-.bcds-react-aria-TextArea[data-hovered] > .bcds-react-aria-TextArea--Container {
+.bcds-react-aria-TextArea--Container:hover {
   border-color: var(--surface-color-border-dark);
 }
 
-.bcds-react-aria-TextArea[data-focus-visible]
-  > .bcds-react-aria-TextArea--Container {
+.bcds-react-aria-TextArea--Container:has(
+  > .bcds-react-aria-TextArea--Input[data-focus-visible]
+) {
   border-radius: var(--layout-border-radius-large);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-active);
@@ -87,7 +88,9 @@
   cursor: not-allowed;
 }
 
-.bcds-react-aria-TextArea[data-focused] > .bcds-react-aria-TextArea--Container {
+.bcds-react-aria-TextArea--Container:has(
+  > .bcds-react-aria-TextArea--Input[data-focused]
+) {
   border-color: var(--surface-color-border-active);
 }
 
@@ -103,8 +106,11 @@
   background: var(--surface-color-forms-disabled);
 }
 
-.bcds-react-aria-TextArea[data-invalid][data-focused]
-  > .bcds-react-aria-TextArea--Container {
+/* Invalid wins over focus: red border stays even while focused */
+.bcds-react-aria-TextArea[data-invalid]
+  > .bcds-react-aria-TextArea--Container:has(
+    > .bcds-react-aria-TextArea--Input[data-focused]
+  ) {
   border-color: var(--support-border-color-danger);
 }
 
