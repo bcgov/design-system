@@ -65,8 +65,7 @@
   outline: none;
 }
 
-.bcds-react-aria-TextArea[data-hovered]
-  > .bcds-react-aria-TextArea--Container {
+.bcds-react-aria-TextArea[data-hovered] > .bcds-react-aria-TextArea--Container {
   border-color: var(--surface-color-border-dark);
 }
 
@@ -88,8 +87,7 @@
   cursor: not-allowed;
 }
 
-.bcds-react-aria-TextArea[data-focused]
-  > .bcds-react-aria-TextArea--Container {
+.bcds-react-aria-TextArea[data-focused] > .bcds-react-aria-TextArea--Container {
   border-color: var(--surface-color-border-active);
 }
 
