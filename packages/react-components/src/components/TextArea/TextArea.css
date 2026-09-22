@@ -59,10 +59,6 @@
   flex-grow: 1;
 }
 
-.bcds-rect-aria-TextArea--Input::placeholder {
-  color: var(--typography-color-placeholder);
-}
-
 /* Hover and focus states */
 .bcds-react-aria-TextArea--Container
   > .bcds-react-aria-TextArea--Input[data-focused] {
