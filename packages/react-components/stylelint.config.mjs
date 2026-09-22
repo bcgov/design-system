@@ -13,15 +13,6 @@ export default {
      * We prefer to allow comment placement freedom.
      */
     "comment-empty-line-before": null,
-
-    /**
-     * TODO:
-     *
-     * We have too many violations of this to turn it on initially, but it would
-     * be a good idea to refactor our existing code and use it.
-     *
-     * See: https://stylelint.io/user-guide/rules/no-descending-specificity
-     */
     "no-descending-specificity": true,
     "no-duplicate-at-import-rules": true,
     "property-no-unknown": true,

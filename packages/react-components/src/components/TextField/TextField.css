@@ -76,9 +76,8 @@
   border-color: var(--surface-color-border-dark);
 }
 
-.bcds-react-aria-TextField--container:has(
-  > .bcds-react-aria-TextField--Input[data-focus-visible]
-) {
+.bcds-react-aria-TextField[data-focus-visible]
+  > .bcds-react-aria-TextField--container {
   border-radius: var(--layout-border-radius-large);
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-active);
@@ -95,6 +94,11 @@
   background: var(--surface-color-forms-disabled);
   color: var(--typography-color-placeholder);
   cursor: not-allowed;
+}
+
+.bcds-react-aria-TextField[data-focused]
+  > .bcds-react-aria-TextField--container {
+  border-color: var(--surface-color-border-active);
 }
 
 .bcds-react-aria-TextField[data-invalid]
@@ -117,13 +121,9 @@
   background: var(--surface-color-forms-disabled);
 }
 
-.bcds-react-aria-TextField--container:has(
-  > .bcds-react-aria-TextField--Input[data-focused]
-),
-.bcds-react-aria-TextField--container:has(
-  > .bcds-react-aria-TextField--Input[data-focused][data-hovered]
-) {
-  border-color: var(--surface-color-border-active);
+.bcds-react-aria-TextField[data-invalid][data-focused]
+  > .bcds-react-aria-TextField--container {
+  border-color: var(--support-border-color-danger);
 }
 
 /* Styles for the error message slot */

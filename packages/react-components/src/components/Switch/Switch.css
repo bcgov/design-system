@@ -91,7 +91,6 @@
     var(--surface-color-primary-hover);
 }
 
-/* Focused */
 /* Disabled */
 .bcds-react-aria-Switch[data-disabled] {
   color: var(--typography-color-disabled);
