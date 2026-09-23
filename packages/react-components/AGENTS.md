@@ -1,4 +1,4 @@
-# B.C. Design System React Components (v0.0.1)
+# B.C. Design System React Components
 
 ## Library context
 
@@ -57,6 +57,12 @@
 | Heading                                                                     | Renders a styled semantic heading.                            | https://github.com/bcgov/design-system/blob/main/packages/react-components/src/stories/Heading.mdx           | https://react-spectrum.adobe.com/v3/Heading.html  |
 | Link                                                                        | Renders an accessible, configurable hyperlink.                | https://github.com/bcgov/design-system/blob/main/packages/react-components/src/stories/Link.mdx              | https://react-spectrum.adobe.com/v3/Link.html     |
 | Text                                                                        | Renders styled text content.                                  | https://github.com/bcgov/design-system/blob/main/packages/react-components/src/stories/Text.mdx              | https://react-spectrum.adobe.com/v3/Text.html     |
+
+### Forms
+
+- Use the Form component as a wrapper for input components
+- Refer to the [React Aria forms docs](https://react-aria.adobe.com/forms.md) when implementing validation and submission in your application
+- Use components' built-in state, validation and error handling APIs instead of writing your own
 
 ## Styling components
 
