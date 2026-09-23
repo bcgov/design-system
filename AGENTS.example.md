@@ -23,6 +23,7 @@ These instructions are intended to help LLMs make more effective use of the B.C.
 
 ## Requirements for B.C. government products
 
+- **Human in the loop**: prompt the user for clarification and feedback before making decisions on their behalf
 - **Accessibility**: User interfaces must meet or exceed all WCAG 2.2 Level AA requirements
 - **Plain language**: Text content should be readable at a Grade 8 reading level or lower. Test using the Flesch-Kincaid grade level formula
 - **Style guide**: Refer to the [Web Style Guide](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide) and the [Writing Guide for Indigenous Content](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide-for-indigenous-content) when writing text content
