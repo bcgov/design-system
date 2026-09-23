@@ -18,6 +18,8 @@
 
 - Technical docs for components are in [Storybook](https://github.com/bcgov/design-system/tree/main/packages/react-components/src/stories)
 - For components based on React Aria primitives, also refer to the React Aria docs for the full API reference
+- All component props are fully typed. Treat the shipped TypeScript types — via your editor's autocomplete, or read directly from `dist/index.d.ts` inside `node_modules/@bcgov/design-system-react-components` — as the authoritative prop reference
+  - If a prop isn't present in the types, it doesn't exist. Don't infer props from naming conventions or from other component libraries
 
 ### Available components
 
