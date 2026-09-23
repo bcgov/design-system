@@ -65,6 +65,11 @@
 - Refer to the [React Aria forms docs](https://react-aria.adobe.com/forms.md) when implementing validation and submission in your application
 - Use components' built-in state, validation and error handling APIs instead of writing your own
 
+### Icons
+
+- The library includes React components for a small number of common icons
+- If you need additional icons, prefer using [Font Awesome](https://fontawesome.com) for coherence with the design system
+
 ## Styling components
 
 - Component CSS is bundled internally
