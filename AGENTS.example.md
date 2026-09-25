@@ -38,5 +38,5 @@ When generating or editing text for B.C. government user interfaces:
 - Make link text meaningful and descriptive of its destination or task. Avoid generic link text such as "click here."
 - Write error messages that identify the problem and tell the user how to fix it.
 - Make calls to action specific and task-oriented so users understand what will happen when they take an action.
-- Do not invent requirements, eligibility criteria, deadlines, legal information, contact information or other facts.
+- Do not invent, infer or assume missing facts, including requirements, eligibility criteria, required documents, fees, deadlines, processing times, legal information or contact information. If information needed to write accurate content has not been provided, identify what is missing and ask for clarification rather than filling the gap with plausible information.
 - Ask for human clarification when missing information or uncertainty could affect meaning, accuracy or a user's ability to complete their task.
