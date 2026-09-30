@@ -1,16 +1,34 @@
 .bcds-react-aria-Radio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-xsmall);
+}
+
+.bcds-react-aria-Radio--Button {
   cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--layout-margin-small);
-  font: var(--typography-regular-small-body);
-  color: var(--typography-color-secondary);
   forced-color-adjust: none;
 }
 
+/* Label */
+.bcds-react-aria-Radio--Label {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+}
+
+/* Description */
+.bcds-react-aria-Radio--Description {
+  font: var(--typography-regular-label);
+  color: var(--typography-color-secondary);
+  /* Offset to align with the label text */
+  margin-left: calc(var(--icons-size-xsmall) + var(--layout-margin-small));
+}
+
 /* Selector */
-.bcds-react-aria-Radio::before {
+.bcds-react-aria-Radio--Indicator {
   align-self: first baseline;
   margin-top: var(--layout-margin-xsmall);
   content: "";
@@ -25,58 +43,77 @@
   transition: all 200ms;
 }
 @media (prefers-reduced-motion) {
-  .bcds-react-aria-Radio::before {
+  .bcds-react-aria-Radio--Indicator {
     /* No animation on radio button circle if user has reduced motion set */
     transition: none;
   }
 }
 
 /* Hover */
-.bcds-react-aria-Radio[data-hovered]::before {
+.bcds-react-aria-Radio--Button[data-hovered]
+  > .bcds-react-aria-Radio--Indicator {
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-dark);
 }
 
 /* Pressed */
-.bcds-react-aria-Radio[data-pressed]::before {
+.bcds-react-aria-Radio--Button[data-pressed]
+  > .bcds-react-aria-Radio--Indicator {
   border: var(--layout-border-width-small) solid
     var(--surface-color-border-dark);
 }
 
 /* Selected */
-.bcds-react-aria-Radio[data-selected]::before {
+.bcds-react-aria-Radio--Button[data-selected]
+  > .bcds-react-aria-Radio--Indicator {
   border: 5px solid var(--surface-color-primary-default);
 }
 
 /* Focused */
-.bcds-react-aria-Radio[data-focus-visible]::before {
+.bcds-react-aria-Radio--Button[data-focus-visible]
+  > .bcds-react-aria-Radio--Indicator {
   outline: solid var(--layout-border-width-medium)
     var(--surface-color-border-active);
   outline-offset: var(--layout-margin-hair);
 }
 
 /* Invalid */
-.bcds-react-aria-Radio[data-invalid]::before {
+.bcds-react-aria-Radio[data-invalid] .bcds-react-aria-Radio--Indicator {
   border: var(--layout-border-width-small) solid
     var(--support-border-color-danger);
-}
-.bcds-react-aria-Radio[data-selected][data-invalid] {
-  color: var(--typography-color-danger);
-}
-.bcds-react-aria-Radio[data-selected][data-invalid]::before {
-  border: 5px solid var(--support-border-color-danger);
 }
 
 /* Disabled */
 .bcds-react-aria-Radio[data-disabled] {
-  color: var(--typography-color-disabled);
-  cursor: not-allowed;
-}
-.bcds-react-aria-Radio[data-selected][data-disabled]::before {
-  border: 5px solid var(--surface-color-border-default);
+  .bcds-react-aria-Radio--Button {
+    cursor: not-allowed;
+  }
+  .bcds-react-aria-Radio--Label {
+    color: var(--typography-color-disabled);
+  }
 }
 
 /* Read only */
 .bcds-react-aria-Radio[data-readonly] {
-  cursor: not-allowed;
+  .bcds-react-aria-Radio--Button {
+    cursor: not-allowed;
+  }
+}
+
+/* Compound states */
+
+/* Selected + Invalid */
+.bcds-react-aria-Radio[data-selected][data-invalid] {
+  .bcds-react-aria-Radio--Label {
+    color: var(--typography-color-danger);
+  }
+  .bcds-react-aria-Radio--Indicator {
+    border: 5px solid var(--support-border-color-danger);
+  }
+}
+
+/* Selected + Disabled */
+.bcds-react-aria-Radio[data-selected][data-disabled]
+  .bcds-react-aria-Radio--Indicator {
+  border: 5px solid var(--surface-color-border-default);
 }
