@@ -23,8 +23,8 @@ import {
 # Calendar
 
 <Subtitle>
-  A calendar displays a list of dates in a grid and enables the user to select a
-  single date.
+  A calendar displays a list of dates in a grid and enables the user to select
+  one or more dates.
 </Subtitle>
 
 <InlineAlert
@@ -102,6 +102,12 @@ The `pageBehavior` prop controls how pagination works. By default, it is set to 
 Set `pageBehavior` to `single` to paginate by one unit of `visibleDuration` (e.g. 1 month) instead:
 
 <Canvas of={CalendarStories.PageBehavior} />
+
+### Selection modes
+
+By default, a calendar accepts a single selection. Set `selectionMode` to `multiple` to allow the user to select multiple dates:
+
+<Canvas of={CalendarStories.MultipleSelection} />
 
 ### Constraining values
 
