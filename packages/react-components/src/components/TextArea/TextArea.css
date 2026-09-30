@@ -59,23 +59,14 @@
   flex-grow: 1;
 }
 
-.bcds-rect-aria-TextArea--Input::placeholder {
-  color: var(--typography-color-placeholder);
-}
-
 /* Hover and focus states */
 .bcds-react-aria-TextArea--Container
   > .bcds-react-aria-TextArea--Input[data-focused] {
   outline: none;
 }
 
-.bcds-react-aria-TextArea--Container:has(
-  > .bcds-react-aria-TextArea--Input[data-focused]
-),
-.bcds-react-aria-TextArea--Container:has(
-  > .bcds-react-aria-TextArea--Input[data-focused][data-hovered]
-) {
-  border-color: var(--surface-color-border-active);
+.bcds-react-aria-TextArea--Container:hover {
+  border-color: var(--surface-color-border-dark);
 }
 
 .bcds-react-aria-TextArea--Container:has(
@@ -89,18 +80,18 @@
   outline-offset: var(--layout-margin-hair);
 }
 
-.bcds-react-aria-TextArea--Container:has(
-  > .bcds-react-aria-TextArea--Input[data-hovered]
-) {
-  border-color: var(--surface-color-border-dark);
-}
-
 /* Disabled and invalid states */
 .bcds-react-aria-TextArea[data-disabled] > .bcds-react-aria-TextArea--Container,
 .bcds-react-aria-TextArea[data-disabled] .bcds-react-aria-TextArea--Input {
   background: var(--surface-color-forms-disabled);
   color: var(--typography-color-placeholder);
   cursor: not-allowed;
+}
+
+.bcds-react-aria-TextArea--Container:has(
+  > .bcds-react-aria-TextArea--Input[data-focused]
+) {
+  border-color: var(--surface-color-border-active);
 }
 
 .bcds-react-aria-TextArea[data-invalid] > .bcds-react-aria-TextArea--Container {
@@ -113,6 +104,14 @@
 .bcds-react-aria-TextArea[data-readonly] > .bcds-react-aria-TextArea--Container,
 .bcds-react-aria-TextArea[data-readonly] .bcds-react-aria-TextArea--Input {
   background: var(--surface-color-forms-disabled);
+}
+
+/* Invalid wins over focus: red border stays even while focused */
+.bcds-react-aria-TextArea[data-invalid]
+  > .bcds-react-aria-TextArea--Container:has(
+    > .bcds-react-aria-TextArea--Input[data-focused]
+  ) {
+  border-color: var(--support-border-color-danger);
 }
 
 /* Styles for the error message slot */

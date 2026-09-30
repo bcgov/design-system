@@ -61,12 +61,12 @@
   align-self: first baseline;
 }
 
-.bcds-Alert-Banner--closeIcon > .bcds-react-aria-Button[data-hovered] svg {
-  color: var(--icons-color-primary);
-}
-
 .bcds-Alert-Banner--closeIcon svg {
   color: var(--icons-color-primary-invert);
+}
+
+.bcds-Alert-Banner--closeIcon > .bcds-react-aria-Button[data-hovered] svg {
+  color: var(--icons-color-primary);
 }
 
 /* Variants */

@@ -9,6 +9,27 @@
   max-width: -webkit-fill-available;
 }
 
+.bcds-react-aria-Select--Button > .bcds-react-aria-SelectValue {
+  flex: 1 1 auto;
+  overflow: visible;
+  white-space: normal;
+  text-align: left;
+  min-width: 0;
+}
+.bcds-react-aria-Select--Button > svg {
+  flex: 0 0 auto;
+}
+
+.bcds-react-aria-Select--TagOverlay {
+  width: 100%;
+  min-width: 0;
+  pointer-events: none;
+}
+.bcds-react-aria-Select--TagOverlay .bcds-react-aria-Tag,
+.bcds-react-aria-Select--TagOverlay .bcds-react-aria-Tag [slot="remove"],
+.bcds-react-aria-Select--TagOverlay .bcds-react-aria-Tag button {
+  pointer-events: auto;
+}
 /* Scroll mode: single-select text truncation */
 .bcds-react-aria-Select.scroll .bcds-react-aria-SelectValue {
   overflow: hidden;
@@ -54,6 +75,39 @@
   white-space: nowrap;
 }
 
+/* Select input equivalent */
+.bcds-react-aria-Select--Button {
+  background-color: var(--surface-color-forms-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  box-sizing: border-box;
+  display: flex;
+  gap: var(--layout-margin-small);
+  align-items: center;
+  padding: var(--layout-padding-small);
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+.bcds-react-aria-Select--InputContainer > .bcds-react-aria-Select--Button {
+  grid-area: 1 / 1;
+  align-self: stretch;
+}
+/* ListBox option item */
+.bcds-react-aria-Select--ListBoxItem {
+  border-radius: var(--layout-border-radius-medium);
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--layout-margin-small);
+}
+.bcds-react-aria-Select--ListBoxItem[data-focused],
+.bcds-react-aria-Select--ListBoxItem[data-hovered] {
+  background-color: var(--surface-color-secondary-button-hover);
+  outline: none;
+}
 /* Sizing */
 .bcds-react-aria-Select.small .bcds-react-aria-Select--Button {
   min-height: 32px;
@@ -79,20 +133,6 @@
 }
 
 /* Select input equivalent */
-.bcds-react-aria-Select--Button {
-  background-color: var(--surface-color-forms-default);
-  border: var(--layout-border-width-small) solid
-    var(--surface-color-border-default);
-  border-radius: var(--layout-border-radius-medium);
-  box-sizing: border-box;
-  display: flex;
-  gap: var(--layout-margin-small);
-  align-items: center;
-  padding: var(--layout-padding-small);
-  width: 100%;
-  min-width: 0;
-  max-width: 100%;
-}
 .bcds-react-aria-Select--Button[data-hovered] {
   border-color: var(--surface-color-border-dark);
   cursor: pointer;
@@ -116,26 +156,12 @@
 .bcds-react-aria-Select--Button[data-pressed] {
   border-color: var(--surface-color-border-active);
 }
-.bcds-react-aria-Select--Button > .bcds-react-aria-SelectValue {
-  flex: 1 1 auto;
-  overflow: visible;
-  white-space: normal;
-  text-align: left;
-  min-width: 0;
-}
-.bcds-react-aria-Select--Button > svg {
-  flex: 0 0 auto;
-}
 
 /* Overlay for tags in multi-select mode */
 .bcds-react-aria-Select--InputContainer {
   display: grid;
   width: 100%;
   min-width: 0;
-}
-.bcds-react-aria-Select--InputContainer > .bcds-react-aria-Select--Button {
-  grid-area: 1 / 1;
-  align-self: stretch;
 }
 .bcds-react-aria-Select--TagOverlayContainer {
   grid-area: 1 / 1;
@@ -145,16 +171,6 @@
   padding: calc(var(--layout-padding-small) - 0.5px);
   padding-right: 2.5rem;
   pointer-events: none;
-}
-.bcds-react-aria-Select--TagOverlay {
-  width: 100%;
-  min-width: 0;
-  pointer-events: none;
-}
-.bcds-react-aria-Select--TagOverlay .bcds-react-aria-Tag,
-.bcds-react-aria-Select--TagOverlay .bcds-react-aria-Tag [slot="remove"],
-.bcds-react-aria-Select--TagOverlay .bcds-react-aria-Tag button {
-  pointer-events: auto;
 }
 
 /* Label above select input */
@@ -218,20 +234,6 @@
   padding: var(--layout-padding-hair) var(--layout-padding-small);
 }
 
-/* ListBox option item */
-.bcds-react-aria-Select--ListBoxItem {
-  border-radius: var(--layout-border-radius-medium);
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--layout-margin-small);
-}
-.bcds-react-aria-Select--ListBoxItem[data-focused],
-.bcds-react-aria-Select--ListBoxItem[data-hovered] {
-  background-color: var(--surface-color-secondary-button-hover);
-  outline: none;
-}
 .bcds-react-aria-Select--ListBoxItem-icon {
   display: flex;
   align-items: center;
