@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { useState } from "react";
 
 import { Checkbox } from "../components";
 import { CheckboxProps } from "../components/Checkbox";
@@ -17,6 +18,10 @@ const meta = {
     children: {
       control: { type: "object" },
       description: "Text label",
+    },
+    description: {
+      control: { type: "text" },
+      description: "Optional description text below label",
     },
     defaultSelected: {
       control: { type: "boolean" },
@@ -47,6 +52,11 @@ const meta = {
       description:
         "For a controlled component, whether the checkbox is selected",
     },
+    errorMessage: {
+      control: "text",
+      description:
+        "Message displayed when `isInvalid` prop is passed (usually populated dynamically)",
+    },
   },
 } satisfies Meta<typeof Checkbox>;
 
@@ -56,6 +66,13 @@ type Story = StoryObj<typeof meta>;
 export const CheckboxTemplate: Story = {
   args: { children: "This is a checkbox label" },
   render: ({ ...args }: CheckboxProps) => <Checkbox {...args} />,
+};
+
+export const CheckboxWithDescription: Story = {
+  args: {
+    children: "This is a checkbox label",
+    description: "This is a description for the checkbox",
+  },
 };
 
 export const DefaultSelectedCheckbox: Story = {
@@ -91,5 +108,25 @@ export const IndeterminateCheckbox: Story = {
   args: {
     children: "This checkbox is neither selected nor deselected",
     isIndeterminate: true,
+  },
+};
+
+export const InvalidCheckbox: Story = {
+  args: {
+    children: "This checkbox is invalid",
+    description: "You have to select this checkbox",
+    isInvalid: true,
+    errorMessage: "It displays an additional error message",
+  },
+  render: ({ ...args }: CheckboxProps) => {
+    const [isSelected, setIsSelected] = useState(false);
+    return (
+      <Checkbox
+        {...args}
+        isSelected={isSelected}
+        onChange={setIsSelected}
+        isInvalid={!isSelected}
+      />
+    );
   },
 };

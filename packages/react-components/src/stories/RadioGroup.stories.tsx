@@ -50,7 +50,7 @@ export const RadioGroupTemplate: Story = {
       <Radio value="1" key="1">
         Option 1
       </Radio>,
-      <Radio value="2" key="2">
+      <Radio value="2" key="2" description="This option also has a description">
         Option 2
       </Radio>,
       <Radio value="3" key="3">
