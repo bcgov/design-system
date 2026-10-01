@@ -10,10 +10,13 @@ This is a milestone release that adds system prompts and design guidance for LLM
 - Added system prompts in the form of AGENTS.md files*
 - Enable Storybook MCP server
 - Calendar: add support for multiple selections
-- Switch: adopt new React Aria API
-- Radio: adopt new React Aria API
-- Checkbox: adopt new React Aria API
+- Checkbox: added support for optional description and error message slots on individual checkboxes
+- Radio: added support for optional description and error message slots on individual radios
+- Switch: added support for optional description and error message slots
 
+### Removed
+- Checkbox, Radio and Switch no longer support the `onHoverStart`, `onHoverEnd` and `onHoverChange` props, due to a change in the underlying React Aria component APIs
+  
 This release uses:
 
 - `react-aria-components` v1.21.0
