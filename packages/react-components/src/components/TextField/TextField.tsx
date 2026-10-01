@@ -37,7 +37,6 @@ export default function TextField({
   validate,
   ...props
 }: TextFieldProps) {
-
   function validateWithMaxLength(text: string) {
     const userError = validate?.(text);
     if (userError) return userError;

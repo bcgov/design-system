@@ -12,7 +12,8 @@ describe("TextArea component", () => {
     render(
       <TextArea label="Your feedback" description="Tell us what you think" />
     );
-    const textarea: HTMLTextAreaElement = screen.getByLabelText(/your feedback/i);
+    const textarea: HTMLTextAreaElement =
+      screen.getByLabelText(/your feedback/i);
     expect(textarea).toBeInTheDocument();
     expect(textarea).toHaveAccessibleDescription("Tell us what you think");
   });
@@ -24,7 +25,8 @@ describe("TextArea component", () => {
 
   test("character counter renders when maxLength is set and updates as the user types", () => {
     render(<TextArea label="Your feedback" maxLength={500} />);
-    const textarea: HTMLTextAreaElement = screen.getByLabelText(/your feedback/i);
+    const textarea: HTMLTextAreaElement =
+      screen.getByLabelText(/your feedback/i);
     expect(screen.getByText("0/500")).toBeInTheDocument();
     fireEvent.change(textarea, { target: { value: "hello world" } });
     expect(screen.getByText("11/500")).toBeInTheDocument();
@@ -33,14 +35,16 @@ describe("TextArea component", () => {
   test("onChange fires as the user types", () => {
     const onChange = vi.fn();
     render(<TextArea label="Your feedback" onChange={onChange} />);
-    const textarea: HTMLTextAreaElement = screen.getByLabelText(/your feedback/i);
+    const textarea: HTMLTextAreaElement =
+      screen.getByLabelText(/your feedback/i);
     fireEvent.change(textarea, { target: { value: "hello" } });
     expect(onChange).toHaveBeenCalledWith("hello");
   });
 
   test("maxLength is a soft limit: input is not truncated when the limit is exceeded", () => {
     render(<TextArea label="Your feedback" maxLength={5} />);
-    const textarea: HTMLTextAreaElement = screen.getByLabelText(/your feedback/i);
+    const textarea: HTMLTextAreaElement =
+      screen.getByLabelText(/your feedback/i);
     fireEvent.change(textarea, { target: { value: "too long" } });
     expect(textarea.value).toBe("too long");
     // no native maxlength enforcement on the DOM element
@@ -49,7 +53,8 @@ describe("TextArea component", () => {
 
   test("exceeding maxLength invalidates the field and shows the error message on blur", async () => {
     render(<TextArea label="Your feedback" maxLength={5} />);
-    const textarea: HTMLTextAreaElement = screen.getByLabelText(/your feedback/i);
+    const textarea: HTMLTextAreaElement =
+      screen.getByLabelText(/your feedback/i);
     fireEvent.change(textarea, { target: { value: "too long" } });
     fireEvent.blur(textarea);
     expect(textarea).toHaveAttribute("aria-invalid", "true");
@@ -60,7 +65,8 @@ describe("TextArea component", () => {
 
   test("an initial value edited to exceed maxLength invalidates the field and shows the error message on blur", () => {
     render(<TextArea label="Your feedback" maxLength={5} value="ab" />);
-    const textarea: HTMLTextAreaElement = screen.getByLabelText(/your feedback/i);
+    const textarea: HTMLTextAreaElement =
+      screen.getByLabelText(/your feedback/i);
     fireEvent.change(textarea, { target: { value: "too long" } });
     fireEvent.blur(textarea);
     expect(
@@ -102,7 +108,8 @@ describe("TextArea component", () => {
 
   test("disabled textarea is not editable", () => {
     render(<TextArea label="Your feedback" isDisabled />);
-    const textarea: HTMLTextAreaElement = screen.getByLabelText(/your feedback/i);
+    const textarea: HTMLTextAreaElement =
+      screen.getByLabelText(/your feedback/i);
     expect(textarea).toBeDisabled();
     expect(textarea.closest(".bcds-react-aria-TextArea")).toHaveAttribute(
       "data-disabled"
@@ -111,7 +118,8 @@ describe("TextArea component", () => {
 
   test("readonly textarea is focusable but not editable", () => {
     render(<TextArea label="Your feedback" isReadOnly value="fixed" />);
-    const textarea: HTMLTextAreaElement = screen.getByLabelText(/your feedback/i);
+    const textarea: HTMLTextAreaElement =
+      screen.getByLabelText(/your feedback/i);
     expect(textarea).toHaveAttribute("readonly");
     expect(textarea.closest(".bcds-react-aria-TextArea")).toHaveAttribute(
       "data-readonly"
