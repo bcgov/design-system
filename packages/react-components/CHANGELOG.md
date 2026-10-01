@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.9.0
+
+This is a milestone release that adds system prompts and design guidance for LLMs, and updates existing components to use new React Aria API
+
+### Changed
+
+- Added content design guidance for LLMs*
+- Added system prompts in the form of AGENTS.md files*
+- Enable Storybook MCP server
+- Calendar: add support for multiple selections
+- Switch: adopt new React Aria API
+- Radio: adopt new React Aria API
+- Checkbox: adopt new React Aria API
+
+This release uses:
+
+- `react-aria-components` v1.21.0
+- `@bcgov/design-tokens` v5.5.5
+
 ## 0.8.1
 
 This is a patch release that fixes bugs in three components.
