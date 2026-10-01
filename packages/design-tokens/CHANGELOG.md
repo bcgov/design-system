@@ -9,6 +9,11 @@
 - Updated README with development principals to help clarify our approach to versioning and what you can expect as consumers of the design tokens library.
 - Updated README with guidance on how to use systems prompts like AGENTS.md files and how to configure Figma MCP server when working with Figma design files.
 
+  This release uses:
+
+- `@tokens-studio/sd-transforms` v2.0.3
+- `style-dictionary` v5.5.5
+
 ## 5.0.0
 
 This is a milestone release that cross-publishes the design tokens library to GitHub Packages registry as well as npm.
