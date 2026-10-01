@@ -71,6 +71,7 @@ export const TextAreaWithMaxLength: Story = {
     label: "Label",
     description: "This text area has a maximum length, and displays a counter.",
     maxLength: 500,
+    errorMessage: "You may not exceed 500 characters."
   },
 };
 
