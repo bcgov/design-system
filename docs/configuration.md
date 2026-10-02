@@ -66,7 +66,7 @@ These files will **not** be discovered and loaded into your agent's context wind
 - Add the boilerplate to a new or existing `CLAUDE.md` file
 - Add the import statement `@AGENTS.md` at the top of a new or existing `CLAUDE.md` file
 
-Run the command `/context` (in GitHub Copilot or Claude Code) to confirm that your agent has loaded the instructions.
+Confirm via prompt that your harness has loaded `AGENTS.md` into its context window.
 
 ### Working with Figma files
 
