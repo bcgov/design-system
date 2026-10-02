@@ -70,7 +70,7 @@
 ### Icons
 
 - The library includes React components for a small number of common icons
-- If you need additional icons, prefer using [Font Awesome Free v7](https://fontawesome.com/search?ic=free-collection) for coherence with the design system
+- If you need additional icons, prefer using Font Awesome Free v7 (`@fortawesome/react-fontawesome@3.5.0` or later) for coherence with the design system
 
 ## Styling components
 
