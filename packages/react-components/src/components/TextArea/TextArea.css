@@ -114,6 +114,13 @@
   border-color: var(--support-border-color-danger);
 }
 
+/* Character counter turns danger-colored when the field is invalid */
+.bcds-react-aria-TextArea[data-invalid]
+  > .bcds-react-aria-TextArea--Description
+  > .counter {
+  color: var(--typography-color-danger);
+}
+
 /* Styles for the error message slot */
 .bcds-react-aria-TextArea--Error {
   display: flex;
