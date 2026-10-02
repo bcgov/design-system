@@ -14,7 +14,13 @@ The new design system replaces [the legacy design system](/legacy), which has no
 
 Each library ships an `AGENTS.md` file to help AI agents make effective use of the B.C. Design System.
 
-Add the B.C. Design System boilerplate from [AGENTS.example.md](https://github.com/bcgov/design-system/blob/main/AGENTS.example.md) to an `AGENTS.md` file at the root of your project. This directs agents to load the package-specific instructions for each library.
+### Set up your system prompts
+
+Add the B.C. Design System boilerplate from [AGENTS.example.md](https://github.com/bcgov/design-system/blob/main/AGENTS.example.md) to an `AGENTS.md` file at the root of your project. This gives agents important context for using the design system, and directs them to also load the package-specific instructions for each library.
+
+### Connect to Figma MCP
+
+When working with Figma design files that use the B.C. Design System, [connecting your harness to Figma's MCP server](https://developers.figma.com/docs/figma-mcp-server/) can also significantly improve output quality.
 
 ## Design tokens
 

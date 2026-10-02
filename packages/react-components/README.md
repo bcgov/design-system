@@ -25,6 +25,8 @@ Add the B.C. Design System boilerplate from [AGENTS.example.md](https://github.c
 
 Run `/context` to confirm that your agent has loaded the instructions into its context window.
 
+When working with Figma design files that use the B.C. Design System, [connecting your harness to Figma's MCP server](https://developers.figma.com/docs/figma-mcp-server/) can also significantly improve output quality.
+
 ### BC Sans font dependency
 
 This package installs [@bcgov/bc-sans](https://www.npmjs.com/package/@bcgov/bc-sans) as a peer dependency. You must import the font-face declarations from @bcgov/bc-sans and ensure the font is reachable for your end user. The React components require that the `BC Sans` font-face is available to display correctly. The components do not ship their own copies of the font to minimize your bundle size.
