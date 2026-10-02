@@ -6,6 +6,7 @@ The design tokens library includes the full [design tokens schema](https://www2.
 
 - JavaScript/TypeScript variables (ESM and CommonJS)
 - CSS variables
+- SCSS variables
 
 Import your preferred format in order to use tokens to style your UI elements.
 
