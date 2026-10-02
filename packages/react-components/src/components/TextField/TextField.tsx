@@ -54,7 +54,9 @@ export default function TextField({
           >
             {iconLeft}
             <Input className="bcds-react-aria-TextField--Input" />
-            {isInvalid && <SvgExclamationIcon />}
+            {isInvalid && (
+              <SvgExclamationIcon className="bcds-react-aria-TextField--ErrorIcon" />
+            )}
             {iconRight}
           </div>
           {description && (
