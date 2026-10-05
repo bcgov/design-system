@@ -1,5 +1,7 @@
 # Changelog
 
+This is a minor release that adds LLM guidance for anyone using AI agents in their workflow.
+
 ## 5.1.0
 
 ### Added
