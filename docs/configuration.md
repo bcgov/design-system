@@ -6,6 +6,7 @@ The design tokens library includes the full [design tokens schema](https://www2.
 
 - JavaScript/TypeScript variables (ESM and CommonJS)
 - CSS variables
+- SCSS variables
 
 Import your preferred format in order to use tokens to style your UI elements.
 
@@ -50,3 +51,25 @@ Each component has an extensive set of props that you can use to configure their
 Consult the [component documentation in Storybook](https://designsystem.gov.bc.ca/react-components/) to learn more about a component's structure and supported props.
 
 If you need a specific component not included in the design system, [React Aria Components](https://react-aria.adobe.com) provides an extensive library of unstyled components. You can mix-and-match components from both libraries as needed, to leverage common APIs and ensure consistent interactions and behaviours.
+
+## Using the design system with AI tools
+
+Each design system library ships with a bundled `AGENTS.md` file, containing instructions for LLM agents.
+
+These files will **not** be discovered and loaded into your agent's context window automatically. To start using them with your preferred harness:
+
+- Copy the boilerplate instructions from [AGENTS.example.md](https://github.com/bcgov/design-system/blob/main/AGENTS.example.md)
+- Add them to a new or existing `AGENTS.md` file at the root of your project
+
+**Note**: Claude Code will not read your top-level `AGENTS.md` automatically. You can either:
+
+- Add the boilerplate to a new or existing `CLAUDE.md` file
+- Add the import statement `@AGENTS.md` at the top of a new or existing `CLAUDE.md` file
+
+Confirm via prompt that your harness has loaded `AGENTS.md` into its context window.
+
+### Working with Figma files
+
+If you are working with Figma design files, connecting to the Figma MCP server can significantly improve AI agent output quality.
+
+Follow [the instructions in Figma's documentation](https://help.figma.com/hc/en-us/articles/35281350665623-Figma-MCP-collection-How-to-set-up-the-Figma-remote-MCP-server) to connect to Figma's remote MCP server in your preferred IDE.
