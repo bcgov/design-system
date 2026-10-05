@@ -1,8 +1,8 @@
 # Changelog
 
-This is a minor release that adds LLM guidance for anyone using AI agents in their workflow.
-
 ## 5.1.0
+
+This is a minor release that adds LLM guidance for anyone using AI agents in their workflow.
 
 ### Added
 - `@bcgov/design-tokens/AGENTS.md` created to provide guidance for LLMs to reference BC Design System tokens
