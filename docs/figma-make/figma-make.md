@@ -4,11 +4,11 @@
 
 You can use AI with the B.C. Design System in Figma or in code. The Figma agent and Figma Make are both AI features of Figma.
 
-| | Figma agent (beta) | Figma Make | AI coding tools, like GitHub Copilot |
-| --- | --- | --- | --- |
-| Works in | Your Figma Design file | A separate Make file | Your code editor |
-| You get | Editable screens built with library components | A working prototype people can click through and test | Code built with B.C. Design System components |
-| Design system | Connect the B.C. Design System library to the chat | Select the B.C. Design System Kit | Add our AI instruction files to your project |
+|               | Figma agent (beta)                                 | Figma Make                                            | AI coding tools, like GitHub Copilot          |
+| ------------- | -------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------- |
+| Works in      | Your Figma Design file                             | A separate Make file                                  | Your code editor                              |
+| You get       | Editable screens built with library components     | A working prototype people can click through and test | Code built with B.C. Design System components |
+| Design system | Connect the B.C. Design System library to the chat | Select the B.C. Design System Kit                     | Add our AI instruction files to your project  |
 
 ### Which one should you use?
 
@@ -83,7 +83,7 @@ Open Figma files.
 1. Select **Make** in the top-right corner of Figma.
 2. In the chat window, select the **Design System Kit** icon in the bottom-right corner.
 
-   ![Design System Kit icon](images/design-system-kit-icon.png)
+   ![Design System Kit icon](../images/design-system-kit-icon.png)
 
 3. In **Select a Design System Kit**, find **B.C. Design System Kit (Beta)** and select **Add**.
 
@@ -91,7 +91,7 @@ Open Figma files.
 
 4. Confirm that the B.C. Design System Kit appears in the bottom-left corner of the prompt window.
 
-   ![B.C. Design System Kit attached to the prompt window](images/design-system-kit-attached.png)
+   ![B.C. Design System Kit attached to the prompt window](../images/design-system-kit-attached.png)
 
 ### 3. Write your first prompt
 
