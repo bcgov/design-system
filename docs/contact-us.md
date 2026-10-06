@@ -1,4 +1,4 @@
-# About us
+# Contact us
 
 The B.C. Design System is maintained by the Everyday Life Events Common Capabilities & AI Platforms branch at Connected Services BC.
 

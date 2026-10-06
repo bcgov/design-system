@@ -18,13 +18,13 @@ Learn how to implement and work with Design System components in code.
 
 - [Go to Install and Configure](using-the-design-system/develop/configuration.md)
 
-### Guidance
+### Review
 
 Explore practices, recommendations, and review approaches for using the Design System effectively.
 
 Topics include:
 
-- Reviewing AI outputs: [Quick start](using-the-design-system/guidance/human-review-quickstart.md), [Full guide](using-the-design-system/guidance/human-review.md)
+- Reviewing AI outputs: [Quick start](using-the-design-system/review/human-review-quickstart.md), [Full guide](using-the-design-system/review/human-review.md)
 
 ### Features
 

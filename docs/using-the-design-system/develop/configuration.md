@@ -1,5 +1,7 @@
 # Configuration
 
+Bring your project to life with the B.C. Design System. Install the core packages, configure your design tokens, and start building with ready-made components and powerful development tools.
+
 ## Design tokens
 
 The design tokens library includes the full [design tokens schema](https://www2.gov.bc.ca/gov/content/digital/design-system/foundations/design-tokens) implemented as:
