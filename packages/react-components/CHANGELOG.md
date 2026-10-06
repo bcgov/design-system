@@ -5,11 +5,10 @@
 This is a milestone release that adds system prompts and design guidance for LLMs, and updates existing components to use new React Aria API
 
 ### Added
-- Added instructions for AI agents, learn more about [using our library with LLMs](https://github.com/bcgov/design-system/tree/main/packages/react-components#using-this-library-with-llms)
+- Added instructions for AI agents, learn how to get started [using our library with LLMs](https://github.com/bcgov/design-system/tree/main/packages/react-components#using-this-library-with-llms)
 - Added content design guidance for LLMs
   
 ### Changed
-- Enable Storybook MCP server*
 - Enhancements to error fields in text fields and text areas
 - Calendar: add support for multiple selections
 - Checkbox: added support for optional description and error message slots on individual checkboxes
