@@ -9,11 +9,15 @@ This is a milestone release that adds system prompts and design guidance for LLM
 - Added content design guidance for LLMs
   
 ### Changed
+- 913 (adding unit tests - confirm this line item before release)
 - Enhancements to error fields in text fields and text areas
 - Calendar: add support for multiple selections
 - Checkbox: added support for optional description and error message slots on individual checkboxes
 - Radio: added support for optional description and error message slots on individual radios
 - Switch: added support for optional description and error message slots
+- Icon: added props to each component and basic accessibility requirements
+- Menu: fixed error causing incompatibility error with the `onAction` callback
+- CSS linting (samara to wordsmith this)
 
 ### Removed
 - Checkbox, Radio and Switch no longer support the `onHoverStart`, `onHoverEnd` and `onHoverChange` props, due to a change in the underlying React Aria component APIs
