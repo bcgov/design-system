@@ -81,11 +81,11 @@ Open Figma files.
 ### 2. Create a Make file and add the Design System Kit
 
 1. Select **Make** in the top-right corner of Figma.
-2. In the chat window, select the **Design System Kit** icon in the bottom-right corner.
+2. In the chat window, select the **Select a Make Kit** icon in the bottom-right corner.
 
    ![Design System Kit icon](../images/design-system-kit-icon.png)
 
-3. In **Select a Design System Kit**, find **B.C. Design System Kit (Beta)** and select **Add**.
+3. In **Select a Make Kit**, find **B.C. Design System Kit** and select **Add**.
 
    ![Design system kit selector showing B.C. Design System Kit (Beta) and its Add button](images/select-design-system-kit.png)
 
