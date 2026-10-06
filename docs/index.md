@@ -9,7 +9,7 @@ Choose the area that best matches what you're trying to do:
 ### Design
 Use the B.C. Design System in design and prototyping tools. Learn how to access design assets, build prototypes, and create experiences that align with your human-centred research and Design System standards.
 
-- [Improve your workflow when using AI tools such as Figma Make](using-the-design-system/desig/figma-make/figma-make.md)
+- [Improve your workflow when using AI tools such as Figma Make](using-the-design-system/design/figma-make/figma-make.md)
 
 
 ### Develop

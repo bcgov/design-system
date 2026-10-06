@@ -12,7 +12,7 @@ nav:
       - Develop:
           - Configuration: using-the-design-system/develop/configuration.md
       - Guidance:
-          - Human review:
+          - Review AI output:
               - Quickstart: using-the-design-system/guidance/human-review-quickstart.md
               - Overview: using-the-design-system/guidance/human-review.md
               - Step 1: using-the-design-system/guidance/human-review-step-1-right-problem.md
