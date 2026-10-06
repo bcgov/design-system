@@ -15,9 +15,9 @@ This is a milestone release that adds system prompts and design guidance for LLM
 - Checkbox: added support for optional description and error message slots on individual checkboxes
 - Radio: added support for optional description and error message slots on individual radios
 - Switch: added support for optional description and error message slots
-- Icon: added props to each component and basic accessibility requirements
+- Icon: added Code Connect mappings for select icons, props to each component and basic accessibility requirements
 - Menu: fixed error causing incompatibility error with the `onAction` callback
-- CSS linting (samara to wordsmith this)
+- CSS linting improvements with no visual impact on components
 
 ### Removed
 - Checkbox, Radio and Switch no longer support the `onHoverStart`, `onHoverEnd` and `onHoverChange` props, due to a change in the underlying React Aria component APIs
