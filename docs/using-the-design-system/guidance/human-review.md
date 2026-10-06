@@ -18,19 +18,21 @@ Use this guide to:
 ## Before you start
 
 Gather all available information, including:
-- The prototype, screenshots, or generated code
-- The original AI prompt, if available
-- Information about who will use the service and what they need to accomplish
-- User research, feedback, or service evidence
-- Relevant policy, program, or operational requirements
-- B.C. Design System guidance and other web guide references
-- Automated or manual test results, if available
+
+* The prototype, screenshots, or generated code
+* The original AI prompt, if available
+* Information about who will use the service and what they need to accomplish
+* User research, feedback, or service evidence
+* Relevant policy, program, or operational requirements
+* B.C. Design System guidance and other web guide references
+* Automated or manual test results, if available
 
 If something is missing, record that gap. Do not make assumptions to fill that gap.
 
 ## Start your review
-- [Step 1: Right Problem](human-review-step-1-right-problem.md)
-- [Step 2: Confirm the Journey](human-review-step-2-confirm-journey.md)
-- [Step 3: Standards and Patterns](human-review-step-3-standards-and-patterns.md)
-- [Step 4: Inclusive Experience](human-review-step-4-inclusive-experience.md)
-- [Step 5: Next Steps](human-review-step-5-next.md)
+
+* [Step 1: Right Problem](human-review-step-1-right-problem.md)
+* [Step 2: Confirm the Journey](human-review-step-2-confirm-journey.md)
+* [Step 3: Standards and Patterns](human-review-step-3-standards-and-patterns.md)
+* [Step 4: Inclusive Experience](human-review-step-4-inclusive-experience.md)
+* [Step 5: Next Steps](human-review-step-5-next.md)
