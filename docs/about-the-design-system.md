@@ -6,8 +6,7 @@ We worked with executive sponsors and partner teams to define a shared vision fo
 
 ### Purpose of the Design System
 
-
-    **The BC Gov design system makes the right paths the easy path so delivery teams can build government services**
+**The BC Gov design system makes the right paths the easy path so delivery teams can build government services**
 
 This will allow services to be more: 
 
