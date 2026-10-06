@@ -6,6 +6,7 @@ This guide is intended to help you review an AI or human generated prototype bef
 Use this guide to review a prototype before deciding whether to test it, refine it, share it, or move it toward implementation. For this guide, a prototype can be anything used to explore, test, or communicate a service idea, including sketches, wireframes, mock-ups, AI-generated concepts, clickable prototypes, generated code, or proofs of concept.
 
 Use this guide to:
+
 - Check that the prototype addresses a real need for the people who will use it
 - Review whether the journey supports the task, including recovery when things go wrong
 - Confirm that you are using existing B.C. Design System components and patterns appropriately

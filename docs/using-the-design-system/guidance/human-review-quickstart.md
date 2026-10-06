@@ -8,11 +8,13 @@ A prototype can be a sketch, mockup, AI-generated concept, clickable prototype, 
 
 
 ## 1.	Are we solving a real problem?
+
 - Who is this for?
 - What evidence shows this is a real problem or need?
 - What assumptions are we still making?
 
 **Decision**
+
 - [ ] Evidence supports moving forward
 - [ ] More evidence is needed
 - [ ] Revisit the problem
@@ -26,6 +28,7 @@ Go deeper: [Step one - confirm you are solving the right problem](step-1-right-p
 - Can they complete it using different devices and assistive technologies?
 
 **Decision**
+
 - [ ] Journey works
 - [ ] Journey needs improvement
 - [ ] Journey should be redesigned
@@ -33,11 +36,13 @@ Go deeper: [Step one - confirm you are solving the right problem](step-1-right-p
 Go deeper: [Step two - confirm the journey works](step-2-confirm-journey.md)
 
 ## 3.	Does it follow existing standards?
+
 - Are we using the B.C. Design System where appropriate?
 - Does it meet accessibility and content requirements?
 - Have we involved the right experts where needed?
 
 **Decision**
+
 - [ ] Meets requirements
 - [ ] Needs review or revision
 - [ ] Significant issues remain
@@ -45,11 +50,13 @@ Go deeper: [Step two - confirm the journey works](step-2-confirm-journey.md)
 Go deeper: [Step three - check the standards and patterns](step-3-standards-and-patterns.md)
 
 ## 4.	Could this create barriers?
+
 - Who might struggle with this experience?
 - Have we considered people with different circumstances, abilities, and levels of digital confidence?
 - Could any step unintentionally exclude or disadvantage someone?
 
 **Decision**
+
 - [ ] No significant barriers identified
 - [ ] More testing needed
 - [ ] Barrier or risk identified
@@ -57,7 +64,9 @@ Go deeper: [Step three - check the standards and patterns](step-3-standards-and-
 Go deeper: [Step four - check for an inclusive experience](step-4-inclusive-experience.md)
 
 ## 5.	What should happen next?
+
 Based on the evidence available today:
+
 - [ ] Proceed
 - [ ] Revise and test again
 - [ ] Seek specialist review

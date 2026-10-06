@@ -8,6 +8,7 @@ Does the prototype address a genuine need and enhance the experience for the peo
 ### Understand the context
 
 Before you review the prototype:
+
 - Identify who will use the service
 - Identify what they want to accomplish
 - Identify barriers, access needs, or circumstances that may affect their experience
@@ -18,6 +19,7 @@ Before you review the prototype:
 Once you understand what people want to achieve, check that the evidence supports both the problem being addressed and the decisions in the prototype.
 
 Review available evidence, including:
+
 - Research or feedback from people who use the service
 - Feedback from people who may experience racism or systemic barriers
 - Service data or analytics
@@ -29,6 +31,7 @@ Review available evidence, including:
 Identify any gaps, contradictions, and assumptions.
 
 With the purpose in mind, ask yourself:
+
 - Does the prototype help people accomplish their goal?
 - Do the content, steps, and decisions reflect the available evidence?
 - Does anything contradict what you already know?
@@ -38,6 +41,7 @@ With the purpose in mind, ask yourself:
 ## Review any AI prompts and the context you provided
 
 Check whether the prompt:
+
 - Identified the intended users
 - Described user goals and circumstances
 - Included relevant research, requirements, and constraints 
@@ -51,16 +55,19 @@ Treat any decisions introduced by AI as assumptions unless you have supporting e
 ## Determine the next steps
 
 If the prototype aligns with the context and evidence:
+
 - Record the evidence that supports your decision
 - Document any remaining assumptions or gaps 
 - Continue to the next stage of the review
 
 If the prototype only partly aligns:
+
 - Identify which parts are supported and which are not
 - Revise unsupported content, steps, or decisions
 - Validate any important assumptions before moving forward
 
 If the prototype does not align:
+
 - Pause your review
 - Revisit the problem definition, evidence, or requirements
 - Decide if you need to revise the prototype or reconsider your approach
@@ -68,4 +75,5 @@ If the prototype does not align:
 **Remember**: Alignment doesn’t prove your prototype is correct. It means you have enough evidence to move forward with further review and testing.
 
 ## Next
-[Step 2: Confirm the Journey](human-review-step-2-confirm-journey.md)
+
+- [Step 2: Confirm the Journey](human-review-step-2-confirm-journey.md)

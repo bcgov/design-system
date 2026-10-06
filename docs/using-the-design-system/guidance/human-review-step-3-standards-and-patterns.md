@@ -7,6 +7,7 @@ Does the prototype follow the B.C. Design System, accessibility requirements, co
 ## Review the standards, requirements, and guidance
 
 Review the prototype against:
+
 - B.C. Design System components and patterns
 - Accessibility standards and inclusive design guidance
 - Content design and plain language guidance
@@ -26,6 +27,7 @@ Review the prototype against:
 ## Identify exceptions and gaps
 
 Ask:
+
 - Why was a custom or different approach used?
 - Was an existing option considered?
 - Is the difference intentional, supported by evidence and documented?
@@ -35,16 +37,19 @@ Ask:
 ## Decide what happens next
 
 **If the prototype follows the relevant standards and patterns:**
+
 - Record which guidance and requirements you reviewed
 - Document any remaining gaps or checks you still need to complete
 - Move to the next stage of the review
 
 **If the prototype only partly follows them:**
+
 - Identify what does not align or has not yet been verified, and document these areas.
 - Revise the prototype or document why a different approach is needed
 - Seek specialist review if needed
 
 **If the prototype does not follow critical standards or requirements:**
+
 - Pause your review process
 - Address any issues before testing, sharing, or handing off the prototype
 - Reconsider your approach if you can’t resolve the issue
@@ -52,4 +57,5 @@ Ask:
 **Remember:** Using a Design System component or passing an automated check does not prove your experience meets every requirement. Record what you reviewed, what remains uncertain, and where you still need a specialist review.
 
 ## Next
+
 - [Step 4: Inclusive Experience](human-review-step-4-inclusive-experience.md)
