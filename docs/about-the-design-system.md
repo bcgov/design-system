@@ -26,12 +26,14 @@ The B.C. Design System provides AI-optimized "ingredients" and "recipes" that di
 
 | Ingredients | Recipes |
 |--------------|------------|
-| •  Design libraries in design tools <br>• Code libraries in front end frameworks <br>• JSON token libraries for sharing styles across systems and technologies | • Kits and tools for reusing common combinations of ingredients that teams can modify and extend as needed <br> • Guidance for using components, patterns, colours, typography, and layouts <br> • Documentation and resources that support adoption and use of the Design System <br>
-Governance and contribution guidelines that support collaboration |
+| <ul><li> Design libraries in design tools </li><li> Code libraries in front end frameworks </li><li> JSON token libraries for sharing styles across systems and technologies</li></ul> | <ul><li> Kits and tools for reusing common combinations of ingredients that teams can modify and extend as needed </li><li> Guidance for using components, patterns, colours, typography, and layouts </li><li> Documentation and resources that support adoption and use of the Design System </li><li>
+Governance and contribution guidelines that support collaboration </li></ul> |
 
 | Right path | Delivery teams | Government systems|
 |--------------|------------|------------|
-| The design system provides reusable components, patterns, and styles so teams do not have to rethink every small design decision. These foundations help teams create experiences that are: <br>• Branded <br>• Proven <br>• Tested <br>• Supported <br>• Secure <br>• Equitable <br>• Accessible | We support people who design systems or applications for internal and external government services, including: <br>• Front-end developers <br>• Designers <br>• Leadership <br>• Contractors <br>• Technology teams <br>• AI agents | The design system does not support the full spectrum of government services. It supports digital interfaces that form part of a larger service journey. Where relevant, we aim to connect teams with: <br>• Service patterns <br>• Non-digital best practices <br>• Equity and accessibility training and guidedance <br>• Common capabilities <br>• Subject matter experts and related systems |
+| The design system provides reusable components, patterns, and styles so teams do not have to rethink every small design decision. These foundations help teams create experiences that are: <br>
+<ul><li> Branded </li><li> Proven </li><li> Tested </li><li> Supported </li><li> Secure </li><li> Equitable </li><li> Accessible </li></ul>| We support people who design systems or applications for internal and external government services, including: <br>
+<ul><li> Front-end developers </li><li> Designers </li><li> Leadership </li><li> Contractors </li><li> Technology teams </li><li> AI agents</li></ul> | The design system does not support the full spectrum of government services. It supports digital interfaces that form part of a larger service journey. Where relevant, we aim to connect teams with: <br><ul><li> Service patterns </li><li> Non-digital best practices </li><li> Equity and accessibility training and guidedance </li><li> Common capabilities </li><li> Subject matter experts and related systems</li></ul> |
 
 ### Objectives of the Design System
 
@@ -47,21 +49,21 @@ Governance and contribution guidelines that support collaboration |
 
 | Outcome area | Experience |
 |--------------|------------|
-| **Coherent, trusted experiences** | • People have greater trust in government services because they are reliable, recognizable and connected<br>• People can access services more easily through intuitive and cohesive experiences, regardless where or or how they start<br>• People can complete tasks with less confusion and repetition |
-| **Accessible, equitable and human-centred services** | • People can access services in ways that better meet their needs across channels, cultures and abilities <br>• Components, patterns and guidance align with WCAG Level AA standards and support inclusive, usable experiences for people with disabilities <br>• Supports Indigenous languages and multilingual experiences<br>• Recipes consider how services can be trauma-informed, equitable and culturally respectful<br>• Recipes consider digital and human service touchpoints to support different access needs |
+| **Coherent, trusted experiences** | <ul><li> People have greater trust in government services because they are reliable, recognizable and connected</li><li> People can access services more easily through intuitive and cohesive experiences, regardless where or or how they start </li><li> People can complete tasks with less confusion and repetition</li></ul> |
+| **Accessible, equitable and human-centred services** | <ul><li> People can access services in ways that better meet their needs across channels, cultures and abilities </li><li> Components, patterns and guidance align with WCAG Level AA standards and support inclusive, usable experiences for people with disabilities </li><li> Supports Indigenous languages and multilingual experiences </li><li> Recipes consider how services can be trauma-informed, equitable and culturally respectful </li><li> Recipes consider digital and human service touchpoints to support different access needs </li></ul> |
 
 #### Teams adopting the system
 
 | Outcome area | Experience |
 |--------------|------------|
-| **Shared foundations** | • Teams build on shared, well-maintained foundations instead of starting from scratch for every project<br>• Teams can reuse, adapt and combine parts of the system while maintaining a coherent experience for people and businesses in B.C.<br>• Teams have more capacity to focus on complex service problems instead of basic UI and UX decisions <br> | • The system helps connect and unify service delivery
-| **Better collaboration** | • Teams use a common design language and shared tools to improve communication, collaboration and alignment <br>• People who know the design system can move between services with less time spent learning how each team works <br>• Design decisions strengthen connections rather than silos, helping knowledge flow more easily across teams |
+| **Shared foundations** | <ul><li> Teams build on shared, well-maintained foundations instead of starting from scratch for every project</li><li> Teams can reuse, adapt and combine parts of the system while maintaining a coherent experience for people and businesses in B.C.</li><li> Teams have more capacity to focus on complex service problems instead of basic UI and UX decisions </li><li> The system helps connect and unify service delivery</li></ul>
+| **Better collaboration** | <ul><li> Teams use a common design language and shared tools to improve communication, collaboration and alignment </li><li> People who know the design system can move between services with less time spent learning how each team works </li><li> Design decisions strengthen connections rather than silos, helping knowledge flow more easily across teams</li></ul> |
 
 #### Shared across both audiences
 
 | Outcome area | Experience |
 |--------------|------------|
-| **Continuous improvement** | • Research, testing and iteration become standard practices <br>• Teams contribute what they learn from delivering services back to the system helping improve its ingredients and recipes <br>• The system remains sustainable, maintainable and adaptable as needs change <br>• Teams can more easily find and improve standards for ethical and inclusive design as practices and knowledge evolve<br>• AI adoption guidance helps teams use the system more consistently, including when designing for marginalized users |
+| **Continuous improvement** | <ul><li> Research, testing and iteration become standard practices </li><li> Teams contribute what they learn from delivering services back to the system helping improve its ingredients and recipes </li><li> The system remains sustainable, maintainable and adaptable as needs change </li><li> Teams can more easily find and improve standards for ethical and inclusive design as practices and knowledge evolve </li><li> AI adoption guidance helps teams use the system more consistently, including when designing for marginalized users</li></ul> |
 
 ### How the team intends to show up to support this vision
 - **People-first** (accessibility, inclusion, empathy) - We listen closely and act on feedback
