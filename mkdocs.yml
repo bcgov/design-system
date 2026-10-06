@@ -6,7 +6,7 @@ edit_uri: edit/main/docs
 nav:
   - Introduction: index.md
   - Getting started: getting-started.md
-  - Configuration: configuration.md
+  - Configuration: develop/configuration.md
   - About us: about-us.md
 plugins:
   - techdocs-core
