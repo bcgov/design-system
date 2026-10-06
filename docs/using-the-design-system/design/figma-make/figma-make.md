@@ -83,7 +83,7 @@ Open Figma files.
 1. Select **Make** in the top-right corner of Figma.
 2. In the chat window, select the **Select a Make Kit** icon in the bottom-right corner.
 
-   ![Design System Kit icon](../images/design-system-kit-icon.png)
+   ![Design System Kit icon](images/design-system-kit-icon.png)
 
 3. In **Select a Make Kit**, find **B.C. Design System Kit** and select **Add**.
 
@@ -91,7 +91,7 @@ Open Figma files.
 
 4. Confirm that the B.C. Design System Kit appears in the bottom-left corner of the prompt window.
 
-   ![B.C. Design System Kit attached to the prompt window](../images/design-system-kit-attached.png)
+   ![B.C. Design System Kit attached to the prompt window](images/design-system-kit-attached.png)
 
 ### 3. Write your first prompt
 
