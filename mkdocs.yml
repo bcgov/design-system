@@ -20,6 +20,7 @@ nav:
               - Step 3: using-the-design-system/guidance/human-review-step-3-standards-and-patterns.md
               - Step 4: using-the-design-system/guidance/human-review-step-4-inclusive-experience.md
               - Step 5: using-the-design-system/guidance/human-review-step-5-next.md
+  - Contribute: contribute.md
   - About us: about-us.md
 plugins:
   - techdocs-core

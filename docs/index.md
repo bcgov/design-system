@@ -1,10 +1,30 @@
 # B.C. Design System
 
-## About the design system
+The B.C. Design System provides reusable components, guidance, and resources to help teams design and build consistent, accessible digital services.
 
-### Summary
+## Using the design system
 
-The B.C. Design System helps public sector design and development teams build consistent, accessible products. It provides a growing library of user interface components, resources and documentation to support a unified user experience across B.C. government digital products.
+Choose the area that best matches what you're trying to do:
+
+### Design
+Use the B.C. Design System in design and prototyping tools. Learn how to access design assets, build prototypes, and create experiences that align with your human-centred research and Design System standards.
+
+- (Improve your workflow when using AI tools such as Figma Make)[using-the-design-system/desig/figma-make/figma-make.md]
+
+
+### Develop
+
+Learn how to implement and work with Design System components in code.
+
+- (Go to Install and Configure)[using-the-design-system/develop/configuration.md]
+
+### Guidance
+
+Explore practices, recommendations, and review approaches for using the Design System effectively.
+
+Topics include:
+
+- Reviewing AI outputs: (Quick start)[using-the-design-system/guidance/human-review-quickstart.md], (Full guide)[using-the-design-system/guidance/human-review.md]
 
 ### Features
 
@@ -15,13 +35,6 @@ The design system provides:
 
 To support cross-functional collaboration, designers can access design tokens and components via a [managed Figma library](https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?m=auto&node-id=0-1&t=7ugpTBbyJUtB7AeG-1).
 
-### Compatibility
-
-The design system is an open-source library, available to anyone working on digital products for the B.C. government.
-
-The design tokens library is platform-agnostic. The component library supports React only. Support for other front-end frameworks is not currently planned.
-
-If you need a specific component that is not yet available in the design system, we recommend checking if it's available in [React Aria Components](https://react-spectrum.adobe.com/react-aria/index.html). This will give you an unstyled component with interactions and APIs that are consistent with the design system.
 
 ## How to get started
 
@@ -32,13 +45,6 @@ There are two separate packages:
 - [@bcgov/design-tokens](https://www.npmjs.com/package/@bcgov/design-tokens)
 - [@bcgov/design-system-react-components](https://www.npmjs.com/package/@bcgov/design-system-react-components)
 
-### Availability
-
-Updates are published via npm. [Release notes](https://github.com/bcgov/design-system/releases) are published on GitHub.
-
-Both libraries follow semantic versioning. At this stage, we recommend installing new versions manually, and carefully reviewing the release notes.
-
-We do not have a fixed release cycle, but we expect to ship new releases on an approximately monthly basis. Releases are currently focused on adding new components to the library, as we work towards v1.0.0.
 
 ## Getting help
 
@@ -58,6 +64,4 @@ Interactive examples and detailed technical documentation for each component are
 
 There is no cost to use the design system.
 
-## Support
 
-The design system is maintained by the Corporate Online Services branch at Connected Services BC, part of the Ministry of Citizens' Services.
