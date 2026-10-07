@@ -61,7 +61,7 @@ The B.C. Design System provides AI-optimized "ingredients" and "recipes" that di
 |--------------|------------|
 | **Continuous improvement** | <ul><li> Research, testing and iteration become standard practices </li><li> Teams contribute what they learn from delivering services back to the system helping improve its ingredients and recipes </li><li> The system remains sustainable, maintainable and adaptable as needs change </li><li> Teams can more easily find and improve standards for ethical and inclusive design as practices and knowledge evolve </li><li> AI adoption guidance helps teams use the system more consistently, including when designing for marginalized users</li></ul> |
 
-## How the team intends to show up to support this vision
+## How the Design System Team intends to support our vision
 - **People-first** (accessibility, inclusion, empathy) - We listen closely and act on feedback
 - **Trust and integrity** (consistency, transparency, quality) - We use evidence and real user experiences to validate assumptions before we ship
 - **Openness and collaboration** (partnerships, community, shared vision) - We have candid conversations when they help us reach better solutions
