@@ -12,8 +12,8 @@ nav:
           - Configuration: using-the-design-system/develop/configuration.md
       - Review:
           - Review AI output:
-              - Quickstart: using-the-design-system/review/human-review-quickstart.md
               - Overview: using-the-design-system/review/human-review.md
+              - Quickstart: using-the-design-system/review/human-review-quickstart.md
               - Step 1: using-the-design-system/review/human-review-step-1-right-problem.md
               - Step 2: using-the-design-system/review/human-review-step-2-confirm-journey.md
               - Step 3: using-the-design-system/review/human-review-step-3-standards-and-patterns.md
