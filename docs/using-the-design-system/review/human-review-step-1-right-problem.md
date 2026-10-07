@@ -35,7 +35,7 @@ With the purpose in mind, ask yourself:
 - Does the prototype help people accomplish their goal?
 - Do the content, steps, and decisions reflect the available evidence?
 - Does anything contradict what you already know?
-- Has the prototype introduced ideas, steps, or requirements that aren’t supported by evidence?
+- Has the prototype introduced ideas, steps, or requirements that are not supported by evidence?
 - Are any important needs, situations, or constraints missing?
 
 ## Review any AI prompts and the context you provided
@@ -46,9 +46,8 @@ Check whether the prompt:
 - Described user goals and circumstances
 - Included relevant research, requirements, and constraints 
 - Clearly distinguished facts from assumptions
-- Specified what the AI was should not to assume, invent, or change
-- No important, current, or accurate context was missing
-- Included all important context 
+- Specified what the AI should not assume, invent, or change
+- Included all important, current, and accurate context
 
 Treat any decisions introduced by AI as assumptions unless you have supporting evidence or confirmed requirements.
 
