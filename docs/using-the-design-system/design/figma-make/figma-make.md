@@ -161,6 +161,24 @@ Start from an existing Figma design. Copy the frame in Figma and paste it into t
 
 Don't paste a Figma link into your prompt. Make may read the link instead of the design.
 
+For the best results when coping from:
+
+**Figma Design to Figma Make**
+
+1. Select a frame or objects in Figma Design
+1. Click Copy selection (or press ⌘/Ctrl+C)
+1. In Figma Make, click the prompt field Describe what to make.
+1. Paste with ⌘/Ctrl+V.
+
+**Figma Make to Figma Design**
+
+1. Generate your design in Figma Make.
+1. Click the Copy button (top right).
+1. Open your Figma Design file.
+1. Paste with ⌘/Ctrl+V into your page or frame.
+
+**Tip:** Use the Copy button in Make to quickly transfer generated designs back into Figma Design for editing and refinement.
+
 Before you attach your design, check it has:
 
 - One frame per screen, clearly named (for example, "1 Start")
