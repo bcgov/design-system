@@ -12,13 +12,13 @@ nav:
           - Configuration: using-the-design-system/develop/configuration.md
       - Review:
           - Review AI output:
-              - Quickstart: using-the-design-system/guidance/human-review-quickstart.md
-              - Overview: using-the-design-system/guidance/human-review.md
-              - Step 1: using-the-design-system/guidance/human-review-step-1-right-problem.md
-              - Step 2: using-the-design-system/guidance/human-review-step-2-confirm-journey.md
-              - Step 3: using-the-design-system/guidance/human-review-step-3-standards-and-patterns.md
-              - Step 4: using-the-design-system/guidance/human-review-step-4-inclusive-experience.md
-              - Step 5: using-the-design-system/guidance/human-review-step-5-next.md
+              - Quickstart: using-the-design-system/review/human-review-quickstart.md
+              - Overview: using-the-design-system/review/human-review.md
+              - Step 1: using-the-design-system/review/human-review-step-1-right-problem.md
+              - Step 2: using-the-design-system/review/human-review-step-2-confirm-journey.md
+              - Step 3: using-the-design-system/review/human-review-step-3-standards-and-patterns.md
+              - Step 4: using-the-design-system/review/human-review-step-4-inclusive-experience.md
+              - Step 5: using-the-design-system/review/human-review-step-5-next.md
   - Contribute: contribute.md
   - About the design system: about-the-design-system.md
   - Contact us: contact-us.md
