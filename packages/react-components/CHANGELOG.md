@@ -2,13 +2,15 @@
 
 ## 0.9.0
 
-This is a milestone release that adds system prompts and design guidance for LLMs, and updates existing components to use new React Aria API
+This is a milestone release that adds system prompts and design guidance for LLMs, and updates existing components to use new React Aria APIs
 
 ### Added
+
 - Added instructions for AI agents, learn how to get started [using our library with LLMs](https://github.com/bcgov/design-system/tree/main/packages/react-components#using-this-library-with-llms)
 - Added content design guidance for LLMs
-  
+
 ### Changed
+
 - 913 (adding unit tests - confirm this line item before release)
 - Enhancements to error fields in text fields and text areas
 - Calendar: add support for multiple selections
@@ -20,8 +22,9 @@ This is a milestone release that adds system prompts and design guidance for LLM
 - CSS linting improvements with no visual impact on components
 
 ### Removed
+
 - Checkbox, Radio and Switch no longer support the `onHoverStart`, `onHoverEnd` and `onHoverChange` props, due to a change in the underlying React Aria component APIs
-  
+
 This release uses:
 
 - `react-aria-components` v1.21.0

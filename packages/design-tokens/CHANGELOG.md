@@ -5,11 +5,13 @@
 This is a minor release that adds LLM guidance for anyone using AI agents in their workflow.
 
 ### Added
+
 - Added instructions for AI agents, learn how to get started [using our library with LLMs](https://github.com/bcgov/design-system/blob/main/packages/design-tokens/dist/README.md#using-this-library-with-llms)
 
 ### Changed
-- Updated README with development principles to help clarify our approach to versioning and what you can expect as consumers of the design tokens library.
-- Updated README with guidance on how to use systems prompts like AGENTS.md files and how to configure Figma MCP server when working with Figma design files.
+
+- Updated README with development principles to help clarify our approach to versioning and what you can expect as consumers of the design tokens library
+- Updated README with guidance on how to use systems prompts like AGENTS.md files and how to configure Figma MCP server when working with Figma design files
 
 This release uses:
 
