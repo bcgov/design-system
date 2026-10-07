@@ -1,6 +1,6 @@
 # Check the standards and patterns
 
-**Most useful when in** design refinement, implementation planning
+**Most useful when in** design refinement and implementation planning
 
 Does the prototype follow the B.C. Design System, accessibility requirements, content standards, and organizational policies?
 
@@ -15,7 +15,7 @@ Review the prototype against:
 - Privacy, security, and information management requirements
 - Relevant legislation, policy, program requirements, and operational guidance
 
-**Remember:** If you don’t understand any of these guides, standards, or requirements, bring in subject matter experts who are familiar with them to help with your review.
+**Remember:** If you do not understand any of these guides, standards, or requirements, bring in subject matter experts who are familiar with them to help with your review.
 
 ## Review the prototype
 
@@ -44,7 +44,7 @@ Ask:
 
 **If the prototype only partly follows them:**
 
-- Identify what does not align or has not yet been verified, and document these areas.
+- Identify what does not align or has not yet been verified, and document these areas
 - Revise the prototype or document why a different approach is needed
 - Seek specialist review if needed
 
@@ -52,7 +52,7 @@ Ask:
 
 - Pause your review process
 - Address any issues before testing, sharing, or handing off the prototype
-- Reconsider your approach if you can’t resolve the issue
+- Reconsider your approach if you can't resolve the issue
 
 **Remember:** Using a Design System component or passing an automated check does not prove your experience meets every requirement. Record what you reviewed, what remains uncertain, and where you still need a specialist review.
 
