@@ -165,6 +165,5 @@ export const TextFieldError: Story = {
     description:
       "This component supports custom, real-time and server-side data validation",
     isInvalid: true,
-    errorMessage: "Error messages can be customised or passed programmatically",
   },
 };

@@ -60,27 +60,13 @@ describe("TextField component", () => {
     expect(input).toHaveAttribute("type", "password");
   });
 
-  test("maxLength is a soft limit: input is not truncated when the limit is exceeded", () => {
+  test("maxLength is enforced natively by the browser via the maxlength attribute", () => {
     render(<TextField label="Your name" maxLength={5} />);
     const input: HTMLInputElement = screen.getByLabelText(/your name/i);
-    fireEvent.change(input, { target: { value: "too long" } });
-    expect(input.value).toBe("too long");
-    // no native maxlength enforcement on the DOM element
-    expect(input).not.toHaveAttribute("maxLength");
+    expect(input).toHaveAttribute("maxlength", "5");
   });
 
-  test("exceeding maxLength invalidates the field and shows the error message on blur", () => {
-    render(<TextField label="Your name" maxLength={5} />);
-    const input: HTMLInputElement = screen.getByLabelText(/your name/i);
-    fireEvent.change(input, { target: { value: "too long" } });
-    fireEvent.blur(input);
-    expect(input).toHaveAttribute("aria-invalid", "true");
-    expect(
-      screen.getByText("Must be 5 characters or fewer.")
-    ).toBeInTheDocument();
-  });
-
-  test("custom errorMessage overrides the default maxLength error message", () => {
+  test("custom errorMessage renders when the field is invalid alongside maxLength", () => {
     render(
       <TextField
         label="Your name"

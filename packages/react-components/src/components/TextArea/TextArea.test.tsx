@@ -41,40 +41,14 @@ describe("TextArea component", () => {
     expect(onChange).toHaveBeenCalledWith("hello");
   });
 
-  test("maxLength is a soft limit: input is not truncated when the limit is exceeded", () => {
+  test("maxLength is enforced natively by the browser via the maxlength attribute", () => {
     render(<TextArea label="Your feedback" maxLength={5} />);
     const textarea: HTMLTextAreaElement =
       screen.getByLabelText(/your feedback/i);
-    fireEvent.change(textarea, { target: { value: "too long" } });
-    expect(textarea.value).toBe("too long");
-    // no native maxlength enforcement on the DOM element
-    expect(textarea).not.toHaveAttribute("maxLength");
+    expect(textarea).toHaveAttribute("maxlength", "5");
   });
 
-  test("exceeding maxLength invalidates the field and shows the error message on blur", async () => {
-    render(<TextArea label="Your feedback" maxLength={5} />);
-    const textarea: HTMLTextAreaElement =
-      screen.getByLabelText(/your feedback/i);
-    fireEvent.change(textarea, { target: { value: "too long" } });
-    fireEvent.blur(textarea);
-    expect(textarea).toHaveAttribute("aria-invalid", "true");
-    expect(
-      screen.getByText("Must be 5 characters or fewer.")
-    ).toBeInTheDocument();
-  });
-
-  test("an initial value edited to exceed maxLength invalidates the field and shows the error message on blur", () => {
-    render(<TextArea label="Your feedback" maxLength={5} value="ab" />);
-    const textarea: HTMLTextAreaElement =
-      screen.getByLabelText(/your feedback/i);
-    fireEvent.change(textarea, { target: { value: "too long" } });
-    fireEvent.blur(textarea);
-    expect(
-      screen.getByText("Must be 5 characters or fewer.")
-    ).toBeInTheDocument();
-  });
-
-  test("custom errorMessage overrides the default maxLength error message", () => {
+  test("custom errorMessage renders when the field is invalid alongside maxLength", () => {
     render(
       <TextArea
         label="Your feedback"

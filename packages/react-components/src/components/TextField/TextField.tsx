@@ -37,18 +37,11 @@ export default function TextField({
   validate,
   ...props
 }: TextFieldProps) {
-  function validateWithMaxLength(text: string) {
-    const userError = validate?.(text);
-    if (userError) return userError;
-    if (maxLength && text.length > maxLength) {
-      return `Must be ${maxLength} characters or fewer.`;
-    }
-  }
-
   return (
     <ReactAriaTextField
       className="bcds-react-aria-TextField"
-      validate={validateWithMaxLength}
+      validate={validate}
+      maxLength={maxLength}
       {...props}
     >
       {({ isRequired, isInvalid }) => (
