@@ -1,6 +1,6 @@
 # Check for an inclusive experience 
 
-**Most useful when in** throughout, but especially before testing
+**Most useful when done** throughout, but especially before testing
 
 Don’t rely on a visual inspection alone; this won’t reveal all the ways people might struggle to use your digital service. Many accessibility barriers only become clear when you think about how people with different abilities, technologies, or circumstances interact with the service.
 
@@ -35,13 +35,13 @@ Ask:
 
 **If no significant barriers or unequal impacts are identified:**
 
-- Record the situations, needs, and potential impacts you considered.
-- Record any remaining assumptions or groups you still need to include in testing.
+- Record the situations, needs, and potential impacts you considered
+- Record any remaining assumptions or groups you still need to include in testing
 - Move to the next stage of the review
 
 **If potential barriers or unequal impacts are identified:**
 
-- Identify who could be affected and how, and document your findings.
+- Identify who could be affected and how, and document your findings
 - Revise the experience, information requirements, or service rules that may create the barrier
 - Include people with relevant lived experience or subject matter expertise in the next review
 - Test your revised approach before moving forward
