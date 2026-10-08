@@ -39,7 +39,11 @@ export default function TextArea({
   }
 
   return (
-    <ReactAriaTextField className={`bcds-react-aria-TextArea`} {...props}>
+    <ReactAriaTextField
+      className={`bcds-react-aria-TextArea`}
+      maxLength={maxLength}
+      {...props}
+    >
       {({ isRequired, isInvalid }) => (
         <>
           {label && (
