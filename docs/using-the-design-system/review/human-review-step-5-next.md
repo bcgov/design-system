@@ -39,7 +39,7 @@ Do:
 - List any remaining assumptions, conditions, or follow-ups
 - Identify who is responsible for the next step
 
-##Move ahead
+## Move ahead
 
 **If more evidence or review is needed:**
 
