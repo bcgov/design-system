@@ -19,7 +19,7 @@ A prototype can be a sketch, mockup, AI-generated concept, clickable prototype, 
 - [ ] More evidence is needed
 - [ ] Revisit the problem
 
-Go deeper: [Step one - confirm you are solving the right problem](step-1-right-problem.md)
+Go deeper: [Step one - confirm you are solving the right problem](human-review-step-1-right-problem.md)
 
 ## 2.	Can people complete the task?
 
