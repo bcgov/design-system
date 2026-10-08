@@ -33,17 +33,10 @@ export default function TextField({
   errorMessage,
   iconLeft,
   iconRight,
-  maxLength,
-  validate,
   ...props
 }: TextFieldProps) {
   return (
-    <ReactAriaTextField
-      className="bcds-react-aria-TextField"
-      validate={validate}
-      maxLength={maxLength}
-      {...props}
-    >
+    <ReactAriaTextField className="bcds-react-aria-TextField" {...props}>
       {({ isRequired, isInvalid }) => (
         <>
           {label && (

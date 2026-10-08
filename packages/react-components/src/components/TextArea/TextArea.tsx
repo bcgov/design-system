@@ -27,7 +27,6 @@ export default function TextArea({
   errorMessage,
   maxLength,
   onChange,
-  validate,
   value,
   ...props
 }: TextAreaProps) {
@@ -42,7 +41,6 @@ export default function TextArea({
   return (
     <ReactAriaTextField
       className={`bcds-react-aria-TextArea`}
-      validate={validate}
       maxLength={maxLength}
       {...props}
     >
