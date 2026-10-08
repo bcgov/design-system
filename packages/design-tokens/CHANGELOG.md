@@ -1,5 +1,23 @@
 # Changelog
 
+## 5.1.0
+
+This is a minor release that improves support for using this library with AI tools.
+
+### Added
+
+- Added instructions for AI agents (`AGENTS.md`). [Learn how to get started using our library with LLMs](https://github.com/bcgov/design-system/blob/main/packages/design-tokens/dist/README.md#using-this-library-with-llms)
+
+### Changed
+
+- Updated README with development principles to help clarify our approach to versioning and what you can expect as consumers of the design tokens library
+- Updated README with guidance on how to use systems prompts like AGENTS.md files and how to configure Figma MCP server when working with Figma design files
+
+This release uses:
+
+- `@tokens-studio/sd-transforms` v2.0.3
+- `style-dictionary` v5.5.5
+
 ## 5.0.0
 
 This is a milestone release that cross-publishes the design tokens library to GitHub Packages registry as well as npm.

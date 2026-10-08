@@ -1,5 +1,34 @@
 # Changelog
 
+## 0.9.0
+
+This is a milestone release that adds system prompts and design guidance for LLMs, and updates existing components to use new React Aria APIs
+
+### Added
+
+- Added instructions for AI agents (`AGENTS.md`). [Learn how to get started using our library with LLMs](https://github.com/bcgov/design-system/tree/main/packages/react-components#using-this-library-with-llms)
+
+### Changed
+
+- Calendar: added support for multiple selections
+- Checkbox: added support for optional description and error message slots on individual checkboxes
+- Icon components: added proper typing using `React.SVGProps`, new `title` and `size` props, and Figma Code Connect mappings (for select icons)
+- Menu: fixed error causing incompatibility error with the `onAction` callback
+- Radio: added support for optional description and error message slots on individual radios
+- Switch: added support for optional description and error message slots
+- TextArea: properly constrained input when `maxLength` is set, applied correct styling when an input is invalid, and added unit tests
+- TextField: applied correct styling to error icon when an input is invalid and added unit tests
+- Reorganized and linted CSS stylesheets for all components
+
+### Removed
+
+- Checkbox, Radio and Switch no longer support the `onHoverStart`, `onHoverEnd` and `onHoverChange` props, due to a change in the underlying React Aria component APIs
+
+This release uses:
+
+- `react-aria-components` v1.21.0
+- `@bcgov/design-tokens` v5.5.5
+
 ## 0.8.1
 
 This is a patch release that fixes bugs in three components.
