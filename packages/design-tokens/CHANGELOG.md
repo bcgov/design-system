@@ -6,7 +6,7 @@ This is a minor release that improves support for using this library with AI too
 
 ### Added
 
-- Added instructions for AI agents ([AGENTS.md](https://github.com/bcgov/design-system/blob/DS-81/packages/design-tokens/dist/AGENTS.md)), learn how to get started [using our library with LLMs](https://github.com/bcgov/design-system/blob/main/packages/design-tokens/dist/README.md#using-this-library-with-llms)
+- Added instructions for AI agents ([AGENTS.md](https://github.com/bcgov/design-system/blob/DS-81/packages/design-tokens/dist/AGENTS.md)). [Learn how to get started using our library with LLMs](https://github.com/bcgov/design-system/blob/main/packages/design-tokens/dist/README.md#using-this-library-with-llms)
 
 ### Changed
 
