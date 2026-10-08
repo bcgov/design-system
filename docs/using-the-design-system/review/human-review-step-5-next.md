@@ -29,7 +29,8 @@ Ask:
 - What must change before moving forward?
 - What can continue for now, if assumptions, conditions, or follow-up actions are documented?
 - Who is responsible for each action or decision?
-- Making your decision
+
+## Make your decision
 
 **If you have enough evidence for the next step**
 
@@ -39,7 +40,7 @@ Do:
 - List any remaining assumptions, conditions, or follow-ups
 - Identify who is responsible for the next step
 
-##Move ahead
+## Move ahead
 
 **If more evidence or review is needed:**
 

@@ -1,6 +1,6 @@
 # How to review AI outputs
 
-This guide is intended to help you review an AI or human generated prototype before you decided to more it forward to the next stage of development.
+This guide is intended to help you review an AI or human generated prototype before you decide to move it forward to the next stage of development.
 
 ## Purpose
 Use this guide to review a prototype before deciding whether to test it, refine it, share it, or move it toward implementation. For this guide, a prototype can be anything used to explore, test, or communicate a service idea, including sketches, wireframes, mock-ups, AI-generated concepts, clickable prototypes, generated code, or proofs of concept.
