@@ -3,11 +3,11 @@
 Use this review before testing, sharing, or investing more time in a prototype.
 A prototype can be a sketch, mockup, AI-generated concept, clickable prototype, proof of concept, or working code.
 
-> **Remember**
-> AI can produce convincing answers and polished designs, but it’s important to review what’s backed by evidence, question anything that can’t be confirmed, and know when to involve a specialist for further review.
+ **Remember**
+AI can produce convincing answers and polished designs, but it’s important to review what’s backed by evidence, question anything that can’t be confirmed, and know when to involve a specialist for further review.
 
 
-## 1.	Are we solving a real problem?
+## 1. Are we solving a real problem?
 
 - Who is this for?
 - What evidence shows this is a real problem or need?
@@ -21,7 +21,7 @@ A prototype can be a sketch, mockup, AI-generated concept, clickable prototype, 
 
 Go deeper: [Step one - confirm you are solving the right problem](human-review-step-1-right-problem.md)
 
-## 2.	Can people complete the task?
+## 2. Can people complete the task?
 
 - Can people complete the main task from start to finish?
 - Can they recover from mistakes or errors?
@@ -35,7 +35,7 @@ Go deeper: [Step one - confirm you are solving the right problem](human-review-s
 
 Go deeper: [Step two - confirm the journey works](human-review-step-2-confirm-journey.md)
 
-## 3.	Does it follow existing standards?
+## 3. Does it follow existing standards?
 
 - Are we using the B.C. Design System where appropriate?
 - Does it meet accessibility and content requirements?
@@ -49,7 +49,7 @@ Go deeper: [Step two - confirm the journey works](human-review-step-2-confirm-jo
 
 Go deeper: [Step three - check the standards and patterns](human-review-step-3-standards-and-patterns.md)
 
-## 4.	Could this create barriers?
+## 4. Could this create barriers?
 
 - Who might struggle with this experience?
 - Have we considered people with different circumstances, abilities, and levels of digital confidence?
@@ -63,7 +63,7 @@ Go deeper: [Step three - check the standards and patterns](human-review-step-3-s
 
 Go deeper: [Step four - check for an inclusive experience](human-review-step-4-inclusive-experience.md)
 
-## 5.	What should happen next?
+## 5. What should happen next?
 
 Based on the evidence available today:
 
