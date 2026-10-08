@@ -10,14 +10,14 @@ This is a milestone release that adds system prompts and design guidance for LLM
 
 ### Changed
 
-- 913 (adding unit tests - confirm this line item before release)
-- TextField: apply correct styling to error icon when an input is inavlid
 - Calendar: added support for multiple selections
 - Checkbox: added support for optional description and error message slots on individual checkboxes
-- Radio: added support for optional description and error message slots on individual radios
-- Switch: added support for optional description and error message slots
 - Icon components: added proper typing using `React.SVGProps`, new `title` and `size` props, and Figma Code Connect mappings (for select icons)
 - Menu: fixed error causing incompatibility error with the `onAction` callback
+- Radio: added support for optional description and error message slots on individual radios
+- Switch: added support for optional description and error message slots
+- TextArea: properly constrained input when `maxLength` is set, applied correct styling when an input is invalid, and added unit tests
+- TextField: applied correct styling to error icon when an input is invalid and added unit tests
 - Reorganized and linted CSS stylesheets for all components
 
 ### Removed
