@@ -6,20 +6,19 @@ This is a milestone release that adds system prompts and design guidance for LLM
 
 ### Added
 
-- Added instructions for AI agents, learn how to get started [using our library with LLMs](https://github.com/bcgov/design-system/tree/main/packages/react-components#using-this-library-with-llms)
-- Added content design guidance for LLMs
+- Added instructions for AI agents (`AGENTS.md`). [Learn how to get started using our library with LLMs](https://github.com/bcgov/design-system/tree/main/packages/react-components#using-this-library-with-llms)
 
 ### Changed
 
 - 913 (adding unit tests - confirm this line item before release)
-- Enhancements to error fields in text fields and text areas
-- Calendar: add support for multiple selections
+- TextField: apply correct styling to error icon when an input is inavlid
+- Calendar: added support for multiple selections
 - Checkbox: added support for optional description and error message slots on individual checkboxes
 - Radio: added support for optional description and error message slots on individual radios
 - Switch: added support for optional description and error message slots
-- Icon: added Code Connect mappings for select icons, props to each component and basic accessibility requirements
+- Icon components: added proper typing using `React.SVGProps`, new `title` and `size` props, and Figma Code Connect mappings (for select icons)
 - Menu: fixed error causing incompatibility error with the `onAction` callback
-- CSS linting improvements with no visual impact on components
+- Reorganized and linted CSS stylesheets for all components
 
 ### Removed
 
