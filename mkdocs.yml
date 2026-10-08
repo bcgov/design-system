@@ -7,7 +7,7 @@ nav:
   - Introduction: index.md
   - Using the design system:
       - Design:
-          - Figma Make: using-the-design-system/design/figma-make/figma-make.md
+          - Figma Make: using-the-design-system/design/figma-make.md
       - Develop:
           - Configuration: using-the-design-system/develop/configuration.md
       - Review:

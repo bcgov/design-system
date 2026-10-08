@@ -7,10 +7,10 @@ The B.C. Design System provides reusable components, guidance, and resources to 
 Choose the area that best matches what you're trying to do:
 
 ### Design
+
 Use the B.C. Design System in design and prototyping tools. Learn how to access design assets, build prototypes, and create experiences that align with your human-centred research and Design System standards.
 
-- [Improve your workflow when using AI tools such as Figma Make](using-the-design-system/design/figma-make/figma-make.md)
-
+- [Improve your workflow when using AI tools such as Figma Make](using-the-design-system/design/figma-make.md)
 
 ### Develop
 
@@ -35,7 +35,6 @@ The design system provides:
 
 To support cross-functional collaboration, designers can access design tokens and components via a [managed Figma library](https://www.figma.com/design/6BAmnRmL9FXxY2bkkSYiQj/B.C.-Design-System?m=auto&node-id=0-1&t=7ugpTBbyJUtB7AeG-1).
 
-
 ## How to get started
 
 To get started with the design system, install the appropriate package via npm.
@@ -44,7 +43,6 @@ There are two separate packages:
 
 - [@bcgov/design-tokens](https://www.npmjs.com/package/@bcgov/design-tokens)
 - [@bcgov/design-system-react-components](https://www.npmjs.com/package/@bcgov/design-system-react-components)
-
 
 ## Getting help
 
@@ -63,5 +61,3 @@ Interactive examples and detailed technical documentation for each component are
 ## Cost
 
 There is no cost to use the design system.
-
-
