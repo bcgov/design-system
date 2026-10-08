@@ -161,7 +161,7 @@ Start from an existing Figma design. Copy the frame in Figma and paste it into t
 
 Don't paste a Figma link into your prompt. Make may read the link instead of the design.
 
-For the best results when coping from:
+For the best results when copying from:
 
 **Figma Design to Figma Make**
 
