@@ -86,6 +86,6 @@ jobs:
         run: npx playwright install --with-deps
         working-directory: ./packages/react-components
 
-      - name: Serve Storybook and run tests
+      - name: Run accessibility tests
         run: npm run test-storybook
         working-directory: ./packages/react-components
