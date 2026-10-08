@@ -33,7 +33,7 @@ Go deeper: [Step one - confirm you are solving the right problem](human-review-s
 - [ ] Journey needs improvement
 - [ ] Journey should be redesigned
 
-Go deeper: [Step two - confirm the journey works](step-2-confirm-journey.md)
+Go deeper: [Step two - confirm the journey works](human-review-step-2-confirm-journey.md)
 
 ## 3.	Does it follow existing standards?
 
@@ -47,7 +47,7 @@ Go deeper: [Step two - confirm the journey works](step-2-confirm-journey.md)
 - [ ] Needs review or revision
 - [ ] Significant issues remain
 
-Go deeper: [Step three - check the standards and patterns](step-3-standards-and-patterns.md)
+Go deeper: [Step three - check the standards and patterns](human-review-step-3-standards-and-patterns.md)
 
 ## 4.	Could this create barriers?
 
@@ -61,7 +61,7 @@ Go deeper: [Step three - check the standards and patterns](step-3-standards-and-
 - [ ] More testing needed
 - [ ] Barrier or risk identified
 
-Go deeper: [Step four - check for an inclusive experience](step-4-inclusive-experience.md)
+Go deeper: [Step four - check for an inclusive experience](human-review-step-4-inclusive-experience.md)
 
 ## 5.	What should happen next?
 
@@ -73,4 +73,4 @@ Based on the evidence available today:
 - [ ] Gather more evidence
 - [ ] Stop and reconsider
 
-Go deeper: [Step five - decide what to do next](step-5-next.md)
+Go deeper: [Step five - decide what to do next](human-review-step-5-next.md)
