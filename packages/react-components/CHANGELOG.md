@@ -27,7 +27,7 @@ This is a milestone release that adds system prompts and design guidance for LLM
 This release uses:
 
 - `react-aria-components` v1.21.0
-- `@bcgov/design-tokens` v5.5.5
+- `@bcgov/design-tokens` v5.1.0
 
 ## 0.8.1
 

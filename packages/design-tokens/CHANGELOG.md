@@ -37,7 +37,7 @@ This release contains non-breaking changes to token values. There are no changes
 This release uses:
 
 - `@tokens-studio/sd-transforms` v2.0.3
-- `style-dictionary` v5.4.4
+- `style-dictionary` v5.6.0
 
 ## 4.0.0
 
