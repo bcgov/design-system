@@ -24,7 +24,7 @@ Figma Make is an AI prompt-to-code tool built into Figma. It creates working HTM
 
 Figma Make is different from Figma AI features that help you work in a design file.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dBngvnNrWgo?si=MVlls5EHDA4VkDvm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dBngvnNrWgo?si=MVlls5EHDA4VkDvm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Before you begin
 
