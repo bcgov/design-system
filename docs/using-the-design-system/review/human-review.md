@@ -32,6 +32,7 @@ If something is missing, record that gap. Do not make assumptions to fill that g
 
 ## Start your review
 
+* [Quick start](human-review-quickstart.md)
 * [Step 1: Right Problem](human-review-step-1-right-problem.md)
 * [Step 2: Confirm the Journey](human-review-step-2-confirm-journey.md)
 * [Step 3: Standards and Patterns](human-review-step-3-standards-and-patterns.md)
