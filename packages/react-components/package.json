@@ -66,7 +66,7 @@
     "@storybook/addon-a11y": "10.6.1",
     "@storybook/addon-docs": "10.6.1",
     "@storybook/addon-links": "10.6.1",
-    "@storybook/addon-mcp": "0.7.0",
+    "@storybook/addon-mcp": "10.6.1",
     "@storybook/addon-vitest": "10.6.1",
     "@storybook/mcp": "10.6.1",
     "@storybook/react-vite": "10.6.1",
