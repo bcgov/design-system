@@ -12,6 +12,7 @@ import {
 import "./TimeField.css";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 import Text from "../Text";
+import getTimeZoneLabel from "../../utils/getTimeZoneLabel";
 
 export interface TimeFieldProps<
   T extends TimeValue,
@@ -24,8 +25,6 @@ export interface TimeFieldProps<
   description?: string;
   /* Used for data validation and error handling */
   errorMessage?: string | ((validation: ValidationResult) => string);
-  /* Overrides the time zone label for specific IANA time zones */
-  timeZoneLabels?: Record<string, string>;
 }
 
 export default function TimeField<T extends TimeValue>({
@@ -33,7 +32,6 @@ export default function TimeField<T extends TimeValue>({
   label,
   description,
   errorMessage,
-  timeZoneLabels = { "America/Vancouver": "PCT", "Canada/Pacific": "PCT" },
   ...props
 }: TimeFieldProps<T>) {
   return (
@@ -44,6 +42,7 @@ export default function TimeField<T extends TimeValue>({
       {({ isRequired, isInvalid, state }) => {
         /* Get the current time zone */
         const timeZone = state.dateFormatter.resolvedOptions().timeZone;
+        const timeZoneLabel = getTimeZoneLabel(timeZone);
 
         return (
           <>
@@ -66,9 +65,7 @@ export default function TimeField<T extends TimeValue>({
                   >
                     {/* Rewrite time zone label */}
                     {({ type, text }) =>
-                      type === "timeZoneName"
-                        ? (timeZoneLabels?.[timeZone] ?? text)
-                        : text
+                      type === "timeZoneName" ? (timeZoneLabel ?? text) : text
                     }
                   </DateSegment>
                 )}
