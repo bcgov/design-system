@@ -86,6 +86,10 @@ Use `hideTimeZone` to hide the time-zone abbreviation:
 
 <Canvas of={TimeFieldStories.HideTimeZone} />
 
+Use `timeZoneLabels` to replace the time-zone abbreviation for specific IANA time zones. Time zones not listed keep their default label. The label only appears when the value is a `ZonedDateTime`:
+
+<Canvas of={TimeFieldStories.CustomTimeZoneLabel} />
+
 The `granularity` prop sets the smallest unit. Choose from `hour`, `minute` (default) or `second`:
 
 <Canvas of={TimeFieldStories.SecondGranularity} />

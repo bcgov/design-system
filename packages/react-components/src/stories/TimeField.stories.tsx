@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { now, getLocalTimeZone, Time } from "@internationalized/date";
+import { expect } from "storybook/test";
 
 import { TimeField } from "@/components";
 
@@ -41,6 +42,11 @@ const meta = {
       control: { type: "boolean" },
       description: "Whether to hide the time zone abbreviation",
       table: { defaultValue: { summary: "false" } },
+    },
+    timeZoneLabels: {
+      control: "object",
+      description:
+        'Overrides the time zone abbreviation for specific IANA time zones, e.g. `{ "America/Vancouver": "PT" }`. Time zones not listed use the default label',
     },
     shouldForceLeadingZeros: {
       control: { type: "boolean" },
@@ -123,6 +129,18 @@ export const HideTimeZone: Story = {
   args: {
     ...TimeFieldTemplate.args,
     hideTimeZone: true,
+  },
+};
+
+export const CustomTimeZoneLabel: Story = {
+  ...TimeFieldTemplate,
+  args: {
+    ...TimeFieldTemplate.args,
+    defaultValue: now("America/Vancouver"),
+    timeZoneLabels: { "America/Vancouver": "PCT" },
+  },
+  play: async ({ canvas }) => {
+    await expect(canvas.getByText("PT")).toBeInTheDocument();
   },
 };
 

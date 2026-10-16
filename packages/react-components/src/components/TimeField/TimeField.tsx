@@ -24,6 +24,8 @@ export interface TimeFieldProps<
   description?: string;
   /* Used for data validation and error handling */
   errorMessage?: string | ((validation: ValidationResult) => string);
+  /* Overrides the time zone label for specific IANA time zones */
+  timeZoneLabels?: Record<string, string>;
 }
 
 export default function TimeField<T extends TimeValue>({
@@ -31,6 +33,7 @@ export default function TimeField<T extends TimeValue>({
   label,
   description,
   errorMessage,
+  timeZoneLabels = { "America/Vancouver": "PCT", "Canada/Pacific": "PCT" },
   ...props
 }: TimeFieldProps<T>) {
   return (
@@ -38,46 +41,58 @@ export default function TimeField<T extends TimeValue>({
       className={`bcds-react-aria-TimeField ${size}`}
       {...props}
     >
-      {({ isRequired, isInvalid }) => (
-        <>
-          {label && (
-            <Label className="bcds-react-aria-TimeField--Label">
-              {label}
-              {isRequired && (
-                <span className="bcds-react-aria-TimeField--Label required">
-                  (required)
+      {({ isRequired, isInvalid, state }) => {
+        /* Get the current time zone */
+        const timeZone = state.dateFormatter.resolvedOptions().timeZone;
+
+        return (
+          <>
+            {label && (
+              <Label className="bcds-react-aria-TimeField--Label">
+                {label}
+                {isRequired && (
+                  <span className="bcds-react-aria-TimeField--Label required">
+                    (required)
+                  </span>
+                )}
+              </Label>
+            )}
+            <div className="bcds-react-aria-TimeField--InputContainer">
+              <DateInput className="bcds-react-aria-TimeField--Input">
+                {(segment) => (
+                  <DateSegment
+                    className="bcds-react-aria-TimeField--Segment"
+                    segment={segment}
+                  >
+                    {/* Rewrite time zone label */}
+                    {({ type, text }) =>
+                      type === "timeZoneName"
+                        ? (timeZoneLabels?.[timeZone] ?? text)
+                        : text
+                    }
+                  </DateSegment>
+                )}
+              </DateInput>
+              {isInvalid && (
+                <span className="bcds-react-aria-TimeField--ErrorIcon">
+                  <SvgExclamationIcon />
                 </span>
               )}
-            </Label>
-          )}
-          <div className="bcds-react-aria-TimeField--InputContainer">
-            <DateInput className="bcds-react-aria-TimeField--Input">
-              {(segment) => (
-                <DateSegment
-                  className="bcds-react-aria-TimeField--Segment"
-                  segment={segment}
-                />
-              )}
-            </DateInput>
-            {isInvalid && (
-              <span className="bcds-react-aria-TimeField--ErrorIcon">
-                <SvgExclamationIcon />
-              </span>
+            </div>
+            {description && (
+              <Text
+                slot="description"
+                className="bcds-react-aria-TimeField--Description"
+              >
+                {description}
+              </Text>
             )}
-          </div>
-          {description && (
-            <Text
-              slot="description"
-              className="bcds-react-aria-TimeField--Description"
-            >
-              {description}
-            </Text>
-          )}
-          <FieldError className="bcds-react-aria-TimeField--Error">
-            {errorMessage}
-          </FieldError>
-        </>
-      )}
+            <FieldError className="bcds-react-aria-TimeField--Error">
+              {errorMessage}
+            </FieldError>
+          </>
+        );
+      }}
     </ReactAriaTimeField>
   );
 }
