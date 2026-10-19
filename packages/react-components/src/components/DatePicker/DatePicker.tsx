@@ -90,7 +90,6 @@ export default function DatePicker<T extends DateValue>({
   description,
   errorMessage,
   showFormatHelpText = true,
-  isRequired = false,
   isCalendarDisabled = false,
   isBrowserLocaleUsed = false,
   ...props
@@ -101,7 +100,7 @@ export default function DatePicker<T extends DateValue>({
       className={`bcds-react-aria-DatePicker ${size}`}
       {...props}
     >
-      {({ isInvalid }) => (
+      {({ isRequired, isInvalid }) => (
         <>
           {label && (
             <Label className="bcds-react-aria-DatePicker--Label">
