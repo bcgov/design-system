@@ -87,7 +87,7 @@
     "globals": "17.13.0",
     "jsdom": "29.1.1",
     "playwright": "1.63.0",
-    "prettier": "3.9.9",
+    "prettier": "3.9.10",
     "rollup": "4.64.0",
     "rollup-plugin-dts": "6.5.1",
     "rollup-plugin-peer-deps-external": "2.2.4",
