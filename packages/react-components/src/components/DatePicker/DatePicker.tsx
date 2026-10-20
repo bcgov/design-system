@@ -3,7 +3,6 @@ import {
   DatePickerProps as ReactAriaDatePickerProps,
   DateValue,
   DateInput,
-  DateSegment,
   FieldError,
   Group,
   Label,
@@ -20,6 +19,7 @@ import { useDateFormatter } from "@react-aria/i18n";
 import "./DatePicker.css";
 import Button from "../Button";
 import Calendar from "../Calendar";
+import DateSegment from "../DateSegment";
 import Dialog from "../Dialog";
 import Separator from "../Separator";
 import SvgCalendarIcon from "../Icons/SvgCalendarIcon";

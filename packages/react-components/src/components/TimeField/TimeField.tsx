@@ -6,13 +6,12 @@ import {
   Label,
   ValidationResult,
   DateInput,
-  DateSegment,
 } from "react-aria-components";
 
 import "./TimeField.css";
+import DateSegment from "../DateSegment";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 import Text from "../Text";
-import getTimeZoneLabel from "../../utils/getTimeZoneLabel";
 
 export interface TimeFieldProps<
   T extends TimeValue,
@@ -39,57 +38,46 @@ export default function TimeField<T extends TimeValue>({
       className={`bcds-react-aria-TimeField ${size}`}
       {...props}
     >
-      {({ isRequired, isInvalid, state }) => {
-        /* Get the current time zone */
-        const timeZone = state.dateFormatter.resolvedOptions().timeZone;
-        const timeZoneLabel = getTimeZoneLabel(timeZone);
-
-        return (
-          <>
-            {label && (
-              <Label className="bcds-react-aria-TimeField--Label">
-                {label}
-                {isRequired && (
-                  <span className="bcds-react-aria-TimeField--Label required">
-                    (required)
-                  </span>
-                )}
-              </Label>
-            )}
-            <div className="bcds-react-aria-TimeField--InputContainer">
-              <DateInput className="bcds-react-aria-TimeField--Input">
-                {(segment) => (
-                  <DateSegment
-                    className="bcds-react-aria-TimeField--Segment"
-                    segment={segment}
-                  >
-                    {/* Rewrite time zone label */}
-                    {({ type, text }) =>
-                      type === "timeZoneName" ? (timeZoneLabel ?? text) : text
-                    }
-                  </DateSegment>
-                )}
-              </DateInput>
-              {isInvalid && (
-                <span className="bcds-react-aria-TimeField--ErrorIcon">
-                  <SvgExclamationIcon />
+      {({ isRequired, isInvalid }) => (
+        <>
+          {label && (
+            <Label className="bcds-react-aria-TimeField--Label">
+              {label}
+              {isRequired && (
+                <span className="bcds-react-aria-TimeField--Label required">
+                  (required)
                 </span>
               )}
-            </div>
-            {description && (
-              <Text
-                slot="description"
-                className="bcds-react-aria-TimeField--Description"
-              >
-                {description}
-              </Text>
+            </Label>
+          )}
+          <div className="bcds-react-aria-TimeField--InputContainer">
+            <DateInput className="bcds-react-aria-TimeField--Input">
+              {(segment) => (
+                <DateSegment
+                  className="bcds-react-aria-TimeField--Segment"
+                  segment={segment}
+                />
+              )}
+            </DateInput>
+            {isInvalid && (
+              <span className="bcds-react-aria-TimeField--ErrorIcon">
+                <SvgExclamationIcon />
+              </span>
             )}
-            <FieldError className="bcds-react-aria-TimeField--Error">
-              {errorMessage}
-            </FieldError>
-          </>
-        );
-      }}
+          </div>
+          {description && (
+            <Text
+              slot="description"
+              className="bcds-react-aria-TimeField--Description"
+            >
+              {description}
+            </Text>
+          )}
+          <FieldError className="bcds-react-aria-TimeField--Error">
+            {errorMessage}
+          </FieldError>
+        </>
+      )}
     </ReactAriaTimeField>
   );
 }
