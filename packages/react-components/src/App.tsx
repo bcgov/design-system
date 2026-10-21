@@ -12,7 +12,7 @@ import {
   MenuItem,
   MenuTrigger,
 } from "@/components";
-import useWindowDimensions from "@/hooks/useWindowDimensions";
+import useWindowDimensions from "@/app/hooks/useWindowDimensions";
 import {
   AccordionGroupPage,
   AlertBannerPage,
