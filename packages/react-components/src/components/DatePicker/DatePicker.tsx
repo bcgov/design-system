@@ -3,7 +3,6 @@ import {
   DatePickerProps as ReactAriaDatePickerProps,
   DateValue,
   DateInput,
-  DateSegment,
   FieldError,
   Group,
   Label,
@@ -20,6 +19,7 @@ import { useDateFormatter } from "@react-aria/i18n";
 import "./DatePicker.css";
 import Button from "../Button";
 import Calendar from "../Calendar";
+import DateSegment from "../DateSegment";
 import Dialog from "../Dialog";
 import Separator from "../Separator";
 import SvgCalendarIcon from "../Icons/SvgCalendarIcon";
@@ -90,7 +90,6 @@ export default function DatePicker<T extends DateValue>({
   description,
   errorMessage,
   showFormatHelpText = true,
-  isRequired = false,
   isCalendarDisabled = false,
   isBrowserLocaleUsed = false,
   ...props
@@ -101,7 +100,7 @@ export default function DatePicker<T extends DateValue>({
       className={`bcds-react-aria-DatePicker ${size}`}
       {...props}
     >
-      {({ isInvalid }) => (
+      {({ isRequired, isInvalid }) => (
         <>
           {label && (
             <Label className="bcds-react-aria-DatePicker--Label">

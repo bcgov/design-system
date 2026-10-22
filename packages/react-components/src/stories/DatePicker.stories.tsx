@@ -1,5 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { getLocalTimeZone, today, isWeekend } from "@internationalized/date";
+import {
+  getLocalTimeZone,
+  today,
+  isWeekend,
+  now,
+} from "@internationalized/date";
 import { useLocale } from "react-aria-components";
 
 import { DatePicker } from "../components";
@@ -171,6 +176,7 @@ export const DateAndTime: Story = {
     label: "Label",
     description: "Description",
     granularity: "minute",
+    defaultValue: now("America/Vancouver"),
   },
 };
 
