@@ -127,6 +127,10 @@
   background-color: var(--surface-color-forms-disabled);
   color: var(--typography-color-primary);
 }
+.bcds-react-aria-DatePicker--Segment[data-focused][data-type="timeZoneName"] {
+  background-color: var(--surface-color-forms-disabled);
+  color: var(--typography-color-secondary);
+}
 .bcds-react-aria-DatePicker > .bcds-react-aria-Button[data-focused] {
   outline: none;
 }
