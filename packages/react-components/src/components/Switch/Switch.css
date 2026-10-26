@@ -29,7 +29,7 @@
   align-items: center;
   font: var(--typography-regular-small-body);
   color: var(--typography-color-danger);
-  > svg {
+  & > svg {
     padding-right: var(--layout-padding-xsmall);
     color: var(--icons-color-danger);
     width: var(--icons-size-medium);
@@ -77,7 +77,7 @@
 /* Hover */
 .bcds-react-aria-Switch--Button[data-hovered] {
   cursor: pointer;
-  .bcds-react-aria-Switch--Handle {
+  & .bcds-react-aria-Switch--Handle {
     border: var(--layout-border-width-medium) solid
       var(--surface-color-border-dark);
   }
@@ -95,7 +95,7 @@
 .bcds-react-aria-Switch--Button[data-selected]
   > .bcds-react-aria-Switch--Track {
   background-color: var(--surface-color-primary-default);
-  > .bcds-react-aria-Switch--Handle {
+  & > .bcds-react-aria-Switch--Handle {
     transform: translateX(100%);
     border: var(--layout-border-width-medium) solid
       var(--surface-color-primary-default);
@@ -111,9 +111,9 @@
 .bcds-react-aria-Switch--Button[data-disabled] {
   color: var(--typography-color-disabled);
   cursor: not-allowed;
-  > .bcds-react-aria-Switch--Track {
+  & > .bcds-react-aria-Switch--Track {
     background-color: var(--surface-color-primary-disabled);
-    > .bcds-react-aria-Switch--Handle {
+    & > .bcds-react-aria-Switch--Handle {
       background-color: var(--theme-gray-10);
       border: var(--layout-border-width-medium) solid
         var(--surface-color-border-default);
@@ -124,10 +124,10 @@
 /* Compound states */
 
 .bcds-react-aria-Switch--Button[data-hovered][data-selected] {
-  .bcds-react-aria-Switch--Track {
+  & .bcds-react-aria-Switch--Track {
     background-color: var(--surface-color-primary-hover);
   }
-  .bcds-react-aria-Switch--Handle {
+  & .bcds-react-aria-Switch--Handle {
     border: var(--layout-border-width-medium) solid
       var(--surface-color-primary-hover);
   }
