@@ -4,12 +4,17 @@
 
 import figma from "figma";
 
-const icon = figma.selectedInstance
-  .getInstanceSwap("Icon placeholder")
-  ?.executeTemplate().example;
+const iconInstance = figma.selectedInstance.getInstanceSwap("Icon placeholder");
+const icon =
+  figma.selectedInstance.getBoolean("Show icon") &&
+  iconInstance?.type === "INSTANCE"
+    ? iconInstance.executeTemplate().example
+    : undefined;
+// "Light" has no equivalent in the Tag component
 const color = figma.selectedInstance.getEnum("Color", {
-  "Theme blue": "blue",
+  "Theme blue": "bc-blue",
   "Theme gold": "bc-gold",
+  Blue: "blue",
   Dark: "dark",
   Gray: "grey",
   Green: "green",
@@ -21,6 +26,7 @@ const tagStyle = figma.selectedInstance.getEnum("Style", {
   Circular: "circular",
 });
 const size = figma.selectedInstance.getEnum("Size", {
+  Xsmall: "xsmall",
   Small: "small",
   Medium: "medium",
 });
@@ -33,5 +39,9 @@ export default {
   id: "Tag",
   imports: ["import { Tag } from '@bcgov/design-system-react-components';"],
   example: figma.code`<Tag${renderProp("icon", icon)}${renderProp("color", color)}${renderProp("tagStyle", tagStyle)}${renderProp("size", size)}${renderProp("isDisabled", isDisabled)}>${renderChildren(children)}</Tag>`,
-  metadata: { nestable: true },
+  // Read by the TagGroup template to build TagList items
+  metadata: {
+    nestable: true,
+    props: { textValue: children, color, tagStyle, size },
+  },
 };

@@ -21,12 +21,7 @@ const description =
     ? descriptionHandle.textContent
     : undefined;
 
-const errorTextHandle = figma.selectedInstance.findText("Error text");
-const errorText =
-  errorTextHandle.type !== "ERROR" ? errorTextHandle.textContent : undefined;
-const errorMessage = figma.selectedInstance.getEnum("State", {
-  Error: errorText,
-});
+const isInvalid = figma.selectedInstance.getEnum("State", { Error: true });
 
 const isDisabled = figma.selectedInstance.getEnum("State", { Disabled: true });
 
@@ -37,6 +32,6 @@ export default {
   imports: [
     "import { TextArea } from '@bcgov/design-system-react-components';",
   ],
-  example: figma.code`<TextArea${renderProp("label", label)}${renderProp("description", description)}${renderProp("isRequired", isRequired)}${renderProp("isDisabled", isDisabled)}${renderProp("errorMessage", errorMessage)}/>`,
+  example: figma.code`<TextArea${renderProp("label", label)}${renderProp("description", description)}${renderProp("isRequired", isRequired)}${renderProp("isDisabled", isDisabled)}${renderProp("isInvalid", isInvalid)}/>`,
   metadata: { nestable: true },
 };

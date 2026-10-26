@@ -14,6 +14,13 @@ const isDisabled = figma.selectedInstance.getEnum("State", { Disabled: true });
 const buttonTextHandle = figma.selectedInstance.findText("Button Text");
 const children =
   buttonTextHandle.type !== "ERROR" ? buttonTextHandle.textContent : undefined;
+const iconButtonInstance = figma.selectedInstance.getInstanceSwap(
+  "Icon button placeholder"
+);
+const iconButtonIcon =
+  isIconButton && iconButtonInstance?.type === "INSTANCE"
+    ? iconButtonInstance.executeTemplate().example
+    : undefined;
 const iconLeft = figma.selectedInstance.getBoolean("Icon left", {
   true: figma.selectedInstance
     .getInstanceSwap("Icon left placeholder")
@@ -34,6 +41,6 @@ export default {
   imports: [
     "import { ToggleButton } from '@bcgov/design-system-react-components';",
   ],
-  example: figma.code`<ToggleButton${renderProp("size", size)}${renderProp("isIconButton", isIconButton)}${renderProp("isSelected", isSelected)}${renderProp("isDisabled", isDisabled)}>${iconLeft ?? ""}${renderChildren(children)}${iconRight ?? ""}</ToggleButton>`,
+  example: figma.code`<ToggleButton${renderProp("size", size)}${renderProp("isIconButton", isIconButton)}${renderProp("isSelected", isSelected)}${renderProp("isDisabled", isDisabled)}>${iconButtonIcon ?? figma.code`${iconLeft ?? ""}${renderChildren(children)}${iconRight ?? ""}`.sections}</ToggleButton>`,
   metadata: { nestable: true },
 };

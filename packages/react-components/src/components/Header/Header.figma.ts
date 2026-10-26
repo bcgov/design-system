@@ -7,9 +7,14 @@ import figma from "figma";
 const logoImage = figma.selectedInstance
   .getInstanceSwap("Logo")
   ?.executeTemplate().example;
+const titleHandle = figma.selectedInstance.findText("Title");
+const title =
+  figma.selectedInstance.getBoolean("Show title") &&
+  titleHandle.type !== "ERROR"
+    ? titleHandle.textContent
+    : undefined;
 const children = figma.properties.children(["Header content"]);
-const hasSubheader = figma.selectedInstance.getBoolean("Has subheader");
-const subheaderChildren = figma.selectedInstance.getSlot("Slot 2");
+const hasSubheader = figma.selectedInstance.getBoolean("Subheader");
 const imports = hasSubheader
   ? [
       "import { Header, Subheader } from '@bcgov/design-system-react-components';",
@@ -18,14 +23,16 @@ const imports = hasSubheader
 
 const { renderProp, renderChildren } = figma.helpers.react;
 
+const header = figma.code`<Header${renderProp("logoImage", logoImage)}${renderProp("title", title)}>${renderChildren(children)}</Header>`;
+
 export default {
   id: "Header",
   imports,
   example: hasSubheader
     ? figma.code`<>
-  <Header${renderProp("logoImage", logoImage)}>${renderChildren(children)}</Header>
-  <Subheader>${renderChildren(subheaderChildren)}</Subheader>
+  ${header.sections}
+  <Subheader></Subheader>
 </>`
-    : figma.code`<Header${renderProp("logoImage", logoImage)}>${renderChildren(children)}</Header>`,
+    : header,
   metadata: { nestable: true },
 };
