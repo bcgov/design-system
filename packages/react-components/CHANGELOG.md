@@ -2,7 +2,7 @@
 
 ## 0.9.0
 
-This is a milestone release that adds system prompts and design guidance for LLMs, and updates existing components to use new React Aria APIs
+This is a milestone release that adds system prompts and design guidance for LLMs, and updates existing components to use new React Aria APIs.
 
 ### Added
 
