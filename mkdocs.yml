@@ -5,9 +5,23 @@ repo_url: "https://github.com/bcgov/design-system"
 edit_uri: edit/main/docs
 nav:
   - Introduction: index.md
-  - Getting started: getting-started.md
-  - Configuration: configuration.md
-  - About us: about-us.md
+  - Using the design system:
+      - Design:
+          - Figma Make: using-the-design-system/design/figma-make.md
+      - Develop:
+          - Configuration: using-the-design-system/develop/configuration.md
+      - Review:
+          - Review AI output:
+              - Overview: using-the-design-system/review/human-review.md
+              - Quickstart guide: using-the-design-system/review/human-review-quickstart.md
+              - Step 1 - right problem: using-the-design-system/review/human-review-step-1-right-problem.md
+              - Step 2 - confirm journey: using-the-design-system/review/human-review-step-2-confirm-journey.md
+              - Step 3 - standards and patterns: using-the-design-system/review/human-review-step-3-standards-and-patterns.md
+              - Step 4 - inclusive experience: using-the-design-system/review/human-review-step-4-inclusive-experience.md
+              - Step 5 - next steps: using-the-design-system/review/human-review-step-5-next.md
+  - Contribute: contribute.md
+  - About the design system: about-the-design-system.md
+  - Contact us: contact-us.md
 plugins:
   - techdocs-core
   - git-revision-date-localized

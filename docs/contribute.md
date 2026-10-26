@@ -1,10 +1,4 @@
-# About us
-
-The B.C. Design System is maintained by the Corporate Online Services branch at Connected Services BC, part of the Ministry of Citizens' Services. It is part of a product portfolio that also includes gov.bc.ca, CMS Lite, search and virtual assistants.
-
-To contact the design system team, email [designsystem@gov.bc.ca](mailto:designsystem@gov.bc.ca).
-
-## Contribute to the design system
+# Contribute to the design system
 
 The design system is an open source project. We welcome feedback, ideas or contributions from the design and development communities.
 
