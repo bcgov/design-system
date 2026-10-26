@@ -29,6 +29,8 @@ export default {
      * `.react-aria-Button`.
      */
     "selector-class-pattern": null,
+    /** Nested selectors must start with &. Prevents jsdom errors when parsing nested rules */
+    "selector-nested-pattern": "^&",
     "unit-no-unknown": true,
   },
 };
