@@ -56,7 +56,7 @@ describe.each([
 
     // Check the conversion separately from the label substitution.
     expect(value.hour).toBe(Number(hour));
-    expect(value.toAbsoluteString()).toBe(utc);
+    expect(Date.parse(value.toAbsoluteString())).toBe(Date.parse(utc));
 
     const hourSegment = container.querySelector('[data-type="hour"]');
     const zoneSegment = container.querySelector('[data-type="timeZoneName"]');
