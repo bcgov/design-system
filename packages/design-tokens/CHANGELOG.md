@@ -16,7 +16,7 @@ This is a minor release that improves support for using this library with AI too
 This release uses:
 
 - `@tokens-studio/sd-transforms` v2.0.3
-- `style-dictionary` v5.5.5
+- `style-dictionary` v5.7.0
 
 ## 5.0.0
 
