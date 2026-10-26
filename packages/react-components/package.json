@@ -45,7 +45,7 @@
     "dist/cjs"
   ],
   "dependencies": {
-    "@bcgov/design-tokens": "5.0.0",
+    "@bcgov/design-tokens": "5.1.0",
     "@react-aria/datepicker": "3.17.1",
     "@react-aria/i18n": "3.13.1",
     "react-aria-components": "1.22.1"
