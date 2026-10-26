@@ -15,13 +15,13 @@ const zone = "America/Vancouver";
 const fixtures = [
   {
     name: "historical winter",
-    utc: "2026-01-15T17:30:00.000Z",
+    utc: "2026-01-15T17:30:00Z",
     hour: "09",
     label: "PST",
   },
   {
     name: "historical summer",
-    utc: "2026-07-15T16:30:00.000Z",
+    utc: "2026-07-15T16:30:00Z",
     hour: "09",
     label: "PDT",
   },
