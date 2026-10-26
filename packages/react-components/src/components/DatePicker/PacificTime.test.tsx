@@ -15,25 +15,25 @@ const zone = "America/Vancouver";
 const fixtures = [
   {
     name: "historical winter",
-    utc: "2026-01-15T17:30:00Z",
+    utc: "2026-01-15T17:30:00.000Z",
     hour: "09",
     label: "PST",
   },
   {
     name: "historical summer",
-    utc: "2026-07-15T16:30:00Z",
+    utc: "2026-07-15T16:30:00.000Z",
     hour: "09",
     label: "PDT",
   },
   {
     name: "after no-fallback boundary",
-    utc: "2026-11-01T09:30:00Z",
+    utc: "2026-11-01T09:30:00.000Z",
     hour: "02",
     label: "PCT",
   },
   {
     name: "future winter",
-    utc: "2027-01-15T17:30:00Z",
+    utc: "2027-01-15T17:30:00.000Z",
     hour: "10",
     label: "PCT",
   },
