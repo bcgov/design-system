@@ -30,7 +30,7 @@ RUN STORYBOOK_GITHUB_SHA=$GITHUB_SHA npm run storybook-build
 # -----------
 # Serve stage
 # -----------
-FROM nginxinc/nginx-unprivileged:alpine AS serve-stage
+FROM nginx/nginx-unprivileged:alpine AS serve-stage
 
 # Copy nginx configuration
 COPY ./nginx.storybook.conf /etc/nginx/nginx.conf
