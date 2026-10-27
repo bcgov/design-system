@@ -1,3 +1,7 @@
+/**
+ * This component wraps React Aria's DateSegment in order to apply the "PCT" time zone label in TimeField and DatePicker.
+ */
+
 import {
   DateSegment as ReactAriaDateSegment,
   DateSegmentProps,
