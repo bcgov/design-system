@@ -29,8 +29,11 @@ export default {
      * `.react-aria-Button`.
      */
     "selector-class-pattern": null,
-    /** Nested selectors must start with &. Prevents jsdom errors when parsing nested rules */
-    "selector-nested-pattern": "^&",
+    /**
+     * jsdom's CSS parser (used by Vitest via css: `true` setting) doesn't support relaxed nesting and will throw errors.
+     * splitList checks each selector in a list individually.
+     */
+    "selector-nested-pattern": ["^&", { splitList: true }],
     "unit-no-unknown": true,
   },
 };
