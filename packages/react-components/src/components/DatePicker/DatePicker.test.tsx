@@ -126,7 +126,7 @@ describe("DatePicker component", () => {
         const { container } = render(
           <DatePicker
             label="Select date"
-            defaultValue={parseZonedDateTime(`2026-01-15T09:30[${timeZone}]`)}
+            defaultValue={parseZonedDateTime(`2027-01-15T09:30[${timeZone}]`)}
           />
         );
 

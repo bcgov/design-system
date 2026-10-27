@@ -17,7 +17,7 @@ describe("TimeField component", () => {
         const { container } = render(
           <TimeField
             label="Select time"
-            defaultValue={parseZonedDateTime(`2026-01-15T09:30[${timeZone}]`)}
+            defaultValue={parseZonedDateTime(`2027-01-15T09:30[${timeZone}]`)}
           />
         );
 

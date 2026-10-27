@@ -11,9 +11,12 @@ import useTimeZoneLabel from "./useTimeZoneLabel";
 type DateFieldState = NonNullable<ContextType<typeof DateFieldStateContext>>;
 type TimeFieldState = NonNullable<ContextType<typeof TimeFieldStateContext>>;
 
-/* The hook only reads dateFormatter.resolvedOptions(), so stub just that */
-function stubState<T>(timeZone?: string): T {
+const effectiveFrom = new Date("2026-11-01T02:00:00-07:00");
+
+/* The hook only reads dateFormatter.resolvedOptions() and dateValue, so stub just those */
+function stubState<T>(timeZone?: string, dateValue = effectiveFrom): T {
   return {
+    dateValue,
     dateFormatter: {
       resolvedOptions: () => ({ timeZone }),
     },
@@ -23,18 +26,20 @@ function stubState<T>(timeZone?: string): T {
 function renderWithStates({
   dateFieldTimeZone,
   timeFieldTimeZone,
+  dateValue,
 }: {
   dateFieldTimeZone?: string | null;
   timeFieldTimeZone?: string | null;
+  dateValue?: Date;
 }) {
   const dateFieldState =
     dateFieldTimeZone === undefined
       ? null
-      : stubState<DateFieldState>(dateFieldTimeZone ?? undefined);
+      : stubState<DateFieldState>(dateFieldTimeZone ?? undefined, dateValue);
   const timeFieldState =
     timeFieldTimeZone === undefined
       ? null
-      : stubState<TimeFieldState>(timeFieldTimeZone ?? undefined);
+      : stubState<TimeFieldState>(timeFieldTimeZone ?? undefined, dateValue);
 
   const wrapper = ({ children }: { children: ReactNode }) => (
     <DateFieldStateContext.Provider value={dateFieldState}>
@@ -62,6 +67,32 @@ describe("useTimeZoneLabel", () => {
         expect(renderWithStates({ timeFieldTimeZone: timeZone })).toBe("PCT");
       }
     );
+  });
+
+  describe("respects the effective date", () => {
+    test.each([
+      ["at the effective instant", effectiveFrom],
+      ["after the effective instant", new Date("2027-06-01T12:00:00-07:00")],
+    ])("returns PCT %s", (_, dateValue) => {
+      expect(
+        renderWithStates({ dateFieldTimeZone: "America/Vancouver", dateValue })
+      ).toBe("PCT");
+      expect(
+        renderWithStates({ timeFieldTimeZone: "America/Vancouver", dateValue })
+      ).toBe("PCT");
+    });
+
+    test.each([
+      ["one millisecond before", new Date(effectiveFrom.getTime() - 1)],
+      ["well before", new Date("2026-07-01T12:00:00-07:00")],
+    ])("returns undefined %s the effective instant", (_, dateValue) => {
+      expect(
+        renderWithStates({ dateFieldTimeZone: "America/Vancouver", dateValue })
+      ).toBe(undefined);
+      expect(
+        renderWithStates({ timeFieldTimeZone: "America/Vancouver", dateValue })
+      ).toBe(undefined);
+    });
   });
 
   describe("returns undefined", () => {
