@@ -6,10 +6,10 @@ import {
   Label,
   ValidationResult,
   DateInput,
-  DateSegment,
 } from "react-aria-components";
 
 import "./TimeField.css";
+import DateSegment from "../DateSegment";
 import SvgExclamationIcon from "../Icons/SvgExclamationIcon";
 import Text from "../Text";
 
