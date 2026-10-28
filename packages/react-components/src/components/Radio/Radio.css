@@ -85,17 +85,17 @@
 
 /* Disabled */
 .bcds-react-aria-Radio[data-disabled] {
-  .bcds-react-aria-Radio--Button {
+  & .bcds-react-aria-Radio--Button {
     cursor: not-allowed;
   }
-  .bcds-react-aria-Radio--Label {
+  & .bcds-react-aria-Radio--Label {
     color: var(--typography-color-disabled);
   }
 }
 
 /* Read only */
 .bcds-react-aria-Radio[data-readonly] {
-  .bcds-react-aria-Radio--Button {
+  & .bcds-react-aria-Radio--Button {
     cursor: not-allowed;
   }
 }
@@ -104,10 +104,10 @@
 
 /* Selected + Invalid */
 .bcds-react-aria-Radio[data-selected][data-invalid] {
-  .bcds-react-aria-Radio--Label {
+  & .bcds-react-aria-Radio--Label {
     color: var(--typography-color-danger);
   }
-  .bcds-react-aria-Radio--Indicator {
+  & .bcds-react-aria-Radio--Indicator {
     border: 5px solid var(--support-border-color-danger);
   }
 }
