@@ -29,7 +29,12 @@ const granularity =
       })
     : undefined;
 
-const labelInstance = figma.selectedInstance.findInstance("Label");
+const labelLayer = figma.selectedInstance.findInstance("Label");
+// Some variants name the label instance "Label" and others "Title"
+const labelInstance =
+  labelLayer.type === "INSTANCE"
+    ? labelLayer
+    : figma.selectedInstance.findInstance("Title");
 const label =
   labelInstance.type !== "ERROR"
     ? labelInstance.getString("Label text")
@@ -51,6 +56,7 @@ const description = figma.selectedInstance.getBoolean("Description", {
 });
 
 const isDisabled = figma.selectedInstance.getEnum("State", { Disabled: true });
+const isInvalid = figma.selectedInstance.getEnum("State", { Error: true });
 
 const errorMessageHandle = figma.selectedInstance.findText("Error Message");
 const errorText =
@@ -68,6 +74,6 @@ export default {
   imports: [
     "import { TimeField } from '@bcgov/design-system-react-components';",
   ],
-  example: figma.code`<TimeField${renderProp("size", size)}${renderProp("label", label)}${renderProp("description", description)}${renderProp("granularity", granularity)}${renderProp("hourCycle", hourCycle)}${renderProp("hideTimeZone", hideTimeZone)}${renderProp("isRequired", isRequired)}${renderProp("isDisabled", isDisabled)}${renderProp("errorMessage", errorMessage)}/>`,
+  example: figma.code`<TimeField${renderProp("size", size)}${renderProp("label", label)}${renderProp("description", description)}${renderProp("granularity", granularity)}${renderProp("hourCycle", hourCycle)}${renderProp("hideTimeZone", hideTimeZone)}${renderProp("isRequired", isRequired)}${renderProp("isDisabled", isDisabled)}${renderProp("isInvalid", isInvalid)}${renderProp("errorMessage", errorMessage)}/>`,
   metadata: { nestable: true },
 };

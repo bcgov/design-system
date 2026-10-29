@@ -4,8 +4,7 @@
 
 import figma from "figma";
 
-const isSelected = figma.selectedInstance.getEnum("State", {
-  Inactive: false,
+const isSelected = figma.selectedInstance.getEnum("Selection", {
   Active: true,
 });
 const isIndeterminate = figma.selectedInstance.getEnum("Selection", {
@@ -14,6 +13,7 @@ const isIndeterminate = figma.selectedInstance.getEnum("Selection", {
 const isDisabled = figma.selectedInstance.getEnum("State", {
   Disabled: true,
 });
+const isInvalid = figma.selectedInstance.getEnum("State", { Error: true });
 const showLabel = figma.selectedInstance.getBoolean("Label");
 const labelInstance = figma.selectedInstance.findInstance("Label");
 const labelText =
@@ -34,7 +34,7 @@ export default {
   imports: [
     "import { Checkbox } from '@bcgov/design-system-react-components';",
   ],
-  example: figma.code`<Checkbox${renderProp("isIndeterminate", isIndeterminate)}${renderProp("isSelected", isSelected)}${renderProp("isDisabled", isDisabled)}${renderProp("isRequired", isRequired)}>
+  example: figma.code`<Checkbox${renderProp("isIndeterminate", isIndeterminate)}${renderProp("isSelected", isSelected)}${renderProp("isDisabled", isDisabled)}${renderProp("isInvalid", isInvalid)}${renderProp("isRequired", isRequired)}>
       ${renderChildren(labelText)}
     </Checkbox>`,
   metadata: { nestable: true },

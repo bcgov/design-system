@@ -4,6 +4,36 @@
 
 import figma from "figma";
 
+type InstanceHandle = Extract<
+  ReturnType<typeof figma.selectedInstance.findInstance>,
+  { type: "INSTANCE" }
+>;
+
+const { renderProp } = figma.helpers.react;
+
+// The action buttons are "Button base" instances with no Code Connect mapping,
+// so build each <Button> from its own properties
+function buttonFromInstance(instance: InstanceHandle) {
+  const variant = instance.getEnum("Hierarchy", {
+    Primary: "primary",
+    Secondary: "secondary",
+    Tertiary: "tertiary",
+    Link: "link",
+  });
+  const size = instance.getEnum("Size", {
+    Xsmall: "xsmall",
+    Small: "small",
+    Medium: "medium",
+    Large: "large",
+  });
+  const danger = instance.getBoolean("Danger");
+  const labelHandle = instance.findText("Action");
+  const label =
+    labelHandle.type !== "ERROR" ? labelHandle.textContent : undefined;
+  return figma.code`<Button${renderProp("variant", variant)}${renderProp("size", size)}${renderProp("danger", danger)}>${label}</Button>`
+    .sections;
+}
+
 const variant = figma.selectedInstance.getEnum("Color", {
   "Light gray": "lightGrey",
   "Light blue": "lightBlue",
@@ -26,24 +56,29 @@ const description =
 const showActions = figma.selectedInstance.getBoolean("Actions");
 const showPrimary = figma.selectedInstance.getBoolean("Primary");
 const showSecondary = figma.selectedInstance.getBoolean("Secondary");
-
+// The "Primary" and "Secondary" toggles control these two layers
+const primaryInstance = figma.selectedInstance.findInstance(
+  "Hierarchy=Secondary, State=Default, Size=Small, Danger=False"
+);
+const secondaryInstance = figma.selectedInstance.findInstance(
+  "Hierarchy=Tertiary, State=Default, Size=Small, Danger=False"
+);
 const primaryBtn =
-  figma.code`<Button variant="primary" size="small">Primary action</Button>`
-    .sections;
+  showActions && showPrimary && primaryInstance.type === "INSTANCE"
+    ? buttonFromInstance(primaryInstance)
+    : undefined;
 const secondaryBtn =
-  figma.code`<Button variant="secondary" size="small">Secondary action</Button>`
-    .sections;
-const buttons = showActions
-  ? showPrimary && showSecondary
+  showActions && showSecondary && secondaryInstance.type === "INSTANCE"
+    ? buttonFromInstance(secondaryInstance)
+    : undefined;
+const buttons =
+  primaryBtn && secondaryBtn
     ? figma.code`[${primaryBtn}, ${secondaryBtn}]`.sections
-    : showPrimary
+    : primaryBtn
       ? figma.code`[${primaryBtn}]`.sections
-      : showSecondary
+      : secondaryBtn
         ? figma.code`[${secondaryBtn}]`.sections
-        : undefined
-  : undefined;
-
-const { renderProp } = figma.helpers.react;
+        : undefined;
 
 export default {
   id: "Callout",

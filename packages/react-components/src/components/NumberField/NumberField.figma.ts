@@ -9,7 +9,12 @@ const size = figma.selectedInstance.getEnum("Size", {
   Medium: "medium",
 });
 
-const labelInstance = figma.selectedInstance.findInstance("Label");
+const labelLayer = figma.selectedInstance.findInstance("Label");
+// Some variants name the label instance "Label" and others "Title"
+const labelInstance =
+  labelLayer.type === "INSTANCE"
+    ? labelLayer
+    : figma.selectedInstance.findInstance("Title");
 const label =
   labelInstance.type !== "ERROR"
     ? labelInstance.getString("Label text")
@@ -29,6 +34,12 @@ const isDisabled = figma.selectedInstance.getEnum("State", { Disabled: true });
 const isReadOnly = figma.selectedInstance.getEnum("State", {
   "Read only": true,
 });
+const isInvalid = figma.selectedInstance.getEnum("State", { Error: true });
+const errorMessageHandle = figma.selectedInstance.findText("Error message");
+const errorMessage =
+  isInvalid && errorMessageHandle.type !== "ERROR"
+    ? errorMessageHandle.textContent
+    : undefined;
 
 const { renderProp } = figma.helpers.react;
 
@@ -37,6 +48,6 @@ export default {
   imports: [
     "import { NumberField } from '@bcgov/design-system-react-components';",
   ],
-  example: figma.code`<NumberField${renderProp("size", size)}${renderProp("label", label)}${renderProp("description", description)}${renderProp("isRequired", isRequired)}${renderProp("isDisabled", isDisabled)}${renderProp("isReadOnly", isReadOnly)}/>`,
+  example: figma.code`<NumberField${renderProp("size", size)}${renderProp("label", label)}${renderProp("description", description)}${renderProp("isRequired", isRequired)}${renderProp("isDisabled", isDisabled)}${renderProp("isReadOnly", isReadOnly)}${renderProp("isInvalid", isInvalid)}${renderProp("errorMessage", errorMessage)}/>`,
   metadata: { nestable: true },
 };

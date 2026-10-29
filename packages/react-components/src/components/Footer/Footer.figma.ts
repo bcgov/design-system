@@ -16,16 +16,25 @@ const hideCopyright = figma.selectedInstance.getBoolean("Copyright", {
   false: true,
   true: false,
 });
-const acknowledgement = figma.selectedInstance.getSlot(
+const { renderProp, jsxElement } = figma.helpers.react;
+
+// Footer renders this text by default, so only pass it when it has been changed
+const DEFAULT_ACKNOWLEDGEMENT =
+  "The B.C. Public Service acknowledges the territories of First Nations around B.C. and is grateful to carry out our work on these lands. We acknowledge the rights, interests, priorities, and concerns of all Indigenous Peoples - First Nations, Métis, and Inuit - respecting and acknowledging their distinct cultures, histories, rights, laws, and governments.";
+const normalise = (text: string) =>
+  text.replace(/[—–]/g, "-").replace(/\s+/g, " ").trim();
+const acknowledgementText = figma.selectedInstance.getString(
   "Territorial acknowledgement content"
 );
-const children = figma.selectedInstance.getSlot("Slot");
-
-const { renderProp, renderChildren } = figma.helpers.react;
+const acknowledgement =
+  acknowledgementText &&
+  normalise(acknowledgementText) !== normalise(DEFAULT_ACKNOWLEDGEMENT)
+    ? jsxElement(`<p>${acknowledgementText}</p>`)
+    : undefined;
 
 export default {
   id: "Footer",
   imports: ["import { Footer } from '@bcgov/design-system-react-components';"],
-  example: figma.code`<Footer${renderProp("hideLogoAndLinks", hideLogoAndLinks)}${renderProp("hideCopyright", hideCopyright)}${renderProp("hideAcknowledgement", hideAcknowledgement)}${renderProp("acknowledgement", acknowledgement)}>${renderChildren(children)}</Footer>`,
+  example: figma.code`<Footer${renderProp("hideLogoAndLinks", hideLogoAndLinks)}${renderProp("hideCopyright", hideCopyright)}${renderProp("hideAcknowledgement", hideAcknowledgement)}${renderProp("acknowledgement", acknowledgement)} />`,
   metadata: { nestable: true },
 };

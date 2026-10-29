@@ -4,12 +4,13 @@
 
 import figma from "figma";
 
+const { renderProp, object, array } = figma.helpers.react;
+
 const labelInstance = figma.selectedInstance.findInstance("Label");
-const labelTextHandle =
-  labelInstance.type !== "ERROR" ? labelInstance.findText("Label") : undefined;
 const label =
-  labelTextHandle && labelTextHandle.type !== "ERROR"
-    ? labelTextHandle.textContent
+  figma.selectedInstance.getBoolean("Label") &&
+  labelInstance.type === "INSTANCE"
+    ? labelInstance.getString("Label text")
     : undefined;
 const descriptionHandle = figma.selectedInstance.findText("Description");
 const description =
@@ -21,15 +22,32 @@ const errorMessage =
   errorMessageHandle.type !== "ERROR"
     ? errorMessageHandle.textContent
     : undefined;
-const children = figma.properties.children(["*"]);
 
-const { renderProp, renderChildren } = figma.helpers.react;
+// TagList renders from an `items` array, so build one from the nested Tags
+const tagInstances = figma.selectedInstance.findConnectedInstances(
+  (node) => node.codeConnectId() === "Tag"
+);
+const items = tagInstances
+  .filter((tag) => tag.type === "INSTANCE")
+  .map((tag, index) => {
+    const props = (tag.executeTemplate().metadata?.props ?? {}) as Record<
+      string,
+      string | undefined
+    >;
+    const item: Record<string, string> = { id: `tag-${index + 1}` };
+    for (const key of ["textValue", "color", "tagStyle", "size"]) {
+      if (props[key] !== undefined) item[key] = props[key];
+    }
+    return object(item);
+  });
 
 export default {
   id: "TagGroup",
   imports: [
-    "import { TagGroup, TagList, Tag } from '@bcgov/design-system-react-components';",
+    "import { TagGroup, TagList } from '@bcgov/design-system-react-components';",
   ],
-  example: figma.code`<TagGroup${renderProp("label", label)}${renderProp("description", description)}${renderProp("errorMessage", errorMessage)}>${renderChildren(children)}</TagGroup>`,
+  example: figma.code`<TagGroup${renderProp("label", label)}${renderProp("description", description)}${renderProp("errorMessage", errorMessage)}>
+      <TagList${renderProp("items", array(items))} />
+    </TagGroup>`,
   metadata: { nestable: true },
 };
