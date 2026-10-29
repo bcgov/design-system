@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.9.1
+
+This is a patch release that adds support for B.C.'s new `PCT` time zone to the DatePicker and TimeField components.
+
+### Changed
+
+- DatePicker and TimeField: date/time values for the `America/Vancouver` and `Canada/Pacific` time zones will now display the label `PCT` for values at or after `2026-11-01T02:00:00-07:00`
+- Checkbox, ProgressCircle, Radio and Switch: refactored CSS to fix jsdom parsing errors (no visible changes)
+
+This release uses:
+
+- `react-aria-components` v1.22.1
+- `@bcgov/design-tokens` v5.1.0
+
 ## 0.9.0
 
 This is a milestone release that adds system prompts and design guidance for LLMs, and updates existing components to use new React Aria APIs.
