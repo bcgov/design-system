@@ -1,7 +1,6 @@
 import { ContextType, ReactElement, ReactNode } from "react";
 import { beforeAll, describe, expect, test } from "vitest";
 import { render, renderHook } from "@testing-library/react";
-import "@testing-library/jest-dom";
 import { fromAbsolute, type ZonedDateTime } from "@internationalized/date";
 import {
   DateFieldStateContext,
