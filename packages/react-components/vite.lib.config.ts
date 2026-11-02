@@ -1,26 +1,10 @@
-import { defineConfig, type Plugin } from "vite";
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import cssInjectedByJs from "vite-plugin-css-injected-by-js";
 import path from "path";
 import { isExternal } from "./build.externals.ts";
 
 const dirname = import.meta.dirname;
-
-// Prepends `"use client"` to every chunk. Runs after the CSS injection plugin
-// so the directive stays the first statement, as React requires.
-function prependUseClientDirective(): Plugin {
-  return {
-    name: "use-client-directive",
-    enforce: "post",
-    generateBundle(_options, bundle) {
-      for (const chunk of Object.values(bundle)) {
-        if (chunk.type === "chunk") {
-          chunk.code = `"use client";\n${chunk.code}`;
-        }
-      }
-    },
-  };
-}
 
 // Library build. Dev server, Storybook and tests use `vite.config.ts`.
 export default defineConfig({
@@ -32,9 +16,9 @@ export default defineConfig({
   plugins: [
     react(),
     // Keep CSS injected at runtime from the JS, matching the previous Rollup
-    // output, so consumers don't need to import a stylesheet.
-    cssInjectedByJs(),
-    prependUseClientDirective(),
+    // output, so consumers don't need to import a stylesheet. The code is
+    // appended to the entry so the `"use client"` banner stays first.
+    cssInjectedByJs({ topExecutionPriority: false }),
   ],
   build: {
     outDir: "dist",
@@ -55,6 +39,7 @@ export default defineConfig({
           entryFileNames: "[name].js",
           preserveModules: true,
           preserveModulesRoot: "src",
+          banner: '"use client";',
         },
         {
           format: "cjs",
@@ -62,6 +47,7 @@ export default defineConfig({
           entryFileNames: "[name].cjs",
           preserveModules: true,
           preserveModulesRoot: "src",
+          banner: '"use client";',
           exports: "named",
         },
       ],
