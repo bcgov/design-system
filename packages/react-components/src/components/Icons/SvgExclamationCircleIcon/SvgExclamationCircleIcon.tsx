@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 /* This component implements the Circle Exclamation icon from Font Awesome: https://fontawesome.com/icons/circle-exclamation */
 
 import { useId } from "react-aria/useId";
@@ -14,7 +15,7 @@ export default function SvgExclamationCircleIcon({
   title,
   id,
   ...props
-}: SvgExclamationCircleIconProps) {
+}: SvgExclamationCircleIconProps): JSX.Element {
   const iconSize = getIconSize(size);
   const titleId = useId();
   const isMeaningful = Boolean(title);

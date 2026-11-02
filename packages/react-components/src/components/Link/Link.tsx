@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   Link as ReactAriaLink,
   LinkProps as ReactAriaLinkProps,
@@ -37,7 +38,7 @@ export default function Link({
   iconRight,
   ariaLabel,
   ...props
-}: LinkProps) {
+}: LinkProps): JSX.Element {
   return (
     <ReactAriaLink
       className={

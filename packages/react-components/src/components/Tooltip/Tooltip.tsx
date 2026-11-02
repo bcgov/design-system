@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   OverlayArrow,
   Tooltip as ReactAriaTooltip,
@@ -8,7 +9,7 @@ import {
 import "./Tooltip.css";
 import SvgTooltipArrowUp from "../Icons/SvgTooltipArrowUp";
 
-export default function Tooltip(props: TooltipProps) {
+export default function Tooltip(props: TooltipProps): JSX.Element {
   return (
     <ReactAriaTooltip className="bcds-react-aria-Tooltip" {...props}>
       <OverlayArrow className="bcds-react-aria-OverlayArrow">

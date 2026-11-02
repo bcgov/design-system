@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 /* The component implements the Calendar icon from Font Awesome: https://fontawesome.com/icons/calendar */
 
 import { useId } from "react-aria/useId";
@@ -15,7 +16,7 @@ export default function SvgCalendarIcon({
   title,
   id,
   ...props
-}: SvgCalendarIconProps) {
+}: SvgCalendarIconProps): JSX.Element {
   const iconSize = getIconSize(size);
   const titleId = useId();
   const isMeaningful = Boolean(title);

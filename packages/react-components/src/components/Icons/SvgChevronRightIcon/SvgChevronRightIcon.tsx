@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 /* The component implements the Chevron Right icon from Font Awesome: https://fontawesome.com/icons/chevron-right */
 
 import { useId } from "react-aria/useId";
@@ -14,7 +15,7 @@ export default function SvgChevronRightIcon({
   title,
   id,
   ...props
-}: SvgChevronRightIconProps) {
+}: SvgChevronRightIconProps): JSX.Element {
   const iconSize = getIconSize(size);
   const titleId = useId();
   const isMeaningful = Boolean(title);

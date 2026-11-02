@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   Calendar as ReactAriaCalendar,
   CalendarCell as ReactAriaCalendarCell,
@@ -21,7 +22,7 @@ export type { DateValue, CalendarSelectionMode };
 export default function Calendar<M extends CalendarSelectionMode = "single">({
   visibleDuration = { months: 1 },
   ...props
-}: CalendarProps<DateValue, M>) {
+}: CalendarProps<DateValue, M>): JSX.Element {
   const monthFormatter = useDateFormatter({
     month: "long",
     year: "numeric",

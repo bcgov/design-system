@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { cloneElement, PropsWithChildren } from "react";
 
 import SvgBcLogo from "../Icons/SvgBcLogo";
@@ -38,7 +39,7 @@ export default function Header({
   skipLinks,
   title = "",
   titleElement = "span",
-}: PropsWithChildren<HeaderProps>) {
+}: PropsWithChildren<HeaderProps>): JSX.Element {
   function getLogo() {
     if (!logoLinkElement)
       return (

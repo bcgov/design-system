@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   CheckboxButton,
   CheckboxField,
@@ -28,7 +29,7 @@ export default function Checkbox({
   description,
   errorMessage,
   ...props
-}: CheckboxProps) {
+}: CheckboxProps): JSX.Element {
   return (
     <CheckboxField
       className="bcds-react-aria-Checkbox"

@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   Label,
   TagGroup as ReactAriaTagGroup,
@@ -30,7 +31,7 @@ export default function TagGroup({
   description,
   errorMessage,
   ...props
-}: TagGroupProps) {
+}: TagGroupProps): JSX.Element {
   return (
     <ReactAriaTagGroup className="bcds-react-aria-TagGroup" {...props}>
       {label && (

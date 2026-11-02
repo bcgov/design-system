@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 // This logo is available as a plain SVG at src/assets/BCID_H_rgb_pos.svg
 import { useId } from "react-aria/useId";
 import "./SvgBcLogo.css";
@@ -7,7 +8,11 @@ export interface SvgBcLogoProps extends React.SVGProps<SVGSVGElement> {
   title?: string;
 }
 
-export default function SvgBcLogo({ title, id, ...props }: SvgBcLogoProps) {
+export default function SvgBcLogo({
+  title,
+  id,
+  ...props
+}: SvgBcLogoProps): JSX.Element {
   const titleId = useId();
   const isMeaningful = Boolean(title);
   return (

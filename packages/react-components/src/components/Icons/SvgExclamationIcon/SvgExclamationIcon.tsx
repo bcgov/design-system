@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 /* This component implements the Triangle Exclamation icon from Font Awesome: https://fontawesome.com/icons/triangle-exclamation */
 
 import { useId } from "react-aria/useId";
@@ -14,7 +15,7 @@ export default function SvgExclamationIcon({
   title,
   id,
   ...props
-}: SvgExclamationIconProps) {
+}: SvgExclamationIconProps): JSX.Element {
   const iconSize = getIconSize(size);
   const titleId = useId();
   const isMeaningful = Boolean(title);

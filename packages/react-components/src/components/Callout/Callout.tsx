@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import ButtonGroup from "../ButtonGroup";
 
 import "./Callout.css";
@@ -26,7 +27,7 @@ export default function Callout({
   isLeftBorderDisabled = false,
   children,
   ...props
-}: CalloutProps) {
+}: CalloutProps): JSX.Element {
   return (
     <div
       className={`bcds-Callout ${variant} ${

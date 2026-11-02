@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 /* This component implements the Chevron Up icon from Font Awesome: https://fontawesome.com/icons/chevron-up */
 
 import { useId } from "react-aria/useId";
@@ -14,7 +15,7 @@ export default function SvgChevronUpIcon({
   title,
   id,
   ...props
-}: SvgChevronUpIconProps) {
+}: SvgChevronUpIconProps): JSX.Element {
   const iconSize = getIconSize(size);
   const titleId = useId();
   const isMeaningful = Boolean(title);

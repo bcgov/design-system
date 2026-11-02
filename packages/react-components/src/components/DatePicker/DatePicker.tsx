@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   DatePicker as ReactAriaDatePicker,
   DatePickerProps as ReactAriaDatePickerProps,
@@ -52,7 +53,7 @@ export default function DatePicker<T extends DateValue>({
   isCalendarDisabled = false,
   isBrowserLocaleUsed = false,
   ...props
-}: DatePickerProps<T>) {
+}: DatePickerProps<T>): JSX.Element {
   const formatHelpText = useDateFormatLabel({ showFormatHelpText });
   const datePicker = (
     <ReactAriaDatePicker
