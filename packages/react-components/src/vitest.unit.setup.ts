@@ -1,3 +1,4 @@
+import "@testing-library/jest-dom/vitest";
 import { afterAll, afterEach, beforeEach, expect, vi } from "vitest";
 
 // Fail tests on console warnings
