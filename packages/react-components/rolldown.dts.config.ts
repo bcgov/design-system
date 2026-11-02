@@ -1,5 +1,6 @@
 import { defineConfig, type Plugin } from "rolldown";
 import { dts } from "rolldown-plugin-dts";
+import { isExternal } from "./build.externals.ts";
 
 // Stylesheet imports have no types, so drop them from the declarations.
 function ignoreCss(): Plugin {
@@ -17,7 +18,7 @@ function ignoreCss(): Plugin {
 // Bundles the public type declarations into a single `dist/index.d.ts`.
 export default defineConfig({
   input: { index: "src/index.ts" },
-  external: (id) => !id.endsWith(".css") && /^(?!\.|\/|@\/)/.test(id),
+  external: isExternal,
   plugins: [
     ignoreCss(),
     dts({
