@@ -4,7 +4,6 @@
 
 import figma from "figma";
 
-const children = figma.properties.children(["*"]);
 const labelInstance = figma.selectedInstance.findInstance("Label");
 const labelTextHandle =
   labelInstance.type !== "ERROR" ? labelInstance.findText("Label") : undefined;
@@ -20,6 +19,6 @@ const { renderProp, renderChildren } = figma.helpers.react;
 export default {
   id: "Radio",
   imports: ["import { Radio } from '@bcgov/design-system-react-components';"],
-  example: figma.code`<Radio${renderProp("value", label)}${renderProp("isSelected", isSelected)}${renderProp("isDisabled", isDisabled)}>${renderChildren(children)}</Radio>`,
+  example: figma.code`<Radio${renderProp("value", label)}${renderProp("isSelected", isSelected)}${renderProp("isDisabled", isDisabled)}>${renderChildren(label)}</Radio>`,
   metadata: { nestable: true },
 };

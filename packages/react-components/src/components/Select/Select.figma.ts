@@ -10,13 +10,18 @@ const size = figma.selectedInstance.getEnum("Size", {
 });
 
 const titleInstance = figma.selectedInstance.findInstance("Title");
+// Some variants name the label instance "Title" and others "Label"
+const labelInstance =
+  titleInstance.type === "INSTANCE"
+    ? titleInstance
+    : figma.selectedInstance.findInstance("Label");
 const label =
-  titleInstance.type !== "ERROR"
-    ? titleInstance.getString("Label text")
+  labelInstance.type === "INSTANCE"
+    ? labelInstance.getString("Label text")
     : undefined;
 const isRequired =
-  titleInstance.type !== "ERROR" &&
-  titleInstance.getPropertyValue("Required") === true
+  labelInstance.type === "INSTANCE" &&
+  labelInstance.getPropertyValue("Required") === true
     ? true
     : undefined;
 

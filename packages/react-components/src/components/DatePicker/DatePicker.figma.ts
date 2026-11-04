@@ -18,7 +18,8 @@ const isDisabled = figma.selectedInstance.getEnum("State", {
 const isReadOnly = figma.selectedInstance.getEnum("State", {
   "Read only": true,
 });
-const granularity = figma.selectedInstance.getEnum("Time", {
+const isInvalid = figma.selectedInstance.getEnum("State", { Error: true });
+const granularity = figma.selectedInstance.getBoolean("Time", {
   true: "minute",
   false: "day",
 });
@@ -34,7 +35,12 @@ const isRequired =
     ? true
     : undefined;
 
-const descriptionInstance = figma.selectedInstance.findInstance("Description");
+const descriptionLayer = figma.selectedInstance.findInstance("Description");
+// Error variants name the description instance "Description Text"
+const descriptionInstance =
+  descriptionLayer.type === "INSTANCE"
+    ? descriptionLayer
+    : figma.selectedInstance.findInstance("Description Text");
 const descriptionText =
   descriptionInstance.type !== "ERROR"
     ? descriptionInstance.findText("Description")
@@ -58,6 +64,6 @@ export default {
   imports: [
     "import { DatePicker } from '@bcgov/design-system-react-components';",
   ],
-  example: figma.code`<DatePicker${renderProp("size", size)}${renderProp("granularity", granularity)}${renderProp("hideTimeZone", hideTimeZone)}${renderProp("isRequired", isRequired)}${renderProp("isDisabled", isDisabled)}${renderProp("isReadOnly", isReadOnly)}${renderProp("label", label)}${renderProp("description", description)}${renderProp("showFormatHelpText", showFormatHelpText)}/>`,
+  example: figma.code`<DatePicker${renderProp("size", size)}${renderProp("granularity", granularity)}${renderProp("hideTimeZone", hideTimeZone)}${renderProp("isRequired", isRequired)}${renderProp("isDisabled", isDisabled)}${renderProp("isReadOnly", isReadOnly)}${renderProp("isInvalid", isInvalid)}${renderProp("label", label)}${renderProp("description", description)}${renderProp("showFormatHelpText", showFormatHelpText)}/>`,
   metadata: { nestable: true },
 };
