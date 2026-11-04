@@ -16,7 +16,7 @@ const hideCopyright = figma.selectedInstance.getBoolean("Copyright", {
   false: true,
   true: false,
 });
-const { renderProp, jsxElement } = figma.helpers.react;
+const { renderProp, renderChildren, jsxElement } = figma.helpers.react;
 
 // Footer renders this text by default, so only pass it when it has been changed
 const DEFAULT_ACKNOWLEDGEMENT =
@@ -32,9 +32,31 @@ const acknowledgement =
     ? jsxElement(`<p>${acknowledgementText}</p>`)
     : undefined;
 
+// Footer renders the logo, contact and links by default, and passing children
+// replaces them, so only pass the slot when its default content has been changed
+const DEFAULT_CONTACT =
+  "We can help in over 220 languages and through other accessible options. Call, email or text us, or find a service centre";
+const DEFAULT_LINKS_TITLE = "MORE INFO";
+const slotText = figma.selectedInstance
+  .findLayers((layer) => layer.type === "TEXT")
+  .map((layer) => (layer.type === "TEXT" ? normalise(layer.textContent) : ""));
+const hasDefaultContent =
+  slotText.includes(normalise(DEFAULT_CONTACT)) &&
+  slotText.includes(DEFAULT_LINKS_TITLE);
+const children =
+  hideLogoAndLinks || hasDefaultContent
+    ? undefined
+    : figma.selectedInstance.getSlot("Slot");
+
+const props =
+  figma.code`${renderProp("hideLogoAndLinks", hideLogoAndLinks)}${renderProp("hideCopyright", hideCopyright)}${renderProp("hideAcknowledgement", hideAcknowledgement)}${renderProp("acknowledgement", acknowledgement)}`
+    .sections;
+
 export default {
   id: "Footer",
   imports: ["import { Footer } from '@bcgov/design-system-react-components';"],
-  example: figma.code`<Footer${renderProp("hideLogoAndLinks", hideLogoAndLinks)}${renderProp("hideCopyright", hideCopyright)}${renderProp("hideAcknowledgement", hideAcknowledgement)}${renderProp("acknowledgement", acknowledgement)} />`,
+  example: children
+    ? figma.code`<Footer${props}>${renderChildren(children)}</Footer>`
+    : figma.code`<Footer${props} />`,
   metadata: { nestable: true },
 };

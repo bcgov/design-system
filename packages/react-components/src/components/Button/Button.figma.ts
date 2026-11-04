@@ -16,7 +16,7 @@ const variant = figma.selectedInstance.getEnum("Hierarchy", {
   Tertiary: "tertiary",
   Link: "link",
 });
-const danger = figma.selectedInstance.getBoolean("Danger");
+const danger = figma.selectedInstance.getEnum("Danger", { True: true });
 const isDisabled = figma.selectedInstance.getEnum("State", {
   Disabled: true,
 });

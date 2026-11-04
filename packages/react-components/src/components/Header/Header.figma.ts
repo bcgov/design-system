@@ -13,8 +13,20 @@ const title =
   titleHandle.type !== "ERROR"
     ? titleHandle.textContent
     : undefined;
-const children = figma.properties.children(["Header content"]);
-const hasSubheader = figma.selectedInstance.getBoolean("Subheader");
+const children = figma.properties.children(["Header/Header content"]);
+const hasSubheader = figma.selectedInstance.getEnum("Subheader", {
+  True: true,
+});
+const subheaderInstance =
+  figma.selectedInstance.findInstance("Header/Subheader");
+const subheaderSize =
+  subheaderInstance.type === "INSTANCE"
+    ? subheaderInstance.getEnum("Size", { Small: "small", Medium: "medium" })
+    : undefined;
+const subheaderChildren =
+  subheaderInstance.type === "INSTANCE"
+    ? subheaderInstance.getSlot("Subheader content")
+    : undefined;
 const imports = hasSubheader
   ? [
       "import { Header, Subheader } from '@bcgov/design-system-react-components';",
@@ -31,7 +43,7 @@ export default {
   example: hasSubheader
     ? figma.code`<>
   ${header.sections}
-  <Subheader></Subheader>
+  <Subheader${renderProp("size", subheaderSize)}>${renderChildren(subheaderChildren)}</Subheader>
 </>`
     : header,
   metadata: { nestable: true },

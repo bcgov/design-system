@@ -26,7 +26,7 @@ function buttonFromInstance(instance: InstanceHandle) {
     Medium: "medium",
     Large: "large",
   });
-  const danger = instance.getBoolean("Danger");
+  const danger = instance.getEnum("Danger", { True: true });
   const labelHandle = instance.findText("Action");
   const label =
     labelHandle.type !== "ERROR" ? labelHandle.textContent : undefined;
