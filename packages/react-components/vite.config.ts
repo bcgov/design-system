@@ -29,6 +29,7 @@ export default defineConfig({
           name: "unit",
           globals: true,
           environment: "jsdom",
+          pool: "vmThreads",
           css: true,
           setupFiles: ["./src/vitest.unit.setup.ts"],
           include: [

@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import { describe, expect, test } from "vitest";
 import { render, renderHook } from "@testing-library/react";
-import "@testing-library/jest-dom";
 import { I18nProvider } from "react-aria-components";
 
 import useDateFormatLabel from "./useDateFormatLabel";

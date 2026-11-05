@@ -1,6 +1,5 @@
 import { describe, expect, test, vi } from "vitest";
 import { render, screen, fireEvent, cleanup } from "@testing-library/react";
-import "@testing-library/jest-dom"; // for matchers like toHaveAccessibleDescription
 import { afterEach } from "vitest";
 
 import TextArea from "./TextArea";
