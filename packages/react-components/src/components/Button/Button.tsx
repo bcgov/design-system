@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   Button as ReactAriaButton,
   ButtonProps as ReactAriaButtonProps,
@@ -30,7 +31,7 @@ export default function Button({
   danger = false,
   isIconButton = false,
   ...props
-}: ButtonProps) {
+}: ButtonProps): JSX.Element {
   return (
     <ReactAriaButton
       className={`bcds-react-aria-Button ${size} ${variant} ${

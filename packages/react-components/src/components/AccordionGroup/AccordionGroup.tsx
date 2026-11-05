@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { DisclosureGroup, DisclosureGroupProps } from "react-aria-components";
 
 import "./AccordionGroup.css";
@@ -14,7 +15,7 @@ export default function AccordionGroup({
   titleElement,
   children,
   ...props
-}: AccordionGroupProps) {
+}: AccordionGroupProps): JSX.Element {
   function getTitle() {
     switch (titleElement) {
       case "h1":

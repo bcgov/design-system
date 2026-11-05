@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   MenuTrigger,
   Menu as ReactAriaMenu,
@@ -43,7 +44,7 @@ export default function Menu({
   sections,
   placement,
   ...props
-}: MenuProps) {
+}: MenuProps): JSX.Element {
   /* Manual composition via children */
   if (children) {
     return (

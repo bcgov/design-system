@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   NumberField as ReactAriaNumberField,
   NumberFieldProps as ReactAriaNumberFieldProps,
@@ -35,7 +36,7 @@ export default function NumberField({
   minValue = 0,
   errorMessage,
   ...props
-}: NumberFieldProps) {
+}: NumberFieldProps): JSX.Element {
   return (
     <ReactAriaNumberField
       className={`bcds-react-aria-NumberField ${size}`}

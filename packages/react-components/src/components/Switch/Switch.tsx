@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   SwitchButton as ReactAriaSwitchButton,
   SwitchField as ReactAriaSwitchField,
@@ -27,7 +28,7 @@ export default function Switch({
   errorMessage,
   children,
   ...props
-}: SwitchProps) {
+}: SwitchProps): JSX.Element {
   return (
     <ReactAriaSwitchField className="bcds-react-aria-Switch" {...props}>
       {({ isInvalid }) => (

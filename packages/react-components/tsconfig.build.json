@@ -2,7 +2,16 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "noEmit": true,
-    "declaration": false
+    "declaration": true,
+    "isolatedDeclarations": true,
+    "types": ["react", "react-dom"]
   },
-  "exclude": ["src/**/*.figma.ts"]
+  "include": [
+    "src/index.ts",
+    "src/vite-env.d.ts",
+    "src/components/**/*",
+    "src/hooks/**/*",
+    "src/utils/**/*"
+  ],
+  "exclude": ["src/**/*.figma.ts", "src/**/*.test.ts", "src/**/*.test.tsx"]
 }

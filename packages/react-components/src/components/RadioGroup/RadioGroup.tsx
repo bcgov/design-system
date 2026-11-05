@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   RadioGroup as ReactAriaRadioGroup,
   RadioGroupProps as ReactAriaRadioGroupProps,
@@ -34,7 +35,7 @@ export default function RadioGroup({
   errorMessage,
   flexWrap = "nowrap",
   ...props
-}: RadioGroupProps) {
+}: RadioGroupProps): JSX.Element {
   return (
     <ReactAriaRadioGroup className="bcds-react-aria-RadioGroup" {...props}>
       {({ isRequired, isInvalid }: RadioGroupRenderProps) => (

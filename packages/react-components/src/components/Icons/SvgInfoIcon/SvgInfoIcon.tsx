@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 /* This component implements the Circle Info icon from Font Awesome: https://fontawesome.com/icons/circle-info */
 
 import { useId } from "react-aria/useId";
@@ -14,7 +15,7 @@ export default function SvgInfoIcon({
   title,
   id,
   ...props
-}: SvgInfoIconProps) {
+}: SvgInfoIconProps): JSX.Element {
   const iconSize = getIconSize(size);
   const titleId = useId();
   const isMeaningful = Boolean(title);
