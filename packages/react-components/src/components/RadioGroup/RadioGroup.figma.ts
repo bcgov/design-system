@@ -9,11 +9,10 @@ const orientation = figma.selectedInstance.getEnum("Orientation", {
   Horizontal: "horizontal",
 });
 const labelInstance = figma.selectedInstance.findInstance("Label");
-const labelTextHandle =
-  labelInstance.type !== "ERROR" ? labelInstance.findText("Label") : undefined;
 const label =
-  labelTextHandle && labelTextHandle.type !== "ERROR"
-    ? labelTextHandle.textContent
+  figma.selectedInstance.getBoolean("Label") &&
+  labelInstance.type === "INSTANCE"
+    ? labelInstance.getString("Label text")
     : undefined;
 const descriptionHandle = figma.selectedInstance.findText("Description");
 const description =
@@ -25,7 +24,7 @@ const errorMessage =
   errorMessageHandle.type !== "ERROR"
     ? errorMessageHandle.textContent
     : undefined;
-const children = figma.properties.children(["*"]);
+const children = figma.properties.children(["Radio Button*"]);
 
 const { renderProp, renderChildren } = figma.helpers.react;
 

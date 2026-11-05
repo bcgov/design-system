@@ -1,6 +1,5 @@
 import { describe, expect, test } from "vitest";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
 import { Time, parseZonedDateTime } from "@internationalized/date";
 
 import TimeField from "./TimeField";

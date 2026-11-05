@@ -14,8 +14,9 @@ const valueLabel = figma.selectedInstance.getBoolean("Show label & value", {
   false: undefined,
 });
 const value = figma.selectedInstance.getString("Value");
-const numericValue =
-  value !== undefined && value !== "" ? Number(value) : undefined;
+// The Value text can be a placeholder (e.g. "Value"), which is not a number
+const parsedValue = Number.parseFloat(value);
+const numericValue = Number.isFinite(parsedValue) ? parsedValue : undefined;
 const isIndeterminate = figma.selectedInstance.getEnum("Style", {
   Indeterminate: true,
 });

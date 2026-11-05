@@ -1,5 +1,4 @@
 import { describe, expect, it, vi } from "vitest";
-import "@testing-library/jest-dom";
 import { fireEvent, render, screen } from "@testing-library/react";
 
 import Button from "./Button";
@@ -18,11 +17,11 @@ describe("renders the component correctly", () => {
 });
 
 describe("handles a click event with onPress prop", () => {
-  const handleClick = vi.fn();
-  render(<Button onPress={handleClick}>Press me</Button>);
-  fireEvent.click(screen.getByText(/press me/i));
-
   it("has been clicked", () => {
+    const handleClick = vi.fn();
+    render(<Button onPress={handleClick}>Press me</Button>);
+    fireEvent.click(screen.getByText(/press me/i));
+
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 });

@@ -4,8 +4,17 @@
 
 import figma from "figma";
 
+const dialogInstance = figma.selectedInstance.findInstance("Alert dialog");
+const dialog =
+  dialogInstance.type === "INSTANCE"
+    ? dialogInstance.executeTemplate().example
+    : undefined;
+
 export default {
   id: "Modal",
   imports: ["import { Modal } from '@bcgov/design-system-react-components';"],
-  example: figma.code`<Modal />`,
+  example: figma.code`<Modal>
+      ${dialog ?? ""}
+    </Modal>`,
+  metadata: { nestable: true },
 };

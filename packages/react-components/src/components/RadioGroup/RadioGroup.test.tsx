@@ -1,6 +1,5 @@
 import { beforeEach, describe, expect, it } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
 
 import RadioGroup from ".";
 import Radio from "../Radio";

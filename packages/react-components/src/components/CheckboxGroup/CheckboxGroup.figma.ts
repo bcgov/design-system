@@ -8,11 +8,15 @@ const orientation = figma.selectedInstance.getEnum("Orientation", {
   Horizontal: "horizontal",
   Vertical: "vertical",
 });
-const labelHandle = figma.selectedInstance.findText("Label");
+const labelInstance = figma.selectedInstance.findInstance("Label");
 const label =
-  labelHandle.type !== "ERROR" ? labelHandle.textContent : undefined;
+  figma.selectedInstance.getBoolean("Label") &&
+  labelInstance.type === "INSTANCE"
+    ? labelInstance.getString("Label text")
+    : undefined;
 const descriptionHandle = figma.selectedInstance.findText("Description");
 const description =
+  figma.selectedInstance.getBoolean("Description") &&
   descriptionHandle.type !== "ERROR"
     ? descriptionHandle.textContent
     : undefined;

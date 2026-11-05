@@ -1,6 +1,5 @@
 import { describe, expect, test, vi } from "vitest";
 import { act, render, screen, fireEvent, within } from "@testing-library/react";
-import "@testing-library/jest-dom";
 import {
   CalendarDate,
   CalendarDateTime,
