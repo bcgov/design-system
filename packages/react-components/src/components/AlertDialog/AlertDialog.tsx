@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   Dialog as ReactAriaDialog,
   DialogTrigger,
@@ -55,7 +56,7 @@ export default function AlertDialog({
   isIconHidden = false,
   buttons,
   ...props
-}: AlertDialogProps) {
+}: AlertDialogProps): JSX.Element {
   return (
     <ReactAriaDialog
       className={`bcds-react-aria-AlertDialog ${variant}`}

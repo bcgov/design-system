@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   Collection,
   FieldError,
@@ -91,7 +92,7 @@ export default function Select<
   selectionMode,
   overflow = "wrap",
   ...props
-}: SelectProps<T, M>) {
+}: SelectProps<T, M>): JSX.Element {
   const [tagOverlay, setTagOverlay] = useState<HTMLDivElement | null>(null);
 
   return (

@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 /* This component implements the Flask icon from Font Awesome: https://fontawesome.com/icons/flask */
 
 import { useId } from "react-aria/useId";
@@ -14,7 +15,7 @@ export default function SvgBetaIcon({
   title,
   id,
   ...props
-}: SvgBetaIconProps) {
+}: SvgBetaIconProps): JSX.Element {
   const iconSize = getIconSize(size);
   const titleId = useId();
   const isMeaningful = Boolean(title);

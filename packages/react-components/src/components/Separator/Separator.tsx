@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   Separator as ReactAriaSeparator,
   SeparatorProps as ReactAriaSeparatorProps,
@@ -13,7 +14,7 @@ export interface SeparatorProps extends ReactAriaSeparatorProps {
 export default function Separator({
   size = "medium",
   ...props
-}: SeparatorProps) {
+}: SeparatorProps): JSX.Element {
   return (
     <ReactAriaSeparator
       className={`bcds-react-aria-Separator ${size}`}

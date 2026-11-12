@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   MenuItem as ReactAriaMenuItem,
   MenuItemProps as ReactAriaMenuItemProps,
@@ -28,7 +29,7 @@ export default function MenuItem({
   description,
   iconLeft,
   ...props
-}: MenuItemProps) {
+}: MenuItemProps): JSX.Element {
   /* Ensure textValue is set */
   const textValue =
     props.textValue ||

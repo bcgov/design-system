@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 /* The component implements the Up Right From Square icon from Font Awesome: https://fontawesome.com/icons/up-right-from-square */
 
 import { useId } from "react-aria/useId";
@@ -14,7 +15,7 @@ export default function SvgUpRightFromSquareIcon({
   title,
   id,
   ...props
-}: SvgUpRightFromSquareIconProps) {
+}: SvgUpRightFromSquareIconProps): JSX.Element {
   const iconSize = getIconSize(size);
   const titleId = useId();
   const isMeaningful = Boolean(title);

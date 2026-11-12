@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   CheckboxGroup as ReactAriaCheckboxGroup,
   CheckboxGroupRenderProps,
@@ -35,7 +36,7 @@ export default function CheckboxGroup({
   flexWrap = "nowrap",
   children,
   ...props
-}: CheckboxGroupProps) {
+}: CheckboxGroupProps): JSX.Element {
   return (
     <ReactAriaCheckboxGroup
       className={`bcds-react-aria-CheckboxGroup`}

@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import Button from "../Button";
 import ButtonGroup from "../ButtonGroup";
 import SvgCheckCircleIcon from "../Icons/SvgCheckCircleIcon";
@@ -56,7 +57,7 @@ export default function InlineAlert({
   children,
   onClose,
   ...props
-}: InlineAlertProps) {
+}: InlineAlertProps): JSX.Element {
   return (
     <div
       className={`bcds-Inline-Alert ${variant} ${
