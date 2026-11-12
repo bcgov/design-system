@@ -12,7 +12,7 @@
     "build:js": "vite build -c vite.lib.config.ts",
     "build:dts": "rolldown -c rolldown.dts.config.ts",
     "typecheck": "tsc -p tsconfig.build.json",
-    "build": "npm run clean && npm run build:js && npm run build:dts",
+    "build": "npm run clean && npm run build:js && npm run build:dts && npm run typecheck",
     "format:check": "npx prettier . --check",
     "format": "npx prettier . --write",
     "lint": "npm run lint:ts && npm run lint:css",
