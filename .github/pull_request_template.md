@@ -1,19 +1,21 @@
 ## Summary
 
+<!-- Make a summary here -->
+
 ## Type of change
 
 - [ ] Feature or enhancement
 - [ ] Bug fix
 - [ ] Documentation or example
 - [ ] Refactor or maintenance
-- [ ] Other: __________
+- [ ] Other: <!-- Explain -->
 
 ## Areas affected
 
 - [ ] React components
 - [ ] Design tokens
 - [ ] Documentation
-- [ ] Other: __________
+- [ ] Other: <!-- Explain -->
 
 ## Pre-submission validation (mark irrelevant checks N/A)
 
@@ -28,3 +30,5 @@
 - [ ] Updated the Figma component/design specification, when applicable
 
 ## Compatibility and release notes (if applicable)
+
+<!-- Include notes here -->
