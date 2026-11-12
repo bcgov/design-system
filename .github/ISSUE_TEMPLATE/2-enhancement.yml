@@ -23,20 +23,20 @@ body:
     id: description
     attributes:
       label: Description
-      description: Describe the proposed change
+      description: Describe the user need and the proposed change to the component's appearance or behaviour
     validations:
       required: true
   - type: textarea
     id: rationale
     attributes:
       label: Rationale
-      description: Explain why you are proposing this change, and the expected benefit to the user
+      description: Explain the expected benefit to users and any impact on existing services
     validations:
       required: true
   - type: textarea
     id: additional
     attributes:
-      label: Additional information
-      description: Links to any examples, research or code to support your proposal, if available
+      label: Alternatives and supporting information
+      description: Describe alternatives considered and include relevant examples, research, or designs. If you have none, explain what you have considered so far.
     validations:
       required: true
