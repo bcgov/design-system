@@ -17,26 +17,30 @@ body:
     validations:
       required: true
   - type: textarea
-    id: description
+    id: actual
     attributes:
-      label: Description
-      description: Describe the error or unexpected behaviour you observed, and provide screenshots if possible
-      placeholder: Tell us what's going wrong
+      label: What happened?
+      description: Describe the actual behaviour and its impact. Add screenshots or recordings if useful.
+      placeholder: What did you observe?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      description: Describe the expected behaviour.
     validations:
       required: true
   - type: textarea
     id: reproduction
     attributes:
       label: Steps to reproduce
-      description: Describe the circumstances under which the bug occurs
-      placeholder: What were you doing when the bug occurred?
+      description: Provide the steps or example needed to reproduce the issue.
+      placeholder: 1. Go to… 2. Do… 3. Observe…
     validations:
       required: true
-  - type: textarea
+  - type: input
     id: technical
     attributes:
-      label: Technical information
-      description: What browsers or platforms does the bug affect?
-      placeholder: Desktop or mobile? All browsers, or only one?
-    validations:
-      required: true
+      label: Environment
+      description: Component/package version, browser and version, operating system, or device (as relevant)
