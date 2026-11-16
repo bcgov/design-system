@@ -111,7 +111,7 @@
   "homepage": "https://github.com/bcgov/design-system#readme",
   "private": false,
   "allowScripts": {
-    "esbuild@0.28.2": true,
-    "fsevents@2.3.3": true
+    "esbuild": true,
+    "fsevents": true
   }
 }
