@@ -1,6 +1,6 @@
 import { useState } from "react";
+import { useListData } from "react-aria-components";
 import type { Selection } from "react-aria-components";
-import { useListData } from "@react-stately/data";
 
 import { TagProps } from "@/components/Tag";
 import TagGroup from "@/components/TagGroup";
