@@ -102,6 +102,10 @@
     }
   },
   "author": "Tyler Krys <Tyler.Krys@gov.bc.ca>",
+  "contributors": [
+    "Marcus Kernohan <Marcus.Kernohan@gov.bc.ca>",
+    "Trevor Richards <Trevor.Richards@gov.bc.ca>"
+  ],
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/bcgov/design-system/issues"
