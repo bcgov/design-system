@@ -61,6 +61,11 @@ jobs:
         run: npm run build
         working-directory: ./packages/react-components
 
+      # The library build strips types without checking them
+      - name: Type check library
+        run: npm run typecheck
+        working-directory: ./packages/react-components
+
   playwright-accessibility-tests:
     name: Playwright accessibility tests
     runs-on: ubuntu-latest

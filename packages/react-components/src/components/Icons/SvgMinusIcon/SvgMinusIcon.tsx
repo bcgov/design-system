@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 /* This component implements the Minus icon from Font Awesome: https://fontawesome.com/icons/minus */
 
 import { useId } from "react-aria/useId";
@@ -14,7 +15,7 @@ export default function SvgMinusIcon({
   title,
   id,
   ...props
-}: SvgMinusIconProps) {
+}: SvgMinusIconProps): JSX.Element {
   const iconSize = getIconSize(size);
   const titleId = useId();
   const isMeaningful = Boolean(title);

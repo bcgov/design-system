@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 /* This component implements the Check icon from Font Awesome: https://fontawesome.com/icons/check */
 
 import { useId } from "react-aria/useId";
@@ -14,7 +15,7 @@ export default function SvgCheckIcon({
   title,
   id,
   ...props
-}: SvgCheckIconProps) {
+}: SvgCheckIconProps): JSX.Element {
   const iconSize = getIconSize(size);
   const titleId = useId();
   const isMeaningful = Boolean(title);

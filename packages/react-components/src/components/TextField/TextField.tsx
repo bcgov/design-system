@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   TextField as ReactAriaTextField,
   TextFieldProps as ReactAriaTextFieldProps,
@@ -34,7 +35,7 @@ export default function TextField({
   iconLeft,
   iconRight,
   ...props
-}: TextFieldProps) {
+}: TextFieldProps): JSX.Element {
   return (
     <ReactAriaTextField className="bcds-react-aria-TextField" {...props}>
       {({ isRequired, isInvalid }) => (

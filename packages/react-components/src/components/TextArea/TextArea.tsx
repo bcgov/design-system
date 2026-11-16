@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { useState } from "react";
 import {
   TextField as ReactAriaTextField,
@@ -29,7 +30,7 @@ export default function TextArea({
   onChange,
   value,
   ...props
-}: TextAreaProps) {
+}: TextAreaProps): JSX.Element {
   // handler for character counter, displayed when a maxLength is set
   const [charCount, setCharCount] = useState(value ? value.length : 0);
 

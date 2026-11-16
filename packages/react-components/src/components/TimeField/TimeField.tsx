@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   TimeField as ReactAriaTimeField,
   TimeFieldProps as ReactAriaTimeFieldProps,
@@ -32,7 +33,7 @@ export default function TimeField<T extends TimeValue>({
   description,
   errorMessage,
   ...props
-}: TimeFieldProps<T>) {
+}: TimeFieldProps<T>): JSX.Element {
   return (
     <ReactAriaTimeField
       className={`bcds-react-aria-TimeField ${size}`}

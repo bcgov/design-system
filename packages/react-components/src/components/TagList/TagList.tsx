@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   TagList as ReactAriaTagList,
   TagListProps as ReactAriaTagListProps,
@@ -23,7 +24,7 @@ export default function TagList<T extends object>({
   orientation = "horizontal",
   renderEmptyState,
   ...props
-}: TagListProps<T>) {
+}: TagListProps<T>): JSX.Element {
   return (
     <ReactAriaTagList
       className={`bcds-react-aria-TagList ${orientation}`}

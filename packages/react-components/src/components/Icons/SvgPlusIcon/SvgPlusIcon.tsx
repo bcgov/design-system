@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 /* This component implements the Plus icon from Font Awesome: https://fontawesome.com/icons/plus */
 
 import { useId } from "react-aria/useId";
@@ -14,7 +15,7 @@ export default function SvgPlusIcon({
   title,
   id,
   ...props
-}: SvgPlusIconProps) {
+}: SvgPlusIconProps): JSX.Element {
   const iconSize = getIconSize(size);
   const titleId = useId();
   const isMeaningful = Boolean(title);

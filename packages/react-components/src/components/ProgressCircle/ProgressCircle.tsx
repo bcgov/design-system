@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   ProgressBar as ReactAriaProgressBar,
   ProgressBarProps as ReactAriaProgressBarProps,
@@ -15,7 +16,7 @@ export default function ProgressCircle({
   size = "medium",
   valueLabel,
   ...props
-}: ProgressCircleProps) {
+}: ProgressCircleProps): JSX.Element {
   return (
     <ReactAriaProgressBar className="bcds-react-aria-ProgressCircle" {...props}>
       {({ percentage, valueText, isIndeterminate }) => (

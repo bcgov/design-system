@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   ProgressBar as ReactAriaProgressBar,
   ProgressBarProps as ReactAriaProgressBarProps,
@@ -15,7 +16,7 @@ export default function ProgressBar({
   size = "medium",
   valueLabel,
   ...props
-}: ProgressBarProps) {
+}: ProgressBarProps): JSX.Element {
   return (
     <ReactAriaProgressBar className={`bcds-react-aria-ProgressBar`} {...props}>
       {({ percentage, valueText, isIndeterminate }) => (

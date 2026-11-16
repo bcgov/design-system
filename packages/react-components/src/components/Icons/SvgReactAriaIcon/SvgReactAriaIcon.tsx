@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 /* React Aria logo icon, used in Storybook docs. Not intended for general use */
 
 import { useId } from "react-aria/useId";
@@ -14,7 +15,7 @@ export default function SvgReactAriaIcon({
   title,
   id,
   ...props
-}: SvgReactAriaIconProps) {
+}: SvgReactAriaIconProps): JSX.Element {
   const iconSize = getIconSize(size);
   const titleId = useId();
   const isMeaningful = Boolean(title);

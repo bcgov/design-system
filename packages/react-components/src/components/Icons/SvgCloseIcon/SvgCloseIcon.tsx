@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 /* This component implements the X Mark icon from Font Awesome: https://fontawesome.com/icons/xmark */
 
 import { useId } from "react-aria/useId";
@@ -14,7 +15,7 @@ export default function SvgCloseIcon({
   title,
   id,
   ...props
-}: SvgCloseIconProps) {
+}: SvgCloseIconProps): JSX.Element {
   const iconSize = getIconSize(size);
   const titleId = useId();
   const isMeaningful = Boolean(title);

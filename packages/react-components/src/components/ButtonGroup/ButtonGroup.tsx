@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import "./ButtonGroup.css";
 
 export interface ButtonGroupProps extends React.PropsWithChildren {
@@ -15,7 +16,7 @@ export default function ButtonGroup({
   ariaLabel,
   children,
   ...props
-}: ButtonGroupProps) {
+}: ButtonGroupProps): JSX.Element {
   return (
     <div
       className={`bcds-ButtonGroup ${orientation} ${alignment}`}

@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   Text as ReactAriaText,
   TextProps as ReactAriaTextProps,
@@ -26,7 +27,7 @@ export default function Text({
   color = "primary",
   isUnstyled = false,
   ...props
-}: TextProps) {
+}: TextProps): JSX.Element {
   return (
     <ReactAriaText
       elementType={elementType}

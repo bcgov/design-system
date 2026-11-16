@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { useId } from "react-aria/useId";
 
 export interface SvgDashIconProps extends React.SVGProps<SVGSVGElement> {
@@ -5,7 +6,11 @@ export interface SvgDashIconProps extends React.SVGProps<SVGSVGElement> {
   title?: string;
 }
 
-export default function SvgDashIcon({ title, id, ...props }: SvgDashIconProps) {
+export default function SvgDashIcon({
+  title,
+  id,
+  ...props
+}: SvgDashIconProps): JSX.Element {
   const titleId = useId();
   const isMeaningful = Boolean(title);
   return (

@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   Heading as ReactAriaHeading,
   HeadingProps as ReactAriaHeadingProps,
@@ -22,7 +23,7 @@ export default function Heading({
   color = "primary",
   isUnstyled = false,
   ...props
-}: HeadingProps) {
+}: HeadingProps): JSX.Element {
   return (
     <ReactAriaHeading
       className={isUnstyled ? undefined : `bcds-react-aria-Heading ${color}`}

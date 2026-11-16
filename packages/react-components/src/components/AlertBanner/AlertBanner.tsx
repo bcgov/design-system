@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import "./AlertBanner.css";
 import Button from "../Button";
 import SvgCheckCircleIcon from "../Icons/SvgCheckCircleIcon";
@@ -54,7 +55,7 @@ export default function AlertBanner({
   children,
   customIcon,
   ...props
-}: AlertBannerProps) {
+}: AlertBannerProps): JSX.Element {
   return (
     <div
       className={`bcds-Alert-Banner ${variant} ${size} ${layout}`}

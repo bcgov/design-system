@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   ToggleButton as ReactAriaToggleButton,
   ToggleButtonProps as ReactAriaToggleButtonProps,
@@ -15,7 +16,7 @@ export default function ToggleButton({
   children,
   isIconButton = false,
   ...props
-}: ToggleButtonProps) {
+}: ToggleButtonProps): JSX.Element {
   return (
     <ReactAriaToggleButton
       className={`bcds-react-aria-ToggleButton ${size} ${

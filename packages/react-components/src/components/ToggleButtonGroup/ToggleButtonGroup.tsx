@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   ToggleButtonGroup as ReactAriaToggleButtonGroup,
   ToggleButtonGroupProps as ReactAriaToggleButtonGroupProps,
@@ -16,7 +17,7 @@ export default function ToggleButtonGroup({
   size = "medium",
   children,
   ...props
-}: ToggleButtonGroupProps) {
+}: ToggleButtonGroupProps): JSX.Element {
   return (
     <>
       {label && (

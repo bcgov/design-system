@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { useId } from "react-aria/useId";
 
 export interface SvgTooltipArrowUpProps extends React.SVGProps<SVGSVGElement> {
@@ -9,7 +10,7 @@ export default function SvgTooltipArrowUp({
   title,
   id,
   ...props
-}: SvgTooltipArrowUpProps) {
+}: SvgTooltipArrowUpProps): JSX.Element {
   const titleId = useId();
   const isMeaningful = Boolean(title);
   return (

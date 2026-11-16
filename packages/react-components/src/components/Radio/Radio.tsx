@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   RadioField,
   RadioButton,
@@ -19,7 +20,7 @@ export default function Radio({
   children,
   description,
   ...props
-}: RadioProps) {
+}: RadioProps): JSX.Element {
   return (
     <RadioField className="bcds-react-aria-Radio" value={value} {...props}>
       <RadioButton className="bcds-react-aria-Radio--Button">

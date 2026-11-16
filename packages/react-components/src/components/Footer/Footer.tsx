@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import SvgBcLogo from "../Icons/SvgBcLogo";
 
 import "./Footer.css";
@@ -19,7 +20,7 @@ export interface FooterLinksProps {
  * @param {FooterLinksProps} props
  * @returns {React.ReactElement}
  */
-export function FooterLinks({ title, links }: FooterLinksProps) {
+export function FooterLinks({ title, links }: FooterLinksProps): JSX.Element {
   return (
     <figure className="bcds-footer--links">
       {title && (
@@ -95,7 +96,7 @@ export default function Footer({
   hideAcknowledgement = false,
   hideLogoAndLinks = false,
   hideCopyright = false,
-}: React.PropsWithChildren<FooterProps>) {
+}: React.PropsWithChildren<FooterProps>): JSX.Element {
   function defaultAcknowledgement() {
     return (
       <p>

@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   Dialog as ReactAriaDialog,
   DialogTrigger,
@@ -25,7 +26,7 @@ export default function Dialog({
   role = "dialog",
   children,
   ...props
-}: DialogProps) {
+}: DialogProps): JSX.Element {
   return (
     <ReactAriaDialog className="bcds-react-aria-Dialog" role={role} {...props}>
       {({ close }: DialogRenderProps) => (

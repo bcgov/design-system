@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { useId } from "react-aria/useId";
 import getIconSize, { IconSize } from "../../../utils/getIconSize";
 
@@ -12,7 +13,7 @@ export default function SvgBcOutlineIcon({
   title,
   id,
   ...props
-}: SvgBcOutlineIconProps) {
+}: SvgBcOutlineIconProps): JSX.Element {
   const iconSize = getIconSize(size);
   const titleId = useId();
   const isMeaningful = Boolean(title);

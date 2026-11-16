@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   Disclosure,
   DisclosurePanel,
@@ -18,7 +19,7 @@ export default function Accordion({
   label,
   children,
   ...props
-}: AccordionProps) {
+}: AccordionProps): JSX.Element {
   return (
     <Disclosure className={`bcds-react-aria-Disclosure`} {...props}>
       {({ isExpanded }) => (

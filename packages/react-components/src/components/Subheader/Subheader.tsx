@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import React from "react";
 import Separator from "../Separator";
 
@@ -15,7 +16,7 @@ export default function Subheader({
   ariaLabel,
   children,
   ...props
-}: SubheaderProps) {
+}: SubheaderProps): JSX.Element {
   /* Add separator between each child item */
   const childrenArray = React.Children.toArray(children);
   const childrenToRender = childrenArray.flatMap((child, index) => {

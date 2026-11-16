@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {
   Button as ReactAriaButton,
   Tag as ReactAriaTag,
@@ -43,7 +44,7 @@ export default function Tag({
   id,
   textValue,
   ...props
-}: TagProps) {
+}: TagProps): JSX.Element {
   return (
     <ReactAriaTag
       className={`bcds-react-aria-Tag ${color} ${tagStyle} ${size}`}
