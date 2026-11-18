@@ -111,9 +111,5 @@
     "url": "https://github.com/bcgov/design-system/issues"
   },
   "homepage": "https://github.com/bcgov/design-system#readme",
-  "private": false,
-  "allowScripts": {
-    "esbuild": true,
-    "fsevents": true
-  }
+  "private": false
 }
