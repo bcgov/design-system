@@ -1,4 +1,4 @@
-import { useListData } from "@react-stately/data";
+import { useListData } from "react-aria-components";
 
 import { TagProps } from "@/components/Tag";
 import TagGroup from "@/components/TagGroup";

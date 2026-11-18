@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useDisplayNames } from "@react-aria/datepicker";
-import { useDateFormatter } from "@react-aria/i18n";
+import { useDateFormatter } from "react-aria";
 
 /* Generate format helper text, adapted from React Spectrum */
 export default function useDateFormatLabel(props: {
