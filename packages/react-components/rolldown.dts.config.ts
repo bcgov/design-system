@@ -24,7 +24,7 @@ export default defineConfig({
     dts({
       // `isolatedDeclarations` in this tsconfig makes the plugin use Oxc.
       tsconfig: "tsconfig.build.json",
-      emitDtsOnly: true,
+      dtsOnly: true,
     }),
   ],
   output: {
