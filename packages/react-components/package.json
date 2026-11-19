@@ -84,7 +84,7 @@
     "globals": "17.14.0",
     "jsdom": "31.0.1",
     "playwright": "1.65.0",
-    "prettier": "3.9.10",
+    "prettier": "3.10.0",
     "rolldown": "1.2.15",
     "rolldown-plugin-dts": "0.29.0",
     "storybook": "10.6.6",
