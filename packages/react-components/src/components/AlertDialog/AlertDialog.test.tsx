@@ -7,6 +7,35 @@ import { DialogTrigger } from "../Dialog";
 import Modal from "../Modal";
 
 describe("AlertDialog", () => {
+  it.each([
+    [{ title: "Delete record?" }, "Delete record?"],
+    [
+      { title: "Delete record?", "aria-label": "Confirm deletion" },
+      "Confirm deletion",
+    ],
+    [
+      { title: "Delete record?", "aria-labelledby": "external-label" },
+      "Remove entry",
+    ],
+    [{}, "Open"],
+  ] as const)("exposes the dialog name for %o", (props, expectedName) => {
+    render(
+      <DialogTrigger>
+        <Button>Open</Button>
+        <Modal>
+          <AlertDialog {...props}>
+            <span id="external-label">Remove entry</span>
+          </AlertDialog>
+        </Modal>
+      </DialogTrigger>
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "Open" }));
+    expect(
+      screen.getByRole("dialog", { name: expectedName })
+    ).toBeInTheDocument();
+  });
+
   it("text within AlertDialog is not initially visible", () => {
     render(
       <DialogTrigger>
