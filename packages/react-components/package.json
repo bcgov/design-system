@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@figma/code-connect": "2.1.0",
+    "@figma/code-connect": "2.1.1",
     "@internationalized/date": "3.12.4",
     "@storybook/addon-a11y": "10.6.7",
     "@storybook/addon-docs": "10.6.7",
@@ -95,11 +95,6 @@
     "vite": "8.3.8",
     "vite-plugin-css-injected-by-js": "5.0.3",
     "vitest": "5.1.0"
-  },
-  "overrides": {
-    "eslint-plugin-react-hooks": {
-      "zod-validation-error": "^4.0.0"
-    }
   },
   "author": "Tyler Krys <Tyler.Krys@gov.bc.ca>",
   "contributors": [
