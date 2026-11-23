@@ -62,6 +62,38 @@ export default defineConfig({
           setupFiles: [".storybook/vitest.setup.ts"],
         },
       },
+      {
+        // Visual regression tests: screenshots every story tagged `visual`.
+        // Run via Docker (`npm run test-visual`) so baselines are consistent.
+        extends: true,
+        plugins: [
+          storybookTest({
+            configDir: path.join(dirname, ".storybook"),
+            tags: { include: ["visual"] },
+          }),
+        ],
+        test: {
+          name: "visual",
+          browser: {
+            enabled: true,
+            headless: true,
+            provider: playwright({
+              contextOptions: { deviceScaleFactor: 1 },
+            }),
+            viewport: { width: 1280, height: 800 },
+            instances: [{ browser: "chromium" }],
+            expect: {
+              toMatchScreenshot: {
+                comparatorName: "pixelmatch",
+                comparatorOptions: {
+                  threshold: 0.1,
+                },
+              },
+            },
+          },
+          setupFiles: [".storybook/vitest.visual.setup.ts"],
+        },
+      },
     ],
   },
 });

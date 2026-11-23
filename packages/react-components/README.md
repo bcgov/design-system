@@ -198,6 +198,27 @@ oc tag ed91fb-tools/design-system-react-components-storybook:develop ed91fb-tool
 
 With Storybook running locally, use the `npm run test-storybook` script to test Storybook with Vitest's browser mode. This script uses the configuration defined in `./vite.config.ts`. [Learn more about Storybook's Vitest addon.](https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon).
 
+#### Visual regression testing
+
+Every story is screenshotted and compared against a committed baseline using [Vitest's visual regression testing](https://vitest.dev/guide/browser/visual-regression-testing). Tests run in a pinned Playwright Docker image so screenshots are identical on every machine, so you need Docker installed.
+
+- `npm run test-visual` compares every story against its baseline in `src/stories/__screenshots__/`. When a story changes, the test fails and writes the reference, actual and diff images to `.vitest/attachments/`.
+- `npm run test-visual:update` regenerates the baselines. Run this when a visual change is intentional, then commit the updated PNGs alongside your code. Reviewers approve the change by reviewing the image diffs in the PR.
+- Pass a path to run a subset, for example `npm run test-visual -- src/stories/Button.stories.tsx`.
+- When tests fail, a summary groups failures by stories file, with the most failures first. The component you changed is usually near the top, and files further down may simply contain it.
+
+Don't generate baselines outside Docker. Font rendering differs between operating systems, so screenshots taken on your machine won't match.
+
+To opt a story (or a whole stories file, via its `meta`) out of visual testing, add the `!visual` tag:
+
+```ts
+export const Animated: Story = {
+  tags: ["!visual"],
+};
+```
+
+Stories are captured after their `play` function runs, so use `play` to open overlays such as dialogs, menus and tooltips if you want them in the screenshot. Animations are disabled, and the date is frozen to 15 January 2025.
+
 ### Vite kitchen sink application
 
 Vite uses the components code directly from `./src/components` in groups of content in `./src/pages`.

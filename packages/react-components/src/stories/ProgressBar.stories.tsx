@@ -103,6 +103,8 @@ export const CustomFormat: Story = {
 };
 
 export const AnimatedFill: Story = {
+  // Fill is driven by a timer, so screenshots are non-deterministic
+  tags: ["!visual"],
   args: {
     ...ProgressBarTemplate.args,
     valueLabel: "Uploading...",
