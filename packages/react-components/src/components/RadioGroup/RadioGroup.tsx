@@ -37,7 +37,11 @@ export default function RadioGroup({
   ...props
 }: RadioGroupProps): JSX.Element {
   return (
-    <ReactAriaRadioGroup className="bcds-react-aria-RadioGroup" {...props}>
+    <ReactAriaRadioGroup
+      className="bcds-react-aria-RadioGroup"
+      orientation={orientation}
+      {...props}
+    >
       {({ isRequired, isInvalid }: RadioGroupRenderProps) => (
         <>
           {label && (
