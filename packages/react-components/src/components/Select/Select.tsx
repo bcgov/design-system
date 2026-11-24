@@ -273,6 +273,7 @@ export default function Select<
                   <Collection items={section.items}>
                     {(item) => (
                       <ListBoxItem
+                        isDisabled={item.isDisabled}
                         id={item?.id ? item.id : item.label}
                         className={`bcds-react-aria-Select--ListBoxItem ${
                           item?.isDestructive ? "destructive" : ""
