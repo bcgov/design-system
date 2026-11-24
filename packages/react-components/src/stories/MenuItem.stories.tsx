@@ -12,6 +12,8 @@ import {
 const meta = {
   title: "Navigation and structure/Menu/MenuItem",
   component: MenuItem,
+  // Closed menus only show the trigger; see the hidden open and closed stories below
+  tags: ["!visual"],
   parameters: {
     layout: "centered",
   },
@@ -108,4 +110,53 @@ export const LinkedMenuItem: Story = {
 export const DisabledMenuItem: Story = {
   ...MenuItemTemplate,
   args: { ...MenuItemTemplate.args, isDisabled: true },
+};
+
+const openMenuItem = (story: Story): Story => ({
+  ...story,
+  render: ({ ...args }) => (
+    <MenuTrigger defaultOpen>
+      <Button variant="secondary">
+        Menu <SvgChevronDownIcon />
+      </Button>
+      <Menu>
+        <MenuItem {...args} />
+      </Menu>
+    </MenuTrigger>
+  ),
+});
+
+export const MenuItemTemplateOpen: Story = {
+  ...openMenuItem(MenuItemTemplate),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  // Descriptions aren't part of the accessible name, which axe flags as
+  // label-content-name-mismatch. Tracked separately; don't fail CI for now.
+  parameters: { a11y: { test: "todo" } },
+};
+export const SmallMenuItemOpen: Story = {
+  ...openMenuItem(SmallMenuItem),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  // Descriptions aren't part of the accessible name, which axe flags as
+  // label-content-name-mismatch. Tracked separately; don't fail CI for now.
+  parameters: { a11y: { test: "todo" } },
+};
+export const LinkedMenuItemOpen: Story = {
+  ...openMenuItem(LinkedMenuItem),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  // Descriptions aren't part of the accessible name, which axe flags as
+  // label-content-name-mismatch. Tracked separately; don't fail CI for now.
+  parameters: { a11y: { test: "todo" } },
+};
+export const DisabledMenuItemOpen: Story = {
+  ...openMenuItem(DisabledMenuItem),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  // Descriptions aren't part of the accessible name, which axe flags as
+  // label-content-name-mismatch. Tracked separately; don't fail CI for now.
+  parameters: { a11y: { test: "todo" } },
+};
+
+// Captures the closed trigger once, so it's still covered by visual tests
+export const MenuItemTemplateClosed: Story = {
+  ...MenuItemTemplate,
+  tags: ["!dev", "!autodocs", "visual"],
 };

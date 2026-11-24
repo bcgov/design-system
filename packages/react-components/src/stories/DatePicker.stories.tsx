@@ -223,3 +223,9 @@ export const CustomFormatting: Story = {
     shouldForceLeadingZeros: false,
   },
 };
+
+export const DatePickerTemplateOpen: Story = {
+  ...DatePickerTemplate,
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  args: { ...DatePickerTemplate.args, defaultOpen: true },
+};

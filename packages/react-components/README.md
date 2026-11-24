@@ -217,7 +217,19 @@ export const Animated: Story = {
 };
 ```
 
-Stories are captured after their `play` function runs, so use `play` to open overlays such as dialogs, menus and tooltips if you want them in the screenshot. Animations are disabled, and the date is frozen to 15 January 2025.
+Stories are captured after their `play` function runs. Animations are disabled, and the date is frozen to 15 January 2025.
+
+Overlays (dialogs, menus, popovers, tooltips) need to be open to be worth a screenshot. In overlay stories files, closed stories opt out with `!visual` on the `meta`, and hidden stories open the overlay with props such as `defaultOpen`:
+
+```ts
+export const DialogTemplateOpen: Story = {
+  ...DialogTemplate,
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  render: renderOpenDialog,
+};
+```
+
+`!dev` and `!autodocs` hide the story from the Storybook sidebar and docs. The `overlay` tag makes the test fail if nothing is open when the screenshot is taken. Each overlay file also has one hidden `…Closed` story (tagged `["!dev", "!autodocs", "visual"]`) so the closed trigger is still captured once. Tags must be written as array literals, because Storybook reads them statically. Don't put tags on a story that other stories spread (`...Template`), or they'll be inherited.
 
 ### Vite kitchen sink application
 

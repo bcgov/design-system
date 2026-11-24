@@ -6,6 +6,8 @@ import { AlertDialogProps } from "@/components/AlertDialog";
 const meta = {
   title: "Notifications and feedback/Dialogs/AlertDialog",
   component: AlertDialog,
+  // Closed dialogs only show the trigger; see the hidden open and closed stories below
+  tags: ["!visual"],
   parameters: { layout: "centered" },
   argTypes: {
     variant: {
@@ -167,4 +169,53 @@ export const DestructiveAlert: Story = {
       </Button>,
     ],
   },
+};
+
+const renderOpenAlertDialog = ({ ...args }: AlertDialogProps) => (
+  <DialogTrigger defaultOpen>
+    <Button>Open the alert dialog</Button>
+    <Modal>
+      <AlertDialog {...args} />
+    </Modal>
+  </DialogTrigger>
+);
+
+const openAlertDialog = (story: Story): Story => ({
+  ...story,
+  render: renderOpenAlertDialog,
+});
+
+export const AlertDialogTemplateOpen: Story = {
+  ...openAlertDialog(AlertDialogTemplate),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+};
+export const AlertDialogWithoutIconOpen: Story = {
+  ...openAlertDialog(AlertDialogWithoutIcon),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+};
+export const AlertDialogWithoutCloseButtonOpen: Story = {
+  ...openAlertDialog(AlertDialogWithoutCloseButton),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+};
+export const ConfirmationAlertOpen: Story = {
+  ...openAlertDialog(ConfirmationAlert),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+};
+export const WarningAlertOpen: Story = {
+  ...openAlertDialog(WarningAlert),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+};
+export const ErrorAlertOpen: Story = {
+  ...openAlertDialog(ErrorAlert),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+};
+export const DestructiveAlertOpen: Story = {
+  ...openAlertDialog(DestructiveAlert),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+};
+
+// Captures the closed trigger once, so it's still covered by visual tests
+export const AlertDialogTemplateClosed: Story = {
+  ...AlertDialogTemplate,
+  tags: ["!dev", "!autodocs", "visual"],
 };

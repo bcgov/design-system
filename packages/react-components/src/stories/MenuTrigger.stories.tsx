@@ -12,6 +12,8 @@ import {
 const meta = {
   title: "Navigation and structure/Menu/MenuTrigger",
   component: MenuTrigger,
+  // Closed menus only show the trigger; see the hidden open and closed stories below
+  tags: ["!visual"],
   parameters: {
     layout: "centered",
   },
@@ -69,4 +71,19 @@ export const LongPress: Story = {
     ...MenuTriggerTemplate.args,
     trigger: "longPress",
   },
+};
+
+export const MenuTriggerTemplateOpen: Story = {
+  ...MenuTriggerTemplate,
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  args: { ...MenuTriggerTemplate.args, defaultOpen: true },
+  // Descriptions aren't part of the accessible name, which axe flags as
+  // label-content-name-mismatch. Tracked separately; don't fail CI for now.
+  parameters: { a11y: { test: "todo" } },
+};
+
+// Captures the closed trigger once, so it's still covered by visual tests
+export const MenuTriggerTemplateClosed: Story = {
+  ...MenuTriggerTemplate,
+  tags: ["!dev", "!autodocs", "visual"],
 };

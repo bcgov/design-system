@@ -6,6 +6,8 @@ import { TooltipProps } from "../components/Tooltip";
 const meta = {
   title: "Notifications and feedback/Tooltip",
   component: Tooltip,
+  // Closed tooltips only show the trigger; see the hidden open and closed stories below
+  tags: ["!visual"],
   parameters: {
     layout: "centered",
   },
@@ -37,6 +39,13 @@ export const TooltipTemplate: Story = {
     </TooltipTrigger>
   ),
 };
+
+const renderOpenTooltip = ({ ...args }: TooltipProps) => (
+  <TooltipTrigger defaultOpen>
+    <Button variant="secondary">Focus or hover</Button>
+    <Tooltip {...args} />
+  </TooltipTrigger>
+);
 
 export const TopPlacement: Story = {
   ...TooltipTemplate,
@@ -80,4 +89,34 @@ export const Delay: Story = {
       <Tooltip {...args} />
     </TooltipTrigger>
   ),
+};
+
+export const TopPlacementOpen: Story = {
+  ...TopPlacement,
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  render: renderOpenTooltip,
+};
+
+export const RightPlacementOpen: Story = {
+  ...RightPlacement,
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  render: renderOpenTooltip,
+};
+
+export const BottomPlacementOpen: Story = {
+  ...BottomPlacement,
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  render: renderOpenTooltip,
+};
+
+export const LeftPlacementOpen: Story = {
+  ...LeftPlacement,
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  render: renderOpenTooltip,
+};
+
+// Captures the closed trigger once, so it's still covered by visual tests
+export const TooltipTemplateClosed: Story = {
+  ...TooltipTemplate,
+  tags: ["!dev", "!autodocs", "visual"],
 };
