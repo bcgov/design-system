@@ -2,6 +2,7 @@ import type { JSX } from "react";
 import {
   Dialog as ReactAriaDialog,
   DialogTrigger,
+  Heading,
   DialogProps as ReactAriaDialogProps,
 } from "react-aria-components";
 
@@ -72,9 +73,12 @@ export default function AlertDialog({
               </div>
             )}
             {title && (
-              <div className="bcds-react-aria-AlertDialog--Title" slot="title">
+              <Heading
+                className="bcds-react-aria-AlertDialog--Title"
+                slot="title"
+              >
                 {title}
-              </div>
+              </Heading>
             )}
             {isCloseable && (
               <div className="bcds-react-aria-AlertDialog--closeIcon">

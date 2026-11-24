@@ -37,6 +37,7 @@
 
 .bcds-react-aria-AlertDialog--Title {
   flex-grow: 1;
+  margin: var(--layout-margin-none);
   font: var(--typography-bold-h5);
   color: var(--typography-color-primary);
 }
