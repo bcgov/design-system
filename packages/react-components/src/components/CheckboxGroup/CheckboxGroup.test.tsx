@@ -4,6 +4,22 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import CheckboxGroup from "./CheckboxGroup";
 import Checkbox from "../Checkbox/Checkbox";
 
+test("renders selectable options from the group's required state", () => {
+  render(
+    <CheckboxGroup label="Notifications" isRequired>
+      {({ isRequired }) => (
+        <Checkbox value="email">
+          {isRequired ? "Required email" : "Email"}
+        </Checkbox>
+      )}
+    </CheckboxGroup>
+  );
+
+  const option = screen.getByRole("checkbox", { name: /required email/i });
+  fireEvent.click(option);
+  expect(option).toBeChecked();
+});
+
 describe("CheckboxGroup component", () => {
   beforeEach(() => {
     render(

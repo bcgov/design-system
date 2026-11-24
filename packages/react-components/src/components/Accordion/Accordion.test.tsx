@@ -4,6 +4,16 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import Accordion from "./Accordion";
 
 describe("Render accordion component", () => {
+  it("renders panel content from the expanded state", () => {
+    render(
+      <Accordion label="Rates">
+        {({ isExpanded }) => (isExpanded ? "Rate details" : null)}
+      </Accordion>
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "Rates" }));
+    expect(screen.getByText("Rate details")).toBeVisible();
+  });
   it("renders the accordion and is collapsed by default", () => {
     const { container } = render(
       <Accordion id="1" data-testid="accordion" label="Accordion 1">
