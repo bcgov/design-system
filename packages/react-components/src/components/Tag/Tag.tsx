@@ -57,7 +57,7 @@ export default function Tag({
           {icon}
           <span className="bcds-react-aria-Tag--Label">{textValue}</span>
           {!isDisabled && allowsRemoving && (
-            <ReactAriaButton aria-label={`Remove ${textValue}`} slot="remove">
+            <ReactAriaButton slot="remove">
               <svg
                 width="14"
                 height="15"
