@@ -27,6 +27,23 @@ const skipLinks = [
   <a href="#accessibility">Accessibility Statement</a>,
 ];
 
+function renderWithSkipTargets(args: HeaderProps) {
+  return (
+    <>
+      <Header {...args} />
+      <nav id="navigation" aria-label="Main navigation" tabIndex={-1}>
+        <a href="#accessibility">Accessibility Statement</a>
+      </nav>
+      <main id="main" tabIndex={-1}>
+        <h1>Main content</h1>
+        <h2 id="accessibility" tabIndex={-1}>
+          Accessibility Statement
+        </h2>
+      </main>
+    </>
+  );
+}
+
 const LoginButton = () => {
   return (
     <Button variant="secondary" size="small">
@@ -51,6 +68,7 @@ export const HeaderWithCustomLogoAndLink: Story = {
 };
 
 export const HeaderWithTitleAndSkipLinks: Story = {
+  render: renderWithSkipTargets,
   args: {
     title: "Skip links example",
     skipLinks: skipLinks,
@@ -65,6 +83,7 @@ export const HeaderWithChildren: Story = {
 };
 
 export const HeaderWithTheWorks: Story = {
+  render: renderWithSkipTargets,
   args: {
     title: "Government of B.C.",
     logoLinkElement: <a href="/home" title="Home" />,
