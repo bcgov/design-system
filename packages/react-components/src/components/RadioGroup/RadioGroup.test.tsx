@@ -4,6 +4,20 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import RadioGroup from ".";
 import Radio from "../Radio";
 
+it("exposes the horizontal orientation to assistive technology", () => {
+  render(
+    <RadioGroup label="Options" orientation="horizontal">
+      <Radio value="one">One</Radio>
+      <Radio value="two">Two</Radio>
+    </RadioGroup>
+  );
+
+  expect(screen.getByRole("radiogroup", { name: "Options" })).toHaveAttribute(
+    "aria-orientation",
+    "horizontal"
+  );
+});
+
 describe("RadioGroup", () => {
   beforeEach(() => {
     render(

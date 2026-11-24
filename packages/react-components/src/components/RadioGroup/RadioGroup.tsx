@@ -15,8 +15,6 @@ import "./RadioGroup.css";
 
 export interface RadioGroupProps extends ReactAriaRadioGroupProps {
   children?: React.ReactNode;
-  /* Group orientation */
-  orientation?: "vertical" | "horizontal";
   /* Group label */
   label?: string;
   /* Group description */
@@ -37,7 +35,11 @@ export default function RadioGroup({
   ...props
 }: RadioGroupProps): JSX.Element {
   return (
-    <ReactAriaRadioGroup className="bcds-react-aria-RadioGroup" {...props}>
+    <ReactAriaRadioGroup
+      className="bcds-react-aria-RadioGroup"
+      orientation={orientation}
+      {...props}
+    >
       {({ isRequired, isInvalid }: RadioGroupRenderProps) => (
         <>
           {label && (
