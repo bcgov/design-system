@@ -15,8 +15,6 @@ import "./RadioGroup.css";
 
 export interface RadioGroupProps extends ReactAriaRadioGroupProps {
   children?: React.ReactNode;
-  /* Group orientation */
-  orientation?: "vertical" | "horizontal";
   /* Group label */
   label?: string;
   /* Group description */
