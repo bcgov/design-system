@@ -1,3 +1,4 @@
+import { appendFileSync } from "node:fs";
 import path from "node:path";
 import type { Reporter, TestModule } from "vitest/node";
 
@@ -42,5 +43,26 @@ export default class VisualSummaryReporter implements Reporter {
         "",
       ].join("\n")
     );
+
+    // In GitHub Actions, also show the table on the job's summary page
+    const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+    if (summaryPath) {
+      const runUrl = `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`;
+      appendFileSync(
+        summaryPath,
+        [
+          "### Visual changes by stories file",
+          "",
+          "| Stories file | Failed |",
+          "| --- | --- |",
+          ...rows.map((row) => `| ${row.name} | ${row.failed}/${row.total} |`),
+          "",
+          "The changed component is usually near the top. Files further down may just contain it.",
+          `Reference, actual and diff images are in the \`visual-diffs\` artifact on the [run page](${runUrl}).`,
+          "If the change is intentional, run `npm run test-visual:update` and commit the updated screenshots.",
+          "",
+        ].join("\n")
+      );
+    }
   }
 }
