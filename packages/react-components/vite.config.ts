@@ -74,6 +74,8 @@ export default defineConfig({
         ],
         test: {
           name: "visual",
+          // Keeps memory use predictable (~3 GB) regardless of CPU count
+          maxWorkers: 2,
           browser: {
             enabled: true,
             headless: true,

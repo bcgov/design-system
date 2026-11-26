@@ -7,7 +7,9 @@ cd "$(dirname "$0")/.."
 docker compose -f docker-compose.visual.yml run --rm \
   -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
   visual sh -c '
+    echo "▶ Installing dependencies (npm ci)…"
     npm ci --no-audit --no-fund --loglevel=error || exit $?
+    echo "▶ Running visual tests…"
     status=0
     npx vitest --project=visual --watch=false \
       --reporter=default --reporter=./scripts/visual-reporter.ts \

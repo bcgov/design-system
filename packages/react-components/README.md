@@ -200,7 +200,9 @@ With Storybook running locally, use the `npm run test-storybook` script to test 
 
 #### Visual regression testing
 
-Every story is screenshotted and compared against a committed baseline using [Vitest's visual regression testing](https://vitest.dev/guide/browser/visual-regression-testing). Tests run in a pinned Playwright Docker image so screenshots are identical on every machine, so you need Docker installed.
+Every story is screenshotted and compared against a committed baseline using [Vitest's visual regression testing](https://vitest.dev/guide/browser/visual-regression-testing). Tests run in a pinned Playwright Docker image so screenshots are identical on every machine, so you need Docker (or Podman) installed.
+
+If Docker runs in a VM (Podman, or Docker Desktop on macOS/Windows), give the VM at least 4 GB of memory. With less, the run can stall with no output. For Podman, run `podman machine stop`, `podman machine set --memory 4096` and `podman machine start`. For Docker Desktop, use Settings → Resources → Memory.
 
 - `npm run test-visual` compares every story against its baseline in `src/stories/__screenshots__/`. When a story changes, the test fails and writes the reference, actual and diff images to `.vitest/attachments/`.
 - `npm run test-visual:update` regenerates the baselines. Run this when a visual change is intentional, then commit the updated PNGs alongside your code. Reviewers approve the change by reviewing the image diffs in the PR.
