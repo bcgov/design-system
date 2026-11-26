@@ -4,10 +4,11 @@ import type { Preview } from "@storybook/react-vite";
 import { expect, vi } from "vitest";
 import { page } from "vitest/browser";
 import * as projectAnnotations from "./preview";
+
 // Freeze "today" for the whole run so date-dependent stories don't change
 // daily. This must happen before any stories file is loaded, because some
 // stories compute dates at import time (e.g. default args using `now()`).
-vi.useFakeTimers({ toFake: ["Date"], now: new Date(2025, 0, 15, 12) });
+vi.useFakeTimers({ toFake: ["Date"], now: new Date(2026, 11, 15, 12) });
 // Makes screenshots deterministic: no animations, transitions or blinking carets.
 const stabilizeStyles = `
   *, *::before, *::after {
