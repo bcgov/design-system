@@ -12,6 +12,7 @@ dist
 dist-ssr
 storybook-static
 vite-dist
+.vitest
 *.local
 
 # Editor directories and files

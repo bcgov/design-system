@@ -6,6 +6,9 @@ import "@bcgov/bc-sans/css/BC_Sans.css";
 import "./global.css";
 
 const preview: Preview = {
+  // Every story gets a visual regression test. Opt out with `tags: ["!visual"]`.
+  tags: ["visual"],
+
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
 

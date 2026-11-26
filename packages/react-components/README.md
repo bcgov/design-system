@@ -198,6 +198,41 @@ oc tag ed91fb-tools/design-system-react-components-storybook:develop ed91fb-tool
 
 With Storybook running locally, use the `npm run test-storybook` script to test Storybook with Vitest's browser mode. This script uses the configuration defined in `./vite.config.ts`. [Learn more about Storybook's Vitest addon.](https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon).
 
+#### Visual regression testing
+
+Every story is screenshotted and compared against a committed baseline using [Vitest's visual regression testing](https://vitest.dev/guide/browser/visual-regression-testing). Tests run in a pinned Playwright Docker image so screenshots are identical on every machine, so you need Docker (or Podman) installed.
+
+If Docker runs in a VM (Podman, or Docker Desktop on macOS/Windows), give the VM at least 4 GB of memory. With less, the run can stall with no output. For Podman, run `podman machine stop`, `podman machine set --memory 4096` and `podman machine start`. For Docker Desktop, use Settings → Resources → Memory.
+
+- `npm run test-visual` compares every story against its baseline in `src/stories/__screenshots__/`. When a story changes, the test fails and writes the reference, actual and diff images to `.vitest/attachments/`.
+- `npm run test-visual:update` regenerates the baselines. Run this when a visual change is intentional, then commit the updated PNGs alongside your code. Reviewers approve the change by reviewing the image diffs in the PR.
+- Pass a path to run a subset, for example `npm run test-visual -- src/stories/Button.stories.tsx`.
+- When tests fail, a summary groups failures by stories file, with the most failures first. The component you changed is usually near the top, and files further down may simply contain it.
+
+Don't generate baselines outside Docker. Font rendering differs between operating systems, so screenshots taken on your machine won't match.
+
+To opt a story (or a whole stories file, via its `meta`) out of visual testing, add the `!visual` tag:
+
+```ts
+export const Animated: Story = {
+  tags: ["!visual"],
+};
+```
+
+Stories are captured after their `play` function runs. Animations are disabled, and the date is frozen to 15 January 2025.
+
+Overlays (dialogs, menus, popovers, tooltips) need to be open to be worth a screenshot. In overlay stories files, closed stories opt out with `!visual` on the `meta`, and hidden stories open the overlay with props such as `defaultOpen`:
+
+```ts
+export const DialogTemplateOpen: Story = {
+  ...DialogTemplate,
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  render: renderOpenDialog,
+};
+```
+
+`!dev` and `!autodocs` hide the story from the Storybook sidebar and docs. The `overlay` tag makes the test fail if nothing is open when the screenshot is taken. Each overlay file also has one hidden `…Closed` story (tagged `["!dev", "!autodocs", "visual"]`) so the closed trigger is still captured once. Tags must be written as array literals, because Storybook reads them statically. Don't put tags on a story that other stories spread (`...Template`), or they'll be inherited.
+
 ### Vite kitchen sink application
 
 Vite uses the components code directly from `./src/components` in groups of content in `./src/pages`.

@@ -17,6 +17,8 @@ import {
 const meta = {
   title: "Navigation and structure/Menu",
   component: Menu,
+  // Closed menus only show the trigger; see the hidden open and closed stories below
+  tags: ["!visual"],
   parameters: {
     layout: "centered",
   },
@@ -166,6 +168,7 @@ export const Items: Story = {
 };
 
 export const SmallMenu: Story = {
+  tags: ["visual", "overlay"],
   args: {
     itemSize: "small",
     items: [
@@ -291,4 +294,50 @@ export const DisabledItems: Story = {
       <Menu {...args} />
     </MenuTrigger>
   ),
+};
+
+const openMenu = (story: Story): Story => ({
+  ...story,
+  render: ({ ...args }) => (
+    <MenuTrigger defaultOpen>
+      <Button variant="secondary">
+        Menu <SvgChevronDownIcon />
+      </Button>
+      <Menu {...args} />
+    </MenuTrigger>
+  ),
+});
+
+export const MenuTemplateOpen: Story = {
+  ...openMenu(MenuTemplate),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+};
+export const ItemsOpen: Story = {
+  ...openMenu(Items),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  // Descriptions aren't part of the accessible name, which axe flags as
+  // label-content-name-mismatch. Tracked separately; don't fail CI for now.
+  parameters: { a11y: { test: "todo" } },
+};
+export const SectionedMenuOpen: Story = {
+  ...openMenu(SectionedMenu),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+};
+export const SubmenuOpen: Story = {
+  ...openMenu(Submenu),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+};
+export const PopoverPlacementOpen: Story = {
+  ...openMenu(PopoverPlacement),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+};
+export const DisabledItemsOpen: Story = {
+  ...openMenu(DisabledItems),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+};
+
+// Captures the closed trigger once, so it's still covered by visual tests
+export const MenuTemplateClosed: Story = {
+  ...MenuTemplate,
+  tags: ["!dev", "!autodocs", "visual"],
 };

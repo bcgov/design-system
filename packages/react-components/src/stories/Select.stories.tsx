@@ -483,3 +483,24 @@ export const DescriptionBothIconsAndDestruction: Story = {
     ],
   },
 };
+
+const openSelect = (story: Story): Story => ({
+  ...story,
+  args: { ...story.args, defaultOpen: true },
+});
+
+export const SelectTemplateOpen: Story = {
+  ...openSelect(SelectTemplate),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+};
+export const SectionsOpen: Story = {
+  ...openSelect(Sections),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+};
+export const DescriptionBothIconsAndDestructionOpen: Story = {
+  ...openSelect(DescriptionBothIconsAndDestruction),
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  // Descriptions aren't part of the accessible name, which axe flags as
+  // label-content-name-mismatch. Tracked separately; don't fail CI for now.
+  parameters: { a11y: { test: "todo" } },
+};

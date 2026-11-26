@@ -16,6 +16,8 @@ import { DialogProps } from "../components/Dialog";
 const meta = {
   title: "Notifications and feedback/Dialogs/Dialog",
   component: Dialog,
+  // Closed dialogs only show the trigger; see the hidden open and closed stories below
+  tags: ["!visual"],
   parameters: {
     layout: "centered",
   },
@@ -116,4 +118,31 @@ export const DialogWithForm: Story = {
       </Modal>
     </DialogTrigger>
   ),
+};
+
+const renderOpenDialog = ({ ...args }: DialogProps) => (
+  <DialogTrigger defaultOpen>
+    <Button>Open the dialog</Button>
+    <Modal>
+      <Dialog {...args} />
+    </Modal>
+  </DialogTrigger>
+);
+
+export const DialogTemplateOpen: Story = {
+  ...DialogTemplate,
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  render: renderOpenDialog,
+};
+
+export const DialogWithFormOpen: Story = {
+  ...DialogWithForm,
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  render: renderOpenDialog,
+};
+
+// Captures the closed trigger once, so it's still covered by visual tests
+export const DialogTemplateClosed: Story = {
+  ...DialogTemplate,
+  tags: ["!dev", "!autodocs", "visual"],
 };

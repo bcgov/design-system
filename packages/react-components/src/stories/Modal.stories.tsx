@@ -6,6 +6,8 @@ import type { ModalOverlayProps } from "react-aria-components";
 const meta = {
   title: "Notifications and feedback/Dialogs/Modal",
   component: Modal,
+  // Closed modals only show the trigger; see the hidden open and closed stories below
+  tags: ["!visual"],
   parameters: {
     layout: "centered",
   },
@@ -46,6 +48,7 @@ export const ModalTemplate: Story = {
 
 export const DefaultOpenModal: Story = {
   ...ModalTemplate,
+  tags: ["visual", "overlay"],
   args: {
     defaultOpen: true,
   },
@@ -86,4 +89,16 @@ export const CustomSizeModal: Story = {
       </Modal>
     </DialogTrigger>
   ),
+};
+
+export const CustomSizeModalOpen: Story = {
+  ...CustomSizeModal,
+  tags: ["!dev", "!autodocs", "visual", "overlay"],
+  args: { ...CustomSizeModal.args, defaultOpen: true },
+};
+
+// Captures the closed trigger once, so it's still covered by visual tests
+export const ModalTemplateClosed: Story = {
+  ...ModalTemplate,
+  tags: ["!dev", "!autodocs", "visual"],
 };
