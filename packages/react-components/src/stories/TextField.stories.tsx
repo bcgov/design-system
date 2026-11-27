@@ -122,6 +122,16 @@ export const SearchField: Story = {
   },
 };
 
+export const EmailAddressField: Story = {
+  args: {
+    label: "Email address",
+    size: "medium",
+    type: "email",
+    description:
+      "Email address validation errors will appear below this description",
+  },
+};
+
 export const PasswordField: Story = {
   args: {
     label: "Password",
