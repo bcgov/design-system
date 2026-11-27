@@ -1,0 +1,35 @@
+name: "Chromatic"
+
+on: push
+
+# Cancel any currently running builds on the same branch to save GitHub Actions hours.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  chromatic:
+    name: Run Chromatic
+    runs-on: ubuntu-latest
+    # Dependabot pushes don't have access to repository secrets, so the project token would be empty
+    if: github.actor != 'dependabot[bot]'
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: ./packages/react-components/.nvmrc
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./packages/react-components
+      - name: Run Chromatic
+        uses: chromaui/action@0a7067e5ffc663a631b14db505d8a94b26e1bf2f # v18.15.3
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          workingDir: ./packages/react-components
+          buildScriptName: storybook-build
