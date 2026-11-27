@@ -20,6 +20,10 @@ updates:
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
+      # Must match the Playwright Docker image used for visual tests. Bump it
+      # deliberately, together with docker-compose.visual.yml and
+      # test_react_component_library.yaml, and check the screenshots.
+      - dependency-name: "playwright"
     # Group related dependency updates
     groups:
       storybook:

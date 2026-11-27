@@ -1,6 +1,7 @@
 # Pinned environment for visual regression tests, so screenshots render
 # identically on every machine. Keep the image tag in sync with `playwright`
-# in package.json.
+# in package.json and the visual tests job in
+# .github/workflows/test_react_component_library.yaml.
 services:
   visual:
     image: mcr.microsoft.com/playwright:v1.65.1-noble

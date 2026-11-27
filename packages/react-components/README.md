@@ -208,6 +208,7 @@ If Docker runs in a VM (Podman, or Docker Desktop on macOS/Windows), give the VM
 - `npm run test-visual:update` regenerates the baselines. Run this when a visual change is intentional, then commit the updated PNGs alongside your code. Reviewers approve the change by reviewing the image diffs in the PR.
 - Pass a path to run a subset, for example `npm run test-visual -- src/stories/Button.stories.tsx`.
 - When tests fail, a summary groups failures by stories file, with the most failures first. The component you changed is usually near the top, and files further down may simply contain it.
+- CI runs the same tests in the same image on every pull request. When they fail, the job summary shows the table above, and the reference, actual and diff images are attached to the run as the `visual-diffs` artifact (kept for 14 days).
 
 Don't generate baselines outside Docker. Font rendering differs between operating systems, so screenshots taken on your machine won't match.
 
