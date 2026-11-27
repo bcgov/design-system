@@ -1,17 +1,7 @@
 import { Meta, Source, Subtitle } from "@storybook/addon-docs/blocks";
 
 import packageJson from "../../package.json";
-
-export const sha = import.meta.env?.STORYBOOK_GITHUB_SHA
-  ? import.meta.env.STORYBOOK_GITHUB_SHA.substring(0, 7)
-  : null;
-export const url = `https://github.com/bcgov/design-system/commit/${import.meta.env.STORYBOOK_GITHUB_SHA}`;
-export const link =
-  sha && url ? (
-    <>
-      , SHA: <a href={url}>{sha}</a>
-    </>
-  ) : null;
+import BuildSha from "../utils/BuildSha";
 
 <Meta title="Introduction" />
 
@@ -53,7 +43,7 @@ This library uses [@bcgov/design-tokens](https://www.npmjs.com/package/@bcgov/de
 
 ## Current version
 
-This Storybook instance was built from v{packageJson.version}{link}.
+This Storybook instance was built from v{packageJson.version}<BuildSha />.
 
 [View the changelog](/docs/changelog--docs) for this release.
 
