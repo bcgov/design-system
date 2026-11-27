@@ -79,6 +79,7 @@
     "@vitejs/plugin-react": "6.3.0",
     "@vitest/browser-playwright": "5.1.2",
     "@vitest/coverage-v8": "5.1.2",
+    "chromatic": "18.15.3",
     "eslint": "10.15.0",
     "eslint-plugin-react-hooks": "7.1.1",
     "eslint-plugin-react-refresh": "0.5.8",
