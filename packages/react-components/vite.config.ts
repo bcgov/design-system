@@ -8,6 +8,11 @@ import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
 import { playwright } from "@vitest/browser-playwright";
 const dirname = import.meta.dirname;
 
+// The Storybook UI's "Run tests" button sets VITEST_STORYBOOK, and the addon
+// then renames every storybookTest project to the same name. Leaving the
+// visual project out in that case avoids a duplicate project name error.
+const isStorybookUiRun = process.env.VITEST_STORYBOOK === "true";
+
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
   resolve: {
@@ -62,40 +67,45 @@ export default defineConfig({
           setupFiles: [".storybook/vitest.setup.ts"],
         },
       },
-      {
-        // Visual regression tests: screenshots every story tagged `visual`.
-        // Run via Docker (`npm run test-visual`) so baselines are consistent.
-        extends: true,
-        plugins: [
-          storybookTest({
-            configDir: path.join(dirname, ".storybook"),
-            tags: { include: ["visual"] },
-          }),
-        ],
-        test: {
-          name: "visual",
-          // Keeps memory use predictable (~3 GB) regardless of CPU count
-          maxWorkers: 2,
-          browser: {
-            enabled: true,
-            headless: true,
-            provider: playwright({
-              contextOptions: { deviceScaleFactor: 1 },
-            }),
-            viewport: { width: 1280, height: 800 },
-            instances: [{ browser: "chromium" }],
-            expect: {
-              toMatchScreenshot: {
-                comparatorName: "pixelmatch",
-                comparatorOptions: {
-                  threshold: 0.1,
+      // Visual tests only run from the CLI, not from the Storybook UI.
+      ...(isStorybookUiRun
+        ? []
+        : [
+            {
+              // Visual regression tests: screenshots every story tagged `visual`.
+              // Run via Docker (`npm run test-visual`) so baselines are consistent.
+              extends: true,
+              plugins: [
+                storybookTest({
+                  configDir: path.join(dirname, ".storybook"),
+                  tags: { include: ["visual"] },
+                }),
+              ],
+              test: {
+                name: "visual",
+                // Keeps memory use predictable (~3 GB) regardless of CPU count
+                maxWorkers: 2,
+                browser: {
+                  enabled: true,
+                  headless: true,
+                  provider: playwright({
+                    contextOptions: { deviceScaleFactor: 1 },
+                  }),
+                  viewport: { width: 1280, height: 800 },
+                  instances: [{ browser: "chromium" }],
+                  expect: {
+                    toMatchScreenshot: {
+                      comparatorName: "pixelmatch",
+                      comparatorOptions: {
+                        threshold: 0.1,
+                      },
+                    },
+                  },
                 },
+                setupFiles: [".storybook/vitest.visual.setup.ts"],
               },
             },
-          },
-          setupFiles: [".storybook/vitest.visual.setup.ts"],
-        },
-      },
+          ]),
     ],
   },
 });
