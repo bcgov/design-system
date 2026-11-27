@@ -3,7 +3,7 @@ import {
   getLocalTimeZone,
   today,
   isWeekend,
-  now,
+  CalendarDateTime,
 } from "@internationalized/date";
 import { useLocale } from "react-aria-components";
 
@@ -176,7 +176,7 @@ export const DateAndTime: Story = {
     label: "Label",
     description: "Description",
     granularity: "minute",
-    defaultValue: now("America/Vancouver"),
+    defaultValue: new CalendarDateTime(2026, 11, 27, 16, 0),
   },
 };
 

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { now, getLocalTimeZone, Time } from "@internationalized/date";
+import { CalendarDateTime, Time } from "@internationalized/date";
 
 import { TimeField } from "@/components";
 
@@ -96,7 +96,7 @@ export const TimeFieldTemplate: Story = {
     size: "medium",
     granularity: "minute",
     hourCycle: 12,
-    defaultValue: now(getLocalTimeZone()),
+    defaultValue: new CalendarDateTime(2026, 11, 27, 16, 0),
   },
   render: ({ ...args }) => <TimeField {...args} />,
 };
