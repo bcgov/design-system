@@ -167,7 +167,7 @@ export default function Select<
                                     )
                                     /* Map ListBoxItem props to Tag props */
                                     .map((item) => ({
-                                      id: item?.id ? item.id : item.label,
+                                      id: item.id ?? item.label,
                                       textValue: item.label,
                                       size:
                                         size === "small" ? "xsmall" : "small",
@@ -273,7 +273,7 @@ export default function Select<
                   <Collection items={section.items}>
                     {(item) => (
                       <ListBoxItem
-                        id={item?.id ? item.id : item.label}
+                        id={item.id ?? item.label}
                         className={`bcds-react-aria-Select--ListBoxItem ${
                           item?.isDestructive ? "destructive" : ""
                         }`}
