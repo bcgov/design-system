@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import { composeRenderProps } from "react-aria-components/composeRenderProps";
 import {
   Disclosure,
   DisclosurePanel,
@@ -22,7 +23,7 @@ export default function Accordion({
 }: AccordionProps): JSX.Element {
   return (
     <Disclosure className={`bcds-react-aria-Disclosure`} {...props}>
-      {({ isExpanded }) => (
+      {composeRenderProps(children, (content, { isExpanded }) => (
         <>
           <Button
             className="bcds-react-aria-Disclosure--Button"
@@ -34,10 +35,10 @@ export default function Accordion({
             {isExpanded ? <SvgChevronUpIcon /> : <SvgChevronDownIcon />}
           </Button>
           <DisclosurePanel className="bcds-react-aria-Disclosure--Panel">
-            <>{children}</>
+            {content}
           </DisclosurePanel>
         </>
-      )}
+      ))}
     </Disclosure>
   );
 }

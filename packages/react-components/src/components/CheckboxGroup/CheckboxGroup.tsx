@@ -1,7 +1,7 @@
 import type { JSX } from "react";
+import { composeRenderProps } from "react-aria-components/composeRenderProps";
 import {
   CheckboxGroup as ReactAriaCheckboxGroup,
-  CheckboxGroupRenderProps,
   FieldError,
   Label,
   Text,
@@ -42,7 +42,7 @@ export default function CheckboxGroup({
       className={`bcds-react-aria-CheckboxGroup`}
       {...props}
     >
-      {({ isRequired, isInvalid }: CheckboxGroupRenderProps) => (
+      {composeRenderProps(children, (content, { isRequired, isInvalid }) => (
         <>
           {label && (
             <Label className="bcds-react-aria-CheckboxGroup--label">
@@ -52,7 +52,7 @@ export default function CheckboxGroup({
           <div
             className={`bcds-react-aria-CheckboxGroup--options ${orientation} flex-wrap-${flexWrap}`}
           >
-            <>{children}</>
+            {content}
           </div>
           {description && (
             <Text
@@ -69,7 +69,7 @@ export default function CheckboxGroup({
             </div>
           )}
         </>
-      )}
+      ))}
     </ReactAriaCheckboxGroup>
   );
 }
